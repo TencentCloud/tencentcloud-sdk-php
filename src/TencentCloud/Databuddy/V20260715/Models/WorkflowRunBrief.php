@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunStartTime(string $RunStartTime) 设置运行开始时间，单位：毫秒时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunState() 获取运行状态
+ * @method string getRunState() 获取<p>运行状态。CREATE(&quot;初始化&quot;),     QUEUED(&quot;等待中&quot;),     PENDING(&quot;准备中&quot;),     RUNNING(&quot;运行中&quot;),     SKIPPED(&quot;跳过运行&quot;),     SUCCESS(&quot;成功&quot;),     FAILED(&quot;失败&quot;),     TERMINATING(&quot;终止中&quot;),     TERMINATED(&quot;终止&quot;),     CANCELLED(&quot;被手动终止&quot;)等</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunState(string $RunState) 设置运行状态
+ * @method void setRunState(string $RunState) 设置<p>运行状态。CREATE(&quot;初始化&quot;),     QUEUED(&quot;等待中&quot;),     PENDING(&quot;准备中&quot;),     RUNNING(&quot;运行中&quot;),     SKIPPED(&quot;跳过运行&quot;),     SUCCESS(&quot;成功&quot;),     FAILED(&quot;失败&quot;),     TERMINATING(&quot;终止中&quot;),     TERMINATED(&quot;终止&quot;),     CANCELLED(&quot;被手动终止&quot;)等</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorCodeString() 获取运行错误码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ class WorkflowRunBrief extends AbstractModel
     public $RunStartTime;
 
     /**
-     * @var string 运行状态
+     * @var string <p>运行状态。CREATE(&quot;初始化&quot;),     QUEUED(&quot;等待中&quot;),     PENDING(&quot;准备中&quot;),     RUNNING(&quot;运行中&quot;),     SKIPPED(&quot;跳过运行&quot;),     SUCCESS(&quot;成功&quot;),     FAILED(&quot;失败&quot;),     TERMINATING(&quot;终止中&quot;),     TERMINATED(&quot;终止&quot;),     CANCELLED(&quot;被手动终止&quot;)等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunState;
@@ -68,7 +68,7 @@ class WorkflowRunBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunStartTime 运行开始时间，单位：毫秒时间戳
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunState 运行状态
+     * @param string $RunState <p>运行状态。CREATE(&quot;初始化&quot;),     QUEUED(&quot;等待中&quot;),     PENDING(&quot;准备中&quot;),     RUNNING(&quot;运行中&quot;),     SKIPPED(&quot;跳过运行&quot;),     SUCCESS(&quot;成功&quot;),     FAILED(&quot;失败&quot;),     TERMINATING(&quot;终止中&quot;),     TERMINATED(&quot;终止&quot;),     CANCELLED(&quot;被手动终止&quot;)等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorCodeString 运行错误码
 注意：此字段可能返回 null，表示取不到有效值。

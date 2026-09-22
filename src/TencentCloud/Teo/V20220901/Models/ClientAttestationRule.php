@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 客户端认证规则
  *
- * @method string getId() 获取客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
- * @method void setId(string $Id) 设置客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
- * @method string getName() 获取客户端认证规则的名称。
- * @method void setName(string $Name) 设置客户端认证规则的名称。
- * @method string getEnabled() 获取规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
- * @method void setEnabled(string $Enabled) 设置规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
- * @method integer getPriority() 获取规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
- * @method void setPriority(integer $Priority) 设置规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
- * @method string getCondition() 获取规则的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method void setCondition(string $Condition) 设置规则的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method string getAttesterId() 获取客户端认证选项 ID。
- * @method void setAttesterId(string $AttesterId) 设置客户端认证选项 ID。
- * @method array getDeviceProfiles() 获取客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
- * @method void setDeviceProfiles(array $DeviceProfiles) 设置客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
- * @method SecurityAction getInvalidAttestationAction() 获取客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
- * @method void setInvalidAttestationAction(SecurityAction $InvalidAttestationAction) 设置客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+ * @method string getId() 获取<p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
+ * @method void setId(string $Id) 设置<p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
+ * @method string getName() 获取<p>客户端认证规则的名称。</p>
+ * @method void setName(string $Name) 设置<p>客户端认证规则的名称。</p>
+ * @method string getEnabled() 获取<p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+ * @method void setEnabled(string $Enabled) 设置<p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+ * @method integer getPriority() 获取<p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
+ * @method void setPriority(integer $Priority) 设置<p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
+ * @method string getCondition() 获取<p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+ * @method void setCondition(string $Condition) 设置<p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+ * @method string getAttesterId() 获取<p>客户端认证选项 ID。</p>
+ * @method void setAttesterId(string $AttesterId) 设置<p>客户端认证选项 ID。</p>
+ * @method SecurityAction getInvalidAttestationAction() 获取<p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
+ * @method void setInvalidAttestationAction(SecurityAction $InvalidAttestationAction) 设置<p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
+ * @method array getDeviceProfiles() 获取<p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+ * @method void setDeviceProfiles(array $DeviceProfiles) 设置<p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+ * @method AccountProtectionSettings getAccountProtectionSettings() 获取<p>账号保护配置。</p>
+ * @method void setAccountProtectionSettings(AccountProtectionSettings $AccountProtectionSettings) 设置<p>账号保护配置。</p>
  */
 class ClientAttestationRule extends AbstractModel
 {
     /**
-     * @var string 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
+     * @var string <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
      */
     public $Id;
 
     /**
-     * @var string 客户端认证规则的名称。
+     * @var string <p>客户端认证规则的名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * @var string <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public $Enabled;
 
     /**
-     * @var integer 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
+     * @var integer <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
      */
     public $Priority;
 
     /**
-     * @var string 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * @var string <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public $Condition;
 
     /**
-     * @var string 客户端认证选项 ID。
+     * @var string <p>客户端认证选项 ID。</p>
      */
     public $AttesterId;
 
     /**
-     * @var array 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-     */
-    public $DeviceProfiles;
-
-    /**
-     * @var SecurityAction 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+     * @var SecurityAction <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
      */
     public $InvalidAttestationAction;
 
     /**
-     * @param string $Id 客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li>
-     * @param string $Name 客户端认证规则的名称。
-     * @param string $Enabled 规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
-     * @param integer $Priority 规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。
-     * @param string $Condition 规则的具体内容，需符合表达式语法，详细规范参见产品文档。
-     * @param string $AttesterId 客户端认证选项 ID。
-     * @param array $DeviceProfiles 客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。
-     * @param SecurityAction $InvalidAttestationAction 客户端认证未通过的处置方式。SecurityAction 的 Name 取值支持：<li>Deny：拦截；</li><li>Monitor：观察；</li><li>Redirect：重定向；</li><li>Challenge：挑战。</li>默认值为 Monitor。
+     * @var array <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+     */
+    public $DeviceProfiles;
+
+    /**
+     * @var AccountProtectionSettings <p>账号保护配置。</p>
+     */
+    public $AccountProtectionSettings;
+
+    /**
+     * @param string $Id <p>客户端认证规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li> <b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li> <b>删除</b>已有规则：BotManagement 参数中，ClientAttestationRule 列表中未包含的已有规则将被删除。</li></p>
+     * @param string $Name <p>客户端认证规则的名称。</p>
+     * @param string $Enabled <p>规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+     * @param integer $Priority <p>规则的优先级，数值越小越优先执行，范围是 0 ~ 100，默认为 0。</p>
+     * @param string $Condition <p>规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+     * @param string $AttesterId <p>客户端认证选项 ID。</p>
+     * @param SecurityAction $InvalidAttestationAction <p>客户端认证未通过的处置方式。SecurityAction.Name 取值范围如下：</p><ul><li>Allow：放行，其中 AllowActionParameters 支持 MinDelayTime 和 MaxDelayTime 配置；</li><li>Deny：拦截，其中 DenyActionParameters 中支持 BlockIp、ReturnCustomPage 和 Stall 配置；</li><li>Monitor：观察；</li><li>Challenge：挑战，其中 ChallengeActionParameters.ChallengeOption 支持 JSChallenge、ManagedChallenge、InterstitialChallenge 和 InlineChallenge；</li><li>Redirect：重定向至URL。</li></ul>
+     * @param array $DeviceProfiles <p>客户端设备配置。若 ClientAttestationRules 参数中，未指定 DeviceProfiles 参数值：保持已有客户端设备配置，不做修改。</p>
+     * @param AccountProtectionSettings $AccountProtectionSettings <p>账号保护配置。</p>
      */
     function __construct()
     {
@@ -126,6 +134,11 @@ class ClientAttestationRule extends AbstractModel
             $this->AttesterId = $param["AttesterId"];
         }
 
+        if (array_key_exists("InvalidAttestationAction",$param) and $param["InvalidAttestationAction"] !== null) {
+            $this->InvalidAttestationAction = new SecurityAction();
+            $this->InvalidAttestationAction->deserialize($param["InvalidAttestationAction"]);
+        }
+
         if (array_key_exists("DeviceProfiles",$param) and $param["DeviceProfiles"] !== null) {
             $this->DeviceProfiles = [];
             foreach ($param["DeviceProfiles"] as $key => $value){
@@ -135,9 +148,9 @@ class ClientAttestationRule extends AbstractModel
             }
         }
 
-        if (array_key_exists("InvalidAttestationAction",$param) and $param["InvalidAttestationAction"] !== null) {
-            $this->InvalidAttestationAction = new SecurityAction();
-            $this->InvalidAttestationAction->deserialize($param["InvalidAttestationAction"]);
+        if (array_key_exists("AccountProtectionSettings",$param) and $param["AccountProtectionSettings"] !== null) {
+            $this->AccountProtectionSettings = new AccountProtectionSettings();
+            $this->AccountProtectionSettings->deserialize($param["AccountProtectionSettings"]);
         }
     }
 }

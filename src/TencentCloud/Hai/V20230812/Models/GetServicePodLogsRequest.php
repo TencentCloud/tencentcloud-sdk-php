@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetServicePodLogs请求参数结构体
  *
-
+ * @method string getServiceId() 获取<p>服务Id</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务Id</p>
+ * @method string getPodName() 获取<p>Pod名称</p>
+ * @method void setPodName(string $PodName) 设置<p>Pod名称</p>
+ * @method string getTailLines() 获取<p>日志行数</p>
+ * @method void setTailLines(string $TailLines) 设置<p>日志行数</p>
  */
 class GetServicePodLogsRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>服务Id</p>
+     */
+    public $ServiceId;
 
     /**
+     * @var string <p>Pod名称</p>
+     */
+    public $PodName;
 
+    /**
+     * @var string <p>日志行数</p>
+     */
+    public $TailLines;
+
+    /**
+     * @param string $ServiceId <p>服务Id</p>
+     * @param string $PodName <p>Pod名称</p>
+     * @param string $TailLines <p>日志行数</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class GetServicePodLogsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
+        }
 
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("TailLines",$param) and $param["TailLines"] !== null) {
+            $this->TailLines = $param["TailLines"];
+        }
     }
 }

@@ -41,6 +41,8 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateAuditImagesResponse CreateAuditImages(Models\CreateAuditImagesRequest $req) 直播审核图库添加图片，添加到预设库，图库不需要创建。
  * @method Models\CreateAuditKeywordLibResponse CreateAuditKeywordLib(Models\CreateAuditKeywordLibRequest $req) 创建关键词库，直播审核功能使用。
  * @method Models\CreateAuditKeywordsResponse CreateAuditKeywords(Models\CreateAuditKeywordsRequest $req) 创建关键词，并关联到关键词库。
+ * @method Models\CreateAuditRuleResponse CreateAuditRule(Models\CreateAuditRuleRequest $req) 创建审核规则。
+ * @method Models\CreateAuditTemplateResponse CreateAuditTemplate(Models\CreateAuditTemplateRequest $req) 创建单个审核模板。
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
  * @method Models\CreateCasterPgmResponse CreateCasterPgm(Models\CreateCasterPgmRequest $req) 该接口用来启动主监任务，并将获取主监画面的播放地址。
@@ -90,6 +92,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 <br>录制相关文档：[直播录制](/document/product/267/32739)。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建录制模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveRecordRule](/document/product/267/32615)接口，将模板id绑定到流进行使用。
 <br>录制相关文档：[直播录制](/document/product/267/32739)。
+ * @method Models\CreateLiveSmartEraseTemplateResponse CreateLiveSmartEraseTemplate(Models\CreateLiveSmartEraseTemplateRequest $req) 创建直播智能擦除模板。
  * @method Models\CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(Models\CreateLiveSnapshotRuleRequest $req) 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
 <br>截图相关文档：[直播截图](/document/product/267/32737)。
 注意：单个域名仅支持关联一个截图模板。
@@ -133,6 +136,8 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\DeleteAuditImagesResponse DeleteAuditImages(Models\DeleteAuditImagesRequest $req) 直播审核图库删除图片。
  * @method Models\DeleteAuditKeywordLibResponse DeleteAuditKeywordLib(Models\DeleteAuditKeywordLibRequest $req) 删除关键词库，直播审核功能使用。
  * @method Models\DeleteAuditKeywordsResponse DeleteAuditKeywords(Models\DeleteAuditKeywordsRequest $req) 删除关键词信息。
+ * @method Models\DeleteAuditRuleResponse DeleteAuditRule(Models\DeleteAuditRuleRequest $req) 删除审核规则。
+ * @method Models\DeleteAuditTemplateResponse DeleteAuditTemplate(Models\DeleteAuditTemplateRequest $req) 删除审核模板。
  * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
  * @method Models\DeleteCasterInputInfoResponse DeleteCasterInputInfo(Models\DeleteCasterInputInfoRequest $req) 该接口用来删除导播台中的输入源信息。
@@ -177,6 +182,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeAuditImagesResponse DescribeAuditImages(Models\DescribeAuditImagesRequest $req) 直播审核图库获取图片。
  * @method Models\DescribeAuditKeywordLibsResponse DescribeAuditKeywordLibs(Models\DescribeAuditKeywordLibsRequest $req) 获取关键词库列表，直播审核功能使用。
  * @method Models\DescribeAuditKeywordsResponse DescribeAuditKeywords(Models\DescribeAuditKeywordsRequest $req) 获取关键词信息。
+ * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 获取审核规则列表。
+ * @method Models\DescribeAuditTemplateResponse DescribeAuditTemplate(Models\DescribeAuditTemplateRequest $req) 获取单个审核模板。
+ * @method Models\DescribeAuditTemplatesResponse DescribeAuditTemplates(Models\DescribeAuditTemplatesRequest $req) 返回当前用户的审核模板列表。
  * @method Models\DescribeBackupStreamListResponse DescribeBackupStreamList(Models\DescribeBackupStreamListRequest $req) 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
 
 注意：
@@ -346,6 +354,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 1. 仅支持对有效且运行中的点播源任务进行插播操作。
 2. 拉转推插播文件时，事件及回调中的索引均保持为插播前的值。
  * @method Models\ModifyAuditKeywordLibResponse ModifyAuditKeywordLib(Models\ModifyAuditKeywordLibRequest $req) 更新关键词库信息，直播审核功能使用。
+ * @method Models\ModifyAuditTemplateResponse ModifyAuditTemplate(Models\ModifyAuditTemplateRequest $req) 修改审核模板。
  * @method Models\ModifyCasterResponse ModifyCaster(Models\ModifyCasterRequest $req) 该接口用来设置导播台的描述、名称、录制模板id等参数。
  * @method Models\ModifyCasterInputInfoResponse ModifyCasterInputInfo(Models\ModifyCasterInputInfoRequest $req) 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
 设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。

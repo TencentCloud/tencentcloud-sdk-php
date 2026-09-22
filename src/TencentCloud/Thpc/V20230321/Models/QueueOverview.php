@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 队列信息概览。
  *
- * @method string getQueueName() 获取队列名称。
- * @method void setQueueName(string $QueueName) 设置队列名称。
+ * @method string getQueueName() 获取<p>队列名称。</p>
+ * @method void setQueueName(string $QueueName) 设置<p>队列名称。</p>
  */
 class QueueOverview extends AbstractModel
 {
     /**
-     * @var string 队列名称。
+     * @var string <p>队列名称。</p>
      */
     public $QueueName;
 
     /**
-     * @param string $QueueName 队列名称。
+     * @param string $QueueName <p>队列名称。</p>
      */
     function __construct()
     {

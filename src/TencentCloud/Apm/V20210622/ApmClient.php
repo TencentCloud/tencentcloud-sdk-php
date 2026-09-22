@@ -77,6 +77,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\ModifyApmSampleConfigResponse ModifyApmSampleConfig(Models\ModifyApmSampleConfigRequest $req) 修改采样配置接口
  * @method Models\ModifyApmServiceResponse ModifyApmService(Models\ModifyApmServiceRequest $req) 修改apm应用信息
  * @method Models\ModifyGeneralApmApplicationConfigResponse ModifyGeneralApmApplicationConfig(Models\ModifyGeneralApmApplicationConfigRequest $req) 对外开放的openApi，客户可以灵活的指定需要修改的字段，再加入需要修改的服务列表.
+ * @method Models\OpenApmPaidVersionResponse OpenApmPaidVersion(Models\OpenApmPaidVersionRequest $req) 开通付费版本
  * @method Models\TerminateApmInstanceResponse TerminateApmInstance(Models\TerminateApmInstanceRequest $req) 销毁 APM 业务系统
  */
 

@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowTaskRunId(string $WorkflowTaskRunId) 设置<p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRunState() 获取<p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+ * @method string getRunState() 获取<p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunState(string $RunState) 设置<p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+ * @method void setRunState(string $RunState) 设置<p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkspaceId() 获取<p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,17 +48,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskTypeName() 获取任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+ * @method string getTaskTypeName() 获取<p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypeName(string $TaskTypeName) 设置任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+ * @method void setTaskTypeName(string $TaskTypeName) 设置<p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskVersionId() 获取<p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskVersionId(string $TaskVersionId) 设置<p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTriggerType() 获取<p>触发类型 (参考SchedulerTriggerType枚举)</p>
+ * @method string getTriggerType() 获取<p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerType(string $TriggerType) 设置<p>触发类型 (参考SchedulerTriggerType枚举)</p>
+ * @method void setTriggerType(string $TriggerType) 设置<p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupId() 获取<p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,7 +196,7 @@ class WorkflowTaskRun extends AbstractModel
     public $WorkflowTaskRunId;
 
     /**
-     * @var string <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * @var string <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunState;
@@ -226,7 +226,7 @@ class WorkflowTaskRun extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * @var string <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypeName;
@@ -238,7 +238,7 @@ class WorkflowTaskRun extends AbstractModel
     public $TaskVersionId;
 
     /**
-     * @var string <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * @var string <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
@@ -428,7 +428,7 @@ class WorkflowTaskRun extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowTaskRunId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RunState <p>运行状态。取值参考工作流任务运行状态枚举，如 Pending / Running / Succeeded / Failed / Killed</p>
+     * @param string $RunState <p>运行状态。如CREATE("初始化"), QUEUED("等待中"), PENDING("准备中"), RUNNING("运行中"), SKIPPED("跳过运行"), SUCCESS("成功"), FAILED("失败"), TERMINATING("终止中"), TERMINATED("终止"), CANCELLED("被手动终止")等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkspaceId <p>工作空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -438,11 +438,11 @@ class WorkflowTaskRun extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskTypeName 任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述
+     * @param string $TaskTypeName <p>任务类型名称，请参考数据结构TaskType中TaskTypeName字段描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskVersionId <p>任务版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TriggerType <p>触发类型 (参考SchedulerTriggerType枚举)</p>
+     * @param string $TriggerType <p>触发类型</p><p>枚举值：</p><ul><li>Manual： 手动触发</li><li>Scheduler： 调度触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupId <p>所属资源组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。

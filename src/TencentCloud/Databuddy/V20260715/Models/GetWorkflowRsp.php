@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrigger(array $Trigger) 设置<p>工作流调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParamList() 获取<p>工作流参数列表</p>
+ * @method array getParamList() 获取<p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamList(array $ParamList) 设置<p>工作流参数列表</p>
+ * @method void setParamList(array $ParamList) 设置<p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabelList() 获取<p>标签列表</p>
+ * @method array getLabelList() 获取<p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelList(array $LabelList) 设置<p>标签列表</p>
+ * @method void setLabelList(array $LabelList) 设置<p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AlarmBrief getAlarm() 获取<p>工作流告警配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,13 +94,13 @@ class GetWorkflowRsp extends AbstractModel
     public $Trigger;
 
     /**
-     * @var array <p>工作流参数列表</p>
+     * @var array <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamList;
 
     /**
-     * @var array <p>标签列表</p>
+     * @var array <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelList;
@@ -160,9 +160,9 @@ class GetWorkflowRsp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Trigger <p>工作流调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ParamList <p>工作流参数列表</p>
+     * @param array $ParamList <p>工作流参数列表 参数名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LabelList <p>标签列表</p>
+     * @param array $LabelList <p>标签 标签名必填且只能包含数字、大小写字母、空格、.$@#!%^&amp;*()-_+=&gt;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmBrief $Alarm <p>工作流告警配置</p>
 注意：此字段可能返回 null，表示取不到有效值。

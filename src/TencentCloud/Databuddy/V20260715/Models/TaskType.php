@@ -26,7 +26,7 @@ use TencentCloud\Common\AbstractModel;
 
 | 属性键       | 属性名称          | 描述                               | 是否必需                |
 | ------------ | ----------------- | ---------------------------------- | ----------------------- |
-| Source       | 来源              | 可填2或5,来源 2:GIT, 5:工作空间    | 是                      |
+| Source       | 来源              | 只支持填2或5,来源 2:GIT, 5:工作空间    | 是                      |
 | NotebookPath | Notebook 相对路径 | Source为5时，需从（ListFiles）获取 | Source 为 2、5 时，必填 |
 
 ### 2. DATA_INTEGRATION 任务类型
@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
 
 | 属性键          | 属性名称    | 描述                                          | 是否必需             |
 | --------------- | ----------- | --------------------------------------------- | -------------------- |
-| Source          | 来源        | 可填2或5,来源 2:GIT, 5:工作空间               | 是                   |
+| Source          | 来源        | 只支持填2或5,来源 2:GIT, 5:工作空间               | 是                   |
 | SqlPath         | SQL脚本路径 | SQL脚本路径                                   | Source 为 2 时，必填 |
 | CodeFileName    | 文件名称    | Source为5时，需从（ListReleasedQueries）接口获取 | 否                |
 | CodeFileId      | 文件ID      | Source为5时，需从（ListReleasedQueries）接口获取 | Source 为 5 时，必填 |
@@ -65,7 +65,7 @@ use TencentCloud\Common\AbstractModel;
 
 | 属性键     | 属性名称       | 描述                                   | 是否必需 |
 | ---------- | -------------- | -------------------------------------- | -------- |
-| Source     | 来源           | 可填2或5,来源 2:GIT, 5:工作空间        | 是       |
+| Source     | 来源           | 只支持填2或5,来源 2:GIT, 5:工作空间        | 是       |
 | SourcePath | Python脚本路径 | Source为5时，需从（ListFiles）接口获取 | 是       |
 
 ### 6. DATA_QUALITY（质量监控）任务类型
@@ -146,9 +146,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotebook(TaskTypeNotebookExt $Notebook) 设置<p>Notebook 类型扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskTypePropertyList() 获取<p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+ * @method array getTaskTypePropertyList() 获取<p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypePropertyList(array $TaskTypePropertyList) 设置<p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+ * @method void setTaskTypePropertyList(array $TaskTypePropertyList) 设置<p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuntimePropertyList() 获取<p>运行时属性列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,7 +170,7 @@ class TaskType extends AbstractModel
     public $Notebook;
 
     /**
-     * @var array <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * @var array <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypePropertyList;
@@ -186,7 +186,7 @@ class TaskType extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTypeNotebookExt $Notebook <p>Notebook 类型扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskTypePropertyList <p>任务扩展属性列表，具体填写参考 ListWorkflowTaskTypeProperties 接口</p>
+     * @param array $TaskTypePropertyList <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuntimePropertyList <p>运行时属性列表</p>
 注意：此字段可能返回 null，表示取不到有效值。

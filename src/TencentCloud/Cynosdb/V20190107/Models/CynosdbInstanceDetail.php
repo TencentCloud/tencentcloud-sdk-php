@@ -92,6 +92,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbMode(string $DbMode) 设置<p>Db类型:<li>NORMAL</li><li>SERVERLESS</li></p>
  * @method string getMasterZone() 获取<p>集群的读写实例所在可用区</p>
  * @method void setMasterZone(string $MasterZone) 设置<p>集群的读写实例所在可用区</p>
+ * @method string getRealZone() 获取<p>实例的真实可用区</p>
+ * @method void setRealZone(string $RealZone) 设置<p>实例的真实可用区</p>
+ * @method array getSlaveZones() 获取<p>备可用区列表</p>
+ * @method void setSlaveZones(array $SlaveZones) 设置<p>备可用区列表</p>
+ * @method string getStorageVersion() 获取<p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+ * @method void setStorageVersion(string $StorageVersion) 设置<p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -276,6 +282,21 @@ class CynosdbInstanceDetail extends AbstractModel
     public $MasterZone;
 
     /**
+     * @var string <p>实例的真实可用区</p>
+     */
+    public $RealZone;
+
+    /**
+     * @var array <p>备可用区列表</p>
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+     */
+    public $StorageVersion;
+
+    /**
      * @param string $Uin <p>用户Uin</p>
      * @param integer $AppId <p>用户AppId</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -312,6 +333,9 @@ class CynosdbInstanceDetail extends AbstractModel
      * @param float $MaxCpu <p>serverless实例cpu上限</p>
      * @param string $DbMode <p>Db类型:<li>NORMAL</li><li>SERVERLESS</li></p>
      * @param string $MasterZone <p>集群的读写实例所在可用区</p>
+     * @param string $RealZone <p>实例的真实可用区</p>
+     * @param array $SlaveZones <p>备可用区列表</p>
+     * @param string $StorageVersion <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
      */
     function __construct()
     {
@@ -468,6 +492,18 @@ class CynosdbInstanceDetail extends AbstractModel
 
         if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
             $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("RealZone",$param) and $param["RealZone"] !== null) {
+            $this->RealZone = $param["RealZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
+            $this->StorageVersion = $param["StorageVersion"];
         }
     }
 }

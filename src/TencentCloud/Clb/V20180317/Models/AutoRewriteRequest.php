@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AutoRewrite请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
- * @method string getListenerId() 获取HTTPS:443监听器的ID。
- * @method void setListenerId(string $ListenerId) 设置HTTPS:443监听器的ID。
- * @method array getDomains() 获取HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
- * @method void setDomains(array $Domains) 设置HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
- * @method array getRewriteCodes() 获取重定向状态码，可取值301,302,307。
- * @method void setRewriteCodes(array $RewriteCodes) 设置重定向状态码，可取值301,302,307。
- * @method array getTakeUrls() 获取重定向是否携带匹配的URL。
- * @method void setTakeUrls(array $TakeUrls) 设置重定向是否携带匹配的URL。
+ * @method string getLoadBalancerId() 获取<p>负载均衡实例ID。</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡实例ID。</p>
+ * @method string getListenerId() 获取<p>HTTPS:443监听器的ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>HTTPS:443监听器的ID。</p>
+ * @method array getDomains() 获取<p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
+ * @method void setDomains(array $Domains) 设置<p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
+ * @method array getRewriteCodes() 获取<p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
+ * @method void setRewriteCodes(array $RewriteCodes) 设置<p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
+ * @method array getTakeUrls() 获取<p>重定向是否携带匹配的URL。</p>
+ * @method void setTakeUrls(array $TakeUrls) 设置<p>重定向是否携带匹配的URL。</p>
  */
 class AutoRewriteRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID。
+     * @var string <p>负载均衡实例ID。</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string HTTPS:443监听器的ID。
+     * @var string <p>HTTPS:443监听器的ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var array HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
+     * @var array <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
      */
     public $Domains;
 
     /**
-     * @var array 重定向状态码，可取值301,302,307。
+     * @var array <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
      */
     public $RewriteCodes;
 
     /**
-     * @var array 重定向是否携带匹配的URL。
+     * @var array <p>重定向是否携带匹配的URL。</p>
      */
     public $TakeUrls;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID。
-     * @param string $ListenerId HTTPS:443监听器的ID。
-     * @param array $Domains HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
-     * @param array $RewriteCodes 重定向状态码，可取值301,302,307。
-     * @param array $TakeUrls 重定向是否携带匹配的URL。
+     * @param string $LoadBalancerId <p>负载均衡实例ID。</p>
+     * @param string $ListenerId <p>HTTPS:443监听器的ID。</p>
+     * @param array $Domains <p>HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。</p>
+     * @param array $RewriteCodes <p>重定向状态码，可取值301,302,307。</p><p>默认值：302</p>
+     * @param array $TakeUrls <p>重定向是否携带匹配的URL。</p>
      */
     function __construct()
     {

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度高级配置。
  *
- * @method string getTaskRetryMode() 获取任务重试模式
+ * @method string getTaskRetryMode() 获取<p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskRetryMode(string $TaskRetryMode) 设置任务重试模式
+ * @method void setTaskRetryMode(string $TaskRetryMode) 设置<p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerAdvancedConfiguration extends AbstractModel
 {
     /**
-     * @var string 任务重试模式
+     * @var string <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskRetryMode;
 
     /**
-     * @param string $TaskRetryMode 任务重试模式
+     * @param string $TaskRetryMode <p>&lt;p&gt;该工作流下的所有任务重试模式，仅当TriggerMode为CONTINUE_RUN时有效。</p><p>枚举值：</p><ul><li>onFailure： 失败时自动重试</li><li>never： 从不重试</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

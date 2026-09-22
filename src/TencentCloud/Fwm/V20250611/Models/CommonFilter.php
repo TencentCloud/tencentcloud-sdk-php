@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置筛选值列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getOperatorType() 获取操作类型：1-精确匹配 9-模糊匹配
+ * @method integer getOperatorType() 获取操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperatorType(integer $OperatorType) 设置操作类型：1-精确匹配 9-模糊匹配
+ * @method void setOperatorType(integer $OperatorType) 设置操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommonFilter extends AbstractModel
@@ -48,7 +48,7 @@ class CommonFilter extends AbstractModel
     public $Values;
 
     /**
-     * @var integer 操作类型：1-精确匹配 9-模糊匹配
+     * @var integer 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorType;
@@ -58,7 +58,7 @@ class CommonFilter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 筛选值列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $OperatorType 操作类型：1-精确匹配 9-模糊匹配
+     * @param integer $OperatorType 操作类型：1=精确匹配，7=in，9=模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

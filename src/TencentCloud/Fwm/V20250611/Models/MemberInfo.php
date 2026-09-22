@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 成员信息
  *
- * @method string getAppId() 获取<p>成员AppId</p>
- * @method void setAppId(string $AppId) 设置<p>成员AppId</p>
- * @method string getUin() 获取<p>成员Uin</p>
- * @method void setUin(string $Uin) 设置<p>成员Uin</p>
- * @method string getNickname() 获取<p>成员昵称</p>
- * @method void setNickname(string $Nickname) 设置<p>成员昵称</p>
- * @method string getMemberId() 获取<p>成员Id</p>
- * @method void setMemberId(string $MemberId) 设置<p>成员Id</p>
- * @method string getNodeName() 获取<p>所属部门</p>
- * @method void setNodeName(string $NodeName) 设置<p>所属部门</p>
+ * @method string getAppId() 获取成员 AppId
+ * @method void setAppId(string $AppId) 设置成员 AppId
+ * @method string getUin() 获取成员 Uin
+ * @method void setUin(string $Uin) 设置成员 Uin
+ * @method string getNickname() 获取成员昵称
+ * @method void setNickname(string $Nickname) 设置成员昵称
+ * @method string getMemberId() 获取成员 ID（个人场景为空）
+ * @method void setMemberId(string $MemberId) 设置成员 ID（个人场景为空）
+ * @method string getNodeName() 获取所属部门
+ * @method void setNodeName(string $NodeName) 设置所属部门
  */
 class MemberInfo extends AbstractModel
 {
     /**
-     * @var string <p>成员AppId</p>
+     * @var string 成员 AppId
      */
     public $AppId;
 
     /**
-     * @var string <p>成员Uin</p>
+     * @var string 成员 Uin
      */
     public $Uin;
 
     /**
-     * @var string <p>成员昵称</p>
+     * @var string 成员昵称
      */
     public $Nickname;
 
     /**
-     * @var string <p>成员Id</p>
+     * @var string 成员 ID（个人场景为空）
      */
     public $MemberId;
 
     /**
-     * @var string <p>所属部门</p>
+     * @var string 所属部门
      */
     public $NodeName;
 
     /**
-     * @param string $AppId <p>成员AppId</p>
-     * @param string $Uin <p>成员Uin</p>
-     * @param string $Nickname <p>成员昵称</p>
-     * @param string $MemberId <p>成员Id</p>
-     * @param string $NodeName <p>所属部门</p>
+     * @param string $AppId 成员 AppId
+     * @param string $Uin 成员 Uin
+     * @param string $Nickname 成员昵称
+     * @param string $MemberId 成员 ID（个人场景为空）
+     * @param string $NodeName 所属部门
      */
     function __construct()
     {

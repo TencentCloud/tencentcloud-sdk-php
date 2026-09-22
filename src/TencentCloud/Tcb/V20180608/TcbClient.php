@@ -227,6 +227,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口(DescribeTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
+ * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 本接口（DescribeTaskResult）用于查询任务结果。
  * @method Models\DescribeUserListResponse DescribeUserList(Models\DescribeUserListRequest $req) 查询tcb用户列表
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 本接口用于销毁云开发环境。
 云开发环境遵循腾讯云包年包月预付费产品生命周期，因此环境销毁需要分两步：
@@ -288,6 +289,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
  * @method Models\RepairPGUserMigrationHistoryResponse RepairPGUserMigrationHistory(Models\RepairPGUserMigrationHistoryRequest $req) 本接口（RepairPGUserMigrationHistory）用于受控修复 history，只修改 user_schema_migrations，不执行 SQL。
+ * @method Models\ResetPGAccountPasswordResponse ResetPGAccountPassword(Models\ResetPGAccountPasswordRequest $req) 修改 PG 实例用户角色密码。
  * @method Models\RunCommandsResponse RunCommands(Models\RunCommandsRequest $req) 本接口（RunCommands）用于执行文档型数据库命令。
  * @method Models\RunSqlResponse RunSql(Models\RunSqlRequest $req) 本接口（RunSql）用于执行MySQL语句。
 
@@ -319,6 +321,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) 更新云函数代码
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引。
+ * @method Models\UpgradePGInstanceToDedicatedResponse UpgradePGInstanceToDedicated(Models\UpgradePGInstanceToDedicatedRequest $req) 本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
  * @method Models\VerifyHTTPServiceRouteResponse VerifyHTTPServiceRoute(Models\VerifyHTTPServiceRouteRequest $req) 覆盖的校验项包括：
 1. Ownership：域名所有权（TXT/CNAME 记录）；
 2. Cert：证书与域名匹配（CertId 为空时跳过）；

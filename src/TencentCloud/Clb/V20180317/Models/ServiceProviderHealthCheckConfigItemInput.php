@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckMaxTokens(integer $HealthCheckMaxTokens) 设置<p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>取值范围：[1, 1024]</p><p>默认值：1</p>
  * @method string getHealthCheckProtocol() 获取<p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/v1/messages协议</li></ul>
  * @method void setHealthCheckProtocol(string $HealthCheckProtocol) 设置<p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/v1/messages协议</li></ul>
+ * @method string getHealthCheckPath() 获取<p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+ * @method void setHealthCheckPath(string $HealthCheckPath) 设置<p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+ * @method string getHealthCheckMethod() 获取<p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+ * @method void setHealthCheckMethod(string $HealthCheckMethod) 设置<p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
  */
 class ServiceProviderHealthCheckConfigItemInput extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ServiceProviderHealthCheckConfigItemInput extends AbstractModel
     public $HealthCheckProtocol;
 
     /**
+     * @var string <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     */
+    public $HealthCheckPath;
+
+    /**
+     * @var string <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
+     */
+    public $HealthCheckMethod;
+
+    /**
      * @param boolean $HealthCheckEnabled <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      * @param integer $HealthCheckInterval <p>健康检查间隔。支持以300s为步长配置。</p><p>取值范围：[300, 14400]</p><p>单位：s</p><p>默认值：300</p>
      * @param integer $HealthCheckUnhealthyThreshold <p>不健康阈值。表示当模型连续多少次不健康时认为该模型不健康。</p><p>取值范围：[1, 10]</p>
      * @param integer $HealthCheckMaxTokens <p>健康检查使用的最大Token数量。部分模型如gpt系列可能仅支持大于等于16。</p><p>取值范围：[1, 1024]</p><p>默认值：1</p>
      * @param string $HealthCheckProtocol <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/v1/messages协议</li></ul>
+     * @param string $HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
+     * @param string $HealthCheckMethod <p>健康检查方式。</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ServiceProviderHealthCheckConfigItemInput extends AbstractModel
 
         if (array_key_exists("HealthCheckProtocol",$param) and $param["HealthCheckProtocol"] !== null) {
             $this->HealthCheckProtocol = $param["HealthCheckProtocol"];
+        }
+
+        if (array_key_exists("HealthCheckPath",$param) and $param["HealthCheckPath"] !== null) {
+            $this->HealthCheckPath = $param["HealthCheckPath"];
+        }
+
+        if (array_key_exists("HealthCheckMethod",$param) and $param["HealthCheckMethod"] !== null) {
+            $this->HealthCheckMethod = $param["HealthCheckMethod"];
         }
     }
 }

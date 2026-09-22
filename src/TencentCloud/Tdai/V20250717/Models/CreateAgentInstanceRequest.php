@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>无</p>
  * @method boolean getUsePlatformAccount() 获取<p>企业版是否使用平台大账号模式发货</p>
  * @method void setUsePlatformAccount(boolean $UsePlatformAccount) 设置<p>企业版是否使用平台大账号模式发货</p>
+ * @method boolean getDeploymentFree() 获取<p>是否是免部署实例</p>
+ * @method void setDeploymentFree(boolean $DeploymentFree) 设置<p>是否是免部署实例</p>
+ * @method boolean getEnableMemory() 获取<p>是否支持记忆</p>
+ * @method void setEnableMemory(boolean $EnableMemory) 设置<p>是否支持记忆</p>
  */
 class CreateAgentInstanceRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class CreateAgentInstanceRequest extends AbstractModel
     public $UsePlatformAccount;
 
     /**
+     * @var boolean <p>是否是免部署实例</p>
+     */
+    public $DeploymentFree;
+
+    /**
+     * @var boolean <p>是否支持记忆</p>
+     */
+    public $EnableMemory;
+
+    /**
      * @param string $AgentId <p>智能体ID</p>
      * @param string $AgentVersion <p>智能体版本</p>
      * @param string $InstanceName <p>实例名</p>
@@ -112,6 +126,8 @@ class CreateAgentInstanceRequest extends AbstractModel
      * @param integer $SoulId <p>无</p>
      * @param string $Description <p>无</p>
      * @param boolean $UsePlatformAccount <p>企业版是否使用平台大账号模式发货</p>
+     * @param boolean $DeploymentFree <p>是否是免部署实例</p>
+     * @param boolean $EnableMemory <p>是否支持记忆</p>
      */
     function __construct()
     {
@@ -178,6 +194,14 @@ class CreateAgentInstanceRequest extends AbstractModel
 
         if (array_key_exists("UsePlatformAccount",$param) and $param["UsePlatformAccount"] !== null) {
             $this->UsePlatformAccount = $param["UsePlatformAccount"];
+        }
+
+        if (array_key_exists("DeploymentFree",$param) and $param["DeploymentFree"] !== null) {
+            $this->DeploymentFree = $param["DeploymentFree"];
+        }
+
+        if (array_key_exists("EnableMemory",$param) and $param["EnableMemory"] !== null) {
+            $this->EnableMemory = $param["EnableMemory"];
         }
     }
 }

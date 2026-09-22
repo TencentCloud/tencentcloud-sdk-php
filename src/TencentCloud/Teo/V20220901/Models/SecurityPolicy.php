@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全策略配置
  *
- * @method CustomRules getCustomRules() 获取自定义规则配置。
- * @method void setCustomRules(CustomRules $CustomRules) 设置自定义规则配置。
- * @method ManagedRules getManagedRules() 获取托管规则配置。
- * @method void setManagedRules(ManagedRules $ManagedRules) 设置托管规则配置。
- * @method HttpDDoSProtection getHttpDDoSProtection() 获取HTTP DDOS 防护配置。
- * @method void setHttpDDoSProtection(HttpDDoSProtection $HttpDDoSProtection) 设置HTTP DDOS 防护配置。
- * @method RateLimitingRules getRateLimitingRules() 获取速率限制规则配置。
- * @method void setRateLimitingRules(RateLimitingRules $RateLimitingRules) 设置速率限制规则配置。
- * @method ExceptionRules getExceptionRules() 获取例外规则配置。
- * @method void setExceptionRules(ExceptionRules $ExceptionRules) 设置例外规则配置。
- * @method BotManagement getBotManagement() 获取Bot 管理配置。
- * @method void setBotManagement(BotManagement $BotManagement) 设置Bot 管理配置。
- * @method BotManagementLite getBotManagementLite() 获取基础 Bot 管理配置。
- * @method void setBotManagementLite(BotManagementLite $BotManagementLite) 设置基础 Bot 管理配置。
- * @method DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() 获取默认拦截动作配置。
- * @method void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters) 设置默认拦截动作配置。
+ * @method CustomRules getCustomRules() 获取<p>自定义规则配置。</p>
+ * @method void setCustomRules(CustomRules $CustomRules) 设置<p>自定义规则配置。</p>
+ * @method ManagedRules getManagedRules() 获取<p>托管规则配置。</p>
+ * @method void setManagedRules(ManagedRules $ManagedRules) 设置<p>托管规则配置。</p>
+ * @method HttpDDoSProtection getHttpDDoSProtection() 获取<p>HTTP DDOS 防护配置。</p>
+ * @method void setHttpDDoSProtection(HttpDDoSProtection $HttpDDoSProtection) 设置<p>HTTP DDOS 防护配置。</p>
+ * @method RateLimitingRules getRateLimitingRules() 获取<p>速率限制规则配置。</p>
+ * @method void setRateLimitingRules(RateLimitingRules $RateLimitingRules) 设置<p>速率限制规则配置。</p>
+ * @method ExceptionRules getExceptionRules() 获取<p>例外规则配置。</p>
+ * @method void setExceptionRules(ExceptionRules $ExceptionRules) 设置<p>例外规则配置。</p>
+ * @method BotManagement getBotManagement() 获取<p>Bot 管理配置。</p>
+ * @method void setBotManagement(BotManagement $BotManagement) 设置<p>Bot 管理配置。</p>
+ * @method BotManagementLite getBotManagementLite() 获取<p>基础 Bot 管理配置。</p>
+ * @method void setBotManagementLite(BotManagementLite $BotManagementLite) 设置<p>基础 Bot 管理配置。</p>
+ * @method DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() 获取<p>默认拦截动作配置。</p>
+ * @method void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters) 设置<p>默认拦截动作配置。</p>
+ * @method SecurityHeadersToOrigin getSecurityHeadersToOrigin() 获取<p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+ * @method void setSecurityHeadersToOrigin(SecurityHeadersToOrigin $SecurityHeadersToOrigin) 设置<p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
  */
 class SecurityPolicy extends AbstractModel
 {
     /**
-     * @var CustomRules 自定义规则配置。
+     * @var CustomRules <p>自定义规则配置。</p>
      */
     public $CustomRules;
 
     /**
-     * @var ManagedRules 托管规则配置。
+     * @var ManagedRules <p>托管规则配置。</p>
      */
     public $ManagedRules;
 
     /**
-     * @var HttpDDoSProtection HTTP DDOS 防护配置。
+     * @var HttpDDoSProtection <p>HTTP DDOS 防护配置。</p>
      */
     public $HttpDDoSProtection;
 
     /**
-     * @var RateLimitingRules 速率限制规则配置。
+     * @var RateLimitingRules <p>速率限制规则配置。</p>
      */
     public $RateLimitingRules;
 
     /**
-     * @var ExceptionRules 例外规则配置。
+     * @var ExceptionRules <p>例外规则配置。</p>
      */
     public $ExceptionRules;
 
     /**
-     * @var BotManagement Bot 管理配置。
+     * @var BotManagement <p>Bot 管理配置。</p>
      */
     public $BotManagement;
 
     /**
-     * @var BotManagementLite 基础 Bot 管理配置。
+     * @var BotManagementLite <p>基础 Bot 管理配置。</p>
      */
     public $BotManagementLite;
 
     /**
-     * @var DefaultDenySecurityActionParameters 默认拦截动作配置。
+     * @var DefaultDenySecurityActionParameters <p>默认拦截动作配置。</p>
      */
     public $DefaultDenySecurityActionParameters;
 
     /**
-     * @param CustomRules $CustomRules 自定义规则配置。
-     * @param ManagedRules $ManagedRules 托管规则配置。
-     * @param HttpDDoSProtection $HttpDDoSProtection HTTP DDOS 防护配置。
-     * @param RateLimitingRules $RateLimitingRules 速率限制规则配置。
-     * @param ExceptionRules $ExceptionRules 例外规则配置。
-     * @param BotManagement $BotManagement Bot 管理配置。
-     * @param BotManagementLite $BotManagementLite 基础 Bot 管理配置。
-     * @param DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters 默认拦截动作配置。
+     * @var SecurityHeadersToOrigin <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
+     */
+    public $SecurityHeadersToOrigin;
+
+    /**
+     * @param CustomRules $CustomRules <p>自定义规则配置。</p>
+     * @param ManagedRules $ManagedRules <p>托管规则配置。</p>
+     * @param HttpDDoSProtection $HttpDDoSProtection <p>HTTP DDOS 防护配置。</p>
+     * @param RateLimitingRules $RateLimitingRules <p>速率限制规则配置。</p>
+     * @param ExceptionRules $ExceptionRules <p>例外规则配置。</p>
+     * @param BotManagement $BotManagement <p>Bot 管理配置。</p>
+     * @param BotManagementLite $BotManagementLite <p>基础 Bot 管理配置。</p>
+     * @param DefaultDenySecurityActionParameters $DefaultDenySecurityActionParameters <p>默认拦截动作配置。</p>
+     * @param SecurityHeadersToOrigin $SecurityHeadersToOrigin <p>回源请求携带安全头部配置，配置生效后将携带对应 keyname 的请求头部回源。</p>
      */
     function __construct()
     {
@@ -140,6 +148,11 @@ class SecurityPolicy extends AbstractModel
         if (array_key_exists("DefaultDenySecurityActionParameters",$param) and $param["DefaultDenySecurityActionParameters"] !== null) {
             $this->DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters();
             $this->DefaultDenySecurityActionParameters->deserialize($param["DefaultDenySecurityActionParameters"]);
+        }
+
+        if (array_key_exists("SecurityHeadersToOrigin",$param) and $param["SecurityHeadersToOrigin"] !== null) {
+            $this->SecurityHeadersToOrigin = new SecurityHeadersToOrigin();
+            $this->SecurityHeadersToOrigin->deserialize($param["SecurityHeadersToOrigin"]);
         }
     }
 }

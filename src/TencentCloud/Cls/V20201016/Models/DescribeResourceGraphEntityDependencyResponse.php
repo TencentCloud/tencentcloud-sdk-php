@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceGraphEntityDependency返回参数结构体
  *
+ * @method DependencyTopology getTopology() 获取<p>拓扑图（节点 + 边）</p>
+ * @method void setTopology(DependencyTopology $Topology) 设置<p>拓扑图（节点 + 边）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeResourceGraphEntityDependencyResponse extends AbstractModel
 {
     /**
+     * @var DependencyTopology <p>拓扑图（节点 + 边）</p>
+     */
+    public $Topology;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param DependencyTopology $Topology <p>拓扑图（节点 + 边）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeResourceGraphEntityDependencyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Topology",$param) and $param["Topology"] !== null) {
+            $this->Topology = new DependencyTopology();
+            $this->Topology->deserialize($param["Topology"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

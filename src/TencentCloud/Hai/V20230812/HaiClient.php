@@ -29,10 +29,10 @@ use TencentCloud\Hai\V20230812\Models as Models;
  * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 本接口 (DeleteService) 用于删除一个指定配置的实例。
  * @method Models\DeployInferServiceResponse DeployInferService(Models\DeployInferServiceRequest $req) 本接口(DeployInferService)用于部署推理服务
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 本接口（DescribeApplications）用于查询应用
- * @method Models\DescribeDeployTemplatesResponse DescribeDeployTemplates(Models\DescribeDeployTemplatesRequest $req) 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+ * @method Models\DescribeDeployTemplatesResponse DescribeDeployTemplates(Models\DescribeDeployTemplatesRequest $req) 本接口(DescribeDeployTemplates)用于查询模型支持的部署模板。传入 ServiceId 时按当前服务占用过滤重装候选模板。
  * @method Models\DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(Models\DescribeInstanceNetworkStatusRequest $req) 本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用户查询实例
- * @method Models\DescribeModelsResponse DescribeModels(Models\DescribeModelsRequest $req) 本接口(DescribeModels)用于查询模型
+ * @method Models\DescribeModelsResponse DescribeModels(Models\DescribeModelsRequest $req) 本接口(DescribeModels)用于查询模型。传入 ServiceId 时按当前服务占用过滤重装候选模型。
  * @method Models\DescribeMuskPromptsResponse DescribeMuskPrompts(Models\DescribeMuskPromptsRequest $req) 获取prompt任务列表
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口（DescribeRegions）用于查询地域列表
  * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 本接口（DescribeScenes）用于查询场景

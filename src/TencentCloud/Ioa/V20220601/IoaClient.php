@@ -24,6 +24,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
 
 /**
  * @method Models\BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroup(Models\BindBusinessResourceConnectorGroupRequest $req) saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
+ * @method Models\BindVirtualAccountsResponse BindVirtualAccounts(Models\BindVirtualAccountsRequest $req) 关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/BindVirtualAccount，从7.x版本开始支持
  * @method Models\CreateBusinessResourceResponse CreateBusinessResource(Models\CreateBusinessResourceRequest $req) 创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
  * @method Models\CreateCompanyDirectoryConfigResponse CreateCompanyDirectoryConfig(Models\CreateCompanyDirectoryConfigRequest $req) 创建企业目录配置
  * @method Models\CreateDLPFileDetectTaskResponse CreateDLPFileDetectTask(Models\CreateDLPFileDetectTaskRequest $req) 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
@@ -50,16 +51,19 @@ use TencentCloud\Ioa\V20220601\Models as Models;
 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
  * @method Models\DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(Models\DescribeDeviceHardwareInfoListRequest $req) 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+ * @method Models\DescribeDeviceSecurityInfoResponse DescribeDeviceSecurityInfo(Models\DescribeDeviceSecurityInfoRequest $req) 查询指定终端的病毒库版本、漏洞库版本、系统修复引擎版本、防火墙状态和实时防护状态
  * @method Models\DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroups(Models\DescribeDeviceVirtualGroupsRequest $req) 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
  * @method Models\DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResources(Models\DescribeDirectAccountGroupResourcesRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
  * @method Models\DescribeLocalAccountsResponse DescribeLocalAccounts(Models\DescribeLocalAccountsRequest $req) 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
+ * @method Models\DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenu(Models\DescribeProfileFieldsMenuRequest $req) 查询终端描述字段数据,私有化调用path为：capi/Assets/Device/DescribeProfileFieldsMenu
  * @method Models\DescribeResourceGrantedAccountGroupsResponse DescribeResourceGrantedAccountGroups(Models\DescribeResourceGrantedAccountGroupsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
  * @method Models\DescribeResourceGrantedAccountsResponse DescribeResourceGrantedAccounts(Models\DescribeResourceGrantedAccountsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
  * @method Models\DescribeResourceGrantedVirtualGroupsResponse DescribeResourceGrantedVirtualGroups(Models\DescribeResourceGrantedVirtualGroupsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedVirtualGroups
  * @method Models\DescribeRootAccountGroupResponse DescribeRootAccountGroup(Models\DescribeRootAccountGroupRequest $req) 查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。
  * @method Models\DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDevice(Models\DescribeSoftCensusListByDeviceRequest $req) 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
  * @method Models\DescribeSoftwareInformationResponse DescribeSoftwareInformation(Models\DescribeSoftwareInformationRequest $req) 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
+ * @method Models\DescribeVirtualAccountsResponse DescribeVirtualAccounts(Models\DescribeVirtualAccountsRequest $req) 列表虚拟组的账户，私有化调用path为：/capi/Assets/AccountVirtualGroup/DescribeVirtualAccounts，从7.x版本开始支持
  * @method Models\DescribeVirtualDevicesResponse DescribeVirtualDevices(Models\DescribeVirtualDevicesRequest $req) 展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
  * @method Models\ExportDeviceDownloadTaskResponse ExportDeviceDownloadTask(Models\ExportDeviceDownloadTaskRequest $req) 创建终端导出任务，私有化调用path为：capi/Assets/Device/ExportDeviceDownloadTask
  * @method Models\ExportSoftwareInformationListResponse ExportSoftwareInformationList(Models\ExportSoftwareInformationListRequest $req) 导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
@@ -70,6 +74,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfig(Models\ModifyCompanyDirectoryConfigRequest $req) 编辑企业目录配置
  * @method Models\ModifyDeviceTrustStatusResponse ModifyDeviceTrustStatus(Models\ModifyDeviceTrustStatusRequest $req) 给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
  * @method Models\ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(Models\ModifyVirtualDeviceGroupsRequest $req) 终端自定义分组批量增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
+ * @method Models\UnbindVirtualAccountsResponse UnbindVirtualAccounts(Models\UnbindVirtualAccountsRequest $req) 取消关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/UnbindVirtualAccount，从7.x版本开始支持
  */
 
 class IoaClient extends AbstractClient

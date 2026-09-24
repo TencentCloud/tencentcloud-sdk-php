@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNGNNewStrategyVer(string $NGNNewStrategyVer) 设置<p>NGN策略新版本</p>
  * @method string getHostName() 获取<p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
  * @method void setHostName(string $HostName) 设置<p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
+ * @method array getProfiles() 获取<p>信息登记数据</p>
+ * @method void setProfiles(array $Profiles) 设置<p>信息登记数据</p>
  * @method string getBaseBoardSn() 获取<p>主板序列号</p>
  * @method void setBaseBoardSn(string $BaseBoardSn) 设置<p>主板序列号</p>
  * @method string getAccountUsers() 获取<p>绑定账户名称</p>
@@ -120,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScreenRecordingPermission(integer $ScreenRecordingPermission) 设置<p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
  * @method integer getDiskAccessPermission() 获取<p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
  * @method void setDiskAccessPermission(integer $DiskAccessPermission) 设置<p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
+ * @method integer getInstallationStatus() 获取<p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+ * @method void setInstallationStatus(integer $InstallationStatus) 设置<p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
  * @method string getRemarkName() 获取<p>终端备注名</p>
  * @method void setRemarkName(string $RemarkName) 设置<p>终端备注名</p>
  * @method string getBiosUuid() 获取<p>BiosUUID（启动盘标识符）</p>
@@ -333,6 +337,11 @@ class DeviceDetail extends AbstractModel
     public $HostName;
 
     /**
+     * @var array <p>信息登记数据</p>
+     */
+    public $Profiles;
+
+    /**
      * @var string <p>主板序列号</p>
      */
     public $BaseBoardSn;
@@ -376,6 +385,11 @@ class DeviceDetail extends AbstractModel
      * @var integer <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
      */
     public $DiskAccessPermission;
+
+    /**
+     * @var integer <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
+     */
+    public $InstallationStatus;
 
     /**
      * @var string <p>终端备注名</p>
@@ -429,6 +443,7 @@ class DeviceDetail extends AbstractModel
      * @param string $DeviceNewStrategyVer <p>设备管控新策略</p>
      * @param string $NGNNewStrategyVer <p>NGN策略新版本</p>
      * @param string $HostName <p>宿主机名称（需要宿主机也安装iOA才能显示）</p>
+     * @param array $Profiles <p>信息登记数据</p>
      * @param string $BaseBoardSn <p>主板序列号</p>
      * @param string $AccountUsers <p>绑定账户名称</p>
      * @param string $IdentityStrategyVer <p>身份策略版本</p>
@@ -438,6 +453,7 @@ class DeviceDetail extends AbstractModel
      * @param integer $AccountGroupId <p>账号组id</p>
      * @param integer $ScreenRecordingPermission <p>是否开启录屏权限，仅macOS， 0： 未开启 、1： 开启</p>
      * @param integer $DiskAccessPermission <p>是否开启磁盘访问权限，仅macOS， 0： 未开启、 1： 开启</p>
+     * @param integer $InstallationStatus <p>安装状态（私有化：0: 已安装 1: 已卸载 ）（SaaS及一体化：0: 未知 1: 已安装 2: 已卸载）</p>
      * @param string $RemarkName <p>终端备注名</p>
      * @param string $BiosUuid <p>BiosUUID（启动盘标识符）</p>
      */
@@ -618,6 +634,15 @@ class DeviceDetail extends AbstractModel
             $this->HostName = $param["HostName"];
         }
 
+        if (array_key_exists("Profiles",$param) and $param["Profiles"] !== null) {
+            $this->Profiles = [];
+            foreach ($param["Profiles"] as $key => $value){
+                $obj = new DeviceProfile();
+                $obj->deserialize($value);
+                array_push($this->Profiles, $obj);
+            }
+        }
+
         if (array_key_exists("BaseBoardSn",$param) and $param["BaseBoardSn"] !== null) {
             $this->BaseBoardSn = $param["BaseBoardSn"];
         }
@@ -652,6 +677,10 @@ class DeviceDetail extends AbstractModel
 
         if (array_key_exists("DiskAccessPermission",$param) and $param["DiskAccessPermission"] !== null) {
             $this->DiskAccessPermission = $param["DiskAccessPermission"];
+        }
+
+        if (array_key_exists("InstallationStatus",$param) and $param["InstallationStatus"] !== null) {
+            $this->InstallationStatus = $param["InstallationStatus"];
         }
 
         if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {

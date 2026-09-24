@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置<p>擦除类型，如&quot;illegal audio|illegal image|logo|privacy protection 。</p>
  * @method string getDescription() 获取<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
  * @method void setDescription(string $Description) 设置<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
- * @method integer getAuditConfId() 获取<p>关联的审核模板id, 表audio_conf 。</p>
- * @method void setAuditConfId(integer $AuditConfId) 设置<p>关联的审核模板id, 表audio_conf 。</p>
- * @method string getImageBizType() 获取<p>天御图片审核策略BizType  Image 。</p>
- * @method void setImageBizType(string $ImageBizType) 设置<p>天御图片审核策略BizType  Image 。</p>
- * @method string getAudioBizType() 获取<p>天御音频审核策略BizType  ShortAudio 。</p>
- * @method void setAudioBizType(string $AudioBizType) 设置<p>天御音频审核策略BizType  ShortAudio 。</p>
- * @method string getAudioTextBizType() 获取<p>天御音频文本审核策略BizType  ShortAudio 。</p>
- * @method void setAudioTextBizType(string $AudioTextBizType) 设置<p>天御音频文本审核策略BizType  ShortAudio 。</p>
+ * @method integer getAuditConfId() 获取<p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
+ * @method void setAuditConfId(integer $AuditConfId) 设置<p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
+ * @method string getImageBizType() 获取<p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
+ * @method void setImageBizType(string $ImageBizType) 设置<p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
+ * @method string getAudioBizType() 获取<p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
+ * @method void setAudioBizType(string $AudioBizType) 设置<p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
+ * @method string getAudioTextBizType() 获取<p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
+ * @method void setAudioTextBizType(string $AudioTextBizType) 设置<p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
  * @method integer getDisplayMode() 获取<p>展示模式，取值 1:延时稳态展示; 3.实时动态展示。默认1 。</p>
  * @method void setDisplayMode(integer $DisplayMode) 设置<p>展示模式，取值 1:延时稳态展示; 3.实时动态展示。默认1 。</p>
  * @method integer getDisplayDelayTime() 获取<p>字幕延迟展示时间,单位毫秒。默认10000。</p>
@@ -61,22 +61,22 @@ class CreateLiveSmartEraseTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer <p>关联的审核模板id, 表audio_conf 。</p>
+     * @var integer <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
      */
     public $AuditConfId;
 
     /**
-     * @var string <p>天御图片审核策略BizType  Image 。</p>
+     * @var string <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
      */
     public $ImageBizType;
 
     /**
-     * @var string <p>天御音频审核策略BizType  ShortAudio 。</p>
+     * @var string <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
      */
     public $AudioBizType;
 
     /**
-     * @var string <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+     * @var string <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
      */
     public $AudioTextBizType;
 
@@ -104,10 +104,10 @@ class CreateLiveSmartEraseTemplateRequest extends AbstractModel
      * @param string $TemplateName <p>模板名称。长度上限：100字节。</p>
      * @param string $Type <p>擦除类型，如&quot;illegal audio|illegal image|logo|privacy protection 。</p>
      * @param string $Description <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
-     * @param integer $AuditConfId <p>关联的审核模板id, 表audio_conf 。</p>
-     * @param string $ImageBizType <p>天御图片审核策略BizType  Image 。</p>
-     * @param string $AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p>
-     * @param string $AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p>
+     * @param integer $AuditConfId <p>关联的审核模板id, 表audio_conf 。</p><p>取值为DescribeAuditTemplates接口返回的AuditTemplates里面的TemplateId字段</p>
+     * @param string $ImageBizType <p>天御图片审核策略BizType  Image 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Image&quot;的BizType值</p>
+     * @param string $AudioBizType <p>天御音频审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;ShortAudio&quot;的BizType值</p>
+     * @param string $AudioTextBizType <p>天御音频文本审核策略BizType  ShortAudio 。</p><p>取值为DescribeAuditTemplates返回的SceneInfos下BizInfos里面的对应的StrategyType为&quot;Text&quot;的BizType值</p>
      * @param integer $DisplayMode <p>展示模式，取值 1:延时稳态展示; 3.实时动态展示。默认1 。</p>
      * @param integer $DisplayDelayTime <p>字幕延迟展示时间,单位毫秒。默认10000。</p>
      * @param string $PrivacyProtection <p>隐私保护可选的类型名，包括人脸模糊、车牌模糊</p><p>枚举值：</p><ul><li>blur face： 人脸模糊</li><li>blur license plate： 车牌模糊</li><li>blur face|blur license plate： 复选</li></ul>

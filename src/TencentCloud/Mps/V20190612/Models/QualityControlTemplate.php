@@ -20,106 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体质检模板详情
  *
- * @method integer getDefinition() 获取媒体质检模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置媒体质检模板唯一标识。
- * @method string getName() 获取媒体质检模板名称。
+ * @method integer getDefinition() 获取<p>媒体质检模板唯一标识。</p>
+ * @method void setDefinition(integer $Definition) 设置<p>媒体质检模板唯一标识。</p>
+ * @method string getName() 获取<p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置媒体质检模板名称。
+ * @method void setName(string $Name) 设置<p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getComment() 获取模板描述信息。
+ * @method string getComment() 获取<p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComment(string $Comment) 设置模板描述信息。
+ * @method void setComment(string $Comment) 设置<p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+ * @method string getType() 获取<p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+ * @method void setType(string $Type) 设置<p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getQualityControlItemSet() 获取媒体质检配置参数。
+ * @method array getQualityControlItemSet() 获取<p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityControlItemSet(array $QualityControlItemSet) 设置媒体质检配置参数。
+ * @method void setQualityControlItemSet(array $QualityControlItemSet) 设置<p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QualityControlStrategy getStrategy() 获取媒体质检的抽检策略。
- * @method void setStrategy(QualityControlStrategy $Strategy) 设置媒体质检的抽检策略。
+ * @method QualityControlStrategy getStrategy() 获取<p>媒体质检的抽检策略。</p>
+ * @method void setStrategy(QualityControlStrategy $Strategy) 设置<p>媒体质检的抽检策略。</p>
  */
 class QualityControlTemplate extends AbstractModel
 {
     /**
-     * @var integer 媒体质检模板唯一标识。
+     * @var integer <p>媒体质检模板唯一标识。</p>
      */
     public $Definition;
 
     /**
-     * @var string 媒体质检模板名称。
+     * @var string <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 模板描述信息。
+     * @var string <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
-     * @var string 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @var string <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var array 媒体质检配置参数。
+     * @var array <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityControlItemSet;
 
     /**
-     * @var string 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @var string <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var QualityControlStrategy 媒体质检的抽检策略。
+     * @var QualityControlStrategy <p>媒体质检的抽检策略。</p>
      */
     public $Strategy;
 
     /**
-     * @param integer $Definition 媒体质检模板唯一标识。
-     * @param string $Name 媒体质检模板名称。
+     * @param integer $Definition <p>媒体质检模板唯一标识。</p>
+     * @param string $Name <p>媒体质检模板名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Comment 模板描述信息。
+     * @param string $Comment <p>模板描述信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * @param string $Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $QualityControlItemSet 媒体质检配置参数。
+     * @param array $QualityControlItemSet <p>媒体质检配置参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityControlStrategy $Strategy 媒体质检的抽检策略。
+     * @param QualityControlStrategy $Strategy <p>媒体质检的抽检策略。</p>
      */
     function __construct()
     {

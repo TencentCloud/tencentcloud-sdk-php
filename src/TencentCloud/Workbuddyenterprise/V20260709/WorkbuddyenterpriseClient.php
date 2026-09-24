@@ -42,6 +42,7 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\DescribeExternalAgentListResponse DescribeExternalAgentList(Models\DescribeExternalAgentListRequest $req) 列某 managed agent 绑定的外部 agent 列表
  * @method Models\DescribeMessageEventListResponse DescribeMessageEventList(Models\DescribeMessageEventListRequest $req) 按 Session 分页查询消息事件
  * @method Models\DescribeSkillListResponse DescribeSkillList(Models\DescribeSkillListRequest $req) 分页查询 Skill 列表，支持关键词、分类、发布状态过滤。
+ * @method Models\DescribeUserAccessTokenResponse DescribeUserAccessToken(Models\DescribeUserAccessTokenRequest $req) 根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
  * @method Models\MigrateAgentSessionResponse MigrateAgentSession(Models\MigrateAgentSessionRequest $req) 将指定会话迁移到目标版本。SessionID / RuntimeID 保持不变，通过 AgentOS UpdateSession 在原沙箱上更新 manifest 到新版本；AgentId 必须与原 Session 一致（禁止跨 Agent 迁移）；ChatToken 复用旧值不轮转。
  * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改 Agent 基础信息（名称、描述、头像）。AgentName / Description / AvatarUrl 均为可选，仅传递需要更新的字段。
  * @method Models\ModifyAgentA2AConfigResponse ModifyAgentA2AConfig(Models\ModifyAgentA2AConfigRequest $req) 修改 Agent 的 A2A 配置。A2AEnabled 是 Agent 级唯一开关，与具体版本和流量分发策略无关。

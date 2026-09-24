@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFirmwareTask请求参数结构体
  *
- * @method string getProductID() 获取产品ID
- * @method void setProductID(string $ProductID) 设置产品ID
- * @method string getFirmwareVersion() 获取固件版本号
- * @method void setFirmwareVersion(string $FirmwareVersion) 设置固件版本号
- * @method integer getTaskId() 获取固件任务ID
- * @method void setTaskId(integer $TaskId) 设置固件任务ID
+ * @method string getProductID() 获取<p>产品ID</p>
+ * @method void setProductID(string $ProductID) 设置<p>产品ID</p>
+ * @method string getFirmwareVersion() 获取<p>固件版本号</p>
+ * @method void setFirmwareVersion(string $FirmwareVersion) 设置<p>固件版本号</p>
+ * @method integer getTaskId() 获取<p>固件任务ID</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>固件任务ID</p>
  */
 class DescribeFirmwareTaskRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductID;
 
     /**
-     * @var string 固件版本号
+     * @var string <p>固件版本号</p>
      */
     public $FirmwareVersion;
 
     /**
-     * @var integer 固件任务ID
+     * @var integer <p>固件任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @param string $ProductID 产品ID
-     * @param string $FirmwareVersion 固件版本号
-     * @param integer $TaskId 固件任务ID
+     * @param string $ProductID <p>产品ID</p>
+     * @param string $FirmwareVersion <p>固件版本号</p>
+     * @param integer $TaskId <p>固件任务ID</p>
      */
     function __construct()
     {

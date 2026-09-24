@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRegistry返回参数结构体
  *
+ * @method string getRegistryId() 获取<p>创建成功的 Registry ID。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>创建成功的 Registry ID。</p>
+ * @method CloudRegistry getRegistry() 获取<p>Registry 详细信息。</p>
+ * @method void setRegistry(CloudRegistry $Registry) 设置<p>Registry 详细信息。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateRegistryResponse extends AbstractModel
 {
     /**
+     * @var string <p>创建成功的 Registry ID。</p>
+     */
+    public $RegistryId;
+
+    /**
+     * @var CloudRegistry <p>Registry 详细信息。</p>
+     */
+    public $Registry;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $RegistryId <p>创建成功的 Registry ID。</p>
+     * @param CloudRegistry $Registry <p>Registry 详细信息。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,15 @@ class CreateRegistryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("Registry",$param) and $param["Registry"] !== null) {
+            $this->Registry = new CloudRegistry();
+            $this->Registry->deserialize($param["Registry"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

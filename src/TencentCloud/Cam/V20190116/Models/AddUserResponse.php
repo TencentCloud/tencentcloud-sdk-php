@@ -20,52 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUser返回参数结构体
  *
- * @method integer getUin() 获取子用户 UIN
- * @method void setUin(integer $Uin) 设置子用户 UIN
- * @method string getName() 获取子用户用户名
- * @method void setName(string $Name) 设置子用户用户名
- * @method string getPassword() 获取如果输入参数组合为自动生成随机密码，则返回生成的密码
- * @method void setPassword(string $Password) 设置如果输入参数组合为自动生成随机密码，则返回生成的密码
- * @method string getSecretId() 获取子用户密钥 ID
- * @method void setSecretId(string $SecretId) 设置子用户密钥 ID
- * @method string getSecretKey() 获取子用户密钥 Key
- * @method void setSecretKey(string $SecretKey) 设置子用户密钥 Key
- * @method integer getUid() 获取子用户 UID
- * @method void setUid(integer $Uid) 设置子用户 UID
+ * @method integer getUin() 获取<p>子用户 UIN</p>
+ * @method void setUin(integer $Uin) 设置<p>子用户 UIN</p>
+ * @method string getName() 获取<p>子用户用户名</p>
+ * @method void setName(string $Name) 设置<p>子用户用户名</p>
+ * @method string getPassword() 获取<p>如果输入参数组合为自动生成随机密码，则返回生成的密码</p>
+ * @method void setPassword(string $Password) 设置<p>如果输入参数组合为自动生成随机密码，则返回生成的密码</p>
+ * @method string getSecretId() 获取<p>子用户密钥 ID</p>
+ * @method void setSecretId(string $SecretId) 设置<p>子用户密钥 ID</p>
+ * @method string getSecretKey() 获取<p>子用户密钥 Key</p>
+ * @method void setSecretKey(string $SecretKey) 设置<p>子用户密钥 Key</p>
+ * @method integer getUid() 获取<p>子用户 UID</p>
+ * @method void setUid(integer $Uid) 设置<p>子用户 UID</p>
+ * @method string getPhoneNumVerifyLink() 获取<p>手机号验证地址。</p>
+ * @method void setPhoneNumVerifyLink(string $PhoneNumVerifyLink) 设置<p>手机号验证地址。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddUserResponse extends AbstractModel
 {
     /**
-     * @var integer 子用户 UIN
+     * @var integer <p>子用户 UIN</p>
      */
     public $Uin;
 
     /**
-     * @var string 子用户用户名
+     * @var string <p>子用户用户名</p>
      */
     public $Name;
 
     /**
-     * @var string 如果输入参数组合为自动生成随机密码，则返回生成的密码
+     * @var string <p>如果输入参数组合为自动生成随机密码，则返回生成的密码</p>
      */
     public $Password;
 
     /**
-     * @var string 子用户密钥 ID
+     * @var string <p>子用户密钥 ID</p>
      */
     public $SecretId;
 
     /**
-     * @var string 子用户密钥 Key
+     * @var string <p>子用户密钥 Key</p>
      */
     public $SecretKey;
 
     /**
-     * @var integer 子用户 UID
+     * @var integer <p>子用户 UID</p>
      */
     public $Uid;
+
+    /**
+     * @var string <p>手机号验证地址。</p>
+     */
+    public $PhoneNumVerifyLink;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -73,12 +80,13 @@ class AddUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Uin 子用户 UIN
-     * @param string $Name 子用户用户名
-     * @param string $Password 如果输入参数组合为自动生成随机密码，则返回生成的密码
-     * @param string $SecretId 子用户密钥 ID
-     * @param string $SecretKey 子用户密钥 Key
-     * @param integer $Uid 子用户 UID
+     * @param integer $Uin <p>子用户 UIN</p>
+     * @param string $Name <p>子用户用户名</p>
+     * @param string $Password <p>如果输入参数组合为自动生成随机密码，则返回生成的密码</p>
+     * @param string $SecretId <p>子用户密钥 ID</p>
+     * @param string $SecretKey <p>子用户密钥 Key</p>
+     * @param integer $Uid <p>子用户 UID</p>
+     * @param string $PhoneNumVerifyLink <p>手机号验证地址。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +124,10 @@ class AddUserResponse extends AbstractModel
 
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
+        }
+
+        if (array_key_exists("PhoneNumVerifyLink",$param) and $param["PhoneNumVerifyLink"] !== null) {
+            $this->PhoneNumVerifyLink = $param["PhoneNumVerifyLink"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

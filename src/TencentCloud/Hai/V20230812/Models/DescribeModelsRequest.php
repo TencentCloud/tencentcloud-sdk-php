@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，不得小于0，默认为0
  * @method integer getLimit() 获取返回量，不得大于100，默认为20
  * @method void setLimit(integer $Limit) 设置返回量，不得大于100，默认为20
+ * @method string getServiceId() 获取可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+ * @method void setServiceId(string $ServiceId) 设置可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
  */
 class DescribeModelsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeModelsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
+     */
+    public $ServiceId;
+
+    /**
      * @param array $ModelIds 模型id
      * @param array $Filters 过滤器。Name的可选值有scene-id
      * @param integer $Offset 偏移量，不得小于0，默认为0
      * @param integer $Limit 返回量，不得大于100，默认为20
+     * @param string $ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务同一 Scene、且至少有一条兼容重装模板的模型。自定义部署、机密计算、具身智能服务返回空列表。
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeModelsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }

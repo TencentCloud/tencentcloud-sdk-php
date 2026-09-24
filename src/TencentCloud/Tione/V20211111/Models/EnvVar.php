@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置<p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsPrivate() 获取<p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+ * @method void setIsPrivate(boolean $IsPrivate) 设置<p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
  */
 class EnvVar extends AbstractModel
 {
@@ -44,10 +46,16 @@ class EnvVar extends AbstractModel
     public $Value;
 
     /**
+     * @var boolean <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
+     */
+    public $IsPrivate;
+
+    /**
      * @param string $Name <p>环境变量key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value <p>环境变量value</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsPrivate <p>是否对外不可见,true 表示该环境变量的 Value 为敏感值.</p>
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class EnvVar extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("IsPrivate",$param) and $param["IsPrivate"] !== null) {
+            $this->IsPrivate = $param["IsPrivate"];
         }
     }
 }

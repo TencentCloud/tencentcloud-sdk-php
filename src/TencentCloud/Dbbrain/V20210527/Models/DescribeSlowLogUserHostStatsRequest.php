@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogUserHostStats请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method string getStartTime() 获取查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
- * @method void setStartTime(string $StartTime) 设置查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
- * @method string getEndTime() 获取查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
- * @method void setEndTime(string $EndTime) 设置查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
- * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
- * @method string getMd5() 获取SQL模板的MD5值
- * @method void setMd5(string $Md5) 设置SQL模板的MD5值
- * @method string getInstanceProxyId() 获取仅Redis产品使用；实例Proxy ID。
- * @method void setInstanceProxyId(string $InstanceProxyId) 设置仅Redis产品使用；实例Proxy ID。
- * @method string getCmd() 获取仅Redis产品使用；命令。
- * @method void setCmd(string $Cmd) 设置仅Redis产品使用；命令。
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method string getStartTime() 获取<p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+ * @method string getEndTime() 获取<p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+ * @method string getMd5() 获取<p>SQL模板的MD5值</p>
+ * @method void setMd5(string $Md5) 设置<p>SQL模板的MD5值</p>
+ * @method string getInstanceProxyId() 获取<p>仅Redis产品使用；实例Proxy ID。</p>
+ * @method void setInstanceProxyId(string $InstanceProxyId) 设置<p>仅Redis产品使用；实例Proxy ID。</p>
+ * @method string getCmd() 获取<p>仅Redis产品使用；命令。</p>
+ * @method void setCmd(string $Cmd) 设置<p>仅Redis产品使用；命令。</p>
  */
 class DescribeSlowLogUserHostStatsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * @var string <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * @var string <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
      */
     public $EndTime;
 
     /**
-     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @var string <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
-     * @var string SQL模板的MD5值
+     * @var string <p>SQL模板的MD5值</p>
      */
     public $Md5;
 
     /**
-     * @var string 仅Redis产品使用；实例Proxy ID。
+     * @var string <p>仅Redis产品使用；实例Proxy ID。</p>
      */
     public $InstanceProxyId;
 
     /**
-     * @var string 仅Redis产品使用；命令。
+     * @var string <p>仅Redis产品使用；命令。</p>
      */
     public $Cmd;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param string $StartTime 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
-     * @param string $EndTime 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
-     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
-     * @param string $Md5 SQL模板的MD5值
-     * @param string $InstanceProxyId 仅Redis产品使用；实例Proxy ID。
-     * @param string $Cmd 仅Redis产品使用；命令。
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param string $StartTime <p>查询范围的开始时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+     * @param string $EndTime <p>查询范围的结束时间，格式: &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ssXXX&quot;。</p>
+     * @param string $Product <p>服务产品类型，支持值：&quot;mysql&quot; - 云数据库 MySQL；&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+     * @param string $Md5 <p>SQL模板的MD5值</p>
+     * @param string $InstanceProxyId <p>仅Redis产品使用；实例Proxy ID。</p>
+     * @param string $Cmd <p>仅Redis产品使用；命令。</p>
      */
     function __construct()
     {

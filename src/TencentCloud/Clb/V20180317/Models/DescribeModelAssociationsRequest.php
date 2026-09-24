@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>翻页限制</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
  * @method integer getOffset() 获取<p>翻页偏移量</p><p>默认值：0</p>
  * @method void setOffset(integer $Offset) 设置<p>翻页偏移量</p><p>默认值：0</p>
- * @method string getCapability() 获取<p>模型输出模态</p>
- * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
+ * @method string getCapability() 获取<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method array getCapabilities() 获取<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+ * @method void setCapabilities(array $Capabilities) 设置<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
  */
 class DescribeModelAssociationsRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class DescribeModelAssociationsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string <p>模型输出模态</p>
+     * @var string <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public $Capability;
+
+    /**
+     * @var array <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
+     */
+    public $Capabilities;
 
     /**
      * @param string $ModelRouterId <p>模型路由实例ID</p>
      * @param integer $Limit <p>翻页限制</p><p>取值范围：[1, 100]</p><p>默认值：20</p>
      * @param integer $Offset <p>翻页偏移量</p><p>默认值：0</p>
-     * @param string $Capability <p>模型输出模态</p>
+     * @param string $Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+     * @param array $Capabilities <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>rerank： 重排序</li><li>video： 视频</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeModelAssociationsRequest extends AbstractModel
 
         if (array_key_exists("Capability",$param) and $param["Capability"] !== null) {
             $this->Capability = $param["Capability"];
+        }
+
+        if (array_key_exists("Capabilities",$param) and $param["Capabilities"] !== null) {
+            $this->Capabilities = $param["Capabilities"];
         }
     }
 }

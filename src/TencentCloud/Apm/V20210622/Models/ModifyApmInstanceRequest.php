@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossAccountStatus(integer $CrossAccountStatus) 设置<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
  * @method string getCrossAccountPeerId() 获取<p>跨账号关联ID</p>
  * @method void setCrossAccountPeerId(string $CrossAccountPeerId) 设置<p>跨账号关联ID</p>
+ * @method integer getTokenDisplayProtection() 获取<p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+ * @method void setTokenDisplayProtection(integer $TokenDisplayProtection) 设置<p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -367,6 +369,11 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $CrossAccountPeerId;
 
     /**
+     * @var integer <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
+     */
+    public $TokenDisplayProtection;
+
+    /**
      * @param string $InstanceId <p>业务系统 ID</p>
      * @param string $Name <p>业务系统名</p>
      * @param array $Tags <p>Tag 列表</p>
@@ -416,6 +423,7 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $DisableAiAbility <p>是否禁用 AI 能力</p><p>单位：无</p>
      * @param integer $CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
      * @param string $CrossAccountPeerId <p>跨账号关联ID</p>
+     * @param integer $TokenDisplayProtection <p>是否开启Token 展示安全保护</p><p>单位：0：不开启，1：开启</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -629,6 +637,10 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("CrossAccountPeerId",$param) and $param["CrossAccountPeerId"] !== null) {
             $this->CrossAccountPeerId = $param["CrossAccountPeerId"];
+        }
+
+        if (array_key_exists("TokenDisplayProtection",$param) and $param["TokenDisplayProtection"] !== null) {
+            $this->TokenDisplayProtection = $param["TokenDisplayProtection"];
         }
     }
 }

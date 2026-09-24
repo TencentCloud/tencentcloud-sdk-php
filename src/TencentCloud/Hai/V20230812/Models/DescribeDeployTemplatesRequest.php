@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelId() 获取模型ID
  * @method void setModelId(string $ModelId) 设置模型ID
+ * @method string getServiceId() 获取可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+ * @method void setServiceId(string $ServiceId) 设置可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
  */
 class DescribeDeployTemplatesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDeployTemplatesRequest extends AbstractModel
     public $ModelId;
 
     /**
+     * @var string 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
+     */
+    public $ServiceId;
+
+    /**
      * @param string $ModelId 模型ID
+     * @param string $ServiceId 可选。传入当前推理服务 ID 时，仅返回与该服务占用兼容的模板：同一 Scene、卡型家族兼容、机数相等、非机密计算。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDeployTemplatesRequest extends AbstractModel
         }
         if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
             $this->ModelId = $param["ModelId"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }

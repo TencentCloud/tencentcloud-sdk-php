@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapabilities(array $Capabilities) 设置<p>具备能力</p>
  * @method boolean getDeploymentFree() 获取<p>是否是免部署实例</p>
  * @method void setDeploymentFree(boolean $DeploymentFree) 设置<p>是否是免部署实例</p>
+ * @method AgentMemInfo getAgentMem() 获取<p>agent memory 服务详情</p>
+ * @method void setAgentMem(AgentMemInfo $AgentMem) 设置<p>agent memory 服务详情</p>
  */
 class AgentInstance extends AbstractModel
 {
@@ -199,6 +201,11 @@ class AgentInstance extends AbstractModel
     public $DeploymentFree;
 
     /**
+     * @var AgentMemInfo <p>agent memory 服务详情</p>
+     */
+    public $AgentMem;
+
+    /**
      * @param string $InstanceId <p>智能体实例ID</p>
      * @param string $InstanceName <p>智能体实例名称</p>
      * @param string $AgentId <p>智能体ID</p>
@@ -224,6 +231,7 @@ class AgentInstance extends AbstractModel
      * @param string $ProductName <p>商业化资源归属</p>
      * @param array $Capabilities <p>具备能力</p>
      * @param boolean $DeploymentFree <p>是否是免部署实例</p>
+     * @param AgentMemInfo $AgentMem <p>agent memory 服务详情</p>
      */
     function __construct()
     {
@@ -348,6 +356,11 @@ class AgentInstance extends AbstractModel
 
         if (array_key_exists("DeploymentFree",$param) and $param["DeploymentFree"] !== null) {
             $this->DeploymentFree = $param["DeploymentFree"];
+        }
+
+        if (array_key_exists("AgentMem",$param) and $param["AgentMem"] !== null) {
+            $this->AgentMem = new AgentMemInfo();
+            $this->AgentMem->deserialize($param["AgentMem"]);
         }
     }
 }

@@ -20,17 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateRegistryRecord返回参数结构体
  *
+ * @method CloudRecord getRecord() 获取<p>更新后的 Record。</p>
+ * @method void setRecord(CloudRecord $Record) 设置<p>更新后的 Record。</p>
+ * @method CloudRecordVersion getVersion() 获取<p>Version 创建模式返回：本次创建的新 Version。</p>
+ * @method void setVersion(CloudRecordVersion $Version) 设置<p>Version 创建模式返回：本次创建的新 Version。</p>
+ * @method string getUploadURL() 获取<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUploadURL(string $UploadURL) 设置<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpireTime() 获取<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(string $ExpireTime) 设置<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContentStatus() 获取<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContentStatus(string $ContentStatus) 设置<p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateRegistryRecordResponse extends AbstractModel
 {
     /**
+     * @var CloudRecord <p>更新后的 Record。</p>
+     */
+    public $Record;
+
+    /**
+     * @var CloudRecordVersion <p>Version 创建模式返回：本次创建的新 Version。</p>
+     */
+    public $Version;
+
+    /**
+     * @var string <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UploadURL;
+
+    /**
+     * @var string <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContentStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param CloudRecord $Record <p>更新后的 Record。</p>
+     * @param CloudRecordVersion $Version <p>Version 创建模式返回：本次创建的新 Version。</p>
+     * @param string $UploadURL <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpireTime <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContentStatus <p>Version 创建模式且 SkillSource.Type=TAR_PACKAGE 时返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +98,28 @@ class UpdateRegistryRecordResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+            $this->Record = new CloudRecord();
+            $this->Record->deserialize($param["Record"]);
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = new CloudRecordVersion();
+            $this->Version->deserialize($param["Version"]);
+        }
+
+        if (array_key_exists("UploadURL",$param) and $param["UploadURL"] !== null) {
+            $this->UploadURL = $param["UploadURL"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ContentStatus",$param) and $param["ContentStatus"] !== null) {
+            $this->ContentStatus = $param["ContentStatus"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

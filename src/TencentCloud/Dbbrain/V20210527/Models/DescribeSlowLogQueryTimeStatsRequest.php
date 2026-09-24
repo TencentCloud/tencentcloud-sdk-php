@@ -20,78 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogQueryTimeStats请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
- * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
- * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
- * @method string getEndTime() 获取截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
- * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
- * @method string getProduct() 获取"mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
- * @method void setProduct(string $Product) 设置"mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
- * @method string getInstanceProxyId() 获取Proxy节点ID。
- * @method void setInstanceProxyId(string $InstanceProxyId) 设置Proxy节点ID。
- * @method string getInstanceNodeId() 获取实例节点ID。
- * @method void setInstanceNodeId(string $InstanceNodeId) 设置实例节点ID。
- * @method string getType() 获取查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
- * @method void setType(string $Type) 设置查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+ * @method string getInstanceId() 获取<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+ * @method string getStartTime() 获取<p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
+ * @method string getEndTime() 获取<p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
+ * @method string getProduct() 获取<p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+ * @method string getInstanceProxyId() 获取<p>Proxy节点ID。</p>
+ * @method void setInstanceProxyId(string $InstanceProxyId) 设置<p>Proxy节点ID。</p>
+ * @method string getInstanceNodeId() 获取<p>实例节点ID。</p>
+ * @method void setInstanceNodeId(string $InstanceNodeId) 设置<p>实例节点ID。</p>
+ * @method string getType() 获取<p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
+ * @method void setType(string $Type) 设置<p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
  */
 class DescribeSlowLogQueryTimeStatsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @var string <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
+     * @var string <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+     * @var string <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
      */
     public $EndTime;
 
     /**
-     * @var string "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+     * @var string <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
-     * @var string Proxy节点ID。
+     * @var string <p>Proxy节点ID。</p>
      */
     public $InstanceProxyId;
 
     /**
-     * @var string 实例节点ID。
+     * @var string <p>实例节点ID。</p>
      */
     public $InstanceNodeId;
 
     /**
-     * @var string 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+     * @var string <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
      */
     public $Type;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param string $EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
-     * @param string $Product "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
-     * @param string $InstanceProxyId Proxy节点ID。
-     * @param string $InstanceNodeId 实例节点ID。
-     * @param string $Type 查询类型，目前支持值：mongod，mongos。
-其中：
-mongod - MongoDB的数据存储节点
-mongos - MongoDB的路由节点
+     * @param string $InstanceId <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
+     * @param string $StartTime <p>开始时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔小于7天。</p>
+     * @param string $EndTime <p>截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。</p>
+     * @param string $Product <p>&quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，默认为&quot;mysql&quot;。</p>
+     * @param string $InstanceProxyId <p>Proxy节点ID。</p>
+     * @param string $InstanceNodeId <p>实例节点ID。</p>
+     * @param string $Type <p>查询类型，目前支持值：mongod，mongos。<br>其中：<br>mongod - MongoDB的数据存储节点<br>mongos - MongoDB的路由节点</p>
      */
     function __construct()
     {

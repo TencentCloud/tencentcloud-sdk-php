@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPageNumber() 获取<p>页码，从1开始，默认1</p>
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始，默认1</p>
- * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大200</p>
- * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大200</p>
+ * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大100</p>
  * @method string getUserKeyword() 获取<p>用户名称与 UIN 模糊匹配</p>
  * @method void setUserKeyword(string $UserKeyword) 设置<p>用户名称与 UIN 模糊匹配</p>
  * @method array getRoleIds() 获取<p>用于过滤角色关联的用户</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
@@ -39,7 +39,7 @@ class ListConsoleUsersRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer <p>每页大小，默认10，最小10，最大200</p>
+     * @var integer <p>每页大小，默认10，最小10，最大100</p>
      */
     public $PageSize;
 
@@ -60,7 +60,7 @@ class ListConsoleUsersRequest extends AbstractModel
 
     /**
      * @param integer $PageNumber <p>页码，从1开始，默认1</p>
-     * @param integer $PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * @param integer $PageSize <p>每页大小，默认10，最小10，最大100</p>
      * @param string $UserKeyword <p>用户名称与 UIN 模糊匹配</p>
      * @param array $RoleIds <p>用于过滤角色关联的用户</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
      * @param array $OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * embedding配置。
  *
- * @method string getRoutingStrategy() 获取<p>模型内路由策略</p>
+ * @method string getRoutingStrategy() 获取<p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoutingStrategy(string $RoutingStrategy) 设置<p>模型内路由策略</p>
+ * @method void setRoutingStrategy(string $RoutingStrategy) 设置<p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RoutingStrategyArgs getRoutingStrategyArgs() 获取<p>路由参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutingStrategyArgs(RoutingStrategyArgs $RoutingStrategyArgs) 设置<p>路由参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNumRetries() 获取<p>同一模型请求重试次数</p>
+ * @method integer getNumRetries() 获取<p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumRetries(integer $NumRetries) 设置<p>同一模型请求重试次数</p>
+ * @method void setNumRetries(integer $NumRetries) 设置<p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbeddingConfig extends AbstractModel
 {
     /**
-     * @var string <p>模型内路由策略</p>
+     * @var string <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutingStrategy;
@@ -48,17 +48,17 @@ class EmbeddingConfig extends AbstractModel
     public $RoutingStrategyArgs;
 
     /**
-     * @var integer <p>同一模型请求重试次数</p>
+     * @var integer <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumRetries;
 
     /**
-     * @param string $RoutingStrategy <p>模型内路由策略</p>
+     * @param string $RoutingStrategy <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoutingStrategyArgs $RoutingStrategyArgs <p>路由参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NumRetries <p>同一模型请求重试次数</p>
+     * @param integer $NumRetries <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

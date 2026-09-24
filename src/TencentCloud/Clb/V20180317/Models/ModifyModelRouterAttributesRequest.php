@@ -32,10 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouterSetting(RouterSettingWithFallBack $RouterSetting) 设置<p>路由配置</p>
  * @method integer getBandwidth() 获取<p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
- * @method string getCapability() 获取<p>模型输出模态</p>
- * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
- * @method EmbeddingConfig getEmbeddingConfig() 获取<p>embedding 模态配置</p>
- * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>embedding 模态配置</p>
+ * @method string getCapability() 获取<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
+ * @method VideoConfig getVideoConfig() 获取<p>Video 调度配置</p>
+ * @method void setVideoConfig(VideoConfig $VideoConfig) 设置<p>Video 调度配置</p>
+ * @method RerankConfig getRerankConfig() 获取<p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+ * @method void setRerankConfig(RerankConfig $RerankConfig) 设置<p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+ * @method DecisionsConfig getDecisionsConfig() 获取<p>Decisions 调度配置</p>
+ * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>Decisions 调度配置</p>
  */
 class ModifyModelRouterAttributesRequest extends AbstractModel
 {
@@ -70,14 +76,29 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var string <p>模型输出模态</p>
+     * @var string <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public $Capability;
 
     /**
-     * @var EmbeddingConfig <p>embedding 模态配置</p>
+     * @var EmbeddingConfig <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
      */
     public $EmbeddingConfig;
+
+    /**
+     * @var VideoConfig <p>Video 调度配置</p>
+     */
+    public $VideoConfig;
+
+    /**
+     * @var RerankConfig <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+     */
+    public $RerankConfig;
+
+    /**
+     * @var DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public $DecisionsConfig;
 
     /**
      * @param string $ModelRouterId <p>模型路由ID</p>
@@ -86,8 +107,11 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
      * @param RateLimitConfigForModelRouter $RateLimitConfig <p>限速配置</p>
      * @param RouterSettingWithFallBack $RouterSetting <p>路由配置</p>
      * @param integer $Bandwidth <p>带宽</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
-     * @param string $Capability <p>模型输出模态</p>
-     * @param EmbeddingConfig $EmbeddingConfig <p>embedding 模态配置</p>
+     * @param string $Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding 调度配置</p><p>传入该参数时，必须传Capability为embedding</p>
+     * @param VideoConfig $VideoConfig <p>Video 调度配置</p>
+     * @param RerankConfig $RerankConfig <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
+     * @param DecisionsConfig $DecisionsConfig <p>Decisions 调度配置</p>
      */
     function __construct()
     {
@@ -135,6 +159,21 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
         if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
             $this->EmbeddingConfig = new EmbeddingConfig();
             $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
+        }
+
+        if (array_key_exists("VideoConfig",$param) and $param["VideoConfig"] !== null) {
+            $this->VideoConfig = new VideoConfig();
+            $this->VideoConfig->deserialize($param["VideoConfig"]);
+        }
+
+        if (array_key_exists("RerankConfig",$param) and $param["RerankConfig"] !== null) {
+            $this->RerankConfig = new RerankConfig();
+            $this->RerankConfig->deserialize($param["RerankConfig"]);
+        }
+
+        if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
+            $this->DecisionsConfig = new DecisionsConfig();
+            $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
         }
     }
 }

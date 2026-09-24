@@ -54,8 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
  * @method integer getBandwidth() 获取<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
- * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding 配置</p>
- * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding 配置</p>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding 调度配置</p>
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding 调度配置</p>
+ * @method VideoConfig getVideoConfig() 获取<p>Video 配置</p>
+ * @method void setVideoConfig(VideoConfig $VideoConfig) 设置<p>Video 配置</p>
+ * @method RerankConfig getRerankConfig() 获取<p>Rerank 调度配置</p>
+ * @method void setRerankConfig(RerankConfig $RerankConfig) 设置<p>Rerank 调度配置</p>
+ * @method DecisionsConfig getDecisionsConfig() 获取<p>Decisions 调度配置</p>
+ * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>Decisions 调度配置</p>
  */
 class CreateModelRouterRequest extends AbstractModel
 {
@@ -145,9 +151,24 @@ class CreateModelRouterRequest extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var EmbeddingConfig <p>Embedding 配置</p>
+     * @var EmbeddingConfig <p>Embedding 调度配置</p>
      */
     public $EmbeddingConfig;
+
+    /**
+     * @var VideoConfig <p>Video 配置</p>
+     */
+    public $VideoConfig;
+
+    /**
+     * @var RerankConfig <p>Rerank 调度配置</p>
+     */
+    public $RerankConfig;
+
+    /**
+     * @var DecisionsConfig <p>Decisions 调度配置</p>
+     */
+    public $DecisionsConfig;
 
     /**
      * @param string $ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
@@ -167,7 +188,10 @@ class CreateModelRouterRequest extends AbstractModel
      * @param string $ClientToken <p>客户端Token，用于保证请求的幂等性。  从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符。</p>
      * @param string $EipAddressId <p>弹性公网IP的ID</p>
      * @param integer $Bandwidth <p>单位</p><p>取值范围：[1, 2048]</p><p>单位：Mbps</p>
-     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding 配置</p>
+     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding 调度配置</p>
+     * @param VideoConfig $VideoConfig <p>Video 配置</p>
+     * @param RerankConfig $RerankConfig <p>Rerank 调度配置</p>
+     * @param DecisionsConfig $DecisionsConfig <p>Decisions 调度配置</p>
      */
     function __construct()
     {
@@ -262,6 +286,21 @@ class CreateModelRouterRequest extends AbstractModel
         if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
             $this->EmbeddingConfig = new EmbeddingConfig();
             $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
+        }
+
+        if (array_key_exists("VideoConfig",$param) and $param["VideoConfig"] !== null) {
+            $this->VideoConfig = new VideoConfig();
+            $this->VideoConfig->deserialize($param["VideoConfig"]);
+        }
+
+        if (array_key_exists("RerankConfig",$param) and $param["RerankConfig"] !== null) {
+            $this->RerankConfig = new RerankConfig();
+            $this->RerankConfig->deserialize($param["RerankConfig"]);
+        }
+
+        if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
+            $this->DecisionsConfig = new DecisionsConfig();
+            $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
         }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateRegistry请求参数结构体
  *
-
+ * @method string getRegistryId() 获取<p>Registry ID。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>Registry ID。</p>
+ * @method string getDescription() 获取<p>新的描述；必填；最长 4096。</p>
+ * @method void setDescription(string $Description) 设置<p>新的描述；必填；最长 4096。</p>
  */
 class UpdateRegistryRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>Registry ID。</p>
+     */
+    public $RegistryId;
 
     /**
+     * @var string <p>新的描述；必填；最长 4096。</p>
+     */
+    public $Description;
 
+    /**
+     * @param string $RegistryId <p>Registry ID。</p>
+     * @param string $Description <p>新的描述；必填；最长 4096。</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class UpdateRegistryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
 
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
     }
 }

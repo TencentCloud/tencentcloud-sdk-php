@@ -20,210 +20,258 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 登录审计列表实体
  *
- * @method integer getId() 获取记录Id
- * @method void setId(integer $Id) 设置记录Id
- * @method string getUuid() 获取主机Uuid
- * @method void setUuid(string $Uuid) 设置主机Uuid
- * @method string getMachineIp() 获取主机ip
- * @method void setMachineIp(string $MachineIp) 设置主机ip
- * @method string getMachineName() 获取主机名
- * @method void setMachineName(string $MachineName) 设置主机名
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getSrcIp() 获取来源ip
- * @method void setSrcIp(string $SrcIp) 设置来源ip
- * @method integer getStatus() 获取1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
- * @method void setStatus(integer $Status) 设置1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
- * @method integer getCountry() 获取国家id
- * @method void setCountry(integer $Country) 设置国家id
- * @method integer getCity() 获取城市id
- * @method void setCity(integer $City) 设置城市id
- * @method integer getProvince() 获取省份id
- * @method void setProvince(integer $Province) 设置省份id
- * @method string getLoginTime() 获取登录时间
- * @method void setLoginTime(string $LoginTime) 设置登录时间
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
- * @method integer getIsRiskArea() 获取是否命中异地登录异常  1表示命中此类异常, 0表示未命中
- * @method void setIsRiskArea(integer $IsRiskArea) 设置是否命中异地登录异常  1表示命中此类异常, 0表示未命中
- * @method integer getIsRiskUser() 获取是否命中异常用户异常 1表示命中此类异常, 0表示未命中
- * @method void setIsRiskUser(integer $IsRiskUser) 设置是否命中异常用户异常 1表示命中此类异常, 0表示未命中
- * @method integer getIsRiskTime() 获取是否命中异常时间异常 1表示命中此类异常, 0表示未命中
- * @method void setIsRiskTime(integer $IsRiskTime) 设置是否命中异常时间异常 1表示命中此类异常, 0表示未命中
- * @method integer getIsRiskSrcIp() 获取是否命中异常IP异常 1表示命中此类异常, 0表示未命中
- * @method void setIsRiskSrcIp(integer $IsRiskSrcIp) 设置是否命中异常IP异常 1表示命中此类异常, 0表示未命中
- * @method integer getRiskLevel() 获取危险等级：
-0 高危
-1 可疑
- * @method void setRiskLevel(integer $RiskLevel) 设置危险等级：
-0 高危
-1 可疑
- * @method string getLocation() 获取位置名称
- * @method void setLocation(string $Location) 设置位置名称
- * @method string getQuuid() 获取主机quuid
- * @method void setQuuid(string $Quuid) 设置主机quuid
- * @method string getDesc() 获取高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
- * @method void setDesc(string $Desc) 设置高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
- * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
- * @method integer getPort() 获取请求目的端口
- * @method void setPort(integer $Port) 设置请求目的端口
- * @method IPAnalyse getIPAnalyse() 获取ip分析
- * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置ip分析
+ * @method integer getId() 获取<p>记录Id</p>
+ * @method void setId(integer $Id) 设置<p>记录Id</p>
+ * @method string getUuid() 获取<p>主机Uuid</p>
+ * @method void setUuid(string $Uuid) 设置<p>主机Uuid</p>
+ * @method string getMachineIp() 获取<p>主机ip</p>
+ * @method void setMachineIp(string $MachineIp) 设置<p>主机ip</p>
+ * @method string getMachineName() 获取<p>主机名</p>
+ * @method void setMachineName(string $MachineName) 设置<p>主机名</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getSrcIp() 获取<p>来源ip</p>
+ * @method void setSrcIp(string $SrcIp) 设置<p>来源ip</p>
+ * @method integer getStatus() 获取<p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
+ * @method void setStatus(integer $Status) 设置<p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
+ * @method integer getCountry() 获取<p>国家id</p>
+ * @method void setCountry(integer $Country) 设置<p>国家id</p>
+ * @method integer getCity() 获取<p>城市id</p>
+ * @method void setCity(integer $City) 设置<p>城市id</p>
+ * @method integer getProvince() 获取<p>省份id</p>
+ * @method void setProvince(integer $Province) 设置<p>省份id</p>
+ * @method string getLoginTime() 获取<p>登录时间</p>
+ * @method void setLoginTime(string $LoginTime) 设置<p>登录时间</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method integer getIsRiskArea() 获取<p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
+ * @method void setIsRiskArea(integer $IsRiskArea) 设置<p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
+ * @method integer getIsRiskUser() 获取<p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
+ * @method void setIsRiskUser(integer $IsRiskUser) 设置<p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
+ * @method integer getIsRiskTime() 获取<p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
+ * @method void setIsRiskTime(integer $IsRiskTime) 设置<p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
+ * @method integer getIsRiskSrcIp() 获取<p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
+ * @method void setIsRiskSrcIp(integer $IsRiskSrcIp) 设置<p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
+ * @method integer getRiskLevel() 获取<p>危险等级：<br>0 高危<br>1 可疑</p>
+ * @method void setRiskLevel(integer $RiskLevel) 设置<p>危险等级：<br>0 高危<br>1 可疑</p>
+ * @method string getLocation() 获取<p>位置名称</p>
+ * @method void setLocation(string $Location) 设置<p>位置名称</p>
+ * @method string getQuuid() 获取<p>主机quuid</p>
+ * @method void setQuuid(string $Quuid) 设置<p>主机quuid</p>
+ * @method string getDesc() 获取<p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
+ * @method void setDesc(string $Desc) 设置<p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
+ * @method MachineExtraInfo getMachineExtraInfo() 获取<p>附加信息</p>
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置<p>附加信息</p>
+ * @method integer getPort() 获取<p>请求目的端口</p>
+ * @method void setPort(integer $Port) 设置<p>请求目的端口</p>
+ * @method IPAnalyse getIPAnalyse() 获取<p>ip分析</p>
+ * @method void setIPAnalyse(IPAnalyse $IPAnalyse) 设置<p>ip分析</p>
+ * @method string getHitRule() 获取<p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+ * @method void setHitRule(string $HitRule) 设置<p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+ * @method string getHitRuleName() 获取<p>命中策略名</p>
+ * @method void setHitRuleName(string $HitRuleName) 设置<p>命中策略名</p>
+ * @method integer getAlertCount() 获取<p>告警数量</p>
+ * @method void setAlertCount(integer $AlertCount) 设置<p>告警数量</p>
+ * @method string getFirstDiscoverTime() 获取<p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method void setFirstDiscoverTime(string $FirstDiscoverTime) 设置<p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method string getLastDiscoverTime() 获取<p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method void setLastDiscoverTime(string $LastDiscoverTime) 设置<p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+ * @method string getHarmDescribe() 获取<p>危害描述</p>
+ * @method void setHarmDescribe(string $HarmDescribe) 设置<p>危害描述</p>
+ * @method string getSuggestScheme() 获取<p>修复建议</p>
+ * @method void setSuggestScheme(string $SuggestScheme) 设置<p>修复建议</p>
+ * @method array getRecentLoginList() 获取<p>最近登录历史</p>
+ * @method void setRecentLoginList(array $RecentLoginList) 设置<p>最近登录历史</p>
  */
 class HostLoginList extends AbstractModel
 {
     /**
-     * @var integer 记录Id
+     * @var integer <p>记录Id</p>
      */
     public $Id;
 
     /**
-     * @var string 主机Uuid
+     * @var string <p>主机Uuid</p>
      */
     public $Uuid;
 
     /**
-     * @var string 主机ip
+     * @var string <p>主机ip</p>
      */
     public $MachineIp;
 
     /**
-     * @var string 主机名
+     * @var string <p>主机名</p>
      */
     public $MachineName;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 来源ip
+     * @var string <p>来源ip</p>
      */
     public $SrcIp;
 
     /**
-     * @var integer 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
+     * @var integer <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
      */
     public $Status;
 
     /**
-     * @var integer 国家id
+     * @var integer <p>国家id</p>
      */
     public $Country;
 
     /**
-     * @var integer 城市id
+     * @var integer <p>城市id</p>
      */
     public $City;
 
     /**
-     * @var integer 省份id
+     * @var integer <p>省份id</p>
      */
     public $Province;
 
     /**
-     * @var string 登录时间
+     * @var string <p>登录时间</p>
      */
     public $LoginTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
+     * @var integer <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
      */
     public $IsRiskArea;
 
     /**
-     * @var integer 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
+     * @var integer <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
      */
     public $IsRiskUser;
 
     /**
-     * @var integer 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
+     * @var integer <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
      */
     public $IsRiskTime;
 
     /**
-     * @var integer 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
+     * @var integer <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
      */
     public $IsRiskSrcIp;
 
     /**
-     * @var integer 危险等级：
-0 高危
-1 可疑
+     * @var integer <p>危险等级：<br>0 高危<br>1 可疑</p>
      */
     public $RiskLevel;
 
     /**
-     * @var string 位置名称
+     * @var string <p>位置名称</p>
      */
     public $Location;
 
     /**
-     * @var string 主机quuid
+     * @var string <p>主机quuid</p>
      */
     public $Quuid;
 
     /**
-     * @var string 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
+     * @var string <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
      */
     public $Desc;
 
     /**
-     * @var MachineExtraInfo 附加信息
+     * @var MachineExtraInfo <p>附加信息</p>
      */
     public $MachineExtraInfo;
 
     /**
-     * @var integer 请求目的端口
+     * @var integer <p>请求目的端口</p>
      */
     public $Port;
 
     /**
-     * @var IPAnalyse ip分析
+     * @var IPAnalyse <p>ip分析</p>
      */
     public $IPAnalyse;
 
     /**
-     * @param integer $Id 记录Id
-     * @param string $Uuid 主机Uuid
-     * @param string $MachineIp 主机ip
-     * @param string $MachineName 主机名
-     * @param string $UserName 用户名
-     * @param string $SrcIp 来源ip
-     * @param integer $Status 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
-     * @param integer $Country 国家id
-     * @param integer $City 城市id
-     * @param integer $Province 省份id
-     * @param string $LoginTime 登录时间
-     * @param string $ModifyTime 修改时间
-     * @param integer $IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-     * @param integer $IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-     * @param integer $IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-     * @param integer $IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-     * @param integer $RiskLevel 危险等级：
-0 高危
-1 可疑
-     * @param string $Location 位置名称
-     * @param string $Quuid 主机quuid
-     * @param string $Desc 高危信息说明：
-ABROAD - 境外IP；
-XTI - 威胁情报
-     * @param MachineExtraInfo $MachineExtraInfo 附加信息
-     * @param integer $Port 请求目的端口
-     * @param IPAnalyse $IPAnalyse ip分析
+     * @var string <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+     */
+    public $HitRule;
+
+    /**
+     * @var string <p>命中策略名</p>
+     */
+    public $HitRuleName;
+
+    /**
+     * @var integer <p>告警数量</p>
+     */
+    public $AlertCount;
+
+    /**
+     * @var string <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public $FirstDiscoverTime;
+
+    /**
+     * @var string <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     */
+    public $LastDiscoverTime;
+
+    /**
+     * @var string <p>危害描述</p>
+     */
+    public $HarmDescribe;
+
+    /**
+     * @var string <p>修复建议</p>
+     */
+    public $SuggestScheme;
+
+    /**
+     * @var array <p>最近登录历史</p>
+     */
+    public $RecentLoginList;
+
+    /**
+     * @param integer $Id <p>记录Id</p>
+     * @param string $Uuid <p>主机Uuid</p>
+     * @param string $MachineIp <p>主机ip</p>
+     * @param string $MachineName <p>主机名</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $SrcIp <p>来源ip</p>
+     * @param integer $Status <p>1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。</p>
+     * @param integer $Country <p>国家id</p>
+     * @param integer $City <p>城市id</p>
+     * @param integer $Province <p>省份id</p>
+     * @param string $LoginTime <p>登录时间</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param integer $IsRiskArea <p>是否命中异地登录异常  1表示命中此类异常, 0表示未命中</p>
+     * @param integer $IsRiskUser <p>是否命中异常用户异常 1表示命中此类异常, 0表示未命中</p>
+     * @param integer $IsRiskTime <p>是否命中异常时间异常 1表示命中此类异常, 0表示未命中</p>
+     * @param integer $IsRiskSrcIp <p>是否命中异常IP异常 1表示命中此类异常, 0表示未命中</p>
+     * @param integer $RiskLevel <p>危险等级：<br>0 高危<br>1 可疑</p>
+     * @param string $Location <p>位置名称</p>
+     * @param string $Quuid <p>主机quuid</p>
+     * @param string $Desc <p>高危信息说明：<br>ABROAD - 境外IP；<br>XTI - 威胁情报</p>
+     * @param MachineExtraInfo $MachineExtraInfo <p>附加信息</p>
+     * @param integer $Port <p>请求目的端口</p>
+     * @param IPAnalyse $IPAnalyse <p>ip分析</p>
+     * @param string $HitRule <p>命中策略ID</p><p>枚举值：</p><ul><li>risk_login_1： 威胁情报</li><li>risk_login_2： 密码破解成功后登录</li><li>risk_login_3： 弱口令账户登录</li><li>risk_login_4： 非法账户登录</li><li>risk_login_5： 登录后存在入侵行为</li><li>risk_login_101： 海外IP登录</li><li>risk_login_102： 非常用登录地登录</li><li>risk_login_103： 非工作时间登录</li></ul>
+     * @param string $HitRuleName <p>命中策略名</p>
+     * @param integer $AlertCount <p>告警数量</p>
+     * @param string $FirstDiscoverTime <p>首次发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param string $LastDiscoverTime <p>最近发现时间</p><p>参数格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param string $HarmDescribe <p>危害描述</p>
+     * @param string $SuggestScheme <p>修复建议</p>
+     * @param array $RecentLoginList <p>最近登录历史</p>
      */
     function __construct()
     {
@@ -330,6 +378,43 @@ XTI - 威胁情报
         if (array_key_exists("IPAnalyse",$param) and $param["IPAnalyse"] !== null) {
             $this->IPAnalyse = new IPAnalyse();
             $this->IPAnalyse->deserialize($param["IPAnalyse"]);
+        }
+
+        if (array_key_exists("HitRule",$param) and $param["HitRule"] !== null) {
+            $this->HitRule = $param["HitRule"];
+        }
+
+        if (array_key_exists("HitRuleName",$param) and $param["HitRuleName"] !== null) {
+            $this->HitRuleName = $param["HitRuleName"];
+        }
+
+        if (array_key_exists("AlertCount",$param) and $param["AlertCount"] !== null) {
+            $this->AlertCount = $param["AlertCount"];
+        }
+
+        if (array_key_exists("FirstDiscoverTime",$param) and $param["FirstDiscoverTime"] !== null) {
+            $this->FirstDiscoverTime = $param["FirstDiscoverTime"];
+        }
+
+        if (array_key_exists("LastDiscoverTime",$param) and $param["LastDiscoverTime"] !== null) {
+            $this->LastDiscoverTime = $param["LastDiscoverTime"];
+        }
+
+        if (array_key_exists("HarmDescribe",$param) and $param["HarmDescribe"] !== null) {
+            $this->HarmDescribe = $param["HarmDescribe"];
+        }
+
+        if (array_key_exists("SuggestScheme",$param) and $param["SuggestScheme"] !== null) {
+            $this->SuggestScheme = $param["SuggestScheme"];
+        }
+
+        if (array_key_exists("RecentLoginList",$param) and $param["RecentLoginList"] !== null) {
+            $this->RecentLoginList = [];
+            foreach ($param["RecentLoginList"] as $key => $value){
+                $obj = new RecentLoginItem();
+                $obj->deserialize($value);
+                array_push($this->RecentLoginList, $obj);
+            }
         }
     }
 }

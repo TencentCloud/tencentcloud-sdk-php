@@ -61,6 +61,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateFunctionReplicaResponse CreateFunctionReplica(Models\CreateFunctionReplicaRequest $req) 本接口用于创建指定边缘函数的副本。创建副本后，当客户端请求匹配已配置的触发规则或默认域名时，您可以通过在请求头中添加 EO-Function-Replica-Name:[副本名称] 来访问特定的函数副本。每个函数默认支持创建两个副本。
  * @method Models\CreateFunctionRuleResponse CreateFunctionRule(Models\CreateFunctionRuleRequest $req) 创建边缘函数的触发规则。支持通过自定义过滤条件来决定是否需要执行函数，当需要执行函数时，提供了多种选择目标函数的方式，包括：直接指定，基于客户端归属地区选择和基于权重选择。
  * @method Models\CreateInferenceAPITokenResponse CreateInferenceAPIToken(Models\CreateInferenceAPITokenRequest $req) 创建推理 API Token，用于访问推理服务时进行鉴权，Token 内容仅在创建时返回一次，每个站点最多创建 100 个。
+ * @method Models\CreateInferenceDomainResponse CreateInferenceDomain(Models\CreateInferenceDomainRequest $req) 创建推理服务域名，用于通过自定义域名访问推理服务，一个推理服务下最多支持创建 5 个自定义域名。
+创建成功后，还需完成以下步骤，域名才能正常对外提供访问：
+1. 校验域名 CNAME 配置状态，请参考 [CheckCnameStatus](https://cloud.tencent.com/document/api/1552/94491) 接口；
+2. 验证归属权，请参考 [VerifyOwnership](https://cloud.tencent.com/document/api/1552/98879) 接口；
+3. 配置域名证书，请参考 [ModifyHostsCertificate](https://cloud.tencent.com/document/api/1552/80764) 接口。
  * @method Models\CreateInferenceServiceResponse CreateInferenceService(Models\CreateInferenceServiceRequest $req) 创建推理服务，支持设置服务名称、监听端口、容器镜像配置和资源配置，创建成功后提供推理访问地址。
  * @method Models\CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(Models\CreateJustInTimeTranscodeTemplateRequest $req) 即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
 为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
@@ -188,6 +193,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeIPRegionResponse DescribeIPRegion(Models\DescribeIPRegionRequest $req) 该接口可用于查询 IP 是否为 EdgeOne IP。
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) 查询站点的验证信息。
  * @method Models\DescribeInferenceAPITokensResponse DescribeInferenceAPITokens(Models\DescribeInferenceAPITokensRequest $req) 查询推理 API Token 列表，返回 Token 的 ID、名称、内容和创建时间，支持分页查询。
+ * @method Models\DescribeInferenceDomainsResponse DescribeInferenceDomains(Models\DescribeInferenceDomainsRequest $req) 查询推理服务域名列表，返回域名的Cname地址、归属权验证和证书等相关信息。
  * @method Models\DescribeInferenceHardwareSpecificationsResponse DescribeInferenceHardwareSpecifications(Models\DescribeInferenceHardwareSpecificationsRequest $req) 查询推理硬件规格列表，返回各规格的 CPU、内存、GPU 和显存等配置，创建服务时可从中选择所需规格。
  * @method Models\DescribeInferenceServiceDeploymentLogsResponse DescribeInferenceServiceDeploymentLogs(Models\DescribeInferenceServiceDeploymentLogsRequest $req) 查询推理服务指定一次部署的日志，返回日志内容和产生时间，支持按时间范围检索、分页和排序。
  * @method Models\DescribeInferenceServiceDeploymentRecordsResponse DescribeInferenceServiceDeploymentRecords(Models\DescribeInferenceServiceDeploymentRecordsRequest $req) 查询推理服务部署历史列表，返回每次部署的操作类型、状态、耗时、配置快照和是否为当前生效配置，支持分页和排序。
@@ -349,6 +355,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyZoneSettingResponse ModifyZoneSetting(Models\ModifyZoneSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
  * @method Models\ModifyZoneStatusResponse ModifyZoneStatus(Models\ModifyZoneStatusRequest $req) 用于开启，关闭站点。
  * @method Models\ModifyZoneWorkModeResponse ModifyZoneWorkMode(Models\ModifyZoneWorkModeRequest $req) 本接口用于修改站点下各配置模块的工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+ * @method Models\OperateInferenceDomainResponse OperateInferenceDomain(Models\OperateInferenceDomainRequest $req) 操作推理服务域名，支持停止、启用和删除推理服务域名，删除后的资源不可恢复。
  * @method Models\OperateInferenceServiceResponse OperateInferenceService(Models\OperateInferenceServiceRequest $req) 操作推理服务，支持停止、启动和删除推理服务，删除后资源不可恢复。
  * @method Models\RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKey(Models\RefreshMultiPathGatewaySecretKeyRequest $req) 通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
  * @method Models\RenewPlanResponse RenewPlan(Models\RenewPlanRequest $req) 当您的套餐需要延长有效期，可以通过该接口进行续费。套餐续费仅支持个人版，基础版，标准版套餐。

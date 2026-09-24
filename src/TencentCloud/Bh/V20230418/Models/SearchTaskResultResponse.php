@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchTaskResult返回参数结构体
  *
- * @method integer getTotalCount() 获取记录数
- * @method void setTotalCount(integer $TotalCount) 设置记录数
- * @method array getTaskResult() 获取运维任务执行结果
- * @method void setTaskResult(array $TaskResult) 设置运维任务执行结果
+ * @method integer getTotalCount() 获取<p>记录数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>记录数</p>
+ * @method array getTaskResult() 获取<p>运维任务执行结果</p>
+ * @method void setTaskResult(array $TaskResult) 设置<p>运维任务执行结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SearchTaskResultResponse extends AbstractModel
 {
     /**
-     * @var integer 记录数
+     * @var integer <p>记录数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 运维任务执行结果
+     * @var array <p>运维任务执行结果</p>
      */
     public $TaskResult;
 
@@ -45,8 +45,8 @@ class SearchTaskResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录数
-     * @param array $TaskResult 运维任务执行结果
+     * @param integer $TotalCount <p>记录数</p>
+     * @param array $TaskResult <p>运维任务执行结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

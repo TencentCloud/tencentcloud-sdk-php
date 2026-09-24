@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 七层回源超时配置。
  *
- * @method integer getResponseTimeout() 获取HTTP 应答超时时间，单位为秒，取值：5～600。
- * @method void setResponseTimeout(integer $ResponseTimeout) 设置HTTP 应答超时时间，单位为秒，取值：5～600。
+ * @method integer getResponseTimeout() 获取<p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
+ * @method void setResponseTimeout(integer $ResponseTimeout) 设置<p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
  */
 class HTTPUpstreamTimeoutParameters extends AbstractModel
 {
     /**
-     * @var integer HTTP 应答超时时间，单位为秒，取值：5～600。
+     * @var integer <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public $ResponseTimeout;
 
     /**
-     * @param integer $ResponseTimeout HTTP 应答超时时间，单位为秒，取值：5～600。
+     * @param integer $ResponseTimeout <p>HTTP 应答超时时间。</p><p>取值范围：[5, 600]</p><p>单位：秒</p><p>默认值：15</p>
      */
     function __construct()
     {

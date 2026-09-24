@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>私网管道 ID</p>
  * @method array getHealthCheckConfigs() 获取<p>健康检查配置</p>
  * @method void setHealthCheckConfigs(array $HealthCheckConfigs) 设置<p>健康检查配置</p>
- * @method string getCapability() 获取<p>模型输出模态</p>
- * @method void setCapability(string $Capability) 设置<p>模型输出模态</p>
+ * @method string getCapability() 获取<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method void setCapability(string $Capability) 设置<p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
  * @method string getEndpointPath() 获取<p>请求后缀</p>
  * @method void setEndpointPath(string $EndpointPath) 设置<p>请求后缀</p>
  */
@@ -147,7 +147,7 @@ class CreateModelRequest extends AbstractModel
     public $HealthCheckConfigs;
 
     /**
-     * @var string <p>模型输出模态</p>
+     * @var string <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public $Capability;
 
@@ -174,7 +174,7 @@ class CreateModelRequest extends AbstractModel
      * @param ServiceProviderHealthCheckConfigInput $HealthCheckConfig <p>健康检查配置</p>
      * @param string $CMRPrivateNetworkTunnelId <p>私网管道 ID</p>
      * @param array $HealthCheckConfigs <p>健康检查配置</p>
-     * @param string $Capability <p>模型输出模态</p>
+     * @param string $Capability <p>模型输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      * @param string $EndpointPath <p>请求后缀</p>
      */
     function __construct()

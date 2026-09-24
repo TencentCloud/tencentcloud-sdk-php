@@ -209,7 +209,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyHostStatusResponse ModifyHostStatus(Models\ModifyHostStatusRequest $req) clb-waf 设置防护域名WAF开关
 支持批量操作。
  * @method Models\ModifyInstanceAttackLogPostResponse ModifyInstanceAttackLogPost(Models\ModifyInstanceAttackLogPostRequest $req) 修改实例攻击日志投递开关，企业版及以上版本可以开通，否则返回错误
- * @method Models\ModifyInstanceElasticModeResponse ModifyInstanceElasticMode(Models\ModifyInstanceElasticModeRequest $req) 修改实例的QPS弹性计费开关
+ * @method Models\ModifyInstanceElasticModeResponse ModifyInstanceElasticMode(Models\ModifyInstanceElasticModeRequest $req) 接口无用，没有人调用
+
+修改实例的QPS弹性计费开关
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 修改实例的名称
  * @method Models\ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(Models\ModifyInstanceQpsLimitRequest $req) 设置套餐实例的弹性qps上限
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) 修改实例的自动续费开关

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvents(array $Events) 设置<p>人员关联的云存事件列表</p>
  * @method integer getTotal() 获取<p>人员关联的云存事件总数</p>
  * @method void setTotal(integer $Total) 设置<p>人员关联的云存事件总数</p>
+ * @method string getVideoURL() 获取<p>视频播放URL</p>
+ * @method void setVideoURL(string $VideoURL) 设置<p>视频播放URL</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var string <p>视频播放URL</p>
+     */
+    public $VideoURL;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractModel
     /**
      * @param array $Events <p>人员关联的云存事件列表</p>
      * @param integer $Total <p>人员关联的云存事件总数</p>
+     * @param string $VideoURL <p>视频播放URL</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeCloudStorageEventsByTWeSeePersonResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("VideoURL",$param) and $param["VideoURL"] !== null) {
+            $this->VideoURL = $param["VideoURL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

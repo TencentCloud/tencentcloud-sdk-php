@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPageNumber() 获取<p>页码，从1开始，默认1</p>
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始，默认1</p>
- * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大200</p>
- * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大200</p>
+ * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大100</p>
  * @method array getGroupIds() 获取<p>通过用户组 ID 批量查询</p>
  * @method void setGroupIds(array $GroupIds) 设置<p>通过用户组 ID 批量查询</p>
  * @method string getGroupKeyword() 获取<p>用户组名称模糊匹配</p>
@@ -39,7 +39,7 @@ class ListConsoleGroupsRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer <p>每页大小，默认10，最小10，最大200</p>
+     * @var integer <p>每页大小，默认10，最小10，最大100</p>
      */
     public $PageSize;
 
@@ -60,7 +60,7 @@ class ListConsoleGroupsRequest extends AbstractModel
 
     /**
      * @param integer $PageNumber <p>页码，从1开始，默认1</p>
-     * @param integer $PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * @param integer $PageSize <p>每页大小，默认10，最小10，最大100</p>
      * @param array $GroupIds <p>通过用户组 ID 批量查询</p>
      * @param string $GroupKeyword <p>用户组名称模糊匹配</p>
      * @param array $OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>

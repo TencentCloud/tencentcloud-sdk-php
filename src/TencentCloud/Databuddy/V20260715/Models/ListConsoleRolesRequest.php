@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPageNumber() 获取<p>页码，从1开始，默认1</p>
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始，默认1</p>
- * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大200</p>
- * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大200</p>
+ * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大100</p>
  * @method string getRoleKeyword() 获取<p>角色名称或描述模糊匹配</p>
  * @method void setRoleKeyword(string $RoleKeyword) 设置<p>角色名称或描述模糊匹配</p>
  */
@@ -35,7 +35,7 @@ class ListConsoleRolesRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer <p>每页大小，默认10，最小10，最大200</p>
+     * @var integer <p>每页大小，默认10，最小10，最大100</p>
      */
     public $PageSize;
 
@@ -46,7 +46,7 @@ class ListConsoleRolesRequest extends AbstractModel
 
     /**
      * @param integer $PageNumber <p>页码，从1开始，默认1</p>
-     * @param integer $PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * @param integer $PageSize <p>每页大小，默认10，最小10，最大100</p>
      * @param string $RoleKeyword <p>角色名称或描述模糊匹配</p>
      */
     function __construct()

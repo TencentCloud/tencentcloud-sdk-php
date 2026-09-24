@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUser请求参数结构体
  *
- * @method string getName() 获取子用户用户名
- * @method void setName(string $Name) 设置子用户用户名
- * @method string getRemark() 获取子用户备注
- * @method void setRemark(string $Remark) 设置子用户备注
- * @method integer getConsoleLogin() 获取子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
- * @method integer getUseApi() 获取是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
- * @method void setUseApi(integer $UseApi) 设置是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
- * @method string getPassword() 获取子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
- * @method void setPassword(string $Password) 设置子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
- * @method integer getNeedResetPassword() 获取子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
- * @method void setNeedResetPassword(integer $NeedResetPassword) 设置子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
- * @method string getPhoneNum() 获取手机号
- * @method void setPhoneNum(string $PhoneNum) 设置手机号
- * @method string getCountryCode() 获取区号
- * @method void setCountryCode(string $CountryCode) 设置区号
- * @method string getEmail() 获取邮箱
- * @method void setEmail(string $Email) 设置邮箱
+ * @method string getName() 获取<p>子用户用户名</p>
+ * @method void setName(string $Name) 设置<p>子用户用户名</p>
+ * @method string getRemark() 获取<p>子用户备注</p>
+ * @method void setRemark(string $Remark) 设置<p>子用户备注</p>
+ * @method integer getConsoleLogin() 获取<p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
+ * @method void setConsoleLogin(integer $ConsoleLogin) 设置<p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
+ * @method integer getUseApi() 获取<p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
+ * @method void setUseApi(integer $UseApi) 设置<p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
+ * @method string getPassword() 获取<p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
+ * @method void setPassword(string $Password) 设置<p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
+ * @method integer getNeedResetPassword() 获取<p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
+ * @method void setNeedResetPassword(integer $NeedResetPassword) 设置<p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
+ * @method string getPhoneNum() 获取<p>手机号</p>
+ * @method void setPhoneNum(string $PhoneNum) 设置<p>手机号</p>
+ * @method string getCountryCode() 获取<p>区号</p>
+ * @method void setCountryCode(string $CountryCode) 设置<p>区号</p>
+ * @method string getEmail() 获取<p>邮箱</p>
+ * @method void setEmail(string $Email) 设置<p>邮箱</p>
  */
 class AddUserRequest extends AbstractModel
 {
     /**
-     * @var string 子用户用户名
+     * @var string <p>子用户用户名</p>
      */
     public $Name;
 
     /**
-     * @var string 子用户备注
+     * @var string <p>子用户备注</p>
      */
     public $Remark;
 
     /**
-     * @var integer 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * @var integer <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
      */
     public $ConsoleLogin;
 
     /**
-     * @var integer 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * @var integer <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
      */
     public $UseApi;
 
     /**
-     * @var string 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
+     * @var string <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
      */
     public $Password;
 
     /**
-     * @var integer 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * @var integer <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
      */
     public $NeedResetPassword;
 
     /**
-     * @var string 手机号
+     * @var string <p>手机号</p>
      */
     public $PhoneNum;
 
     /**
-     * @var string 区号
+     * @var string <p>区号</p>
      */
     public $CountryCode;
 
     /**
-     * @var string 邮箱
+     * @var string <p>邮箱</p>
      */
     public $Email;
 
     /**
-     * @param string $Name 子用户用户名
-     * @param string $Remark 子用户备注
-     * @param integer $ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
-     * @param integer $UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
-     * @param string $Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。
-     * @param integer $NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
-     * @param string $PhoneNum 手机号
-     * @param string $CountryCode 区号
-     * @param string $Email 邮箱
+     * @param string $Name <p>子用户用户名</p>
+     * @param string $Remark <p>子用户备注</p>
+     * @param integer $ConsoleLogin <p>子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。</p>
+     * @param integer $UseApi <p>是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。</p>
+     * @param string $Password <p>子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大小写字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大小写字母、数字和特殊字符。</p>
+     * @param integer $NeedResetPassword <p>子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。</p>
+     * @param string $PhoneNum <p>手机号</p>
+     * @param string $CountryCode <p>区号</p>
+     * @param string $Email <p>邮箱</p>
      */
     function __construct()
     {

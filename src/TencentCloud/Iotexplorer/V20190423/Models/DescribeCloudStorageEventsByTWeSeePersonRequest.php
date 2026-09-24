@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>分页拉取数量，取值范围为 1-100</p>
  * @method integer getOffset() 获取<p>分页拉取偏移</p>
  * @method void setOffset(integer $Offset) 设置<p>分页拉取偏移</p>
+ * @method integer getStartTime() 获取<p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+ * @method integer getEndTime() 获取<p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
  * @method integer getChannelId() 获取<p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
  * @method void setChannelId(integer $ChannelId) 设置<p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
  */
@@ -61,6 +65,16 @@ class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var integer <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public $StartTime;
+
+    /**
+     * @var integer <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
+     */
+    public $EndTime;
+
+    /**
      * @var integer <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
      */
     public $ChannelId;
@@ -71,6 +85,8 @@ class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractModel
      * @param string $PersonId <p>人员 ID</p>
      * @param integer $Limit <p>分页拉取数量，取值范围为 1-100</p>
      * @param integer $Offset <p>分页拉取偏移</p>
+     * @param integer $StartTime <p>起始时间（Unix 时间戳）</p><p>单位：秒</p>
+     * @param integer $EndTime <p>结束时间（Unix 时间戳）</p><p>单位：秒</p>
      * @param integer $ChannelId <p>通道 ID，非 NVR 设备不填，NVR 设备必填</p>
      */
     function __construct()
@@ -104,6 +120,14 @@ class DescribeCloudStorageEventsByTWeSeePersonRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {

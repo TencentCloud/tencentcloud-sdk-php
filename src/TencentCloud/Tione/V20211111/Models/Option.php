@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 键值对
  *
- * @method string getName() 获取指标名
- * @method void setName(string $Name) 设置指标名
- * @method integer getValue() 获取指标值
- * @method void setValue(integer $Value) 设置指标值
+ * @method string getName() 获取<p>指标名</p>
+ * @method void setName(string $Name) 设置<p>指标名</p>
+ * @method integer getValue() 获取<p>指标值</p>
+ * @method void setValue(integer $Value) 设置<p>指标值</p>
  */
 class Option extends AbstractModel
 {
     /**
-     * @var string 指标名
+     * @var string <p>指标名</p>
      */
     public $Name;
 
     /**
-     * @var integer 指标值
+     * @var integer <p>指标值</p>
      */
     public $Value;
 
     /**
-     * @param string $Name 指标名
-     * @param integer $Value 指标值
+     * @param string $Name <p>指标名</p>
+     * @param integer $Value <p>指标值</p>
      */
     function __construct()
     {

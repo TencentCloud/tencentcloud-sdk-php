@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsSent(integer $RowsSent) 设置返回行数
  * @method string getInstanceId() 获取
  * @method void setInstanceId(string $InstanceId) 设置
+ * @method string getClientAppName() 获取
+ * @method void setClientAppName(string $ClientAppName) 设置
+ * @method string getClientHostName() 获取
+ * @method void setClientHostName(string $ClientHostName) 设置
  */
 class SlowLogInfoItem extends AbstractModel
 {
@@ -94,6 +98,16 @@ class SlowLogInfoItem extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 
+     */
+    public $ClientAppName;
+
+    /**
+     * @var string 
+     */
+    public $ClientHostName;
+
+    /**
      * @param string $Timestamp 慢日志开始时间，格式: "yyyy-MM-dd HH:mm:ss"
      * @param string $SqlText sql语句
      * @param string $Database 数据库
@@ -104,6 +118,8 @@ class SlowLogInfoItem extends AbstractModel
      * @param integer $RowsExamined 扫描行数
      * @param integer $RowsSent 返回行数
      * @param string $InstanceId 
+     * @param string $ClientAppName 
+     * @param string $ClientHostName 
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class SlowLogInfoItem extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ClientAppName",$param) and $param["ClientAppName"] !== null) {
+            $this->ClientAppName = $param["ClientAppName"];
+        }
+
+        if (array_key_exists("ClientHostName",$param) and $param["ClientHostName"] !== null) {
+            $this->ClientHostName = $param["ClientHostName"];
         }
     }
 }

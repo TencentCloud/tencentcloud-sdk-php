@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserKeyword(string $UserKeyword) 设置<p>用户名称或 UIN 模糊匹配</p>
  * @method array getUserUins() 获取<p>通过 UIN 批量查询用户信息</p>
  * @method void setUserUins(array $UserUins) 设置<p>通过 UIN 批量查询用户信息</p>
- * @method array getOrderBys() 获取<p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
- * @method void setOrderBys(array $OrderBys) 设置<p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+ * @method array getOrderBys() 获取<p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
+ * @method void setOrderBys(array $OrderBys) 设置<p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
  * @method integer getPageNumber() 获取<p>页码，从1开始，默认1</p>
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始，默认1</p>
- * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大200</p>
- * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大200</p>
+ * @method integer getPageSize() 获取<p>每页大小，默认10，最小10，最大100</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10，最小10，最大100</p>
  */
 class ListConsoleGroupUsersRequest extends AbstractModel
 {
@@ -51,7 +51,7 @@ class ListConsoleGroupUsersRequest extends AbstractModel
     public $UserUins;
 
     /**
-     * @var array <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+     * @var array <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
      */
     public $OrderBys;
 
@@ -61,7 +61,7 @@ class ListConsoleGroupUsersRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer <p>每页大小，默认10，最小10，最大200</p>
+     * @var integer <p>每页大小，默认10，最小10，最大100</p>
      */
     public $PageSize;
 
@@ -69,9 +69,9 @@ class ListConsoleGroupUsersRequest extends AbstractModel
      * @param string $GroupId <p>用户组 ID</p>
      * @param string $UserKeyword <p>用户名称或 UIN 模糊匹配</p>
      * @param array $UserUins <p>通过 UIN 批量查询用户信息</p>
-     * @param array $OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;DESC&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;ASC&#39;}]，默认按创建时间降序</p>
+     * @param array $OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>
      * @param integer $PageNumber <p>页码，从1开始，默认1</p>
-     * @param integer $PageSize <p>每页大小，默认10，最小10，最大200</p>
+     * @param integer $PageSize <p>每页大小，默认10，最小10，最大100</p>
      */
     function __construct()
     {

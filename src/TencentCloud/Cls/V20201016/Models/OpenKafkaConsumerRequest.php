@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerContent(KafkaConsumerContent $ConsumerContent) 设置<p>kafka协议消费数据格式</p>
  * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
  * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
+ * @method boolean getEnableInternetConsume() 获取<p>外网消费开关，默认开启</p>
+ * @method void setEnableInternetConsume(boolean $EnableInternetConsume) 设置<p>外网消费开关，默认开启</p>
+ * @method boolean getEnableIntranetConsume() 获取<p>内网消费开关，默认开启</p>
+ * @method void setEnableIntranetConsume(boolean $EnableIntranetConsume) 设置<p>内网消费开关，默认开启</p>
  * @method integer getScopeType() 获取<p>消费范围类型，0:最新；1:历史+最新；默认值:0</p>
  * @method void setScopeType(integer $ScopeType) 设置<p>消费范围类型，0:最新；1:历史+最新；默认值:0</p>
  */
@@ -54,6 +58,16 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $HasServicesLog;
 
     /**
+     * @var boolean <p>外网消费开关，默认开启</p>
+     */
+    public $EnableInternetConsume;
+
+    /**
+     * @var boolean <p>内网消费开关，默认开启</p>
+     */
+    public $EnableIntranetConsume;
+
+    /**
      * @var integer <p>消费范围类型，0:最新；1:历史+最新；默认值:0</p>
      */
     public $ScopeType;
@@ -63,6 +77,8 @@ class OpenKafkaConsumerRequest extends AbstractModel
      * @param integer $Compression <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]，默认：0</p>
      * @param KafkaConsumerContent $ConsumerContent <p>kafka协议消费数据格式</p>
      * @param integer $HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。 默认值：2</p>
+     * @param boolean $EnableInternetConsume <p>外网消费开关，默认开启</p>
+     * @param boolean $EnableIntranetConsume <p>内网消费开关，默认开启</p>
      * @param integer $ScopeType <p>消费范围类型，0:最新；1:历史+最新；默认值:0</p>
      */
     function __construct()
@@ -93,6 +109,14 @@ class OpenKafkaConsumerRequest extends AbstractModel
 
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("EnableInternetConsume",$param) and $param["EnableInternetConsume"] !== null) {
+            $this->EnableInternetConsume = $param["EnableInternetConsume"];
+        }
+
+        if (array_key_exists("EnableIntranetConsume",$param) and $param["EnableIntranetConsume"] !== null) {
+            $this->EnableIntranetConsume = $param["EnableIntranetConsume"];
         }
 
         if (array_key_exists("ScopeType",$param) and $param["ScopeType"] !== null) {

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegistryRecordList请求参数结构体
  *
-
+ * @method string getRegistryId() 获取<p>父 Registry ID。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>父 Registry ID。</p>
+ * @method integer getOffset() 获取<p>分页起始偏移，默认 0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页起始偏移，默认 0。</p>
+ * @method integer getLimit() 获取<p>分页条数，默认 20，最大 100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页条数，默认 20，最大 100。</p>
+ * @method array getFilters() 获取<p>过滤条件。支持 Filter.Name：<code>name</code>/<code>search</code>（按 Record Name 模糊搜索）；其他名称返回 <code>InvalidParameter.Filters.Name</code>。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。支持 Filter.Name：<code>name</code>/<code>search</code>（按 Record Name 模糊搜索）；其他名称返回 <code>InvalidParameter.Filters.Name</code>。</p>
  */
 class DescribeRegistryRecordListRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>父 Registry ID。</p>
+     */
+    public $RegistryId;
 
     /**
+     * @var integer <p>分页起始偏移，默认 0。</p>
+     */
+    public $Offset;
 
+    /**
+     * @var integer <p>分页条数，默认 20，最大 100。</p>
+     */
+    public $Limit;
+
+    /**
+     * @var array <p>过滤条件。支持 Filter.Name：<code>name</code>/<code>search</code>（按 Record Name 模糊搜索）；其他名称返回 <code>InvalidParameter.Filters.Name</code>。</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $RegistryId <p>父 Registry ID。</p>
+     * @param integer $Offset <p>分页起始偏移，默认 0。</p>
+     * @param integer $Limit <p>分页条数，默认 20，最大 100。</p>
+     * @param array $Filters <p>过滤条件。支持 Filter.Name：<code>name</code>/<code>search</code>（按 Record Name 模糊搜索）；其他名称返回 <code>InvalidParameter.Filters.Name</code>。</p>
      */
     function __construct()
     {
@@ -42,6 +70,25 @@ class DescribeRegistryRecordListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new CloudFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

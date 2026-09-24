@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormatVersion(string $FormatVersion) 设置<p>语法版本，当前默认为 1.0，输入其他值将会报错。</p>
  * @method ZoneConfig getZoneConfig() 获取<p>站点级配置，包含「站点加速」中所有配置项，且所有项均为必选，否则配置无效。</p>
  * @method void setZoneConfig(ZoneConfig $ZoneConfig) 设置<p>站点级配置，包含「站点加速」中所有配置项，且所有项均为必选，否则配置无效。</p>
+ * @method ZoneCustomVariables getZoneCustomVariables() 获取<p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+ * @method void setZoneCustomVariables(ZoneCustomVariables $ZoneCustomVariables) 设置<p>站点级自定义变量配置，包括变量定义和变量运算。</p>
  * @method array getRules() 获取<p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
  * @method void setRules(array $Rules) 设置<p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
  * @method WebSecurity getWebSecurity() 获取<p>Web 安全防护配置，对应控制台中「安全防护 - Web 防护」里支持的功能。</p>
@@ -44,6 +46,11 @@ class ZoneFullConfig extends AbstractModel
     public $ZoneConfig;
 
     /**
+     * @var ZoneCustomVariables <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
+     */
+    public $ZoneCustomVariables;
+
+    /**
      * @var array <p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
      */
     public $Rules;
@@ -61,6 +68,7 @@ class ZoneFullConfig extends AbstractModel
     /**
      * @param string $FormatVersion <p>语法版本，当前默认为 1.0，输入其他值将会报错。</p>
      * @param ZoneConfig $ZoneConfig <p>站点级配置，包含「站点加速」中所有配置项，且所有项均为必选，否则配置无效。</p>
+     * @param ZoneCustomVariables $ZoneCustomVariables <p>站点级自定义变量配置，包括变量定义和变量运算。</p>
      * @param array $Rules <p>规则级配置，包含「规则引擎」中所有规则，且数组可为空，表示不启用任何规则。</p>
      * @param WebSecurity $WebSecurity <p>Web 安全防护配置，对应控制台中「安全防护 - Web 防护」里支持的功能。</p>
      * @param array $FunctionTriggers <p>边缘函数触发规则配置，包含触发「边缘函数」中所有规则，且数组可为空，表示不启用任何规则。</p>
@@ -85,6 +93,11 @@ class ZoneFullConfig extends AbstractModel
         if (array_key_exists("ZoneConfig",$param) and $param["ZoneConfig"] !== null) {
             $this->ZoneConfig = new ZoneConfig();
             $this->ZoneConfig->deserialize($param["ZoneConfig"]);
+        }
+
+        if (array_key_exists("ZoneCustomVariables",$param) and $param["ZoneCustomVariables"] !== null) {
+            $this->ZoneCustomVariables = new ZoneCustomVariables();
+            $this->ZoneCustomVariables->deserialize($param["ZoneCustomVariables"]);
         }
 
         if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {

@@ -23,9 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Rce\V20260130\Models as Models;
 
 /**
- * @method Models\AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumPro(Models\AssessDeviceRiskPremiumProRequest $req) 设备风险评估-高级版
- * @method Models\AssessDeviceRiskProResponse AssessDeviceRiskPro(Models\AssessDeviceRiskProRequest $req) 设备风险评估-基础版
- * @method Models\AssessEnvironmentRiskResponse AssessEnvironmentRisk(Models\AssessEnvironmentRiskRequest $req) 环境风险评估
+ * @method Models\AssessDeviceRiskPremiumProResponse AssessDeviceRiskPremiumPro(Models\AssessDeviceRiskPremiumProRequest $req) 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备、环境、行为等维度给出的综合风险评估（包含决策结果、风险评分、风险标签）和设备以及 IP 的基础信息。
+ * @method Models\AssessDeviceRiskProResponse AssessDeviceRiskPro(Models\AssessDeviceRiskProRequest $req) 基于设备端SDK 采集设备指纹 token和IP进行风险识别，提供设备维度的风险标签和设备基础信息，以及 IP 的地理位置和网络信息。
+ * @method Models\AssessEnvironmentRiskResponse AssessEnvironmentRisk(Models\AssessEnvironmentRiskRequest $req) 基于传入的客户端IP进行风险识别，提供环境的风险评估（包含风险等级、风险标签）以及IP的地理位置和网络信息。
  * @method Models\AssessRiskResponse AssessRisk(Models\AssessRiskRequest $req) 事件风险评估。用于实时获取事件的风险信息，您可以在业务的关键事件中获取到我们根据设备风险、环境风险、账号风险、行为风险以及历史上报的事件信息评估出来的风险决策结果、风险评分和风险标签等。
  * @method Models\ReportEventResponse ReportEvent(Models\ReportEventRequest $req) 事件信息上报。用于上报您业务中无需实时决策的事件，我们会通过引擎计算、机器学习挖掘风险特征用于实时事件风险评估。
  */

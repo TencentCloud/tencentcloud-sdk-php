@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRegistry请求参数结构体
  *
-
+ * @method string getRegistryId() 获取<p>Registry ID。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>Registry ID。</p>
  */
 class DeleteRegistryRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>Registry ID。</p>
+     */
+    public $RegistryId;
 
     /**
-
+     * @param string $RegistryId <p>Registry ID。</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeleteRegistryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
     }
 }

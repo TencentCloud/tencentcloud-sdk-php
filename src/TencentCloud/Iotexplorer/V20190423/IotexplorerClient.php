@@ -29,6 +29,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\BatchCreateTWeSeeSubscriptionResponse BatchCreateTWeSeeSubscription(Models\BatchCreateTWeSeeSubscriptionRequest $req) 批量开通 TWeSee 预付费订阅
  * @method Models\BatchDescribeTWeSeeOrdersResponse BatchDescribeTWeSeeOrders(Models\BatchDescribeTWeSeeOrdersRequest $req) 批量查询 TWeSee 订单状态
  * @method Models\BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTask(Models\BatchInvokeTWeSeeRecognitionTaskRequest $req) 批量同步执行 TWeSee 语义理解任务
+ * @method Models\BatchPublishMessageResponse BatchPublishMessage(Models\BatchPublishMessageRequest $req) 批量设备透传指令控制
  * @method Models\BatchRenewTWeSeeSubscriptionResponse BatchRenewTWeSeeSubscription(Models\BatchRenewTWeSeeSubscriptionRequest $req) 批量续费 TWeSee 预付费订阅
  * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户

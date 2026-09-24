@@ -78,8 +78,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEipAddressId(string $EipAddressId) 设置<p>弹性公网IP的ID</p>
  * @method ModelRouterBillingConfigOutput getBillingConfig() 获取<p>计费信息</p>
  * @method void setBillingConfig(ModelRouterBillingConfigOutput $BillingConfig) 设置<p>计费信息</p>
- * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding配置</p>
- * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding配置</p>
+ * @method EmbeddingConfig getEmbeddingConfig() 获取<p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmbeddingConfig(EmbeddingConfig $EmbeddingConfig) 设置<p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoadBalancerId() 获取<p>CMR关联的负载均衡实例id</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>CMR关联的负载均衡实例id</p>
+ * @method VideoConfig getVideoConfig() 获取<p>视频模型设置</p>
+ * @method void setVideoConfig(VideoConfig $VideoConfig) 设置<p>视频模型设置</p>
+ * @method RerankConfig getRerankConfig() 获取<p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRerankConfig(RerankConfig $RerankConfig) 设置<p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DecisionsConfig getDecisionsConfig() 获取<p>决策模型设置</p>
+ * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>决策模型设置</p>
  */
 class ModelRouterDetail extends AbstractModel
 {
@@ -213,9 +225,31 @@ class ModelRouterDetail extends AbstractModel
     public $BillingConfig;
 
     /**
-     * @var EmbeddingConfig <p>Embedding配置</p>
+     * @var EmbeddingConfig <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmbeddingConfig;
+
+    /**
+     * @var string <p>CMR关联的负载均衡实例id</p>
+     */
+    public $LoadBalancerId;
+
+    /**
+     * @var VideoConfig <p>视频模型设置</p>
+     */
+    public $VideoConfig;
+
+    /**
+     * @var RerankConfig <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RerankConfig;
+
+    /**
+     * @var DecisionsConfig <p>决策模型设置</p>
+     */
+    public $DecisionsConfig;
 
     /**
      * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -247,7 +281,13 @@ class ModelRouterDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EipAddressId <p>弹性公网IP的ID</p>
      * @param ModelRouterBillingConfigOutput $BillingConfig <p>计费信息</p>
-     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding配置</p>
+     * @param EmbeddingConfig $EmbeddingConfig <p>Embedding调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoadBalancerId <p>CMR关联的负载均衡实例id</p>
+     * @param VideoConfig $VideoConfig <p>视频模型设置</p>
+     * @param RerankConfig $RerankConfig <p>Rerank调度配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DecisionsConfig $DecisionsConfig <p>决策模型设置</p>
      */
     function __construct()
     {
@@ -384,6 +424,25 @@ class ModelRouterDetail extends AbstractModel
         if (array_key_exists("EmbeddingConfig",$param) and $param["EmbeddingConfig"] !== null) {
             $this->EmbeddingConfig = new EmbeddingConfig();
             $this->EmbeddingConfig->deserialize($param["EmbeddingConfig"]);
+        }
+
+        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
+            $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+
+        if (array_key_exists("VideoConfig",$param) and $param["VideoConfig"] !== null) {
+            $this->VideoConfig = new VideoConfig();
+            $this->VideoConfig->deserialize($param["VideoConfig"]);
+        }
+
+        if (array_key_exists("RerankConfig",$param) and $param["RerankConfig"] !== null) {
+            $this->RerankConfig = new RerankConfig();
+            $this->RerankConfig->deserialize($param["RerankConfig"]);
+        }
+
+        if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
+            $this->DecisionsConfig = new DecisionsConfig();
+            $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
         }
     }
 }

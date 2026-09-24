@@ -18,28 +18,36 @@ namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TWeSee 处理云存事件 EventId 的过滤规则配置
+ * TWeSee 处理云存事件的触发条件配置
  *
- * @method array getIncludeOnly() 获取包含的云存事件 ID 集合
- * @method void setIncludeOnly(array $IncludeOnly) 设置包含的云存事件 ID 集合
- * @method array getExclude() 获取排除的云存事件 ID 集合
- * @method void setExclude(array $Exclude) 设置排除的云存事件 ID 集合
+ * @method array getIncludeOnly() 获取<p>包含的云存事件 ID 集合</p>
+ * @method void setIncludeOnly(array $IncludeOnly) 设置<p>包含的云存事件 ID 集合</p>
+ * @method array getExclude() 获取<p>排除的云存事件 ID 集合</p>
+ * @method void setExclude(array $Exclude) 设置<p>排除的云存事件 ID 集合</p>
+ * @method string getTriggerAt() 获取<p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+ * @method void setTriggerAt(string $TriggerAt) 设置<p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
  */
 class SeeEventIdFilterConfig extends AbstractModel
 {
     /**
-     * @var array 包含的云存事件 ID 集合
+     * @var array <p>包含的云存事件 ID 集合</p>
      */
     public $IncludeOnly;
 
     /**
-     * @var array 排除的云存事件 ID 集合
+     * @var array <p>排除的云存事件 ID 集合</p>
      */
     public $Exclude;
 
     /**
-     * @param array $IncludeOnly 包含的云存事件 ID 集合
-     * @param array $Exclude 排除的云存事件 ID 集合
+     * @var string <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
+     */
+    public $TriggerAt;
+
+    /**
+     * @param array $IncludeOnly <p>包含的云存事件 ID 集合</p>
+     * @param array $Exclude <p>排除的云存事件 ID 集合</p>
+     * @param string $TriggerAt <p>触发分析的时机</p><p>枚举值：</p><ul><li>end： 在云存事件结束时触发视频理解</li><li>start： 在云存事件开始时触发视频理解</li><li>image_and_video： 上传云存事件缩略图后触发图片理解，并且在云存事件结束时触发视频理解</li></ul><p>默认值：end</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SeeEventIdFilterConfig extends AbstractModel
 
         if (array_key_exists("Exclude",$param) and $param["Exclude"] !== null) {
             $this->Exclude = $param["Exclude"];
+        }
+
+        if (array_key_exists("TriggerAt",$param) and $param["TriggerAt"] !== null) {
+            $this->TriggerAt = $param["TriggerAt"];
         }
     }
 }

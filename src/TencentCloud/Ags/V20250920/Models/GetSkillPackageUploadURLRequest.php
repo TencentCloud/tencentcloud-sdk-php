@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSkillPackageUploadURL请求参数结构体
  *
-
+ * @method string getRegistryId() 获取<p>父 Registry ID。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>父 Registry ID。</p>
+ * @method string getRecordId() 获取<p>Record ID。</p>
+ * @method void setRecordId(string $RecordId) 设置<p>Record ID。</p>
+ * @method string getVersionId() 获取<p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+ * @method void setVersionId(string $VersionId) 设置<p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
  */
 class GetSkillPackageUploadURLRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>父 Registry ID。</p>
+     */
+    public $RegistryId;
 
     /**
+     * @var string <p>Record ID。</p>
+     */
+    public $RecordId;
 
+    /**
+     * @var string <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
+     */
+    public $VersionId;
+
+    /**
+     * @param string $RegistryId <p>父 Registry ID。</p>
+     * @param string $RecordId <p>Record ID。</p>
+     * @param string $VersionId <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class GetSkillPackageUploadURLRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
 
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
+        }
     }
 }

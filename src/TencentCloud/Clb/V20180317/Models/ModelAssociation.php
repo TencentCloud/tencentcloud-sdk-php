@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviders(array $ServiceProviders) 设置<p>BYOK列表</p>
  * @method string getType() 获取<p>模型类型</p>
  * @method void setType(string $Type) 设置<p>模型类型</p>
- * @method string getCapability() 获取<p>输出模态</p>
- * @method void setCapability(string $Capability) 设置<p>输出模态</p>
+ * @method string getCapability() 获取<p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
+ * @method void setCapability(string $Capability) 设置<p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
  */
 class ModelAssociation extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModelAssociation extends AbstractModel
     public $Type;
 
     /**
-     * @var string <p>输出模态</p>
+     * @var string <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     public $Capability;
 
@@ -63,7 +63,7 @@ class ModelAssociation extends AbstractModel
      * @param string $ModelName <p>模型名称</p>
      * @param array $ServiceProviders <p>BYOK列表</p>
      * @param string $Type <p>模型类型</p>
-     * @param string $Capability <p>输出模态</p>
+     * @param string $Capability <p>输出模态</p><p>枚举值：</p><ul><li>chat： 文本</li><li>embedding： 向量</li><li>video： 视频</li><li>rerank： 重排序</li></ul>
      */
     function __construct()
     {

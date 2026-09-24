@@ -20,94 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAndroidInstances请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认为 0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
- * @method integer getLimit() 获取限制量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100
- * @method array getAndroidInstanceIds() 获取实例ID。每次请求的实例的上限为100。
- * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置实例ID。每次请求的实例的上限为100。
- * @method string getAndroidInstanceRegion() 获取实例地域。目前还不支持按地域进行聚合查询
- * @method void setAndroidInstanceRegion(string $AndroidInstanceRegion) 设置实例地域。目前还不支持按地域进行聚合查询
- * @method string getAndroidInstanceZone() 获取实例可用区
- * @method void setAndroidInstanceZone(string $AndroidInstanceZone) 设置实例可用区
- * @method array getAndroidInstanceGroupIds() 获取实例分组 ID 列表
- * @method void setAndroidInstanceGroupIds(array $AndroidInstanceGroupIds) 设置实例分组 ID 列表
- * @method array getLabelSelector() 获取实例标签选择器
- * @method void setLabelSelector(array $LabelSelector) 设置实例标签选择器
- * @method array getFilters() 获取字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
- * @method void setFilters(array $Filters) 设置字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+ * @method integer getOffset() 获取<p>偏移量，默认为 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0</p>
+ * @method integer getLimit() 获取<p>限制量，默认为20，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>限制量，默认为20，最大值为100</p>
+ * @method array getAndroidInstanceIds() 获取<p>实例ID。每次请求的实例的上限为100。</p>
+ * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置<p>实例ID。每次请求的实例的上限为100。</p>
+ * @method string getAndroidInstanceRegion() 获取<p>实例地域。目前还不支持按地域进行聚合查询</p>
+ * @method void setAndroidInstanceRegion(string $AndroidInstanceRegion) 设置<p>实例地域。目前还不支持按地域进行聚合查询</p>
+ * @method string getAndroidInstanceZone() 获取<p>实例可用区</p>
+ * @method void setAndroidInstanceZone(string $AndroidInstanceZone) 设置<p>实例可用区</p>
+ * @method array getAndroidInstanceGroupIds() 获取<p>实例分组 ID 列表</p>
+ * @method void setAndroidInstanceGroupIds(array $AndroidInstanceGroupIds) 设置<p>实例分组 ID 列表</p>
+ * @method array getLabelSelector() 获取<p>实例标签选择器</p>
+ * @method void setLabelSelector(array $LabelSelector) 设置<p>实例标签选择器</p>
+ * @method array getFilters() 获取<p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
+ * @method void setFilters(array $Filters) 设置<p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
  */
 class DescribeAndroidInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认为 0
+     * @var integer <p>偏移量，默认为 0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 限制量，默认为20，最大值为100
+     * @var integer <p>限制量，默认为20，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var array 实例ID。每次请求的实例的上限为100。
+     * @var array <p>实例ID。每次请求的实例的上限为100。</p>
      */
     public $AndroidInstanceIds;
 
     /**
-     * @var string 实例地域。目前还不支持按地域进行聚合查询
+     * @var string <p>实例地域。目前还不支持按地域进行聚合查询</p>
      */
     public $AndroidInstanceRegion;
 
     /**
-     * @var string 实例可用区
+     * @var string <p>实例可用区</p>
      */
     public $AndroidInstanceZone;
 
     /**
-     * @var array 实例分组 ID 列表
+     * @var array <p>实例分组 ID 列表</p>
      */
     public $AndroidInstanceGroupIds;
 
     /**
-     * @var array 实例标签选择器
+     * @var array <p>实例标签选择器</p>
      */
     public $LabelSelector;
 
     /**
-     * @var array 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+     * @var array <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 偏移量，默认为 0
-     * @param integer $Limit 限制量，默认为20，最大值为100
-     * @param array $AndroidInstanceIds 实例ID。每次请求的实例的上限为100。
-     * @param string $AndroidInstanceRegion 实例地域。目前还不支持按地域进行聚合查询
-     * @param string $AndroidInstanceZone 实例可用区
-     * @param array $AndroidInstanceGroupIds 实例分组 ID 列表
-     * @param array $LabelSelector 实例标签选择器
-     * @param array $Filters 字段过滤器。Filter 的 Name 有以下值：
-Name：实例名称
-UserId：实例用户ID
-HostSerialNumber：宿主机序列号
-HostServerSerialNumber：机箱序列号
-AndroidInstanceModel：实例型号
+     * @param integer $Offset <p>偏移量，默认为 0</p>
+     * @param integer $Limit <p>限制量，默认为20，最大值为100</p>
+     * @param array $AndroidInstanceIds <p>实例ID。每次请求的实例的上限为100。</p>
+     * @param string $AndroidInstanceRegion <p>实例地域。目前还不支持按地域进行聚合查询</p>
+     * @param string $AndroidInstanceZone <p>实例可用区</p>
+     * @param array $AndroidInstanceGroupIds <p>实例分组 ID 列表</p>
+     * @param array $LabelSelector <p>实例标签选择器</p>
+     * @param array $Filters <p>字段过滤器。Filter 的 Name 有以下值：<br>Name：实例名称<br>UserId：实例用户ID<br>HostSerialNumber：宿主机序列号<br>HostServerSerialNumber：机箱序列号<br>AndroidInstanceModel：实例型号</p>
      */
     function __construct()
     {

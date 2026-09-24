@@ -72,6 +72,9 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateInferenceModelResponse CreateInferenceModel(Models\CreateInferenceModelRequest $req) 创建推理模型（模型上传）
  * @method Models\CreateInferenceServiceResponse CreateInferenceService(Models\CreateInferenceServiceRequest $req) 创建推理服务（含默认部署）
  * @method Models\CreateInternalTableResponse CreateInternalTable(Models\CreateInternalTableRequest $req) 创建托管存储内表（该接口已废弃）
+ * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 创建并提交作业 Action。
+ * @method Models\CreateJobDefinitionResponse CreateJobDefinition(Models\CreateJobDefinitionRequest $req) 创建作业定义。
+ * @method Models\CreateJobFromDefinitionResponse CreateJobFromDefinition(Models\CreateJobFromDefinitionRequest $req) 按作业定义创建作业。
  * @method Models\CreateJobSpecResponse CreateJobSpec(Models\CreateJobSpecRequest $req) 创建作业配置
  * @method Models\CreateLabResponse CreateLab(Models\CreateLabRequest $req) 创建实验室
  * @method Models\CreateMetaDatabaseResponse CreateMetaDatabase(Models\CreateMetaDatabaseRequest $req) 本接口（CreateMetaDatabase）用于创建元数据库
@@ -138,6 +141,10 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
  * @method Models\DescribeBindablePrometheusResponse DescribeBindablePrometheus(Models\DescribeBindablePrometheusRequest $req) 查询 TKE 集群可绑定的托管 Prometheus 实例列表。若 TKE 已绑定，返回 Bound=true 与 BoundInstance；若未绑定，返回 Bound=false 与候选列表 Instances（同 VPC 实例前置）。
+ * @method Models\DescribeCatalogTableInfoResponse DescribeCatalogTableInfo(Models\DescribeCatalogTableInfoRequest $req) 获取 Table 详情
+ * @method Models\DescribeCatalogTableNamesResponse DescribeCatalogTableNames(Models\DescribeCatalogTableNamesRequest $req) 获取 Schema 下所有 Table
+ * @method Models\DescribeCatalogTableNamesPageResponse DescribeCatalogTableNamesPage(Models\DescribeCatalogTableNamesPageRequest $req) 分页查询表名
+ * @method Models\DescribeCatalogsResponse DescribeCatalogs(Models\DescribeCatalogsRequest $req) 查询数据目录列表
  * @method Models\DescribeClsTopicsResponse DescribeClsTopics(Models\DescribeClsTopicsRequest $req) 查询 CLS 日志主题列表：TopicName 走模糊匹配，TopicId 走精确匹配，两者均可为空；分页返回。
  * @method Models\DescribeClusterEventLogSwitchResponse DescribeClusterEventLogSwitch(Models\DescribeClusterEventLogSwitchRequest $req) 查询指定 TKE 集群是否开启了事件日志。已开启时同时返回关联的 CLS 日志集 ID、日志主题 ID 与主题所在地域。
  * @method Models\DescribeClusterGroupResponse DescribeClusterGroup(Models\DescribeClusterGroupRequest $req) 根据集群组 ID 获取集群组详情。支持通过 IncludeDeleted 参数控制是否返回已软删除的记录（用于悬挂 cluster 回显场景）。
@@ -166,6 +173,12 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeFlowDetailListResponse DescribeFlowDetailList(Models\DescribeFlowDetailListRequest $req) 分页查询指定分区的流程详情列表，包含每个流程的基本信息和活动列表
  * @method Models\DescribeFlowListResponse DescribeFlowList(Models\DescribeFlowListRequest $req) 查询指定分区的流程列表
  * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
+ * @method Models\DescribeJobDefinitionDetailResponse DescribeJobDefinitionDetail(Models\DescribeJobDefinitionDetailRequest $req) 查询作业定义详情。
+ * @method Models\DescribeJobDefinitionsResponse DescribeJobDefinitions(Models\DescribeJobDefinitionsRequest $req) 查询作业定义列表。
+ * @method Models\DescribeJobDetailResponse DescribeJobDetail(Models\DescribeJobDetailRequest $req) 查询作业完整详情 Action。
+ * @method Models\DescribeJobListResponse DescribeJobList(Models\DescribeJobListRequest $req) 分页查询作业列表 Action. PageSize 上限 200；QueueName 必须配合 PartitionCode。
+ * @method Models\DescribeJobLogResponse DescribeJobLog(Models\DescribeJobLogRequest $req) 统一作业日志查询 Action。
+ * @method Models\DescribeJobResultResponse DescribeJobResult(Models\DescribeJobResultRequest $req) 获取 SQL 作业结果集 Action. 仅 MinorType=SPARK_SQL 有效（Batch 固定返回 State=NOT_SUPPORTED）。
  * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) 查询托管存储指定目录的Summary
  * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) 查询用户的托管存储信息
  * @method Models\DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(Models\DescribeLakeFsTaskResultRequest $req) 获取LakeFs上task执行结果访问信息
@@ -199,6 +212,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeSaleRegionsResponse DescribeSaleRegions(Models\DescribeSaleRegionsRequest $req) 查询可售卖的地域列表，仅返回状态为AVAILABLE的地域
  * @method Models\DescribeSaleResourceInfoResponse DescribeSaleResourceInfo(Models\DescribeSaleResourceInfoRequest $req) 查询当前地域可售卖的资源规格、最大配额，以及库存情况。StatusCategory 与 DescribePartitionAvailableQuota 数据同源，将实时可新增数量映射为库存分级；当请求 Region 与资源池实际部署地域不一致，或服务 cold-start 快照尚未就绪时，StatusCategory 为 null。
+ * @method Models\DescribeSchemaNamesPageResponse DescribeSchemaNamesPage(Models\DescribeSchemaNamesPageRequest $req) 分页查询 Catalog 下 Schema 列表
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于查询SQL脚本列表
  * @method Models\DescribeSessionImageVersionResponse DescribeSessionImageVersion(Models\DescribeSessionImageVersionRequest $req) 获取指定大版本下所有小版本的所有内置镜像
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询spark作业信息
@@ -241,6 +255,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\DescribeUserVpcConnectionResponse DescribeUserVpcConnection(Models\DescribeUserVpcConnectionRequest $req) 查询用户vpc到引擎网络的连接
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 获取用户列表信息
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 本接口（DescribeViews）用于查询数据视图列表。
+ * @method Models\DescribeWarehousesResponse DescribeWarehouses(Models\DescribeWarehousesRequest $req) 查询计算仓库列表 Action。
  * @method Models\DescribeWorkGroupInfoResponse DescribeWorkGroupInfo(Models\DescribeWorkGroupInfoRequest $req) 获取工作组详细信息
  * @method Models\DescribeWorkGroupsResponse DescribeWorkGroups(Models\DescribeWorkGroupsRequest $req) 获取工作组列表
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) 解绑用户鉴权策略
@@ -320,6 +335,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\ModifyClusterPriorityResponse ModifyClusterPriority(Models\ModifyClusterPriorityRequest $req) 修改集群的调度优先级（1-9，数字越大优先级越高）
  * @method Models\ModifyDataEngineDescriptionResponse ModifyDataEngineDescription(Models\ModifyDataEngineDescriptionRequest $req) 修改引擎描述信息
  * @method Models\ModifyGovernEventRuleResponse ModifyGovernEventRule(Models\ModifyGovernEventRuleRequest $req) 修改数据治理事件阈值
+ * @method Models\ModifyJobDefinitionResponse ModifyJobDefinition(Models\ModifyJobDefinitionRequest $req) 修改作业定义。
  * @method Models\ModifyLabPriorityResponse ModifyLabPriority(Models\ModifyLabPriorityRequest $req) 修改实验室的调度优先级（1-9，数字越大优先级越高）
  * @method Models\ModifyPartitionDescriptionResponse ModifyPartitionDescription(Models\ModifyPartitionDescriptionRequest $req) 修改分区描述
  * @method Models\ModifyPartitionQueueResponse ModifyPartitionQueue(Models\ModifyPartitionQueueRequest $req) 编辑资源队列：根据队列ID修改指定资源队列的别名（显示名）、描述、资源规格列表和队列类型等信息。队列编码（QueueName）不可变，仅作为一致性校验键。

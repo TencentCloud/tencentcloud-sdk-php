@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupNickname(string $GroupNickname) 设置<p>用户组别名</p>
  * @method string getDescription() 获取<p>用户组描述</p>
  * @method void setDescription(string $Description) 设置<p>用户组描述</p>
- * @method array getUserUins() 获取<p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
- * @method void setUserUins(array $UserUins) 设置<p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+ * @method array getUserUins() 获取<p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
+ * @method void setUserUins(array $UserUins) 设置<p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
  */
 class UpdateConsoleGroupRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class UpdateConsoleGroupRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+     * @var array <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
      */
     public $UserUins;
 
@@ -71,7 +71,7 @@ class UpdateConsoleGroupRequest extends AbstractModel
      * @param string $GroupName <p>用户组名称</p>
      * @param string $GroupNickname <p>用户组别名</p>
      * @param string $Description <p>用户组描述</p>
-     * @param array $UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用）</p>
+     * @param array $UserUins <p>成员 UIN 列表（OperType 为添加/删除成员时使用），单次最多100个</p>
      */
     function __construct()
     {

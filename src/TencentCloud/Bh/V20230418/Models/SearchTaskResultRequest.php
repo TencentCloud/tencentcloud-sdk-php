@@ -20,94 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchTaskResult请求参数结构体
  *
- * @method string getStartTime() 获取搜索区间的开始时间
- * @method void setStartTime(string $StartTime) 设置搜索区间的开始时间
- * @method string getEndTime() 获取搜索区间的结束时间
- * @method void setEndTime(string $EndTime) 设置搜索区间的结束时间
- * @method string getOperationId() 获取运维任务ID
- * @method void setOperationId(string $OperationId) 设置运维任务ID
- * @method string getName() 获取运维任务名称
- * @method void setName(string $Name) 设置运维任务名称
- * @method string getUserName() 获取用户名，长度不超过20
- * @method void setUserName(string $UserName) 设置用户名，长度不超过20
- * @method string getRealName() 获取姓名，长度不超过20
- * @method void setRealName(string $RealName) 设置姓名，长度不超过20
- * @method array getTaskType() 获取任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
- * @method void setTaskType(array $TaskType) 设置任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
- * @method integer getOffset() 获取查询偏移
- * @method void setOffset(integer $Offset) 设置查询偏移
- * @method integer getLimit() 获取分页的页内记录数，默认为20，最大200
- * @method void setLimit(integer $Limit) 设置分页的页内记录数，默认为20，最大200
+ * @method string getStartTime() 获取<p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
+ * @method void setStartTime(string $StartTime) 设置<p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
+ * @method string getEndTime() 获取<p>搜索区间的结束时间。未指定时，默认取当前时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>搜索区间的结束时间。未指定时，默认取当前时间</p>
+ * @method string getOperationId() 获取<p>运维任务ID</p>
+ * @method void setOperationId(string $OperationId) 设置<p>运维任务ID</p>
+ * @method string getName() 获取<p>运维任务名称</p>
+ * @method void setName(string $Name) 设置<p>运维任务名称</p>
+ * @method string getUserName() 获取<p>用户名，长度不超过20</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名，长度不超过20</p>
+ * @method string getRealName() 获取<p>姓名，长度不超过20</p>
+ * @method void setRealName(string $RealName) 设置<p>姓名，长度不超过20</p>
+ * @method array getTaskType() 获取<p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
+ * @method void setTaskType(array $TaskType) 设置<p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
+ * @method integer getOffset() 获取<p>查询偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>查询偏移</p>
+ * @method integer getLimit() 获取<p>分页的页内记录数，默认为20，最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页的页内记录数，默认为20，最大200</p>
  */
 class SearchTaskResultRequest extends AbstractModel
 {
     /**
-     * @var string 搜索区间的开始时间
+     * @var string <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
      */
     public $StartTime;
 
     /**
-     * @var string 搜索区间的结束时间
+     * @var string <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 运维任务ID
+     * @var string <p>运维任务ID</p>
      */
     public $OperationId;
 
     /**
-     * @var string 运维任务名称
+     * @var string <p>运维任务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 用户名，长度不超过20
+     * @var string <p>用户名，长度不超过20</p>
      */
     public $UserName;
 
     /**
-     * @var string 姓名，长度不超过20
+     * @var string <p>姓名，长度不超过20</p>
      */
     public $RealName;
 
     /**
-     * @var array 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
+     * @var array <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 查询偏移
+     * @var integer <p>查询偏移</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页的页内记录数，默认为20，最大200
+     * @var integer <p>分页的页内记录数，默认为20，最大200</p>
      */
     public $Limit;
 
     /**
-     * @param string $StartTime 搜索区间的开始时间
-     * @param string $EndTime 搜索区间的结束时间
-     * @param string $OperationId 运维任务ID
-     * @param string $Name 运维任务名称
-     * @param string $UserName 用户名，长度不超过20
-     * @param string $RealName 姓名，长度不超过20
-     * @param array $TaskType 任务类型
-1 手工运维任务
-2 定时任务
-3 账号推送任务
-     * @param integer $Offset 查询偏移
-     * @param integer $Limit 分页的页内记录数，默认为20，最大200
+     * @param string $StartTime <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
+     * @param string $EndTime <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
+     * @param string $OperationId <p>运维任务ID</p>
+     * @param string $Name <p>运维任务名称</p>
+     * @param string $UserName <p>用户名，长度不超过20</p>
+     * @param string $RealName <p>姓名，长度不超过20</p>
+     * @param array $TaskType <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
+     * @param integer $Offset <p>查询偏移</p>
+     * @param integer $Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     function __construct()
     {

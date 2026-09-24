@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckProtocol(string $HealthCheckProtocol) 设置<p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
  * @method string getCMRPrivateNetworkTunnelId() 获取<p>    CMR 私网管道ID </p>
  * @method void setCMRPrivateNetworkTunnelId(string $CMRPrivateNetworkTunnelId) 设置<p>    CMR 私网管道ID </p>
- * @method string getCapability() 获取<p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
- * @method void setCapability(string $Capability) 设置<p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+ * @method string getCapability() 获取<p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
+ * @method void setCapability(string $Capability) 设置<p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
  * @method string getEndpointPath() 获取<p>端点路径</p>
  * @method void setEndpointPath(string $EndpointPath) 设置<p>端点路径</p>
  * @method string getHealthCheckMethod() 获取<p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
@@ -116,7 +116,7 @@ class TestServiceProviderConnectionRequest extends AbstractModel
     public $CMRPrivateNetworkTunnelId;
 
     /**
-     * @var string <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     * @var string <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
      */
     public $Capability;
 
@@ -148,7 +148,7 @@ class TestServiceProviderConnectionRequest extends AbstractModel
      * @param boolean $VerifySSL <p>是否校验服务提供商的SSL证书</p><p>默认值：AccessType取值为：</p><ul><li>PublicBYOK时，该参数无效；</li><li>PublicCustom时，该参数默认为true；</li><li>PrivateCustom时，该参数默认为false；</li></ul>
      * @param string $HealthCheckProtocol <p>健康检查协议</p><p>枚举值：</p><ul><li>chat： 表示/chat/completion协议</li><li>messages： 表示/v1/messages协议</li><li>responses： 表示/responses协议</li></ul>
      * @param string $CMRPrivateNetworkTunnelId <p>    CMR 私网管道ID </p>
-     * @param string $Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+     * @param string $Capability <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li><li>rerank： 重排序能力</li><li>video： 生视频能力</li></ul>
      * @param string $EndpointPath <p>端点路径</p>
      * @param string $HealthCheckMethod <p>健康检查方式</p><p>枚举值：</p><ul><li>Service： 探测服务可用性</li><li>Model： 探测模型可用性</li></ul>
      * @param string $HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>

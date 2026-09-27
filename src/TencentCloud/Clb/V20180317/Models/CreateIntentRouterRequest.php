@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTiers(array $Tiers) 设置<p>Tier配置列表。</p><p>每个Tier至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
  * @method string getRouterDescribe() 获取<p>意图路由描述。</p>
  * @method void setRouterDescribe(string $RouterDescribe) 设置<p>意图路由描述。</p>
+ * @method IntentRouterDecisionModelConfig getDecisionModelConfig() 获取<p>意图路由使用决策模型配置</p>
+ * @method void setDecisionModelConfig(IntentRouterDecisionModelConfig $DecisionModelConfig) 设置<p>意图路由使用决策模型配置</p>
  */
 class CreateIntentRouterRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateIntentRouterRequest extends AbstractModel
     public $RouterDescribe;
 
     /**
+     * @var IntentRouterDecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public $DecisionModelConfig;
+
+    /**
      * @param string $ModelRouterId <p>模型路由实例ID。</p>
      * @param string $RouteName <p>路由名称，用作LiteLLM的model_name。</p><p>必须以"IntentRouter/"为前缀，后缀仅支持字母、数字、连字符和下划线，后缀长度1-128个字符。</p>
      * @param array $Tiers <p>Tier配置列表。</p><p>每个Tier至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
      * @param string $RouterDescribe <p>意图路由描述。</p>
+     * @param IntentRouterDecisionModelConfig $DecisionModelConfig <p>意图路由使用决策模型配置</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class CreateIntentRouterRequest extends AbstractModel
 
         if (array_key_exists("RouterDescribe",$param) and $param["RouterDescribe"] !== null) {
             $this->RouterDescribe = $param["RouterDescribe"];
+        }
+
+        if (array_key_exists("DecisionModelConfig",$param) and $param["DecisionModelConfig"] !== null) {
+            $this->DecisionModelConfig = new IntentRouterDecisionModelConfig();
+            $this->DecisionModelConfig->deserialize($param["DecisionModelConfig"]);
         }
     }
 }

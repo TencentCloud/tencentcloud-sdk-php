@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteName(string $RouteName) 设置<p>新的路由名称。</p><p>选填；必须以"IntentRouter/"为前缀，后缀仅支持字母、数字、连字符和下划线，后缀长度1-128个字符。不传则不修改。</p>
  * @method string getRouterDescribe() 获取<p>意图路由描述。</p>
  * @method void setRouterDescribe(string $RouterDescribe) 设置<p>意图路由描述。</p>
- * @method array getTiers() 获取<p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
- * @method void setTiers(array $Tiers) 设置<p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+ * @method array getTiers() 获取<p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
+ * @method void setTiers(array $Tiers) 设置<p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
+ * @method IntentRouterDecisionModelConfig getDecisionModelConfig() 获取<p>意图路由使用决策模型配置</p>
+ * @method void setDecisionModelConfig(IntentRouterDecisionModelConfig $DecisionModelConfig) 设置<p>意图路由使用决策模型配置</p>
  */
 class ModifyIntentRouterAttributeRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class ModifyIntentRouterAttributeRequest extends AbstractModel
     public $RouterDescribe;
 
     /**
-     * @var array <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+     * @var array <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
      */
     public $Tiers;
+
+    /**
+     * @var IntentRouterDecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public $DecisionModelConfig;
 
     /**
      * @param string $IntentRouterId <p>意图路由ID（ir-xxx格式）。</p>
      * @param string $ModelRouterId <p>模型路由实例ID。</p>
      * @param string $RouteName <p>新的路由名称。</p><p>选填；必须以"IntentRouter/"为前缀，后缀仅支持字母、数字、连字符和下划线，后缀长度1-128个字符。不传则不修改。</p>
      * @param string $RouterDescribe <p>意图路由描述。</p>
-     * @param array $Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；不传则不修改。传入时必须为完整分层集合：复杂度分层须包含全部 4 个分层 SIMPLE/MEDIUM/COMPLEX/REASONING；语义分层须包含 default 及各语义 Tier（取决于实例所用协议，且不可跨协议变更）。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。</p>
+     * @param array $Tiers <p>新的分层配置列表（全量替换）。</p><p>选填；传入时必须包含全部4个分层：SIMPLE、MEDIUM、COMPLEX、REASONING。每个分层至少包含一个模型，模型名称必须是已关联到该实例的模型。不传则不修改。</p>
+     * @param IntentRouterDecisionModelConfig $DecisionModelConfig <p>意图路由使用决策模型配置</p>
      */
     function __construct()
     {
@@ -101,6 +109,11 @@ class ModifyIntentRouterAttributeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tiers, $obj);
             }
+        }
+
+        if (array_key_exists("DecisionModelConfig",$param) and $param["DecisionModelConfig"] !== null) {
+            $this->DecisionModelConfig = new IntentRouterDecisionModelConfig();
+            $this->DecisionModelConfig->deserialize($param["DecisionModelConfig"]);
         }
     }
 }

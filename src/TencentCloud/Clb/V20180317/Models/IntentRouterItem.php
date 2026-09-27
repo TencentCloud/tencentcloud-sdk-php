@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>状态。</p><p>枚举值：</p><ul><li>Provisioning：创建中</li><li>Active：正常</li><li>Configuring：配置中</li><li>ConfigureFailed：配置失败</li></ul>
  * @method array getTiers() 获取<p>分层配置列表。</p>
  * @method void setTiers(array $Tiers) 设置<p>分层配置列表。</p>
+ * @method IntentRouterDecisionModelConfig getDecisionModelConfig() 获取<p>意图路由使用决策模型配置</p>
+ * @method void setDecisionModelConfig(IntentRouterDecisionModelConfig $DecisionModelConfig) 设置<p>意图路由使用决策模型配置</p>
  * @method string getUpdatedTime() 获取<p>更新时间（ISO 8601格式）。</p>
  * @method void setUpdatedTime(string $UpdatedTime) 设置<p>更新时间（ISO 8601格式）。</p>
  */
@@ -68,6 +70,11 @@ class IntentRouterItem extends AbstractModel
     public $Tiers;
 
     /**
+     * @var IntentRouterDecisionModelConfig <p>意图路由使用决策模型配置</p>
+     */
+    public $DecisionModelConfig;
+
+    /**
      * @var string <p>更新时间（ISO 8601格式）。</p>
      */
     public $UpdatedTime;
@@ -79,6 +86,7 @@ class IntentRouterItem extends AbstractModel
      * @param string $RouterDescribe <p>意图路由描述。</p>
      * @param string $Status <p>状态。</p><p>枚举值：</p><ul><li>Provisioning：创建中</li><li>Active：正常</li><li>Configuring：配置中</li><li>ConfigureFailed：配置失败</li></ul>
      * @param array $Tiers <p>分层配置列表。</p>
+     * @param IntentRouterDecisionModelConfig $DecisionModelConfig <p>意图路由使用决策模型配置</p>
      * @param string $UpdatedTime <p>更新时间（ISO 8601格式）。</p>
      */
     function __construct()
@@ -121,6 +129,11 @@ class IntentRouterItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tiers, $obj);
             }
+        }
+
+        if (array_key_exists("DecisionModelConfig",$param) and $param["DecisionModelConfig"] !== null) {
+            $this->DecisionModelConfig = new IntentRouterDecisionModelConfig();
+            $this->DecisionModelConfig->deserialize($param["DecisionModelConfig"]);
         }
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {

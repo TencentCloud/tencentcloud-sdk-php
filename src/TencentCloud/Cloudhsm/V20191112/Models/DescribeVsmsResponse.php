@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVsms返回参数结构体
  *
- * @method integer getTotalCount() 获取获取实例的总个数
- * @method void setTotalCount(integer $TotalCount) 设置获取实例的总个数
- * @method array getVsmList() 获取资源信息
- * @method void setVsmList(array $VsmList) 设置资源信息
+ * @method integer getTotalCount() 获取<p>获取实例的总个数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>获取实例的总个数</p>
+ * @method array getVsmList() 获取<p>资源信息</p>
+ * @method void setVsmList(array $VsmList) 设置<p>资源信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVsmsResponse extends AbstractModel
 {
     /**
-     * @var integer 获取实例的总个数
+     * @var integer <p>获取实例的总个数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 资源信息
+     * @var array <p>资源信息</p>
      */
     public $VsmList;
 
@@ -45,8 +45,8 @@ class DescribeVsmsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 获取实例的总个数
-     * @param array $VsmList 资源信息
+     * @param integer $TotalCount <p>获取实例的总个数</p>
+     * @param array $VsmList <p>资源信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

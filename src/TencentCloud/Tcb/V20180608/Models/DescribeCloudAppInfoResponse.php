@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestBuildTime(string $LatestBuildTime) 设置<p>最新版本构建时间</p>
  * @method string getDeployType() 获取<p>部署类型</p>
  * @method void setDeployType(string $DeployType) 设置<p>部署类型</p>
+ * @method string getBuildConfig() 获取<p>构建配置</p>
+ * @method void setBuildConfig(string $BuildConfig) 设置<p>构建配置</p>
+ * @method string getCurrentVersion() 获取<p>当前服务流量版本</p>
+ * @method void setCurrentVersion(string $CurrentVersion) 设置<p>当前服务流量版本</p>
+ * @method string getPreviewDomain() 获取<p>版本关联默认域名</p>
+ * @method void setPreviewDomain(string $PreviewDomain) 设置<p>版本关联默认域名</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +95,21 @@ class DescribeCloudAppInfoResponse extends AbstractModel
     public $DeployType;
 
     /**
+     * @var string <p>构建配置</p>
+     */
+    public $BuildConfig;
+
+    /**
+     * @var string <p>当前服务流量版本</p>
+     */
+    public $CurrentVersion;
+
+    /**
+     * @var string <p>版本关联默认域名</p>
+     */
+    public $PreviewDomain;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +124,9 @@ class DescribeCloudAppInfoResponse extends AbstractModel
      * @param string $LatestStatus <p>最新版本状态</p>
      * @param string $LatestBuildTime <p>最新版本构建时间</p>
      * @param string $DeployType <p>部署类型</p>
+     * @param string $BuildConfig <p>构建配置</p>
+     * @param string $CurrentVersion <p>当前服务流量版本</p>
+     * @param string $PreviewDomain <p>版本关联默认域名</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +176,18 @@ class DescribeCloudAppInfoResponse extends AbstractModel
 
         if (array_key_exists("DeployType",$param) and $param["DeployType"] !== null) {
             $this->DeployType = $param["DeployType"];
+        }
+
+        if (array_key_exists("BuildConfig",$param) and $param["BuildConfig"] !== null) {
+            $this->BuildConfig = $param["BuildConfig"];
+        }
+
+        if (array_key_exists("CurrentVersion",$param) and $param["CurrentVersion"] !== null) {
+            $this->CurrentVersion = $param["CurrentVersion"];
+        }
+
+        if (array_key_exists("PreviewDomain",$param) and $param["PreviewDomain"] !== null) {
+            $this->PreviewDomain = $param["PreviewDomain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -66,6 +66,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeries(Models\DescribeDBPerfTimeSeriesRequest $req) 根据实例ID获取指定时间段的性能趋势。
  * @method Models\DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(Models\DescribeDBSpaceStatusRequest $req) 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
  * @method Models\DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatus(Models\DescribeDatabaseAutonomyStatusRequest $req) 查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
+ * @method Models\DescribeDeadLockLogsResponse DescribeDeadLockLogs(Models\DescribeDeadLockLogsRequest $req) 查询实例的死锁事件列表
  * @method Models\DescribeDiagDBInstancesResponse DescribeDiagDBInstances(Models\DescribeDiagDBInstancesRequest $req) 获取实例信息列表。Region统一选择广州。
  * @method Models\DescribeHealthScoreResponse DescribeHealthScore(Models\DescribeHealthScoreRequest $req) 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
  * @method Models\DescribeHealthScoreTimeSeriesResponse DescribeHealthScoreTimeSeries(Models\DescribeHealthScoreTimeSeriesRequest $req) 获取指定时间段内的健康得分趋势

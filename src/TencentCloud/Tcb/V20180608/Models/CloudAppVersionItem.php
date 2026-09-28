@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSteps(array $Steps) 设置<p>构建步骤</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSnapshot() 获取<p>服务版本部署快照</p>
+ * @method void setSnapshot(string $Snapshot) 设置<p>服务版本部署快照</p>
+ * @method string getVersionDomain() 获取<p>服务版本域名</p>
+ * @method void setVersionDomain(string $VersionDomain) 设置<p>服务版本域名</p>
+ * @method integer getTrafficPercent() 获取<p>服务版本流量</p>
+ * @method void setTrafficPercent(integer $TrafficPercent) 设置<p>服务版本流量</p>
+ * @method array getResources() 获取<p>服务资源</p>
+ * @method void setResources(array $Resources) 设置<p>服务资源</p>
+ * @method array getArtifacts() 获取<p>服务产物列表</p>
+ * @method void setArtifacts(array $Artifacts) 设置<p>服务产物列表</p>
  */
 class CloudAppVersionItem extends AbstractModel
 {
@@ -83,6 +93,31 @@ class CloudAppVersionItem extends AbstractModel
     public $Steps;
 
     /**
+     * @var string <p>服务版本部署快照</p>
+     */
+    public $Snapshot;
+
+    /**
+     * @var string <p>服务版本域名</p>
+     */
+    public $VersionDomain;
+
+    /**
+     * @var integer <p>服务版本流量</p>
+     */
+    public $TrafficPercent;
+
+    /**
+     * @var array <p>服务资源</p>
+     */
+    public $Resources;
+
+    /**
+     * @var array <p>服务产物列表</p>
+     */
+    public $Artifacts;
+
+    /**
      * @param string $VersionName <p>版本名</p>
      * @param string $BuildType <p>构建方式</p>
      * @param string $BuildId <p>构建Id</p>
@@ -92,6 +127,11 @@ class CloudAppVersionItem extends AbstractModel
      * @param string $BuildTime <p>构建时间</p>
      * @param array $Steps <p>构建步骤</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Snapshot <p>服务版本部署快照</p>
+     * @param string $VersionDomain <p>服务版本域名</p>
+     * @param integer $TrafficPercent <p>服务版本流量</p>
+     * @param array $Resources <p>服务资源</p>
+     * @param array $Artifacts <p>服务产物列表</p>
      */
     function __construct()
     {
@@ -141,6 +181,36 @@ class CloudAppVersionItem extends AbstractModel
                 $obj = new BuildStepStatus();
                 $obj->deserialize($value);
                 array_push($this->Steps, $obj);
+            }
+        }
+
+        if (array_key_exists("Snapshot",$param) and $param["Snapshot"] !== null) {
+            $this->Snapshot = $param["Snapshot"];
+        }
+
+        if (array_key_exists("VersionDomain",$param) and $param["VersionDomain"] !== null) {
+            $this->VersionDomain = $param["VersionDomain"];
+        }
+
+        if (array_key_exists("TrafficPercent",$param) and $param["TrafficPercent"] !== null) {
+            $this->TrafficPercent = $param["TrafficPercent"];
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new CloudAppResourceItem();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
+            }
+        }
+
+        if (array_key_exists("Artifacts",$param) and $param["Artifacts"] !== null) {
+            $this->Artifacts = [];
+            foreach ($param["Artifacts"] as $key => $value){
+                $obj = new BuildArtifactInfo();
+                $obj->deserialize($value);
+                array_push($this->Artifacts, $obj);
             }
         }
     }

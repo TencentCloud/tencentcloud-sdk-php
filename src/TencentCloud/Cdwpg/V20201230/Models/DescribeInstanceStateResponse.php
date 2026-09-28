@@ -20,73 +20,80 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceState返回参数结构体
  *
- * @method string getInstanceState() 获取集群状态，例如：Serving
- * @method void setInstanceState(string $InstanceState) 设置集群状态，例如：Serving
- * @method string getFlowCreateTime() 获取集群操作创建时间
- * @method void setFlowCreateTime(string $FlowCreateTime) 设置集群操作创建时间
- * @method string getFlowName() 获取集群操作名称
- * @method void setFlowName(string $FlowName) 设置集群操作名称
- * @method float getFlowProgress() 获取集群操作进度
- * @method void setFlowProgress(float $FlowProgress) 设置集群操作进度
- * @method string getInstanceStateDesc() 获取集群状态描述，例如：运行中
- * @method void setInstanceStateDesc(string $InstanceStateDesc) 设置集群状态描述，例如：运行中
- * @method string getFlowMsg() 获取集群流程错误信息，例如：“创建失败，资源不足”
- * @method void setFlowMsg(string $FlowMsg) 设置集群流程错误信息，例如：“创建失败，资源不足”
- * @method string getProcessName() 获取当前步骤的名称，例如：”购买资源中“
- * @method void setProcessName(string $ProcessName) 设置当前步骤的名称，例如：”购买资源中“
- * @method integer getBackupStatus() 获取集群备份任务开启状态
- * @method void setBackupStatus(integer $BackupStatus) 设置集群备份任务开启状态
- * @method integer getBackupOpenStatus() 获取集群备份任务开启状态2
- * @method void setBackupOpenStatus(integer $BackupOpenStatus) 设置集群备份任务开启状态2
+ * @method integer getBackupOpenStatus() 获取<p>集群备份任务开启状态2</p>
+ * @method void setBackupOpenStatus(integer $BackupOpenStatus) 设置<p>集群备份任务开启状态2</p>
+ * @method integer getBackupStatus() 获取<p>集群备份任务开启状态</p>
+ * @method void setBackupStatus(integer $BackupStatus) 设置<p>集群备份任务开启状态</p>
+ * @method string getFlowCreateTime() 获取<p>集群操作创建时间</p>
+ * @method void setFlowCreateTime(string $FlowCreateTime) 设置<p>集群操作创建时间</p>
+ * @method string getFlowMsg() 获取<p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+ * @method void setFlowMsg(string $FlowMsg) 设置<p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+ * @method string getFlowName() 获取<p>集群操作名称</p>
+ * @method void setFlowName(string $FlowName) 设置<p>集群操作名称</p>
+ * @method float getFlowProgress() 获取<p>集群操作进度</p>
+ * @method void setFlowProgress(float $FlowProgress) 设置<p>集群操作进度</p>
+ * @method string getInstanceState() 获取<p>集群状态，例如：Serving</p>
+ * @method void setInstanceState(string $InstanceState) 设置<p>集群状态，例如：Serving</p>
+ * @method string getInstanceStateDesc() 获取<p>集群状态描述，例如：运行中</p>
+ * @method void setInstanceStateDesc(string $InstanceStateDesc) 设置<p>集群状态描述，例如：运行中</p>
+ * @method string getProcessName() 获取<p>当前步骤的名称，例如：”购买资源中“</p>
+ * @method void setProcessName(string $ProcessName) 设置<p>当前步骤的名称，例如：”购买资源中“</p>
+ * @method array getInstanceStates() 获取<p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+ * @method void setInstanceStates(array $InstanceStates) 设置<p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceStateResponse extends AbstractModel
 {
     /**
-     * @var string 集群状态，例如：Serving
+     * @var integer <p>集群备份任务开启状态2</p>
      */
-    public $InstanceState;
+    public $BackupOpenStatus;
 
     /**
-     * @var string 集群操作创建时间
-     */
-    public $FlowCreateTime;
-
-    /**
-     * @var string 集群操作名称
-     */
-    public $FlowName;
-
-    /**
-     * @var float 集群操作进度
-     */
-    public $FlowProgress;
-
-    /**
-     * @var string 集群状态描述，例如：运行中
-     */
-    public $InstanceStateDesc;
-
-    /**
-     * @var string 集群流程错误信息，例如：“创建失败，资源不足”
-     */
-    public $FlowMsg;
-
-    /**
-     * @var string 当前步骤的名称，例如：”购买资源中“
-     */
-    public $ProcessName;
-
-    /**
-     * @var integer 集群备份任务开启状态
+     * @var integer <p>集群备份任务开启状态</p>
      */
     public $BackupStatus;
 
     /**
-     * @var integer 集群备份任务开启状态2
+     * @var string <p>集群操作创建时间</p>
      */
-    public $BackupOpenStatus;
+    public $FlowCreateTime;
+
+    /**
+     * @var string <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+     */
+    public $FlowMsg;
+
+    /**
+     * @var string <p>集群操作名称</p>
+     */
+    public $FlowName;
+
+    /**
+     * @var float <p>集群操作进度</p>
+     */
+    public $FlowProgress;
+
+    /**
+     * @var string <p>集群状态，例如：Serving</p>
+     */
+    public $InstanceState;
+
+    /**
+     * @var string <p>集群状态描述，例如：运行中</p>
+     */
+    public $InstanceStateDesc;
+
+    /**
+     * @var string <p>当前步骤的名称，例如：”购买资源中“</p>
+     */
+    public $ProcessName;
+
+    /**
+     * @var array <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public $InstanceStates;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -94,15 +101,16 @@ class DescribeInstanceStateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceState 集群状态，例如：Serving
-     * @param string $FlowCreateTime 集群操作创建时间
-     * @param string $FlowName 集群操作名称
-     * @param float $FlowProgress 集群操作进度
-     * @param string $InstanceStateDesc 集群状态描述，例如：运行中
-     * @param string $FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-     * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
-     * @param integer $BackupStatus 集群备份任务开启状态
-     * @param integer $BackupOpenStatus 集群备份任务开启状态2
+     * @param integer $BackupOpenStatus <p>集群备份任务开启状态2</p>
+     * @param integer $BackupStatus <p>集群备份任务开启状态</p>
+     * @param string $FlowCreateTime <p>集群操作创建时间</p>
+     * @param string $FlowMsg <p>集群流程错误信息，例如：“创建失败，资源不足”</p>
+     * @param string $FlowName <p>集群操作名称</p>
+     * @param float $FlowProgress <p>集群操作进度</p>
+     * @param string $InstanceState <p>集群状态，例如：Serving</p>
+     * @param string $InstanceStateDesc <p>集群状态描述，例如：运行中</p>
+     * @param string $ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
+     * @param array $InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -118,12 +126,20 @@ class DescribeInstanceStateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
-            $this->InstanceState = $param["InstanceState"];
+        if (array_key_exists("BackupOpenStatus",$param) and $param["BackupOpenStatus"] !== null) {
+            $this->BackupOpenStatus = $param["BackupOpenStatus"];
+        }
+
+        if (array_key_exists("BackupStatus",$param) and $param["BackupStatus"] !== null) {
+            $this->BackupStatus = $param["BackupStatus"];
         }
 
         if (array_key_exists("FlowCreateTime",$param) and $param["FlowCreateTime"] !== null) {
             $this->FlowCreateTime = $param["FlowCreateTime"];
+        }
+
+        if (array_key_exists("FlowMsg",$param) and $param["FlowMsg"] !== null) {
+            $this->FlowMsg = $param["FlowMsg"];
         }
 
         if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
@@ -134,24 +150,25 @@ class DescribeInstanceStateResponse extends AbstractModel
             $this->FlowProgress = $param["FlowProgress"];
         }
 
-        if (array_key_exists("InstanceStateDesc",$param) and $param["InstanceStateDesc"] !== null) {
-            $this->InstanceStateDesc = $param["InstanceStateDesc"];
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
         }
 
-        if (array_key_exists("FlowMsg",$param) and $param["FlowMsg"] !== null) {
-            $this->FlowMsg = $param["FlowMsg"];
+        if (array_key_exists("InstanceStateDesc",$param) and $param["InstanceStateDesc"] !== null) {
+            $this->InstanceStateDesc = $param["InstanceStateDesc"];
         }
 
         if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
             $this->ProcessName = $param["ProcessName"];
         }
 
-        if (array_key_exists("BackupStatus",$param) and $param["BackupStatus"] !== null) {
-            $this->BackupStatus = $param["BackupStatus"];
-        }
-
-        if (array_key_exists("BackupOpenStatus",$param) and $param["BackupOpenStatus"] !== null) {
-            $this->BackupOpenStatus = $param["BackupOpenStatus"];
+        if (array_key_exists("InstanceStates",$param) and $param["InstanceStates"] !== null) {
+            $this->InstanceStates = [];
+            foreach ($param["InstanceStates"] as $key => $value){
+                $obj = new InstanceStateItem();
+                $obj->deserialize($value);
+                array_push($this->InstanceStates, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

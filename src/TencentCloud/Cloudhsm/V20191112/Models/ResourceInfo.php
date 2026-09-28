@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPqcFlag(integer $PqcFlag) 设置<p>0关闭，1开启</p>
  * @method string getDeployEnv() 获取<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
  * @method void setDeployEnv(string $DeployEnv) 设置<p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+ * @method string getVersion() 获取<p>vsm版本号</p>
+ * @method void setVersion(string $Version) 设置<p>vsm版本号</p>
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method integer getClusterRole() 获取<p>集群角色，0-未加入集群 1-主 2-从</p>
+ * @method void setClusterRole(integer $ClusterRole) 设置<p>集群角色，0-未加入集群 1-主 2-从</p>
  */
 class ResourceInfo extends AbstractModel
 {
@@ -206,6 +212,21 @@ class ResourceInfo extends AbstractModel
     public $DeployEnv;
 
     /**
+     * @var string <p>vsm版本号</p>
+     */
+    public $Version;
+
+    /**
+     * @var string <p>集群id</p>
+     */
+    public $ClusterId;
+
+    /**
+     * @var integer <p>集群角色，0-未加入集群 1-主 2-从</p>
+     */
+    public $ClusterRole;
+
+    /**
      * @param string $ResourceId <p>资源Id</p>
      * @param string $ResourceName <p>资源名称</p>
      * @param integer $Status <p>资源状态，1-正常，2-隔离，3-销毁</p>
@@ -232,6 +253,9 @@ class ResourceInfo extends AbstractModel
      * @param integer $PqcStatus <p>0不支持<br>1关闭<br>2开启</p>
      * @param integer $PqcFlag <p>0关闭，1开启</p>
      * @param string $DeployEnv <p>环境</p><p>默认值：cloud</p><p>cloud或者cdc</p>
+     * @param string $Version <p>vsm版本号</p>
+     * @param string $ClusterId <p>集群id</p>
+     * @param integer $ClusterRole <p>集群角色，0-未加入集群 1-主 2-从</p>
      */
     function __construct()
     {
@@ -358,6 +382,18 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("DeployEnv",$param) and $param["DeployEnv"] !== null) {
             $this->DeployEnv = $param["DeployEnv"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterRole",$param) and $param["ClusterRole"] !== null) {
+            $this->ClusterRole = $param["ClusterRole"];
         }
     }
 }

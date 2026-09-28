@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudTags(array $CloudTags) 设置<p>云标签</p>
  * @method integer getTotalCount() 获取<p>总数</p>
  * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
+ * @method array getProjectIds() 获取<p>项目ID</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目ID</p>
  */
 class NotifyAssetConfigItem extends AbstractModel
 {
@@ -80,6 +82,11 @@ class NotifyAssetConfigItem extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var array <p>项目ID</p>
+     */
+    public $ProjectIds;
+
+    /**
      * @param string $Module <p>模块名</p>
      * @param string $SubModule <p>子模块</p>
      * @param integer $AssetRange <p>资产范围</p><p>枚举值：</p><ul><li>0： 无含义</li><li>1： 全部</li><li>2： 自选</li><li>3： 按标签</li></ul>
@@ -88,6 +95,7 @@ class NotifyAssetConfigItem extends AbstractModel
      * @param array $TagIds <p>标签ID</p>
      * @param array $CloudTags <p>云标签</p>
      * @param integer $TotalCount <p>总数</p>
+     * @param array $ProjectIds <p>项目ID</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class NotifyAssetConfigItem extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

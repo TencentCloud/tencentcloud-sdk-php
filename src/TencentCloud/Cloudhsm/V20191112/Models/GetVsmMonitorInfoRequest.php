@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetVsmMonitorInfo请求参数结构体
  *
- * @method string getResourceId() 获取资源Id
- * @method void setResourceId(string $ResourceId) 设置资源Id
- * @method string getResourceName() 获取资源名称
- * @method void setResourceName(string $ResourceName) 设置资源名称
+ * @method string getResourceId() 获取<p>资源Id</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源Id</p>
+ * @method string getResourceName() 获取<p>资源名称</p>
+ * @method void setResourceName(string $ResourceName) 设置<p>资源名称</p>
  */
 class GetVsmMonitorInfoRequest extends AbstractModel
 {
     /**
-     * @var string 资源Id
+     * @var string <p>资源Id</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 资源名称
+     * @var string <p>资源名称</p>
      */
     public $ResourceName;
 
     /**
-     * @param string $ResourceId 资源Id
-     * @param string $ResourceName 资源名称
+     * @param string $ResourceId <p>资源Id</p>
+     * @param string $ResourceName <p>资源名称</p>
      */
     function __construct()
     {

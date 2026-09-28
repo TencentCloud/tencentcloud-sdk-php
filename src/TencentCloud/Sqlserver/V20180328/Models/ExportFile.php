@@ -56,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncRequestId(integer $AsyncRequestId) 设置<p>req</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogStartTime() 获取<p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogStartTime(string $LogStartTime) 设置<p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogEndTime() 获取<p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogEndTime(string $LogEndTime) 设置<p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogFilter() 获取<p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogFilter(string $LogFilter) 设置<p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExportFile extends AbstractModel
 {
@@ -114,6 +126,24 @@ class ExportFile extends AbstractModel
     public $AsyncRequestId;
 
     /**
+     * @var string <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogStartTime;
+
+    /**
+     * @var string <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogEndTime;
+
+    /**
+     * @var string <p>日志过滤条件</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogFilter;
+
+    /**
      * @param string $FileName <p>文件名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status <p>状态</p>
@@ -131,6 +161,12 @@ class ExportFile extends AbstractModel
      * @param string $FinishTime <p>完成时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AsyncRequestId <p>req</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogStartTime <p>日志开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogEndTime <p>日志结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogFilter <p>日志过滤条件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +216,18 @@ class ExportFile extends AbstractModel
 
         if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
             $this->AsyncRequestId = $param["AsyncRequestId"];
+        }
+
+        if (array_key_exists("LogStartTime",$param) and $param["LogStartTime"] !== null) {
+            $this->LogStartTime = $param["LogStartTime"];
+        }
+
+        if (array_key_exists("LogEndTime",$param) and $param["LogEndTime"] !== null) {
+            $this->LogEndTime = $param["LogEndTime"];
+        }
+
+        if (array_key_exists("LogFilter",$param) and $param["LogFilter"] !== null) {
+            $this->LogFilter = $param["LogFilter"];
         }
     }
 }

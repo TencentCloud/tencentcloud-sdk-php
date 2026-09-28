@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>镜像预热状态</p>
  * @method string getMessage() 获取<p>镜像预热状态描述</p>
  * @method void setMessage(string $Message) 设置<p>镜像预热状态描述</p>
+ * @method string getCreateTime() 获取<p>镜像预热创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>镜像预热创建时间</p>
+ * @method string getPreCacheImageId() 获取<p>镜像预热ID</p>
+ * @method void setPreCacheImageId(string $PreCacheImageId) 设置<p>镜像预热ID</p>
+ * @method string getSourceType() 获取<p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+ * @method void setSourceType(string $SourceType) 设置<p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+ * @method integer getCachedImageSizeBytes() 获取<p>镜像预热存储大小</p><p>单位：Byte</p>
+ * @method void setCachedImageSizeBytes(integer $CachedImageSizeBytes) 设置<p>镜像预热存储大小</p><p>单位：Byte</p>
+ * @method string getLastUsedTime() 获取<p>该预热镜像最近一次被沙箱实例使用时间</p>
+ * @method void setLastUsedTime(string $LastUsedTime) 设置<p>该预热镜像最近一次被沙箱实例使用时间</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +71,31 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
     public $Message;
 
     /**
+     * @var string <p>镜像预热创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>镜像预热ID</p>
+     */
+    public $PreCacheImageId;
+
+    /**
+     * @var string <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+     */
+    public $SourceType;
+
+    /**
+     * @var integer <p>镜像预热存储大小</p><p>单位：Byte</p>
+     */
+    public $CachedImageSizeBytes;
+
+    /**
+     * @var string <p>该预热镜像最近一次被沙箱实例使用时间</p>
+     */
+    public $LastUsedTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +106,11 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
      * @param string $Status <p>镜像预热状态</p>
      * @param string $Message <p>镜像预热状态描述</p>
+     * @param string $CreateTime <p>镜像预热创建时间</p>
+     * @param string $PreCacheImageId <p>镜像预热ID</p>
+     * @param string $SourceType <p>镜像预热资源的来源类型，取值为 EXPLICIT、AUTO</p><p>枚举值：</p><ul><li>EXPLICIT： 手动创建</li><li>AUTO： 自动创建</li><li>TCR_AUTO： TCR自动预热</li></ul>
+     * @param integer $CachedImageSizeBytes <p>镜像预热存储大小</p><p>单位：Byte</p>
+     * @param string $LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +144,26 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PreCacheImageId",$param) and $param["PreCacheImageId"] !== null) {
+            $this->PreCacheImageId = $param["PreCacheImageId"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("CachedImageSizeBytes",$param) and $param["CachedImageSizeBytes"] !== null) {
+            $this->CachedImageSizeBytes = $param["CachedImageSizeBytes"];
+        }
+
+        if (array_key_exists("LastUsedTime",$param) and $param["LastUsedTime"] !== null) {
+            $this->LastUsedTime = $param["LastUsedTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

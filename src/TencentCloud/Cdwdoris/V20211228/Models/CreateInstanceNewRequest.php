@@ -20,184 +20,180 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstanceNew请求参数结构体
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method CreateInstanceSpec getFeSpec() 获取FE规格
- * @method void setFeSpec(CreateInstanceSpec $FeSpec) 设置FE规格
- * @method CreateInstanceSpec getBeSpec() 获取BE规格
- * @method void setBeSpec(CreateInstanceSpec $BeSpec) 设置BE规格
- * @method boolean getHaFlag() 获取是否高可用
- * @method void setHaFlag(boolean $HaFlag) 设置是否高可用
- * @method string getUserVPCId() 获取用户VPCID
- * @method void setUserVPCId(string $UserVPCId) 设置用户VPCID
- * @method string getUserSubnetId() 获取用户子网ID
- * @method void setUserSubnetId(string $UserSubnetId) 设置用户子网ID
- * @method string getProductVersion() 获取产品版本号
- * @method void setProductVersion(string $ProductVersion) 设置产品版本号
- * @method ChargeProperties getChargeProperties() 获取付费类型
- * @method void setChargeProperties(ChargeProperties $ChargeProperties) 设置付费类型
- * @method string getInstanceName() 获取实例名字
- * @method void setInstanceName(string $InstanceName) 设置实例名字
- * @method string getDorisUserPwd() 获取数据库密码
- * @method void setDorisUserPwd(string $DorisUserPwd) 设置数据库密码
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method integer getHaType() 获取高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
- * @method void setHaType(integer $HaType) 设置高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
- * @method integer getCaseSensitive() 获取表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
- * @method void setCaseSensitive(integer $CaseSensitive) 设置表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
- * @method boolean getEnableMultiZones() 获取是否开启多可用区
- * @method void setEnableMultiZones(boolean $EnableMultiZones) 设置是否开启多可用区
- * @method NetworkInfo getUserMultiZoneInfos() 获取开启多可用区后，用户的所有可用区和子网信息
- * @method void setUserMultiZoneInfos(NetworkInfo $UserMultiZoneInfos) 设置开启多可用区后，用户的所有可用区和子网信息
- * @method array getUserMultiZoneInfoArr() 获取开启多可用区后，用户的所有可用区和子网信息
- * @method void setUserMultiZoneInfoArr(array $UserMultiZoneInfoArr) 设置开启多可用区后，用户的所有可用区和子网信息
- * @method boolean getIsSSC() 获取是否存算分离
- * @method void setIsSSC(boolean $IsSSC) 设置是否存算分离
- * @method integer getSSCCU() 获取CU数
- * @method void setSSCCU(integer $SSCCU) 设置CU数
- * @method string getCacheDiskSize() 获取缓存盘大小
- * @method void setCacheDiskSize(string $CacheDiskSize) 设置缓存盘大小
- * @method integer getCacheDataDiskSize() 获取缓存盘大小
- * @method void setCacheDataDiskSize(integer $CacheDataDiskSize) 设置缓存盘大小
+ * @method string getZone() 获取<p>可用区</p>
+ * @method void setZone(string $Zone) 设置<p>可用区</p>
+ * @method CreateInstanceSpec getFeSpec() 获取<p>FE规格</p>
+ * @method void setFeSpec(CreateInstanceSpec $FeSpec) 设置<p>FE规格</p>
+ * @method CreateInstanceSpec getBeSpec() 获取<p>BE规格</p>
+ * @method void setBeSpec(CreateInstanceSpec $BeSpec) 设置<p>BE规格</p>
+ * @method boolean getHaFlag() 获取<p>是否高可用</p>
+ * @method void setHaFlag(boolean $HaFlag) 设置<p>是否高可用</p>
+ * @method string getUserVPCId() 获取<p>用户VPCID</p>
+ * @method void setUserVPCId(string $UserVPCId) 设置<p>用户VPCID</p>
+ * @method string getUserSubnetId() 获取<p>用户子网ID</p>
+ * @method void setUserSubnetId(string $UserSubnetId) 设置<p>用户子网ID</p>
+ * @method string getProductVersion() 获取<p>产品版本号</p>
+ * @method void setProductVersion(string $ProductVersion) 设置<p>产品版本号</p>
+ * @method ChargeProperties getChargeProperties() 获取<p>付费类型</p>
+ * @method void setChargeProperties(ChargeProperties $ChargeProperties) 设置<p>付费类型</p>
+ * @method string getInstanceName() 获取<p>实例名字</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名字</p>
+ * @method string getDorisUserPwd() 获取<p>数据库密码</p>
+ * @method void setDorisUserPwd(string $DorisUserPwd) 设置<p>数据库密码</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method integer getHaType() 获取<p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
+ * @method void setHaType(integer $HaType) 设置<p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
+ * @method integer getCaseSensitive() 获取<p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
+ * @method void setCaseSensitive(integer $CaseSensitive) 设置<p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
+ * @method boolean getEnableMultiZones() 获取<p>是否开启多可用区</p>
+ * @method void setEnableMultiZones(boolean $EnableMultiZones) 设置<p>是否开启多可用区</p>
+ * @method NetworkInfo getUserMultiZoneInfos() 获取<p>开启多可用区后，用户的所有可用区和子网信息</p>
+ * @method void setUserMultiZoneInfos(NetworkInfo $UserMultiZoneInfos) 设置<p>开启多可用区后，用户的所有可用区和子网信息</p>
+ * @method array getUserMultiZoneInfoArr() 获取<p>开启多可用区后，用户的所有可用区和子网信息</p>
+ * @method void setUserMultiZoneInfoArr(array $UserMultiZoneInfoArr) 设置<p>开启多可用区后，用户的所有可用区和子网信息</p>
+ * @method boolean getIsSSC() 获取<p>是否存算分离</p>
+ * @method void setIsSSC(boolean $IsSSC) 设置<p>是否存算分离</p>
+ * @method integer getSSCCU() 获取<p>CU数</p>
+ * @method void setSSCCU(integer $SSCCU) 设置<p>CU数</p>
+ * @method string getCacheDiskSize() 获取<p>缓存盘大小</p>
+ * @method void setCacheDiskSize(string $CacheDiskSize) 设置<p>缓存盘大小</p>
+ * @method integer getCacheDataDiskSize() 获取<p>缓存盘大小</p>
+ * @method void setCacheDataDiskSize(integer $CacheDataDiskSize) 设置<p>缓存盘大小</p>
+ * @method integer getDiskEncrypt() 获取<p>磁盘加密</p>
+ * @method void setDiskEncrypt(integer $DiskEncrypt) 设置<p>磁盘加密</p>
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string <p>可用区</p>
      */
     public $Zone;
 
     /**
-     * @var CreateInstanceSpec FE规格
+     * @var CreateInstanceSpec <p>FE规格</p>
      */
     public $FeSpec;
 
     /**
-     * @var CreateInstanceSpec BE规格
+     * @var CreateInstanceSpec <p>BE规格</p>
      */
     public $BeSpec;
 
     /**
-     * @var boolean 是否高可用
+     * @var boolean <p>是否高可用</p>
      */
     public $HaFlag;
 
     /**
-     * @var string 用户VPCID
+     * @var string <p>用户VPCID</p>
      */
     public $UserVPCId;
 
     /**
-     * @var string 用户子网ID
+     * @var string <p>用户子网ID</p>
      */
     public $UserSubnetId;
 
     /**
-     * @var string 产品版本号
+     * @var string <p>产品版本号</p>
      */
     public $ProductVersion;
 
     /**
-     * @var ChargeProperties 付费类型
+     * @var ChargeProperties <p>付费类型</p>
      */
     public $ChargeProperties;
 
     /**
-     * @var string 实例名字
+     * @var string <p>实例名字</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 数据库密码
+     * @var string <p>数据库密码</p>
      */
     public $DorisUserPwd;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var integer 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
+     * @var integer <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
      */
     public $HaType;
 
     /**
-     * @var integer 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
+     * @var integer <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
      */
     public $CaseSensitive;
 
     /**
-     * @var boolean 是否开启多可用区
+     * @var boolean <p>是否开启多可用区</p>
      */
     public $EnableMultiZones;
 
     /**
-     * @var NetworkInfo 开启多可用区后，用户的所有可用区和子网信息
+     * @var NetworkInfo <p>开启多可用区后，用户的所有可用区和子网信息</p>
      * @deprecated
      */
     public $UserMultiZoneInfos;
 
     /**
-     * @var array 开启多可用区后，用户的所有可用区和子网信息
+     * @var array <p>开启多可用区后，用户的所有可用区和子网信息</p>
      */
     public $UserMultiZoneInfoArr;
 
     /**
-     * @var boolean 是否存算分离
+     * @var boolean <p>是否存算分离</p>
      */
     public $IsSSC;
 
     /**
-     * @var integer CU数
+     * @var integer <p>CU数</p>
      */
     public $SSCCU;
 
     /**
-     * @var string 缓存盘大小
+     * @var string <p>缓存盘大小</p>
      * @deprecated
      */
     public $CacheDiskSize;
 
     /**
-     * @var integer 缓存盘大小
+     * @var integer <p>缓存盘大小</p>
      */
     public $CacheDataDiskSize;
 
     /**
-     * @param string $Zone 可用区
-     * @param CreateInstanceSpec $FeSpec FE规格
-     * @param CreateInstanceSpec $BeSpec BE规格
-     * @param boolean $HaFlag 是否高可用
-     * @param string $UserVPCId 用户VPCID
-     * @param string $UserSubnetId 用户子网ID
-     * @param string $ProductVersion 产品版本号
-     * @param ChargeProperties $ChargeProperties 付费类型
-     * @param string $InstanceName 实例名字
-     * @param string $DorisUserPwd 数据库密码
-     * @param array $Tags 标签列表
-     * @param integer $HaType 高可用类型：
-0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），
-1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count>=3，且为奇数），
-2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count>=5，且为奇数）。
-     * @param integer $CaseSensitive 表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储
-     * @param boolean $EnableMultiZones 是否开启多可用区
-     * @param NetworkInfo $UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
-     * @param array $UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
-     * @param boolean $IsSSC 是否存算分离
-     * @param integer $SSCCU CU数
-     * @param string $CacheDiskSize 缓存盘大小
-     * @param integer $CacheDataDiskSize 缓存盘大小
+     * @var integer <p>磁盘加密</p>
+     */
+    public $DiskEncrypt;
+
+    /**
+     * @param string $Zone <p>可用区</p>
+     * @param CreateInstanceSpec $FeSpec <p>FE规格</p>
+     * @param CreateInstanceSpec $BeSpec <p>BE规格</p>
+     * @param boolean $HaFlag <p>是否高可用</p>
+     * @param string $UserVPCId <p>用户VPCID</p>
+     * @param string $UserSubnetId <p>用户子网ID</p>
+     * @param string $ProductVersion <p>产品版本号</p>
+     * @param ChargeProperties $ChargeProperties <p>付费类型</p>
+     * @param string $InstanceName <p>实例名字</p>
+     * @param string $DorisUserPwd <p>数据库密码</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param integer $HaType <p>高可用类型：<br>0：非高可用（只有1个FE，FeSpec.CreateInstanceSpec.Count=1），<br>1：读高可用（至少需部署3个FE，FeSpec.CreateInstanceSpec.Count&gt;=3，且为奇数），<br>2：读写高可用（至少需部署5个FE，FeSpec.CreateInstanceSpec.Count&gt;=5，且为奇数）。</p>
+     * @param integer $CaseSensitive <p>表名大小写是否敏感，0：敏感；1：不敏感，以小写进行比较；2：不敏感，表名改为以小写存储</p>
+     * @param boolean $EnableMultiZones <p>是否开启多可用区</p>
+     * @param NetworkInfo $UserMultiZoneInfos <p>开启多可用区后，用户的所有可用区和子网信息</p>
+     * @param array $UserMultiZoneInfoArr <p>开启多可用区后，用户的所有可用区和子网信息</p>
+     * @param boolean $IsSSC <p>是否存算分离</p>
+     * @param integer $SSCCU <p>CU数</p>
+     * @param string $CacheDiskSize <p>缓存盘大小</p>
+     * @param integer $CacheDataDiskSize <p>缓存盘大小</p>
+     * @param integer $DiskEncrypt <p>磁盘加密</p>
      */
     function __construct()
     {
@@ -304,6 +300,10 @@ class CreateInstanceNewRequest extends AbstractModel
 
         if (array_key_exists("CacheDataDiskSize",$param) and $param["CacheDataDiskSize"] !== null) {
             $this->CacheDataDiskSize = $param["CacheDataDiskSize"];
+        }
+
+        if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {
+            $this->DiskEncrypt = $param["DiskEncrypt"];
         }
     }
 }

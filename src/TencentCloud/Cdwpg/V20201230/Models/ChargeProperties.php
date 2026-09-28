@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) 设置订单时间范围
  * @method string getTimeUnit() 获取时间单位，一般为h和m
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位，一般为h和m
- * @method integer getPayMode() 获取计费类型0-按量计费，1-包年包月
- * @method void setPayMode(integer $PayMode) 设置计费类型0-按量计费，1-包年包月
  * @method string getChargeType() 获取PREPAID、POSTPAID_BY_HOUR
  * @method void setChargeType(string $ChargeType) 设置PREPAID、POSTPAID_BY_HOUR
+ * @method integer getPayMode() 获取计费类型0-按量计费，1-包年包月
+ * @method void setPayMode(integer $PayMode) 设置计费类型0-按量计费，1-包年包月
  */
 class ChargeProperties extends AbstractModel
 {
@@ -49,21 +49,21 @@ class ChargeProperties extends AbstractModel
     public $TimeUnit;
 
     /**
-     * @var integer 计费类型0-按量计费，1-包年包月
-     */
-    public $PayMode;
-
-    /**
      * @var string PREPAID、POSTPAID_BY_HOUR
      */
     public $ChargeType;
 
     /**
+     * @var integer 计费类型0-按量计费，1-包年包月
+     */
+    public $PayMode;
+
+    /**
      * @param integer $RenewFlag 1-需要自动续期
      * @param integer $TimeSpan 订单时间范围
      * @param string $TimeUnit 时间单位，一般为h和m
-     * @param integer $PayMode 计费类型0-按量计费，1-包年包月
      * @param string $ChargeType PREPAID、POSTPAID_BY_HOUR
+     * @param integer $PayMode 计费类型0-按量计费，1-包年包月
      */
     function __construct()
     {
@@ -90,12 +90,12 @@ class ChargeProperties extends AbstractModel
             $this->TimeUnit = $param["TimeUnit"];
         }
 
-        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
-            $this->PayMode = $param["PayMode"];
-        }
-
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

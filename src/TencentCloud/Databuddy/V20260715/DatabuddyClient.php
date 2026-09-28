@@ -33,7 +33,9 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 3. FileName 在同一父文件夹下不能重名（含后缀比较）；
 4. FileName 后缀必须与 FileType 匹配（`.ipynb`↔`NOTEBOOK_FILE`、`.sql`↔`SQL_FILE`）；
 5. 需带文件内容创建时通过 Storage 传入（大文件走 COS 中转，小文件放 Storage.Content）。
+ * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 创建文件夹
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) 创建工作流
+ * @method Models\CreateWorkspaceResponse CreateWorkspace(Models\CreateWorkspaceRequest $req) 创建工作空间
  * @method Models\DeleteConsoleGroupsResponse DeleteConsoleGroups(Models\DeleteConsoleGroupsRequest $req) 删除控制台用户组
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 将文件移入回收站（软删除），同时清理该文件的版本记录与执行结果快照。
 
@@ -53,7 +55,9 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `ResourceInUse.FileReferencedByTask` | 1030204 | 文件被工作流任务引用，不允许删除 | 请先解除任务引用后再删除 |
 | `UnauthorizedOperation.FileDeleteDenied` | 1030303 | 对该文件无删除权限 | 请联系文件负责人或空间管理员授权 |
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
+ * @method Models\DeleteFolderResponse DeleteFolder(Models\DeleteFolderRequest $req) 删除文件夹
  * @method Models\DeleteWorkflowResponse DeleteWorkflow(Models\DeleteWorkflowRequest $req) 删除工作流
+ * @method Models\DeleteWorkspaceResponse DeleteWorkspace(Models\DeleteWorkspaceRequest $req) 删除工作空间
  * @method Models\GetFileResponse GetFile(Models\GetFileRequest $req) 获取文件的元信息，可选包含文件内容，支持按版本读取历史快照。
 
 **前置条件**
@@ -72,14 +76,17 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `ResourceNotFound.FileVersionNotFound` | 1030205 | 指定的文件版本不存在 | 请确认 VersionId，或调用 ListFileVersions 获取 |
 | `UnauthorizedOperation.FileReadDenied` | 1030304 | 对该文件无读权限 | 请联系文件负责人或空间管理员授权 |
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
+ * @method Models\GetFolderResponse GetFolder(Models\GetFolderRequest $req) 获取文件夹详情
  * @method Models\GetWorkflowResponse GetWorkflow(Models\GetWorkflowRequest $req) 获取工作流详细信息
  * @method Models\GetWorkflowRunResponse GetWorkflowRun(Models\GetWorkflowRunRequest $req) 查询工作流运行详情
  * @method Models\GetWorkflowTaskRunResponse GetWorkflowTaskRun(Models\GetWorkflowTaskRunRequest $req) 查询任务运行详情
+ * @method Models\GetWorkspaceResponse GetWorkspace(Models\GetWorkspaceRequest $req) 查询工作空间详情
  * @method Models\KillWorkflowRunResponse KillWorkflowRun(Models\KillWorkflowRunRequest $req) 终止工作流的运行
  * @method Models\ListConsoleGroupUsersResponse ListConsoleGroupUsers(Models\ListConsoleGroupUsersRequest $req) 查询控制台用户组成员列表
  * @method Models\ListConsoleGroupsResponse ListConsoleGroups(Models\ListConsoleGroupsRequest $req) 查询控制台用户组列表
  * @method Models\ListConsoleRolesResponse ListConsoleRoles(Models\ListConsoleRolesRequest $req) 查询控制台角色列表
  * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表
+ * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) 获取文件夹和文件列表
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 工作流运行列表
  * @method Models\ListWorkflowTaskRunsResponse ListWorkflowTaskRuns(Models\ListWorkflowTaskRunsRequest $req) 查询工作流任务历史运行列表
  * @method Models\ListWorkflowsResponse ListWorkflows(Models\ListWorkflowsRequest $req) 查询工作流列表
@@ -110,7 +117,9 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `UnauthorizedOperation.FileWriteDenied` | 1030302 | 对该文件无写权限 | 请联系文件负责人或空间管理员授权 |
 | `FailedOperation.FileStorageUpdateFailed` | 1030401 | 文件内容写入存储失败 | 请稍后重试，持续失败请携带 RequestId 联系支持 |
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
+ * @method Models\UpdateFolderResponse UpdateFolder(Models\UpdateFolderRequest $req) 更新文件夹（支持重命名+移动）
  * @method Models\UpdateWorkflowResponse UpdateWorkflow(Models\UpdateWorkflowRequest $req) 更新工作流
+ * @method Models\UpdateWorkspaceResponse UpdateWorkspace(Models\UpdateWorkspaceRequest $req) 修改工作空间
  */
 
 class DatabuddyClient extends AbstractClient

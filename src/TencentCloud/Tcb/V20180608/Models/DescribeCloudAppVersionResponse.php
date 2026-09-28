@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBuildTime(string $BuildTime) 设置<p>构建时间</p>
  * @method array getSteps() 获取<p>[]BuildStepStatus 的 JSON 序列化</p>
  * @method void setSteps(array $Steps) 设置<p>[]BuildStepStatus 的 JSON 序列化</p>
+ * @method string getSnapshot() 获取<p>服务版本快照</p>
+ * @method void setSnapshot(string $Snapshot) 设置<p>服务版本快照</p>
+ * @method integer getTrafficPercent() 获取<p>服务版本流量比例</p>
+ * @method void setTrafficPercent(integer $TrafficPercent) 设置<p>服务版本流量比例</p>
+ * @method string getVersionDomain() 获取<p>服务版本域名</p>
+ * @method void setVersionDomain(string $VersionDomain) 设置<p>服务版本域名</p>
+ * @method array getResources() 获取<p>服务管理资源列表</p>
+ * @method void setResources(array $Resources) 设置<p>服务管理资源列表</p>
+ * @method array getArtifacts() 获取<p>[]ArtifactInfo 的 JSON 序列化</p>
+ * @method void setArtifacts(array $Artifacts) 设置<p>[]ArtifactInfo 的 JSON 序列化</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +85,31 @@ class DescribeCloudAppVersionResponse extends AbstractModel
     public $Steps;
 
     /**
+     * @var string <p>服务版本快照</p>
+     */
+    public $Snapshot;
+
+    /**
+     * @var integer <p>服务版本流量比例</p>
+     */
+    public $TrafficPercent;
+
+    /**
+     * @var string <p>服务版本域名</p>
+     */
+    public $VersionDomain;
+
+    /**
+     * @var array <p>服务管理资源列表</p>
+     */
+    public $Resources;
+
+    /**
+     * @var array <p>[]ArtifactInfo 的 JSON 序列化</p>
+     */
+    public $Artifacts;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +122,11 @@ class DescribeCloudAppVersionResponse extends AbstractModel
      * @param StaticConfig $StaticConfig <p>静态托管配置信息</p>
      * @param string $BuildTime <p>构建时间</p>
      * @param array $Steps <p>[]BuildStepStatus 的 JSON 序列化</p>
+     * @param string $Snapshot <p>服务版本快照</p>
+     * @param integer $TrafficPercent <p>服务版本流量比例</p>
+     * @param string $VersionDomain <p>服务版本域名</p>
+     * @param array $Resources <p>服务管理资源列表</p>
+     * @param array $Artifacts <p>[]ArtifactInfo 的 JSON 序列化</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -133,6 +173,36 @@ class DescribeCloudAppVersionResponse extends AbstractModel
                 $obj = new BuildStepStatus();
                 $obj->deserialize($value);
                 array_push($this->Steps, $obj);
+            }
+        }
+
+        if (array_key_exists("Snapshot",$param) and $param["Snapshot"] !== null) {
+            $this->Snapshot = $param["Snapshot"];
+        }
+
+        if (array_key_exists("TrafficPercent",$param) and $param["TrafficPercent"] !== null) {
+            $this->TrafficPercent = $param["TrafficPercent"];
+        }
+
+        if (array_key_exists("VersionDomain",$param) and $param["VersionDomain"] !== null) {
+            $this->VersionDomain = $param["VersionDomain"];
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new CloudAppResourceItem();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
+            }
+        }
+
+        if (array_key_exists("Artifacts",$param) and $param["Artifacts"] !== null) {
+            $this->Artifacts = [];
+            foreach ($param["Artifacts"] as $key => $value){
+                $obj = new BuildArtifactInfo();
+                $obj->deserialize($value);
+                array_push($this->Artifacts, $obj);
             }
         }
 

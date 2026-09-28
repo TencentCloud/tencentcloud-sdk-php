@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileMD5(string $FileMD5) 设置<p>该字段用于返回检测对象对应的MD5校验值，以方便校验文件完整性。</p>
  * @method array getRecognitionResults() 获取<p>该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息</p>
  * @method void setRecognitionResults(array $RecognitionResults) 设置<p>该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息</p>
+ * @method string getStoreUrl() 获取<p>转存地址，开启转存能力返回转存地址</p>
+ * @method void setStoreUrl(string $StoreUrl) 设置<p>转存地址，开启转存能力返回转存地址</p>
+ * @method string getReason() 获取<p>命中原因，大模型提召回输出原因内容</p>
+ * @method void setReason(string $Reason) 设置<p>命中原因，大模型提召回输出原因内容</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -120,6 +124,16 @@ class ImageModerationResponse extends AbstractModel
     public $RecognitionResults;
 
     /**
+     * @var string <p>转存地址，开启转存能力返回转存地址</p>
+     */
+    public $StoreUrl;
+
+    /**
+     * @var string <p>命中原因，大模型提召回输出原因内容</p>
+     */
+    public $Reason;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -139,6 +153,8 @@ class ImageModerationResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMD5 <p>该字段用于返回检测对象对应的MD5校验值，以方便校验文件完整性。</p>
      * @param array $RecognitionResults <p>该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息</p>
+     * @param string $StoreUrl <p>转存地址，开启转存能力返回转存地址</p>
+     * @param string $Reason <p>命中原因，大模型提召回输出原因内容</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -229,6 +245,14 @@ class ImageModerationResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RecognitionResults, $obj);
             }
+        }
+
+        if (array_key_exists("StoreUrl",$param) and $param["StoreUrl"] !== null) {
+            $this->StoreUrl = $param["StoreUrl"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

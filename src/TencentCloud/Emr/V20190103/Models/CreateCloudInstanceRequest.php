@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableEmrProxy(boolean $EnableEmrProxy) 设置<p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
  * @method string getLogStoreID() 获取<p>日志存储服务实例id</p>
  * @method void setLogStoreID(string $LogStoreID) 设置<p>日志存储服务实例id</p>
+ * @method AirflowDagSourceInput getAirflowDagSource() 获取<p>airflow目录源</p>
+ * @method void setAirflowDagSource(AirflowDagSourceInput $AirflowDagSource) 设置<p>airflow目录源</p>
+ * @method AirflowGitCredentialInput getAirflowGitCredential() 获取<p>airflow源凭证</p>
+ * @method void setAirflowGitCredential(AirflowGitCredentialInput $AirflowGitCredential) 设置<p>airflow源凭证</p>
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -199,6 +203,16 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $LogStoreID;
 
     /**
+     * @var AirflowDagSourceInput <p>airflow目录源</p>
+     */
+    public $AirflowDagSource;
+
+    /**
+     * @var AirflowGitCredentialInput <p>airflow源凭证</p>
+     */
+    public $AirflowGitCredential;
+
+    /**
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      * @param string $ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      * @param array $Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
@@ -224,6 +238,8 @@ class CreateCloudInstanceRequest extends AbstractModel
      * @param boolean $TerminateProtection <p>是否开启实例保护</p>
      * @param boolean $EnableEmrProxy <p>是否启用emr-proxy</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 关闭</li></ul>
      * @param string $LogStoreID <p>日志存储服务实例id</p>
+     * @param AirflowDagSourceInput $AirflowDagSource <p>airflow目录源</p>
+     * @param AirflowGitCredentialInput $AirflowGitCredential <p>airflow源凭证</p>
      */
     function __construct()
     {
@@ -356,6 +372,16 @@ class CreateCloudInstanceRequest extends AbstractModel
 
         if (array_key_exists("LogStoreID",$param) and $param["LogStoreID"] !== null) {
             $this->LogStoreID = $param["LogStoreID"];
+        }
+
+        if (array_key_exists("AirflowDagSource",$param) and $param["AirflowDagSource"] !== null) {
+            $this->AirflowDagSource = new AirflowDagSourceInput();
+            $this->AirflowDagSource->deserialize($param["AirflowDagSource"]);
+        }
+
+        if (array_key_exists("AirflowGitCredential",$param) and $param["AirflowGitCredential"] !== null) {
+            $this->AirflowGitCredential = new AirflowGitCredentialInput();
+            $this->AirflowGitCredential->deserialize($param["AirflowGitCredential"]);
         }
     }
 }

@@ -93,6 +93,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 开通后，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询开通结果，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令。
  * @method Models\CreatePlatformEnvResponse CreatePlatformEnv(Models\CreatePlatformEnvRequest $req) 用户在购买平台版套餐后，可调用此接口创建平台版套餐环境，将产生一个平台版套餐环境。
+ * @method Models\CreatePlatformHTTPServiceRouteResponse CreatePlatformHTTPServiceRoute(Models\CreatePlatformHTTPServiceRouteRequest $req) 本接口CreateHTTPServiceRoute用于创建平台版HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。此外HTTP访问服务提供了默认域名，通过DescribeHTTPServiceRoute接口可直接获取默认域名。
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
@@ -115,6 +116,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 删除指定环境下的云函数。调用接口后，若通过 GetFunction 接口查询不到该函数，则表示删除成功。
  * @method Models\DeleteHTTPServiceRouteResponse DeleteHTTPServiceRoute(Models\DeleteHTTPServiceRouteRequest $req) 本接口DeleteHTTPServiceRoute用于删除HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
+ * @method Models\DeletePlatformHTTPServiceRouteResponse DeletePlatformHTTPServiceRoute(Models\DeletePlatformHTTPServiceRouteRequest $req) 本接口DeleteHTTPServiceRoute用于删除平台版HTTP访问服务域名或者路由。可批量删除多条path路由、删除域名及所有path路由，如果Paths字段为空则删除域名及所有path路由，如果Paths不为空则仅删除path路由。
  * @method Models\DeleteProviderResponse DeleteProvider(Models\DeleteProviderRequest $req) 删除认证源
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
 
@@ -206,6 +208,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 
 影响范围：只读查询、不改变资源
 使用场景：控制台用量页/API 查询平台版环境用量
+ * @method Models\DescribePlatformHTTPServiceRouteResponse DescribePlatformHTTPServiceRoute(Models\DescribePlatformHTTPServiceRouteRequest $req) 本接口DescribeHTTPServiceRoute用于查询平台版下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。前置需已开通 HTTP 访问服务；调用CreateHTTPServiceRoute或者ModifyHTTPServiceRoute后可使用本接口查询创建或者修改结果
  * @method Models\DescribePlatformsResponse DescribePlatforms(Models\DescribePlatformsRequest $req) 查询平台版资源信息列表，返回信息包括
 
 1.平台版基础信息如资源id，所属地域等;
@@ -267,6 +270,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
 修改后立即生效，影响该环境下所有终端用户的登录行为。
  * @method Models\ModifyPGInstanceSpecResponse ModifyPGInstanceSpec(Models\ModifyPGInstanceSpecRequest $req) 对 PG 独享实例变配
  * @method Models\ModifyPlatformEnvResponse ModifyPlatformEnv(Models\ModifyPlatformEnvRequest $req) 修改平台版环境信息
+ * @method Models\ModifyPlatformHTTPServiceRouteResponse ModifyPlatformHTTPServiceRoute(Models\ModifyPlatformHTTPServiceRouteRequest $req) 本接口ModifyHTTPServiceRoute用于修改平台版HTTP访问服务路由。支持增量修改，对应字段不传参数则不修改
  * @method Models\ModifyProviderResponse ModifyProvider(Models\ModifyProviderRequest $req) 修改身份认证源。更新指定云开发环境下已有身份认证源的配置信息，支持修改基本信息（名称、图标、描述）、协议连接配置（ClientId、ClientSecret、端点地址等）、登录行为控制（透传模式、自动注册、邮箱/手机号自动关联）以及启用状态。
 对于 OIDC 类型身份源，修改 Issuer 后将自动通过 OpenID Connect Discovery 重新获取端点配置。
 若自定义登录（CUSTOM）或邮箱登录（EMAIL）身份源尚不存在，调用该接口时将自动创建。
@@ -323,6 +327,22 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引。
  * @method Models\UpgradePGInstanceToDedicatedResponse UpgradePGInstanceToDedicated(Models\UpgradePGInstanceToDedicatedRequest $req) 本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
  * @method Models\VerifyHTTPServiceRouteResponse VerifyHTTPServiceRoute(Models\VerifyHTTPServiceRouteRequest $req) 覆盖的校验项包括：
+1. Ownership：域名所有权（TXT/CNAME 记录）；
+2. Cert：证书与域名匹配（CertId 为空时跳过）；
+3. Quota：环境下域名/路径数量配额；
+4. RouteConflict：同域名下路由路径冲突；
+5. DomainConflict：域名被其他环境占用；
+6. InternalAccount：内部域名且非内部账号；
+7. Blacklist：域名黑名单；
+8. CDNResource：AccessType=CDN 时 CDN 资源存在性 / 状态（含 ICP 未备案提示）；
+9. EO：AccessType=EO 时 EdgeOne 侧域名冲突 / 备案 / 归属权预检。
+
+使用方式：
+- 调用本接口前置校验，若 Passed=true 表示所有启用检查项均通过，可继续调用 CreateHTTPServiceRoute 正式创建；
+- 若 Passed=false，前端应根据各 CheckItem 的 Code 精确渲染对应的错误提示与用户操作指引（如 DNS 归属权配置、ICP 备案指引等），用户修正参数后可重复调用本接口，直到通过后再进行创建。
+
+注意：本接口为只读 dry-run 操作，不落库、不创建任何资源，仅返回各项检查的详细结果。本接口通过不代表 CreateHTTPServiceRoute 必然成功（例如证书运行时状态、并发抢占等仍需创建时最终判定），但本接口不通过则 CreateHTTPServiceRoute 必然不通过。
+ * @method Models\VerifyPlatformHTTPServiceRouteResponse VerifyPlatformHTTPServiceRoute(Models\VerifyPlatformHTTPServiceRouteRequest $req) 本接口VerifyPlatformHTTPServiceRoute用于前置校验平台版HTTP访问服务域名或者路由。覆盖的校验项包括：
 1. Ownership：域名所有权（TXT/CNAME 记录）；
 2. Cert：证书与域名匹配（CertId 为空时跳过）；
 3. Quota：环境下域名/路径数量配额；

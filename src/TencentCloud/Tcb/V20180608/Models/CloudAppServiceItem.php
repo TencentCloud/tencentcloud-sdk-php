@@ -20,82 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 部署服务信息
  *
- * @method string getServiceName() 获取服务名
- * @method void setServiceName(string $ServiceName) 设置服务名
- * @method string getFramework() 获取框架名
- * @method void setFramework(string $Framework) 设置框架名
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getAppPath() 获取应用路径
- * @method void setAppPath(string $AppPath) 设置应用路径
- * @method string getCreateTime() 获取服务创建时间
- * @method void setCreateTime(string $CreateTime) 设置服务创建时间
- * @method string getLatestVersionName() 获取最新版本名
- * @method void setLatestVersionName(string $LatestVersionName) 设置最新版本名
- * @method string getLatestStatus() 获取最新版本状态
- * @method void setLatestStatus(string $LatestStatus) 设置最新版本状态
- * @method string getLatestBuildTime() 获取最新版本构建时间
- * @method void setLatestBuildTime(string $LatestBuildTime) 设置最新版本构建时间
- * @method string getDeployType() 获取部署类型
- * @method void setDeployType(string $DeployType) 设置部署类型
+ * @method string getServiceName() 获取<p>服务名</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>服务名</p>
+ * @method string getFramework() 获取<p>框架名</p>
+ * @method void setFramework(string $Framework) 设置<p>框架名</p>
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getAppPath() 获取<p>应用路径</p>
+ * @method void setAppPath(string $AppPath) 设置<p>应用路径</p>
+ * @method string getCreateTime() 获取<p>服务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>服务创建时间</p>
+ * @method string getLatestVersionName() 获取<p>最新版本名</p>
+ * @method void setLatestVersionName(string $LatestVersionName) 设置<p>最新版本名</p>
+ * @method string getLatestStatus() 获取<p>最新版本状态</p>
+ * @method void setLatestStatus(string $LatestStatus) 设置<p>最新版本状态</p>
+ * @method string getLatestBuildTime() 获取<p>最新版本构建时间</p>
+ * @method void setLatestBuildTime(string $LatestBuildTime) 设置<p>最新版本构建时间</p>
+ * @method string getDeployType() 获取<p>部署类型</p>
+ * @method void setDeployType(string $DeployType) 设置<p>部署类型</p>
+ * @method string getBuildConfig() 获取<p>构建配置</p>
+ * @method void setBuildConfig(string $BuildConfig) 设置<p>构建配置</p>
+ * @method string getCurrentVersion() 获取<p>当前流量版本</p>
+ * @method void setCurrentVersion(string $CurrentVersion) 设置<p>当前流量版本</p>
  */
 class CloudAppServiceItem extends AbstractModel
 {
     /**
-     * @var string 服务名
+     * @var string <p>服务名</p>
      */
     public $ServiceName;
 
     /**
-     * @var string 框架名
+     * @var string <p>框架名</p>
      */
     public $Framework;
 
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 应用路径
+     * @var string <p>应用路径</p>
      */
     public $AppPath;
 
     /**
-     * @var string 服务创建时间
+     * @var string <p>服务创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最新版本名
+     * @var string <p>最新版本名</p>
      */
     public $LatestVersionName;
 
     /**
-     * @var string 最新版本状态
+     * @var string <p>最新版本状态</p>
      */
     public $LatestStatus;
 
     /**
-     * @var string 最新版本构建时间
+     * @var string <p>最新版本构建时间</p>
      */
     public $LatestBuildTime;
 
     /**
-     * @var string 部署类型
+     * @var string <p>部署类型</p>
      */
     public $DeployType;
 
     /**
-     * @param string $ServiceName 服务名
-     * @param string $Framework 框架名
-     * @param string $Domain 域名
-     * @param string $AppPath 应用路径
-     * @param string $CreateTime 服务创建时间
-     * @param string $LatestVersionName 最新版本名
-     * @param string $LatestStatus 最新版本状态
-     * @param string $LatestBuildTime 最新版本构建时间
-     * @param string $DeployType 部署类型
+     * @var string <p>构建配置</p>
+     */
+    public $BuildConfig;
+
+    /**
+     * @var string <p>当前流量版本</p>
+     */
+    public $CurrentVersion;
+
+    /**
+     * @param string $ServiceName <p>服务名</p>
+     * @param string $Framework <p>框架名</p>
+     * @param string $Domain <p>域名</p>
+     * @param string $AppPath <p>应用路径</p>
+     * @param string $CreateTime <p>服务创建时间</p>
+     * @param string $LatestVersionName <p>最新版本名</p>
+     * @param string $LatestStatus <p>最新版本状态</p>
+     * @param string $LatestBuildTime <p>最新版本构建时间</p>
+     * @param string $DeployType <p>部署类型</p>
+     * @param string $BuildConfig <p>构建配置</p>
+     * @param string $CurrentVersion <p>当前流量版本</p>
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class CloudAppServiceItem extends AbstractModel
 
         if (array_key_exists("DeployType",$param) and $param["DeployType"] !== null) {
             $this->DeployType = $param["DeployType"];
+        }
+
+        if (array_key_exists("BuildConfig",$param) and $param["BuildConfig"] !== null) {
+            $this->BuildConfig = $param["BuildConfig"];
+        }
+
+        if (array_key_exists("CurrentVersion",$param) and $param["CurrentVersion"] !== null) {
+            $this->CurrentVersion = $param["CurrentVersion"];
         }
     }
 }

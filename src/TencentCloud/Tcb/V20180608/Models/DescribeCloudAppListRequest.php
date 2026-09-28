@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置<p>页大小</p>
  * @method integer getPageNo() 获取<p>页号</p>
  * @method void setPageNo(integer $PageNo) 设置<p>页号</p>
+ * @method CloudAppFilter getFilter() 获取<p>服务过滤</p>
+ * @method void setFilter(CloudAppFilter $Filter) 设置<p>服务过滤</p>
  */
 class DescribeCloudAppListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeCloudAppListRequest extends AbstractModel
     public $PageNo;
 
     /**
+     * @var CloudAppFilter <p>服务过滤</p>
+     */
+    public $Filter;
+
+    /**
      * @param string $EnvId <p>环境ID</p>
      * @param string $DeployType <p>部署类型</p>
      * @param string $SearchKey <p>搜索关键字</p>
      * @param integer $PageSize <p>页大小</p>
      * @param integer $PageNo <p>页号</p>
+     * @param CloudAppFilter $Filter <p>服务过滤</p>
      */
     function __construct()
     {
@@ -96,6 +104,11 @@ class DescribeCloudAppListRequest extends AbstractModel
 
         if (array_key_exists("PageNo",$param) and $param["PageNo"] !== null) {
             $this->PageNo = $param["PageNo"];
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new CloudAppFilter();
+            $this->Filter->deserialize($param["Filter"]);
         }
     }
 }

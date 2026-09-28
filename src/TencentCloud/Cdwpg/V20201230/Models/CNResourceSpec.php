@@ -20,27 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生资源规格描述信息
  *
- * @method string getType() 获取节点类型
- * @method void setType(string $Type) 设置节点类型
- * @method string getSpecName() 获取机型
- * @method void setSpecName(string $SpecName) 设置机型
  * @method integer getCount() 获取节点个数
  * @method void setCount(integer $Count) 设置节点个数
  * @method CBSSpec getDiskSpec() 获取磁盘信息
  * @method void setDiskSpec(CBSSpec $DiskSpec) 设置磁盘信息
+ * @method string getSpecName() 获取机型
+ * @method void setSpecName(string $SpecName) 设置机型
+ * @method string getType() 获取节点类型
+ * @method void setType(string $Type) 设置节点类型
  */
 class CNResourceSpec extends AbstractModel
 {
-    /**
-     * @var string 节点类型
-     */
-    public $Type;
-
-    /**
-     * @var string 机型
-     */
-    public $SpecName;
-
     /**
      * @var integer 节点个数
      */
@@ -52,10 +42,20 @@ class CNResourceSpec extends AbstractModel
     public $DiskSpec;
 
     /**
-     * @param string $Type 节点类型
-     * @param string $SpecName 机型
+     * @var string 机型
+     */
+    public $SpecName;
+
+    /**
+     * @var string 节点类型
+     */
+    public $Type;
+
+    /**
      * @param integer $Count 节点个数
      * @param CBSSpec $DiskSpec 磁盘信息
+     * @param string $SpecName 机型
+     * @param string $Type 节点类型
      */
     function __construct()
     {
@@ -70,14 +70,6 @@ class CNResourceSpec extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
-        }
-
-        if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
-            $this->SpecName = $param["SpecName"];
-        }
-
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
         }
@@ -85,6 +77,14 @@ class CNResourceSpec extends AbstractModel
         if (array_key_exists("DiskSpec",$param) and $param["DiskSpec"] !== null) {
             $this->DiskSpec = new CBSSpec();
             $this->DiskSpec->deserialize($param["DiskSpec"]);
+        }
+
+        if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
+            $this->SpecName = $param["SpecName"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

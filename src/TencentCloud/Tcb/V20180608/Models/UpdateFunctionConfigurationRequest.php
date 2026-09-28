@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置<p>函数绑定的角色</p>
  * @method string getInstallDependency() 获取<p>在线依赖安装，TRUE 表示安装，仅支持 Node.js 函数。 </p><p>默认值：FALSE</p>
  * @method void setInstallDependency(string $InstallDependency) 设置<p>在线依赖安装，TRUE 表示安装，仅支持 Node.js 函数。 </p><p>默认值：FALSE</p>
- * @method string getClsTopicId() 获取<p>日志投递到的cls日志集ID</p>
- * @method void setClsTopicId(string $ClsTopicId) 设置<p>日志投递到的cls日志集ID</p>
- * @method string getClsLogsetId() 获取<p>日志投递到的cls Topic ID</p>
- * @method void setClsLogsetId(string $ClsLogsetId) 设置<p>日志投递到的cls Topic ID</p>
+ * @method string getClsTopicId() 获取<p>日志投递到的cls Topic ID</p>
+ * @method void setClsTopicId(string $ClsTopicId) 设置<p>日志投递到的cls Topic ID</p>
+ * @method string getClsLogsetId() 获取<p>日志投递到的cls日志集ID</p>
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置<p>日志投递到的cls日志集ID</p>
  * @method string getPublish() 获取<p>在更新时是否同步发布新版本</p><p>默认值：FALSE</p>
  * @method void setPublish(string $Publish) 设置<p>在更新时是否同步发布新版本</p><p>默认值：FALSE</p>
  * @method string getL5Enable() 获取<p>是否开启L5访问能力，TRUE 为开启，FALSE为关闭</p>
@@ -119,12 +119,12 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $InstallDependency;
 
     /**
-     * @var string <p>日志投递到的cls日志集ID</p>
+     * @var string <p>日志投递到的cls Topic ID</p>
      */
     public $ClsTopicId;
 
     /**
-     * @var string <p>日志投递到的cls Topic ID</p>
+     * @var string <p>日志投递到的cls日志集ID</p>
      */
     public $ClsLogsetId;
 
@@ -175,8 +175,8 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $Runtime <p>函数运行环境，创建时指定，目前不支持修改。</p>
      * @param string $Role <p>函数绑定的角色</p>
      * @param string $InstallDependency <p>在线依赖安装，TRUE 表示安装，仅支持 Node.js 函数。 </p><p>默认值：FALSE</p>
-     * @param string $ClsTopicId <p>日志投递到的cls日志集ID</p>
-     * @param string $ClsLogsetId <p>日志投递到的cls Topic ID</p>
+     * @param string $ClsTopicId <p>日志投递到的cls Topic ID</p>
+     * @param string $ClsLogsetId <p>日志投递到的cls日志集ID</p>
      * @param string $Publish <p>在更新时是否同步发布新版本</p><p>默认值：FALSE</p>
      * @param string $L5Enable <p>是否开启L5访问能力，TRUE 为开启，FALSE为关闭</p>
      * @param array $Layers <p>函数要关联的层版本列表，层的版本会按照在列表中顺序依次覆盖。</p>

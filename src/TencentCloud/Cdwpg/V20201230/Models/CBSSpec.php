@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 磁盘规格
  *
- * @method string getDiskType() 获取盘类型
- * @method void setDiskType(string $DiskType) 设置盘类型
- * @method integer getDiskSize() 获取大小
- * @method void setDiskSize(integer $DiskSize) 设置大小
  * @method integer getDiskCount() 获取个数
  * @method void setDiskCount(integer $DiskCount) 设置个数
+ * @method integer getDiskSize() 获取大小
+ * @method void setDiskSize(integer $DiskSize) 设置大小
+ * @method string getDiskType() 获取盘类型
+ * @method void setDiskType(string $DiskType) 设置盘类型
  */
 class CBSSpec extends AbstractModel
 {
     /**
-     * @var string 盘类型
+     * @var integer 个数
      */
-    public $DiskType;
+    public $DiskCount;
 
     /**
      * @var integer 大小
@@ -40,14 +40,14 @@ class CBSSpec extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var integer 个数
+     * @var string 盘类型
      */
-    public $DiskCount;
+    public $DiskType;
 
     /**
-     * @param string $DiskType 盘类型
-     * @param integer $DiskSize 大小
      * @param integer $DiskCount 个数
+     * @param integer $DiskSize 大小
+     * @param string $DiskType 盘类型
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class CBSSpec extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
-            $this->DiskType = $param["DiskType"];
+        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
+            $this->DiskCount = $param["DiskCount"];
         }
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
         }
     }
 }

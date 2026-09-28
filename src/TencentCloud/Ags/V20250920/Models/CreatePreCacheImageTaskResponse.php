@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
  * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
  * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+ * @method string getPreCacheImageId() 获取<p>镜像预热ID</p>
+ * @method void setPreCacheImageId(string $PreCacheImageId) 设置<p>镜像预热ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class CreatePreCacheImageTaskResponse extends AbstractModel
     public $ImageRegistryType;
 
     /**
+     * @var string <p>镜像预热ID</p>
+     */
+    public $PreCacheImageId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class CreatePreCacheImageTaskResponse extends AbstractModel
      * @param string $Image <p>镜像地址</p>
      * @param string $ImageDigest <p>镜像 Digest</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>。</p>
+     * @param string $PreCacheImageId <p>镜像预热ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +88,10 @@ class CreatePreCacheImageTaskResponse extends AbstractModel
 
         if (array_key_exists("ImageRegistryType",$param) and $param["ImageRegistryType"] !== null) {
             $this->ImageRegistryType = $param["ImageRegistryType"];
+        }
+
+        if (array_key_exists("PreCacheImageId",$param) and $param["PreCacheImageId"] !== null) {
+            $this->PreCacheImageId = $param["PreCacheImageId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

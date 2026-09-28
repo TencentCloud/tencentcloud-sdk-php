@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnderstandImageConfig(UnderstandImageConfig $UnderstandImageConfig) 设置<p>图片理解配置</p>
  * @method ImageQualityConfig getImageQualityConfig() 获取<p>图片质量评估配置</p>
  * @method void setImageQualityConfig(ImageQualityConfig $ImageQualityConfig) 设置<p>图片质量评估配置</p>
+ * @method AiComposeConfig getAiComposeConfig() 获取<p>图层融合配置。</p>
+ * @method void setAiComposeConfig(AiComposeConfig $AiComposeConfig) 设置<p>图层融合配置。</p>
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -134,6 +136,11 @@ class ImageTaskInput extends AbstractModel
     public $ImageQualityConfig;
 
     /**
+     * @var AiComposeConfig <p>图层融合配置。</p>
+     */
+    public $AiComposeConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig <p>图片编码配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig <p>图片增强配置。</p>
@@ -152,6 +159,7 @@ class ImageTaskInput extends AbstractModel
      * @param AiStoryboardConfig $AiStoryboardConfig <p>Ai分镜拆解配置</p>
      * @param UnderstandImageConfig $UnderstandImageConfig <p>图片理解配置</p>
      * @param ImageQualityConfig $ImageQualityConfig <p>图片质量评估配置</p>
+     * @param AiComposeConfig $AiComposeConfig <p>图层融合配置。</p>
      */
     function __construct()
     {
@@ -234,6 +242,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("ImageQualityConfig",$param) and $param["ImageQualityConfig"] !== null) {
             $this->ImageQualityConfig = new ImageQualityConfig();
             $this->ImageQualityConfig->deserialize($param["ImageQualityConfig"]);
+        }
+
+        if (array_key_exists("AiComposeConfig",$param) and $param["AiComposeConfig"] !== null) {
+            $this->AiComposeConfig = new AiComposeConfig();
+            $this->AiComposeConfig->deserialize($param["AiComposeConfig"]);
         }
     }
 }

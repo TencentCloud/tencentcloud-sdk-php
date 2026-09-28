@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceState请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例名称
- * @method void setInstanceId(string $InstanceId) 设置集群实例名称
+ * @method string getInstanceId() 获取<p>集群实例名称</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群实例名称</p>
+ * @method array getInstanceIds() 获取<p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
  */
 class DescribeInstanceStateRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例名称
+     * @var string <p>集群实例名称</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 集群实例名称
+     * @var array <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
+     */
+    public $InstanceIds;
+
+    /**
+     * @param string $InstanceId <p>集群实例名称</p>
+     * @param array $InstanceIds <p>集群实例名称列表（批量查询，优先于 InstanceId；上限100，超出截断）</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeInstanceStateRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

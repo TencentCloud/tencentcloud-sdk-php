@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPanelResolution(string $PanelResolution) 设置<p>子图分辨率</p><p>枚举值：</p><ul><li>720： 720</li><li>1K： 1K</li><li>2K： 2K</li><li>4K： 4K</li></ul><p>默认值：1K</p>
  * @method array getCustomVariables() 获取<p>用户自定义变量。</p>
  * @method void setCustomVariables(array $CustomVariables) 设置<p>用户自定义变量。</p>
- * @method string getModel() 获取<p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
- * @method void setModel(string $Model) 设置<p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+ * @method string getModel() 获取<p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
+ * @method void setModel(string $Model) 设置<p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
  */
 class AiPosterSuiteConfig extends AbstractModel
 {
@@ -75,7 +75,7 @@ class AiPosterSuiteConfig extends AbstractModel
     public $CustomVariables;
 
     /**
-     * @var string <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+     * @var string <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
      */
     public $Model;
 
@@ -87,7 +87,7 @@ class AiPosterSuiteConfig extends AbstractModel
      * @param string $PanelRatio <p>子图比例。</p><p>枚举值：</p><ul><li>1:1： 1:1</li><li>3:4： 3:4</li><li>4:3： 4:3</li><li>9:16： 9:16</li><li>16:9： 16:9</li></ul><p>默认值：1:1</p>
      * @param string $PanelResolution <p>子图分辨率</p><p>枚举值：</p><ul><li>720： 720</li><li>1K： 1K</li><li>2K： 2K</li><li>4K： 4K</li></ul><p>默认值：1K</p>
      * @param array $CustomVariables <p>用户自定义变量。</p>
-     * @param string $Model <p>模型名称。</p><p>枚举值：</p><ul><li>WAND-suite-1.0-flash： WAND-suite-1.0-flash</li></ul>
+     * @param string $Model <p>模型名称。</p><p>枚举值：</p><ul><li>suite-1.0-flash： suite-1.0-flash</li></ul>
      */
     function __construct()
     {

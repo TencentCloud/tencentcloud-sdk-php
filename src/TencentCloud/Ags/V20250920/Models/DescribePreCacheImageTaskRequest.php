@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImage() 获取<p>镜像地址</p>
  * @method void setImage(string $Image) 设置<p>镜像地址</p>
- * @method string getImageDigest() 获取<p>镜像 Digest</p>
- * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
  * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
  * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method string getImageDigest() 获取<p>镜像 Digest</p>
+ * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
+ * @method string getPreCacheImageId() 获取<p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
+ * @method void setPreCacheImageId(string $PreCacheImageId) 设置<p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
  */
 class DescribePreCacheImageTaskRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class DescribePreCacheImageTaskRequest extends AbstractModel
     public $Image;
 
     /**
-     * @var string <p>镜像 Digest</p>
-     */
-    public $ImageDigest;
-
-    /**
      * @var string <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      */
     public $ImageRegistryType;
 
     /**
+     * @var string <p>镜像 Digest</p>
+     */
+    public $ImageDigest;
+
+    /**
+     * @var string <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
+     */
+    public $PreCacheImageId;
+
+    /**
      * @param string $Image <p>镜像地址</p>
-     * @param string $ImageDigest <p>镜像 Digest</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param string $ImageDigest <p>镜像 Digest</p>
+     * @param string $PreCacheImageId <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
      */
     function __construct()
     {
@@ -66,12 +74,16 @@ class DescribePreCacheImageTaskRequest extends AbstractModel
             $this->Image = $param["Image"];
         }
 
+        if (array_key_exists("ImageRegistryType",$param) and $param["ImageRegistryType"] !== null) {
+            $this->ImageRegistryType = $param["ImageRegistryType"];
+        }
+
         if (array_key_exists("ImageDigest",$param) and $param["ImageDigest"] !== null) {
             $this->ImageDigest = $param["ImageDigest"];
         }
 
-        if (array_key_exists("ImageRegistryType",$param) and $param["ImageRegistryType"] !== null) {
-            $this->ImageRegistryType = $param["ImageRegistryType"];
+        if (array_key_exists("PreCacheImageId",$param) and $param["PreCacheImageId"] !== null) {
+            $this->PreCacheImageId = $param["PreCacheImageId"];
         }
     }
 }

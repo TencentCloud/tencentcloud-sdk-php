@@ -20,70 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知资产范围
  *
- * @method integer getAssetRange() 获取资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
- * @method void setAssetRange(integer $AssetRange) 设置资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
- * @method array getInstanceIds() 获取选中的主机 quuid 列表，仅 AssetRange=2 生效
- * @method void setInstanceIds(array $InstanceIds) 设置选中的主机 quuid 列表，仅 AssetRange=2 生效
- * @method array getExcludedInstanceIds() 获取排除的主机 quuid 列表，仅 AssetRange=1 生效
- * @method void setExcludedInstanceIds(array $ExcludedInstanceIds) 设置排除的主机 quuid 列表，仅 AssetRange=1 生效
- * @method array getTagIds() 获取安全中心标签 ID 列表，仅 AssetRange=3 生效
- * @method void setTagIds(array $TagIds) 设置安全中心标签 ID 列表，仅 AssetRange=3 生效
- * @method array getCloudTags() 获取腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
- * @method void setCloudTags(array $CloudTags) 设置腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+ * @method integer getAssetRange() 获取<p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
+ * @method void setAssetRange(integer $AssetRange) 设置<p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
+ * @method array getInstanceIds() 获取<p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
+ * @method array getExcludedInstanceIds() 获取<p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
+ * @method void setExcludedInstanceIds(array $ExcludedInstanceIds) 设置<p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
+ * @method array getTagIds() 获取<p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
+ * @method void setTagIds(array $TagIds) 设置<p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
+ * @method array getCloudTags() 获取<p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
+ * @method void setCloudTags(array $CloudTags) 设置<p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
+ * @method array getProjectIds() 获取<p>项目ID</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目ID</p>
  */
 class WebhookAssetScope extends AbstractModel
 {
     /**
-     * @var integer 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
+     * @var integer <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
      */
     public $AssetRange;
 
     /**
-     * @var array 选中的主机 quuid 列表，仅 AssetRange=2 生效
+     * @var array <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
      */
     public $InstanceIds;
 
     /**
-     * @var array 排除的主机 quuid 列表，仅 AssetRange=1 生效
+     * @var array <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
      */
     public $ExcludedInstanceIds;
 
     /**
-     * @var array 安全中心标签 ID 列表，仅 AssetRange=3 生效
+     * @var array <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
      */
     public $TagIds;
 
     /**
-     * @var array 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+     * @var array <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
      */
     public $CloudTags;
 
     /**
-     * @param integer $AssetRange 资产范围类型（对齐 NotifyAssetRange）
-枚举值：
-1：全部主机（可剔除）
-2：自选主机
-3：按标签选择
-     * @param array $InstanceIds 选中的主机 quuid 列表，仅 AssetRange=2 生效
-     * @param array $ExcludedInstanceIds 排除的主机 quuid 列表，仅 AssetRange=1 生效
-     * @param array $TagIds 安全中心标签 ID 列表，仅 AssetRange=3 生效
-     * @param array $CloudTags 腾讯云标签列表，仅 AssetRange=3 生效
-入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空
+     * @var array <p>项目ID</p>
+     */
+    public $ProjectIds;
+
+    /**
+     * @param integer $AssetRange <p>资产范围类型（对齐 NotifyAssetRange）<br>枚举值：<br>1：全部主机（可剔除）<br>2：自选主机<br>3：按标签选择</p>
+     * @param array $InstanceIds <p>选中的主机 quuid 列表，仅 AssetRange=2 生效</p>
+     * @param array $ExcludedInstanceIds <p>排除的主机 quuid 列表，仅 AssetRange=1 生效</p>
+     * @param array $TagIds <p>安全中心标签 ID 列表，仅 AssetRange=3 生效</p>
+     * @param array $CloudTags <p>腾讯云标签列表，仅 AssetRange=3 生效<br>入参限制：AssetRange=3 时 TagIds + CloudTags 不能同时为空</p>
+     * @param array $ProjectIds <p>项目ID</p>
      */
     function __construct()
     {
@@ -116,6 +104,10 @@ class WebhookAssetScope extends AbstractModel
 
         if (array_key_exists("CloudTags",$param) and $param["CloudTags"] !== null) {
             $this->CloudTags = $param["CloudTags"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

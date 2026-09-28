@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosTimestamp(string $CosTimestamp) 设置<p>仅 Type=zip/cos 时使用。配合 zip 二阶段上传：填 DescribeCloudAppCosInfo 返回的 UnixTimestamp，平台据此自动签名出 ZIP_FILE_URL</p>
  * @method string getCosSuffix() 获取<p>仅 Type=zip/cos 时使用。zip 文件后缀，默认 .zip；与 CosTimestamp 配合定位 COS 对象</p>
  * @method void setCosSuffix(string $CosSuffix) 设置<p>仅 Type=zip/cos 时使用。zip 文件后缀，默认 .zip；与 CosTimestamp 配合定位 COS 对象</p>
+ * @method string getPackageFileName() 获取<p>zip 包名称</p>
+ * @method void setPackageFileName(string $PackageFileName) 设置<p>zip 包名称</p>
  */
 class BuildSource extends AbstractModel
 {
@@ -80,6 +82,11 @@ class BuildSource extends AbstractModel
     public $CosSuffix;
 
     /**
+     * @var string <p>zip 包名称</p>
+     */
+    public $PackageFileName;
+
+    /**
      * @param string $Type <p>源码来源类型，取值：&quot;git&quot; &quot;zip&quot;</p>
      * @param string $Repo <p>Git 仓库 HTTPS URL；或 COS 下载完整 URL；与 CodeUrlWithAuth / CosTimestamp 之一非空（zip 二阶段上传时可留空）</p>
      * @param string $Ref <p>分支 tag commit；Git 默认 main，zip 模式下忽略</p>
@@ -88,6 +95,7 @@ class BuildSource extends AbstractModel
      * @param string $CodeUrlWithAuth <p>调用方显式传入的带鉴权 clone URL 或带签名的 zip 下载直链（优先级最高，会覆盖平台 OAuth / 自动签名）</p>
      * @param string $CosTimestamp <p>仅 Type=zip/cos 时使用。配合 zip 二阶段上传：填 DescribeCloudAppCosInfo 返回的 UnixTimestamp，平台据此自动签名出 ZIP_FILE_URL</p>
      * @param string $CosSuffix <p>仅 Type=zip/cos 时使用。zip 文件后缀，默认 .zip；与 CosTimestamp 配合定位 COS 对象</p>
+     * @param string $PackageFileName <p>zip 包名称</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class BuildSource extends AbstractModel
 
         if (array_key_exists("CosSuffix",$param) and $param["CosSuffix"] !== null) {
             $this->CosSuffix = $param["CosSuffix"];
+        }
+
+        if (array_key_exists("PackageFileName",$param) and $param["PackageFileName"] !== null) {
+            $this->PackageFileName = $param["PackageFileName"];
         }
     }
 }

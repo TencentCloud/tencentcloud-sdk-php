@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedInfo(string $AdvancedInfo) 设置<p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
  * @method integer getCardCount() 获取<p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
  * @method void setCardCount(integer $CardCount) 设置<p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
+ * @method string getThaiFirstName() 获取<p>泰文姓名</p>
+ * @method void setThaiFirstName(string $ThaiFirstName) 设置<p>泰文姓名</p>
+ * @method string getThaiLastName() 获取<p>泰文姓名</p>
+ * @method void setThaiLastName(string $ThaiLastName) 设置<p>泰文姓名</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -153,6 +157,16 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $CardCount;
 
     /**
+     * @var string <p>泰文姓名</p>
+     */
+    public $ThaiFirstName;
+
+    /**
+     * @var string <p>泰文姓名</p>
+     */
+    public $ThaiLastName;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -176,6 +190,8 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param array $WarnCardInfos <p>告警码<br>-9101 证件边框不完整告警<br>-9102 证件复印件告警<br>-9103 证件翻拍告警<br>-9104 证件PS告警<br>-9107 证件反光告警<br>-9108 证件模糊告警<br>-9109 告警能力未开通</p>
      * @param string $AdvancedInfo <p>该字段已废弃， 将固定返回&quot;1&quot;，不建议使用。</p>
      * @param integer $CardCount <p>卡证正面图片中，证件主体的数量（仅请求曼谷地域[ap-bangkok]返回）</p>
+     * @param string $ThaiFirstName <p>泰文姓名</p>
+     * @param string $ThaiLastName <p>泰文姓名</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -261,6 +277,14 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 
         if (array_key_exists("CardCount",$param) and $param["CardCount"] !== null) {
             $this->CardCount = $param["CardCount"];
+        }
+
+        if (array_key_exists("ThaiFirstName",$param) and $param["ThaiFirstName"] !== null) {
+            $this->ThaiFirstName = $param["ThaiFirstName"];
+        }
+
+        if (array_key_exists("ThaiLastName",$param) and $param["ThaiLastName"] !== null) {
+            $this->ThaiLastName = $param["ThaiLastName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

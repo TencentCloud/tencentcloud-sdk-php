@@ -92,6 +92,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 <br>录制相关文档：[直播录制](/document/product/267/32739)。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建录制模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveRecordRule](/document/product/267/32615)接口，将模板id绑定到流进行使用。
 <br>录制相关文档：[直播录制](/document/product/267/32739)。
+ * @method Models\CreateLiveSmartEraseRuleResponse CreateLiveSmartEraseRule(Models\CreateLiveSmartEraseRuleRequest $req) 创建直播智能擦除规则。
  * @method Models\CreateLiveSmartEraseTemplateResponse CreateLiveSmartEraseTemplate(Models\CreateLiveSmartEraseTemplateRequest $req) 创建直播智能擦除模板。
  * @method Models\CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(Models\CreateLiveSnapshotRuleRequest $req) 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
 <br>截图相关文档：[直播截图](/document/product/267/32737)。
@@ -161,6 +162,8 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\DeleteLiveRecordResponse DeleteLiveRecord(Models\DeleteLiveRecordRequest $req) 注：DeleteLiveRecord 接口仅用于删除录制任务记录，不具备停止录制的功能，也不能删除正在进行中的录制。如果需要停止录制任务，请使用终止录制[StopLiveRecord](/document/product/267/30146) 接口。
  * @method Models\DeleteLiveRecordRuleResponse DeleteLiveRecordRule(Models\DeleteLiveRecordRuleRequest $req) 删除录制规则。
  * @method Models\DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(Models\DeleteLiveRecordTemplateRequest $req) 删除录制模板。
+ * @method Models\DeleteLiveSmartEraseRuleResponse DeleteLiveSmartEraseRule(Models\DeleteLiveSmartEraseRuleRequest $req) 删除直播智能擦除规则。
+ * @method Models\DeleteLiveSmartEraseTemplateResponse DeleteLiveSmartEraseTemplate(Models\DeleteLiveSmartEraseTemplateRequest $req) 删除直播智能擦除模板。
  * @method Models\DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(Models\DeleteLiveSnapshotRuleRequest $req) 删除截图规则。
  * @method Models\DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(Models\DeleteLiveSnapshotTemplateRequest $req) 删除截图模板
  * @method Models\DeleteLiveStreamMonitorResponse DeleteLiveStreamMonitor(Models\DeleteLiveStreamMonitorRequest $req) 该接口用来删除直播流监播任务。
@@ -250,6 +253,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveRecordRulesResponse DescribeLiveRecordRules(Models\DescribeLiveRecordRulesRequest $req) 获取录制规则列表
  * @method Models\DescribeLiveRecordTemplateResponse DescribeLiveRecordTemplate(Models\DescribeLiveRecordTemplateRequest $req) 获取单个录制模板。
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取录制模板列表。
+ * @method Models\DescribeLiveSmartEraseRulesResponse DescribeLiveSmartEraseRules(Models\DescribeLiveSmartEraseRulesRequest $req) 获取直播智能擦除规则列表。
+ * @method Models\DescribeLiveSmartEraseTemplateResponse DescribeLiveSmartEraseTemplate(Models\DescribeLiveSmartEraseTemplateRequest $req) 获取单个直播智能擦除模板
+ * @method Models\DescribeLiveSmartEraseTemplatesResponse DescribeLiveSmartEraseTemplates(Models\DescribeLiveSmartEraseTemplatesRequest $req) 获取直播智能擦除模板。
  * @method Models\DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(Models\DescribeLiveSnapshotRulesRequest $req) 获取截图规则列表
  * @method Models\DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(Models\DescribeLiveSnapshotTemplateRequest $req) 获取单个截图模板。
  * @method Models\DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(Models\DescribeLiveSnapshotTemplatesRequest $req) 获取截图模板列表。
@@ -378,6 +384,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 1. 不支持修改拉流源类型，如需更换，请创建新任务。
  * @method Models\ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(Models\ModifyLivePushAuthKeyRequest $req) 修改直播推流鉴权key
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) 修改录制模板配置。
+ * @method Models\ModifyLiveSmartEraseTemplateResponse ModifyLiveSmartEraseTemplate(Models\ModifyLiveSmartEraseTemplateRequest $req) 修改直播智能擦除模板。
  * @method Models\ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(Models\ModifyLiveSnapshotTemplateRequest $req) 修改截图模板配置。
  * @method Models\ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitor(Models\ModifyLiveStreamMonitorRequest $req) 该接口用来修改直播流监播任务的配置。
  * @method Models\ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(Models\ModifyLiveTimeShiftTemplateRequest $req) 修改直播时移模板。

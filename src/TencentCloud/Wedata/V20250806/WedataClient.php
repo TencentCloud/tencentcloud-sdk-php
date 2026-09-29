@@ -96,6 +96,7 @@ use TencentCloud\Wedata\V20250806\Models as Models;
  * @method Models\GetResourceFolderResponse GetResourceFolder(Models\GetResourceFolderRequest $req) 查询资源文件文件夹详情
  * @method Models\GetResourceGroupMetricsResponse GetResourceGroupMetrics(Models\GetResourceGroupMetricsRequest $req) 该接口用于查看指定执行资源组的监控指标
  * @method Models\GetSQLFolderResponse GetSQLFolder(Models\GetSQLFolderRequest $req) 获取sql文件夹详情
+ * @method Models\GetSQLRunResultResponse GetSQLRunResult(Models\GetSQLRunResultRequest $req) 获取SQL查询任务的数据结果。直接返回预览数据结果，而非预览结果文件路径。不传 JobExecutionId 时返回该任务下全部子查询的结果数组。返回数据总大小不超过 10MB。任务处于非终态（QUEUED/RUNNING）时不报错，返回当前 Status 与空的 Results 数组，并通过 StatusMessage 说明原因，调用方应采用指数退避策略轮询直至进入终态。
  * @method Models\GetSQLScriptResponse GetSQLScript(Models\GetSQLScriptRequest $req) 查询脚本详情
  * @method Models\GetTableResponse GetTable(Models\GetTableRequest $req) 查询表详情
  * @method Models\GetTableColumnsResponse GetTableColumns(Models\GetTableColumnsRequest $req) 查询表所有字段列表

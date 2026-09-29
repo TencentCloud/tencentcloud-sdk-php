@@ -82,10 +82,10 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\GetWorkflowTaskRunResponse GetWorkflowTaskRun(Models\GetWorkflowTaskRunRequest $req) 查询任务运行详情
  * @method Models\GetWorkspaceResponse GetWorkspace(Models\GetWorkspaceRequest $req) 查询工作空间详情
  * @method Models\KillWorkflowRunResponse KillWorkflowRun(Models\KillWorkflowRunRequest $req) 终止工作流的运行
- * @method Models\ListConsoleGroupUsersResponse ListConsoleGroupUsers(Models\ListConsoleGroupUsersRequest $req) 查询控制台用户组成员列表
- * @method Models\ListConsoleGroupsResponse ListConsoleGroups(Models\ListConsoleGroupsRequest $req) 查询控制台用户组列表
- * @method Models\ListConsoleRolesResponse ListConsoleRoles(Models\ListConsoleRolesRequest $req) 查询控制台角色列表
- * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表
+ * @method Models\ListConsoleGroupUsersResponse ListConsoleGroupUsers(Models\ListConsoleGroupUsersRequest $req) 查询控制台用户组成员列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\ListConsoleGroupsResponse ListConsoleGroups(Models\ListConsoleGroupsRequest $req) 查询控制台用户组列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\ListConsoleRolesResponse ListConsoleRoles(Models\ListConsoleRolesRequest $req) 查询控制台角色列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) 获取文件夹和文件列表
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 工作流运行列表
  * @method Models\ListWorkflowTaskRunsResponse ListWorkflowTaskRuns(Models\ListWorkflowTaskRunsRequest $req) 查询工作流任务历史运行列表

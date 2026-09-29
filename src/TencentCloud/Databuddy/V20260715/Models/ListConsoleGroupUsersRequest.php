@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListConsoleGroupUsers请求参数结构体
  *
- * @method string getGroupId() 获取<p>用户组 ID</p>
- * @method void setGroupId(string $GroupId) 设置<p>用户组 ID</p>
+ * @method string getGroupId() 获取<p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
+ * @method void setGroupId(string $GroupId) 设置<p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
  * @method string getUserKeyword() 获取<p>用户名称或 UIN 模糊匹配</p>
  * @method void setUserKeyword(string $UserKeyword) 设置<p>用户名称或 UIN 模糊匹配</p>
  * @method array getUserUins() 获取<p>通过 UIN 批量查询用户信息</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ListConsoleGroupUsersRequest extends AbstractModel
 {
     /**
-     * @var string <p>用户组 ID</p>
+     * @var string <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public $GroupId;
 
@@ -66,7 +66,7 @@ class ListConsoleGroupUsersRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param string $GroupId <p>用户组 ID</p>
+     * @param string $GroupId <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      * @param string $UserKeyword <p>用户名称或 UIN 模糊匹配</p>
      * @param array $UserUins <p>通过 UIN 批量查询用户信息</p>
      * @param array $OrderBys <p>多字段排序，如 [{Name: &#39;CreateTime&#39;, Direction: &#39;Desc&#39;}, {Name: &#39;UserName&#39;, Direction: &#39;Asc&#39;}]，默认按创建时间降序</p>

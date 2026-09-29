@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 角色基础信息
  *
- * @method string getId() 获取<p>角色ID</p>
- * @method void setId(string $Id) 设置<p>角色ID</p>
+ * @method string getId() 获取<p>角色ID，可通过 ListWorkspaceRoles / ListConsoleRoles 接口获取；创建/更新角色时无需填写（由系统自动生成，创建成功后从响应 Data.RoleId 获取）</p>
+ * @method void setId(string $Id) 设置<p>角色ID，可通过 ListWorkspaceRoles / ListConsoleRoles 接口获取；创建/更新角色时无需填写（由系统自动生成，创建成功后从响应 Data.RoleId 获取）</p>
  * @method string getName() 获取<p>角色名称</p>
  * @method void setName(string $Name) 设置<p>角色名称</p>
  * @method string getDescription() 获取<p>角色描述</p>
  * @method void setDescription(string $Description) 设置<p>角色描述</p>
  * @method string getDisplayName() 获取<p>显示名称</p>
  * @method void setDisplayName(string $DisplayName) 设置<p>显示名称</p>
- * @method string getRoleType() 获取<p>角色类型</p>
- * @method void setRoleType(string $RoleType) 设置<p>角色类型</p>
- * @method integer getSource() 获取<p>角色来源，参考 web_enum_standard.proto -&gt; RoleSource：0=未指定 1=用户直绑 2=用户组继承 3=两者都有</p>
- * @method void setSource(integer $Source) 设置<p>角色来源，参考 web_enum_standard.proto -&gt; RoleSource：0=未指定 1=用户直绑 2=用户组继承 3=两者都有</p>
- * @method array getGroupNames() 获取<p>继承来源的用户组名称列表，Source=1 时为空</p>
- * @method void setGroupNames(array $GroupNames) 设置<p>继承来源的用户组名称列表，Source=1 时为空</p>
+ * @method string getRoleType() 获取<p>角色类型：workspace=工作空间系统角色，workspace_custom=工作空间自定义角色，console=控制台角色；查询时返回，创建时无需填写（系统固定创建自定义角色）</p>
+ * @method void setRoleType(string $RoleType) 设置<p>角色类型：workspace=工作空间系统角色，workspace_custom=工作空间自定义角色，console=控制台角色；查询时返回，创建时无需填写（系统固定创建自定义角色）</p>
+ * @method integer getSource() 获取<p>角色来源（查询侧字段，创建时无需填写）：0=未指定，1=用户直绑，2=用户组继承，3=两者都有</p>
+ * @method void setSource(integer $Source) 设置<p>角色来源（查询侧字段，创建时无需填写）：0=未指定，1=用户直绑，2=用户组继承，3=两者都有</p>
+ * @method array getGroupNames() 获取<p>继承来源的用户组名称列表（查询侧字段，创建时无需填写），Source=1 时为空</p>
+ * @method void setGroupNames(array $GroupNames) 设置<p>继承来源的用户组名称列表（查询侧字段，创建时无需填写），Source=1 时为空</p>
  */
 class RoleBasicInfo extends AbstractModel
 {
     /**
-     * @var string <p>角色ID</p>
+     * @var string <p>角色ID，可通过 ListWorkspaceRoles / ListConsoleRoles 接口获取；创建/更新角色时无需填写（由系统自动生成，创建成功后从响应 Data.RoleId 获取）</p>
      */
     public $Id;
 
@@ -58,28 +58,28 @@ class RoleBasicInfo extends AbstractModel
     public $DisplayName;
 
     /**
-     * @var string <p>角色类型</p>
+     * @var string <p>角色类型：workspace=工作空间系统角色，workspace_custom=工作空间自定义角色，console=控制台角色；查询时返回，创建时无需填写（系统固定创建自定义角色）</p>
      */
     public $RoleType;
 
     /**
-     * @var integer <p>角色来源，参考 web_enum_standard.proto -&gt; RoleSource：0=未指定 1=用户直绑 2=用户组继承 3=两者都有</p>
+     * @var integer <p>角色来源（查询侧字段，创建时无需填写）：0=未指定，1=用户直绑，2=用户组继承，3=两者都有</p>
      */
     public $Source;
 
     /**
-     * @var array <p>继承来源的用户组名称列表，Source=1 时为空</p>
+     * @var array <p>继承来源的用户组名称列表（查询侧字段，创建时无需填写），Source=1 时为空</p>
      */
     public $GroupNames;
 
     /**
-     * @param string $Id <p>角色ID</p>
+     * @param string $Id <p>角色ID，可通过 ListWorkspaceRoles / ListConsoleRoles 接口获取；创建/更新角色时无需填写（由系统自动生成，创建成功后从响应 Data.RoleId 获取）</p>
      * @param string $Name <p>角色名称</p>
      * @param string $Description <p>角色描述</p>
      * @param string $DisplayName <p>显示名称</p>
-     * @param string $RoleType <p>角色类型</p>
-     * @param integer $Source <p>角色来源，参考 web_enum_standard.proto -&gt; RoleSource：0=未指定 1=用户直绑 2=用户组继承 3=两者都有</p>
-     * @param array $GroupNames <p>继承来源的用户组名称列表，Source=1 时为空</p>
+     * @param string $RoleType <p>角色类型：workspace=工作空间系统角色，workspace_custom=工作空间自定义角色，console=控制台角色；查询时返回，创建时无需填写（系统固定创建自定义角色）</p>
+     * @param integer $Source <p>角色来源（查询侧字段，创建时无需填写）：0=未指定，1=用户直绑，2=用户组继承，3=两者都有</p>
+     * @param array $GroupNames <p>继承来源的用户组名称列表（查询侧字段，创建时无需填写），Source=1 时为空</p>
      */
     function __construct()
     {

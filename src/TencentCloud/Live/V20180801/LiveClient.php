@@ -306,6 +306,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 日志数据打包存在一定延迟，24小时候数据包趋于完整。
  * @method Models\DescribeMonitorReportResponse DescribeMonitorReport(Models\DescribeMonitorReportRequest $req) 用来查询监播场次7天内的智能识别、断流、低帧率等信息的汇总报告。
  * @method Models\DescribeOriginStreamInfoResponse DescribeOriginStreamInfo(Models\DescribeOriginStreamInfoRequest $req) 获取直播源站配置信息，支持直播源站格式。
+ * @method Models\DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpList(Models\DescribeOriginWhiteIpListRequest $req) 获取直播源站的拉流IP白名单列表
  * @method Models\DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(Models\DescribePlayErrorCodeDetailInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询下行播放错误码信息，某段时间内1分钟粒度的各http错误码出现的次数，包括4xx，5xx。
  * @method Models\DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(Models\DescribePlayErrorCodeSumInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。

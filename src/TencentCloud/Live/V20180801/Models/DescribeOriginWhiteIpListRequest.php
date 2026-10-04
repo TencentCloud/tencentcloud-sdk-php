@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginWhiteIpList请求参数结构体
  *
-
+ * @method string getDomain() 获取<p>播放域名</p>
+ * @method void setDomain(string $Domain) 设置<p>播放域名</p>
  */
 class DescribeOriginWhiteIpListRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>播放域名</p>
+     */
+    public $Domain;
 
     /**
-
+     * @param string $Domain <p>播放域名</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeOriginWhiteIpListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
     }
 }

@@ -20,66 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewTWeSeeSubscription请求参数结构体
  *
- * @method string getProductId() 获取产品 ID
- * @method void setProductId(string $ProductId) 设置产品 ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceType() 获取算法类型。可选值：
-
-- `VID_COMP`：视频理解
- * @method void setServiceType(string $ServiceType) 设置算法类型。可选值：
-
-- `VID_COMP`：视频理解
- * @method integer getPeriod() 获取续费时长，单位：月，支持 1-60
- * @method void setPeriod(integer $Period) 设置续费时长，单位：月，支持 1-60
- * @method integer getChannelId() 获取通道 ID
- * @method void setChannelId(integer $ChannelId) 设置通道 ID
- * @method string getCustomOrderId() 获取自定义订单 ID
- * @method void setCustomOrderId(string $CustomOrderId) 设置自定义订单 ID
+ * @method string getProductId() 获取<p>产品 ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品 ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getServiceType() 获取<p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
+ * @method void setServiceType(string $ServiceType) 设置<p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
+ * @method integer getPeriod() 获取<p>续费时长，单位：月，支持 1-60</p>
+ * @method void setPeriod(integer $Period) 设置<p>续费时长，单位：月，支持 1-60</p>
+ * @method integer getChannelId() 获取<p>通道 ID</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道 ID</p>
+ * @method string getCustomOrderId() 获取<p>自定义订单 ID</p>
+ * @method void setCustomOrderId(string $CustomOrderId) 设置<p>自定义订单 ID</p>
  */
 class RenewTWeSeeSubscriptionRequest extends AbstractModel
 {
     /**
-     * @var string 产品 ID
+     * @var string <p>产品 ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * @var string <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
      */
     public $ServiceType;
 
     /**
-     * @var integer 续费时长，单位：月，支持 1-60
+     * @var integer <p>续费时长，单位：月，支持 1-60</p>
      */
     public $Period;
 
     /**
-     * @var integer 通道 ID
+     * @var integer <p>通道 ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 自定义订单 ID
+     * @var string <p>自定义订单 ID</p>
      */
     public $CustomOrderId;
 
     /**
-     * @param string $ProductId 产品 ID
-     * @param string $DeviceName 设备名称
-     * @param string $ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-     * @param integer $Period 续费时长，单位：月，支持 1-60
-     * @param integer $ChannelId 通道 ID
-     * @param string $CustomOrderId 自定义订单 ID
+     * @param string $ProductId <p>产品 ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $ServiceType <p>算法类型。可选值：</p><ul><li><code>VID_COMP</code>：视频理解</li></ul>
+     * @param integer $Period <p>续费时长，单位：月，支持 1-60</p>
+     * @param integer $ChannelId <p>通道 ID</p>
+     * @param string $CustomOrderId <p>自定义订单 ID</p>
      */
     function __construct()
     {

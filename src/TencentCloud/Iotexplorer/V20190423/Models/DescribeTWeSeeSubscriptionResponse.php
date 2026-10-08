@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取<p>资源 ID</p>
  * @method void setResourceId(string $ResourceId) 设置<p>资源 ID</p>
- * @method string getServiceTier() 获取<p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
- * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+ * @method string getServiceTier() 获取<p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+ * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
  * @method integer getExpireTime() 获取<p>到期时间，秒级时间戳</p>
  * @method void setExpireTime(integer $ExpireTime) 设置<p>到期时间，秒级时间戳</p>
  * @method boolean getEnabled() 获取<p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
@@ -38,16 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventIdFilterConfig(SeeEventIdFilterConfig $EventIdFilterConfig) 设置<p>云存事件 ID 过滤规则配置项</p>
  * @method SeeSummarizeConfig getSummarizeConfig() 获取<p>每日与每周总结配置</p>
  * @method void setSummarizeConfig(SeeSummarizeConfig $SummarizeConfig) 设置<p>每日与每周总结配置</p>
- * @method integer getQuotaBasic() 获取<p>当前周期基础能力总额度</p>
- * @method void setQuotaBasic(integer $QuotaBasic) 设置<p>当前周期基础能力总额度</p>
- * @method integer getQuotaUsedBasic() 获取<p>当前周期基础能力已用额度</p>
- * @method void setQuotaUsedBasic(integer $QuotaUsedBasic) 设置<p>当前周期基础能力已用额度</p>
- * @method integer getQuotaAdvanced() 获取<p>当前周期高级能力总额度</p>
- * @method void setQuotaAdvanced(integer $QuotaAdvanced) 设置<p>当前周期高级能力总额度</p>
- * @method integer getQuotaUsedAdvanced() 获取<p>当前周期高级能力已用额度</p>
- * @method void setQuotaUsedAdvanced(integer $QuotaUsedAdvanced) 设置<p>当前周期高级能力已用额度</p>
+ * @method float getCreditsQuota() 获取<p>当前周期内的额度总量</p>
+ * @method void setCreditsQuota(float $CreditsQuota) 设置<p>当前周期内的额度总量</p>
+ * @method float getCreditsUsed() 获取<p>当前周期内的已使用额度</p>
+ * @method void setCreditsUsed(float $CreditsUsed) 设置<p>当前周期内的已使用额度</p>
  * @method integer getQuotaRefreshTime() 获取<p>额度刷新时间</p>
  * @method void setQuotaRefreshTime(integer $QuotaRefreshTime) 设置<p>额度刷新时间</p>
+ * @method integer getQuotaBasic() 获取<p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+ * @method void setQuotaBasic(integer $QuotaBasic) 设置<p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+ * @method integer getQuotaUsedBasic() 获取<p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+ * @method void setQuotaUsedBasic(integer $QuotaUsedBasic) 设置<p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+ * @method integer getQuotaAdvanced() 获取<p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+ * @method void setQuotaAdvanced(integer $QuotaAdvanced) 设置<p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+ * @method integer getQuotaUsedAdvanced() 获取<p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+ * @method void setQuotaUsedAdvanced(integer $QuotaUsedAdvanced) 设置<p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,7 +63,7 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @var string <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public $ServiceTier;
 
@@ -99,29 +103,39 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
     public $SummarizeConfig;
 
     /**
-     * @var integer <p>当前周期基础能力总额度</p>
+     * @var float <p>当前周期内的额度总量</p>
      */
-    public $QuotaBasic;
+    public $CreditsQuota;
 
     /**
-     * @var integer <p>当前周期基础能力已用额度</p>
+     * @var float <p>当前周期内的已使用额度</p>
      */
-    public $QuotaUsedBasic;
-
-    /**
-     * @var integer <p>当前周期高级能力总额度</p>
-     */
-    public $QuotaAdvanced;
-
-    /**
-     * @var integer <p>当前周期高级能力已用额度</p>
-     */
-    public $QuotaUsedAdvanced;
+    public $CreditsUsed;
 
     /**
      * @var integer <p>额度刷新时间</p>
      */
     public $QuotaRefreshTime;
+
+    /**
+     * @var integer <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+     */
+    public $QuotaBasic;
+
+    /**
+     * @var integer <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public $QuotaUsedBasic;
+
+    /**
+     * @var integer <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+     */
+    public $QuotaAdvanced;
+
+    /**
+     * @var integer <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
+     */
+    public $QuotaUsedAdvanced;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -130,7 +144,7 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
 
     /**
      * @param string $ResourceId <p>资源 ID</p>
-     * @param string $ServiceTier <p>套餐规格。可能取值：</p><ul><li><code>BASIC</code>：包年包月基础版（适用于视频理解）</li></ul>
+     * @param string $ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      * @param integer $ExpireTime <p>到期时间，秒级时间戳</p>
      * @param boolean $Enabled <p>启用状态，<code>true</code> 为开启，<code>false</code> 为关闭</p>
      * @param string $Status <p>订阅状态。可能取值：</p><ul><li><code>NORMAL</code>：正常</li><li><code>ISOLATED</code>：隔离</li></ul>
@@ -138,11 +152,13 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
      * @param SeeCompHighlightConfig $CompHighlightConfig <p>视频语义浓缩配置（适用于视频语义浓缩）</p>
      * @param SeeEventIdFilterConfig $EventIdFilterConfig <p>云存事件 ID 过滤规则配置项</p>
      * @param SeeSummarizeConfig $SummarizeConfig <p>每日与每周总结配置</p>
-     * @param integer $QuotaBasic <p>当前周期基础能力总额度</p>
-     * @param integer $QuotaUsedBasic <p>当前周期基础能力已用额度</p>
-     * @param integer $QuotaAdvanced <p>当前周期高级能力总额度</p>
-     * @param integer $QuotaUsedAdvanced <p>当前周期高级能力已用额度</p>
+     * @param float $CreditsQuota <p>当前周期内的额度总量</p>
+     * @param float $CreditsUsed <p>当前周期内的已使用额度</p>
      * @param integer $QuotaRefreshTime <p>额度刷新时间</p>
+     * @param integer $QuotaBasic <p>当前周期基础能力总额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsQuota）</p>
+     * @param integer $QuotaUsedBasic <p>当前周期基础能力已用额度（已废弃，当 ServiceTier=BASIC 时，取值等于 CreditsUsed 向下取整）</p>
+     * @param integer $QuotaAdvanced <p>当前周期高级能力总额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsQuota）</p>
+     * @param integer $QuotaUsedAdvanced <p>当前周期高级能力已用额度（已废弃，当 ServiceTier=ADVANCED 时，取值等于 CreditsUsed 向下取整）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -198,6 +214,18 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
             $this->SummarizeConfig->deserialize($param["SummarizeConfig"]);
         }
 
+        if (array_key_exists("CreditsQuota",$param) and $param["CreditsQuota"] !== null) {
+            $this->CreditsQuota = $param["CreditsQuota"];
+        }
+
+        if (array_key_exists("CreditsUsed",$param) and $param["CreditsUsed"] !== null) {
+            $this->CreditsUsed = $param["CreditsUsed"];
+        }
+
+        if (array_key_exists("QuotaRefreshTime",$param) and $param["QuotaRefreshTime"] !== null) {
+            $this->QuotaRefreshTime = $param["QuotaRefreshTime"];
+        }
+
         if (array_key_exists("QuotaBasic",$param) and $param["QuotaBasic"] !== null) {
             $this->QuotaBasic = $param["QuotaBasic"];
         }
@@ -212,10 +240,6 @@ class DescribeTWeSeeSubscriptionResponse extends AbstractModel
 
         if (array_key_exists("QuotaUsedAdvanced",$param) and $param["QuotaUsedAdvanced"] !== null) {
             $this->QuotaUsedAdvanced = $param["QuotaUsedAdvanced"];
-        }
-
-        if (array_key_exists("QuotaRefreshTime",$param) and $param["QuotaRefreshTime"] !== null) {
-            $this->QuotaRefreshTime = $param["QuotaRefreshTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

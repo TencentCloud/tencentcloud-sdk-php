@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeSee 统计数据点
  *
- * @method string getTime() 获取时间
- * @method void setTime(string $Time) 设置时间
- * @method integer getCount() 获取任务数量
- * @method void setCount(integer $Count) 设置任务数量
- * @method integer getCostBasic() 获取基础能力用量
- * @method void setCostBasic(integer $CostBasic) 设置基础能力用量
- * @method integer getCostAdvanced() 获取高级能力用量
- * @method void setCostAdvanced(integer $CostAdvanced) 设置高级能力用量
+ * @method string getTime() 获取<p>时间</p>
+ * @method void setTime(string $Time) 设置<p>时间</p>
+ * @method integer getCount() 获取<p>任务数量</p>
+ * @method void setCount(integer $Count) 设置<p>任务数量</p>
+ * @method integer getCostBasic() 获取<p>基础能力后付费用量</p>
+ * @method void setCostBasic(integer $CostBasic) 设置<p>基础能力后付费用量</p>
+ * @method integer getCostAdvanced() 获取<p>高级能力后付费用量</p>
+ * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>高级能力后付费用量</p>
+ * @method float getCostCredits() 获取<p>预付费额度用量</p>
+ * @method void setCostCredits(float $CostCredits) 设置<p>预付费额度用量</p>
  */
 class SeeStatItem extends AbstractModel
 {
     /**
-     * @var string 时间
+     * @var string <p>时间</p>
      */
     public $Time;
 
     /**
-     * @var integer 任务数量
+     * @var integer <p>任务数量</p>
      */
     public $Count;
 
     /**
-     * @var integer 基础能力用量
+     * @var integer <p>基础能力后付费用量</p>
      */
     public $CostBasic;
 
     /**
-     * @var integer 高级能力用量
+     * @var integer <p>高级能力后付费用量</p>
      */
     public $CostAdvanced;
 
     /**
-     * @param string $Time 时间
-     * @param integer $Count 任务数量
-     * @param integer $CostBasic 基础能力用量
-     * @param integer $CostAdvanced 高级能力用量
+     * @var float <p>预付费额度用量</p>
+     */
+    public $CostCredits;
+
+    /**
+     * @param string $Time <p>时间</p>
+     * @param integer $Count <p>任务数量</p>
+     * @param integer $CostBasic <p>基础能力后付费用量</p>
+     * @param integer $CostAdvanced <p>高级能力后付费用量</p>
+     * @param float $CostCredits <p>预付费额度用量</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SeeStatItem extends AbstractModel
 
         if (array_key_exists("CostAdvanced",$param) and $param["CostAdvanced"] !== null) {
             $this->CostAdvanced = $param["CostAdvanced"];
+        }
+
+        if (array_key_exists("CostCredits",$param) and $param["CostCredits"] !== null) {
+            $this->CostCredits = $param["CostCredits"];
         }
     }
 }

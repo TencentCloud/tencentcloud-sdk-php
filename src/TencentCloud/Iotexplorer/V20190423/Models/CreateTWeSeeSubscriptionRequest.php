@@ -20,102 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTWeSeeSubscription请求参数结构体
  *
- * @method string getProductId() 获取产品 ID
- * @method void setProductId(string $ProductId) 设置产品 ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getServiceType() 获取算法类型。可选值：
-
-- `VID_COMP`：视频理解
- * @method void setServiceType(string $ServiceType) 设置算法类型。可选值：
-
-- `VID_COMP`：视频理解
- * @method string getServiceTier() 获取套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method void setServiceTier(string $ServiceTier) 设置套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
- * @method integer getPeriod() 获取订阅购买时长，单位：月，支持 1-60
- * @method void setPeriod(integer $Period) 设置订阅购买时长，单位：月，支持 1-60
- * @method integer getChannelId() 获取通道 ID
- * @method void setChannelId(integer $ChannelId) 设置通道 ID
- * @method string getCustomOrderId() 获取自定义订单 ID
- * @method void setCustomOrderId(string $CustomOrderId) 设置自定义订单 ID
- * @method string getRenewFlag() 获取续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+ * @method string getProductId() 获取<p>产品 ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品 ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getServiceType() 获取<p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
+ * @method void setServiceType(string $ServiceType) 设置<p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
+ * @method string getServiceTier() 获取<p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+ * @method void setServiceTier(string $ServiceTier) 设置<p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+ * @method integer getPeriod() 获取<p>订阅购买时长，单位：月，支持 1-60</p>
+ * @method void setPeriod(integer $Period) 设置<p>订阅购买时长，单位：月，支持 1-60</p>
+ * @method integer getChannelId() 获取<p>通道 ID</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道 ID</p>
+ * @method string getCustomOrderId() 获取<p>自定义订单 ID</p>
+ * @method void setCustomOrderId(string $CustomOrderId) 设置<p>自定义订单 ID</p>
+ * @method string getRenewFlag() 获取<p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
+ * @method void setRenewFlag(string $RenewFlag) 设置<p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
  */
 class CreateTWeSeeSubscriptionRequest extends AbstractModel
 {
     /**
-     * @var string 产品 ID
+     * @var string <p>产品 ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 算法类型。可选值：
-
-- `VID_COMP`：视频理解
+     * @var string <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
      */
     public $ServiceType;
 
     /**
-     * @var string 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
+     * @var string <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
      */
     public $ServiceTier;
 
     /**
-     * @var integer 订阅购买时长，单位：月，支持 1-60
+     * @var integer <p>订阅购买时长，单位：月，支持 1-60</p>
      */
     public $Period;
 
     /**
-     * @var integer 通道 ID
+     * @var integer <p>通道 ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 自定义订单 ID
+     * @var string <p>自定义订单 ID</p>
      */
     public $CustomOrderId;
 
     /**
-     * @var string 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+     * @var string <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
      */
     public $RenewFlag;
 
     /**
-     * @param string $ProductId 产品 ID
-     * @param string $DeviceName 设备名称
-     * @param string $ServiceType 算法类型。可选值：
-
-- `VID_COMP`：视频理解
-     * @param string $ServiceTier 套餐规格。可选值：
-
-- `BASIC`：包年包月基础版（适用于视频理解）
-     * @param integer $Period 订阅购买时长，单位：月，支持 1-60
-     * @param integer $ChannelId 通道 ID
-     * @param string $CustomOrderId 自定义订单 ID
-     * @param string $RenewFlag 续费标识。可选值：
-- `NOTIFY_AND_MANUAL_RENEW`：到期前通知并手动续费（默认）
-- `NOTIFY_AND_AUTO_RENEW`：到期前通知并自动续费
-- `DISABLE_NOTIFY_AND_MANUAL_RENEW`：不通知且手动续费
+     * @param string $ProductId <p>产品 ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $ServiceType <p>算法类型</p><p>枚举值：</p><ul><li>VID_COMP： 视频理解</li></ul>
+     * @param string $ServiceTier <p>套餐规格</p><p>枚举值：</p><ul><li>BASIC： 包年包月基础版</li><li>ADVANCED： 包年包月高级版</li></ul>
+     * @param integer $Period <p>订阅购买时长，单位：月，支持 1-60</p>
+     * @param integer $ChannelId <p>通道 ID</p>
+     * @param string $CustomOrderId <p>自定义订单 ID</p>
+     * @param string $RenewFlag <p>续费标识。可选值：</p><ul><li><code>NOTIFY_AND_MANUAL_RENEW</code>：到期前通知并手动续费（默认）</li><li><code>NOTIFY_AND_AUTO_RENEW</code>：到期前通知并自动续费</li><li><code>DISABLE_NOTIFY_AND_MANUAL_RENEW</code>：不通知且手动续费</li></ul>
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTWeSeeTasks请求参数结构体
  *
- * @method string getDeviceName() 获取<p>设备名称</p>
- * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
- * @method integer getLimit() 获取<p>分页拉取数量</p>
- * @method void setLimit(integer $Limit) 设置<p>分页拉取数量</p>
  * @method string getProductId() 获取<p>产品 ID</p>
  * @method void setProductId(string $ProductId) 设置<p>产品 ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
  * @method string getServiceCategory() 获取<p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
  * @method void setServiceCategory(string $ServiceCategory) 设置<p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
+ * @method integer getLimit() 获取<p>分页拉取数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页拉取数量</p>
  * @method integer getChannelId() 获取<p>通道 ID</p>
  * @method void setChannelId(integer $ChannelId) 设置<p>通道 ID</p>
  * @method integer getEndTimeMs() 获取<p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
@@ -48,24 +48,24 @@ use TencentCloud\Common\AbstractModel;
 class ListTWeSeeTasksRequest extends AbstractModel
 {
     /**
-     * @var string <p>设备名称</p>
-     */
-    public $DeviceName;
-
-    /**
-     * @var integer <p>分页拉取数量</p>
-     */
-    public $Limit;
-
-    /**
      * @var string <p>产品 ID</p>
      */
     public $ProductId;
 
     /**
+     * @var string <p>设备名称</p>
+     */
+    public $DeviceName;
+
+    /**
      * @var string <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
      */
     public $ServiceCategory;
+
+    /**
+     * @var integer <p>分页拉取数量</p>
+     */
+    public $Limit;
 
     /**
      * @var integer <p>通道 ID</p>
@@ -108,10 +108,10 @@ class ListTWeSeeTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $DeviceName <p>设备名称</p>
-     * @param integer $Limit <p>分页拉取数量</p>
      * @param string $ProductId <p>产品 ID</p>
+     * @param string $DeviceName <p>设备名称</p>
      * @param string $ServiceCategory <p>算法类目。可选值：</p><ul><li><code>COMPREHENSION</code>：视觉理解</li><li><code>HIGHLIGHT</code>：视频浓缩</li><li><code>SUMMARIZATION</code>：每日/每周总结</li></ul>
+     * @param integer $Limit <p>分页拉取数量</p>
      * @param integer $ChannelId <p>通道 ID</p>
      * @param integer $EndTimeMs <p>查询任务时间范围的结束时间（毫秒级 UNIX 时间戳）。不传则不生效时间范围条件。</p>
      * @param integer $FileURLExpireTime <p>下载 URL 的过期时间（秒级 UNIX 时间戳）。若传入该参数，则响应中将包含所有文件的下载 URL</p>
@@ -134,20 +134,20 @@ class ListTWeSeeTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
-            $this->DeviceName = $param["DeviceName"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
         }
 
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
+        }
+
         if (array_key_exists("ServiceCategory",$param) and $param["ServiceCategory"] !== null) {
             $this->ServiceCategory = $param["ServiceCategory"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {

@@ -30,6 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置<p>仅 Status=FAIL 时有值，详细文案</p>
  * @method array getResultFile3Ds() 获取<p>仅 Status=DONE 时有值，产物文件列表</p>
  * @method void setResultFile3Ds(array $ResultFile3Ds) 设置<p>仅 Status=DONE 时有值，产物文件列表</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method string getTaskType() 获取<p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+ * @method void setTaskType(string $TaskType) 设置<p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+ * @method string getPrompt() 获取<p>输入的Prompt</p>
+ * @method void setPrompt(string $Prompt) 设置<p>输入的Prompt</p>
+ * @method string getRefImage() 获取<p>图生3D场景下输入的图片URL</p>
+ * @method void setRefImage(string $RefImage) 设置<p>图生3D场景下输入的图片URL</p>
+ * @method array getMultiViewImages() 获取<p>多图生3D场景下输入的图片信息</p>
+ * @method void setMultiViewImages(array $MultiViewImages) 设置<p>多图生3D场景下输入的图片信息</p>
+ * @method string getCreateTime() 获取<p>任务创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>任务创建时间</p>
+ * @method string getUpdateTime() 获取<p>任务更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>任务更新时间</p>
+ * @method integer getFaceCount() 获取<p>提交任务的目标面数</p>
+ * @method void setFaceCount(integer $FaceCount) 设置<p>提交任务的目标面数</p>
+ * @method string getGenerateType() 获取<p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+ * @method void setGenerateType(string $GenerateType) 设置<p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+ * @method integer getQueuePosition() 获取<p>任务在队列中的位置，数值越小越靠前；</p>
+ * @method void setQueuePosition(integer $QueuePosition) 设置<p>任务在队列中的位置，数值越小越靠前；</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +81,56 @@ class QueryHunyuan3DTaskResponse extends AbstractModel
     public $ResultFile3Ds;
 
     /**
+     * @var string <p>任务ID</p>
+     */
+    public $TaskId;
+
+    /**
+     * @var string <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+     */
+    public $TaskType;
+
+    /**
+     * @var string <p>输入的Prompt</p>
+     */
+    public $Prompt;
+
+    /**
+     * @var string <p>图生3D场景下输入的图片URL</p>
+     */
+    public $RefImage;
+
+    /**
+     * @var array <p>多图生3D场景下输入的图片信息</p>
+     */
+    public $MultiViewImages;
+
+    /**
+     * @var string <p>任务创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>任务更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @var integer <p>提交任务的目标面数</p>
+     */
+    public $FaceCount;
+
+    /**
+     * @var string <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+     */
+    public $GenerateType;
+
+    /**
+     * @var integer <p>任务在队列中的位置，数值越小越靠前；</p>
+     */
+    public $QueuePosition;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +141,16 @@ class QueryHunyuan3DTaskResponse extends AbstractModel
      * @param string $ErrorCode <p>仅 Status=FAIL 时有值，字符串错误码（如 InternalError.ModelInference）</p>
      * @param string $ErrorMessage <p>仅 Status=FAIL 时有值，详细文案</p>
      * @param array $ResultFile3Ds <p>仅 Status=DONE 时有值，产物文件列表</p>
+     * @param string $TaskId <p>任务ID</p>
+     * @param string $TaskType <p>任务类型</p><p>枚举值：</p><ul><li>text_to_3d： 文生3D</li><li>image_to_3d： 图生3D</li><li>multiview_to_3d： 多视图生3D</li><li>mesh_to_texture： 网格生纹理</li><li>mesh_to_geometry： 网格生几何</li></ul>
+     * @param string $Prompt <p>输入的Prompt</p>
+     * @param string $RefImage <p>图生3D场景下输入的图片URL</p>
+     * @param array $MultiViewImages <p>多图生3D场景下输入的图片信息</p>
+     * @param string $CreateTime <p>任务创建时间</p>
+     * @param string $UpdateTime <p>任务更新时间</p>
+     * @param integer $FaceCount <p>提交任务的目标面数</p>
+     * @param string $GenerateType <p>生成类型</p><p>枚举值：</p><ul><li>Normal： 生成完整 3D 资产（几何 + 纹理）</li><li>Geometry： 只生成几何体（无纹理，输出速度更快）</li><li>Texture： 只生成纹理（需要传 MeshUrl）</li></ul><p>默认值：Normal</p>
+     * @param integer $QueuePosition <p>任务在队列中的位置，数值越小越靠前；</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +189,51 @@ class QueryHunyuan3DTaskResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultFile3Ds, $obj);
             }
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("Prompt",$param) and $param["Prompt"] !== null) {
+            $this->Prompt = $param["Prompt"];
+        }
+
+        if (array_key_exists("RefImage",$param) and $param["RefImage"] !== null) {
+            $this->RefImage = $param["RefImage"];
+        }
+
+        if (array_key_exists("MultiViewImages",$param) and $param["MultiViewImages"] !== null) {
+            $this->MultiViewImages = [];
+            foreach ($param["MultiViewImages"] as $key => $value){
+                $obj = new ViewImage();
+                $obj->deserialize($value);
+                array_push($this->MultiViewImages, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FaceCount",$param) and $param["FaceCount"] !== null) {
+            $this->FaceCount = $param["FaceCount"];
+        }
+
+        if (array_key_exists("GenerateType",$param) and $param["GenerateType"] !== null) {
+            $this->GenerateType = $param["GenerateType"];
+        }
+
+        if (array_key_exists("QueuePosition",$param) and $param["QueuePosition"] !== null) {
+            $this->QueuePosition = $param["QueuePosition"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

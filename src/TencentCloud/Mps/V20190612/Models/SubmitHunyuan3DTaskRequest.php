@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeed(integer $Seed) 设置<p>随机种子，同一 Seed 输入下结果可复现</p>
  * @method string getStyle() 获取<p>风格控制词</p>
  * @method void setStyle(string $Style) 设置<p>风格控制词</p>
+ * @method AigcStoreCosParam getStoreCosParam() 获取<p>客户自己申请创建的COS存储桶</p>
+ * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) 设置<p>客户自己申请创建的COS存储桶</p>
  */
 class SubmitHunyuan3DTaskRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
     public $Style;
 
     /**
+     * @var AigcStoreCosParam <p>客户自己申请创建的COS存储桶</p>
+     */
+    public $StoreCosParam;
+
+    /**
      * @param string $Prompt <p>文生 3D 的提示词</p><p>入参限制：最长 1024 utf-8 字符</p>
      * @param string $ImageUrl <p>图生 3D 的图片 URL（http/https）</p>
      * @param array $MultiViewImages <p>多视角图生 3D，至少 2 张，且必须包含 front 视角</p>
@@ -112,6 +119,7 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
      * @param string $ResultFormat <p>除默认返回的 obj + glb 外，附加输出的一种格式。当前仅支持 FBX</p>
      * @param integer $Seed <p>随机种子，同一 Seed 输入下结果可复现</p>
      * @param string $Style <p>风格控制词</p>
+     * @param AigcStoreCosParam $StoreCosParam <p>客户自己申请创建的COS存储桶</p>
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ class SubmitHunyuan3DTaskRequest extends AbstractModel
 
         if (array_key_exists("Style",$param) and $param["Style"] !== null) {
             $this->Style = $param["Style"];
+        }
+
+        if (array_key_exists("StoreCosParam",$param) and $param["StoreCosParam"] !== null) {
+            $this->StoreCosParam = new AigcStoreCosParam();
+            $this->StoreCosParam->deserialize($param["StoreCosParam"]);
         }
     }
 }

@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
  * @method SeeComprehensionResult getComprehensionResult() 获取<p>视觉理解结果</p>
  * @method void setComprehensionResult(SeeComprehensionResult $ComprehensionResult) 设置<p>视觉理解结果</p>
- * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
- * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
- * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
- * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所消耗的高级能力额度</p>
+ * @method integer getCostBasic() 获取<p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+ * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+ * @method integer getCostAdvanced() 获取<p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+ * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+ * @method float getCostCredits() 获取<p>完成该任务所消耗的视觉理解预付费额度</p>
+ * @method void setCostCredits(float $CostCredits) 设置<p>完成该任务所消耗的视觉理解预付费额度</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,14 +53,19 @@ class InvokeTWeSeeComprehensionResponse extends AbstractModel
     public $ComprehensionResult;
 
     /**
-     * @var integer <p>完成该任务所消耗的基础能力额度</p>
+     * @var integer <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public $CostBasic;
 
     /**
-     * @var integer <p>完成该任务所消耗的高级能力额度</p>
+     * @var integer <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public $CostAdvanced;
+
+    /**
+     * @var float <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public $CostCredits;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -69,8 +76,9 @@ class InvokeTWeSeeComprehensionResponse extends AbstractModel
      * @param string $TaskId <p>任务 ID</p>
      * @param integer $Status <p>任务状态。可能取值：</p><ul><li><code>1</code>：失败</li><li><code>2</code>：空结果</li><li><code>3</code>：有效结果</li><li><code>4</code>：处理中</li></ul>
      * @param SeeComprehensionResult $ComprehensionResult <p>视觉理解结果</p>
-     * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
-     * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * @param integer $CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+     * @param integer $CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+     * @param float $CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -105,6 +113,10 @@ class InvokeTWeSeeComprehensionResponse extends AbstractModel
 
         if (array_key_exists("CostAdvanced",$param) and $param["CostAdvanced"] !== null) {
             $this->CostAdvanced = $param["CostAdvanced"];
+        }
+
+        if (array_key_exists("CostCredits",$param) and $param["CostCredits"] !== null) {
+            $this->CostCredits = $param["CostCredits"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

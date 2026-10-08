@@ -42,10 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceRecognitionResult(SeeFaceRecognitionResult $FaceRecognitionResult) 设置<p>人脸检测结果</p>
  * @method SeeSummarizeResult getSummarizeResult() 获取<p>每日或每周总结结果</p>
  * @method void setSummarizeResult(SeeSummarizeResult $SummarizeResult) 设置<p>每日或每周总结结果</p>
- * @method integer getCostBasic() 获取<p>完成该任务所消耗的基础能力额度</p>
- * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所消耗的基础能力额度</p>
- * @method integer getCostAdvanced() 获取<p>完成该任务所消耗的高级能力额度</p>
- * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所消耗的高级能力额度</p>
+ * @method integer getCostBasic() 获取<p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+ * @method void setCostBasic(integer $CostBasic) 设置<p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+ * @method integer getCostAdvanced() 获取<p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+ * @method void setCostAdvanced(integer $CostAdvanced) 设置<p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+ * @method float getCostCredits() 获取<p>完成该任务所消耗的视觉理解预付费额度</p>
+ * @method void setCostCredits(float $CostCredits) 设置<p>完成该任务所消耗的视觉理解预付费额度</p>
  * @method array getFiles() 获取<p>输出文件名列表</p>
  * @method void setFiles(array $Files) 设置<p>输出文件名列表</p>
  * @method array getFilesInfo() 获取<p>输出文件详情列表</p>
@@ -117,14 +119,19 @@ class SeeTaskInfo extends AbstractModel
     public $SummarizeResult;
 
     /**
-     * @var integer <p>完成该任务所消耗的基础能力额度</p>
+     * @var integer <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
      */
     public $CostBasic;
 
     /**
-     * @var integer <p>完成该任务所消耗的高级能力额度</p>
+     * @var integer <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
      */
     public $CostAdvanced;
+
+    /**
+     * @var float <p>完成该任务所消耗的视觉理解预付费额度</p>
+     */
+    public $CostCredits;
 
     /**
      * @var array <p>输出文件名列表</p>
@@ -168,8 +175,9 @@ class SeeTaskInfo extends AbstractModel
      * @param SeeDetectContinuousResult $DetectContinuousResult <p>标签持续检测结果</p>
      * @param SeeFaceRecognitionResult $FaceRecognitionResult <p>人脸检测结果</p>
      * @param SeeSummarizeResult $SummarizeResult <p>每日或每周总结结果</p>
-     * @param integer $CostBasic <p>完成该任务所消耗的基础能力额度</p>
-     * @param integer $CostAdvanced <p>完成该任务所消耗的高级能力额度</p>
+     * @param integer $CostBasic <p>完成该任务所产生的视觉理解基础能力后付费用量</p>
+     * @param integer $CostAdvanced <p>完成该任务所产生的视觉理解高级能力后付费用量</p>
+     * @param float $CostCredits <p>完成该任务所消耗的视觉理解预付费额度</p>
      * @param array $Files <p>输出文件名列表</p>
      * @param array $FilesInfo <p>输出文件详情列表</p>
      * @param integer $CreateTime <p>创建时间</p>
@@ -246,6 +254,10 @@ class SeeTaskInfo extends AbstractModel
 
         if (array_key_exists("CostAdvanced",$param) and $param["CostAdvanced"] !== null) {
             $this->CostAdvanced = $param["CostAdvanced"];
+        }
+
+        if (array_key_exists("CostCredits",$param) and $param["CostCredits"] !== null) {
+            $this->CostCredits = $param["CostCredits"];
         }
 
         if (array_key_exists("Files",$param) and $param["Files"] !== null) {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTWeSeeSubscription返回参数结构体
  *
- * @method string getOrderId() 获取订单 ID
- * @method void setOrderId(string $OrderId) 设置订单 ID
- * @method string getStatus() 获取订单状态
- * @method void setStatus(string $Status) 设置订单状态
- * @method string getResourceId() 获取资源 ID
- * @method void setResourceId(string $ResourceId) 设置资源 ID
- * @method string getOriginalPrice() 获取原价
- * @method void setOriginalPrice(string $OriginalPrice) 设置原价
- * @method string getDiscountPrice() 获取折后价
- * @method void setDiscountPrice(string $DiscountPrice) 设置折后价
- * @method string getCurrency() 获取币种
- * @method void setCurrency(string $Currency) 设置币种
+ * @method string getOrderId() 获取<p>订单 ID</p>
+ * @method void setOrderId(string $OrderId) 设置<p>订单 ID</p>
+ * @method string getStatus() 获取<p>订单状态</p>
+ * @method void setStatus(string $Status) 设置<p>订单状态</p>
+ * @method string getResourceId() 获取<p>资源 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源 ID</p>
+ * @method string getOriginalPrice() 获取<p>原价</p>
+ * @method void setOriginalPrice(string $OriginalPrice) 设置<p>原价</p>
+ * @method string getDiscountPrice() 获取<p>折后价</p>
+ * @method void setDiscountPrice(string $DiscountPrice) 设置<p>折后价</p>
+ * @method string getCurrency() 获取<p>币种</p>
+ * @method void setCurrency(string $Currency) 设置<p>币种</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTWeSeeSubscriptionResponse extends AbstractModel
 {
     /**
-     * @var string 订单 ID
+     * @var string <p>订单 ID</p>
      */
     public $OrderId;
 
     /**
-     * @var string 订单状态
+     * @var string <p>订单状态</p>
      */
     public $Status;
 
     /**
-     * @var string 资源 ID
+     * @var string <p>资源 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 原价
+     * @var string <p>原价</p>
      */
     public $OriginalPrice;
 
     /**
-     * @var string 折后价
+     * @var string <p>折后价</p>
      */
     public $DiscountPrice;
 
     /**
-     * @var string 币种
+     * @var string <p>币种</p>
      */
     public $Currency;
 
@@ -73,12 +73,12 @@ class CreateTWeSeeSubscriptionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OrderId 订单 ID
-     * @param string $Status 订单状态
-     * @param string $ResourceId 资源 ID
-     * @param string $OriginalPrice 原价
-     * @param string $DiscountPrice 折后价
-     * @param string $Currency 币种
+     * @param string $OrderId <p>订单 ID</p>
+     * @param string $Status <p>订单状态</p>
+     * @param string $ResourceId <p>资源 ID</p>
+     * @param string $OriginalPrice <p>原价</p>
+     * @param string $DiscountPrice <p>折后价</p>
+     * @param string $Currency <p>币种</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

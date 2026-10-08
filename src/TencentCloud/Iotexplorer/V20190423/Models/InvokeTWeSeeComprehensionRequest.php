@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComprehensionConfig(SeeComprehensionConfig $ComprehensionConfig) 设置<p>视觉理解配置项</p>
  * @method integer getWaitResultTimeout() 获取<p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
  * @method void setWaitResultTimeout(integer $WaitResultTimeout) 设置<p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+ * @method array getWaitResultFields() 获取<p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+ * @method void setWaitResultFields(array $WaitResultFields) 设置<p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
  * @method string getCallbackId() 获取<p>回调目标 ID</p>
  * @method void setCallbackId(string $CallbackId) 设置<p>回调目标 ID</p>
  */
@@ -61,6 +63,11 @@ class InvokeTWeSeeComprehensionRequest extends AbstractModel
     public $WaitResultTimeout;
 
     /**
+     * @var array <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
+     */
+    public $WaitResultFields;
+
+    /**
      * @var string <p>回调目标 ID</p>
      */
     public $CallbackId;
@@ -71,6 +78,7 @@ class InvokeTWeSeeComprehensionRequest extends AbstractModel
      * @param SeeTaskMetadata $Metadata <p>任务元数据</p>
      * @param SeeComprehensionConfig $ComprehensionConfig <p>视觉理解配置项</p>
      * @param integer $WaitResultTimeout <p>等待结果的超时时间（单位：秒）。填 0 表示无需等待结果。最大超时时长 25 秒，默认超时时长 20 秒。</p>
+     * @param array $WaitResultFields <p>需额外等待结果的字段列表</p><p>枚举值：</p><ul><li>FaceRecognitionResult： 等待人脸检测结果（仅当 ComprehensionConfig.EnableFaceDetection = true 时有效）</li></ul><p>接口固定会等待视觉理解结果，可选增加等待人脸检测结果</p>
      * @param string $CallbackId <p>回调目标 ID</p>
      */
     function __construct()
@@ -106,6 +114,10 @@ class InvokeTWeSeeComprehensionRequest extends AbstractModel
 
         if (array_key_exists("WaitResultTimeout",$param) and $param["WaitResultTimeout"] !== null) {
             $this->WaitResultTimeout = $param["WaitResultTimeout"];
+        }
+
+        if (array_key_exists("WaitResultFields",$param) and $param["WaitResultFields"] !== null) {
+            $this->WaitResultFields = $param["WaitResultFields"];
         }
 
         if (array_key_exists("CallbackId",$param) and $param["CallbackId"] !== null) {

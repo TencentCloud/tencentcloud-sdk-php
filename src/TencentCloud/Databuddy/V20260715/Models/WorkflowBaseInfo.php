@@ -40,11 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUserName(string $OwnerUserName) 设置工作流负责人用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateUserUin() 获取创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+ * @method string getCreateUserUin() 获取<p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowBaseInfo extends AbstractModel
@@ -80,9 +78,9 @@ class WorkflowBaseInfo extends AbstractModel
     public $OwnerUserName;
 
     /**
-     * @var string 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * @var string <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $CreateUserUin;
 
@@ -97,8 +95,7 @@ class WorkflowBaseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUserName 工作流负责人用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateUserUin 创建人UIN。系统生成字段，入参传值不生效（服务端忽略且不报错）
-【已废弃】服务端忽略传入值，不报错。
+     * @param string $CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云联网描述信息
  *
- * @method string getVpcId() 获取私有网络 ID
- * @method void setVpcId(string $VpcId) 设置私有网络 ID
- * @method string getSubnetId() 获取子网 ID
- * @method void setSubnetId(string $SubnetId) 设置子网 ID
- * @method string getCcnId() 获取云联网 ID，如 ccn-rahigzjd
- * @method void setCcnId(string $CcnId) 设置云联网 ID，如 ccn-rahigzjd
+ * @method string getVpcId() 获取<p>私有网络 ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络 ID</p>
+ * @method string getSubnetId() 获取<p>子网 ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网 ID</p>
+ * @method string getCcnId() 获取<p>云联网 ID，如 ccn-rahigzjd</p>
+ * @method void setCcnId(string $CcnId) 设置<p>云联网 ID，如 ccn-rahigzjd</p>
  */
 class CCN extends AbstractModel
 {
     /**
-     * @var string 私有网络 ID
+     * @var string <p>私有网络 ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网 ID
+     * @var string <p>子网 ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 云联网 ID，如 ccn-rahigzjd
+     * @var string <p>云联网 ID，如 ccn-rahigzjd</p>
      */
     public $CcnId;
 
     /**
-     * @param string $VpcId 私有网络 ID
-     * @param string $SubnetId 子网 ID
-     * @param string $CcnId 云联网 ID，如 ccn-rahigzjd
+     * @param string $VpcId <p>私有网络 ID</p>
+     * @param string $SubnetId <p>子网 ID</p>
+     * @param string $CcnId <p>云联网 ID，如 ccn-rahigzjd</p>
      */
     function __construct()
     {

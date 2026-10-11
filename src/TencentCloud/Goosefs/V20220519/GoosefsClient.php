@@ -30,14 +30,17 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\BuildClientNodeMountCommandResponse BuildClientNodeMountCommand(Models\BuildClientNodeMountCommandRequest $req) 生成客户端的挂载命令
  * @method Models\BuildCustomerClusterResponse BuildCustomerCluster(Models\BuildCustomerClusterRequest $req) 构建客户端集群
  * @method Models\CancelLoadTaskResponse CancelLoadTask(Models\CancelLoadTaskRequest $req) 取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+ * @method Models\CancelPolicyRuleExecuteRecordResponse CancelPolicyRuleExecuteRecord(Models\CancelPolicyRuleExecuteRecordRequest $req) 取消正在执行的扫描任务，正在扫描的任务取消后没有结果
  * @method Models\CreateDataRepositoryTaskResponse CreateDataRepositoryTask(Models\CreateDataRepositoryTaskRequest $req) 创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
  * @method Models\CreateFileSystemResponse CreateFileSystem(Models\CreateFileSystemRequest $req) 创建文件系统
  * @method Models\CreateFilesetResponse CreateFileset(Models\CreateFilesetRequest $req) 创建Fileset
  * @method Models\CreateLoadTaskResponse CreateLoadTask(Models\CreateLoadTaskRequest $req) GooseFS 预热相关接口，用于下发，列出，查询，修改预热任务。用于元数据预热、数据预热场景。 注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+ * @method Models\CreatePolicyRuleResponse CreatePolicyRule(Models\CreatePolicyRuleRequest $req) 创建数据洞察任务
  * @method Models\DeleteCrossVpcSubnetSupportForClientNodeResponse DeleteCrossVpcSubnetSupportForClientNode(Models\DeleteCrossVpcSubnetSupportForClientNodeRequest $req) 为客户端节点删除跨vpc子网访问能力
  * @method Models\DeleteCustomerClusterResponse DeleteCustomerCluster(Models\DeleteCustomerClusterRequest $req) 删除客户端集群
  * @method Models\DeleteFileSystemResponse DeleteFileSystem(Models\DeleteFileSystemRequest $req) 删除文件系统
  * @method Models\DeleteFilesetResponse DeleteFileset(Models\DeleteFilesetRequest $req) 删除Fileset
+ * @method Models\DeletePolicyRuleResponse DeletePolicyRule(Models\DeletePolicyRuleRequest $req) 删除扫描规则
  * @method Models\DescribeClientNodesResponse DescribeClientNodes(Models\DescribeClientNodesRequest $req) 列出集群中所有的客户端节点
  * @method Models\DescribeClusterClientTokenResponse DescribeClusterClientToken(Models\DescribeClusterClientTokenRequest $req) 查询GooseFS集群客户端凭证
  * @method Models\DescribeClusterRoleTokenResponse DescribeClusterRoleToken(Models\DescribeClusterRoleTokenRequest $req) 查询GooseFS集群角色凭证
@@ -48,7 +51,11 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\DescribeFilesetGeneralConfigResponse DescribeFilesetGeneralConfig(Models\DescribeFilesetGeneralConfigRequest $req) 查询Fileset通用配置
  * @method Models\DescribeFilesetsResponse DescribeFilesets(Models\DescribeFilesetsRequest $req) 查询Fileset列表
  * @method Models\DescribeLoadTaskResponse DescribeLoadTask(Models\DescribeLoadTaskRequest $req) 查询单个预热任务执行情况。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+ * @method Models\DescribePolicyRuleResponse DescribePolicyRule(Models\DescribePolicyRuleRequest $req) 列出所有的扫描规则
+ * @method Models\DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecord(Models\DescribePolicyRuleExecuteRecordRequest $req) 列出指定扫描规则的执行记录
  * @method Models\DetachFileSystemBucketResponse DetachFileSystemBucket(Models\DetachFileSystemBucketRequest $req) 解绑文件系统与Bucket的映射
+ * @method Models\DisablePolicyRuleResponse DisablePolicyRule(Models\DisablePolicyRuleRequest $req) 禁用扫描任务
+ * @method Models\EnablePolicyRuleResponse EnablePolicyRule(Models\EnablePolicyRuleRequest $req) 启用扫描任务
  * @method Models\ExpandCapacityResponse ExpandCapacity(Models\ExpandCapacityRequest $req) 扩展文件系统容量
  * @method Models\ListLoadTasksResponse ListLoadTasks(Models\ListLoadTasksRequest $req) 列出该集群下所有预热任务。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
  * @method Models\ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidth(Models\ModifyDataRepositoryBandwidthRequest $req) 修改数据流动带宽

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询
  *
- * @method string getMetricName() 获取指标名
- * @method void setMetricName(string $MetricName) 设置指标名
- * @method array getCompares() 获取同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
- * @method void setCompares(array $Compares) 设置同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
- * @method string getCompare() 获取同比，已弃用，不建议使用
- * @method void setCompare(string $Compare) 设置同比，已弃用，不建议使用
+ * @method string getMetricName() 获取<p>指标名</p>
+ * @method void setMetricName(string $MetricName) 设置<p>指标名</p>
+ * @method array getCompares() 获取<p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
+ * @method void setCompares(array $Compares) 设置<p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
+ * @method string getCompare() 获取<p>同比，已弃用，不建议使用</p>
+ * @method void setCompare(string $Compare) 设置<p>同比，已弃用，不建议使用</p>
  */
 class QueryMetricItem extends AbstractModel
 {
     /**
-     * @var string 指标名
+     * @var string <p>指标名</p>
      */
     public $MetricName;
 
     /**
-     * @var array 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     * @var array <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
      */
     public $Compares;
 
     /**
-     * @var string 同比，已弃用，不建议使用
+     * @var string <p>同比，已弃用，不建议使用</p>
      */
     public $Compare;
 
     /**
-     * @param string $MetricName 指标名
-     * @param array $Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
-     * @param string $Compare 同比，已弃用，不建议使用
+     * @param string $MetricName <p>指标名</p>
+     * @param array $Compares <p>同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比)</p>
+     * @param string $Compare <p>同比，已弃用，不建议使用</p>
      */
     function __construct()
     {

@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotifyHistories请求参数结构体
  *
- * @method string getMonitorType() 获取监控类型
- * @method void setMonitorType(string $MonitorType) 设置监控类型
- * @method integer getQueryBaseTime() 获取起始时间点，unix秒级时间戳
- * @method void setQueryBaseTime(integer $QueryBaseTime) 设置起始时间点，unix秒级时间戳
- * @method integer getQueryBeforeSeconds() 获取从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒
- * @method void setQueryBeforeSeconds(integer $QueryBeforeSeconds) 设置从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒
- * @method PageByNoParams getPageParams() 获取分页参数
- * @method void setPageParams(PageByNoParams $PageParams) 设置分页参数
- * @method string getNamespace() 获取当监控类型为 MT_QCE 时候需要填写，归属的命名空间
- * @method void setNamespace(string $Namespace) 设置当监控类型为 MT_QCE 时候需要填写，归属的命名空间
- * @method string getModelName() 获取当监控类型为 MT_QCE 时候需要填写， 告警策略类型
- * @method void setModelName(string $ModelName) 设置当监控类型为 MT_QCE 时候需要填写， 告警策略类型
- * @method string getPolicyId() 获取查询某个策略的通知历史
- * @method void setPolicyId(string $PolicyId) 设置查询某个策略的通知历史
+ * @method string getMonitorType() 获取<p>监控类型</p>
+ * @method void setMonitorType(string $MonitorType) 设置<p>监控类型</p>
+ * @method integer getQueryBaseTime() 获取<p>起始时间点，unix秒级时间戳</p>
+ * @method void setQueryBaseTime(integer $QueryBaseTime) 设置<p>起始时间点，unix秒级时间戳</p>
+ * @method integer getQueryBeforeSeconds() 获取<p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
+ * @method void setQueryBeforeSeconds(integer $QueryBeforeSeconds) 设置<p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
+ * @method PageByNoParams getPageParams() 获取<p>分页参数</p>
+ * @method void setPageParams(PageByNoParams $PageParams) 设置<p>分页参数</p>
+ * @method string getNamespace() 获取<p>当监控类型为 MT_QCE 时候需要填写，归属的命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>当监控类型为 MT_QCE 时候需要填写，归属的命名空间</p>
+ * @method string getModelName() 获取<p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
+ * @method void setModelName(string $ModelName) 设置<p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
+ * @method string getPolicyId() 获取<p>查询某个策略的通知历史</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>查询某个策略的通知历史</p>
+ * @method string getNotifyId() 获取<p>详情页展示所需id</p>
+ * @method void setNotifyId(string $NotifyId) 设置<p>详情页展示所需id</p>
  */
 class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
 {
     /**
-     * @var string 监控类型
+     * @var string <p>监控类型</p>
      */
     public $MonitorType;
 
     /**
-     * @var integer 起始时间点，unix秒级时间戳
+     * @var integer <p>起始时间点，unix秒级时间戳</p>
      */
     public $QueryBaseTime;
 
     /**
-     * @var integer 从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒
+     * @var integer <p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
      */
     public $QueryBeforeSeconds;
 
     /**
-     * @var PageByNoParams 分页参数
+     * @var PageByNoParams <p>分页参数</p>
      */
     public $PageParams;
 
     /**
-     * @var string 当监控类型为 MT_QCE 时候需要填写，归属的命名空间
+     * @var string <p>当监控类型为 MT_QCE 时候需要填写，归属的命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @var string 当监控类型为 MT_QCE 时候需要填写， 告警策略类型
+     * @var string <p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
      */
     public $ModelName;
 
     /**
-     * @var string 查询某个策略的通知历史
+     * @var string <p>查询某个策略的通知历史</p>
      */
     public $PolicyId;
 
     /**
-     * @param string $MonitorType 监控类型
-     * @param integer $QueryBaseTime 起始时间点，unix秒级时间戳
-     * @param integer $QueryBeforeSeconds 从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒
-     * @param PageByNoParams $PageParams 分页参数
-     * @param string $Namespace 当监控类型为 MT_QCE 时候需要填写，归属的命名空间
-     * @param string $ModelName 当监控类型为 MT_QCE 时候需要填写， 告警策略类型
-     * @param string $PolicyId 查询某个策略的通知历史
+     * @var string <p>详情页展示所需id</p>
+     */
+    public $NotifyId;
+
+    /**
+     * @param string $MonitorType <p>监控类型</p>
+     * @param integer $QueryBaseTime <p>起始时间点，unix秒级时间戳</p>
+     * @param integer $QueryBeforeSeconds <p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
+     * @param PageByNoParams $PageParams <p>分页参数</p>
+     * @param string $Namespace <p>当监控类型为 MT_QCE 时候需要填写，归属的命名空间</p>
+     * @param string $ModelName <p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
+     * @param string $PolicyId <p>查询某个策略的通知历史</p>
+     * @param string $NotifyId <p>详情页展示所需id</p>
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("NotifyId",$param) and $param["NotifyId"] !== null) {
+            $this->NotifyId = $param["NotifyId"];
         }
     }
 }

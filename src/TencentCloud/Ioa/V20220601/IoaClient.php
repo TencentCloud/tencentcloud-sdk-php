@@ -36,6 +36,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DeleteAccountGroupResourcesResponse DeleteAccountGroupResources(Models\DeleteAccountGroupResourcesRequest $req) 删除账户组资源授权，私有化调用path为：capi/NGN/DeleteAccountGroupResources
  * @method Models\DeleteDeviceVirtualGroupResponse DeleteDeviceVirtualGroup(Models\DeleteDeviceVirtualGroupRequest $req) 删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
  * @method Models\DescribeAccountGroupsResponse DescribeAccountGroups(Models\DescribeAccountGroupsRequest $req) 以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
+ * @method Models\DescribeAccountVirtualGroupsResponse DescribeAccountVirtualGroups(Models\DescribeAccountVirtualGroupsRequest $req) 列表账户虚拟组，支持分页，名称搜索，私有化调用path为：capi/Assets/DescribeAccountVirtualGroups，从7.x版本开始支持
  * @method Models\DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftList(Models\DescribeAggrSoftCategorySoftListRequest $req) 聚合的分类软件列表
  * @method Models\DescribeAggrSoftDetailResponse DescribeAggrSoftDetail(Models\DescribeAggrSoftDetailRequest $req) 聚合的软件详情
  * @method Models\DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(Models\DescribeAggrSoftDeviceListRequest $req) 聚合软件的已安装终端列表

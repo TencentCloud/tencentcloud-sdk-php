@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
- * @method integer getExpandedCapacity() 获取新增扩容的系统容量
- * @method void setExpandedCapacity(integer $ExpandedCapacity) 设置新增扩容的系统容量
+ * @method integer getExpandedCapacity() 获取新增扩容的系统容量(单位 GiB)
+ * @method void setExpandedCapacity(integer $ExpandedCapacity) 设置新增扩容的系统容量(单位 GiB)
  * @method string getModifyType() 获取容量修改类型：add/sub
  * @method void setModifyType(string $ModifyType) 设置容量修改类型：add/sub
+ * @method boolean getRapidExpansion() 获取是否是快速扩容,只针对部分model有效
+ * @method void setRapidExpansion(boolean $RapidExpansion) 设置是否是快速扩容,只针对部分model有效
  */
 class ExpandCapacityRequest extends AbstractModel
 {
@@ -35,7 +37,7 @@ class ExpandCapacityRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var integer 新增扩容的系统容量
+     * @var integer 新增扩容的系统容量(单位 GiB)
      */
     public $ExpandedCapacity;
 
@@ -45,9 +47,15 @@ class ExpandCapacityRequest extends AbstractModel
     public $ModifyType;
 
     /**
+     * @var boolean 是否是快速扩容,只针对部分model有效
+     */
+    public $RapidExpansion;
+
+    /**
      * @param string $FileSystemId 文件系统ID
-     * @param integer $ExpandedCapacity 新增扩容的系统容量
+     * @param integer $ExpandedCapacity 新增扩容的系统容量(单位 GiB)
      * @param string $ModifyType 容量修改类型：add/sub
+     * @param boolean $RapidExpansion 是否是快速扩容,只针对部分model有效
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ExpandCapacityRequest extends AbstractModel
 
         if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
             $this->ModifyType = $param["ModifyType"];
+        }
+
+        if (array_key_exists("RapidExpansion",$param) and $param["RapidExpansion"] !== null) {
+            $this->RapidExpansion = $param["RapidExpansion"];
         }
     }
 }

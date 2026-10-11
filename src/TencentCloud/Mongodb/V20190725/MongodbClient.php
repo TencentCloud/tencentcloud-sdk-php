@@ -34,11 +34,15 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) 本接口（CreateDBInstanceHour）用于创建按量计费的MongoDB云数据库实例。
  * @method Models\CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(Models\CreateDBInstanceParamTplRequest $req) 本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
 **说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
+ * @method Models\CreateInstanceRoleResponse CreateInstanceRole(Models\CreateInstanceRoleRequest $req) 创建数据库角色
+ * @method Models\CreateInstanceUserResponse CreateInstanceUser(Models\CreateInstanceUserRequest $req) 创建数据库账号
  * @method Models\CreateLogDownloadTaskResponse CreateLogDownloadTask(Models\CreateLogDownloadTaskRequest $req) 创建日志下载任务
  * @method Models\CreateSlowLogPatternDownloadTaskResponse CreateSlowLogPatternDownloadTask(Models\CreateSlowLogPatternDownloadTaskRequest $req) 创建慢日志统计下载任务
  * @method Models\DeleteAccountUserResponse DeleteAccountUser(Models\DeleteAccountUserRequest $req) 本接口（DeleteAccountUser）用于删除实例的自定义账号。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
  * @method Models\DeleteDBBackupsResponse DeleteDBBackups(Models\DeleteDBBackupsRequest $req) 删除全量备份
+ * @method Models\DeleteInstanceRoleResponse DeleteInstanceRole(Models\DeleteInstanceRoleRequest $req) 删除角色
+ * @method Models\DeleteInstanceUserResponse DeleteInstanceUser(Models\DeleteInstanceUserRequest $req) 删除数据库账号。
  * @method Models\DeleteLogDownloadTaskResponse DeleteLogDownloadTask(Models\DeleteLogDownloadTaskRequest $req) 删除日志下载任务
  * @method Models\DescribeAccountUsersResponse DescribeAccountUsers(Models\DescribeAccountUsersRequest $req) 本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
@@ -63,7 +67,9 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
  * @method Models\DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(Models\DescribeDetailedSlowLogsRequest $req) 本接口（DescribeDetailedSlowLogs）用于查询实例慢日志详情。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
+ * @method Models\DescribeInstanceRolesResponse DescribeInstanceRoles(Models\DescribeInstanceRolesRequest $req) 获取角色列表
  * @method Models\DescribeInstanceSSLResponse DescribeInstanceSSL(Models\DescribeInstanceSSLRequest $req) 查看实例SSL开启状态
+ * @method Models\DescribeInstanceUsersResponse DescribeInstanceUsers(Models\DescribeInstanceUsersRequest $req) 获取账号列表
  * @method Models\DescribeLogDownloadTasksResponse DescribeLogDownloadTasks(Models\DescribeLogDownloadTasksRequest $req) 日志下载任务查询
  * @method Models\DescribeMongodbLogsResponse DescribeMongodbLogs(Models\DescribeMongodbLogsRequest $req) 该接口（DescribeMongodbLogs）用于查询运行日志。
  * @method Models\DescribePasswordRotationResponse DescribePasswordRotation(Models\DescribePasswordRotationRequest $req) 获取密码轮转状态信息
@@ -116,6 +122,8 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtection(Models\SetDBInstanceDeletionProtectionRequest $req) 本接口（SetDBInstanceDeletionProtection）用于设置实例销毁保护
  * @method Models\SetInstanceMaintenanceResponse SetInstanceMaintenance(Models\SetInstanceMaintenanceRequest $req) 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
  * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 本接口（TerminateDBInstances）用于退还包年包月计费实例。
+ * @method Models\UpdateInstanceRoleResponse UpdateInstanceRole(Models\UpdateInstanceRoleRequest $req) 更新数据库角色
+ * @method Models\UpdateInstanceUserResponse UpdateInstanceUser(Models\UpdateInstanceUserRequest $req) 更新数据库账号
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) 本接口(UpgradeDBInstanceKernelVersion)用于升级数据库实例内核版本。
  * @method Models\UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersion(Models\UpgradeDbInstanceVersionRequest $req) 本接口（UpgradeDbInstanceVersion）用于升级数据库版本。
 **说明**：支持3.6及以上版本升级，仅支持从低版本向高版本逐级升级，不支持跨版本升级或版本降级。

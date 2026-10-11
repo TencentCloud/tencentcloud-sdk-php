@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateConsoleGroup请求参数结构体
  *
- * @method string getGroupId() 获取<p>用户组 ID</p>
- * @method void setGroupId(string $GroupId) 设置<p>用户组 ID</p>
+ * @method string getGroupId() 获取<p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
+ * @method void setGroupId(string $GroupId) 设置<p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
  * @method integer getOperType() 获取<p>修改标识：USER_GROUP_OPER_TYPE_ADD_USER(1)=添加成员、USER_GROUP_OPER_TYPE_DELETE_USER(2)=删除成员、USER_GROUP_OPER_TYPE_BASIC_INFO(3)=基础信息（别名和描述）</p>
  * @method void setOperType(integer $OperType) 设置<p>修改标识：USER_GROUP_OPER_TYPE_ADD_USER(1)=添加成员、USER_GROUP_OPER_TYPE_DELETE_USER(2)=删除成员、USER_GROUP_OPER_TYPE_BASIC_INFO(3)=基础信息（别名和描述）</p>
  * @method string getGroupName() 获取<p>用户组名称</p>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateConsoleGroupRequest extends AbstractModel
 {
     /**
-     * @var string <p>用户组 ID</p>
+     * @var string <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public $GroupId;
 
@@ -66,7 +66,7 @@ class UpdateConsoleGroupRequest extends AbstractModel
     public $UserUins;
 
     /**
-     * @param string $GroupId <p>用户组 ID</p>
+     * @param string $GroupId <p>用户组 ID，可通过 ListConsoleGroups 接口获取</p>
      * @param integer $OperType <p>修改标识：USER_GROUP_OPER_TYPE_ADD_USER(1)=添加成员、USER_GROUP_OPER_TYPE_DELETE_USER(2)=删除成员、USER_GROUP_OPER_TYPE_BASIC_INFO(3)=基础信息（别名和描述）</p>
      * @param string $GroupName <p>用户组名称</p>
      * @param string $GroupNickname <p>用户组别名</p>

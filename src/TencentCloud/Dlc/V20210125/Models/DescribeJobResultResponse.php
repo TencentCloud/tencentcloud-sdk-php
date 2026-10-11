@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalRows(integer $TotalRows) 设置<p>结果集全量行数（未按在线展示上限封顶）。Total 为在线可见行数，二者不等说明仅部分行可内联查看，完整结果通过 Download 获取。</p>
  * @method array getRows() 获取<p>行数据（State=SUCCEEDED 才有），每行为 {"Values": [单元格值...]} 数组。</p>
  * @method void setRows(array $Rows) 设置<p>行数据（State=SUCCEEDED 才有），每行为 {"Values": [单元格值...]} 数组。</p>
- * @method boolean getTruncated() 获取<p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
- * @method void setTruncated(boolean $Truncated) 设置<p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+ * @method DownloadInfo getDownload() 获取<p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+ * @method void setDownload(DownloadInfo $Download) 设置<p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+ * @method boolean getTruncated() 获取<p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
+ * @method void setTruncated(boolean $Truncated) 设置<p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,7 +79,12 @@ class DescribeJobResultResponse extends AbstractModel
     public $Rows;
 
     /**
-     * @var boolean <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+     * @var DownloadInfo <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+     */
+    public $Download;
+
+    /**
+     * @var boolean <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
      */
     public $Truncated;
 
@@ -94,7 +101,8 @@ class DescribeJobResultResponse extends AbstractModel
      * @param array $Columns <p>列定义列表（按结果集列顺序；State=SUCCEEDED 才有）。</p>
      * @param integer $TotalRows <p>结果集全量行数（未按在线展示上限封顶）。Total 为在线可见行数，二者不等说明仅部分行可内联查看，完整结果通过 Download 获取。</p>
      * @param array $Rows <p>行数据（State=SUCCEEDED 才有），每行为 {"Values": [单元格值...]} 数组。</p>
-     * @param boolean $Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows > Total 判断，完整结果通过 Download 获取.</p>
+     * @param DownloadInfo $Download <p>下载链接（结果集可用时按需返回；结果过大无法内联展示时仅返回 Download）。</p>
+     * @param boolean $Truncated <p>本页内容是否因响应大小限制被截断（单元格/行超限，结果集仅 1 行时也可能触发）。行数超过在线展示上限不由本标记表达，以 TotalRows &gt; Total 判断，完整结果通过 Download 获取.</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -146,6 +154,11 @@ class DescribeJobResultResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rows, $obj);
             }
+        }
+
+        if (array_key_exists("Download",$param) and $param["Download"] !== null) {
+            $this->Download = new DownloadInfo();
+            $this->Download->deserialize($param["Download"]);
         }
 
         if (array_key_exists("Truncated",$param) and $param["Truncated"] !== null) {

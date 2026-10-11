@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分页请求参数
  *
- * @method integer getPerPage() 获取每个分页的数量是多少
+ * @method integer getPerPage() 获取<p>每个分页的数量是多少</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPerPage(integer $PerPage) 设置每个分页的数量是多少
+ * @method void setPerPage(integer $PerPage) 设置<p>每个分页的数量是多少</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPageNo() 获取第几个分页，从1开始
+ * @method string getPageNo() 获取<p>第几个分页，从1开始</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNo(string $PageNo) 设置第几个分页，从1开始
+ * @method void setPageNo(string $PageNo) 设置<p>第几个分页，从1开始</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PageByNoParams extends AbstractModel
 {
     /**
-     * @var integer 每个分页的数量是多少
+     * @var integer <p>每个分页的数量是多少</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PerPage;
 
     /**
-     * @var string 第几个分页，从1开始
+     * @var string <p>第几个分页，从1开始</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNo;
 
     /**
-     * @param integer $PerPage 每个分页的数量是多少
+     * @param integer $PerPage <p>每个分页的数量是多少</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PageNo 第几个分页，从1开始
+     * @param string $PageNo <p>第几个分页，从1开始</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

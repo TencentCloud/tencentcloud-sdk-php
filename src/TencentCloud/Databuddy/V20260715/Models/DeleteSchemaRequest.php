@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkspaceId(string $WorkspaceId) 设置调用时所在workspace唯一id
  * @method string getConnectionId() 获取数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
  * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+ * @method string getCatalogSource() 获取数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+ * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
  */
 class DeleteSchemaRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeleteSchemaRequest extends AbstractModel
     public $ConnectionId;
 
     /**
+     * @var string 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public $CatalogSource;
+
+    /**
      * @param string $CatalogName 数据目录名
      * @param string $SchemaName 数据库名
      * @param string $WorkspaceId 调用时所在workspace唯一id
      * @param string $ConnectionId 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+     * @param string $CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeleteSchemaRequest extends AbstractModel
 
         if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
             $this->ConnectionId = $param["ConnectionId"];
+        }
+
+        if (array_key_exists("CatalogSource",$param) and $param["CatalogSource"] !== null) {
+            $this->CatalogSource = $param["CatalogSource"];
         }
     }
 }

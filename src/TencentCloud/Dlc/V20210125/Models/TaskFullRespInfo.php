@@ -220,6 +220,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueTime(integer $QueueTime) 设置<p>排队时间</p><p>单位：毫秒</p>
  * @method string getResourceGroupType() 获取<p>资源组类型</p>
  * @method void setResourceGroupType(string $ResourceGroupType) 设置<p>资源组类型</p>
+ * @method string getTag() 获取<p>任务标签</p><p>参数格式：任意字符串</p>
+ * @method void setTag(string $Tag) 设置<p>任务标签</p><p>参数格式：任意字符串</p>
  */
 class TaskFullRespInfo extends AbstractModel
 {
@@ -612,6 +614,11 @@ class TaskFullRespInfo extends AbstractModel
     public $ResourceGroupType;
 
     /**
+     * @var string <p>任务标签</p><p>参数格式：任意字符串</p>
+     */
+    public $Tag;
+
+    /**
      * @param string $DatabaseName <p>任务所属Database的名称。</p>
      * @param integer $DataAmount <p>任务数据量。</p>
      * @param string $Id <p>任务Id。</p>
@@ -712,6 +719,7 @@ class TaskFullRespInfo extends AbstractModel
      * @param integer $ActiveCore <p>活跃core</p>
      * @param integer $QueueTime <p>排队时间</p><p>单位：毫秒</p>
      * @param string $ResourceGroupType <p>资源组类型</p>
+     * @param string $Tag <p>任务标签</p><p>参数格式：任意字符串</p>
      */
     function __construct()
     {
@@ -1015,6 +1023,10 @@ class TaskFullRespInfo extends AbstractModel
 
         if (array_key_exists("ResourceGroupType",$param) and $param["ResourceGroupType"] !== null) {
             $this->ResourceGroupType = $param["ResourceGroupType"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
         }
     }
 }

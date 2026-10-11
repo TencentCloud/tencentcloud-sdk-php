@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视图方案勾选情况
  *
- * @method array getComponent() 获取组件勾选情况
+ * @method array getComponent() 获取<p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponent(array $Component) 设置组件勾选情况
+ * @method void setComponent(array $Component) 设置<p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Selectors extends AbstractModel
 {
     /**
-     * @var array 组件勾选情况
+     * @var array <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Component;
 
     /**
-     * @param array $Component 组件勾选情况
+     * @param array $Component <p>组件勾选情况</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

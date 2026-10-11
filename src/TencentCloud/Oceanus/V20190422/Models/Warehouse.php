@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHiveCatalogType() 获取<p>hive cata 类型</p>
  * @method void setHiveCatalogType(integer $HiveCatalogType) 设置<p>hive cata 类型</p>
+ * @method string getStorageSerialId() 获取<p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageSerialId(string $StorageSerialId) 设置<p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Warehouse extends AbstractModel
 {
@@ -121,6 +125,12 @@ class Warehouse extends AbstractModel
     public $HiveCatalogType;
 
     /**
+     * @var string <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageSerialId;
+
+    /**
      * @param integer $Status <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location <p>location</p>
@@ -140,6 +150,8 @@ class Warehouse extends AbstractModel
      * @param array $Properties <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HiveCatalogType <p>hive cata 类型</p>
+     * @param string $StorageSerialId <p>流湖托管通serialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -202,6 +214,10 @@ class Warehouse extends AbstractModel
 
         if (array_key_exists("HiveCatalogType",$param) and $param["HiveCatalogType"] !== null) {
             $this->HiveCatalogType = $param["HiveCatalogType"];
+        }
+
+        if (array_key_exists("StorageSerialId",$param) and $param["StorageSerialId"] !== null) {
+            $this->StorageSerialId = $param["StorageSerialId"];
         }
     }
 }

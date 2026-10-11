@@ -88,6 +88,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\DescribeTrainingTaskPodsResponse DescribeTrainingTaskPods(Models\DescribeTrainingTaskPodsRequest $req) 训练任务pod列表
  * @method Models\DescribeTrainingTasksResponse DescribeTrainingTasks(Models\DescribeTrainingTasksRequest $req) 训练任务列表
  * @method Models\DescribeWorkspacesResponse DescribeWorkspaces(Models\DescribeWorkspacesRequest $req) 查询工作空间列表
+ * @method Models\EnableTrainingTaskClsConfigResponse EnableTrainingTaskClsConfig(Models\EnableTrainingTaskClsConfigRequest $req) 开启CLS日志投递
  * @method Models\ModifyModelServiceResponse ModifyModelService(Models\ModifyModelServiceRequest $req) 用于更新模型服务
  * @method Models\ModifyModelServiceAuthTokenResponse ModifyModelServiceAuthToken(Models\ModifyModelServiceAuthTokenRequest $req) 修改一个 AuthToken
  * @method Models\ModifyModelServiceAuthorizationResponse ModifyModelServiceAuthorization(Models\ModifyModelServiceAuthorizationRequest $req) 修改服务鉴权配置

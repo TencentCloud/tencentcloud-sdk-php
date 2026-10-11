@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionId(string $ConnectionId) 设置connection 的 ID
  * @method string getCatalogSource() 获取数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
  * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+ * @method string getConnectionCatalogName() 获取连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+ * @method void setConnectionCatalogName(string $ConnectionCatalogName) 设置连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
  */
 class CreateCatalogRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateCatalogRequest extends AbstractModel
     public $CatalogSource;
 
     /**
+     * @var string 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     */
+    public $ConnectionCatalogName;
+
+    /**
      * @param string $Name catalog名称
      * @param string $Type catalog类型, 可选值TABLE、MODEL、VOLUME
      * @param string $WorkspaceId 工作空间唯一id
      * @param string $Comment 描述
      * @param string $ConnectionId connection 的 ID
      * @param string $CatalogSource 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+     * @param string $ConnectionCatalogName 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateCatalogRequest extends AbstractModel
 
         if (array_key_exists("CatalogSource",$param) and $param["CatalogSource"] !== null) {
             $this->CatalogSource = $param["CatalogSource"];
+        }
+
+        if (array_key_exists("ConnectionCatalogName",$param) and $param["ConnectionCatalogName"] !== null) {
+            $this->ConnectionCatalogName = $param["ConnectionCatalogName"];
         }
     }
 }

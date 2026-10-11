@@ -20,57 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频增强配置
  *
- * @method AudioDenoiseConfig getDenoise() 获取音频降噪配置。
+ * @method AudioDenoiseConfig getDenoise() 获取<p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDenoise(AudioDenoiseConfig $Denoise) 设置音频降噪配置。
+ * @method void setDenoise(AudioDenoiseConfig $Denoise) 设置<p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioSeparateConfig getSeparate() 获取音频分离配置。
+ * @method AudioSeparateConfig getSeparate() 获取<p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeparate(AudioSeparateConfig $Separate) 设置音频分离配置。
+ * @method void setSeparate(AudioSeparateConfig $Separate) 设置<p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method VolumeBalanceConfig getVolumeBalance() 获取音量均衡配置。
+ * @method VolumeBalanceConfig getVolumeBalance() 获取<p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) 设置音量均衡配置。
+ * @method void setVolumeBalance(VolumeBalanceConfig $VolumeBalance) 设置<p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AudioBeautifyConfig getBeautify() 获取音频美化配置。
+ * @method AudioBeautifyConfig getBeautify() 获取<p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeautify(AudioBeautifyConfig $Beautify) 设置音频美化配置。
+ * @method void setBeautify(AudioBeautifyConfig $Beautify) 设置<p>音频美化配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AudioEnhanceEditConfig getAudioEnhanceEdit() 获取<p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioEnhanceEdit(AudioEnhanceEditConfig $AudioEnhanceEdit) 设置<p>音频增强编辑。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioEnhanceConfig extends AbstractModel
 {
     /**
-     * @var AudioDenoiseConfig 音频降噪配置。
+     * @var AudioDenoiseConfig <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Denoise;
 
     /**
-     * @var AudioSeparateConfig 音频分离配置。
+     * @var AudioSeparateConfig <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Separate;
 
     /**
-     * @var VolumeBalanceConfig 音量均衡配置。
+     * @var VolumeBalanceConfig <p>音量均衡配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeBalance;
 
     /**
-     * @var AudioBeautifyConfig 音频美化配置。
+     * @var AudioBeautifyConfig <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Beautify;
 
     /**
-     * @param AudioDenoiseConfig $Denoise 音频降噪配置。
+     * @var AudioEnhanceEditConfig <p>音频增强编辑。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioSeparateConfig $Separate 音频分离配置。
+     */
+    public $AudioEnhanceEdit;
+
+    /**
+     * @param AudioDenoiseConfig $Denoise <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeBalanceConfig $VolumeBalance 音量均衡配置。
+     * @param AudioSeparateConfig $Separate <p>音频分离配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioBeautifyConfig $Beautify 音频美化配置。
+     * @param VolumeBalanceConfig $VolumeBalance <p>音量均衡配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioBeautifyConfig $Beautify <p>音频美化配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioEnhanceEditConfig $AudioEnhanceEdit <p>音频增强编辑。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,11 @@ class AudioEnhanceConfig extends AbstractModel
         if (array_key_exists("Beautify",$param) and $param["Beautify"] !== null) {
             $this->Beautify = new AudioBeautifyConfig();
             $this->Beautify->deserialize($param["Beautify"]);
+        }
+
+        if (array_key_exists("AudioEnhanceEdit",$param) and $param["AudioEnhanceEdit"] !== null) {
+            $this->AudioEnhanceEdit = new AudioEnhanceEditConfig();
+            $this->AudioEnhanceEdit->deserialize($param["AudioEnhanceEdit"]);
         }
     }
 }

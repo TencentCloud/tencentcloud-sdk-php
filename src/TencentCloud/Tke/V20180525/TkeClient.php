@@ -136,7 +136,9 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterRouteTablesResponse DescribeClusterRouteTables(Models\DescribeClusterRouteTablesRequest $req) 查询集群路由表
  * @method Models\DescribeClusterRoutesResponse DescribeClusterRoutes(Models\DescribeClusterRoutesRequest $req) 查询集群路由
  * @method Models\DescribeClusterSchedulerPolicyResponse DescribeClusterSchedulerPolicy(Models\DescribeClusterSchedulerPolicyRequest $req) 查询集群调度策略
- * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) 集群的密钥信息
+ * @method Models\DescribeClusterSecurityResponse DescribeClusterSecurity(Models\DescribeClusterSecurityRequest $req) DescribeClusterSecurity 是 TKE 早期获取集群访问凭证的接口。该接口被纳入 QcloudTKEReadOnlyAccess 只读策略；在具备相应集群访问权限的条件下，子账号可能通过它取得集群 admin Token，获得超出只读授权预期的集群内管理权限。\\n\\n  根据本次提供的内部沟通记录，9 月有客户反馈：其只读子账号的 AK/SK 泄露后，被他人用于调用该接口并获取集群 admin Token。事件的实际影响范围及处置结果，仍以安全团队的核查结论为准。\\n\\n  后续计划先建立接口访问白名单：允许当前确实在使用该接口的账号暂时继续调用，拦截大部分当前未使用该接口的账号请求，并推动存量用户迁移。接口计划自 2026 年 10 月 31 日起逐步下线，预计 12 月 31 日全部下线。白名单仅限制后续接口调用；已经泄露的 AK/SK 或已取得的集群凭证仍需单独处置。
+
+集群的密钥信息
  * @method Models\DescribeClusterStatusResponse DescribeClusterStatus(Models\DescribeClusterStatusRequest $req) 查看集群状态列表
  * @method Models\DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(Models\DescribeClusterVirtualNodeRequest $req) 查看超级节点列表，仅支持TKE标准集群
  * @method Models\DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(Models\DescribeClusterVirtualNodePoolsRequest $req) 查看超级节点池列表

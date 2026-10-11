@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRestoration(AiRestorationConfig $AiRestoration) 设置<p>大模型修复配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DiffusionEnhanceV2Config getDiffusionEnhanceV2() 获取<p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiffusionEnhanceV2(DiffusionEnhanceV2Config $DiffusionEnhanceV2) 设置<p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoEnhanceConfig extends AbstractModel
 {
@@ -154,6 +158,12 @@ class VideoEnhanceConfig extends AbstractModel
     public $AiRestoration;
 
     /**
+     * @var DiffusionEnhanceV2Config <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiffusionEnhanceV2;
+
+    /**
      * @param FrameRateConfig $FrameRate <p>插帧帧率配置（旧）。新用户建议使用FrameRateWithDen配置插帧帧率，支持分数，且效果更好。注意，FrameRate 与FrameRateWithDen 只能二选一，同时配置可能导致任务失败。源帧率大于等于目标帧率时能力不会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SuperResolutionConfig $SuperResolution <p>超分配置。源分辨率高于目标分辨率时不对视频做处理。注意与大模型增强不可同时开启。</p>
@@ -179,6 +189,8 @@ class VideoEnhanceConfig extends AbstractModel
      * @param FrameRateWithDenConfig $FrameRateWithDen <p>新插帧帧率配置，支持分数。注意与FrameRate二选一。源帧率大于等于目标帧率时能力不会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRestorationConfig $AiRestoration <p>大模型修复配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiffusionEnhanceV2Config $DiffusionEnhanceV2 <p>大模型增强专业版配置。注意大模型、综合增强、去毛刺三项里最多配置一项。且不可与超分、降噪同时开启。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -256,6 +268,11 @@ class VideoEnhanceConfig extends AbstractModel
         if (array_key_exists("AiRestoration",$param) and $param["AiRestoration"] !== null) {
             $this->AiRestoration = new AiRestorationConfig();
             $this->AiRestoration->deserialize($param["AiRestoration"]);
+        }
+
+        if (array_key_exists("DiffusionEnhanceV2",$param) and $param["DiffusionEnhanceV2"] !== null) {
+            $this->DiffusionEnhanceV2 = new DiffusionEnhanceV2Config();
+            $this->DiffusionEnhanceV2->deserialize($param["DiffusionEnhanceV2"]);
         }
     }
 }

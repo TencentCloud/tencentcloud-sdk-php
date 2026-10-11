@@ -56,6 +56,11 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJob(Models\DescribeMarkEssayAgentJobRequest $req) 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
 
 默认接口请求并发限制：2次/分钟。
+ * @method Models\DescribeMultimodalDocParseJobResponse DescribeMultimodalDocParseJob(Models\DescribeMultimodalDocParseJobRequest $req) 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+创建任务接口文档地址：https://cloud.tencent.com/document/product/1024/953218
+
+默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJob(Models\DescribeQuestionMarkAgentJobRequest $req) 用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
 默认接口请求并发限制：10张/分钟。
@@ -638,6 +643,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(Models\RideHailingTransportLicenseOCRRequest $req) 本接口支持网约车运输证关键字段的识别，包括交运管许可字号、车辆所有人、车辆号牌、起始日期、截止日期、发证日期。
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的 Rerank 模型，支持对多路召回的结果进行重排序，根据查询内容与文档切片内容的相关性，按顺序返回每一条文档内容与查询内容的相关性分数。
  * @method Models\SealOCRResponse SealOCR(Models\SealOCRRequest $req) 本接口支持各类印章主体内容、印章其他内容及形状识别，支持单图多印章识别，包括发票章、财务章等，适用于公文票据等场景。
 
 默认接口请求频率限制：5次/秒。
@@ -648,10 +654,17 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\SubmitMarkEssayAgentJobResponse SubmitMarkEssayAgentJob(Models\SubmitMarkEssayAgentJobRequest $req) 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
 
 默认接口请求并发限制：2次/分钟。
+ * @method Models\SubmitMultimodalDocParseJobResponse SubmitMultimodalDocParseJob(Models\SubmitMultimodalDocParseJobRequest $req) 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+查询任务接口文档地址：https://cloud.tencent.com/document/product/1024/953219
+
+默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJob(Models\SubmitQuestionMarkAgentJobRequest $req) 用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
 默认接口请求并发限制：10张/分钟。
  * @method Models\SubmitQuestionSplitJobResponse SubmitQuestionSplitJob(Models\SubmitQuestionSplitJobRequest $req) 异步试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，是试卷切题的接口补充。主要解决试卷录题这类多页场景、单题跨页场景。需要 SubmitQuestionSplitOCRJob（提交任务）、DescribeQuestionSplitOCRJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) <b>此接口为表格识别的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/49525">新版表格识别</a>。</b>
 
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。

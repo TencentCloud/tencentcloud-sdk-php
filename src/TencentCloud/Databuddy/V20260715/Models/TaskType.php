@@ -146,13 +146,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotebook(TaskTypeNotebookExt $Notebook) 设置<p>Notebook 类型扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTaskTypePropertyList() 获取<p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
+ * @method array getTaskTypePropertyList() 获取<p>任务扩展属性列表，具体填写参考TaskType.TaskPropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskTypePropertyList(array $TaskTypePropertyList) 设置<p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
+ * @method void setTaskTypePropertyList(array $TaskTypePropertyList) 设置<p>任务扩展属性列表，具体填写参考TaskType.TaskPropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRuntimePropertyList() 获取<p>运行时属性列表</p>
+ * @method array getRuntimePropertyList() 获取<p>运行时属性列表，具体填写参考TaskType.RuntimePropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuntimePropertyList(array $RuntimePropertyList) 设置<p>运行时属性列表</p>
+ * @method void setRuntimePropertyList(array $RuntimePropertyList) 设置<p>运行时属性列表，具体填写参考TaskType.RuntimePropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskType extends AbstractModel
@@ -166,17 +166,18 @@ class TaskType extends AbstractModel
     /**
      * @var TaskTypeNotebookExt <p>Notebook 类型扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Notebook;
 
     /**
-     * @var array <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
+     * @var array <p>任务扩展属性列表，具体填写参考TaskType.TaskPropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTypePropertyList;
 
     /**
-     * @var array <p>运行时属性列表</p>
+     * @var array <p>运行时属性列表，具体填写参考TaskType.RuntimePropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimePropertyList;
@@ -186,9 +187,9 @@ class TaskType extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTypeNotebookExt $Notebook <p>Notebook 类型扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TaskTypePropertyList <p>任务类型属性列表，不同任务类型所需的 PropertyKey 不同，具体取值请参考 ListWorkflowTaskTypeProperties 接口返回</p>
+     * @param array $TaskTypePropertyList <p>任务扩展属性列表，具体填写参考TaskType.TaskPropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RuntimePropertyList <p>运行时属性列表</p>
+     * @param array $RuntimePropertyList <p>运行时属性列表，具体填写参考TaskType.RuntimePropertyList描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

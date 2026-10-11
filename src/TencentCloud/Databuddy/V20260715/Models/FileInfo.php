@@ -92,9 +92,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceMode(integer $ResourceMode) 设置<p>资源模式。1=分布式，2=单节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AsyncOperation getAsyncOperation() 获取ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+ * @method AsyncOperation getAsyncOperation() 获取<p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncOperation(AsyncOperation $AsyncOperation) 设置ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+ * @method void setAsyncOperation(AsyncOperation $AsyncOperation) 设置<p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionId() 获取<p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionId(string $VersionId) 设置<p>脚本版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
@@ -212,10 +216,16 @@ class FileInfo extends AbstractModel
     public $ResourceMode;
 
     /**
-     * @var AsyncOperation ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * @var AsyncOperation <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncOperation;
+
+    /**
+     * @var string <p>脚本版本ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionId;
 
     /**
      * @param string $AppId <p>主账号 AppId</p>
@@ -254,7 +264,9 @@ class FileInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceMode <p>资源模式。1=分布式，2=单节点</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncOperation $AsyncOperation ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段
+     * @param AsyncOperation $AsyncOperation <p>ZIP 异步创建时透传 Workspace 作业信息；普通同步创建或其他复用该返回结构的接口不设置该字段</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionId <p>脚本版本ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -351,6 +363,10 @@ class FileInfo extends AbstractModel
         if (array_key_exists("AsyncOperation",$param) and $param["AsyncOperation"] !== null) {
             $this->AsyncOperation = new AsyncOperation();
             $this->AsyncOperation->deserialize($param["AsyncOperation"]);
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

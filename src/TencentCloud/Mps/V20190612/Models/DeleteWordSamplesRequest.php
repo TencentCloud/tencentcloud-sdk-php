@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWordSamples请求参数结构体
  *
- * @method array getKeywords() 获取关键词，数组长度限制：100 个词。
- * @method void setKeywords(array $Keywords) 设置关键词，数组长度限制：100 个词。
+ * @method array getKeywords() 获取<p>关键词，数组长度限制：100 个词。</p>
+ * @method void setKeywords(array $Keywords) 设置<p>关键词，数组长度限制：100 个词。</p>
  */
 class DeleteWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array 关键词，数组长度限制：100 个词。
+     * @var array <p>关键词，数组长度限制：100 个词。</p>
      */
     public $Keywords;
 
     /**
-     * @param array $Keywords 关键词，数组长度限制：100 个词。
+     * @param array $Keywords <p>关键词，数组长度限制：100 个词。</p>
      */
     function __construct()
     {

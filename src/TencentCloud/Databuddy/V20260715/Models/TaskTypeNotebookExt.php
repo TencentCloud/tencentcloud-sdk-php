@@ -18,7 +18,7 @@ namespace TencentCloud\Databuddy\V20260715\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Notebook 类型任务扩展
+ * （本对象在TaskType内已废弃，统一使用TaskType.TaskTypePropertyList）Notebook 类型任务扩展
  *
  * @method string getSource() 获取<p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -42,24 +42,28 @@ class TaskTypeNotebookExt extends AbstractModel
     /**
      * @var string <p>脚本来源。取值：SCRIPT_SOURCE_LOCAL（本地）/ SCRIPT_SOURCE_GIT（Git 仓库）/<br>SCRIPT_SOURCE_CFS（CFS 文件系统）/ SCRIPT_SOURCE_COS（COS 对象存储）/<br>SCRIPT_SOURCE_WORKSPACE（工作空间）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Source;
 
     /**
      * @var string <p>前端显示使用，对执行平台无意义</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DisplayPath;
 
     /**
      * @var string <p>Notebook 相对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $NotebookPath;
 
     /**
      * @var string <p>Notebook 绝对路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $NotebookAbsolutePath;
 

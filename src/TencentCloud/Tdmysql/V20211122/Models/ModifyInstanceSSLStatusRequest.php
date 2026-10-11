@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
  * @method boolean getEnabled() 获取<p>是否启用SSL</p>
  * @method void setEnabled(boolean $Enabled) 设置<p>是否启用SSL</p>
+ * @method string getCertificateType() 获取<p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+ * @method void setCertificateType(string $CertificateType) 设置<p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+ * @method string getCertificateId() 获取<p>腾讯云SSL证书服务的证书ID</p>
+ * @method void setCertificateId(string $CertificateId) 设置<p>腾讯云SSL证书服务的证书ID</p>
  */
 class ModifyInstanceSSLStatusRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ModifyInstanceSSLStatusRequest extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+     */
+    public $CertificateType;
+
+    /**
+     * @var string <p>腾讯云SSL证书服务的证书ID</p>
+     */
+    public $CertificateId;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param boolean $Enabled <p>是否启用SSL</p>
+     * @param string $CertificateType <p>证书类型</p><p>枚举值：</p><ul><li>Cloud： 云端证书</li><li>Custom： 自定义证书</li></ul>
+     * @param string $CertificateId <p>腾讯云SSL证书服务的证书ID</p>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ModifyInstanceSSLStatusRequest extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("CertificateType",$param) and $param["CertificateType"] !== null) {
+            $this->CertificateType = $param["CertificateType"];
+        }
+
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
     }
 }

@@ -20,194 +20,326 @@ use TencentCloud\Common\AbstractModel;
 /**
  * session集群信息
  *
- * @method string getClusterGroupSerialId() 获取集群SerialId
- * @method void setClusterGroupSerialId(string $ClusterGroupSerialId) 设置集群SerialId
- * @method integer getAppId() 获取创建者appId
- * @method void setAppId(integer $AppId) 设置创建者appId
- * @method string getOwnerUin() 获取创建者主账号
- * @method void setOwnerUin(string $OwnerUin) 设置创建者主账号
- * @method string getCreatorUin() 获取创建者账号
- * @method void setCreatorUin(string $CreatorUin) 设置创建者账号
- * @method string getRegion() 获取区域
- * @method void setRegion(string $Region) 设置区域
- * @method string getZone() 获取zone
- * @method void setZone(string $Zone) 设置zone
- * @method integer getStatus() 获取Session集群状态
- * @method void setStatus(integer $Status) 设置Session集群状态
- * @method float getCuNum() 获取Session集群消耗的cu数量
- * @method void setCuNum(float $CuNum) 设置Session集群消耗的cu数量
- * @method string getFlinkVersion() 获取Session集群的Flink版本
- * @method void setFlinkVersion(string $FlinkVersion) 设置Session集群的Flink版本
- * @method string getWebUIUrl() 获取session集群FlinkUi地址
- * @method void setWebUIUrl(string $WebUIUrl) 设置session集群FlinkUi地址
- * @method array getProperties() 获取session集群高级参数
+ * @method string getClusterGroupSerialId() 获取<p>集群SerialId</p>
+ * @method void setClusterGroupSerialId(string $ClusterGroupSerialId) 设置<p>集群SerialId</p>
+ * @method integer getAppId() 获取<p>创建者appId</p>
+ * @method void setAppId(integer $AppId) 设置<p>创建者appId</p>
+ * @method string getOwnerUin() 获取<p>创建者主账号</p>
+ * @method void setOwnerUin(string $OwnerUin) 设置<p>创建者主账号</p>
+ * @method string getCreatorUin() 获取<p>创建者账号</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建者账号</p>
+ * @method string getRegion() 获取<p>区域</p>
+ * @method void setRegion(string $Region) 设置<p>区域</p>
+ * @method string getZone() 获取<p>zone</p>
+ * @method void setZone(string $Zone) 设置<p>zone</p>
+ * @method integer getStatus() 获取<p>Session集群状态</p>
+ * @method void setStatus(integer $Status) 设置<p>Session集群状态</p>
+ * @method float getCuNum() 获取<p>Session集群消耗的cu数量</p>
+ * @method void setCuNum(float $CuNum) 设置<p>Session集群消耗的cu数量</p>
+ * @method string getFlinkVersion() 获取<p>Session集群的Flink版本</p>
+ * @method void setFlinkVersion(string $FlinkVersion) 设置<p>Session集群的Flink版本</p>
+ * @method string getWebUIUrl() 获取<p>session集群FlinkUi地址</p>
+ * @method void setWebUIUrl(string $WebUIUrl) 设置<p>session集群FlinkUi地址</p>
+ * @method array getProperties() 获取<p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProperties(array $Properties) 设置session集群高级参数
+ * @method void setProperties(array $Properties) 设置<p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResourceRefs() 获取引用资源
+ * @method array getResourceRefs() 获取<p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceRefs(array $ResourceRefs) 设置引用资源
+ * @method void setResourceRefs(array $ResourceRefs) 设置<p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getJobManagerCuSpec() 获取JobManager的规格
- * @method void setJobManagerCuSpec(float $JobManagerCuSpec) 设置JobManager的规格
- * @method float getTaskManagerCuSpec() 获取TaskManager的规格
- * @method void setTaskManagerCuSpec(float $TaskManagerCuSpec) 设置TaskManager的规格
- * @method integer getTaskManagerNum() 获取TaskManager启动的数量
- * @method void setTaskManagerNum(integer $TaskManagerNum) 设置TaskManager启动的数量
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method float getJobManagerCpu() 获取JobManagerCpu
- * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManagerCpu
- * @method float getJobManagerMem() 获取JobManagerMem
- * @method void setJobManagerMem(float $JobManagerMem) 设置JobManagerMem
- * @method float getTaskManagerCpu() 获取TaskManagerCpu
- * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManagerCpu
- * @method float getTaskManagerMem() 获取TaskManagerMem
- * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManagerMem
- * @method string getJdkVersion() 获取jdk版本
- * @method void setJdkVersion(string $JdkVersion) 设置jdk版本
+ * @method float getJobManagerCuSpec() 获取<p>JobManager的规格</p>
+ * @method void setJobManagerCuSpec(float $JobManagerCuSpec) 设置<p>JobManager的规格</p>
+ * @method float getTaskManagerCuSpec() 获取<p>TaskManager的规格</p>
+ * @method void setTaskManagerCuSpec(float $TaskManagerCuSpec) 设置<p>TaskManager的规格</p>
+ * @method integer getTaskManagerNum() 获取<p>TaskManager启动的数量</p>
+ * @method void setTaskManagerNum(integer $TaskManagerNum) 设置<p>TaskManager启动的数量</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method float getJobManagerCpu() 获取<p>JobManagerCpu</p>
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置<p>JobManagerCpu</p>
+ * @method float getJobManagerMem() 获取<p>JobManagerMem</p>
+ * @method void setJobManagerMem(float $JobManagerMem) 设置<p>JobManagerMem</p>
+ * @method float getTaskManagerCpu() 获取<p>TaskManagerCpu</p>
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置<p>TaskManagerCpu</p>
+ * @method float getTaskManagerMem() 获取<p>TaskManagerMem</p>
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置<p>TaskManagerMem</p>
+ * @method string getJdkVersion() 获取<p>jdk版本</p>
+ * @method void setJdkVersion(string $JdkVersion) 设置<p>jdk版本</p>
+ * @method string getDescription() 获取<p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置<p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取<p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置<p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSerialId() 获取<p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSerialId(string $SerialId) 设置<p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterGroupName() 获取<p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterGroupName(string $ClusterGroupName) 设置<p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTotalCpu() 获取<p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCpu(float $TotalCpu) 设置<p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTotalMem() 获取<p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalMem(float $TotalMem) 设置<p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkSpaceId() 获取<p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置<p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkSpaceName() 获取<p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkSpaceName(string $WorkSpaceName) 设置<p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取<p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogConfig() 获取<p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogConfig(string $LogConfig) 设置<p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateUin() 获取<p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateUin(string $UpdateUin) 设置<p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterSession extends AbstractModel
 {
     /**
-     * @var string 集群SerialId
+     * @var string <p>集群SerialId</p>
      */
     public $ClusterGroupSerialId;
 
     /**
-     * @var integer 创建者appId
+     * @var integer <p>创建者appId</p>
      */
     public $AppId;
 
     /**
-     * @var string 创建者主账号
+     * @var string <p>创建者主账号</p>
      */
     public $OwnerUin;
 
     /**
-     * @var string 创建者账号
+     * @var string <p>创建者账号</p>
      */
     public $CreatorUin;
 
     /**
-     * @var string 区域
+     * @var string <p>区域</p>
      */
     public $Region;
 
     /**
-     * @var string zone
+     * @var string <p>zone</p>
      */
     public $Zone;
 
     /**
-     * @var integer Session集群状态
+     * @var integer <p>Session集群状态</p>
      */
     public $Status;
 
     /**
-     * @var float Session集群消耗的cu数量
+     * @var float <p>Session集群消耗的cu数量</p>
      */
     public $CuNum;
 
     /**
-     * @var string Session集群的Flink版本
+     * @var string <p>Session集群的Flink版本</p>
      */
     public $FlinkVersion;
 
     /**
-     * @var string session集群FlinkUi地址
+     * @var string <p>session集群FlinkUi地址</p>
      */
     public $WebUIUrl;
 
     /**
-     * @var array session集群高级参数
+     * @var array <p>session集群高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Properties;
 
     /**
-     * @var array 引用资源
+     * @var array <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRefs;
 
     /**
-     * @var float JobManager的规格
+     * @var float <p>JobManager的规格</p>
      */
     public $JobManagerCuSpec;
 
     /**
-     * @var float TaskManager的规格
+     * @var float <p>TaskManager的规格</p>
      */
     public $TaskManagerCuSpec;
 
     /**
-     * @var integer TaskManager启动的数量
+     * @var integer <p>TaskManager启动的数量</p>
      */
     public $TaskManagerNum;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var float JobManagerCpu
+     * @var float <p>JobManagerCpu</p>
      */
     public $JobManagerCpu;
 
     /**
-     * @var float JobManagerMem
+     * @var float <p>JobManagerMem</p>
      */
     public $JobManagerMem;
 
     /**
-     * @var float TaskManagerCpu
+     * @var float <p>TaskManagerCpu</p>
      */
     public $TaskManagerCpu;
 
     /**
-     * @var float TaskManagerMem
+     * @var float <p>TaskManagerMem</p>
      */
     public $TaskManagerMem;
 
     /**
-     * @var string jdk版本
+     * @var string <p>jdk版本</p>
      */
     public $JdkVersion;
 
     /**
-     * @param string $ClusterGroupSerialId 集群SerialId
-     * @param integer $AppId 创建者appId
-     * @param string $OwnerUin 创建者主账号
-     * @param string $CreatorUin 创建者账号
-     * @param string $Region 区域
-     * @param string $Zone zone
-     * @param integer $Status Session集群状态
-     * @param float $CuNum Session集群消耗的cu数量
-     * @param string $FlinkVersion Session集群的Flink版本
-     * @param string $WebUIUrl session集群FlinkUi地址
-     * @param array $Properties session集群高级参数
+     * @var string <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ResourceRefs 引用资源
+     */
+    public $Description;
+
+    /**
+     * @var string <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $JobManagerCuSpec JobManager的规格
-     * @param float $TaskManagerCuSpec TaskManager的规格
-     * @param integer $TaskManagerNum TaskManager启动的数量
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
-     * @param float $JobManagerCpu JobManagerCpu
-     * @param float $JobManagerMem JobManagerMem
-     * @param float $TaskManagerCpu TaskManagerCpu
-     * @param float $TaskManagerMem TaskManagerMem
-     * @param string $JdkVersion jdk版本
+     */
+    public $Name;
+
+    /**
+     * @var string <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SerialId;
+
+    /**
+     * @var string <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterGroupName;
+
+    /**
+     * @var float <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCpu;
+
+    /**
+     * @var float <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalMem;
+
+    /**
+     * @var string <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkSpaceId;
+
+    /**
+     * @var string <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkSpaceName;
+
+    /**
+     * @var array <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogConfig;
+
+    /**
+     * @var string <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateUin;
+
+    /**
+     * @param string $ClusterGroupSerialId <p>集群SerialId</p>
+     * @param integer $AppId <p>创建者appId</p>
+     * @param string $OwnerUin <p>创建者主账号</p>
+     * @param string $CreatorUin <p>创建者账号</p>
+     * @param string $Region <p>区域</p>
+     * @param string $Zone <p>zone</p>
+     * @param integer $Status <p>Session集群状态</p>
+     * @param float $CuNum <p>Session集群消耗的cu数量</p>
+     * @param string $FlinkVersion <p>Session集群的Flink版本</p>
+     * @param string $WebUIUrl <p>session集群FlinkUi地址</p>
+     * @param array $Properties <p>session集群高级参数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceRefs <p>引用资源</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $JobManagerCuSpec <p>JobManager的规格</p>
+     * @param float $TaskManagerCuSpec <p>TaskManager的规格</p>
+     * @param integer $TaskManagerNum <p>TaskManager启动的数量</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param float $JobManagerCpu <p>JobManagerCpu</p>
+     * @param float $JobManagerMem <p>JobManagerMem</p>
+     * @param float $TaskManagerCpu <p>TaskManagerCpu</p>
+     * @param float $TaskManagerMem <p>TaskManagerMem</p>
+     * @param string $JdkVersion <p>jdk版本</p>
+     * @param string $Description <p>描述</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name <p>名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SerialId <p>session集群SerialId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterGroupName <p>集群名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TotalCpu <p>cu</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TotalMem <p>使用Mem</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkSpaceId <p>空间Id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkSpaceName <p>空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogConfig <p>采集日志配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUin <p>更新用户</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -318,6 +450,55 @@ class ClusterSession extends AbstractModel
 
         if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
             $this->JdkVersion = $param["JdkVersion"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SerialId",$param) and $param["SerialId"] !== null) {
+            $this->SerialId = $param["SerialId"];
+        }
+
+        if (array_key_exists("ClusterGroupName",$param) and $param["ClusterGroupName"] !== null) {
+            $this->ClusterGroupName = $param["ClusterGroupName"];
+        }
+
+        if (array_key_exists("TotalCpu",$param) and $param["TotalCpu"] !== null) {
+            $this->TotalCpu = $param["TotalCpu"];
+        }
+
+        if (array_key_exists("TotalMem",$param) and $param["TotalMem"] !== null) {
+            $this->TotalMem = $param["TotalMem"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("WorkSpaceName",$param) and $param["WorkSpaceName"] !== null) {
+            $this->WorkSpaceName = $param["WorkSpaceName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
+            $this->LogConfig = $param["LogConfig"];
+        }
+
+        if (array_key_exists("UpdateUin",$param) and $param["UpdateUin"] !== null) {
+            $this->UpdateUin = $param["UpdateUin"];
         }
     }
 }

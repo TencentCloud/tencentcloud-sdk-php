@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tke资源元数据
  *
- * @method string getRegion() 获取地域
- * @method void setRegion(string $Region) 设置地域
- * @method string getClusterID() 获取集群ID
- * @method void setClusterID(string $ClusterID) 设置集群ID
- * @method string getPodName() 获取pod name
- * @method void setPodName(string $PodName) 设置pod name
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
- * @method string getDeployment() 获取工作负载
- * @method void setDeployment(string $Deployment) 设置工作负载
- * @method string getPodIP() 获取pod ip
- * @method void setPodIP(string $PodIP) 设置pod ip
- * @method string getNodeIP() 获取node ip
- * @method void setNodeIP(string $NodeIP) 设置node ip
+ * @method string getRegion() 获取<p>地域</p>
+ * @method void setRegion(string $Region) 设置<p>地域</p>
+ * @method string getClusterID() 获取<p>集群ID</p>
+ * @method void setClusterID(string $ClusterID) 设置<p>集群ID</p>
+ * @method string getPodName() 获取<p>pod name</p>
+ * @method void setPodName(string $PodName) 设置<p>pod name</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getDeployment() 获取<p>工作负载</p>
+ * @method void setDeployment(string $Deployment) 设置<p>工作负载</p>
+ * @method string getPodIP() 获取<p>pod ip</p>
+ * @method void setPodIP(string $PodIP) 设置<p>pod ip</p>
+ * @method string getNodeIP() 获取<p>node ip</p>
+ * @method void setNodeIP(string $NodeIP) 设置<p>node ip</p>
  */
 class TkeMeta extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
      */
     public $Region;
 
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterID;
 
     /**
-     * @var string pod name
+     * @var string <p>pod name</p>
      */
     public $PodName;
 
     /**
-     * @var string 命名空间
+     * @var string <p>命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @var string 工作负载
+     * @var string <p>工作负载</p>
      */
     public $Deployment;
 
     /**
-     * @var string pod ip
+     * @var string <p>pod ip</p>
      */
     public $PodIP;
 
     /**
-     * @var string node ip
+     * @var string <p>node ip</p>
      */
     public $NodeIP;
 
     /**
-     * @param string $Region 地域
-     * @param string $ClusterID 集群ID
-     * @param string $PodName pod name
-     * @param string $Namespace 命名空间
-     * @param string $Deployment 工作负载
-     * @param string $PodIP pod ip
-     * @param string $NodeIP node ip
+     * @param string $Region <p>地域</p>
+     * @param string $ClusterID <p>集群ID</p>
+     * @param string $PodName <p>pod name</p>
+     * @param string $Namespace <p>命名空间</p>
+     * @param string $Deployment <p>工作负载</p>
+     * @param string $PodIP <p>pod ip</p>
+     * @param string $NodeIP <p>node ip</p>
      */
     function __construct()
     {

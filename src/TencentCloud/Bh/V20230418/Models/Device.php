@@ -20,274 +20,274 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资产信息
  *
- * @method integer getId() 获取资产ID
- * @method void setId(integer $Id) 设置资产ID
- * @method string getInstanceId() 获取实例ID，对应CVM、CDB等实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID，对应CVM、CDB等实例ID
- * @method string getName() 获取资产名
- * @method void setName(string $Name) 设置资产名
- * @method string getPublicIp() 获取公网IP
- * @method void setPublicIp(string $PublicIp) 设置公网IP
- * @method string getPrivateIp() 获取内网IP
- * @method void setPrivateIp(string $PrivateIp) 设置内网IP
- * @method string getApCode() 获取地域编码
- * @method void setApCode(string $ApCode) 设置地域编码
- * @method string getApName() 获取地域名称
- * @method void setApName(string $ApName) 设置地域名称
- * @method string getOsName() 获取操作系统名称
- * @method void setOsName(string $OsName) 设置操作系统名称
- * @method integer getKind() 获取资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
- * @method void setKind(integer $Kind) 设置资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
- * @method integer getPort() 获取管理端口
- * @method void setPort(integer $Port) 设置管理端口
- * @method array getGroupSet() 获取所属资产组列表
- * @method void setGroupSet(array $GroupSet) 设置所属资产组列表
- * @method integer getAccountCount() 获取资产绑定的账号数
- * @method void setAccountCount(integer $AccountCount) 设置资产绑定的账号数
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method Resource getResource() 获取堡垒机服务信息，注意没有绑定服务时为null
- * @method void setResource(Resource $Resource) 设置堡垒机服务信息，注意没有绑定服务时为null
- * @method Department getDepartment() 获取资产所属部门
- * @method void setDepartment(Department $Department) 设置资产所属部门
- * @method array getIpPortSet() 获取数据库资产的多节点
- * @method void setIpPortSet(array $IpPortSet) 设置数据库资产的多节点
- * @method string getDomainId() 获取网络域Id
- * @method void setDomainId(string $DomainId) 设置网络域Id
- * @method string getDomainName() 获取网络域名称
- * @method void setDomainName(string $DomainName) 设置网络域名称
- * @method integer getEnableSSL() 获取是否启用SSL，仅支持Redis资产。0：禁用 1：启用
- * @method void setEnableSSL(integer $EnableSSL) 设置是否启用SSL，仅支持Redis资产。0：禁用 1：启用
- * @method string getSSLCertName() 获取已上传的SSL证书名称
- * @method void setSSLCertName(string $SSLCertName) 设置已上传的SSL证书名称
- * @method integer getIOAId() 获取IOA侧的资源ID
- * @method void setIOAId(integer $IOAId) 设置IOA侧的资源ID
- * @method integer getManageDimension() 获取K8S集群托管维度。1-集群，2-命名空间，3-工作负载
- * @method void setManageDimension(integer $ManageDimension) 设置K8S集群托管维度。1-集群，2-命名空间，3-工作负载
- * @method integer getManageAccountId() 获取K8S集群托管账号id	
- * @method void setManageAccountId(integer $ManageAccountId) 设置K8S集群托管账号id	
- * @method string getNamespace() 获取K8S集群命名空间	
- * @method void setNamespace(string $Namespace) 设置K8S集群命名空间	
- * @method string getWorkload() 获取K8S集群工作负载	
- * @method void setWorkload(string $Workload) 设置K8S集群工作负载	
- * @method integer getSyncPodCount() 获取K8S集群pod已同步数量
- * @method void setSyncPodCount(integer $SyncPodCount) 设置K8S集群pod已同步数量
- * @method integer getTotalPodCount() 获取K8S集群pod总数量	
- * @method void setTotalPodCount(integer $TotalPodCount) 设置K8S集群pod总数量	
- * @method integer getCloudAccountId() 获取云账号id
- * @method void setCloudAccountId(integer $CloudAccountId) 设置云账号id
- * @method string getCloudAccountName() 获取云账号名称
- * @method void setCloudAccountName(string $CloudAccountName) 设置云账号名称
- * @method integer getProviderType() 获取云厂商类型1-腾讯云，2-阿里云
- * @method void setProviderType(integer $ProviderType) 设置云厂商类型1-腾讯云，2-阿里云
- * @method string getProviderName() 获取云厂商名称
- * @method void setProviderName(string $ProviderName) 设置云厂商名称
- * @method integer getSyncCloudDeviceStatus() 获取同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
- * @method void setSyncCloudDeviceStatus(integer $SyncCloudDeviceStatus) 设置同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+ * @method integer getId() 获取<p>资产ID</p>
+ * @method void setId(integer $Id) 设置<p>资产ID</p>
+ * @method string getInstanceId() 获取<p>实例ID，对应CVM、CDB等实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID，对应CVM、CDB等实例ID</p>
+ * @method string getName() 获取<p>资产名</p>
+ * @method void setName(string $Name) 设置<p>资产名</p>
+ * @method string getPublicIp() 获取<p>公网IP</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>公网IP</p>
+ * @method string getPrivateIp() 获取<p>内网IP</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>内网IP</p>
+ * @method string getApCode() 获取<p>地域编码</p>
+ * @method void setApCode(string $ApCode) 设置<p>地域编码</p>
+ * @method string getApName() 获取<p>地域名称</p>
+ * @method void setApName(string $ApName) 设置<p>地域名称</p>
+ * @method string getOsName() 获取<p>操作系统名称</p>
+ * @method void setOsName(string $OsName) 设置<p>操作系统名称</p>
+ * @method integer getKind() 获取<p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+ * @method void setKind(integer $Kind) 设置<p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+ * @method integer getPort() 获取<p>管理端口</p>
+ * @method void setPort(integer $Port) 设置<p>管理端口</p>
+ * @method array getGroupSet() 获取<p>所属资产组列表</p>
+ * @method void setGroupSet(array $GroupSet) 设置<p>所属资产组列表</p>
+ * @method integer getAccountCount() 获取<p>资产绑定的账号数</p>
+ * @method void setAccountCount(integer $AccountCount) 设置<p>资产绑定的账号数</p>
+ * @method string getVpcId() 获取<p>VPC ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>VPC ID</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method Resource getResource() 获取<p>堡垒机服务信息，注意没有绑定服务时为null</p>
+ * @method void setResource(Resource $Resource) 设置<p>堡垒机服务信息，注意没有绑定服务时为null</p>
+ * @method Department getDepartment() 获取<p>资产所属部门</p>
+ * @method void setDepartment(Department $Department) 设置<p>资产所属部门</p>
+ * @method array getIpPortSet() 获取<p>数据库资产的多节点</p>
+ * @method void setIpPortSet(array $IpPortSet) 设置<p>数据库资产的多节点</p>
+ * @method string getDomainId() 获取<p>网络域Id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>网络域Id</p>
+ * @method string getDomainName() 获取<p>网络域名称</p>
+ * @method void setDomainName(string $DomainName) 设置<p>网络域名称</p>
+ * @method integer getEnableSSL() 获取<p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
+ * @method void setEnableSSL(integer $EnableSSL) 设置<p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
+ * @method string getSSLCertName() 获取<p>已上传的SSL证书名称</p>
+ * @method void setSSLCertName(string $SSLCertName) 设置<p>已上传的SSL证书名称</p>
+ * @method integer getIOAId() 获取<p>IOA侧的资源ID</p>
+ * @method void setIOAId(integer $IOAId) 设置<p>IOA侧的资源ID</p>
+ * @method integer getManageDimension() 获取<p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
+ * @method void setManageDimension(integer $ManageDimension) 设置<p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
+ * @method integer getManageAccountId() 获取<p>K8S集群托管账号id</p>
+ * @method void setManageAccountId(integer $ManageAccountId) 设置<p>K8S集群托管账号id</p>
+ * @method string getNamespace() 获取<p>K8S集群命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>K8S集群命名空间</p>
+ * @method string getWorkload() 获取<p>K8S集群工作负载</p>
+ * @method void setWorkload(string $Workload) 设置<p>K8S集群工作负载</p>
+ * @method integer getSyncPodCount() 获取<p>K8S集群pod已同步数量</p>
+ * @method void setSyncPodCount(integer $SyncPodCount) 设置<p>K8S集群pod已同步数量</p>
+ * @method integer getTotalPodCount() 获取<p>K8S集群pod总数量</p>
+ * @method void setTotalPodCount(integer $TotalPodCount) 设置<p>K8S集群pod总数量</p>
+ * @method integer getCloudAccountId() 获取<p>云账号id</p>
+ * @method void setCloudAccountId(integer $CloudAccountId) 设置<p>云账号id</p>
+ * @method string getCloudAccountName() 获取<p>云账号名称</p>
+ * @method void setCloudAccountName(string $CloudAccountName) 设置<p>云账号名称</p>
+ * @method integer getProviderType() 获取<p>云厂商类型1-腾讯云，2-阿里云</p>
+ * @method void setProviderType(integer $ProviderType) 设置<p>云厂商类型1-腾讯云，2-阿里云</p>
+ * @method string getProviderName() 获取<p>云厂商名称</p>
+ * @method void setProviderName(string $ProviderName) 设置<p>云厂商名称</p>
+ * @method integer getSyncCloudDeviceStatus() 获取<p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
+ * @method void setSyncCloudDeviceStatus(integer $SyncCloudDeviceStatus) 设置<p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
  */
 class Device extends AbstractModel
 {
     /**
-     * @var integer 资产ID
+     * @var integer <p>资产ID</p>
      */
     public $Id;
 
     /**
-     * @var string 实例ID，对应CVM、CDB等实例ID
+     * @var string <p>实例ID，对应CVM、CDB等实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产名
+     * @var string <p>资产名</p>
      */
     public $Name;
 
     /**
-     * @var string 公网IP
+     * @var string <p>公网IP</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 内网IP
+     * @var string <p>内网IP</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string 地域编码
+     * @var string <p>地域编码</p>
      */
     public $ApCode;
 
     /**
-     * @var string 地域名称
+     * @var string <p>地域名称</p>
      */
     public $ApName;
 
     /**
-     * @var string 操作系统名称
+     * @var string <p>操作系统名称</p>
      */
     public $OsName;
 
     /**
-     * @var integer 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @var integer <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
      */
     public $Kind;
 
     /**
-     * @var integer 管理端口
+     * @var integer <p>管理端口</p>
      */
     public $Port;
 
     /**
-     * @var array 所属资产组列表
+     * @var array <p>所属资产组列表</p>
      */
     public $GroupSet;
 
     /**
-     * @var integer 资产绑定的账号数
+     * @var integer <p>资产绑定的账号数</p>
      */
     public $AccountCount;
 
     /**
-     * @var string VPC ID
+     * @var string <p>VPC ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var Resource 堡垒机服务信息，注意没有绑定服务时为null
+     * @var Resource <p>堡垒机服务信息，注意没有绑定服务时为null</p>
      */
     public $Resource;
 
     /**
-     * @var Department 资产所属部门
+     * @var Department <p>资产所属部门</p>
      */
     public $Department;
 
     /**
-     * @var array 数据库资产的多节点
+     * @var array <p>数据库资产的多节点</p>
      */
     public $IpPortSet;
 
     /**
-     * @var string 网络域Id
+     * @var string <p>网络域Id</p>
      */
     public $DomainId;
 
     /**
-     * @var string 网络域名称
+     * @var string <p>网络域名称</p>
      */
     public $DomainName;
 
     /**
-     * @var integer 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     * @var integer <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
      */
     public $EnableSSL;
 
     /**
-     * @var string 已上传的SSL证书名称
+     * @var string <p>已上传的SSL证书名称</p>
      */
     public $SSLCertName;
 
     /**
-     * @var integer IOA侧的资源ID
+     * @var integer <p>IOA侧的资源ID</p>
      */
     public $IOAId;
 
     /**
-     * @var integer K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     * @var integer <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
      */
     public $ManageDimension;
 
     /**
-     * @var integer K8S集群托管账号id	
+     * @var integer <p>K8S集群托管账号id</p>
      */
     public $ManageAccountId;
 
     /**
-     * @var string K8S集群命名空间	
+     * @var string <p>K8S集群命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @var string K8S集群工作负载	
+     * @var string <p>K8S集群工作负载</p>
      */
     public $Workload;
 
     /**
-     * @var integer K8S集群pod已同步数量
+     * @var integer <p>K8S集群pod已同步数量</p>
      */
     public $SyncPodCount;
 
     /**
-     * @var integer K8S集群pod总数量	
+     * @var integer <p>K8S集群pod总数量</p>
      */
     public $TotalPodCount;
 
     /**
-     * @var integer 云账号id
+     * @var integer <p>云账号id</p>
      */
     public $CloudAccountId;
 
     /**
-     * @var string 云账号名称
+     * @var string <p>云账号名称</p>
      */
     public $CloudAccountName;
 
     /**
-     * @var integer 云厂商类型1-腾讯云，2-阿里云
+     * @var integer <p>云厂商类型1-腾讯云，2-阿里云</p>
      */
     public $ProviderType;
 
     /**
-     * @var string 云厂商名称
+     * @var string <p>云厂商名称</p>
      */
     public $ProviderName;
 
     /**
-     * @var integer 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * @var integer <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     public $SyncCloudDeviceStatus;
 
     /**
-     * @param integer $Id 资产ID
-     * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
-     * @param string $Name 资产名
-     * @param string $PublicIp 公网IP
-     * @param string $PrivateIp 内网IP
-     * @param string $ApCode 地域编码
-     * @param string $ApName 地域名称
-     * @param string $OsName 操作系统名称
-     * @param integer $Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param integer $Port 管理端口
-     * @param array $GroupSet 所属资产组列表
-     * @param integer $AccountCount 资产绑定的账号数
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId 子网ID
-     * @param Resource $Resource 堡垒机服务信息，注意没有绑定服务时为null
-     * @param Department $Department 资产所属部门
-     * @param array $IpPortSet 数据库资产的多节点
-     * @param string $DomainId 网络域Id
-     * @param string $DomainName 网络域名称
-     * @param integer $EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
-     * @param string $SSLCertName 已上传的SSL证书名称
-     * @param integer $IOAId IOA侧的资源ID
-     * @param integer $ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
-     * @param integer $ManageAccountId K8S集群托管账号id	
-     * @param string $Namespace K8S集群命名空间	
-     * @param string $Workload K8S集群工作负载	
-     * @param integer $SyncPodCount K8S集群pod已同步数量
-     * @param integer $TotalPodCount K8S集群pod总数量	
-     * @param integer $CloudAccountId 云账号id
-     * @param string $CloudAccountName 云账号名称
-     * @param integer $ProviderType 云厂商类型1-腾讯云，2-阿里云
-     * @param string $ProviderName 云厂商名称
-     * @param integer $SyncCloudDeviceStatus 同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期
+     * @param integer $Id <p>资产ID</p>
+     * @param string $InstanceId <p>实例ID，对应CVM、CDB等实例ID</p>
+     * @param string $Name <p>资产名</p>
+     * @param string $PublicIp <p>公网IP</p>
+     * @param string $PrivateIp <p>内网IP</p>
+     * @param string $ApCode <p>地域编码</p>
+     * @param string $ApName <p>地域名称</p>
+     * @param string $OsName <p>操作系统名称</p>
+     * @param integer $Kind <p>资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer</p>
+     * @param integer $Port <p>管理端口</p>
+     * @param array $GroupSet <p>所属资产组列表</p>
+     * @param integer $AccountCount <p>资产绑定的账号数</p>
+     * @param string $VpcId <p>VPC ID</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param Resource $Resource <p>堡垒机服务信息，注意没有绑定服务时为null</p>
+     * @param Department $Department <p>资产所属部门</p>
+     * @param array $IpPortSet <p>数据库资产的多节点</p>
+     * @param string $DomainId <p>网络域Id</p>
+     * @param string $DomainName <p>网络域名称</p>
+     * @param integer $EnableSSL <p>是否启用SSL，仅支持Redis资产。0：禁用 1：启用</p>
+     * @param string $SSLCertName <p>已上传的SSL证书名称</p>
+     * @param integer $IOAId <p>IOA侧的资源ID</p>
+     * @param integer $ManageDimension <p>K8S集群托管维度。1-集群，2-命名空间，3-工作负载</p>
+     * @param integer $ManageAccountId <p>K8S集群托管账号id</p>
+     * @param string $Namespace <p>K8S集群命名空间</p>
+     * @param string $Workload <p>K8S集群工作负载</p>
+     * @param integer $SyncPodCount <p>K8S集群pod已同步数量</p>
+     * @param integer $TotalPodCount <p>K8S集群pod总数量</p>
+     * @param integer $CloudAccountId <p>云账号id</p>
+     * @param string $CloudAccountName <p>云账号名称</p>
+     * @param integer $ProviderType <p>云厂商类型1-腾讯云，2-阿里云</p>
+     * @param string $ProviderName <p>云厂商名称</p>
+     * @param integer $SyncCloudDeviceStatus <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
      */
     function __construct()
     {

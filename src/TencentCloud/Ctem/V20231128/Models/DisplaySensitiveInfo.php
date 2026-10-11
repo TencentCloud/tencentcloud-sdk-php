@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudAssetStatus(integer $CloudAssetStatus) 设置<p>云资产是否下线：-1-已下线 0-正常</p>
  * @method integer getAggregationCount() 获取<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
  * @method void setAggregationCount(integer $AggregationCount) 设置<p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getLastCheckTime() 获取<p>最近检测时间</p>
+ * @method void setLastCheckTime(string $LastCheckTime) 设置<p>最近检测时间</p>
  */
 class DisplaySensitiveInfo extends AbstractModel
 {
@@ -80,6 +84,16 @@ class DisplaySensitiveInfo extends AbstractModel
     public $AggregationCount;
 
     /**
+     * @var string <p>状态</p>
+     */
+    public $Status;
+
+    /**
+     * @var string <p>最近检测时间</p>
+     */
+    public $LastCheckTime;
+
+    /**
      * @param integer $Id <p>主键Id</p>
      * @param string $Type <p>类型</p>
      * @param string $Source <p>来源</p>
@@ -88,6 +102,8 @@ class DisplaySensitiveInfo extends AbstractModel
      * @param integer $IsCloudAsset <p>是否为云资产：0-非云资产 1-是云资产</p>
      * @param integer $CloudAssetStatus <p>云资产是否下线：-1-已下线 0-正常</p>
      * @param integer $AggregationCount <p>聚合视角下该组真实子项总数；非聚合视角为 0</p>
+     * @param string $Status <p>状态</p>
+     * @param string $LastCheckTime <p>最近检测时间</p>
      */
     function __construct()
     {
@@ -133,6 +149,14 @@ class DisplaySensitiveInfo extends AbstractModel
 
         if (array_key_exists("AggregationCount",$param) and $param["AggregationCount"] !== null) {
             $this->AggregationCount = $param["AggregationCount"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LastCheckTime",$param) and $param["LastCheckTime"] !== null) {
+            $this->LastCheckTime = $param["LastCheckTime"];
         }
     }
 }

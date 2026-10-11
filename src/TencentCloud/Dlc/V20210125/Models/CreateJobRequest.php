@@ -44,10 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCode(string $PartitionCode) 设置<p>资源分区代码，仅 RunMode=JOB 可传（QueueName 非空时必填）；RunMode=WAREHOUSE 时禁止传。</p>
  * @method string getQueueName() 获取<p>队列名称，必须与 PartitionCode 成对使用（RunMode=JOB 下可选）；RunMode=WAREHOUSE 下被仓库反查值覆盖，无需传。</p>
  * @method void setQueueName(string $QueueName) 设置<p>队列名称，必须与 PartitionCode 成对使用（RunMode=JOB 下可选）；RunMode=WAREHOUSE 下被仓库反查值覆盖，无需传。</p>
+ * @method Spec getSpec() 获取<p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+ * @method void setSpec(Spec $Spec) 设置<p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
  * @method string getCustomProperties() 获取<p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
  * @method void setCustomProperties(string $CustomProperties) 设置<p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
+ * @method EngineConfigDependencies getDependencies() 获取<p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+ * @method void setDependencies(EngineConfigDependencies $Dependencies) 设置<p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
  * @method array getEnvVars() 获取<p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
  * @method void setEnvVars(array $EnvVars) 设置<p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+ * @method EntrypointInfo getEntrypoint() 获取<p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+ * @method void setEntrypoint(EntrypointInfo $Entrypoint) 设置<p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
  */
 class CreateJobRequest extends AbstractModel
 {
@@ -112,14 +118,29 @@ class CreateJobRequest extends AbstractModel
     public $QueueName;
 
     /**
+     * @var Spec <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
+     */
+    public $Spec;
+
+    /**
      * @var string <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
      */
     public $CustomProperties;
 
     /**
+     * @var EngineConfigDependencies <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+     */
+    public $Dependencies;
+
+    /**
      * @var array <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
      */
     public $EnvVars;
+
+    /**
+     * @var EntrypointInfo <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
+     */
+    public $Entrypoint;
 
     /**
      * @param string $JobName <p>作业名称，长度 ≤256；可省略，省略时服务端回退为 JobId。</p>
@@ -134,8 +155,11 @@ class CreateJobRequest extends AbstractModel
      * @param string $SysCatalogVersion <p>内置 Catalog 版本码（取值为 DescribeSysCatalogList 返回的目录子类型）。RunMode=JOB 时条件必填：未传时若可用（enabled）SysCatalog 唯一则自动选中，多个/零个报错；RunMode=WAREHOUSE 时禁止传。</p>
      * @param string $PartitionCode <p>资源分区代码，仅 RunMode=JOB 可传（QueueName 非空时必填）；RunMode=WAREHOUSE 时禁止传。</p>
      * @param string $QueueName <p>队列名称，必须与 PartitionCode 成对使用（RunMode=JOB 下可选）；RunMode=WAREHOUSE 下被仓库反查值覆盖，无需传。</p>
+     * @param Spec $Spec <p>集群规格配置。RunMode=JOB 时必填（MajorType 对应引擎字段须非空、其余引擎字段须为空）；RunMode=WAREHOUSE 时忽略。</p>
      * @param string $CustomProperties <p>自定义 Spark conf（JSON 字符串，亦接受多行 key=value 文本，归一化为 JSON 存储、出参恒为 JSON），作为 SPARK_CUSTOM 配置通道落库，两种运行模式均生效。</p>
+     * @param EngineConfigDependencies $Dependencies <p>依赖管理（jars / files / archives / pyFiles）。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
      * @param array $EnvVars <p>环境变量（KEY=VALUE）列表。仅 RunMode=JOB 可传；RunMode=WAREHOUSE 时禁止传。</p>
+     * @param EntrypointInfo $Entrypoint <p>入口点配置，必填。SPARK_SQL 时 Statement 必填（≤1MB）；SPARK_BATCH 时 Statement 或 EntryFile 至少其一（EntryFile 须匹配路径前缀白名单）。</p>
      */
     function __construct()
     {
@@ -198,8 +222,18 @@ class CreateJobRequest extends AbstractModel
             $this->QueueName = $param["QueueName"];
         }
 
+        if (array_key_exists("Spec",$param) and $param["Spec"] !== null) {
+            $this->Spec = new Spec();
+            $this->Spec->deserialize($param["Spec"]);
+        }
+
         if (array_key_exists("CustomProperties",$param) and $param["CustomProperties"] !== null) {
             $this->CustomProperties = $param["CustomProperties"];
+        }
+
+        if (array_key_exists("Dependencies",$param) and $param["Dependencies"] !== null) {
+            $this->Dependencies = new EngineConfigDependencies();
+            $this->Dependencies->deserialize($param["Dependencies"]);
         }
 
         if (array_key_exists("EnvVars",$param) and $param["EnvVars"] !== null) {
@@ -209,6 +243,11 @@ class CreateJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EnvVars, $obj);
             }
+        }
+
+        if (array_key_exists("Entrypoint",$param) and $param["Entrypoint"] !== null) {
+            $this->Entrypoint = new EntrypointInfo();
+            $this->Entrypoint->deserialize($param["Entrypoint"]);
         }
     }
 }

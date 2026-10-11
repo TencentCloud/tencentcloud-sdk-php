@@ -80,23 +80,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerTask(WorkflowTask $InnerTask) 设置<p>内嵌任务（FOR_EACH任务的子任务）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method string getCreateTime() 获取<p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method string getUpdateTime() 获取<p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateUserUin() 获取创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method string getCreateUserUin() 获取<p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateUserUin(string $CreateUserUin) 设置创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+ * @method void setCreateUserUin(string $CreateUserUin) 设置<p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTask extends AbstractModel
@@ -192,22 +186,19 @@ class WorkflowTask extends AbstractModel
     public $InnerTask;
 
     /**
-     * @var string 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @var string <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @var string <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @var string <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserUin;
@@ -243,14 +234,11 @@ class WorkflowTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkflowTask $InnerTask <p>内嵌任务（FOR_EACH任务的子任务）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param string $CreateTime <p>创建时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间，单位：毫秒时间戳。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param string $UpdateTime <p>更新时间，单位：毫秒时间戳。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateUserUin 创建人UIN。出参专用，系统生成，入参传值不生效
-【已废弃】服务端忽略传入值，不报错。
+     * @param string $CreateUserUin <p>创建人UIN。系统生成字段，仅出参返回，入参无需传入（传入不生效，服务端忽略且不报错）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

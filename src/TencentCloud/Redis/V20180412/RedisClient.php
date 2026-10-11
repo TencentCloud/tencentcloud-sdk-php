@@ -142,6 +142,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\SwitchInstanceVipResponse SwitchInstanceVip(Models\SwitchInstanceVipRequest $req) 在通过 DTS 支持跨可用区灾备的场景中，通过该接口（SwitchInstanceVip）交换实例 VIP 完成实例灾备切换。交换 VIP 后目标实例可写，源和目标实例VIP互换，同时源与目标实例间 DTS 同步任务断开。
  * @method Models\SwitchProxyResponse SwitchProxy(Models\SwitchProxyRequest $req) 本接口（SwitchProxy）为 Proxy 模拟故障接口。
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）用于变更实例的配置规格。
+ * @method Models\UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersion(Models\UpgradeInstanceProductVersionRequest $req) 本接口（UpgradeInstanceProductVersion）用于升级实例类型，可从通用 I 型升级到通用 II 型。
  * @method Models\UpgradeInstanceVersionResponse UpgradeInstanceVersion(Models\UpgradeInstanceVersionRequest $req) 本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。
  * @method Models\UpgradeProxyVersionResponse UpgradeProxyVersion(Models\UpgradeProxyVersionRequest $req) 本接口（UpgradeProxyVersion）用于升级实例 Proxy 版本。
  * @method Models\UpgradeSmallVersionResponse UpgradeSmallVersion(Models\UpgradeSmallVersionRequest $req) 本接口（UpgradeSmallVersion）用于实例小版本升级。

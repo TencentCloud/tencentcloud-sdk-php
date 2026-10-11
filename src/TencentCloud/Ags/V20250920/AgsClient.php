@@ -36,6 +36,8 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\CreatePreCacheImageTaskResponse CreatePreCacheImageTask(Models\CreatePreCacheImageTaskRequest $req) 创建镜像预热任务
  * @method Models\CreateRegistryResponse CreateRegistry(Models\CreateRegistryRequest $req) 创建 Agent Registry（注册中心）。
  * @method Models\CreateRegistryRecordResponse CreateRegistryRecord(Models\CreateRegistryRecordRequest $req) 统一创建 Registry Record（含 revision 1）。请求通过 DescriptorType 与严格内容输入 Union 选择底层类型：MCPSource / AgentSource / SkillSource / CustomDescriptors 四选一，必须与 DescriptorType 对应。不接受 RecordId 或 ChangeLog；同名 Record 返回冲突，不隐式追加 Version。追加 Version 请使用 UpdateRegistryRecord。
+ * @method Models\CreateSandboxSnapshotResponse CreateSandboxSnapshot(Models\CreateSandboxSnapshotRequest $req) 创建沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
  * @method Models\CreateSandboxToolResponse CreateSandboxTool(Models\CreateSandboxToolRequest $req) 创建沙箱工具
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话。
 
@@ -46,6 +48,8 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DeleteDeploymentResponse DeleteDeployment(Models\DeleteDeploymentRequest $req) 删除 Deployment
  * @method Models\DeleteRegistryResponse DeleteRegistry(Models\DeleteRegistryRequest $req) 删除 Registry。
  * @method Models\DeleteRegistryRecordResponse DeleteRegistryRecord(Models\DeleteRegistryRecordRequest $req) 删除 Registry Record 或指定 Version。省略 VersionId 时对整个 Record 进行软删除；传入 VersionId 时只删除指定 Version（Stable 指向的 Version 不允许删除；仅剩一个 Approved Version 时不允许删除）。取代原 DeleteRegistryRecordVersion。
+ * @method Models\DeleteSandboxSnapshotResponse DeleteSandboxSnapshot(Models\DeleteSandboxSnapshotRequest $req) 删除沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。接入方需关注后续版本及变更说明，并根据需要调整调用代码。
  * @method Models\DeleteSandboxToolResponse DeleteSandboxTool(Models\DeleteSandboxToolRequest $req) 删除沙箱工具
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) 删除会话
  * @method Models\DeleteSessionSpaceResponse DeleteSessionSpace(Models\DeleteSessionSpaceRequest $req) 删除会话空间。
@@ -65,6 +69,8 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DescribeRegistryRecordListResponse DescribeRegistryRecordList(Models\DescribeRegistryRecordListRequest $req) 分页查询 Registry 下的 Record 列表。list 类接口不接入 CAM 转发鉴权；业务侧按 CAM 二次过滤。
  * @method Models\DescribeRegistryRecordVersionListResponse DescribeRegistryRecordVersionList(Models\DescribeRegistryRecordVersionListRequest $req) 分页查询 Record 的 Version 列表。list 类接口不接入 CAM 转发鉴权。
  * @method Models\DescribeSandboxInstanceListResponse DescribeSandboxInstanceList(Models\DescribeSandboxInstanceListRequest $req) 查询沙箱实例列表
+ * @method Models\DescribeSandboxSnapshotListResponse DescribeSandboxSnapshotList(Models\DescribeSandboxSnapshotListRequest $req) 查询沙箱快照
+该接口属于 Runtime Snapshot API ，当前为预览版本（Beta）。接口后续可能发生不兼容变更或被弃用，不保证向后兼容。请关注后续版本及变更说明，并根据需要调整调用代码。
  * @method Models\DescribeSandboxToolListResponse DescribeSandboxToolList(Models\DescribeSandboxToolListRequest $req) 查询沙箱工具列表
  * @method Models\DescribeSessionResponse DescribeSession(Models\DescribeSessionRequest $req) 查询会话。
 

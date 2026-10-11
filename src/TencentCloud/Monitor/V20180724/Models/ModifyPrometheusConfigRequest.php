@@ -20,70 +20,67 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method array getServiceMonitors() 获取ServiceMonitors配置
- * @method void setServiceMonitors(array $ServiceMonitors) 设置ServiceMonitors配置
- * @method array getPodMonitors() 获取PodMonitors配置
- * @method void setPodMonitors(array $PodMonitors) 设置PodMonitors配置
- * @method array getRawJobs() 获取prometheus原生Job配置
- * @method void setRawJobs(array $RawJobs) 设置prometheus原生Job配置
- * @method integer getUpdateImage() 获取0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
- * @method void setUpdateImage(integer $UpdateImage) 设置0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getClusterType() 获取<p>集群类型</p>
+ * @method void setClusterType(string $ClusterType) 设置<p>集群类型</p>
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method array getServiceMonitors() 获取<p>ServiceMonitors配置</p>
+ * @method void setServiceMonitors(array $ServiceMonitors) 设置<p>ServiceMonitors配置</p>
+ * @method array getPodMonitors() 获取<p>PodMonitors配置</p>
+ * @method void setPodMonitors(array $PodMonitors) 设置<p>PodMonitors配置</p>
+ * @method array getRawJobs() 获取<p>prometheus原生Job配置</p>
+ * @method void setRawJobs(array $RawJobs) 设置<p>prometheus原生Job配置</p>
+ * @method integer getUpdateImage() 获取<p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+ * @method void setUpdateImage(integer $UpdateImage) 设置<p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
  */
 class ModifyPrometheusConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 集群类型
+     * @var string <p>集群类型</p>
      */
     public $ClusterType;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var array ServiceMonitors配置
+     * @var array <p>ServiceMonitors配置</p>
      */
     public $ServiceMonitors;
 
     /**
-     * @var array PodMonitors配置
+     * @var array <p>PodMonitors配置</p>
      */
     public $PodMonitors;
 
     /**
-     * @var array prometheus原生Job配置
+     * @var array <p>prometheus原生Job配置</p>
      */
     public $RawJobs;
 
     /**
-     * @var integer 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+     * @var integer <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @deprecated
      */
     public $UpdateImage;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $ClusterType 集群类型
-     * @param string $ClusterId 集群id
-     * @param array $ServiceMonitors ServiceMonitors配置
-     * @param array $PodMonitors PodMonitors配置
-     * @param array $RawJobs prometheus原生Job配置
-     * @param integer $UpdateImage 0: 更新实例组件镜像版本；
-1: 不更新实例组件镜像版本
+     * @param string $InstanceId <p>实例id</p>
+     * @param string $ClusterType <p>集群类型</p>
+     * @param string $ClusterId <p>集群id</p>
+     * @param array $ServiceMonitors <p>ServiceMonitors配置</p>
+     * @param array $PodMonitors <p>PodMonitors配置</p>
+     * @param array $RawJobs <p>prometheus原生Job配置</p>
+     * @param integer $UpdateImage <p>0: 更新实例组件镜像版本；<br>1: 不更新实例组件镜像版本</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotifyHistories返回参数结构体
  *
- * @method array getAlarmNotifyHistoryList() 获取告警历史
- * @method void setAlarmNotifyHistoryList(array $AlarmNotifyHistoryList) 设置告警历史
- * @method PageByNoResult getPageResult() 获取分页情况
- * @method void setPageResult(PageByNoResult $PageResult) 设置分页情况
+ * @method array getAlarmNotifyHistoryList() 获取<p>告警历史</p>
+ * @method void setAlarmNotifyHistoryList(array $AlarmNotifyHistoryList) 设置<p>告警历史</p>
+ * @method PageByNoResult getPageResult() 获取<p>分页情况</p>
+ * @method void setPageResult(PageByNoResult $PageResult) 设置<p>分页情况</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAlarmNotifyHistoriesResponse extends AbstractModel
 {
     /**
-     * @var array 告警历史
+     * @var array <p>告警历史</p>
      */
     public $AlarmNotifyHistoryList;
 
     /**
-     * @var PageByNoResult 分页情况
+     * @var PageByNoResult <p>分页情况</p>
      */
     public $PageResult;
 
@@ -45,8 +45,8 @@ class DescribeAlarmNotifyHistoriesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AlarmNotifyHistoryList 告警历史
-     * @param PageByNoResult $PageResult 分页情况
+     * @param array $AlarmNotifyHistoryList <p>告警历史</p>
+     * @param PageByNoResult $PageResult <p>分页情况</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

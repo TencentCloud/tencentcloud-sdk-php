@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务类型属性键值对
  *
- * @method string getPropertyKey() 获取属性名
+ * @method string getPropertyKey() 获取<p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPropertyKey(string $PropertyKey) 设置属性名
+ * @method void setPropertyKey(string $PropertyKey) 设置<p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPropertyValue() 获取属性值
+ * @method string getPropertyValue() 获取<p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPropertyValue(string $PropertyValue) 设置属性值
+ * @method void setPropertyValue(string $PropertyValue) 设置<p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskTypeProperty extends AbstractModel
 {
     /**
-     * @var string 属性名
+     * @var string <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertyKey;
 
     /**
-     * @var string 属性值
+     * @var string <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertyValue;
 
     /**
-     * @param string $PropertyKey 属性名
+     * @param string $PropertyKey <p>属性键名。用于TaskType内的入参时，若不传或为空，该属性项被服务端静默忽略（不报错），等同于该属性未配置。合法 PropertyKey 清单请参考TaskType中描述。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PropertyValue 属性值
+     * @param string $PropertyValue <p>属性值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

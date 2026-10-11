@@ -68,6 +68,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\DescribeOPRAllVulCountResponse DescribeOPRAllVulCount(Models\DescribeOPRAllVulCountRequest $req) 查询用户所有漏洞信息
  * @method Models\DescribeRelatedServicesOnTraceResponse DescribeRelatedServicesOnTrace(Models\DescribeRelatedServicesOnTraceRequest $req) 根据链路查询目标服务的上下游相关服务
  * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 应用概览数据拉取
+ * @method Models\DescribeSpanTreeByIDResponse DescribeSpanTreeByID(Models\DescribeSpanTreeByIDRequest $req) 查询trace详情接口信息
  * @method Models\DescribeTagValuesResponse DescribeTagValues(Models\DescribeTagValuesRequest $req) 根据维度名和过滤条件，查询维度数据.
  * @method Models\DescribeTopologyNewResponse DescribeTopologyNew(Models\DescribeTopologyNewRequest $req) 根据应用名查询服务拓扑图
  * @method Models\ModifyApmApplicationConfigResponse ModifyApmApplicationConfig(Models\ModifyApmApplicationConfigRequest $req) 修改应用配置接口

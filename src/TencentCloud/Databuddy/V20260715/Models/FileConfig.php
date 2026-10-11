@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置<p>平台集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultCatalogSource() 获取<p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultCatalogSource(string $DefaultCatalogSource) 设置<p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileConfig extends AbstractModel
 {
@@ -121,6 +125,12 @@ class FileConfig extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultCatalogSource;
+
+    /**
      * @param string $Params <p>高级运行参数，变量替换用，map-json String,String</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId <p>执行资源 ID。来源：ListComputeResources 接口返回的 ResourceId</p>
@@ -139,6 +149,8 @@ class FileConfig extends AbstractModel
      * @param string $SqlSyntax <p>SQL脚本语法标记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId <p>平台集群id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultCatalogSource <p>默认 Catalog 的来源类型，用于区分默认 Catalog 属于哪一套 Catalog 体系，可选。长度上限 32。取值：METALAKE - TC Catalog（元数据湖 Catalog）；SETATS - Setats Catalog。空值/非法值时后端读取兜底为 METALAKE。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +209,10 @@ class FileConfig extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("DefaultCatalogSource",$param) and $param["DefaultCatalogSource"] !== null) {
+            $this->DefaultCatalogSource = $param["DefaultCatalogSource"];
         }
     }
 }

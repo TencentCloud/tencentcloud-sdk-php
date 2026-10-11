@@ -24,6 +24,8 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 
 /**
  * @method Models\AddConsoleUsersResponse AddConsoleUsers(Models\AddConsoleUsersRequest $req) 添加控制台用户
+ * @method Models\AddWorkspaceGroupsResponse AddWorkspaceGroups(Models\AddWorkspaceGroupsRequest $req) 添加工作空间用户组
+ * @method Models\AddWorkspaceUsersResponse AddWorkspaceUsers(Models\AddWorkspaceUsersRequest $req) 创建用户组
  * @method Models\CreateCatalogResponse CreateCatalog(Models\CreateCatalogRequest $req) 创建数据目录接口
  * @method Models\CreateConsoleGroupResponse CreateConsoleGroup(Models\CreateConsoleGroupRequest $req) 创建控制台用户组
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
@@ -61,9 +63,11 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
  * @method Models\DeleteFolderResponse DeleteFolder(Models\DeleteFolderRequest $req) 删除文件夹
  * @method Models\DeleteSchemaResponse DeleteSchema(Models\DeleteSchemaRequest $req) 删除schema
+ * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 删除table
  * @method Models\DeleteWorkflowResponse DeleteWorkflow(Models\DeleteWorkflowRequest $req) 删除工作流
  * @method Models\DeleteWorkspaceResponse DeleteWorkspace(Models\DeleteWorkspaceRequest $req) 删除工作空间
  * @method Models\DeleteWorkspaceRoleResponse DeleteWorkspaceRole(Models\DeleteWorkspaceRoleRequest $req) 删除工作空间角色
+ * @method Models\GetCatalogResponse GetCatalog(Models\GetCatalogRequest $req) 查询catalog详情
  * @method Models\GetFileResponse GetFile(Models\GetFileRequest $req) 获取文件的元信息，可选包含文件内容，支持按版本读取历史快照。
 
 **前置条件**
@@ -83,22 +87,31 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `UnauthorizedOperation.FileReadDenied` | 1030304 | 对该文件无读权限 | 请联系文件负责人或空间管理员授权 |
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
  * @method Models\GetFolderResponse GetFolder(Models\GetFolderRequest $req) 获取文件夹详情
+ * @method Models\GetSchemaResponse GetSchema(Models\GetSchemaRequest $req) 查询schema详情
+ * @method Models\GetTableResponse GetTable(Models\GetTableRequest $req) 查询table详情
+ * @method Models\GetTablesResponse GetTables(Models\GetTablesRequest $req) 批量获取表的元数据。使用场景：根据表的全名列表（catalogName.schemaName.tableName）批量获取表的详细元数据信息。前置条件：需要有对应workspace的读权限，仅返回当前workspace有权限的catalog下的表。权限校验：通过getAuthedCatalogNames获取有权限的catalogName进行过滤，不在权限范围内的表会被静默跳过。限制：FullNames最大支持20个表全名
  * @method Models\GetWorkflowResponse GetWorkflow(Models\GetWorkflowRequest $req) 获取工作流详细信息
  * @method Models\GetWorkflowRunResponse GetWorkflowRun(Models\GetWorkflowRunRequest $req) 查询工作流运行详情
  * @method Models\GetWorkflowTaskRunResponse GetWorkflowTaskRun(Models\GetWorkflowTaskRunRequest $req) 查询任务运行详情
  * @method Models\GetWorkspaceResponse GetWorkspace(Models\GetWorkspaceRequest $req) 查询工作空间详情
  * @method Models\KillWorkflowRunResponse KillWorkflowRun(Models\KillWorkflowRunRequest $req) 终止工作流的运行
+ * @method Models\ListCatalogsResponse ListCatalogs(Models\ListCatalogsRequest $req) 分页获取数据目录列表
  * @method Models\ListConsoleGroupUsersResponse ListConsoleGroupUsers(Models\ListConsoleGroupUsersRequest $req) 查询控制台用户组成员列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\ListConsoleGroupsResponse ListConsoleGroups(Models\ListConsoleGroupsRequest $req) 查询控制台用户组列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\ListConsoleRolesResponse ListConsoleRoles(Models\ListConsoleRolesRequest $req) 查询控制台角色列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\ListConsoleUsersResponse ListConsoleUsers(Models\ListConsoleUsersRequest $req) 查询控制台用户列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\ListFilesResponse ListFiles(Models\ListFilesRequest $req) 获取文件夹和文件列表
  * @method Models\ListSchemasResponse ListSchemas(Models\ListSchemasRequest $req) 获取schema列表
+ * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 获取table列表
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 工作流运行列表
  * @method Models\ListWorkflowTaskRunsResponse ListWorkflowTaskRuns(Models\ListWorkflowTaskRunsRequest $req) 查询工作流任务历史运行列表
  * @method Models\ListWorkflowsResponse ListWorkflows(Models\ListWorkflowsRequest $req) 查询工作流列表
+ * @method Models\ListWorkspaceGroupUsersResponse ListWorkspaceGroupUsers(Models\ListWorkspaceGroupUsersRequest $req) 查询工作空间用户组用户列表
+ * @method Models\ListWorkspaceGroupsResponse ListWorkspaceGroups(Models\ListWorkspaceGroupsRequest $req) 查询工作空间用户组列表
+ * @method Models\ListWorkspaceUsersResponse ListWorkspaceUsers(Models\ListWorkspaceUsersRequest $req) 查询工作空间用户列表
  * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表
  * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+ * @method Models\RemoveWorkspaceGroupsResponse RemoveWorkspaceGroups(Models\RemoveWorkspaceGroupsRequest $req) 移除工作空间用户组
  * @method Models\RerunWorkflowRunResponse RerunWorkflowRun(Models\RerunWorkflowRunRequest $req) 重跑工作流
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流
  * @method Models\StartComputeResponse StartCompute(Models\StartComputeRequest $req) 启动计算资源
@@ -130,7 +143,9 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\UpdateFolderResponse UpdateFolder(Models\UpdateFolderRequest $req) 更新文件夹（支持重命名+移动）
  * @method Models\UpdateWorkflowResponse UpdateWorkflow(Models\UpdateWorkflowRequest $req) 更新工作流
  * @method Models\UpdateWorkspaceResponse UpdateWorkspace(Models\UpdateWorkspaceRequest $req) 修改工作空间
+ * @method Models\UpdateWorkspaceGroupsRolesResponse UpdateWorkspaceGroupsRoles(Models\UpdateWorkspaceGroupsRolesRequest $req) 更新工作空间用户组角色
  * @method Models\UpdateWorkspaceRoleResponse UpdateWorkspaceRole(Models\UpdateWorkspaceRoleRequest $req) 更新工作空间角色
+ * @method Models\UpdateWorkspaceUsersRolesResponse UpdateWorkspaceUsersRoles(Models\UpdateWorkspaceUsersRolesRequest $req) 修改工作空间用户角色
  */
 
 class DatabuddyClient extends AbstractClient

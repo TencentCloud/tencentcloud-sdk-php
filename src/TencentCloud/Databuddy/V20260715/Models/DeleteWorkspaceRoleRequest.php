@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWorkspaceId() 获取工作空间ID
  * @method void setWorkspaceId(string $WorkspaceId) 设置工作空间ID
- * @method string getRoleId() 获取角色ID
- * @method void setRoleId(string $RoleId) 设置角色ID
+ * @method string getRoleId() 获取角色ID，可通过 ListWorkspaceRoles 接口获取
+ * @method void setRoleId(string $RoleId) 设置角色ID，可通过 ListWorkspaceRoles 接口获取
  */
 class DeleteWorkspaceRoleRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteWorkspaceRoleRequest extends AbstractModel
     public $WorkspaceId;
 
     /**
-     * @var string 角色ID
+     * @var string 角色ID，可通过 ListWorkspaceRoles 接口获取
      */
     public $RoleId;
 
     /**
      * @param string $WorkspaceId 工作空间ID
-     * @param string $RoleId 角色ID
+     * @param string $RoleId 角色ID，可通过 ListWorkspaceRoles 接口获取
      */
     function __construct()
     {

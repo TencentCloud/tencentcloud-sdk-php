@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkspaceId(string $WorkspaceId) 设置调用时所在workspace唯一id
  * @method string getConnectionId() 获取数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
  * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+ * @method string getCatalogSource() 获取数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+ * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
  */
 class DeleteCatalogRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteCatalogRequest extends AbstractModel
     public $ConnectionId;
 
     /**
+     * @var string 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     */
+    public $CatalogSource;
+
+    /**
      * @param string $CatalogName 数据目录名
      * @param string $WorkspaceId 调用时所在workspace唯一id
      * @param string $ConnectionId 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+     * @param string $CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteCatalogRequest extends AbstractModel
 
         if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
             $this->ConnectionId = $param["ConnectionId"];
+        }
+
+        if (array_key_exists("CatalogSource",$param) and $param["CatalogSource"] !== null) {
+            $this->CatalogSource = $param["CatalogSource"];
         }
     }
 }

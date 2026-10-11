@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConsoleGroups请求参数结构体
  *
- * @method array getGroupIds() 获取<p>要删除的用户组 ID 列表，单次最多100个</p>
- * @method void setGroupIds(array $GroupIds) 设置<p>要删除的用户组 ID 列表，单次最多100个</p>
+ * @method array getGroupIds() 获取要删除的用户组 ID 列表，单次最多100个；可通过 ListConsoleGroups 接口获取
+ * @method void setGroupIds(array $GroupIds) 设置要删除的用户组 ID 列表，单次最多100个；可通过 ListConsoleGroups 接口获取
  */
 class DeleteConsoleGroupsRequest extends AbstractModel
 {
     /**
-     * @var array <p>要删除的用户组 ID 列表，单次最多100个</p>
+     * @var array 要删除的用户组 ID 列表，单次最多100个；可通过 ListConsoleGroups 接口获取
      */
     public $GroupIds;
 
     /**
-     * @param array $GroupIds <p>要删除的用户组 ID 列表，单次最多100个</p>
+     * @param array $GroupIds 要删除的用户组 ID 列表，单次最多100个；可通过 ListConsoleGroups 接口获取
      */
     function __construct()
     {

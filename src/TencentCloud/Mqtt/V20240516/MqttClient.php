@@ -57,6 +57,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
  * @method Models\DescribeBlockRuleListResponse DescribeBlockRuleList(Models\DescribeBlockRuleListRequest $req) 封禁规则列表
  * @method Models\DescribeCaCertificateResponse DescribeCaCertificate(Models\DescribeCaCertificateRequest $req) 查询Ca证书详情接口
  * @method Models\DescribeCaCertificatesResponse DescribeCaCertificates(Models\DescribeCaCertificatesRequest $req) 查询集群下的ca证书信息
+ * @method Models\DescribeClientEventsResponse DescribeClientEvents(Models\DescribeClientEventsRequest $req) 查询轨迹
  * @method Models\DescribeClientListResponse DescribeClientList(Models\DescribeClientListRequest $req) 查询 MQTT 客户端详情
  * @method Models\DescribeDeviceCertificateResponse DescribeDeviceCertificate(Models\DescribeDeviceCertificateRequest $req) 查询设备证书详情接口
  * @method Models\DescribeDeviceCertificateBackupHistoryResponse DescribeDeviceCertificateBackupHistory(Models\DescribeDeviceCertificateBackupHistoryRequest $req) 跨集群灾备场景下查询设备证书同步记录

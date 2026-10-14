@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerAppId(integer $OwnerAppId) 设置<p>镜像所属账号appid</p>
  * @method string getOwnerUin() 获取<p>镜像所属账号uin</p>
  * @method void setOwnerUin(string $OwnerUin) 设置<p>镜像所属账号uin</p>
+ * @method integer getSuperNodeHostCount() 获取<p>镜像关联超级节点数</p>
+ * @method void setSuperNodeHostCount(integer $SuperNodeHostCount) 设置<p>镜像关联超级节点数</p>
  */
 class ImageAssociatedAssetCount extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ImageAssociatedAssetCount extends AbstractModel
     public $OwnerUin;
 
     /**
+     * @var integer <p>镜像关联超级节点数</p>
+     */
+    public $SuperNodeHostCount;
+
+    /**
      * @param integer $Id <p>镜像id</p>
      * @param integer $HostCount <p>镜像关联主机数</p>
      * @param integer $ContainerCount <p>镜像关联容器数</p>
      * @param string $OwnerAccountName <p>镜像所属账号名</p>
      * @param integer $OwnerAppId <p>镜像所属账号appid</p>
      * @param string $OwnerUin <p>镜像所属账号uin</p>
+     * @param integer $SuperNodeHostCount <p>镜像关联超级节点数</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ImageAssociatedAssetCount extends AbstractModel
 
         if (array_key_exists("OwnerUin",$param) and $param["OwnerUin"] !== null) {
             $this->OwnerUin = $param["OwnerUin"];
+        }
+
+        if (array_key_exists("SuperNodeHostCount",$param) and $param["SuperNodeHostCount"] !== null) {
+            $this->SuperNodeHostCount = $param["SuperNodeHostCount"];
         }
     }
 }

@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Web 安全的 Bot 自定义规则。
  *
- * @method string getId() 获取Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
- * @method void setId(string $Id) 设置Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
- * @method string getName() 获取Bot 自定义规则的名称。
- * @method void setName(string $Name) 设置Bot 自定义规则的名称。
- * @method string getEnabled() 获取Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
- * @method void setEnabled(string $Enabled) 设置Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
- * @method integer getPriority() 获取Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
- * @method void setPriority(integer $Priority) 设置Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
- * @method string getCondition() 获取Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method void setCondition(string $Condition) 设置Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
- * @method array getAction() 获取Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
- * @method void setAction(array $Action) 设置Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+ * @method string getId() 获取<p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
+ * @method void setId(string $Id) 设置<p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
+ * @method string getName() 获取<p>Bot 自定义规则的名称。</p>
+ * @method void setName(string $Name) 设置<p>Bot 自定义规则的名称。</p>
+ * @method string getEnabled() 获取<p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+ * @method void setEnabled(string $Enabled) 设置<p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+ * @method integer getPriority() 获取<p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
+ * @method void setPriority(integer $Priority) 设置<p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
+ * @method string getCondition() 获取<p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+ * @method void setCondition(string $Condition) 设置<p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+ * @method array getAction() 获取<p>按权重分配的安全执行动作列表。</p>
+ * @method void setAction(array $Action) 设置<p>按权重分配的安全执行动作列表。</p>
  */
 class BotManagementCustomRule extends AbstractModel
 {
     /**
-     * @var string Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
+     * @var string <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
      */
     public $Id;
 
     /**
-     * @var string Bot 自定义规则的名称。
+     * @var string <p>Bot 自定义规则的名称。</p>
      */
     public $Name;
 
     /**
-     * @var string Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * @var string <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
      */
     public $Enabled;
 
     /**
-     * @var integer Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
+     * @var integer <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
      */
     public $Priority;
 
     /**
-     * @var string Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
+     * @var string <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
      */
     public $Condition;
 
     /**
-     * @var array Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+     * @var array <p>按权重分配的安全执行动作列表。</p>
      */
     public $Action;
 
     /**
-     * @param string $Id Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li>
-     * @param string $Name Bot 自定义规则的名称。
-     * @param string $Enabled Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li>
-     * @param integer $Priority Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。
-     * @param string $Condition Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。
-     * @param array $Action Bot 自定义规则的处置方式。取值有：<li>Monitor：观察；</li><li>Deny：拦截，其中 DenyActionParameters.Name 支持 Deny 和 ReturnCustomPage；</li><li>Challenge：挑战，其中 ChallengeActionParameters.Name 支持 JSChallenge 和 ManagedChallenge；</li><li>Redirect：重定向至 URL。</li>
+     * @param string $Id <p>Bot 自定义规则的 ID。<br>通过规则 ID 可支持不同的规则配置操作：<br> <li> <b>增加</b>新规则：ID 为空或不指定 ID 参数；</li><li><b>修改</b>已有规则：指定需要更新/修改的规则 ID；</li><li><b>删除</b>已有规则：BotManagementCustomRules 参数中，Rules 列表中未包含的已有规则将被删除。</li></p>
+     * @param string $Name <p>Bot 自定义规则的名称。</p>
+     * @param string $Enabled <p>Bot 自定义规则是否开启。取值有：<li>on：开启；</li><li>off：关闭。</li></p>
+     * @param integer $Priority <p>Bot 自定义规则的优先级，范围是 1 ~ 100，默认为 50。</p>
+     * @param string $Condition <p>Bot 自定义规则的具体内容，需符合表达式语法，详细规范参见产品文档。</p>
+     * @param array $Action <p>按权重分配的安全执行动作列表。</p>
      */
     function __construct()
     {

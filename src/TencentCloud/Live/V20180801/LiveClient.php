@@ -332,6 +332,9 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 2. 不能查询被 DeleteScreenshotTask接口删除以及已过期（平台侧保留3个月）的截图任务。
  * @method Models\DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(Models\DescribeStreamDayPlayInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询天维度每条流的播放数据，包括总流量等。
+ * @method Models\DescribeStreamPackageIngestStatisticsResponse DescribeStreamPackageIngestStatistics(Models\DescribeStreamPackageIngestStatisticsRequest $req) DescribeStreamPackageIngestStatistics
+ * @method Models\DescribeStreamPackageOutputStatisticsResponse DescribeStreamPackageOutputStatistics(Models\DescribeStreamPackageOutputStatisticsRequest $req) 查询媒体包装输出用量信息
+ * @method Models\DescribeStreamPackageRemuxStatisticsResponse DescribeStreamPackageRemuxStatistics(Models\DescribeStreamPackageRemuxStatisticsRequest $req) DescribeStreamPackageRemuxStatistics
  * @method Models\DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(Models\DescribeStreamPlayInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 查询播放数据，支持按流名称查询详细播放数据，也可按播放域名查询详细总数据，数据延迟4分钟左右。
  * @method Models\DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(Models\DescribeStreamPushInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。

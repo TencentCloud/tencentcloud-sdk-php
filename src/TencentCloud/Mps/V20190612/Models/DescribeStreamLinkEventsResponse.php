@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkEvents返回参数结构体
  *
- * @method array getInfos() 获取媒体传输事件的配置信息列表。
- * @method void setInfos(array $Infos) 设置媒体传输事件的配置信息列表。
- * @method integer getPageNum() 获取当前页数。
- * @method void setPageNum(integer $PageNum) 设置当前页数。
- * @method integer getPageSize() 获取每页大小。
- * @method void setPageSize(integer $PageSize) 设置每页大小。
- * @method integer getTotalNum() 获取总数量。
- * @method void setTotalNum(integer $TotalNum) 设置总数量。
- * @method integer getTotalPage() 获取总页数。
- * @method void setTotalPage(integer $TotalPage) 设置总页数。
+ * @method array getInfos() 获取<p>媒体传输事件的配置信息列表。</p>
+ * @method void setInfos(array $Infos) 设置<p>媒体传输事件的配置信息列表。</p>
+ * @method integer getPageNum() 获取<p>当前页数。</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>当前页数。</p>
+ * @method integer getPageSize() 获取<p>每页大小。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小。</p>
+ * @method integer getTotalNum() 获取<p>总数量。</p>
+ * @method void setTotalNum(integer $TotalNum) 设置<p>总数量。</p>
+ * @method integer getTotalPage() 获取<p>总页数。</p>
+ * @method void setTotalPage(integer $TotalPage) 设置<p>总页数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStreamLinkEventsResponse extends AbstractModel
 {
     /**
-     * @var array 媒体传输事件的配置信息列表。
+     * @var array <p>媒体传输事件的配置信息列表。</p>
      */
     public $Infos;
 
     /**
-     * @var integer 当前页数。
+     * @var integer <p>当前页数。</p>
      */
     public $PageNum;
 
     /**
-     * @var integer 每页大小。
+     * @var integer <p>每页大小。</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 总数量。
+     * @var integer <p>总数量。</p>
      */
     public $TotalNum;
 
     /**
-     * @var integer 总页数。
+     * @var integer <p>总页数。</p>
      */
     public $TotalPage;
 
@@ -66,11 +66,11 @@ class DescribeStreamLinkEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Infos 媒体传输事件的配置信息列表。
-     * @param integer $PageNum 当前页数。
-     * @param integer $PageSize 每页大小。
-     * @param integer $TotalNum 总数量。
-     * @param integer $TotalPage 总页数。
+     * @param array $Infos <p>媒体传输事件的配置信息列表。</p>
+     * @param integer $PageNum <p>当前页数。</p>
+     * @param integer $PageSize <p>每页大小。</p>
+     * @param integer $TotalNum <p>总数量。</p>
+     * @param integer $TotalPage <p>总页数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

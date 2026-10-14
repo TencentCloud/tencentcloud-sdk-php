@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() 获取<p>能力配置开关</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p>
  * @method void setSwitch(string $Switch) 设置<p>能力配置开关</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p>
- * @method string getType() 获取<p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
- * @method void setType(string $Type) 设置<p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+ * @method string getType() 获取<p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
+ * @method void setType(string $Type) 设置<p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
  */
 class AudioEnhanceEditConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AudioEnhanceEditConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var string <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+     * @var string <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
      */
     public $Type;
 
     /**
      * @param string $Switch <p>能力配置开关</p><p>枚举值：</p><ul><li>ON： 开启</li><li>OFF： 关闭</li></ul><p>默认值：OFF</p>
-     * @param string $Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>默认值：restore</p>
+     * @param string $Type <p>音频编辑类型</p><p>枚举值：</p><ul><li>restore： 修复</li></ul><p>开关开启时，必须显式指定枚举值</p>
      */
     function __construct()
     {

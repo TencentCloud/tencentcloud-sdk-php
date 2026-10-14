@@ -20,150 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 容器日志采集配置
  *
- * @method string getTargetName() 获取采集配置名称
- * @method void setTargetName(string $TargetName) 设置采集配置名称
- * @method Namespaces getNamespaces() 获取命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+ * @method string getTargetName() 获取<p>采集配置名称</p>
+ * @method void setTargetName(string $TargetName) 设置<p>采集配置名称</p>
+ * @method Namespaces getNamespaces() 获取<p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaces(Namespaces $Namespaces) 设置命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+ * @method void setNamespaces(Namespaces $Namespaces) 设置<p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPodLabels() 获取Pod标签列表
+ * @method array getPodLabels() 获取<p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPodLabels(array $PodLabels) 设置Pod标签列表
+ * @method void setPodLabels(array $PodLabels) 设置<p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContainerName() 获取容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+ * @method string getContainerName() 获取<p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainerName(string $ContainerName) 设置容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+ * @method void setContainerName(string $ContainerName) 设置<p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexPrefix() 获取ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+ * @method string getIndexPrefix() 获取<p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexPrefix(string $IndexPrefix) 设置ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+ * @method void setIndexPrefix(string $IndexPrefix) 设置<p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogFilters() 获取日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+ * @method string getLogFilters() 获取<p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogFilters(string $LogFilters) 设置日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+ * @method void setLogFilters(string $LogFilters) 设置<p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigContent() 获取高级配置，可自定义采集规则，最多支持2048个字符
+ * @method string getConfigContent() 获取<p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigContent(string $ConfigContent) 设置高级配置，可自定义采集规则，最多支持2048个字符
+ * @method void setConfigContent(string $ConfigContent) 设置<p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKafkaTopic() 获取Ckafka实例的Topic
+ * @method string getKafkaTopic() 获取<p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaTopic(string $KafkaTopic) 设置Ckafka实例的Topic
+ * @method void setKafkaTopic(string $KafkaTopic) 设置<p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexAlias() 获取ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+ * @method string getIndexAlias() 获取<p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexAlias(string $IndexAlias) 设置ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+ * @method void setIndexAlias(string $IndexAlias) 设置<p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputType() 获取/
+ * @method string getInputType() 获取<p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputType(string $InputType) 设置/
+ * @method void setInputType(string $InputType) 设置<p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInputPath() 获取日志采集host路径
+ * @method string getInputPath() 获取<p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputPath(string $InputPath) 设置日志采集host路径
+ * @method void setInputPath(string $InputPath) 设置<p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getInputsTailFiles() 获取inputs.tail_files
+ * @method boolean getInputsTailFiles() 获取<p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputsTailFiles(boolean $InputsTailFiles) 设置inputs.tail_files
+ * @method void setInputsTailFiles(boolean $InputsTailFiles) 设置<p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getInputsMultiLineEnabled() 获取<p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputsMultiLineEnabled(boolean $InputsMultiLineEnabled) 设置<p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInputsMultiLineType() 获取<p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputsMultiLineType(string $InputsMultiLineType) 设置<p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInputsMultiLinePattern() 获取<p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputsMultiLinePattern(string $InputsMultiLinePattern) 设置<p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getInputsMultiLineNegate() 获取<p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputsMultiLineNegate(boolean $InputsMultiLineNegate) 设置<p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInputsMultiLineMatch() 获取<p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputsMultiLineMatch(string $InputsMultiLineMatch) 设置<p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTkeCollectType() 获取<p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+ * @method void setTkeCollectType(string $TkeCollectType) 设置<p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
  */
 class CollectorTarget extends AbstractModel
 {
     /**
-     * @var string 采集配置名称
+     * @var string <p>采集配置名称</p>
      */
     public $TargetName;
 
     /**
-     * @var Namespaces 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * @var Namespaces <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespaces;
 
     /**
-     * @var array Pod标签列表
+     * @var array <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodLabels;
 
     /**
-     * @var string 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     * @var string <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerName;
 
     /**
-     * @var string ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @var string <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexPrefix;
 
     /**
-     * @var string 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     * @var string <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogFilters;
 
     /**
-     * @var string 高级配置，可自定义采集规则，最多支持2048个字符
+     * @var string <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigContent;
 
     /**
-     * @var string Ckafka实例的Topic
+     * @var string <p>Ckafka实例的Topic</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaTopic;
 
     /**
-     * @var string ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @var string <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexAlias;
 
     /**
-     * @var string /
+     * @var string <p>/</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputType;
 
     /**
-     * @var string 日志采集host路径
+     * @var string <p>日志采集host路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputPath;
 
     /**
-     * @var boolean inputs.tail_files
+     * @var boolean <p>inputs.tail_files</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputsTailFiles;
 
     /**
-     * @param string $TargetName 采集配置名称
-     * @param Namespaces $Namespaces 命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。
+     * @var boolean <p>开关inputs.multitline</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PodLabels Pod标签列表
+     */
+    public $InputsMultiLineEnabled;
+
+    /**
+     * @var string <p>inputs.multiline.type</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContainerName 容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符
+     */
+    public $InputsMultiLineType;
+
+    /**
+     * @var string <p>inputs.multiline.pattern</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexPrefix ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     */
+    public $InputsMultiLinePattern;
+
+    /**
+     * @var boolean <p>inputs.multiline.negate</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogFilters 日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符
+     */
+    public $InputsMultiLineNegate;
+
+    /**
+     * @var string <p>inputs.multiline.match</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigContent 高级配置，可自定义采集规则，最多支持2048个字符
+     */
+    public $InputsMultiLineMatch;
+
+    /**
+     * @var string <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
+     */
+    public $TkeCollectType;
+
+    /**
+     * @param string $TargetName <p>采集配置名称</p>
+     * @param Namespaces $Namespaces <p>命名空间列表，包括Include包含和Exclude不包含选项，两者都为空时等同于全部命名空间(包含当前所有的以及未来创建的)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KafkaTopic Ckafka实例的Topic
+     * @param array $PodLabels <p>Pod标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexAlias ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符
+     * @param string $ContainerName <p>容器名称，支持小写字母、数字、连接符-、下划线_，最多支持63个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputType /
+     * @param string $IndexPrefix <p>ES索引名称前缀，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称的前缀，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InputPath 日志采集host路径
+     * @param string $LogFilters <p>日志内容过滤，以逗号分隔，支持大小写字母、数字、连接符-、下划线_以及逗号，最多支持50个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $InputsTailFiles inputs.tail_files
+     * @param string $ConfigContent <p>高级配置，可自定义采集规则，最多支持2048个字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KafkaTopic <p>Ckafka实例的Topic</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexAlias <p>ES索引名称，如果当前采集配置下的容器日志输出到ES集群，则使用该字段作为ES索引名称，支持大小写字母、数字、连接符-、下划线_，最多支持50个字符</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputType <p>/</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputPath <p>日志采集host路径</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $InputsTailFiles <p>inputs.tail_files</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $InputsMultiLineEnabled <p>开关inputs.multitline</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputsMultiLineType <p>inputs.multiline.type</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputsMultiLinePattern <p>inputs.multiline.pattern</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $InputsMultiLineNegate <p>inputs.multiline.negate</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InputsMultiLineMatch <p>inputs.multiline.match</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TkeCollectType <p>按空间采集时 tke 的采集类型，默认为 container，支持 container、filestream</p>
      */
     function __construct()
     {
@@ -230,6 +298,30 @@ class CollectorTarget extends AbstractModel
 
         if (array_key_exists("InputsTailFiles",$param) and $param["InputsTailFiles"] !== null) {
             $this->InputsTailFiles = $param["InputsTailFiles"];
+        }
+
+        if (array_key_exists("InputsMultiLineEnabled",$param) and $param["InputsMultiLineEnabled"] !== null) {
+            $this->InputsMultiLineEnabled = $param["InputsMultiLineEnabled"];
+        }
+
+        if (array_key_exists("InputsMultiLineType",$param) and $param["InputsMultiLineType"] !== null) {
+            $this->InputsMultiLineType = $param["InputsMultiLineType"];
+        }
+
+        if (array_key_exists("InputsMultiLinePattern",$param) and $param["InputsMultiLinePattern"] !== null) {
+            $this->InputsMultiLinePattern = $param["InputsMultiLinePattern"];
+        }
+
+        if (array_key_exists("InputsMultiLineNegate",$param) and $param["InputsMultiLineNegate"] !== null) {
+            $this->InputsMultiLineNegate = $param["InputsMultiLineNegate"];
+        }
+
+        if (array_key_exists("InputsMultiLineMatch",$param) and $param["InputsMultiLineMatch"] !== null) {
+            $this->InputsMultiLineMatch = $param["InputsMultiLineMatch"];
+        }
+
+        if (array_key_exists("TkeCollectType",$param) and $param["TkeCollectType"] !== null) {
+            $this->TkeCollectType = $param["TkeCollectType"];
         }
     }
 }

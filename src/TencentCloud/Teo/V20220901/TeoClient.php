@@ -120,7 +120,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DeleteCustomErrorPageResponse DeleteCustomErrorPage(Models\DeleteCustomErrorPageRequest $req) 删除自定义响应页面。
  * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) 您可以用本接口批量删除 DNS 记录。
  * @method Models\DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespace(Models\DeleteEdgeKVNamespaceRequest $req) 本接口用于删除指定的 KV 命名空间。删除后命名空间内的所有键值对数据将被清空且不可恢复。若命名空间正被边缘函数引用，需先解除绑定关系后方可删除。
- * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+ * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除边缘函数，删除后函数无法恢复，关联的触发规则，环境变量和副本会一并删除。
  * @method Models\DeleteFunctionReplicaResponse DeleteFunctionReplica(Models\DeleteFunctionReplicaRequest $req) 本接口用于删除指定的边缘函数副本。
  * @method Models\DeleteFunctionRulesResponse DeleteFunctionRules(Models\DeleteFunctionRulesRequest $req) 删除边缘函数触发规则。
  * @method Models\DeleteInferenceAPITokenResponse DeleteInferenceAPIToken(Models\DeleteInferenceAPITokenRequest $req) 删除推理 API Token，删除后该 Token 立即失效，使用其访问推理服务的请求将无法通过鉴权。
@@ -287,7 +287,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 - 回源 IP 网段会不定期变更，EdgeOne 将在回源 IP 网段变更前 14 天、前 7 天、前 3 天和前 1 天分别通过站内信、短信、邮件等一种或多种方式发起通知，为了能正常收到回源 IP 网段的变更通知，请务必确保您在 [腾讯云消息中心控制台](https://console.cloud.tencent.com/message)内，已勾选边缘安全加速平台 EO 的产品服务相关消息通知，并配置正确的消息接收人。配置方式请参考 [消息订阅管理](https://cloud.tencent.com/document/product/567/43476)。
  * @method Models\ExportZoneConfigResponse ExportZoneConfig(Models\ExportZoneConfigRequest $req) 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。
  * @method Models\HandleFunctionRuntimeEnvironmentResponse HandleFunctionRuntimeEnvironment(Models\HandleFunctionRuntimeEnvironmentRequest $req) 操作边缘函数运行环境，支持环境变量的相关设置。
-设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+设置环境变量后，可在函数代码和函数副本代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
  * @method Models\IdentifyZoneResponse IdentifyZone(Models\IdentifyZoneRequest $req) 用于验证站点所有权。
  * @method Models\ImportZoneConfigResponse ImportZoneConfig(Models\ImportZoneConfigRequest $req) 导入站点配置接口，本接口支持站点配置文件的快速导入，发起导入后接口会返回对应的任务 ID（TaskId），用户需通过查询站点配置导入结果接口（DescribeZoneConfigImportResult）获取本次导入任务执行的结果。
  * @method Models\IncreasePlanQuotaResponse IncreasePlanQuota(Models\IncreasePlanQuotaRequest $req) 当您的套餐绑定的站点数，或配置的 Web 防护 - 自定义规则 - 精准匹配策略的规则数，或 Web 防护 - 速率限制 - 精准速率限制模块的规则数达到套餐允许的配额上限，可以通过该接口增购对应配额。

@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddFriend(AddFriendEvent $AddFriend) 设置<p>添加好友</p>
  * @method ModifyGuildEvent getModifyGuild() 获取<p>编辑公会资料</p>
  * @method void setModifyGuild(ModifyGuildEvent $ModifyGuild) 设置<p>编辑公会资料</p>
+ * @method SearchEvent getSearch() 获取<p>搜索</p>
+ * @method void setSearch(SearchEvent $Search) 设置<p>搜索</p>
+ * @method BookingEvent getBooking() 获取<p>预约</p>
+ * @method void setBooking(BookingEvent $Booking) 设置<p>预约</p>
+ * @method AccountSecurityEvent getAccountSecurity() 获取<p>账号安全</p>
+ * @method void setAccountSecurity(AccountSecurityEvent $AccountSecurity) 设置<p>账号安全</p>
  */
 class EventDetail extends AbstractModel
 {
@@ -192,6 +198,21 @@ class EventDetail extends AbstractModel
     public $ModifyGuild;
 
     /**
+     * @var SearchEvent <p>搜索</p>
+     */
+    public $Search;
+
+    /**
+     * @var BookingEvent <p>预约</p>
+     */
+    public $Booking;
+
+    /**
+     * @var AccountSecurityEvent <p>账号安全</p>
+     */
+    public $AccountSecurity;
+
+    /**
      * @param LoginEvent $Login <p>登录</p>
      * @param RegisterEvent $Register <p>注册（变更用户信息）</p>
      * @param CreateOrderEvent $CreateOrder <p>创建订单</p>
@@ -216,6 +237,9 @@ class EventDetail extends AbstractModel
      * @param ModifyRoleEvent $ModifyRole <p>编辑角色资料</p>
      * @param AddFriendEvent $AddFriend <p>添加好友</p>
      * @param ModifyGuildEvent $ModifyGuild <p>编辑公会资料</p>
+     * @param SearchEvent $Search <p>搜索</p>
+     * @param BookingEvent $Booking <p>预约</p>
+     * @param AccountSecurityEvent $AccountSecurity <p>账号安全</p>
      */
     function __construct()
     {
@@ -348,6 +372,21 @@ class EventDetail extends AbstractModel
         if (array_key_exists("ModifyGuild",$param) and $param["ModifyGuild"] !== null) {
             $this->ModifyGuild = new ModifyGuildEvent();
             $this->ModifyGuild->deserialize($param["ModifyGuild"]);
+        }
+
+        if (array_key_exists("Search",$param) and $param["Search"] !== null) {
+            $this->Search = new SearchEvent();
+            $this->Search->deserialize($param["Search"]);
+        }
+
+        if (array_key_exists("Booking",$param) and $param["Booking"] !== null) {
+            $this->Booking = new BookingEvent();
+            $this->Booking->deserialize($param["Booking"]);
+        }
+
+        if (array_key_exists("AccountSecurity",$param) and $param["AccountSecurity"] !== null) {
+            $this->AccountSecurity = new AccountSecurityEvent();
+            $this->AccountSecurity->deserialize($param["AccountSecurity"]);
         }
     }
 }

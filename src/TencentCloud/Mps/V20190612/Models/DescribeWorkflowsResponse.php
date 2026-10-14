@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflows返回参数结构体
  *
- * @method integer getTotalCount() 获取符合过滤条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
- * @method array getWorkflowInfoSet() 获取工作流信息数组。
- * @method void setWorkflowInfoSet(array $WorkflowInfoSet) 设置工作流信息数组。
+ * @method integer getTotalCount() 获取<p>符合过滤条件的记录总数。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合过滤条件的记录总数。</p>
+ * @method array getWorkflowInfoSet() 获取<p>工作流信息数组。</p>
+ * @method void setWorkflowInfoSet(array $WorkflowInfoSet) 设置<p>工作流信息数组。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWorkflowsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合过滤条件的记录总数。
+     * @var integer <p>符合过滤条件的记录总数。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 工作流信息数组。
+     * @var array <p>工作流信息数组。</p>
      */
     public $WorkflowInfoSet;
 
@@ -45,8 +45,8 @@ class DescribeWorkflowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合过滤条件的记录总数。
-     * @param array $WorkflowInfoSet 工作流信息数组。
+     * @param integer $TotalCount <p>符合过滤条件的记录总数。</p>
+     * @param array $WorkflowInfoSet <p>工作流信息数组。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkEvent请求参数结构体
  *
- * @method string getEventId() 获取媒体传输事件ID。
- * @method void setEventId(string $EventId) 设置媒体传输事件ID。
+ * @method string getEventId() 获取<p>媒体传输事件ID。</p>
+ * @method void setEventId(string $EventId) 设置<p>媒体传输事件ID。</p>
  */
 class DescribeStreamLinkEventRequest extends AbstractModel
 {
     /**
-     * @var string 媒体传输事件ID。
+     * @var string <p>媒体传输事件ID。</p>
      */
     public $EventId;
 
     /**
-     * @param string $EventId 媒体传输事件ID。
+     * @param string $EventId <p>媒体传输事件ID。</p>
      */
     function __construct()
     {

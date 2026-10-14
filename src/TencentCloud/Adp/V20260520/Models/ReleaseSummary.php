@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpShareConfig(CorpShareConfig $CorpShareConfig) 设置<p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PortalShareConfig getPortalShareConfig() 获取<p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPortalShareConfig(PortalShareConfig $PortalShareConfig) 设置<p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseSummary extends AbstractModel
 {
@@ -86,6 +90,12 @@ class ReleaseSummary extends AbstractModel
     public $CorpShareConfig;
 
     /**
+     * @var PortalShareConfig <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PortalShareConfig;
+
+    /**
      * @param string $CreateTime <p>创建时间 (Unix时间戳,秒级)</p>
      * @param string $Description <p>发布描述</p>
      * @param string $ReleaseId <p>发布ID</p>
@@ -95,6 +105,8 @@ class ReleaseSummary extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ChannelIdList <p>发布渠道ID列表</p>
      * @param CorpShareConfig $CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PortalShareConfig $PortalShareConfig <p>portal配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -142,6 +154,11 @@ class ReleaseSummary extends AbstractModel
         if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
             $this->CorpShareConfig = new CorpShareConfig();
             $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
+        }
+
+        if (array_key_exists("PortalShareConfig",$param) and $param["PortalShareConfig"] !== null) {
+            $this->PortalShareConfig = new PortalShareConfig();
+            $this->PortalShareConfig->deserialize($param["PortalShareConfig"]);
         }
     }
 }

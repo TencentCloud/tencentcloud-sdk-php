@@ -34,7 +34,11 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\AddRecordTemplateResponse AddRecordTemplate(Models\AddRecordTemplateRequest $req) 用于新增实时上云模板
  * @method Models\AddStreamAuthResponse AddStreamAuth(Models\AddStreamAuthRequest $req) 用于设置推拉流鉴权配置。
  * @method Models\AddUserDeviceResponse AddUserDevice(Models\AddUserDeviceRequest $req) 用于新增单个设备。添加设备之后，可根据返回结果到设备上进行配置，配置后等待设备注册/推流。
+ * @method Models\BatchAddVideoSnapshotConfigChannelResponse BatchAddVideoSnapshotConfigChannel(Models\BatchAddVideoSnapshotConfigChannelRequest $req) 批量添加截图配置的通道
+ * @method Models\BatchAssignVLPlanChannelsResponse BatchAssignVLPlanChannels(Models\BatchAssignVLPlanChannelsRequest $req) 批量关联视觉理解计划通道
  * @method Models\BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTask(Models\BatchDeleteVideoDownloadTaskRequest $req) 用于批量删除本地录像下载失败的任务
+ * @method Models\BatchGetVLPlanSourceFileURLResponse BatchGetVLPlanSourceFileURL(Models\BatchGetVLPlanSourceFileURLRequest $req) 批量获取视觉理解计划源素材 URL
+ * @method Models\BatchGetVideoSnapshotImageUrlResponse BatchGetVideoSnapshotImageUrl(Models\BatchGetVideoSnapshotImageUrlRequest $req) 批量获取截图图片URL
  * @method Models\BatchOperateDeviceResponse BatchOperateDevice(Models\BatchOperateDeviceRequest $req) 用于批量操作（启用，禁用，删除）设备
  * @method Models\CallISAPIResponse CallISAPI(Models\CallISAPIRequest $req) 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
  * @method Models\ControlDevicePTZResponse ControlDevicePTZ(Models\ControlDevicePTZRequest $req) 用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
@@ -43,7 +47,11 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ControlDeviceStreamResponse ControlDeviceStream(Models\ControlDeviceStreamRequest $req) 用于获取设备的实时开流地址。
  * @method Models\ControlRecordResponse ControlRecord(Models\ControlRecordRequest $req) 用于录像回放过程中的倍速、跳转、播放/暂停/停止等控制。
  * @method Models\ControlRecordTimelineResponse ControlRecordTimeline(Models\ControlRecordTimelineRequest $req) 用于查询设备本地录像时间轴信息，为NVR/IPC本地存储的录像。
+ * @method Models\CreateVLPlanResponse CreateVLPlan(Models\CreateVLPlanRequest $req) 创建视觉理解计划
+ * @method Models\CreateVLTemplateResponse CreateVLTemplate(Models\CreateVLTemplateRequest $req) 创建视觉理解模板
  * @method Models\CreateVideoDownloadTaskResponse CreateVideoDownloadTask(Models\CreateVideoDownloadTaskRequest $req) 创建本地录像下载任务
+ * @method Models\CreateVideoSnapshotConfigResponse CreateVideoSnapshotConfig(Models\CreateVideoSnapshotConfigRequest $req) 创建截图配置
+ * @method Models\CreateVideoSnapshotTemplateResponse CreateVideoSnapshotTemplate(Models\CreateVideoSnapshotTemplateRequest $req) 创建截图模板
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 用于删除域名。
  * @method Models\DeleteOrganizationResponse DeleteOrganization(Models\DeleteOrganizationRequest $req) 用于删除组织。
  * @method Models\DeleteRecordBackupPlanResponse DeleteRecordBackupPlan(Models\DeleteRecordBackupPlanRequest $req) 用于删除录像上云模板。
@@ -53,6 +61,10 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DeleteRecordTemplateResponse DeleteRecordTemplate(Models\DeleteRecordTemplateRequest $req) 用于删除实时上云模板
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 用于删除执行完成的任务
  * @method Models\DeleteUserDeviceResponse DeleteUserDevice(Models\DeleteUserDeviceRequest $req) 用于删除已添加的设备。
+ * @method Models\DeleteVLPlanResponse DeleteVLPlan(Models\DeleteVLPlanRequest $req) 删除视觉理解计划
+ * @method Models\DeleteVLTemplateResponse DeleteVLTemplate(Models\DeleteVLTemplateRequest $req) 删除视觉理解模板
+ * @method Models\DeleteVideoSnapshotConfigResponse DeleteVideoSnapshotConfig(Models\DeleteVideoSnapshotConfigRequest $req) 删除截图配置
+ * @method Models\DeleteVideoSnapshotTemplateResponse DeleteVideoSnapshotTemplate(Models\DeleteVideoSnapshotTemplateRequest $req) 删除截图模板
  * @method Models\DescribeCNAMEResponse DescribeCNAME(Models\DescribeCNAMERequest $req) 用于根据服务节点获取 CNAME 值。
  * @method Models\DescribeDeviceChannelResponse DescribeDeviceChannel(Models\DescribeDeviceChannelRequest $req) 用于查询设备的通道。
  * @method Models\DescribeDevicePresetResponse DescribeDevicePreset(Models\DescribeDevicePresetRequest $req) 用于查询设备通道预置位信息。
@@ -74,8 +86,13 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询任务详情
  * @method Models\DescribeUserDeviceResponse DescribeUserDevice(Models\DescribeUserDeviceRequest $req) 用于查询设备的详细信息。
  * @method Models\DescribeUserDeviceListResponse DescribeUserDeviceList(Models\DescribeUserDeviceListRequest $req) 用于批量查询设备详细信息。
+ * @method Models\DescribeVLPlanResponse DescribeVLPlan(Models\DescribeVLPlanRequest $req) 查询视觉理解计划详情
+ * @method Models\DescribeVLPlanResultResponse DescribeVLPlanResult(Models\DescribeVLPlanResultRequest $req) 查询视觉理解计划结果详情
+ * @method Models\DescribeVLTemplateResponse DescribeVLTemplate(Models\DescribeVLTemplateRequest $req) 查询视觉理解模板详情
  * @method Models\DescribeVideoBitRateResponse DescribeVideoBitRate(Models\DescribeVideoBitRateRequest $req) 用于获取视频通道的码率信息
  * @method Models\DescribeVideoDownloadUrlResponse DescribeVideoDownloadUrl(Models\DescribeVideoDownloadUrlRequest $req) 用于获取云录像下载 url
+ * @method Models\DescribeVideoSnapshotConfigResponse DescribeVideoSnapshotConfig(Models\DescribeVideoSnapshotConfigRequest $req) 获取截图配置详情
+ * @method Models\DescribeVideoSnapshotTemplateResponse DescribeVideoSnapshotTemplate(Models\DescribeVideoSnapshotTemplateRequest $req) 获取截图模板详情
  * @method Models\ListDeviceSnapshotsResponse ListDeviceSnapshots(Models\ListDeviceSnapshotsRequest $req) 获取设备抓拍结果列表
  * @method Models\ListDevicesResponse ListDevices(Models\ListDevicesRequest $req) 用于获取对应组织下的设备列表。
  * @method Models\ListOrganizationChannelNumbersResponse ListOrganizationChannelNumbers(Models\ListOrganizationChannelNumbersRequest $req) 用于查询组织目录下的未添加到实时上云计划中的通道数量
@@ -90,7 +107,12 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListRecordTemplatesResponse ListRecordTemplates(Models\ListRecordTemplatesRequest $req) 用于查询实时上云模板列表
  * @method Models\ListSubTasksResponse ListSubTasks(Models\ListSubTasksRequest $req) 用于查询任务的子任务列表
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 用于查询批量任务和简单任务列表
+ * @method Models\ListVLPlansResponse ListVLPlans(Models\ListVLPlansRequest $req) 获取视觉理解计划列表
+ * @method Models\ListVLTemplatesResponse ListVLTemplates(Models\ListVLTemplatesRequest $req) 获取视觉理解模板列表
  * @method Models\ListVideoDownloadTaskResponse ListVideoDownloadTask(Models\ListVideoDownloadTaskRequest $req) 查询本店里录像下载任务列表
+ * @method Models\ListVideoSnapshotTemplateResponse ListVideoSnapshotTemplate(Models\ListVideoSnapshotTemplateRequest $req) 获取截图模板详情列表
+ * @method Models\ModifyVLPlanResponse ModifyVLPlan(Models\ModifyVLPlanRequest $req) 修改视觉理解计划
+ * @method Models\ModifyVideoSnapshotConfigResponse ModifyVideoSnapshotConfig(Models\ModifyVideoSnapshotConfigRequest $req) 更新截图配置
  * @method Models\PlayRecordResponse PlayRecord(Models\PlayRecordRequest $req) 用于获取设备本地录像 URL 地址。
  * @method Models\QueryForbidPlayChannelListResponse QueryForbidPlayChannelList(Models\QueryForbidPlayChannelListRequest $req) 查询禁播通道列表
  * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。

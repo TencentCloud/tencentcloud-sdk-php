@@ -18,52 +18,52 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型基本信息
+ * <p>模型基本信息（已弃用，请使用 ModelProfile）</p>
  *
- * @method string getDescription() 获取模型描述
- * @method void setDescription(string $Description) 设置模型描述
- * @method string getIconUrl() 获取模型图标地址
- * @method void setIconUrl(string $IconUrl) 设置模型图标地址
- * @method string getModelId() 获取模型ID
- * @method void setModelId(string $ModelId) 设置模型ID
- * @method integer getModelType() 获取模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
- * @method void setModelType(integer $ModelType) 设置模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
- * @method string getName() 获取模型名称
- * @method void setName(string $Name) 设置模型名称
+ * @method string getDescription() 获取<p>模型描述</p>
+ * @method void setDescription(string $Description) 设置<p>模型描述</p>
+ * @method string getIconUrl() 获取<p>模型图标地址</p>
+ * @method void setIconUrl(string $IconUrl) 设置<p>模型图标地址</p>
+ * @method string getModelId() 获取<p>模型ID</p>
+ * @method void setModelId(string $ModelId) 设置<p>模型ID</p>
+ * @method integer getModelType() 获取<p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
+ * @method void setModelType(integer $ModelType) 设置<p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
+ * @method string getName() 获取<p>模型名称</p>
+ * @method void setName(string $Name) 设置<p>模型名称</p>
  */
 class ModelBasic extends AbstractModel
 {
     /**
-     * @var string 模型描述
+     * @var string <p>模型描述</p>
      */
     public $Description;
 
     /**
-     * @var string 模型图标地址
+     * @var string <p>模型图标地址</p>
      */
     public $IconUrl;
 
     /**
-     * @var string 模型ID
+     * @var string <p>模型ID</p>
      */
     public $ModelId;
 
     /**
-     * @var integer 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
+     * @var integer <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
      */
     public $ModelType;
 
     /**
-     * @var string 模型名称
+     * @var string <p>模型名称</p>
      */
     public $Name;
 
     /**
-     * @param string $Description 模型描述
-     * @param string $IconUrl 模型图标地址
-     * @param string $ModelId 模型ID
-     * @param integer $ModelType 模型类型。1-LLM模型, 2-Rerank模型, 3-Embedding模型, 4-文档解析模型
-     * @param string $Name 模型名称
+     * @param string $Description <p>模型描述</p>
+     * @param string $IconUrl <p>模型图标地址</p>
+     * @param string $ModelId <p>模型ID</p>
+     * @param integer $ModelType <p>模型类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_TYPE_LLM</td><td>1</td><td>LLM模型</td></tr><tr><td>MODEL_TYPE_RERANK</td><td>2</td><td>Rerank模型</td></tr><tr><td>MODEL_TYPE_EMBEDDING</td><td>3</td><td>Embedding模型</td></tr><tr><td>MODEL_TYPE_FILE_PARSE</td><td>4</td><td>文档解析模型</td></tr></table>
+     * @param string $Name <p>模型名称</p>
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestartInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method boolean getForceRestart() 获取是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
- * @method integer getRestartMode() 获取重启模式：0 滚动重启； 1 全量重启
- * @method void setRestartMode(integer $RestartMode) 设置重启模式：0 滚动重启； 1 全量重启
- * @method boolean getUpgradeKernel() 获取重启时选择是否升级内核patch版本
- * @method void setUpgradeKernel(boolean $UpgradeKernel) 设置重启时选择是否升级内核patch版本
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method boolean getForceRestart() 获取<p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
+ * @method void setForceRestart(boolean $ForceRestart) 设置<p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
+ * @method integer getRestartMode() 获取<p>重启模式：0 滚动重启； 1 全量重启</p>
+ * @method void setRestartMode(integer $RestartMode) 设置<p>重启模式：0 滚动重启； 1 全量重启</p>
+ * @method boolean getUpgradeKernel() 获取<p>重启时选择是否升级内核patch版本</p>
+ * @method void setUpgradeKernel(boolean $UpgradeKernel) 设置<p>重启时选择是否升级内核patch版本</p>
  */
 class RestartInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var boolean 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * @var boolean <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
      */
     public $ForceRestart;
 
     /**
-     * @var integer 重启模式：0 滚动重启； 1 全量重启
+     * @var integer <p>重启模式：0 滚动重启； 1 全量重启</p>
      */
     public $RestartMode;
 
     /**
-     * @var boolean 重启时选择是否升级内核patch版本
+     * @var boolean <p>重启时选择是否升级内核patch版本</p>
      */
     public $UpgradeKernel;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param boolean $ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
-     * @param integer $RestartMode 重启模式：0 滚动重启； 1 全量重启
-     * @param boolean $UpgradeKernel 重启时选择是否升级内核patch版本
+     * @param string $InstanceId <p>实例ID</p>
+     * @param boolean $ForceRestart <p>是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false</p>
+     * @param integer $RestartMode <p>重启模式：0 滚动重启； 1 全量重启</p>
+     * @param boolean $UpgradeKernel <p>重启时选择是否升级内核patch版本</p>
      */
     function __construct()
     {

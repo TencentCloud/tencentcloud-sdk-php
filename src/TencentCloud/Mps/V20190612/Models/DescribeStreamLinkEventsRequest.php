@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStreamLinkEvents请求参数结构体
  *
- * @method integer getPageNum() 获取当前页数，默认1。
- * @method void setPageNum(integer $PageNum) 设置当前页数，默认1。
- * @method integer getPageSize() 获取每页大小，默认10。
- * @method void setPageSize(integer $PageSize) 设置每页大小，默认10。
+ * @method integer getPageNum() 获取<p>当前页数，默认1。</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>当前页数，默认1。</p>
+ * @method integer getPageSize() 获取<p>每页大小，默认10。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页大小，默认10。</p>
  */
 class DescribeStreamLinkEventsRequest extends AbstractModel
 {
     /**
-     * @var integer 当前页数，默认1。
+     * @var integer <p>当前页数，默认1。</p>
      */
     public $PageNum;
 
     /**
-     * @var integer 每页大小，默认10。
+     * @var integer <p>每页大小，默认10。</p>
      */
     public $PageSize;
 
     /**
-     * @param integer $PageNum 当前页数，默认1。
-     * @param integer $PageSize 每页大小，默认10。
+     * @param integer $PageNum <p>当前页数，默认1。</p>
+     * @param integer $PageSize <p>每页大小，默认10。</p>
      */
     function __construct()
     {

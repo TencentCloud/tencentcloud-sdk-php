@@ -46,6 +46,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
 为当前应用在指定地域创建会话空间，创建成功后返回会话空间信息。会话空间用于隔离不同业务场景下的用户、会话、事件及状态数据。
  * @method Models\DeleteAPIKeyResponse DeleteAPIKey(Models\DeleteAPIKeyRequest $req) 删除API密钥。注意区别于腾讯云Secret ID Secret Key，本接口删除的是Agent Sandbox专用API key。
  * @method Models\DeleteDeploymentResponse DeleteDeployment(Models\DeleteDeploymentRequest $req) 删除 Deployment
+ * @method Models\DeletePreCacheImageResponse DeletePreCacheImage(Models\DeletePreCacheImageRequest $req) 删除预热镜像
  * @method Models\DeleteRegistryResponse DeleteRegistry(Models\DeleteRegistryRequest $req) 删除 Registry。
  * @method Models\DeleteRegistryRecordResponse DeleteRegistryRecord(Models\DeleteRegistryRecordRequest $req) 删除 Registry Record 或指定 Version。省略 VersionId 时对整个 Record 进行软删除；传入 VersionId 时只删除指定 Version（Stable 指向的 Version 不允许删除；仅剩一个 Approved Version 时不允许删除）。取代原 DeleteRegistryRecordVersion。
  * @method Models\DeleteSandboxSnapshotResponse DeleteSandboxSnapshot(Models\DeleteSandboxSnapshotRequest $req) 删除沙箱快照
@@ -60,6 +61,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 查询事件列表。
 
 查询指定会话的事件流，支持按作者和起始时间筛选。
+ * @method Models\DescribePreCacheImageListResponse DescribePreCacheImageList(Models\DescribePreCacheImageListRequest $req) 查询镜像预热列表
  * @method Models\DescribePreCacheImageTaskResponse DescribePreCacheImageTask(Models\DescribePreCacheImageTaskRequest $req) 查询镜像预热任务信息
  * @method Models\DescribeQuotaOverviewResponse DescribeQuotaOverview(Models\DescribeQuotaOverviewRequest $req) 查询当前调用账号的资源配额和当前总用量，以及账号下各配额组的资源配额和当前用量
  * @method Models\DescribeRegistryResponse DescribeRegistry(Models\DescribeRegistryRequest $req) 按 RegistryId 查询 Registry 详情。

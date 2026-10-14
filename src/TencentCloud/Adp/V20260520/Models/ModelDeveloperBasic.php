@@ -18,28 +18,28 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型作者信息
+ * <p>模型作者基本信息（已弃用）</p>
  *
+ * @method string getAlias() 获取<p>作者别名</p>
+ * @method void setAlias(string $Alias) 设置<p>作者别名</p>
  * @method string getName() 获取<p>作者标识</p>
  * @method void setName(string $Name) 设置<p>作者标识</p>
- * @method string getAlias() 获取<p>作者显示名称</p>
- * @method void setAlias(string $Alias) 设置<p>作者显示名称</p>
  */
 class ModelDeveloperBasic extends AbstractModel
 {
+    /**
+     * @var string <p>作者别名</p>
+     */
+    public $Alias;
+
     /**
      * @var string <p>作者标识</p>
      */
     public $Name;
 
     /**
-     * @var string <p>作者显示名称</p>
-     */
-    public $Alias;
-
-    /**
+     * @param string $Alias <p>作者别名</p>
      * @param string $Name <p>作者标识</p>
-     * @param string $Alias <p>作者显示名称</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ModelDeveloperBasic extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

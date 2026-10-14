@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDevToRelease(boolean $IsDevToRelease) 设置<p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
  * @method boolean getIsPublishAsTemplate() 获取<p>是否同步发布为应用模板</p>
  * @method void setIsPublishAsTemplate(boolean $IsPublishAsTemplate) 设置<p>是否同步发布为应用模板</p>
+ * @method PortalShareConfig getPortalShareConfig() 获取<p>portal配置</p>
+ * @method void setPortalShareConfig(PortalShareConfig $PortalShareConfig) 设置<p>portal配置</p>
  */
 class CreateReleaseRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateReleaseRequest extends AbstractModel
     public $IsPublishAsTemplate;
 
     /**
+     * @var PortalShareConfig <p>portal配置</p>
+     */
+    public $PortalShareConfig;
+
+    /**
      * @param string $AppId <p>应用ID</p>
      * @param AppShareAccessControl $AppShareAccessControl <p>应用分享访问控制配置</p>
      * @param array $ChannelIdList <p>渠道ID列表</p>
@@ -80,6 +87,7 @@ class CreateReleaseRequest extends AbstractModel
      * @param string $Description <p>发布描述</p>
      * @param boolean $IsDevToRelease <p>将默认知识库中，仅调试生效的知识批量变更为&quot;调试/发布都生效&quot;</p>
      * @param boolean $IsPublishAsTemplate <p>是否同步发布为应用模板</p>
+     * @param PortalShareConfig $PortalShareConfig <p>portal配置</p>
      */
     function __construct()
     {
@@ -122,6 +130,11 @@ class CreateReleaseRequest extends AbstractModel
 
         if (array_key_exists("IsPublishAsTemplate",$param) and $param["IsPublishAsTemplate"] !== null) {
             $this->IsPublishAsTemplate = $param["IsPublishAsTemplate"];
+        }
+
+        if (array_key_exists("PortalShareConfig",$param) and $param["PortalShareConfig"] !== null) {
+            $this->PortalShareConfig = new PortalShareConfig();
+            $this->PortalShareConfig->deserialize($param["PortalShareConfig"]);
         }
     }
 }

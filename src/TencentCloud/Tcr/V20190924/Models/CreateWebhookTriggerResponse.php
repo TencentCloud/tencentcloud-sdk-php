@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWebhookTrigger返回参数结构体
  *
- * @method WebhookTrigger getTrigger() 获取新建的触发器
- * @method void setTrigger(WebhookTrigger $Trigger) 设置新建的触发器
+ * @method WebhookTrigger getTrigger() 获取<p>新建的触发器</p>
+ * @method void setTrigger(WebhookTrigger $Trigger) 设置<p>新建的触发器</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateWebhookTriggerResponse extends AbstractModel
 {
     /**
-     * @var WebhookTrigger 新建的触发器
+     * @var WebhookTrigger <p>新建的触发器</p>
      */
     public $Trigger;
 
@@ -38,7 +38,7 @@ class CreateWebhookTriggerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param WebhookTrigger $Trigger 新建的触发器
+     * @param WebhookTrigger $Trigger <p>新建的触发器</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

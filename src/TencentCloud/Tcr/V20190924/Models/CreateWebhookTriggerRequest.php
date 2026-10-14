@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWebhookTrigger请求参数结构体
  *
- * @method string getRegistryId() 获取实例 Id
- * @method void setRegistryId(string $RegistryId) 设置实例 Id
- * @method WebhookTrigger getTrigger() 获取触发器参数
- * @method void setTrigger(WebhookTrigger $Trigger) 设置触发器参数
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getRegistryId() 获取<p>实例 Id</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>实例 Id</p>
+ * @method WebhookTrigger getTrigger() 获取<p>触发器参数</p>
+ * @method void setTrigger(WebhookTrigger $Trigger) 设置<p>触发器参数</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getProduct() 获取<p>产品名称，非空时创建的 webhook 将被隐藏</p>
+ * @method void setProduct(string $Product) 设置<p>产品名称，非空时创建的 webhook 将被隐藏</p>
+ * @method string getPreheatRegion() 获取<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+ * @method void setPreheatRegion(string $PreheatRegion) 设置<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
  */
 class CreateWebhookTriggerRequest extends AbstractModel
 {
     /**
-     * @var string 实例 Id
+     * @var string <p>实例 Id</p>
      */
     public $RegistryId;
 
     /**
-     * @var WebhookTrigger 触发器参数
+     * @var WebhookTrigger <p>触发器参数</p>
      */
     public $Trigger;
 
     /**
-     * @var string 命名空间
+     * @var string <p>命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @param string $RegistryId 实例 Id
-     * @param WebhookTrigger $Trigger 触发器参数
-     * @param string $Namespace 命名空间
+     * @var string <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public $Product;
+
+    /**
+     * @var string <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public $PreheatRegion;
+
+    /**
+     * @param string $RegistryId <p>实例 Id</p>
+     * @param WebhookTrigger $Trigger <p>触发器参数</p>
+     * @param string $Namespace <p>命名空间</p>
+     * @param string $Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     * @param string $PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class CreateWebhookTriggerRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("PreheatRegion",$param) and $param["PreheatRegion"] !== null) {
+            $this->PreheatRegion = $param["PreheatRegion"];
         }
     }
 }

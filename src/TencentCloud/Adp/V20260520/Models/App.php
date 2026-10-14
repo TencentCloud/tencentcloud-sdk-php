@@ -44,11 +44,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(AppStatusInfo $Status) 设置<p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSharedKbList() 获取<p>应用引用的共享知识库列表</p>
- * @method void setSharedKbList(array $SharedKbList) 设置<p>应用引用的共享知识库列表</p>
  * @method CorpShareConfig getCorpShareConfig() 获取<p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpShareConfig(CorpShareConfig $CorpShareConfig) 设置<p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSharedKbList() 获取<p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSharedKbList(array $SharedKbList) 设置<p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PortalShareConfig getPortalShareConfig() 获取<p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPortalShareConfig(PortalShareConfig $PortalShareConfig) 设置<p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFileVolumeMountList() 获取<p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileVolumeMountList(array $FileVolumeMountList) 设置<p>应用挂载云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class App extends AbstractModel
@@ -90,15 +100,28 @@ class App extends AbstractModel
     public $Status;
 
     /**
-     * @var array <p>应用引用的共享知识库列表</p>
-     */
-    public $SharedKbList;
-
-    /**
      * @var CorpShareConfig <p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpShareConfig;
+
+    /**
+     * @var array <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SharedKbList;
+
+    /**
+     * @var PortalShareConfig <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PortalShareConfig;
+
+    /**
+     * @var array <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileVolumeMountList;
 
     /**
      * @param AppAuxiliaryInfo $AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
@@ -113,8 +136,13 @@ class App extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppStatusInfo $Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SharedKbList <p>应用引用的共享知识库列表</p>
      * @param CorpShareConfig $CorpShareConfig <p>企业共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SharedKbList <p>应用引用的共享知识库列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PortalShareConfig $PortalShareConfig <p>portal共享配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FileVolumeMountList <p>应用挂载云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +188,11 @@ class App extends AbstractModel
             $this->Status->deserialize($param["Status"]);
         }
 
+        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
+            $this->CorpShareConfig = new CorpShareConfig();
+            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
+        }
+
         if (array_key_exists("SharedKbList",$param) and $param["SharedKbList"] !== null) {
             $this->SharedKbList = [];
             foreach ($param["SharedKbList"] as $key => $value){
@@ -169,9 +202,18 @@ class App extends AbstractModel
             }
         }
 
-        if (array_key_exists("CorpShareConfig",$param) and $param["CorpShareConfig"] !== null) {
-            $this->CorpShareConfig = new CorpShareConfig();
-            $this->CorpShareConfig->deserialize($param["CorpShareConfig"]);
+        if (array_key_exists("PortalShareConfig",$param) and $param["PortalShareConfig"] !== null) {
+            $this->PortalShareConfig = new PortalShareConfig();
+            $this->PortalShareConfig->deserialize($param["PortalShareConfig"]);
+        }
+
+        if (array_key_exists("FileVolumeMountList",$param) and $param["FileVolumeMountList"] !== null) {
+            $this->FileVolumeMountList = [];
+            foreach ($param["FileVolumeMountList"] as $key => $value){
+                $obj = new FileVolumeMount();
+                $obj->deserialize($value);
+                array_push($this->FileVolumeMountList, $obj);
+            }
         }
     }
 }

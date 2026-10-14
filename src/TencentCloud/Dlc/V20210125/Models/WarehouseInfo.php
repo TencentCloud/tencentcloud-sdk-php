@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionName(string $PartitionName) 设置<p>资源池展示名（解析不到时为空）.</p>
  * @method string getQueueName() 获取<p>资源组/队列名。</p>
  * @method void setQueueName(string $QueueName) 设置<p>资源组/队列名。</p>
+ * @method WarehouseProfileBriefInfo getProfileDetail() 获取<p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfileDetail(WarehouseProfileBriefInfo $ProfileDetail) 设置<p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取<p>创建时间（毫秒时间戳）。</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间（毫秒时间戳）。</p>
  * @method integer getUpdateTime() 获取<p>最后更新时间（毫秒时间戳）。</p>
@@ -102,6 +106,12 @@ class WarehouseInfo extends AbstractModel
     public $QueueName;
 
     /**
+     * @var WarehouseProfileBriefInfo <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProfileDetail;
+
+    /**
      * @var integer <p>创建时间（毫秒时间戳）。</p>
      */
     public $CreateTime;
@@ -165,6 +175,8 @@ class WarehouseInfo extends AbstractModel
      * @param string $PartitionCode <p>资源池编码.</p>
      * @param string $PartitionName <p>资源池展示名（解析不到时为空）.</p>
      * @param string $QueueName <p>资源组/队列名。</p>
+     * @param WarehouseProfileBriefInfo $ProfileDetail <p>规格详情（profile 完整基础信息，describe 与 list 均返回）.</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime <p>创建时间（毫秒时间戳）。</p>
      * @param integer $UpdateTime <p>最后更新时间（毫秒时间戳）。</p>
      * @param integer $ActiveClusters <p>活跃集群数（describe 与 list 均返回）。集群明细等完整快照仅 DescribeWarehouseDetail 的 Observability 返回。</p>
@@ -220,6 +232,11 @@ class WarehouseInfo extends AbstractModel
 
         if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
             $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("ProfileDetail",$param) and $param["ProfileDetail"] !== null) {
+            $this->ProfileDetail = new WarehouseProfileBriefInfo();
+            $this->ProfileDetail->deserialize($param["ProfileDetail"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

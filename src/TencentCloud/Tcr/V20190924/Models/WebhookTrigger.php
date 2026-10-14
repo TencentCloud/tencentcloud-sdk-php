@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置<p>触发器所属命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProduct() 获取<p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProduct(string $Product) 设置<p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreheatRegion() 获取<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreheatRegion(string $PreheatRegion) 设置<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebhookTrigger extends AbstractModel
 {
@@ -90,6 +98,18 @@ class WebhookTrigger extends AbstractModel
     public $NamespaceName;
 
     /**
+     * @var string <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Product;
+
+    /**
+     * @var string <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreheatRegion;
+
+    /**
      * @param string $Name <p>触发器名称</p>
      * @param array $Targets <p>触发器目标</p>
      * @param array $EventTypes <p>触发动作</p>
@@ -99,6 +119,10 @@ class WebhookTrigger extends AbstractModel
      * @param string $Description <p>触发器描述</p>
      * @param integer $NamespaceId <p>触发器所属命名空间 Id</p>
      * @param string $NamespaceName <p>触发器所属命名空间名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Product <p>触发器所属产品类型：ags 为镜像预热，apparate 为镜像加速，普通 webhook 为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +177,14 @@ class WebhookTrigger extends AbstractModel
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("PreheatRegion",$param) and $param["PreheatRegion"] !== null) {
+            $this->PreheatRegion = $param["PreheatRegion"];
         }
     }
 }

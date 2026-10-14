@@ -65,6 +65,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteHostResponse DeleteHost(Models\DeleteHostRequest $req) 删除负载均衡型域名，支持批量操作。
  * @method Models\DeleteIpAccessControlResponse DeleteIpAccessControl(Models\DeleteIpAccessControlRequest $req) Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) Waf IP黑白名单最新版本删除接口
+ * @method Models\DeleteLLMContentRuleResponse DeleteLLMContentRule(Models\DeleteLLMContentRuleRequest $req) 删除大模型内容防护规则
+ * @method Models\DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrary(Models\DeleteLLMKeywordLibraryRequest $req) 删除词库列表
  * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) 解除门神规则的状态锁
  * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) 删除用户规则引擎白名单
  * @method Models\DeleteProtectGroupResponse DeleteProtectGroup(Models\DeleteProtectGroupRequest $req) 删除防护对象组
@@ -122,7 +124,12 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户所有实例的详细信息
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) Waf ip黑白名单查询
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
+ * @method Models\DescribeLLMContentRuleListResponse DescribeLLMContentRuleList(Models\DescribeLLMContentRuleListRequest $req) 获取LLM大模型内容防护规则
  * @method Models\DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(Models\DescribeLLMContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
+ * @method Models\DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrary(Models\DescribeLLMKeywordLibraryRequest $req) 查询关键词列表
+ * @method Models\DescribeLLMSdkAccessResponse DescribeLLMSdkAccess(Models\DescribeLLMSdkAccessRequest $req) 查询sdk接入配置
+ * @method Models\DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRules(Models\DescribeLLMWafDLPRulesRequest $req) 查询 DLP 规则
+ * @method Models\DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(Models\DescribeLLMWafProtectRulesRequest $req) 查询 LLM 规则请求
  * @method Models\DescribeLogHistogramResponse DescribeLogHistogram(Models\DescribeLogHistogramRequest $req) 本接口用于构建日志数量直方图
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看CLB/TSE防护对象列表
@@ -165,6 +172,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DestroyPostCLSFlowResponse DestroyPostCLSFlow(Models\DestroyPostCLSFlowRequest $req) 销毁CLS投递流任务
  * @method Models\EnableClientMsgResponse EnableClientMsg(Models\EnableClientMsgRequest $req) 开关开启后，会将客户端的ip和port透传到后端
  * @method Models\EnableRateLimitsV2Response EnableRateLimitsV2(Models\EnableRateLimitsV2Request $req) 批量更改自研版限流规则开关
+ * @method Models\ExportLLMKeywordLibResponse ExportLLMKeywordLib(Models\ExportLLMKeywordLibRequest $req) 导出词库文件
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) 刷新防篡改url
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) 计费资源购买、续费下单接口
  * @method Models\GenerateLLMSecAnswerResponse GenerateLLMSecAnswer(Models\GenerateLLMSecAnswerRequest $req) 大模型安全代答生成接口。当用户输入命中内容安全风险检测规则时，调用本接口由大模型实时生成安全合规的替代回答。
@@ -216,6 +224,12 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyInstanceQpsLimitResponse ModifyInstanceQpsLimit(Models\ModifyInstanceQpsLimitRequest $req) 设置套餐实例的弹性qps上限
  * @method Models\ModifyInstanceRenewFlagResponse ModifyInstanceRenewFlag(Models\ModifyInstanceRenewFlagRequest $req) 修改实例的自动续费开关
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) Waf IP黑白名单编辑接口
+ * @method Models\ModifyLLMContentRuleResponse ModifyLLMContentRule(Models\ModifyLLMContentRuleRequest $req) 更新大模型内容安全规则
+ * @method Models\ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatus(Models\ModifyLLMContentRuleStatusRequest $req) 切换大模型内容防护规则开关
+ * @method Models\ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrary(Models\ModifyLLMKeywordLibraryRequest $req) 用户修改自定义词库
+ * @method Models\ModifyLLMStatusResponse ModifyLLMStatus(Models\ModifyLLMStatusRequest $req) 修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
+ * @method Models\ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRule(Models\ModifyLLMWafDLPRuleRequest $req) 修改llmwaf DLP 规则
+ * @method Models\ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(Models\ModifyLLMWafProtectRuleRequest $req) 修改 LLM 规则
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
  * @method Models\ModifyObjectsResponse ModifyObjects(Models\ModifyObjectsRequest $req) 批量修改防护对象

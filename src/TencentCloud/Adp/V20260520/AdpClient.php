@@ -45,6 +45,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\CreateSpaceResponse CreateSpace(Models\CreateSpaceRequest $req) 创建空间
  * @method Models\CreateVariableResponse CreateVariable(Models\CreateVariableRequest $req) 创建参数变量
  * @method Models\CreateWebSocketTokenResponse CreateWebSocketToken(Models\CreateWebSocketTokenRequest $req) 创建 WebSocket Token
+ * @method Models\CreateWorkflowRunResponse CreateWorkflowRun(Models\CreateWorkflowRunRequest $req) 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，才能创建成功。
  * @method Models\CreateWorkspaceCredentialResponse CreateWorkspaceCredential(Models\CreateWorkspaceCredentialRequest $req) 创建工作空间凭证
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除Agent
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
@@ -96,6 +98,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeModelListResponse DescribeModelList(Models\DescribeModelListRequest $req) 查询模型列表
  * @method Models\DescribeMsgRecordCategoryListResponse DescribeMsgRecordCategoryList(Models\DescribeMsgRecordCategoryListRequest $req) 查询应用的消息记录分类树，返回分类及子分类、各分类下记录数量与操作权限
  * @method Models\DescribeMsgRecordListResponse DescribeMsgRecordList(Models\DescribeMsgRecordListRequest $req) 查询应用的对话消息记录列表，支持按渠道类型、反馈类型、意图、调用结果等条件过滤，并支持游标分页与按创建时间排序
+ * @method Models\DescribeNodeBatchRunResponse DescribeNodeBatchRun(Models\DescribeNodeBatchRunRequest $req) DescribeNodeBatchRun
+ * @method Models\DescribeNodeRunDetailResponse DescribeNodeRunDetail(Models\DescribeNodeRunDetailRequest $req) 查看工作流节点运行详情
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 获取插件详情
  * @method Models\DescribePluginSummaryListResponse DescribePluginSummaryList(Models\DescribePluginSummaryListRequest $req) 获取插件列表
  * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) 查询 QA 详情
@@ -113,6 +117,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeUsageSummaryListResponse DescribeUsageSummaryList(Models\DescribeUsageSummaryListRequest $req) 查询资源用量聚合明细，支持模型、插件、平台三类资源，按空间/应用维度聚合展示调用次数、Token消耗等指标
  * @method Models\DescribeVariableResponse DescribeVariable(Models\DescribeVariableRequest $req) 获取参数变量
  * @method Models\DescribeVariableListResponse DescribeVariableList(Models\DescribeVariableListRequest $req) 获取参数变量列表
+ * @method Models\DescribeWorkflowRunResponse DescribeWorkflowRun(Models\DescribeWorkflowRunRequest $req) 查询工作流运行详情
+ * @method Models\DescribeWorkflowRunSummaryListResponse DescribeWorkflowRunSummaryList(Models\DescribeWorkflowRunSummaryListRequest $req) 查询工作流运行实例列表
  * @method Models\ExportQAResponse ExportQA(Models\ExportQARequest $req) 异步导出 QA
  * @method Models\FavoritePluginResponse FavoritePlugin(Models\FavoritePluginRequest $req) 收藏插件
  * @method Models\FavoriteSkillResponse FavoriteSkill(Models\FavoriteSkillRequest $req) 收藏skill
@@ -140,10 +146,14 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ResetConversationResponse ResetConversation(Models\ResetConversationRequest $req) 重置会话
 注意：当前Claw模式应用会话不支持重置
  * @method Models\ResumeAppTriggerResponse ResumeAppTrigger(Models\ResumeAppTriggerRequest $req) ResumeAppTrigger
+ * @method Models\ResumeWorkflowRunResponse ResumeWorkflowRun(Models\ResumeWorkflowRunRequest $req) 继续运行等待输入的工作流异步运行实例
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 重试发布(发布暂停之后再次重新发布)
  * @method Models\RollbackReleaseResponse RollbackRelease(Models\RollbackReleaseRequest $req) 回滚发布
  * @method Models\RunAppTriggerNowResponse RunAppTriggerNow(Models\RunAppTriggerNowRequest $req) RunAppTriggerNow
+ * @method Models\SaveWorkflowDebugContextResponse SaveWorkflowDebugContext(Models\SaveWorkflowDebugContextRequest $req) SaveWorkflowDebugContext
+ * @method Models\SaveWorkflowToolNodeOutputResponse SaveWorkflowToolNodeOutput(Models\SaveWorkflowToolNodeOutputRequest $req) SaveWorkflowToolNodeOutput
  * @method Models\SearchKnowledgeResponse SearchKnowledge(Models\SearchKnowledgeRequest $req) 知识检索
+ * @method Models\StopWorkflowRunListResponse StopWorkflowRunList(Models\StopWorkflowRunListRequest $req) 批量停止正在进行的工作流运行实例。
  * @method Models\UnfavoritePluginResponse UnfavoritePlugin(Models\UnfavoritePluginRequest $req) 取消收藏插件
  * @method Models\UnfavoriteSkillResponse UnfavoriteSkill(Models\UnfavoriteSkillRequest $req) 取消收藏skill
  */

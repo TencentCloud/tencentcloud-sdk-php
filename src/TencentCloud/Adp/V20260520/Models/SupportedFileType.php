@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 支持的文件类型
  *
- * @method string getDescription() 获取文件类型描述(如"文本文档")
- * @method void setDescription(string $Description) 设置文件类型描述(如"文本文档")
- * @method string getFileExt() 获取文件类型(如 txt、pdf、jpg, 建议用扩展名)
- * @method void setFileExt(string $FileExt) 设置文件类型(如 txt、pdf、jpg, 建议用扩展名)
- * @method string getMaxSizeBytes() 获取文件大小限制(单位: 字节)
- * @method void setMaxSizeBytes(string $MaxSizeBytes) 设置文件大小限制(单位: 字节)
+ * @method string getDescription() 获取<p>描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息</p>
+ * @method string getFileExt() 获取<p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
+ * @method void setFileExt(string $FileExt) 设置<p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
+ * @method string getMaxSizeBytes() 获取<p>文件大小限制（单位：字节）</p>
+ * @method void setMaxSizeBytes(string $MaxSizeBytes) 设置<p>文件大小限制（单位：字节）</p>
  */
 class SupportedFileType extends AbstractModel
 {
     /**
-     * @var string 文件类型描述(如"文本文档")
+     * @var string <p>描述信息</p>
      */
     public $Description;
 
     /**
-     * @var string 文件类型(如 txt、pdf、jpg, 建议用扩展名)
+     * @var string <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
      */
     public $FileExt;
 
     /**
-     * @var string 文件大小限制(单位: 字节)
+     * @var string <p>文件大小限制（单位：字节）</p>
      */
     public $MaxSizeBytes;
 
     /**
-     * @param string $Description 文件类型描述(如"文本文档")
-     * @param string $FileExt 文件类型(如 txt、pdf、jpg, 建议用扩展名)
-     * @param string $MaxSizeBytes 文件大小限制(单位: 字节)
+     * @param string $Description <p>描述信息</p>
+     * @param string $FileExt <p>文件类型（如 txt、pdf、jpg，建议用扩展名）</p>
+     * @param string $MaxSizeBytes <p>文件大小限制（单位：字节）</p>
      */
     function __construct()
     {

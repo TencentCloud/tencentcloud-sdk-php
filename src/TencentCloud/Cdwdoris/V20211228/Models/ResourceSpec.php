@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源规格描述信息
  *
- * @method string getName() 获取规格名称，例如“SCH1"
- * @method void setName(string $Name) 设置规格名称，例如“SCH1"
- * @method integer getCpu() 获取cpu核数
- * @method void setCpu(integer $Cpu) 设置cpu核数
- * @method integer getMem() 获取内存大小，单位G
- * @method void setMem(integer $Mem) 设置内存大小，单位G
- * @method string getType() 获取分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
- * @method void setType(string $Type) 设置分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
- * @method DiskSpec getSystemDisk() 获取系统盘描述信息
- * @method void setSystemDisk(DiskSpec $SystemDisk) 设置系统盘描述信息
- * @method DiskSpec getDataDisk() 获取数据盘描述信息
- * @method void setDataDisk(DiskSpec $DataDisk) 设置数据盘描述信息
- * @method integer getMaxNodeSize() 获取最大节点数目限制
- * @method void setMaxNodeSize(integer $MaxNodeSize) 设置最大节点数目限制
- * @method boolean getAvailable() 获取是否可用，false代表售罄
- * @method void setAvailable(boolean $Available) 设置是否可用，false代表售罄
- * @method string getComputeSpecDesc() 获取规格描述信息
- * @method void setComputeSpecDesc(string $ComputeSpecDesc) 设置规格描述信息
- * @method integer getInstanceQuota() 获取cvm库存
- * @method void setInstanceQuota(integer $InstanceQuota) 设置cvm库存
+ * @method string getName() 获取<p>规格名称，例如“SCH1&quot;</p>
+ * @method void setName(string $Name) 设置<p>规格名称，例如“SCH1&quot;</p>
+ * @method integer getCpu() 获取<p>cpu核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>cpu核数</p>
+ * @method integer getMem() 获取<p>内存大小，单位G</p>
+ * @method void setMem(integer $Mem) 设置<p>内存大小，单位G</p>
+ * @method string getType() 获取<p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
+ * @method void setType(string $Type) 设置<p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
+ * @method DiskSpec getSystemDisk() 获取<p>系统盘描述信息</p>
+ * @method void setSystemDisk(DiskSpec $SystemDisk) 设置<p>系统盘描述信息</p>
+ * @method DiskSpec getDataDisk() 获取<p>数据盘描述信息</p>
+ * @method void setDataDisk(DiskSpec $DataDisk) 设置<p>数据盘描述信息</p>
+ * @method integer getMaxNodeSize() 获取<p>最大节点数目限制</p>
+ * @method void setMaxNodeSize(integer $MaxNodeSize) 设置<p>最大节点数目限制</p>
+ * @method boolean getAvailable() 获取<p>是否可用，false代表售罄</p>
+ * @method void setAvailable(boolean $Available) 设置<p>是否可用，false代表售罄</p>
+ * @method string getComputeSpecDesc() 获取<p>规格描述信息</p>
+ * @method void setComputeSpecDesc(string $ComputeSpecDesc) 设置<p>规格描述信息</p>
+ * @method integer getInstanceQuota() 获取<p>cvm库存</p>
+ * @method void setInstanceQuota(integer $InstanceQuota) 设置<p>cvm库存</p>
+ * @method string getComputeGroupSuffix() 获取<p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+ * @method void setComputeGroupSuffix(string $ComputeGroupSuffix) 设置<p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
  */
 class ResourceSpec extends AbstractModel
 {
     /**
-     * @var string 规格名称，例如“SCH1"
+     * @var string <p>规格名称，例如“SCH1&quot;</p>
      */
     public $Name;
 
     /**
-     * @var integer cpu核数
+     * @var integer <p>cpu核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存大小，单位G
+     * @var integer <p>内存大小，单位G</p>
      */
     public $Mem;
 
     /**
-     * @var string 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
+     * @var string <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
      */
     public $Type;
 
     /**
-     * @var DiskSpec 系统盘描述信息
+     * @var DiskSpec <p>系统盘描述信息</p>
      */
     public $SystemDisk;
 
     /**
-     * @var DiskSpec 数据盘描述信息
+     * @var DiskSpec <p>数据盘描述信息</p>
      */
     public $DataDisk;
 
     /**
-     * @var integer 最大节点数目限制
+     * @var integer <p>最大节点数目限制</p>
      */
     public $MaxNodeSize;
 
     /**
-     * @var boolean 是否可用，false代表售罄
+     * @var boolean <p>是否可用，false代表售罄</p>
      */
     public $Available;
 
     /**
-     * @var string 规格描述信息
+     * @var string <p>规格描述信息</p>
      */
     public $ComputeSpecDesc;
 
     /**
-     * @var integer cvm库存
+     * @var integer <p>cvm库存</p>
      */
     public $InstanceQuota;
 
     /**
-     * @param string $Name 规格名称，例如“SCH1"
-     * @param integer $Cpu cpu核数
-     * @param integer $Mem 内存大小，单位G
-     * @param string $Type 分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO
-     * @param DiskSpec $SystemDisk 系统盘描述信息
-     * @param DiskSpec $DataDisk 数据盘描述信息
-     * @param integer $MaxNodeSize 最大节点数目限制
-     * @param boolean $Available 是否可用，false代表售罄
-     * @param string $ComputeSpecDesc 规格描述信息
-     * @param integer $InstanceQuota cvm库存
+     * @var string <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
+     */
+    public $ComputeGroupSuffix;
+
+    /**
+     * @param string $Name <p>规格名称，例如“SCH1&quot;</p>
+     * @param integer $Cpu <p>cpu核数</p>
+     * @param integer $Mem <p>内存大小，单位G</p>
+     * @param string $Type <p>分类标记，STANDARD/BIGDATA/HIGHIO分别表示标准型/大数据型/高IO</p>
+     * @param DiskSpec $SystemDisk <p>系统盘描述信息</p>
+     * @param DiskSpec $DataDisk <p>数据盘描述信息</p>
+     * @param integer $MaxNodeSize <p>最大节点数目限制</p>
+     * @param boolean $Available <p>是否可用，false代表售罄</p>
+     * @param string $ComputeSpecDesc <p>规格描述信息</p>
+     * @param integer $InstanceQuota <p>cvm库存</p>
+     * @param string $ComputeGroupSuffix <p>计算组ID自定义后缀。1到8位小写字母、数字或连字符，首尾须为字母或数字；不传则随机生成8位后缀。最终计算组ID格式为实例ID-后缀，同时作为内核计算组名</p>
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class ResourceSpec extends AbstractModel
 
         if (array_key_exists("InstanceQuota",$param) and $param["InstanceQuota"] !== null) {
             $this->InstanceQuota = $param["InstanceQuota"];
+        }
+
+        if (array_key_exists("ComputeGroupSuffix",$param) and $param["ComputeGroupSuffix"] !== null) {
+            $this->ComputeGroupSuffix = $param["ComputeGroupSuffix"];
         }
     }
 }

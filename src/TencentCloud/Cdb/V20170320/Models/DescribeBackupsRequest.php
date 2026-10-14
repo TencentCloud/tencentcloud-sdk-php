@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackups请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getOffset() 获取偏移量，最小值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
- * @method integer getLimit() 获取分页大小，默认值为20，最小值为1，最大值为1000。
- * @method void setLimit(integer $Limit) 设置分页大小，默认值为20，最小值为1，最大值为1000。
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method integer getOffset() 获取<p>偏移量，最小值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，最小值为0。</p>
+ * @method integer getLimit() 获取<p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
+ * @method string getMinStartTime() 获取<p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+ * @method void setMinStartTime(string $MinStartTime) 设置<p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+ * @method string getMaxStartTime() 获取<p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+ * @method void setMaxStartTime(string $MaxStartTime) 设置<p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
  */
 class DescribeBackupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 偏移量，最小值为0。
+     * @var integer <p>偏移量，最小值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页大小，默认值为20，最小值为1，最大值为1000。
+     * @var integer <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $Offset 偏移量，最小值为0。
-     * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为1000。
+     * @var string <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public $MinStartTime;
+
+    /**
+     * @var string <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
+     */
+    public $MaxStartTime;
+
+    /**
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param integer $Offset <p>偏移量，最小值为0。</p>
+     * @param integer $Limit <p>分页大小，默认值为20，最小值为1，最大值为1000。</p>
+     * @param string $MinStartTime <p>备份开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37</p>
+     * @param string $MaxStartTime <p>备份开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37</p>
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("MinStartTime",$param) and $param["MinStartTime"] !== null) {
+            $this->MinStartTime = $param["MinStartTime"];
+        }
+
+        if (array_key_exists("MaxStartTime",$param) and $param["MaxStartTime"] !== null) {
+            $this->MaxStartTime = $param["MaxStartTime"];
         }
     }
 }

@@ -20,94 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对话体验配置
  *
- * @method AICallConfig getAiCall() 获取AI通话配置
+ * @method AICallConfig getAiCall() 获取<p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiCall(AICallConfig $AiCall) 设置AI通话配置
+ * @method void setAiCall(AICallConfig $AiCall) 设置<p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BackgroundImage getBackgroundImage() 获取背景图片配置
+ * @method BackgroundImage getBackgroundImage() 获取<p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackgroundImage(BackgroundImage $BackgroundImage) 设置背景图片配置
+ * @method void setBackgroundImage(BackgroundImage $BackgroundImage) 设置<p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableFallbackReply() 获取兜底回复开关
- * @method void setEnableFallbackReply(boolean $EnableFallbackReply) 设置兜底回复开关
- * @method boolean getEnableRecommended() 获取是否使用推荐问
- * @method void setEnableRecommended(boolean $EnableRecommended) 设置是否使用推荐问
- * @method boolean getEnableWebSearch() 获取是否使用联网搜索
- * @method void setEnableWebSearch(boolean $EnableWebSearch) 设置是否使用联网搜索
- * @method string getFallbackReply() 获取兜底回复语
- * @method void setFallbackReply(string $FallbackReply) 设置兜底回复语
- * @method InputBoxConfig getInputBoxConfig() 获取输入框配置
+ * @method boolean getEnableFallbackReply() 获取<p>兜底回复开关</p>
+ * @method void setEnableFallbackReply(boolean $EnableFallbackReply) 设置<p>兜底回复开关</p>
+ * @method boolean getEnableRecommended() 获取<p>是否使用推荐问</p>
+ * @method void setEnableRecommended(boolean $EnableRecommended) 设置<p>是否使用推荐问</p>
+ * @method boolean getEnableWebSearch() 获取<p>是否使用联网搜索</p>
+ * @method void setEnableWebSearch(boolean $EnableWebSearch) 设置<p>是否使用联网搜索</p>
+ * @method string getFallbackReply() 获取<p>兜底回复语</p>
+ * @method void setFallbackReply(string $FallbackReply) 设置<p>兜底回复语</p>
+ * @method InputBoxConfig getInputBoxConfig() 获取<p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputBoxConfig(InputBoxConfig $InputBoxConfig) 设置输入框配置
+ * @method void setInputBoxConfig(InputBoxConfig $InputBoxConfig) 设置<p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMethod() 获取输出方式。枚举值: 1:流式, 2:非流式
- * @method void setMethod(integer $Method) 设置输出方式。枚举值: 1:流式, 2:非流式
- * @method integer getRecommendPromptMode() 获取推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
- * @method void setRecommendPromptMode(integer $RecommendPromptMode) 设置推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+ * @method integer getMethod() 获取<p>输出方式。枚举值: 1:流式, 2:非流式</p>
+ * @method void setMethod(integer $Method) 设置<p>输出方式。枚举值: 1:流式, 2:非流式</p>
+ * @method integer getRecommendPromptMode() 获取<p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
+ * @method void setRecommendPromptMode(integer $RecommendPromptMode) 设置<p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
  */
 class ConversationExperience extends AbstractModel
 {
     /**
-     * @var AICallConfig AI通话配置
+     * @var AICallConfig <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiCall;
 
     /**
-     * @var BackgroundImage 背景图片配置
+     * @var BackgroundImage <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackgroundImage;
 
     /**
-     * @var boolean 兜底回复开关
+     * @var boolean <p>兜底回复开关</p>
      */
     public $EnableFallbackReply;
 
     /**
-     * @var boolean 是否使用推荐问
+     * @var boolean <p>是否使用推荐问</p>
      */
     public $EnableRecommended;
 
     /**
-     * @var boolean 是否使用联网搜索
+     * @var boolean <p>是否使用联网搜索</p>
      */
     public $EnableWebSearch;
 
     /**
-     * @var string 兜底回复语
+     * @var string <p>兜底回复语</p>
      */
     public $FallbackReply;
 
     /**
-     * @var InputBoxConfig 输入框配置
+     * @var InputBoxConfig <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputBoxConfig;
 
     /**
-     * @var integer 输出方式。枚举值: 1:流式, 2:非流式
+     * @var integer <p>输出方式。枚举值: 1:流式, 2:非流式</p>
      */
     public $Method;
 
     /**
-     * @var integer 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+     * @var integer <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
      */
     public $RecommendPromptMode;
 
     /**
-     * @param AICallConfig $AiCall AI通话配置
+     * @param AICallConfig $AiCall <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackgroundImage $BackgroundImage 背景图片配置
+     * @param BackgroundImage $BackgroundImage <p>背景图片配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableFallbackReply 兜底回复开关
-     * @param boolean $EnableRecommended 是否使用推荐问
-     * @param boolean $EnableWebSearch 是否使用联网搜索
-     * @param string $FallbackReply 兜底回复语
-     * @param InputBoxConfig $InputBoxConfig 输入框配置
+     * @param boolean $EnableFallbackReply <p>兜底回复开关</p>
+     * @param boolean $EnableRecommended <p>是否使用推荐问</p>
+     * @param boolean $EnableWebSearch <p>是否使用联网搜索</p>
+     * @param string $FallbackReply <p>兜底回复语</p>
+     * @param InputBoxConfig $InputBoxConfig <p>输入框配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Method 输出方式。枚举值: 1:流式, 2:非流式
-     * @param integer $RecommendPromptMode 推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt
+     * @param integer $Method <p>输出方式。枚举值: 1:流式, 2:非流式</p>
+     * @param integer $RecommendPromptMode <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
      */
     function __construct()
     {

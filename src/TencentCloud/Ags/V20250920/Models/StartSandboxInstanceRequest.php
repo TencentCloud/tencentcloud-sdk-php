@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToolName(string $ToolName) 设置<p>沙箱工具名称，与 ToolId 至少有一个要填</p>
  * @method string getSourceInstanceId() 获取<p>待克隆的源沙箱 ID</p>
  * @method void setSourceInstanceId(string $SourceInstanceId) 设置<p>待克隆的源沙箱 ID</p>
+ * @method string getSnapshotId() 获取<p>待启动的沙箱快照 ID</p>
+ * @method void setSnapshotId(string $SnapshotId) 设置<p>待启动的沙箱快照 ID</p>
  * @method string getTimeout() 获取<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
  * @method void setTimeout(string $Timeout) 设置<p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
  * @method string getClientToken() 获取<p>幂等性 Token，长度不超过 64 字符</p>
@@ -55,6 +57,11 @@ class StartSandboxInstanceRequest extends AbstractModel
      * @var string <p>待克隆的源沙箱 ID</p>
      */
     public $SourceInstanceId;
+
+    /**
+     * @var string <p>待启动的沙箱快照 ID</p>
+     */
+    public $SnapshotId;
 
     /**
      * @var string <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
@@ -90,6 +97,7 @@ class StartSandboxInstanceRequest extends AbstractModel
      * @param string $ToolId <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
      * @param string $ToolName <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
      * @param string $SourceInstanceId <p>待克隆的源沙箱 ID</p>
+     * @param string $SnapshotId <p>待启动的沙箱快照 ID</p>
      * @param string $Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
      * @param string $ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      * @param array $MountOptions <p>沙箱实例存储挂载配置</p>
@@ -120,6 +128,10 @@ class StartSandboxInstanceRequest extends AbstractModel
 
         if (array_key_exists("SourceInstanceId",$param) and $param["SourceInstanceId"] !== null) {
             $this->SourceInstanceId = $param["SourceInstanceId"];
+        }
+
+        if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
+            $this->SnapshotId = $param["SnapshotId"];
         }
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {

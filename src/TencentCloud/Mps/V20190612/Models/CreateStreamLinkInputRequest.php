@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStreamLinkInput请求参数结构体
  *
- * @method string getFlowId() 获取媒体传输流ID。
- * @method void setFlowId(string $FlowId) 设置媒体传输流ID。
- * @method array getInputGroup() 获取流的输入组。
- * @method void setInputGroup(array $InputGroup) 设置流的输入组。
+ * @method string getFlowId() 获取<p>媒体传输流ID。</p>
+ * @method void setFlowId(string $FlowId) 设置<p>媒体传输流ID。</p>
+ * @method array getInputGroup() 获取<p>流的输入组。</p>
+ * @method void setInputGroup(array $InputGroup) 设置<p>流的输入组。</p>
  */
 class CreateStreamLinkInputRequest extends AbstractModel
 {
     /**
-     * @var string 媒体传输流ID。
+     * @var string <p>媒体传输流ID。</p>
      */
     public $FlowId;
 
     /**
-     * @var array 流的输入组。
+     * @var array <p>流的输入组。</p>
      */
     public $InputGroup;
 
     /**
-     * @param string $FlowId 媒体传输流ID。
-     * @param array $InputGroup 流的输入组。
+     * @param string $FlowId <p>媒体传输流ID。</p>
+     * @param array $InputGroup <p>流的输入组。</p>
      */
     function __construct()
     {

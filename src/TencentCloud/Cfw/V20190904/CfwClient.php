@@ -135,6 +135,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeVpcAclEdgeRangeResponse DescribeVpcAclEdgeRange(Models\DescribeVpcAclEdgeRangeRequest $req) 查询内网间访问控制规则的生效范围
  * @method Models\DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteList(Models\DescribeVpcFwCcnPolicyWhiteListRequest $req) 查询VPC防火墙策略路由功能开白的CCN列表
  * @method Models\DescribeVpcFwGroupSwitchResponse DescribeVpcFwGroupSwitch(Models\DescribeVpcFwGroupSwitchRequest $req) VPC防火墙(组)开关列表
+ * @method Models\DescribeVpcFwIpStatResponse DescribeVpcFwIpStat(Models\DescribeVpcFwIpStatRequest $req) 查询VPC防火墙下，单IP粒度的流量统计
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
  * @method Models\ExportLogsOfflineResponse ExportLogsOffline(Models\ExportLogsOfflineRequest $req) 日志审计日志离线导出
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则

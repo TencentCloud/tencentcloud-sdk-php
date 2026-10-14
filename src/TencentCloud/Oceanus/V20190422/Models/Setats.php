@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCCNs(array $CCNs) 设置<p>网络信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterGroupSerialId() 获取<p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterGroupSerialId(string $ClusterGroupSerialId) 设置<p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Setats extends AbstractModel
 {
@@ -220,6 +224,12 @@ class Setats extends AbstractModel
     public $CCNs;
 
     /**
+     * @var string <p>挂靠的宿主集群</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterGroupSerialId;
+
+    /**
      * @param string $SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
@@ -255,6 +265,8 @@ class Setats extends AbstractModel
      * @param array $SecurityGroupIds <p>安全组信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CCNs <p>网络信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterGroupSerialId <p>挂靠的宿主集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -369,6 +381,10 @@ class Setats extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CCNs, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterGroupSerialId",$param) and $param["ClusterGroupSerialId"] !== null) {
+            $this->ClusterGroupSerialId = $param["ClusterGroupSerialId"];
         }
     }
 }

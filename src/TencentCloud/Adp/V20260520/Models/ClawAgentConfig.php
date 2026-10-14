@@ -20,33 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClawAgent配置
  *
- * @method ClawAgentAgentTeamConfig getAgentTeamConfig() 获取Agent团队协作配置
+ * @method ClawAgentAgentTeamConfig getAgentTeamConfig() 获取<p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentTeamConfig(ClawAgentAgentTeamConfig $AgentTeamConfig) 设置Agent团队协作配置
+ * @method void setAgentTeamConfig(ClawAgentAgentTeamConfig $AgentTeamConfig) 设置<p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClawAgentLongMemoryConfig getLongMemoryConfig() 获取长期记忆配置
+ * @method ClawAgentLongMemoryConfig getLongMemoryConfig() 获取<p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLongMemoryConfig(ClawAgentLongMemoryConfig $LongMemoryConfig) 设置长期记忆配置
+ * @method void setLongMemoryConfig(ClawAgentLongMemoryConfig $LongMemoryConfig) 设置<p>长期记忆配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClawAgentChannelContextTimeoutConfig getChannelContextTimeoutConfig() 获取<p>渠道上下文超时清空配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelContextTimeoutConfig(ClawAgentChannelContextTimeoutConfig $ChannelContextTimeoutConfig) 设置<p>渠道上下文超时清空配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClawAgentConfig extends AbstractModel
 {
     /**
-     * @var ClawAgentAgentTeamConfig Agent团队协作配置
+     * @var ClawAgentAgentTeamConfig <p>Agent团队协作配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentTeamConfig;
 
     /**
-     * @var ClawAgentLongMemoryConfig 长期记忆配置
+     * @var ClawAgentLongMemoryConfig <p>长期记忆配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LongMemoryConfig;
 
     /**
-     * @param ClawAgentAgentTeamConfig $AgentTeamConfig Agent团队协作配置
+     * @var ClawAgentChannelContextTimeoutConfig <p>渠道上下文超时清空配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClawAgentLongMemoryConfig $LongMemoryConfig 长期记忆配置
+     */
+    public $ChannelContextTimeoutConfig;
+
+    /**
+     * @param ClawAgentAgentTeamConfig $AgentTeamConfig <p>Agent团队协作配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClawAgentLongMemoryConfig $LongMemoryConfig <p>长期记忆配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClawAgentChannelContextTimeoutConfig $ChannelContextTimeoutConfig <p>渠道上下文超时清空配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,11 @@ class ClawAgentConfig extends AbstractModel
         if (array_key_exists("LongMemoryConfig",$param) and $param["LongMemoryConfig"] !== null) {
             $this->LongMemoryConfig = new ClawAgentLongMemoryConfig();
             $this->LongMemoryConfig->deserialize($param["LongMemoryConfig"]);
+        }
+
+        if (array_key_exists("ChannelContextTimeoutConfig",$param) and $param["ChannelContextTimeoutConfig"] !== null) {
+            $this->ChannelContextTimeoutConfig = new ClawAgentChannelContextTimeoutConfig();
+            $this->ChannelContextTimeoutConfig->deserialize($param["ChannelContextTimeoutConfig"]);
         }
     }
 }

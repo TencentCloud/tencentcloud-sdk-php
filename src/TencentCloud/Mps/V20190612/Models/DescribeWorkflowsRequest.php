@@ -20,54 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkflows请求参数结构体
  *
- * @method array getWorkflowIds() 获取工作流 ID 过滤条件，数组长度限制：100。
- * @method void setWorkflowIds(array $WorkflowIds) 设置工作流 ID 过滤条件，数组长度限制：100。
- * @method string getStatus() 获取工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
- * @method void setStatus(string $Status) 设置工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
- * @method integer getOffset() 获取分页偏移量，默认值：0。
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method array getWorkflowIds() 获取<p>工作流 ID 过滤条件，数组长度限制：100。</p>
+ * @method void setWorkflowIds(array $WorkflowIds) 设置<p>工作流 ID 过滤条件，数组长度限制：100。</p>
+ * @method string getStatus() 获取<p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
+ * @method void setStatus(string $Status) 设置<p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
+ * @method integer getOffset() 获取<p>分页偏移量，默认值：0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认值：0。</p>
+ * @method integer getLimit() 获取<p>返回记录条数，默认值：10，最大值：100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回记录条数，默认值：10，最大值：100。</p>
  */
 class DescribeWorkflowsRequest extends AbstractModel
 {
     /**
-     * @var array 工作流 ID 过滤条件，数组长度限制：100。
+     * @var array <p>工作流 ID 过滤条件，数组长度限制：100。</p>
      */
     public $WorkflowIds;
 
     /**
-     * @var string 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+     * @var string <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
      */
     public $Status;
 
     /**
-     * @var integer 分页偏移量，默认值：0。
+     * @var integer <p>分页偏移量，默认值：0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认值：10，最大值：100。
+     * @var integer <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public $Limit;
 
     /**
-     * @param array $WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
-     * @param string $Status 工作流状态，取值范围：
-<li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
-     * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @param array $WorkflowIds <p>工作流 ID 过滤条件，数组长度限制：100。</p>
+     * @param string $Status <p>工作流状态，取值范围：</p><li>Enabled：已启用，</li><li>Disabled：已禁用。</li>不填此参数，则不区分工作流状态。
+     * @param integer $Offset <p>分页偏移量，默认值：0。</p>
+     * @param integer $Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     function __construct()
     {

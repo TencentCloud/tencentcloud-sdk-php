@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrigger(WebhookTrigger $Trigger) 设置<p>触发器参数</p>
  * @method string getNamespace() 获取<p>命名空间</p>
  * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getProduct() 获取<p>产品名称，非空时创建的 webhook 将被隐藏</p>
+ * @method void setProduct(string $Product) 设置<p>产品名称，非空时创建的 webhook 将被隐藏</p>
+ * @method string getPreheatRegion() 获取<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+ * @method void setPreheatRegion(string $PreheatRegion) 设置<p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
  */
 class ModifyWebhookTriggerRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyWebhookTriggerRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var string <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     */
+    public $Product;
+
+    /**
+     * @var string <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
+     */
+    public $PreheatRegion;
+
+    /**
      * @param string $RegistryId <p>实例Id</p>
      * @param WebhookTrigger $Trigger <p>触发器参数</p>
      * @param string $Namespace <p>命名空间</p>
+     * @param string $Product <p>产品名称，非空时创建的 webhook 将被隐藏</p>
+     * @param string $PreheatRegion <p>预热目标地域，AGS 镜像预热的目标地域，非 AGS 触发器为空</p>
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class ModifyWebhookTriggerRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("PreheatRegion",$param) and $param["PreheatRegion"] !== null) {
+            $this->PreheatRegion = $param["PreheatRegion"];
         }
     }
 }

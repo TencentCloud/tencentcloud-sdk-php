@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoragePath(string $StoragePath) 设置<p>用于解析调用下载接口</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceType() 获取<p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceType(string $SourceType) 设置<p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceName() 获取<p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceName(string $SourceName) 设置<p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutionSummary() 获取<p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionSummary(string $ExecutionSummary) 设置<p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ArtifactInfo extends AbstractModel
 {
@@ -124,6 +136,24 @@ class ArtifactInfo extends AbstractModel
     public $StoragePath;
 
     /**
+     * @var string <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceType;
+
+    /**
+     * @var string <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceName;
+
+    /**
+     * @var string <p>预览摘要</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionSummary;
+
+    /**
      * @param string $ArtifactId <p>产物 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>产物名称</p>
@@ -143,6 +173,12 @@ class ArtifactInfo extends AbstractModel
      * @param string $SkillId <p>产生该制品的 Skill ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StoragePath <p>用于解析调用下载接口</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceType <p>来源类型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceName <p>来源名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutionSummary <p>预览摘要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class ArtifactInfo extends AbstractModel
 
         if (array_key_exists("StoragePath",$param) and $param["StoragePath"] !== null) {
             $this->StoragePath = $param["StoragePath"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("SourceName",$param) and $param["SourceName"] !== null) {
+            $this->SourceName = $param["SourceName"];
+        }
+
+        if (array_key_exists("ExecutionSummary",$param) and $param["ExecutionSummary"] !== null) {
+            $this->ExecutionSummary = $param["ExecutionSummary"];
         }
     }
 }

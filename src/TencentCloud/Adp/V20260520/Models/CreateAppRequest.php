@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApp请求参数结构体
  *
- * @method string getSpaceId() 获取空间ID
- * @method void setSpaceId(string $SpaceId) 设置空间ID
- * @method integer getAppMode() 获取应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
- * @method void setAppMode(integer $AppMode) 设置应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
- * @method string getAvatar() 获取应用头像
- * @method void setAvatar(string $Avatar) 设置应用头像
- * @method string getDescription() 获取应用描述
- * @method void setDescription(string $Description) 设置应用描述
- * @method string getName() 获取应用名称
- * @method void setName(string $Name) 设置应用名称
+ * @method string getSpaceId() 获取<p>空间ID</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间ID</p>
+ * @method integer getAppMode() 获取<p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+ * @method void setAppMode(integer $AppMode) 设置<p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+ * @method string getAvatar() 获取<p>应用头像</p>
+ * @method void setAvatar(string $Avatar) 设置<p>应用头像</p>
+ * @method string getDescription() 获取<p>应用描述</p>
+ * @method void setDescription(string $Description) 设置<p>应用描述</p>
+ * @method string getName() 获取<p>应用名称</p>
+ * @method void setName(string $Name) 设置<p>应用名称</p>
  */
 class CreateAppRequest extends AbstractModel
 {
     /**
-     * @var string 空间ID
+     * @var string <p>空间ID</p>
      */
     public $SpaceId;
 
     /**
-     * @var integer 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * @var integer <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public $AppMode;
 
     /**
-     * @var string 应用头像
+     * @var string <p>应用头像</p>
      */
     public $Avatar;
 
     /**
-     * @var string 应用描述
+     * @var string <p>应用描述</p>
      */
     public $Description;
 
     /**
-     * @var string 应用名称
+     * @var string <p>应用名称</p>
      */
     public $Name;
 
     /**
-     * @param string $SpaceId 空间ID
-     * @param integer $AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
-     * @param string $Avatar 应用头像
-     * @param string $Description 应用描述
-     * @param string $Name 应用名称
+     * @param string $SpaceId <p>空间ID</p>
+     * @param integer $AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+     * @param string $Avatar <p>应用头像</p>
+     * @param string $Description <p>应用描述</p>
+     * @param string $Name <p>应用名称</p>
      */
     function __construct()
     {

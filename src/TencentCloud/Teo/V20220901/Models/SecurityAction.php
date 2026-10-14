@@ -20,110 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全的执行动作
  *
- * @method string getName() 获取安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
- * @method void setName(string $Name) 设置安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
- * @method DenyActionParameters getDenyActionParameters() 获取当 Name 为 Deny 时的附加参数。
- * @method void setDenyActionParameters(DenyActionParameters $DenyActionParameters) 设置当 Name 为 Deny 时的附加参数。
- * @method RedirectActionParameters getRedirectActionParameters() 获取当 Name 为 Redirect 时的附加参数。
- * @method void setRedirectActionParameters(RedirectActionParameters $RedirectActionParameters) 设置当 Name 为 Redirect 时的附加参数。
- * @method AllowActionParameters getAllowActionParameters() 获取当 Name 为 Allow 时的附加参数。
- * @method void setAllowActionParameters(AllowActionParameters $AllowActionParameters) 设置当 Name 为 Allow 时的附加参数。
- * @method ChallengeActionParameters getChallengeActionParameters() 获取当 Name 为 Challenge 时的附加参数。
- * @method void setChallengeActionParameters(ChallengeActionParameters $ChallengeActionParameters) 设置当 Name 为 Challenge 时的附加参数。
- * @method BlockIPActionParameters getBlockIPActionParameters() 获取待废弃，当 Name 为 BlockIP 时的附加参数。
- * @method void setBlockIPActionParameters(BlockIPActionParameters $BlockIPActionParameters) 设置待废弃，当 Name 为 BlockIP 时的附加参数。
- * @method ReturnCustomPageActionParameters getReturnCustomPageActionParameters() 获取待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
- * @method void setReturnCustomPageActionParameters(ReturnCustomPageActionParameters $ReturnCustomPageActionParameters) 设置待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+ * @method string getName() 获取<p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
+ * @method void setName(string $Name) 设置<p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
+ * @method DenyActionParameters getDenyActionParameters() 获取<p>当 Name 为 Deny 时的附加参数。</p>
+ * @method void setDenyActionParameters(DenyActionParameters $DenyActionParameters) 设置<p>当 Name 为 Deny 时的附加参数。</p>
+ * @method RedirectActionParameters getRedirectActionParameters() 获取<p>当 Name 为 Redirect 时的附加参数。</p>
+ * @method void setRedirectActionParameters(RedirectActionParameters $RedirectActionParameters) 设置<p>当 Name 为 Redirect 时的附加参数。</p>
+ * @method AllowActionParameters getAllowActionParameters() 获取<p>当 Name 为 Allow 时的附加参数。</p>
+ * @method void setAllowActionParameters(AllowActionParameters $AllowActionParameters) 设置<p>当 Name 为 Allow 时的附加参数。</p>
+ * @method ChallengeActionParameters getChallengeActionParameters() 获取<p>当 Name 为 Challenge 时的附加参数。</p>
+ * @method void setChallengeActionParameters(ChallengeActionParameters $ChallengeActionParameters) 设置<p>当 Name 为 Challenge 时的附加参数。</p>
+ * @method BlockIPActionParameters getBlockIPActionParameters() 获取<p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
+ * @method void setBlockIPActionParameters(BlockIPActionParameters $BlockIPActionParameters) 设置<p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
+ * @method ReturnCustomPageActionParameters getReturnCustomPageActionParameters() 获取<p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
+ * @method void setReturnCustomPageActionParameters(ReturnCustomPageActionParameters $ReturnCustomPageActionParameters) 设置<p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
  */
 class SecurityAction extends AbstractModel
 {
     /**
-     * @var string 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
+     * @var string <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
      */
     public $Name;
 
     /**
-     * @var DenyActionParameters 当 Name 为 Deny 时的附加参数。
+     * @var DenyActionParameters <p>当 Name 为 Deny 时的附加参数。</p>
      */
     public $DenyActionParameters;
 
     /**
-     * @var RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
+     * @var RedirectActionParameters <p>当 Name 为 Redirect 时的附加参数。</p>
      */
     public $RedirectActionParameters;
 
     /**
-     * @var AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     * @var AllowActionParameters <p>当 Name 为 Allow 时的附加参数。</p>
      */
     public $AllowActionParameters;
 
     /**
-     * @var ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
+     * @var ChallengeActionParameters <p>当 Name 为 Challenge 时的附加参数。</p>
      */
     public $ChallengeActionParameters;
 
     /**
-     * @var BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
+     * @var BlockIPActionParameters <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
      */
     public $BlockIPActionParameters;
 
     /**
-     * @var ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+     * @var ReturnCustomPageActionParameters <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
      */
     public $ReturnCustomPageActionParameters;
 
     /**
-     * @param string $Name 安全执行的具体动作。取值有：
-<li>Deny：拦截，阻止请求访问站点资源；</li>
-<li>Monitor：观察，仅记录日志；</li>
-<li>Redirect：重定向至 URL；</li>
-<li>Disabled：未启用，不启用指定规则；</li>
-<li>Allow：允许访问，但延迟处理请求；</li>
-<li>Challenge：挑战，响应挑战内容；</li>
-<li>Trans：放行，允许请求直接访问站点资源；</li>
-<li>BlockIP：待废弃，IP 封禁；</li>
-<li>ReturnCustomPage：待废弃，使用指定页面拦截；</li>
-<li>JSChallenge：待废弃，JavaScript 挑战；</li>
-<li>ManagedChallenge：待废弃，托管挑战。</li>
-     * @param DenyActionParameters $DenyActionParameters 当 Name 为 Deny 时的附加参数。
-     * @param RedirectActionParameters $RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
-     * @param AllowActionParameters $AllowActionParameters 当 Name 为 Allow 时的附加参数。
-     * @param ChallengeActionParameters $ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
-     * @param BlockIPActionParameters $BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
-     * @param ReturnCustomPageActionParameters $ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
+     * @param string $Name <p>安全执行的具体动作。取值有：</p><ul><li>Deny：拦截，阻止请求访问站点资源；</li><li>Monitor：观察，仅记录日志；</li><li>Redirect：重定向至 URL；</li><li>Disabled：未启用，不启用指定规则；</li><li>Allow：放行， 跳过当前安全模块剩余规则。当配置 AllowActionParameters 参数时延迟响应；</li><li>Challenge：挑战，响应挑战内容；</li><li>BlockIP：待废弃，IP 封禁；</li><li>ReturnCustomPage：待废弃，使用指定页面拦截；</li><li>JSChallenge：待废弃，JavaScript 挑战；</li><li>ManagedChallenge：待废弃，托管挑战。</li></ul>
+     * @param DenyActionParameters $DenyActionParameters <p>当 Name 为 Deny 时的附加参数。</p>
+     * @param RedirectActionParameters $RedirectActionParameters <p>当 Name 为 Redirect 时的附加参数。</p>
+     * @param AllowActionParameters $AllowActionParameters <p>当 Name 为 Allow 时的附加参数。</p>
+     * @param ChallengeActionParameters $ChallengeActionParameters <p>当 Name 为 Challenge 时的附加参数。</p>
+     * @param BlockIPActionParameters $BlockIPActionParameters <p>待废弃，当 Name 为 BlockIP 时的附加参数。</p>
+     * @param ReturnCustomPageActionParameters $ReturnCustomPageActionParameters <p>待废弃，当 Name 为 ReturnCustomPage 时的附加参数。</p>
      */
     function __construct()
     {

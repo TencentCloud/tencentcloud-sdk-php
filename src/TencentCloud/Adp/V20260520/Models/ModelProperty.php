@@ -18,28 +18,28 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型属性
+ * <p>模型属性（支持工作流类型/AI 通话类型/是否关闭模型参数/是否支持深度思考/是否限时免费/是否默认模型等）</p>
  *
- * @method string getName() 获取属性名称
- * @method void setName(string $Name) 设置属性名称
- * @method string getValue() 获取属性值
- * @method void setValue(string $Value) 设置属性值
+ * @method string getName() 获取<p>属性名称</p>
+ * @method void setName(string $Name) 设置<p>属性名称</p>
+ * @method string getValue() 获取<p>属性值</p>
+ * @method void setValue(string $Value) 设置<p>属性值</p>
  */
 class ModelProperty extends AbstractModel
 {
     /**
-     * @var string 属性名称
+     * @var string <p>属性名称</p>
      */
     public $Name;
 
     /**
-     * @var string 属性值
+     * @var string <p>属性值</p>
      */
     public $Value;
 
     /**
-     * @param string $Name 属性名称
-     * @param string $Value 属性值
+     * @param string $Name <p>属性名称</p>
+     * @param string $Value <p>属性值</p>
      */
     function __construct()
     {

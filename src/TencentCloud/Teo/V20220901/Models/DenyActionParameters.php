@@ -18,7 +18,12 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全执行动作为封禁的附加参数。
+ * 安全执行动作为拦截时的附加参数。
+
+该参数用于指定在命中安全规则并执行拦截动作时，系统所采取的附加处置动作。
+不同处置动作由不同且固定的参数组合进行配置，系统将根据所配置的参数组合判定实际生效的处置动作类型。
+在同一次拦截执行过程中，仅允许配置并生效一种处置动作，多个处置动作对应的参数组合不可同时出现，否则视为非法配置。为空则采用默认拦截处置动作。
+DenyActionParameters 支持以下附加处置动作：<li>默认：当 DenyActionParameters 为空，或未启用任何附加处置动作时，系统将执行默认拦截处置，即响应拦截页面。</li><li>IP 封禁：对触发规则的客户端来源 IP 进行持续封禁。对应参数 BlockIp、BlockIpDuration。</li><li>自定义页面拦截：使用指定的自定义页面内容响应请求。对应参数 ReturnCustomPage、ResponseCode、ErrorPageId。</li><li>静默：接受客户端请求但不返回。对应参数 Stall。</li>
  *
  * @method string getBlockIp() 获取是否对来源 IP 延长封禁。取值有：
 <li>on：开启；</li>

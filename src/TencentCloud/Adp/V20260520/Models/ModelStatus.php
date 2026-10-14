@@ -18,36 +18,60 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型状态信息
+ * <p>模型状态</p>
  *
- * @method integer getConcurrency() 获取专属并发数
- * @method void setConcurrency(integer $Concurrency) 设置专属并发数
- * @method boolean getIsExclusive() 获取是否专属并发
- * @method void setIsExclusive(boolean $IsExclusive) 设置是否专属并发
- * @method integer getResourceStatus() 获取资源状态。1-资源可用, 2-资源已用尽
- * @method void setResourceStatus(integer $ResourceStatus) 设置资源状态。1-资源可用, 2-资源已用尽
+ * @method integer getConcurrency() 获取<p>专属并发数</p>
+ * @method void setConcurrency(integer $Concurrency) 设置<p>专属并发数</p>
+ * @method boolean getIsExclusive() 获取<p>是否专属并发</p>
+ * @method void setIsExclusive(boolean $IsExclusive) 设置<p>是否专属并发</p>
+ * @method boolean getIsExperienceSupported() 获取<p>是否支持在智能工作台直接体验（模型广场详情页：依赖 space_id 动态判定；false 时前端置灰「立即体验」按钮）</p>
+ * @method void setIsExperienceSupported(boolean $IsExperienceSupported) 设置<p>是否支持在智能工作台直接体验（模型广场详情页：依赖 space_id 动态判定；false 时前端置灰「立即体验」按钮）</p>
+ * @method integer getResourceStatus() 获取<p>资源状态</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_STATUS_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>RESOURCE_STATUS_AVAILABLE</td><td>1</td><td>资源可用</td></tr><tr><td>RESOURCE_STATUS_EXHAUSTED</td><td>2</td><td>资源已用尽</td></tr></table>
+ * @method void setResourceStatus(integer $ResourceStatus) 设置<p>资源状态</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_STATUS_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>RESOURCE_STATUS_AVAILABLE</td><td>1</td><td>资源可用</td></tr><tr><td>RESOURCE_STATUS_EXHAUSTED</td><td>2</td><td>资源已用尽</td></tr></table>
+ * @method string getRpmLimit() 获取<p>调用 RPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+ * @method void setRpmLimit(string $RpmLimit) 设置<p>调用 RPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+ * @method string getTpmLimit() 获取<p>调用 TPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+ * @method void setTpmLimit(string $TpmLimit) 设置<p>调用 TPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
  */
 class ModelStatus extends AbstractModel
 {
     /**
-     * @var integer 专属并发数
+     * @var integer <p>专属并发数</p>
      */
     public $Concurrency;
 
     /**
-     * @var boolean 是否专属并发
+     * @var boolean <p>是否专属并发</p>
      */
     public $IsExclusive;
 
     /**
-     * @var integer 资源状态。1-资源可用, 2-资源已用尽
+     * @var boolean <p>是否支持在智能工作台直接体验（模型广场详情页：依赖 space_id 动态判定；false 时前端置灰「立即体验」按钮）</p>
+     */
+    public $IsExperienceSupported;
+
+    /**
+     * @var integer <p>资源状态</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_STATUS_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>RESOURCE_STATUS_AVAILABLE</td><td>1</td><td>资源可用</td></tr><tr><td>RESOURCE_STATUS_EXHAUSTED</td><td>2</td><td>资源已用尽</td></tr></table>
      */
     public $ResourceStatus;
 
     /**
-     * @param integer $Concurrency 专属并发数
-     * @param boolean $IsExclusive 是否专属并发
-     * @param integer $ResourceStatus 资源状态。1-资源可用, 2-资源已用尽
+     * @var string <p>调用 RPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+     */
+    public $RpmLimit;
+
+    /**
+     * @var string <p>调用 TPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+     */
+    public $TpmLimit;
+
+    /**
+     * @param integer $Concurrency <p>专属并发数</p>
+     * @param boolean $IsExclusive <p>是否专属并发</p>
+     * @param boolean $IsExperienceSupported <p>是否支持在智能工作台直接体验（模型广场详情页：依赖 space_id 动态判定；false 时前端置灰「立即体验」按钮）</p>
+     * @param integer $ResourceStatus <p>资源状态</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_STATUS_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>RESOURCE_STATUS_AVAILABLE</td><td>1</td><td>资源可用</td></tr><tr><td>RESOURCE_STATUS_EXHAUSTED</td><td>2</td><td>资源已用尽</td></tr></table>
+     * @param string $RpmLimit <p>调用 RPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
+     * @param string $TpmLimit <p>调用 TPM 上限（当前账号维度：有配置取配置，无配置取默认；0 表示未获取到）</p>
      */
     function __construct()
     {
@@ -70,8 +94,20 @@ class ModelStatus extends AbstractModel
             $this->IsExclusive = $param["IsExclusive"];
         }
 
+        if (array_key_exists("IsExperienceSupported",$param) and $param["IsExperienceSupported"] !== null) {
+            $this->IsExperienceSupported = $param["IsExperienceSupported"];
+        }
+
         if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
             $this->ResourceStatus = $param["ResourceStatus"];
+        }
+
+        if (array_key_exists("RpmLimit",$param) and $param["RpmLimit"] !== null) {
+            $this->RpmLimit = $param["RpmLimit"];
+        }
+
+        if (array_key_exists("TpmLimit",$param) and $param["TpmLimit"] !== null) {
+            $this->TpmLimit = $param["TpmLimit"];
         }
     }
 }

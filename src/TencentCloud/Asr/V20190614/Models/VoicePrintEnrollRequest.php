@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置<p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
  * @method string getAudioUrl() 获取<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
  * @method void setAudioUrl(string $AudioUrl) 设置<p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+ * @method boolean getQualityCheck() 获取<p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+ * @method void setQualityCheck(boolean $QualityCheck) 设置<p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
  */
 class VoicePrintEnrollRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class VoicePrintEnrollRequest extends AbstractModel
     public $AudioUrl;
 
     /**
+     * @var boolean <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
+     */
+    public $QualityCheck;
+
+    /**
      * @param integer $VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      * @param integer $SampleRate <p>音频采样率，目前支持16000，单位：Hz，必填</p>
      * @param string $Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      * @param string $SpeakerNick <p>说话人昵称  不超过32字节</p>
      * @param string $GroupId <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p><p><strong>注意：</strong></p><ul><li><p>一个group最多可容纳20个说话人ID</p></li><li><p>group主要用在声纹1：N比对场景</p></li></ul>
      * @param string $AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     * @param boolean $QualityCheck <p>是否对注册/更新的音频做质量检测。开启后使用质检专用引擎提取特征，对音频进行多说话人、信噪比、截幅等检查，不合格返回对应错误码；关闭时不做这些检查，沿用常规注册流。默认false</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class VoicePrintEnrollRequest extends AbstractModel
 
         if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
             $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("QualityCheck",$param) and $param["QualityCheck"] !== null) {
+            $this->QualityCheck = $param["QualityCheck"];
         }
     }
 }

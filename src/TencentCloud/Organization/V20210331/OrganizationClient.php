@@ -34,6 +34,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\AddShareUnitResourcesResponse AddShareUnitResources(Models\AddShareUnitResourcesRequest $req) 添加共享单元资源
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) 为用户组添加用户
  * @method Models\AttachPolicyResponse AttachPolicy(Models\AttachPolicyRequest $req) 绑定策略
+ * @method Models\AuditPermissionApplyOrderResponse AuditPermissionApplyOrder(Models\AuditPermissionApplyOrderRequest $req) 审批用户权限申请
  * @method Models\BindOrganizationMemberAuthAccountResponse BindOrganizationMemberAuthAccount(Models\BindOrganizationMemberAuthAccountRequest $req) 绑定组织成员和组织管理员子账号的授权关系
  * @method Models\BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccount(Models\BindOrganizationPolicySubAccountRequest $req) 绑定成员访问授权策略和组织管理员子账号
  * @method Models\CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(Models\CancelOrganizationMemberAuthAccountRequest $req) 取消组织成员和组织管理员子账号的授权关系

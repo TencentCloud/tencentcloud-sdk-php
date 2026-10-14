@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputTokens(integer $InputTokens) 设置<p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
  * @method integer getThoughtTokens() 获取<p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
  * @method void setThoughtTokens(integer $ThoughtTokens) 设置<p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
- * @method integer getInputImageCount() 获取<p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method void setInputImageCount(integer $InputImageCount) 设置<p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method integer getInputSeconds() 获取<p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method void setInputSeconds(integer $InputSeconds) 设置<p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method integer getOutputSeconds() 获取<p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method void setOutputSeconds(integer $OutputSeconds) 设置<p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method integer getTotalSeconds() 获取<p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
- * @method void setTotalSeconds(integer $TotalSeconds) 设置<p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+ * @method integer getInputImageCount() 获取<p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
+ * @method void setInputImageCount(integer $InputImageCount) 设置<p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
+ * @method integer getInputSeconds() 获取<p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+ * @method void setInputSeconds(integer $InputSeconds) 设置<p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+ * @method integer getOutputSeconds() 获取<p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
+ * @method void setOutputSeconds(integer $OutputSeconds) 设置<p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
+ * @method integer getTotalSeconds() 获取<p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+ * @method void setTotalSeconds(integer $TotalSeconds) 设置<p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
  */
 class AigcVideoTaskUsage extends AbstractModel
 {
@@ -46,32 +46,32 @@ class AigcVideoTaskUsage extends AbstractModel
     public $ThoughtTokens;
 
     /**
-     * @var integer <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @var integer <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
      */
     public $InputImageCount;
 
     /**
-     * @var integer <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @var integer <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public $InputSeconds;
 
     /**
-     * @var integer <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @var integer <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
      */
     public $OutputSeconds;
 
     /**
-     * @var integer <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @var integer <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     public $TotalSeconds;
 
     /**
      * @param integer $InputTokens <p>输入 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
      * @param integer $ThoughtTokens <p>思考产生的 Token 数目。</p><p>仅使用 GV 的 omni 版本时取值有效。</p>
-     * @param integer $InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param integer $InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param integer $OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
-     * @param integer $TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p>仅使用 Hailuo 的 H3 版本时取值有效。</p>
+     * @param integer $InputImageCount <p>输入图片数目。</p><p>仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite) 时取值有效。</p>
+     * @param integer $InputSeconds <p>输入视频的时长。</p><p>单位：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
+     * @param integer $OutputSeconds <p>输出视频时长。</p><p>单位：秒。</p><p>所有模型版本取值均有效。</p>
+     * @param integer $TotalSeconds <p>输入输出总时长。</p><p>默认值：秒。</p><p> 仅使用 Hailuo(H3/H3-Max)、wand-vega-video(1.0-lite/1.0-pro/1.5-pro)、Wan(3.0/3.0-prime) 时取值有效。</p>
      */
     function __construct()
     {

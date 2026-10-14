@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPolicyBasedRoutingNextHopId() 获取<p>策略路由下一跳ID</p>
  * @method void setPolicyBasedRoutingNextHopId(string $PolicyBasedRoutingNextHopId) 设置<p>策略路由下一跳ID</p>
- * @method string getInstanceType() 获取<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
- * @method void setInstanceType(string $InstanceType) 设置<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
- * @method string getInstanceId() 获取<p>实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
  * @method string getSourceCidrBlock() 获取<p>源地址CIDR</p>
  * @method void setSourceCidrBlock(string $SourceCidrBlock) 设置<p>源地址CIDR</p>
  * @method string getDestinationCidrBlock() 获取<p>目的地址CIDR</p>
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置<p>目的地址CIDR</p>
  * @method integer getPriority() 获取<p>优先级</p>
  * @method void setPriority(integer $Priority) 设置<p>优先级</p>
+ * @method string getInstanceType() 获取<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceRegion() 获取<p>实例所在地域</p>
+ * @method void setInstanceRegion(string $InstanceRegion) 设置<p>实例所在地域</p>
  * @method string getDescription() 获取<p>描述</p>
  * @method void setDescription(string $Description) 设置<p>描述</p>
  * @method string getPolicyBasedRoutingRuleId() 获取<p>策略路由匹配策略ID</p>
@@ -49,16 +51,6 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
     public $PolicyBasedRoutingNextHopId;
 
     /**
-     * @var string <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-     */
-    public $InstanceType;
-
-    /**
-     * @var string <p>实例ID</p>
-     */
-    public $InstanceId;
-
-    /**
      * @var string <p>源地址CIDR</p>
      */
     public $SourceCidrBlock;
@@ -72,6 +64,21 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
      * @var integer <p>优先级</p>
      */
     public $Priority;
+
+    /**
+     * @var string <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     */
+    public $InstanceType;
+
+    /**
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceId;
+
+    /**
+     * @var string <p>实例所在地域</p>
+     */
+    public $InstanceRegion;
 
     /**
      * @var string <p>描述</p>
@@ -95,11 +102,12 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
 
     /**
      * @param string $PolicyBasedRoutingNextHopId <p>策略路由下一跳ID</p>
-     * @param string $InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
-     * @param string $InstanceId <p>实例ID</p>
      * @param string $SourceCidrBlock <p>源地址CIDR</p>
      * @param string $DestinationCidrBlock <p>目的地址CIDR</p>
      * @param integer $Priority <p>优先级</p>
+     * @param string $InstanceType <p>实例类型[VPC,DIRECTCONNECT,VPNGW]</p>
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceRegion <p>实例所在地域</p>
      * @param string $Description <p>描述</p>
      * @param string $PolicyBasedRoutingRuleId <p>策略路由匹配策略ID</p>
      * @param string $DestinationInstanceType <p>目的端实例ID</p><p>枚举值：</p><ul><li>VPC： 私有网络</li></ul>
@@ -122,14 +130,6 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
             $this->PolicyBasedRoutingNextHopId = $param["PolicyBasedRoutingNextHopId"];
         }
 
-        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
-            $this->InstanceType = $param["InstanceType"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("SourceCidrBlock",$param) and $param["SourceCidrBlock"] !== null) {
             $this->SourceCidrBlock = $param["SourceCidrBlock"];
         }
@@ -140,6 +140,18 @@ class CcnPolicyBasedRoutingRule extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceRegion",$param) and $param["InstanceRegion"] !== null) {
+            $this->InstanceRegion = $param["InstanceRegion"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {

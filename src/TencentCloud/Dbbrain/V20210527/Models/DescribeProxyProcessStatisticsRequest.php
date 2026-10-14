@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxyProcessStatistics请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
  * @method string getInstanceProxyId() 获取该实例下需要查询的某一个 ProxyID 。
  * @method void setInstanceProxyId(string $InstanceProxyId) 设置该实例下需要查询的某一个 ProxyID 。
  * @method integer getLimit() 获取返回数量。
@@ -31,14 +31,32 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
  * @method string getSortBy() 获取按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
  * @method void setSortBy(string $SortBy) 设置按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
  * @method string getOrderDirection() 获取排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
  */
 class DescribeProxyProcessStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID 。
+     * @var string 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public $InstanceId;
 
@@ -64,22 +82,40 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
 
     /**
      * @var string 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
      */
     public $SortBy;
 
     /**
      * @var string 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
      */
     public $OrderDirection;
 
     /**
-     * @param string $InstanceId 实例 ID 。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      * @param string $InstanceProxyId 该实例下需要查询的某一个 ProxyID 。
      * @param integer $Limit 返回数量。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
      * @param integer $Offset 偏移量，默认0。
      * @param string $SortBy 按照某字段排序。支持值包括："AllConn"，"ActiveConn"，"Ip"。
+其中：
+
+- AllConn ：表示总连接数（活跃连接 + 非活跃连接）
+- ActiveConn：表示活跃连接数
+- Ip：表示 IP 地址
      * @param string $OrderDirection 排序方向。支持值包括："DESC"，"ASC"。
+其中：
+
+- DESC：降序
+- ASC：升序
      */
     function __construct()
     {

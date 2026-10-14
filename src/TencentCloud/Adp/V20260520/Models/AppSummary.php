@@ -20,86 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用摘要 - 列表查询返回的应用信息
  *
- * @method string getAppId() 获取应用ID
- * @method void setAppId(string $AppId) 设置应用ID
- * @method integer getAppMode() 获取应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
- * @method void setAppMode(integer $AppMode) 设置应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
- * @method string getAvatar() 获取应用头像
- * @method void setAvatar(string $Avatar) 设置应用头像
- * @method string getName() 获取应用名称
- * @method void setName(string $Name) 设置应用名称
- * @method AppOperation getOperationInfo() 获取操作信息
+ * @method string getAppId() 获取<p>应用ID</p>
+ * @method void setAppId(string $AppId) 设置<p>应用ID</p>
+ * @method integer getAppMode() 获取<p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+ * @method void setAppMode(integer $AppMode) 设置<p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+ * @method string getAvatar() 获取<p>应用头像</p>
+ * @method void setAvatar(string $Avatar) 设置<p>应用头像</p>
+ * @method string getName() 获取<p>应用名称</p>
+ * @method void setName(string $Name) 设置<p>应用名称</p>
+ * @method AppOperation getOperationInfo() 获取<p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperationInfo(AppOperation $OperationInfo) 设置操作信息
+ * @method void setOperationInfo(AppOperation $OperationInfo) 设置<p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppStatusInfo getStatus() 获取状态信息
+ * @method AppStatusInfo getStatus() 获取<p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(AppStatusInfo $Status) 设置状态信息
+ * @method void setStatus(AppStatusInfo $Status) 设置<p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AppSubStatusInfo getSubStatus() 获取子状态信息
+ * @method AppSubStatusInfo getSubStatus() 获取<p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubStatus(AppSubStatusInfo $SubStatus) 设置子状态信息
+ * @method void setSubStatus(AppSubStatusInfo $SubStatus) 设置<p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPermissionIdList() 获取资源操作权限
- * @method void setPermissionIdList(array $PermissionIdList) 设置资源操作权限
+ * @method array getPermissionIdList() 获取<p>资源操作权限</p>
+ * @method void setPermissionIdList(array $PermissionIdList) 设置<p>资源操作权限</p>
+ * @method string getDescription() 获取<p>应用描述信息</p>
+ * @method void setDescription(string $Description) 设置<p>应用描述信息</p>
  */
 class AppSummary extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
      */
     public $AppId;
 
     /**
-     * @var integer 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
+     * @var integer <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
      */
     public $AppMode;
 
     /**
-     * @var string 应用头像
+     * @var string <p>应用头像</p>
      */
     public $Avatar;
 
     /**
-     * @var string 应用名称
+     * @var string <p>应用名称</p>
      */
     public $Name;
 
     /**
-     * @var AppOperation 操作信息
+     * @var AppOperation <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationInfo;
 
     /**
-     * @var AppStatusInfo 状态信息
+     * @var AppStatusInfo <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var AppSubStatusInfo 子状态信息
+     * @var AppSubStatusInfo <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubStatus;
 
     /**
-     * @var array 资源操作权限
+     * @var array <p>资源操作权限</p>
      */
     public $PermissionIdList;
 
     /**
-     * @param string $AppId 应用ID
-     * @param integer $AppMode 应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式
-     * @param string $Avatar 应用头像
-     * @param string $Name 应用名称
-     * @param AppOperation $OperationInfo 操作信息
+     * @var string <p>应用描述信息</p>
+     */
+    public $Description;
+
+    /**
+     * @param string $AppId <p>应用ID</p>
+     * @param integer $AppMode <p>应用模式。枚举值: 1:标准模式, 2:Agent模式, 3:单工作流模式, 4:ClawAgent模式</p>
+     * @param string $Avatar <p>应用头像</p>
+     * @param string $Name <p>应用名称</p>
+     * @param AppOperation $OperationInfo <p>操作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppStatusInfo $Status 状态信息
+     * @param AppStatusInfo $Status <p>状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppSubStatusInfo $SubStatus 子状态信息
+     * @param AppSubStatusInfo $SubStatus <p>子状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PermissionIdList 资源操作权限
+     * @param array $PermissionIdList <p>资源操作权限</p>
+     * @param string $Description <p>应用描述信息</p>
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class AppSummary extends AbstractModel
 
         if (array_key_exists("PermissionIdList",$param) and $param["PermissionIdList"] !== null) {
             $this->PermissionIdList = $param["PermissionIdList"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

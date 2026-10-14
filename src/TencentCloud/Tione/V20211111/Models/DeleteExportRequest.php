@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getExportId() 获取日志下载任务的ID
  * @method void setExportId(string $ExportId) 设置日志下载任务的ID
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class DeleteExportRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteExportRequest extends AbstractModel
     public $ExportId;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @param string $ExportId 日志下载任务的ID
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteExportRequest extends AbstractModel
         }
         if (array_key_exists("ExportId",$param) and $param["ExportId"] !== null) {
             $this->ExportId = $param["ExportId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

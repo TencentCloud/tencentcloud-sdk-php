@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 列表展示的应用型负载均衡实例结构。
  *
- * @method AccessLogConfig getAccessLogConfig() 获取访问日志配置结构。
- * @method void setAccessLogConfig(AccessLogConfig $AccessLogConfig) 设置访问日志配置结构。
  * @method string getAddressIpVersion() 获取IP 地址版本，取值 IPv4 或 IPv6。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIpVersion(string $AddressIpVersion) 设置IP 地址版本，取值 IPv4 或 IPv6。
@@ -97,11 +95,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class LoadBalancer extends AbstractModel
 {
-    /**
-     * @var AccessLogConfig 访问日志配置结构。
-     */
-    public $AccessLogConfig;
-
     /**
      * @var string IP 地址版本，取值 IPv4 或 IPv6。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +184,6 @@ class LoadBalancer extends AbstractModel
     public $VpcId;
 
     /**
-     * @param AccessLogConfig $AccessLogConfig 访问日志配置结构。
      * @param string $AddressIpVersion IP 地址版本，取值 IPv4 或 IPv6。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressType 负载均衡的地址类型。取值：
@@ -242,11 +234,6 @@ class LoadBalancer extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessLogConfig",$param) and $param["AccessLogConfig"] !== null) {
-            $this->AccessLogConfig = new AccessLogConfig();
-            $this->AccessLogConfig->deserialize($param["AccessLogConfig"]);
-        }
-
         if (array_key_exists("AddressIpVersion",$param) and $param["AddressIpVersion"] !== null) {
             $this->AddressIpVersion = $param["AddressIpVersion"];
         }

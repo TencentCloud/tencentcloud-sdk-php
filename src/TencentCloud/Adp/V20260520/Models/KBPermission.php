@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCanDelete(boolean $CanDelete) 设置<p>是否可删除</p>
  * @method boolean getCanEdit() 获取<p>是否可编辑</p>
  * @method void setCanEdit(boolean $CanEdit) 设置<p>是否可编辑</p>
+ * @method boolean getCanShare() 获取<p>能否被共享</p>
+ * @method void setCanShare(boolean $CanShare) 设置<p>能否被共享</p>
  * @method boolean getCanView() 获取<p>是否可查看</p>
  * @method void setCanView(boolean $CanView) 设置<p>是否可查看</p>
  */
@@ -40,6 +42,11 @@ class KBPermission extends AbstractModel
     public $CanEdit;
 
     /**
+     * @var boolean <p>能否被共享</p>
+     */
+    public $CanShare;
+
+    /**
      * @var boolean <p>是否可查看</p>
      */
     public $CanView;
@@ -47,6 +54,7 @@ class KBPermission extends AbstractModel
     /**
      * @param boolean $CanDelete <p>是否可删除</p>
      * @param boolean $CanEdit <p>是否可编辑</p>
+     * @param boolean $CanShare <p>能否被共享</p>
      * @param boolean $CanView <p>是否可查看</p>
      */
     function __construct()
@@ -68,6 +76,10 @@ class KBPermission extends AbstractModel
 
         if (array_key_exists("CanEdit",$param) and $param["CanEdit"] !== null) {
             $this->CanEdit = $param["CanEdit"];
+        }
+
+        if (array_key_exists("CanShare",$param) and $param["CanShare"] !== null) {
+            $this->CanShare = $param["CanShare"];
         }
 
         if (array_key_exists("CanView",$param) and $param["CanView"] !== null) {

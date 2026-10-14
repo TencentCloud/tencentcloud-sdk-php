@@ -54,6 +54,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) 查询实例列表
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 用于创建云数据库实例的审计日志文件
  * @method Models\DescribeDBAuditLogTopSqlsResponse DescribeDBAuditLogTopSqls(Models\DescribeDBAuditLogTopSqlsRequest $req) 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
+ * @method Models\DescribeDBAuditLogsResponse DescribeDBAuditLogs(Models\DescribeDBAuditLogsRequest $req) 查询指定实例在时间窗口内的审计日志明细，支持按 SQL 类型、执行耗时、错误码、关键词等多条件过滤。当前仅支持 dcdb、mariadb 产品（cdb、cynosdb 已切至中台）。注意 Filter.MultiSql 与 Filter.ExcludeMultiSql 需以 JSON 字符串形式传递二维数组内容，例如 [["a","b"]] 表示 (a OR b)，服务端会自动解析。
  * @method Models\DescribeDBAutonomyActionResponse DescribeDBAutonomyAction(Models\DescribeDBAutonomyActionRequest $req) 自治中心-查询自治事件任务详情。
  * @method Models\DescribeDBAutonomyActionsResponse DescribeDBAutonomyActions(Models\DescribeDBAutonomyActionsRequest $req) 自治中心-终止自治任务（单次）
  * @method Models\DescribeDBAutonomyEventsResponse DescribeDBAutonomyEvents(Models\DescribeDBAutonomyEventsRequest $req) 自治中心-终止自治任务（单次）
@@ -66,6 +67,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeDBPerfTimeSeriesResponse DescribeDBPerfTimeSeries(Models\DescribeDBPerfTimeSeriesRequest $req) 根据实例ID获取指定时间段的性能趋势。
  * @method Models\DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(Models\DescribeDBSpaceStatusRequest $req) 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
  * @method Models\DescribeDatabaseAutonomyStatusResponse DescribeDatabaseAutonomyStatus(Models\DescribeDatabaseAutonomyStatusRequest $req) 查询数据库自治功能的开关状态。当前支持 MongoDB 的索引推荐（AutoIndexAdvice）功能状态查询。
+ * @method Models\DescribeDatabaseObjectV2Response DescribeDatabaseObjectV2(Models\DescribeDatabaseObjectV2Request $req) 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
  * @method Models\DescribeDeadLockLogsResponse DescribeDeadLockLogs(Models\DescribeDeadLockLogsRequest $req) 查询实例的死锁事件列表
  * @method Models\DescribeDiagDBInstancesResponse DescribeDiagDBInstances(Models\DescribeDiagDBInstancesRequest $req) 获取实例信息列表。Region统一选择广州。
  * @method Models\DescribeHealthScoreResponse DescribeHealthScore(Models\DescribeHealthScoreRequest $req) 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。

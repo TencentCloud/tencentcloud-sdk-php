@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSharedSubType(integer $SharedSubType) 设置<p>共享子类型：1=普通，2=公众号<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARED_KB_SUB_TYPE_UNKNOWN</td><td>0</td><td></td></tr><tr><td>SHARED_KB_SUB_TYPE_NORMAL</td><td>1</td><td>普通</td></tr><tr><td>SHARED_KB_SUB_TYPE_PUBLIC_ACCOUNT</td><td>2</td><td>公众号</td></tr></tbody></table></p>
  * @method string getUpdateTime() 获取<p>更新时间（Unix 秒）</p>
  * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间（Unix 秒）</p>
+ * @method KBSpaceShare getSpaceShare() 获取<p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpaceShare(KBSpaceShare $SpaceShare) 设置<p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KBSummary extends AbstractModel
 {
@@ -131,6 +135,12 @@ class KBSummary extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var KBSpaceShare <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpaceShare;
+
+    /**
      * @param array $AppList <p>关联的应用列表，仅共享知识库返回</p>
      * @param string $CreateTime <p>创建时间（Unix 秒）</p>
      * @param Operator $Creator <p>创建人</p>
@@ -148,6 +158,8 @@ class KBSummary extends AbstractModel
      * @param array $ProcessingFlagList <p>处理中状态列表</p>
      * @param integer $SharedSubType <p>共享子类型：1=普通，2=公众号<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARED_KB_SUB_TYPE_UNKNOWN</td><td>0</td><td></td></tr><tr><td>SHARED_KB_SUB_TYPE_NORMAL</td><td>1</td><td>普通</td></tr><tr><td>SHARED_KB_SUB_TYPE_PUBLIC_ACCOUNT</td><td>2</td><td>公众号</td></tr></tbody></table></p>
      * @param string $UpdateTime <p>更新时间（Unix 秒）</p>
+     * @param KBSpaceShare $SpaceShare <p>知识库空间共享信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -224,6 +236,11 @@ class KBSummary extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SpaceShare",$param) and $param["SpaceShare"] !== null) {
+            $this->SpaceShare = new KBSpaceShare();
+            $this->SpaceShare->deserialize($param["SpaceShare"]);
         }
     }
 }

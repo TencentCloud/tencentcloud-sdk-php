@@ -20,150 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 本地录像下载任务
  *
- * @method string getDownloadTaskId() 获取下载任务 ID
- * @method void setDownloadTaskId(string $DownloadTaskId) 设置下载任务 ID
- * @method string getChannelId() 获取通道 ID
- * @method void setChannelId(string $ChannelId) 设置通道 ID
- * @method string getChannelName() 获取通道名称
- * @method void setChannelName(string $ChannelName) 设置通道名称
- * @method string getChannelCode() 获取通道编码
- * @method void setChannelCode(string $ChannelCode) 设置通道编码
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method string getDeviceCode() 获取设备编码
- * @method void setDeviceCode(string $DeviceCode) 设置设备编码
- * @method integer getStatus() 获取任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
- * @method void setStatus(integer $Status) 设置任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
- * @method string getVideoTimeSection() 获取下载录像时间段
- * @method void setVideoTimeSection(string $VideoTimeSection) 设置下载录像时间段
- * @method integer getScale() 获取倍速
- * @method void setScale(integer $Scale) 设置倍速
- * @method integer getDownloadTime() 获取下载时长
- * @method void setDownloadTime(integer $DownloadTime) 设置下载时长
- * @method integer getVideoSize() 获取录像大小
- * @method void setVideoSize(integer $VideoSize) 设置录像大小
- * @method string getStartTime() 获取任务开始时间
- * @method void setStartTime(string $StartTime) 设置任务开始时间
- * @method string getEndTime() 获取任务结束时间
- * @method void setEndTime(string $EndTime) 设置任务结束时间
- * @method string getFileDownloadUrl() 获取文件下载地址
- * @method void setFileDownloadUrl(string $FileDownloadUrl) 设置文件下载地址
- * @method string getFailedReason() 获取失败原因
- * @method void setFailedReason(string $FailedReason) 设置失败原因
- * @method integer getExpire() 获取生命周期规则，热存天数
- * @method void setExpire(integer $Expire) 设置生命周期规则，热存天数
- * @method string getPreviewUrl() 获取mp4预览地址
- * @method void setPreviewUrl(string $PreviewUrl) 设置mp4预览地址
+ * @method string getDownloadTaskId() 获取<p>下载任务 ID</p>
+ * @method void setDownloadTaskId(string $DownloadTaskId) 设置<p>下载任务 ID</p>
+ * @method string getChannelId() 获取<p>通道 ID</p>
+ * @method void setChannelId(string $ChannelId) 设置<p>通道 ID</p>
+ * @method string getChannelName() 获取<p>通道名称</p>
+ * @method void setChannelName(string $ChannelName) 设置<p>通道名称</p>
+ * @method string getChannelCode() 获取<p>通道编码</p>
+ * @method void setChannelCode(string $ChannelCode) 设置<p>通道编码</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method string getDeviceCode() 获取<p>设备编码</p>
+ * @method void setDeviceCode(string $DeviceCode) 设置<p>设备编码</p>
+ * @method integer getStatus() 获取<p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
+ * @method void setStatus(integer $Status) 设置<p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
+ * @method string getVideoTimeSection() 获取<p>下载录像时间段</p>
+ * @method void setVideoTimeSection(string $VideoTimeSection) 设置<p>下载录像时间段</p>
+ * @method integer getScale() 获取<p>倍速</p>
+ * @method void setScale(integer $Scale) 设置<p>倍速</p>
+ * @method integer getDownloadTime() 获取<p>下载时长</p><p>单位：秒</p>
+ * @method void setDownloadTime(integer $DownloadTime) 设置<p>下载时长</p><p>单位：秒</p>
+ * @method integer getVideoSize() 获取<p>录像大小</p><p>单位：字节（Byte）</p>
+ * @method void setVideoSize(integer $VideoSize) 设置<p>录像大小</p><p>单位：字节（Byte）</p>
+ * @method string getStartTime() 获取<p>任务开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>任务开始时间</p>
+ * @method string getEndTime() 获取<p>任务结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>任务结束时间</p>
+ * @method string getFileDownloadUrl() 获取<p>文件下载地址</p>
+ * @method void setFileDownloadUrl(string $FileDownloadUrl) 设置<p>文件下载地址</p>
+ * @method string getFailedReason() 获取<p>失败原因</p>
+ * @method void setFailedReason(string $FailedReason) 设置<p>失败原因</p>
+ * @method integer getExpire() 获取<p>生命周期规则，热存天数</p>
+ * @method void setExpire(integer $Expire) 设置<p>生命周期规则，热存天数</p>
+ * @method string getPreviewUrl() 获取<p>mp4预览地址</p>
+ * @method void setPreviewUrl(string $PreviewUrl) 设置<p>mp4预览地址</p>
  */
 class VideoDownloadTask extends AbstractModel
 {
     /**
-     * @var string 下载任务 ID
+     * @var string <p>下载任务 ID</p>
      */
     public $DownloadTaskId;
 
     /**
-     * @var string 通道 ID
+     * @var string <p>通道 ID</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 通道名称
+     * @var string <p>通道名称</p>
      */
     public $ChannelName;
 
     /**
-     * @var string 通道编码
+     * @var string <p>通道编码</p>
      */
     public $ChannelCode;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 设备编码
+     * @var string <p>设备编码</p>
      */
     public $DeviceCode;
 
     /**
-     * @var integer 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
+     * @var integer <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
      */
     public $Status;
 
     /**
-     * @var string 下载录像时间段
+     * @var string <p>下载录像时间段</p>
      */
     public $VideoTimeSection;
 
     /**
-     * @var integer 倍速
+     * @var integer <p>倍速</p>
      */
     public $Scale;
 
     /**
-     * @var integer 下载时长
+     * @var integer <p>下载时长</p><p>单位：秒</p>
      */
     public $DownloadTime;
 
     /**
-     * @var integer 录像大小
+     * @var integer <p>录像大小</p><p>单位：字节（Byte）</p>
      */
     public $VideoSize;
 
     /**
-     * @var string 任务开始时间
+     * @var string <p>任务开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 任务结束时间
+     * @var string <p>任务结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 文件下载地址
+     * @var string <p>文件下载地址</p>
      */
     public $FileDownloadUrl;
 
     /**
-     * @var string 失败原因
+     * @var string <p>失败原因</p>
      */
     public $FailedReason;
 
     /**
-     * @var integer 生命周期规则，热存天数
+     * @var integer <p>生命周期规则，热存天数</p>
      */
     public $Expire;
 
     /**
-     * @var string mp4预览地址
+     * @var string <p>mp4预览地址</p>
      */
     public $PreviewUrl;
 
     /**
-     * @param string $DownloadTaskId 下载任务 ID
-     * @param string $ChannelId 通道 ID
-     * @param string $ChannelName 通道名称
-     * @param string $ChannelCode 通道编码
-     * @param string $DeviceName 设备名称
-     * @param string $DeviceCode 设备编码
-     * @param integer $Status 任务状态（0：未执行；1：执行中；2 任务完成；
-3：任务失败）
-     * @param string $VideoTimeSection 下载录像时间段
-     * @param integer $Scale 倍速
-     * @param integer $DownloadTime 下载时长
-     * @param integer $VideoSize 录像大小
-     * @param string $StartTime 任务开始时间
-     * @param string $EndTime 任务结束时间
-     * @param string $FileDownloadUrl 文件下载地址
-     * @param string $FailedReason 失败原因
-     * @param integer $Expire 生命周期规则，热存天数
-     * @param string $PreviewUrl mp4预览地址
+     * @param string $DownloadTaskId <p>下载任务 ID</p>
+     * @param string $ChannelId <p>通道 ID</p>
+     * @param string $ChannelName <p>通道名称</p>
+     * @param string $ChannelCode <p>通道编码</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param string $DeviceCode <p>设备编码</p>
+     * @param integer $Status <p>任务状态（0：未执行；1：执行中；2 任务完成；<br>3：任务失败）</p>
+     * @param string $VideoTimeSection <p>下载录像时间段</p>
+     * @param integer $Scale <p>倍速</p>
+     * @param integer $DownloadTime <p>下载时长</p><p>单位：秒</p>
+     * @param integer $VideoSize <p>录像大小</p><p>单位：字节（Byte）</p>
+     * @param string $StartTime <p>任务开始时间</p>
+     * @param string $EndTime <p>任务结束时间</p>
+     * @param string $FileDownloadUrl <p>文件下载地址</p>
+     * @param string $FailedReason <p>失败原因</p>
+     * @param integer $Expire <p>生命周期规则，热存天数</p>
+     * @param string $PreviewUrl <p>mp4预览地址</p>
      */
     function __construct()
     {

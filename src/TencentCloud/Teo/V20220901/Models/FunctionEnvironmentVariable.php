@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) 设置变量的值，限制最大 5000 字节，默认值为空。
  * @method string getType() 获取变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
  * @method void setType(string $Type) 设置变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
  */
 class FunctionEnvironmentVariable extends AbstractModel
 {
@@ -46,7 +46,7 @@ class FunctionEnvironmentVariable extends AbstractModel
     /**
      * @var string 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
      */
     public $Type;
 
@@ -55,7 +55,7 @@ class FunctionEnvironmentVariable extends AbstractModel
      * @param string $Value 变量的值，限制最大 5000 字节，默认值为空。
      * @param string $Type 变量的类型，取值有：
 <li>string：字符串类型；</li>
-<li>json：json 对象类型。</li>默认值为：string。
+<li>json：json 对象类型。</li><li>secret：密钥类型。</li>默认值为：string。
      */
     function __construct()
     {

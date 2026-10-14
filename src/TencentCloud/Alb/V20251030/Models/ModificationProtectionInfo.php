@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改保护状态信息。
  *
- * @method boolean getModificationProtectionEnabled() 获取是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
- * @method void setModificationProtectionEnabled(boolean $ModificationProtectionEnabled) 设置是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
- * @method string getOperatorUin() 获取1238716123
- * @method void setOperatorUin(string $OperatorUin) 设置1238716123
- * @method string getReason() 获取开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
- * @method void setReason(string $Reason) 设置开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+ * @method boolean getModificationProtectionEnabled() 获取<p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
+ * @method void setModificationProtectionEnabled(boolean $ModificationProtectionEnabled) 设置<p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
+ * @method string getOperatorUin() 获取<p>1238716123</p>
+ * @method void setOperatorUin(string $OperatorUin) 设置<p>1238716123</p>
+ * @method string getReason() 获取<p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
+ * @method void setReason(string $Reason) 设置<p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
  */
 class ModificationProtectionInfo extends AbstractModel
 {
     /**
-     * @var boolean 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
+     * @var boolean <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
      */
     public $ModificationProtectionEnabled;
 
     /**
-     * @var string 1238716123
+     * @var string <p>1238716123</p>
      */
     public $OperatorUin;
 
     /**
-     * @var string 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * @var string <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     public $Reason;
 
     /**
-     * @param boolean $ModificationProtectionEnabled 是否开启修改保护。开启后，可防止实例被意外修改或删除。
-- true：开启修改保护
-- false：关闭修改保护
-     * @param string $OperatorUin 1238716123
-     * @param string $Reason 开启修改保护的原因说明。
-长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。
+     * @param boolean $ModificationProtectionEnabled <p>是否开启修改保护。开启后，可防止实例被意外修改或删除。</p><ul><li>true：开启修改保护</li><li>false：关闭修改保护</li></ul>
+     * @param string $OperatorUin <p>1238716123</p>
+     * @param string $Reason <p>开启修改保护的原因说明。<br>长度为 1~255 个字符，必须是中文和无害字符串中的字符， 可包含中文、字母、数字、短划线（-）、正斜线（/）、半角句号（.）、下划线（_）。</p>
      */
     function __construct()
     {

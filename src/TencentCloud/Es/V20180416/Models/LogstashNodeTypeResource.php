@@ -20,297 +20,381 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Logstash节点规格资源描述
  *
- * @method string getNodeTypeName() 获取规格名称
- * @method void setNodeTypeName(string $NodeTypeName) 设置规格名称
- * @method boolean getAvailable() 获取是否可售
- * @method void setAvailable(boolean $Available) 设置是否可售
- * @method NodeTypeInfo getNodeTypeInfo() 获取规格信息
- * @method void setNodeTypeInfo(NodeTypeInfo $NodeTypeInfo) 设置规格信息
- * @method boolean getSsdAvailable() 获取SSD盘是否可售
- * @method void setSsdAvailable(boolean $SsdAvailable) 设置SSD盘是否可售
- * @method DiskSizeRange getSsdDiskSizeRange() 获取SSD磁盘取值范围
- * @method void setSsdDiskSizeRange(DiskSizeRange $SsdDiskSizeRange) 设置SSD磁盘取值范围
- * @method boolean getSataAvailable() 获取SATA盘是否可售
- * @method void setSataAvailable(boolean $SataAvailable) 设置SATA盘是否可售
- * @method DiskSizeRange getSataDiskSizeRange() 获取SATA磁盘取值范围
- * @method void setSataDiskSizeRange(DiskSizeRange $SataDiskSizeRange) 设置SATA磁盘取值范围
- * @method string getSsdSoldOutReason() 获取SSD机型售罄原因
- * @method void setSsdSoldOutReason(string $SsdSoldOutReason) 设置SSD机型售罄原因
- * @method string getSataSoldOutReason() 获取SATA机型售罄原因
- * @method void setSataSoldOutReason(string $SataSoldOutReason) 设置SATA机型售罄原因
- * @method LocalDiskInfo getLocalDiskInfo() 获取本地盘信息
+ * @method string getNodeTypeName() 获取<p>规格名称</p>
+ * @method void setNodeTypeName(string $NodeTypeName) 设置<p>规格名称</p>
+ * @method boolean getAvailable() 获取<p>是否可售</p>
+ * @method void setAvailable(boolean $Available) 设置<p>是否可售</p>
+ * @method NodeTypeInfo getNodeTypeInfo() 获取<p>规格信息</p>
+ * @method void setNodeTypeInfo(NodeTypeInfo $NodeTypeInfo) 设置<p>规格信息</p>
+ * @method boolean getSsdAvailable() 获取<p>SSD盘是否可售</p>
+ * @method void setSsdAvailable(boolean $SsdAvailable) 设置<p>SSD盘是否可售</p>
+ * @method DiskSizeRange getSsdDiskSizeRange() 获取<p>SSD磁盘取值范围</p>
+ * @method void setSsdDiskSizeRange(DiskSizeRange $SsdDiskSizeRange) 设置<p>SSD磁盘取值范围</p>
+ * @method array getSsdSoldOutDetail() 获取<p>SSD云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) 设置本地盘信息
+ * @method void setSsdSoldOutDetail(array $SsdSoldOutDetail) 设置<p>SSD云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskCountRange getDiskCountRange() 获取云盘块数取值范围
+ * @method boolean getSataAvailable() 获取<p>SATA盘是否可售</p>
+ * @method void setSataAvailable(boolean $SataAvailable) 设置<p>SATA盘是否可售</p>
+ * @method DiskSizeRange getSataDiskSizeRange() 获取<p>SATA磁盘取值范围</p>
+ * @method void setSataDiskSizeRange(DiskSizeRange $SataDiskSizeRange) 设置<p>SATA磁盘取值范围</p>
+ * @method string getSsdSoldOutReason() 获取<p>SSD机型售罄原因</p>
+ * @method void setSsdSoldOutReason(string $SsdSoldOutReason) 设置<p>SSD机型售罄原因</p>
+ * @method string getSataSoldOutReason() 获取<p>SATA机型售罄原因</p>
+ * @method void setSataSoldOutReason(string $SataSoldOutReason) 设置<p>SATA机型售罄原因</p>
+ * @method array getSataSoldOutDetail() 获取<p>高性能云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskCountRange(DiskCountRange $DiskCountRange) 设置云盘块数取值范围
+ * @method void setSataSoldOutDetail(array $SataSoldOutDetail) 设置<p>高性能云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHSsdAvailable() 获取增强型SSD是否可用
+ * @method LocalDiskInfo getLocalDiskInfo() 获取<p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHSsdAvailable(boolean $HSsdAvailable) 设置增强型SSD是否可用
+ * @method void setLocalDiskInfo(LocalDiskInfo $LocalDiskInfo) 设置<p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHSsdSoldOutReason() 获取增强型SSD机型售罄原因
+ * @method DiskCountRange getDiskCountRange() 获取<p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHSsdSoldOutReason(string $HSsdSoldOutReason) 设置增强型SSD机型售罄原因
+ * @method void setDiskCountRange(DiskCountRange $DiskCountRange) 设置<p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskSizeRange getHSsdDiskSizeRange() 获取增强型SSD磁盘取值范围
+ * @method boolean getHSsdAvailable() 获取<p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHSsdDiskSizeRange(DiskSizeRange $HSsdDiskSizeRange) 设置增强型SSD磁盘取值范围
+ * @method void setHSsdAvailable(boolean $HSsdAvailable) 设置<p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getThroughputAvailable() 获取吞吐型云盘是否可用
+ * @method string getHSsdSoldOutReason() 获取<p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThroughputAvailable(boolean $ThroughputAvailable) 设置吞吐型云盘是否可用
+ * @method void setHSsdSoldOutReason(string $HSsdSoldOutReason) 设置<p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getThroughputSoldOutReason() 获取吞吐型云盘售罄原因
+ * @method array getHSsdSoldOutDetail() 获取<p>增强型SSD售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThroughputSoldOutReason(string $ThroughputSoldOutReason) 设置吞吐型云盘售罄原因
+ * @method void setHSsdSoldOutDetail(array $HSsdSoldOutDetail) 设置<p>增强型SSD售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskSizeRange getThroughputDiskSizeRange() 获取吞吐型云盘取值范围
+ * @method DiskSizeRange getHSsdDiskSizeRange() 获取<p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThroughputDiskSizeRange(DiskSizeRange $ThroughputDiskSizeRange) 设置吞吐型云盘取值范围
+ * @method void setHSsdDiskSizeRange(DiskSizeRange $HSsdDiskSizeRange) 设置<p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getBigDataAvailable() 获取BigData盘是否可售
+ * @method boolean getThroughputAvailable() 获取<p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBigDataAvailable(boolean $BigDataAvailable) 设置BigData盘是否可售
+ * @method void setThroughputAvailable(boolean $ThroughputAvailable) 设置<p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBigDataSoldOutReason() 获取BigData盘售罄原因
+ * @method string getThroughputSoldOutReason() 获取<p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBigDataSoldOutReason(string $BigDataSoldOutReason) 设置BigData盘售罄原因
+ * @method void setThroughputSoldOutReason(string $ThroughputSoldOutReason) 设置<p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskSizeRange getBigDataDiskSizeRange() 获取BigData磁盘取值范围
+ * @method array getThroughputSoldOutDetail() 获取<p>吞吐型云硬盘售罄</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBigDataDiskSizeRange(DiskSizeRange $BigDataDiskSizeRange) 设置BigData磁盘取值范围
+ * @method void setThroughputSoldOutDetail(array $ThroughputSoldOutDetail) 设置<p>吞吐型云硬盘售罄</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getHighIOAvailable() 获取HighIO盘是否可售
+ * @method DiskSizeRange getThroughputDiskSizeRange() 获取<p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHighIOAvailable(boolean $HighIOAvailable) 设置HighIO盘是否可售
+ * @method void setThroughputDiskSizeRange(DiskSizeRange $ThroughputDiskSizeRange) 设置<p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHighIOSoldOutReason() 获取HighIO盘售罄原因
+ * @method boolean getBigDataAvailable() 获取<p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHighIOSoldOutReason(string $HighIOSoldOutReason) 设置HighIO盘售罄原因
+ * @method void setBigDataAvailable(boolean $BigDataAvailable) 设置<p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskSizeRange getHighIODiskSizeRange() 获取HighIO磁盘取值范围
+ * @method string getBigDataSoldOutReason() 获取<p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHighIODiskSizeRange(DiskSizeRange $HighIODiskSizeRange) 设置HighIO磁盘取值范围
+ * @method void setBigDataSoldOutReason(string $BigDataSoldOutReason) 设置<p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getBssdAvailable() 获取Bssd盘是否可售
+ * @method array getBigDataSoldOutDetail() 获取<p>大数据型云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBssdAvailable(boolean $BssdAvailable) 设置Bssd盘是否可售
+ * @method void setBigDataSoldOutDetail(array $BigDataSoldOutDetail) 设置<p>大数据型云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBssdSoldOutReason() 获取Bssd盘售罄原因
+ * @method DiskSizeRange getBigDataDiskSizeRange() 获取<p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBssdSoldOutReason(string $BssdSoldOutReason) 设置Bssd盘售罄原因
+ * @method void setBigDataDiskSizeRange(DiskSizeRange $BigDataDiskSizeRange) 设置<p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DiskSizeRange getBssdDiskSizeRange() 获取Bssd盘取值范围
+ * @method boolean getHighIOAvailable() 获取<p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBssdDiskSizeRange(DiskSizeRange $BssdDiskSizeRange) 设置Bssd盘取值范围
+ * @method void setHighIOAvailable(boolean $HighIOAvailable) 设置<p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GpuInfo getGpuInfo() 获取GpuInfo
+ * @method string getHighIOSoldOutReason() 获取<p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGpuInfo(GpuInfo $GpuInfo) 设置GpuInfo
+ * @method void setHighIOSoldOutReason(string $HighIOSoldOutReason) 设置<p>HighIO盘售罄原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHighIOSoldOutDetail() 获取<p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighIOSoldOutDetail(array $HighIOSoldOutDetail) 设置<p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DiskSizeRange getHighIODiskSizeRange() 获取<p>HighIO磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighIODiskSizeRange(DiskSizeRange $HighIODiskSizeRange) 设置<p>HighIO磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBssdAvailable() 获取<p>Bssd盘是否可售</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBssdAvailable(boolean $BssdAvailable) 设置<p>Bssd盘是否可售</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBssdSoldOutReason() 获取<p>Bssd盘售罄原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBssdSoldOutReason(string $BssdSoldOutReason) 设置<p>Bssd盘售罄原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DiskSizeRange getBssdDiskSizeRange() 获取<p>Bssd盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBssdDiskSizeRange(DiskSizeRange $BssdDiskSizeRange) 设置<p>Bssd盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBssdSoldOutDetail() 获取<p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBssdSoldOutDetail(array $BssdSoldOutDetail) 设置<p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GpuInfo getGpuInfo() 获取<p>GpuInfo</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGpuInfo(GpuInfo $GpuInfo) 设置<p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogstashNodeTypeResource extends AbstractModel
 {
     /**
-     * @var string 规格名称
+     * @var string <p>规格名称</p>
      */
     public $NodeTypeName;
 
     /**
-     * @var boolean 是否可售
+     * @var boolean <p>是否可售</p>
      */
     public $Available;
 
     /**
-     * @var NodeTypeInfo 规格信息
+     * @var NodeTypeInfo <p>规格信息</p>
      */
     public $NodeTypeInfo;
 
     /**
-     * @var boolean SSD盘是否可售
+     * @var boolean <p>SSD盘是否可售</p>
      */
     public $SsdAvailable;
 
     /**
-     * @var DiskSizeRange SSD磁盘取值范围
+     * @var DiskSizeRange <p>SSD磁盘取值范围</p>
      */
     public $SsdDiskSizeRange;
 
     /**
-     * @var boolean SATA盘是否可售
+     * @var array <p>SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SsdSoldOutDetail;
+
+    /**
+     * @var boolean <p>SATA盘是否可售</p>
      */
     public $SataAvailable;
 
     /**
-     * @var DiskSizeRange SATA磁盘取值范围
+     * @var DiskSizeRange <p>SATA磁盘取值范围</p>
      */
     public $SataDiskSizeRange;
 
     /**
-     * @var string SSD机型售罄原因
+     * @var string <p>SSD机型售罄原因</p>
      */
     public $SsdSoldOutReason;
 
     /**
-     * @var string SATA机型售罄原因
+     * @var string <p>SATA机型售罄原因</p>
      */
     public $SataSoldOutReason;
 
     /**
-     * @var LocalDiskInfo 本地盘信息
+     * @var array <p>高性能云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SataSoldOutDetail;
+
+    /**
+     * @var LocalDiskInfo <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDiskInfo;
 
     /**
-     * @var DiskCountRange 云盘块数取值范围
+     * @var DiskCountRange <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCountRange;
 
     /**
-     * @var boolean 增强型SSD是否可用
+     * @var boolean <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HSsdAvailable;
 
     /**
-     * @var string 增强型SSD机型售罄原因
+     * @var string <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HSsdSoldOutReason;
 
     /**
-     * @var DiskSizeRange 增强型SSD磁盘取值范围
+     * @var array <p>增强型SSD售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HSsdSoldOutDetail;
+
+    /**
+     * @var DiskSizeRange <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HSsdDiskSizeRange;
 
     /**
-     * @var boolean 吞吐型云盘是否可用
+     * @var boolean <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThroughputAvailable;
 
     /**
-     * @var string 吞吐型云盘售罄原因
+     * @var string <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThroughputSoldOutReason;
 
     /**
-     * @var DiskSizeRange 吞吐型云盘取值范围
+     * @var array <p>吞吐型云硬盘售罄</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ThroughputSoldOutDetail;
+
+    /**
+     * @var DiskSizeRange <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThroughputDiskSizeRange;
 
     /**
-     * @var boolean BigData盘是否可售
+     * @var boolean <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDataAvailable;
 
     /**
-     * @var string BigData盘售罄原因
+     * @var string <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDataSoldOutReason;
 
     /**
-     * @var DiskSizeRange BigData磁盘取值范围
+     * @var array <p>大数据型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BigDataSoldOutDetail;
+
+    /**
+     * @var DiskSizeRange <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDataDiskSizeRange;
 
     /**
-     * @var boolean HighIO盘是否可售
+     * @var boolean <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighIOAvailable;
 
     /**
-     * @var string HighIO盘售罄原因
+     * @var string <p>HighIO盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighIOSoldOutReason;
 
     /**
-     * @var DiskSizeRange HighIO磁盘取值范围
+     * @var array <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighIOSoldOutDetail;
+
+    /**
+     * @var DiskSizeRange <p>HighIO磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighIODiskSizeRange;
 
     /**
-     * @var boolean Bssd盘是否可售
+     * @var boolean <p>Bssd盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BssdAvailable;
 
     /**
-     * @var string Bssd盘售罄原因
+     * @var string <p>Bssd盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BssdSoldOutReason;
 
     /**
-     * @var DiskSizeRange Bssd盘取值范围
+     * @var DiskSizeRange <p>Bssd盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BssdDiskSizeRange;
 
     /**
-     * @var GpuInfo GpuInfo
+     * @var array <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BssdSoldOutDetail;
+
+    /**
+     * @var GpuInfo <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuInfo;
 
     /**
-     * @param string $NodeTypeName 规格名称
-     * @param boolean $Available 是否可售
-     * @param NodeTypeInfo $NodeTypeInfo 规格信息
-     * @param boolean $SsdAvailable SSD盘是否可售
-     * @param DiskSizeRange $SsdDiskSizeRange SSD磁盘取值范围
-     * @param boolean $SataAvailable SATA盘是否可售
-     * @param DiskSizeRange $SataDiskSizeRange SATA磁盘取值范围
-     * @param string $SsdSoldOutReason SSD机型售罄原因
-     * @param string $SataSoldOutReason SATA机型售罄原因
-     * @param LocalDiskInfo $LocalDiskInfo 本地盘信息
+     * @param string $NodeTypeName <p>规格名称</p>
+     * @param boolean $Available <p>是否可售</p>
+     * @param NodeTypeInfo $NodeTypeInfo <p>规格信息</p>
+     * @param boolean $SsdAvailable <p>SSD盘是否可售</p>
+     * @param DiskSizeRange $SsdDiskSizeRange <p>SSD磁盘取值范围</p>
+     * @param array $SsdSoldOutDetail <p>SSD云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskCountRange $DiskCountRange 云盘块数取值范围
+     * @param boolean $SataAvailable <p>SATA盘是否可售</p>
+     * @param DiskSizeRange $SataDiskSizeRange <p>SATA磁盘取值范围</p>
+     * @param string $SsdSoldOutReason <p>SSD机型售罄原因</p>
+     * @param string $SataSoldOutReason <p>SATA机型售罄原因</p>
+     * @param array $SataSoldOutDetail <p>高性能云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HSsdAvailable 增强型SSD是否可用
+     * @param LocalDiskInfo $LocalDiskInfo <p>本地盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HSsdSoldOutReason 增强型SSD机型售罄原因
+     * @param DiskCountRange $DiskCountRange <p>云盘块数取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSizeRange $HSsdDiskSizeRange 增强型SSD磁盘取值范围
+     * @param boolean $HSsdAvailable <p>增强型SSD是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ThroughputAvailable 吞吐型云盘是否可用
+     * @param string $HSsdSoldOutReason <p>增强型SSD机型售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ThroughputSoldOutReason 吞吐型云盘售罄原因
+     * @param array $HSsdSoldOutDetail <p>增强型SSD售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSizeRange $ThroughputDiskSizeRange 吞吐型云盘取值范围
+     * @param DiskSizeRange $HSsdDiskSizeRange <p>增强型SSD磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $BigDataAvailable BigData盘是否可售
+     * @param boolean $ThroughputAvailable <p>吞吐型云盘是否可用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BigDataSoldOutReason BigData盘售罄原因
+     * @param string $ThroughputSoldOutReason <p>吞吐型云盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSizeRange $BigDataDiskSizeRange BigData磁盘取值范围
+     * @param array $ThroughputSoldOutDetail <p>吞吐型云硬盘售罄</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $HighIOAvailable HighIO盘是否可售
+     * @param DiskSizeRange $ThroughputDiskSizeRange <p>吞吐型云盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HighIOSoldOutReason HighIO盘售罄原因
+     * @param boolean $BigDataAvailable <p>BigData盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSizeRange $HighIODiskSizeRange HighIO磁盘取值范围
+     * @param string $BigDataSoldOutReason <p>BigData盘售罄原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $BssdAvailable Bssd盘是否可售
+     * @param array $BigDataSoldOutDetail <p>大数据型云硬盘售罄明细</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BssdSoldOutReason Bssd盘售罄原因
+     * @param DiskSizeRange $BigDataDiskSizeRange <p>BigData磁盘取值范围</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSizeRange $BssdDiskSizeRange Bssd盘取值范围
+     * @param boolean $HighIOAvailable <p>HighIO盘是否可售</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GpuInfo $GpuInfo GpuInfo
+     * @param string $HighIOSoldOutReason <p>HighIO盘售罄原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HighIOSoldOutDetail <p>高IO型云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskSizeRange $HighIODiskSizeRange <p>HighIO磁盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BssdAvailable <p>Bssd盘是否可售</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BssdSoldOutReason <p>Bssd盘售罄原因</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskSizeRange $BssdDiskSizeRange <p>Bssd盘取值范围</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BssdSoldOutDetail <p>通用型SSD云硬盘售罄明细</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GpuInfo $GpuInfo <p>GpuInfo</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -348,6 +432,15 @@ class LogstashNodeTypeResource extends AbstractModel
             $this->SsdDiskSizeRange->deserialize($param["SsdDiskSizeRange"]);
         }
 
+        if (array_key_exists("SsdSoldOutDetail",$param) and $param["SsdSoldOutDetail"] !== null) {
+            $this->SsdSoldOutDetail = [];
+            foreach ($param["SsdSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->SsdSoldOutDetail, $obj);
+            }
+        }
+
         if (array_key_exists("SataAvailable",$param) and $param["SataAvailable"] !== null) {
             $this->SataAvailable = $param["SataAvailable"];
         }
@@ -363,6 +456,15 @@ class LogstashNodeTypeResource extends AbstractModel
 
         if (array_key_exists("SataSoldOutReason",$param) and $param["SataSoldOutReason"] !== null) {
             $this->SataSoldOutReason = $param["SataSoldOutReason"];
+        }
+
+        if (array_key_exists("SataSoldOutDetail",$param) and $param["SataSoldOutDetail"] !== null) {
+            $this->SataSoldOutDetail = [];
+            foreach ($param["SataSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->SataSoldOutDetail, $obj);
+            }
         }
 
         if (array_key_exists("LocalDiskInfo",$param) and $param["LocalDiskInfo"] !== null) {
@@ -383,6 +485,15 @@ class LogstashNodeTypeResource extends AbstractModel
             $this->HSsdSoldOutReason = $param["HSsdSoldOutReason"];
         }
 
+        if (array_key_exists("HSsdSoldOutDetail",$param) and $param["HSsdSoldOutDetail"] !== null) {
+            $this->HSsdSoldOutDetail = [];
+            foreach ($param["HSsdSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->HSsdSoldOutDetail, $obj);
+            }
+        }
+
         if (array_key_exists("HSsdDiskSizeRange",$param) and $param["HSsdDiskSizeRange"] !== null) {
             $this->HSsdDiskSizeRange = new DiskSizeRange();
             $this->HSsdDiskSizeRange->deserialize($param["HSsdDiskSizeRange"]);
@@ -394,6 +505,15 @@ class LogstashNodeTypeResource extends AbstractModel
 
         if (array_key_exists("ThroughputSoldOutReason",$param) and $param["ThroughputSoldOutReason"] !== null) {
             $this->ThroughputSoldOutReason = $param["ThroughputSoldOutReason"];
+        }
+
+        if (array_key_exists("ThroughputSoldOutDetail",$param) and $param["ThroughputSoldOutDetail"] !== null) {
+            $this->ThroughputSoldOutDetail = [];
+            foreach ($param["ThroughputSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->ThroughputSoldOutDetail, $obj);
+            }
         }
 
         if (array_key_exists("ThroughputDiskSizeRange",$param) and $param["ThroughputDiskSizeRange"] !== null) {
@@ -409,6 +529,15 @@ class LogstashNodeTypeResource extends AbstractModel
             $this->BigDataSoldOutReason = $param["BigDataSoldOutReason"];
         }
 
+        if (array_key_exists("BigDataSoldOutDetail",$param) and $param["BigDataSoldOutDetail"] !== null) {
+            $this->BigDataSoldOutDetail = [];
+            foreach ($param["BigDataSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->BigDataSoldOutDetail, $obj);
+            }
+        }
+
         if (array_key_exists("BigDataDiskSizeRange",$param) and $param["BigDataDiskSizeRange"] !== null) {
             $this->BigDataDiskSizeRange = new DiskSizeRange();
             $this->BigDataDiskSizeRange->deserialize($param["BigDataDiskSizeRange"]);
@@ -420,6 +549,15 @@ class LogstashNodeTypeResource extends AbstractModel
 
         if (array_key_exists("HighIOSoldOutReason",$param) and $param["HighIOSoldOutReason"] !== null) {
             $this->HighIOSoldOutReason = $param["HighIOSoldOutReason"];
+        }
+
+        if (array_key_exists("HighIOSoldOutDetail",$param) and $param["HighIOSoldOutDetail"] !== null) {
+            $this->HighIOSoldOutDetail = [];
+            foreach ($param["HighIOSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->HighIOSoldOutDetail, $obj);
+            }
         }
 
         if (array_key_exists("HighIODiskSizeRange",$param) and $param["HighIODiskSizeRange"] !== null) {
@@ -438,6 +576,15 @@ class LogstashNodeTypeResource extends AbstractModel
         if (array_key_exists("BssdDiskSizeRange",$param) and $param["BssdDiskSizeRange"] !== null) {
             $this->BssdDiskSizeRange = new DiskSizeRange();
             $this->BssdDiskSizeRange->deserialize($param["BssdDiskSizeRange"]);
+        }
+
+        if (array_key_exists("BssdSoldOutDetail",$param) and $param["BssdSoldOutDetail"] !== null) {
+            $this->BssdSoldOutDetail = [];
+            foreach ($param["BssdSoldOutDetail"] as $key => $value){
+                $obj = new FamilyResourceStat();
+                $obj->deserialize($value);
+                array_push($this->BssdSoldOutDetail, $obj);
+            }
         }
 
         if (array_key_exists("GpuInfo",$param) and $param["GpuInfo"] !== null) {

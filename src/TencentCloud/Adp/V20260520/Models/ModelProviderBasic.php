@@ -18,36 +18,36 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型提供商基本信息
+ * <p>模型提供商基本信息（已弃用，请使用 ModelProviderProfile）</p>
  *
- * @method string getAlias() 获取模型提供商别名
- * @method void setAlias(string $Alias) 设置模型提供商别名
- * @method string getName() 获取模型提供商名称
- * @method void setName(string $Name) 设置模型提供商名称
- * @method integer getProviderType() 获取模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
- * @method void setProviderType(integer $ProviderType) 设置模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+ * @method string getAlias() 获取<p>模型提供商别名</p>
+ * @method void setAlias(string $Alias) 设置<p>模型提供商别名</p>
+ * @method string getName() 获取<p>模型提供商名称</p>
+ * @method void setName(string $Name) 设置<p>模型提供商名称</p>
+ * @method integer getProviderType() 获取<p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
+ * @method void setProviderType(integer $ProviderType) 设置<p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
  */
 class ModelProviderBasic extends AbstractModel
 {
     /**
-     * @var string 模型提供商别名
+     * @var string <p>模型提供商别名</p>
      */
     public $Alias;
 
     /**
-     * @var string 模型提供商名称
+     * @var string <p>模型提供商名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+     * @var integer <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
      */
     public $ProviderType;
 
     /**
-     * @param string $Alias 模型提供商别名
-     * @param string $Name 模型提供商名称
-     * @param integer $ProviderType 模型提供商类型。1-自有提供商, 2-自定义模型提供商, 3-第三方模型提供商
+     * @param string $Alias <p>模型提供商别名</p>
+     * @param string $Name <p>模型提供商名称</p>
+     * @param integer $ProviderType <p>模型提供商类型</p><table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>MODEL_PROVIDER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>MODEL_PROVIDER_TYPE_SELF</td><td>1</td><td>自有提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_CUSTOM</td><td>2</td><td>自定义模型提供商</td></tr><tr><td>MODEL_PROVIDER_TYPE_THIRD</td><td>3</td><td>第三方模型提供商</td></tr></table>
      */
     function __construct()
     {

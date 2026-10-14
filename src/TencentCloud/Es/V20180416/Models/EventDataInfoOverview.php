@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubEventType(integer $SubEventType) 设置<p>子事件类型</p>
  * @method string getSubEventName() 获取<p>子事件名称</p>
  * @method void setSubEventName(string $SubEventName) 设置<p>子事件名称</p>
+ * @method integer getEventScope() 获取<p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+ * @method void setEventScope(integer $EventScope) 设置<p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
  */
 class EventDataInfoOverview extends AbstractModel
 {
@@ -122,6 +124,11 @@ class EventDataInfoOverview extends AbstractModel
     public $SubEventName;
 
     /**
+     * @var integer <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
+     */
+    public $EventScope;
+
+    /**
      * @param integer $EventType <p>1：硬件异常；2：用户变更；3：智能运维</p>
      * @param integer $EventTaskId <p>事件任务Id</p>
      * @param string $EventName <p>事件名称</p>
@@ -136,6 +143,7 @@ class EventDataInfoOverview extends AbstractModel
      * @param string $EndTime <p>事件结束时间</p>
      * @param integer $SubEventType <p>子事件类型</p>
      * @param string $SubEventName <p>子事件名称</p>
+     * @param integer $EventScope <p>事件范围</p><p>枚举值：</p><ul><li>0： 实例级</li><li>1： 账号级</li></ul>
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class EventDataInfoOverview extends AbstractModel
 
         if (array_key_exists("SubEventName",$param) and $param["SubEventName"] !== null) {
             $this->SubEventName = $param["SubEventName"];
+        }
+
+        if (array_key_exists("EventScope",$param) and $param["EventScope"] !== null) {
+            $this->EventScope = $param["EventScope"];
         }
     }
 }

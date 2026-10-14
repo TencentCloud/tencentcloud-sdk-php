@@ -18,10 +18,16 @@ namespace TencentCloud\Adp\V20260520\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型完整信息
+ * <p>模型完整信息</p>
  *
  * @method array getBadgeList() 获取<p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBadgeList(array $BadgeList) 设置<p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ModelDeveloperBasic getDeveloperInfo() 获取<p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeveloperInfo(ModelDeveloperBasic $DeveloperInfo) 设置<p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ModelLimit getLimitInfo() 获取<p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitInfo(ModelLimit $LimitInfo) 设置<p>模型限制信息</p>
@@ -31,9 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelBasic(ModelBasic $ModelBasic) 设置<p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getParameterList() 获取<p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterList(array $ParameterList) 设置<p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPropertyList() 获取<p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropertyList(array $PropertyList) 设置<p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ModelProviderBasic getProviderInfo() 获取<p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProviderInfo(ModelProviderBasic $ProviderInfo) 设置<p>模型提供商信息</p>
@@ -44,15 +54,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取<p>模型标签列表</p>
  * @method void setTagList(array $TagList) 设置<p>模型标签列表</p>
- * @method ModelDeveloperBasic getDeveloperInfo() 获取<p>模型作者信息</p>
- * @method void setDeveloperInfo(ModelDeveloperBasic $DeveloperInfo) 设置<p>模型作者信息</p>
  */
 class Model extends AbstractModel
 {
     /**
      * @var array <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BadgeList;
+
+    /**
+     * @var ModelDeveloperBasic <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeveloperInfo;
 
     /**
      * @var ModelLimit <p>模型限制信息</p>
@@ -68,11 +83,13 @@ class Model extends AbstractModel
 
     /**
      * @var array <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterList;
 
     /**
      * @var array <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertyList;
 
@@ -94,24 +111,23 @@ class Model extends AbstractModel
     public $TagList;
 
     /**
-     * @var ModelDeveloperBasic <p>模型作者信息</p>
-     */
-    public $DeveloperInfo;
-
-    /**
      * @param array $BadgeList <p>模型徽章列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelDeveloperBasic $DeveloperInfo <p>模型作者信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelLimit $LimitInfo <p>模型限制信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelBasic $ModelBasic <p>模型基本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ParameterList <p>模型超参配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PropertyList <p>模型属性配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelProviderBasic $ProviderInfo <p>模型提供商信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelStatus $StatusInfo <p>模型状态信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList <p>模型标签列表</p>
-     * @param ModelDeveloperBasic $DeveloperInfo <p>模型作者信息</p>
      */
     function __construct()
     {
@@ -133,6 +149,11 @@ class Model extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BadgeList, $obj);
             }
+        }
+
+        if (array_key_exists("DeveloperInfo",$param) and $param["DeveloperInfo"] !== null) {
+            $this->DeveloperInfo = new ModelDeveloperBasic();
+            $this->DeveloperInfo->deserialize($param["DeveloperInfo"]);
         }
 
         if (array_key_exists("LimitInfo",$param) and $param["LimitInfo"] !== null) {
@@ -175,11 +196,6 @@ class Model extends AbstractModel
 
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = $param["TagList"];
-        }
-
-        if (array_key_exists("DeveloperInfo",$param) and $param["DeveloperInfo"] !== null) {
-            $this->DeveloperInfo = new ModelDeveloperBasic();
-            $this->DeveloperInfo->deserialize($param["DeveloperInfo"]);
         }
     }
 }

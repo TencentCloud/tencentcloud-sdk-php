@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMimeTypes(array $MimeTypes) 设置<p>消息内容类型</p>
  * @method string getOrderDirection() 获取<p>排序</p><p>枚举值：</p><ul><li>ASC： 正序</li><li>DESC： 倒序</li></ul>
  * @method void setOrderDirection(string $OrderDirection) 设置<p>排序</p><p>枚举值：</p><ul><li>ASC： 正序</li><li>DESC： 倒序</li></ul>
+ * @method string getAgentId() 获取<p>数字分身ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>数字分身ID</p>
+ * @method string getNameKeyword() 获取<p>模糊搜索制品信息</p>
+ * @method void setNameKeyword(string $NameKeyword) 设置<p>模糊搜索制品信息</p>
  */
 class ListAIWorkbenchArtifactsRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ListAIWorkbenchArtifactsRequest extends AbstractModel
     public $OrderDirection;
 
     /**
+     * @var string <p>数字分身ID</p>
+     */
+    public $AgentId;
+
+    /**
+     * @var string <p>模糊搜索制品信息</p>
+     */
+    public $NameKeyword;
+
+    /**
      * @param integer $PerPage <p>每页数量</p>
      * @param integer $PageNo <p>页码</p>
      * @param array $SessionIds <p>会话ID</p>
      * @param array $MimeTypes <p>消息内容类型</p>
      * @param string $OrderDirection <p>排序</p><p>枚举值：</p><ul><li>ASC： 正序</li><li>DESC： 倒序</li></ul>
+     * @param string $AgentId <p>数字分身ID</p>
+     * @param string $NameKeyword <p>模糊搜索制品信息</p>
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ListAIWorkbenchArtifactsRequest extends AbstractModel
 
         if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
             $this->OrderDirection = $param["OrderDirection"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
+        }
+
+        if (array_key_exists("NameKeyword",$param) and $param["NameKeyword"] !== null) {
+            $this->NameKeyword = $param["NameKeyword"];
         }
     }
 }

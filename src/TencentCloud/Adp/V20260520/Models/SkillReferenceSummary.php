@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceName(string $SpaceName) 设置<p>空间名称</p>
  * @method string getOwner() 获取<p>Reference实例拥有者</p>
  * @method void setOwner(string $Owner) 设置<p>Reference实例拥有者</p>
+ * @method AppIdentity getAppIdentity() 获取<p>应用标识</p>
+ * @method void setAppIdentity(AppIdentity $AppIdentity) 设置<p>应用标识</p>
  */
 class SkillReferenceSummary extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SkillReferenceSummary extends AbstractModel
     public $Owner;
 
     /**
+     * @var AppIdentity <p>应用标识</p>
+     */
+    public $AppIdentity;
+
+    /**
      * @param string $ReferenceId <p>关联ID</p>
      * @param string $ReferenceName <p>关联名称</p>
      * @param integer $ReferenceType <p>关联类型</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 占位 |<br>| 1 | ClawPro |<br>| 2 | agent |</p>
      * @param string $SpaceId <p>空间ID</p>
      * @param string $SpaceName <p>空间名称</p>
      * @param string $Owner <p>Reference实例拥有者</p>
+     * @param AppIdentity $AppIdentity <p>应用标识</p>
      */
     function __construct()
     {
@@ -108,6 +116,11 @@ class SkillReferenceSummary extends AbstractModel
 
         if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
             $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("AppIdentity",$param) and $param["AppIdentity"] !== null) {
+            $this->AppIdentity = new AppIdentity();
+            $this->AppIdentity->deserialize($param["AppIdentity"]);
         }
     }
 }

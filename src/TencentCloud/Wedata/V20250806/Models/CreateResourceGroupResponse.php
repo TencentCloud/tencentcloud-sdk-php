@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResourceGroup返回参数结构体
  *
- * @method ResourceResult getData() 获取是否开启成功
- * @method void setData(ResourceResult $Data) 设置是否开启成功
+ * @method ResourceResult getData() 获取<p>是否开启成功</p>
+ * @method void setData(ResourceResult $Data) 设置<p>是否开启成功</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateResourceGroupResponse extends AbstractModel
 {
     /**
-     * @var ResourceResult 是否开启成功
+     * @var ResourceResult <p>是否开启成功</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class CreateResourceGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ResourceResult $Data 是否开启成功
+     * @param ResourceResult $Data <p>是否开启成功</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

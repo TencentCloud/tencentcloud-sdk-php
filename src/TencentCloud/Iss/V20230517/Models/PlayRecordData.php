@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 本地录像播放url数据结构
  *
- * @method string getFlv() 获取录像播放地址
- * @method void setFlv(string $Flv) 设置录像播放地址
+ * @method string getFlv() 获取<p>flv录像播放地址</p>
+ * @method void setFlv(string $Flv) 设置<p>flv录像播放地址</p>
+ * @method string getFMp4() 获取<p>fmp4录像播放地址</p>
+ * @method void setFMp4(string $FMp4) 设置<p>fmp4录像播放地址</p>
  */
 class PlayRecordData extends AbstractModel
 {
     /**
-     * @var string 录像播放地址
+     * @var string <p>flv录像播放地址</p>
      */
     public $Flv;
 
     /**
-     * @param string $Flv 录像播放地址
+     * @var string <p>fmp4录像播放地址</p>
+     */
+    public $FMp4;
+
+    /**
+     * @param string $Flv <p>flv录像播放地址</p>
+     * @param string $FMp4 <p>fmp4录像播放地址</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class PlayRecordData extends AbstractModel
         }
         if (array_key_exists("Flv",$param) and $param["Flv"] !== null) {
             $this->Flv = $param["Flv"];
+        }
+
+        if (array_key_exists("FMp4",$param) and $param["FMp4"] !== null) {
+            $this->FMp4 = $param["FMp4"];
         }
     }
 }

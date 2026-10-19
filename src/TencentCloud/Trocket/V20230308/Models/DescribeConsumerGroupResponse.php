@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumeModel(string $ConsumeModel) 设置<p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
  * @method string getLiteTopic() 获取<p>订阅的轻量主题（仅适用于轻量消费模式）</p>
  * @method void setLiteTopic(string $LiteTopic) 设置<p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+ * @method string getDeadLetterTargetTopic() 获取<p>自定义死信Topic</p>
+ * @method void setDeadLetterTargetTopic(string $DeadLetterTargetTopic) 设置<p>自定义死信Topic</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,6 +119,11 @@ class DescribeConsumerGroupResponse extends AbstractModel
     public $LiteTopic;
 
     /**
+     * @var string <p>自定义死信Topic</p>
+     */
+    public $DeadLetterTargetTopic;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -135,6 +142,7 @@ class DescribeConsumerGroupResponse extends AbstractModel
      * @param RetryPolicy $RetryPolicy <p>重试策略</p>
      * @param string $ConsumeModel <p>消费模式</p><p>枚举值：</p><ul><li>CLUSTERING： 集群/广播消费</li><li>LITE： LiteTopic消费</li></ul><p>默认值：CLUSTERING</p>
      * @param string $LiteTopic <p>订阅的轻量主题（仅适用于轻量消费模式）</p>
+     * @param string $DeadLetterTargetTopic <p>自定义死信Topic</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -201,6 +209,10 @@ class DescribeConsumerGroupResponse extends AbstractModel
 
         if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
             $this->LiteTopic = $param["LiteTopic"];
+        }
+
+        if (array_key_exists("DeadLetterTargetTopic",$param) and $param["DeadLetterTargetTopic"] !== null) {
+            $this->DeadLetterTargetTopic = $param["DeadLetterTargetTopic"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

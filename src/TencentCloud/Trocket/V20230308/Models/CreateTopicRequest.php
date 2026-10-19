@@ -24,32 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
  * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
- * @method string getTopicType() 获取主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
- * @method void setTopicType(string $TopicType) 设置主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
- * @method integer getQueueNum() 获取队列数量，取值范围3～16
- * @method void setQueueNum(integer $QueueNum) 设置队列数量，取值范围3～16
- * @method string getRemark() 获取备注信息，最多 128 个字符
- * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
- * @method integer getMsgTTL() 获取消息保留时长（单位：小时）
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长（单位：小时）
- * @method array getTagList() 获取标签列表
- * @method void setTagList(array $TagList) 设置标签列表
- * @method boolean getAutoExpireDelete() 获取是否过期自动删除（仅针对轻量主题类型）
- * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置是否过期自动删除（仅针对轻量主题类型）
- * @method integer getAutoExpireTime() 获取过期时间，单位：秒（仅针对轻量主题类型）
- * @method void setAutoExpireTime(integer $AutoExpireTime) 设置过期时间，单位：秒（仅针对轻量主题类型）
+ * @method string getTopicType() 获取<p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
+ * @method void setTopicType(string $TopicType) 设置<p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
+ * @method integer getQueueNum() 获取<p>队列数量，取值范围3～16</p>
+ * @method void setQueueNum(integer $QueueNum) 设置<p>队列数量，取值范围3～16</p>
+ * @method string getRemark() 获取<p>备注信息，最多 128 个字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息，最多 128 个字符</p>
+ * @method integer getMsgTTL() 获取<p>消息保留时长（单位：小时）</p>
+ * @method void setMsgTTL(integer $MsgTTL) 设置<p>消息保留时长（单位：小时）</p>
+ * @method array getTagList() 获取<p>标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>标签列表</p>
+ * @method boolean getAutoExpireDelete() 获取<p>是否过期自动删除（仅针对轻量主题类型）</p>
+ * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置<p>是否过期自动删除（仅针对轻量主题类型）</p>
+ * @method integer getAutoExpireTime() 获取<p>过期时间，单位：秒（仅针对轻量主题类型）</p>
+ * @method void setAutoExpireTime(integer $AutoExpireTime) 设置<p>过期时间，单位：秒（仅针对轻量主题类型）</p>
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -64,62 +52,50 @@ class CreateTopicRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var string 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
+     * @var string <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
      */
     public $TopicType;
 
     /**
-     * @var integer 队列数量，取值范围3～16
+     * @var integer <p>队列数量，取值范围3～16</p>
      */
     public $QueueNum;
 
     /**
-     * @var string 备注信息，最多 128 个字符
+     * @var string <p>备注信息，最多 128 个字符</p>
      */
     public $Remark;
 
     /**
-     * @var integer 消息保留时长（单位：小时）
+     * @var integer <p>消息保留时长（单位：小时）</p>
      */
     public $MsgTTL;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $TagList;
 
     /**
-     * @var boolean 是否过期自动删除（仅针对轻量主题类型）
+     * @var boolean <p>是否过期自动删除（仅针对轻量主题类型）</p>
      */
     public $AutoExpireDelete;
 
     /**
-     * @var integer 过期时间，单位：秒（仅针对轻量主题类型）
+     * @var integer <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
      */
     public $AutoExpireTime;
 
     /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
-     * @param string $TopicType 主题类型，枚举值如下：
-
-- NORMAL: 普通消息
-- FIFO: 顺序消息
-- DELAY: 延时消息
-- TRANSACTION: 事务消息
-- LITE: 轻量消息
-     * @param integer $QueueNum 队列数量，取值范围3～16
-     * @param string $Remark 备注信息，最多 128 个字符
-     * @param integer $MsgTTL 消息保留时长（单位：小时）
-     * @param array $TagList 标签列表
-     * @param boolean $AutoExpireDelete 是否过期自动删除（仅针对轻量主题类型）
-     * @param integer $AutoExpireTime 过期时间，单位：秒（仅针对轻量主题类型）
+     * @param string $TopicType <p>主题类型</p><p>枚举值：</p><ul><li>NORMAL： 普通消息</li><li>FIFO： 顺序消息</li><li>DELAY： 延迟消息</li><li>TRANSACTION： 事务消息</li><li>LITE： 轻量消息</li><li>PRIORITY： 优先级消息</li></ul>
+     * @param integer $QueueNum <p>队列数量，取值范围3～16</p>
+     * @param string $Remark <p>备注信息，最多 128 个字符</p>
+     * @param integer $MsgTTL <p>消息保留时长（单位：小时）</p>
+     * @param array $TagList <p>标签列表</p>
+     * @param boolean $AutoExpireDelete <p>是否过期自动删除（仅针对轻量主题类型）</p>
+     * @param integer $AutoExpireTime <p>过期时间，单位：秒（仅针对轻量主题类型）</p>
      */
     function __construct()
     {

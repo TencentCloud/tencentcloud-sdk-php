@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Adp\V20260520\Models as Models;
 
 /**
+ * @method Models\CallMCPToolResponse CallMCPTool(Models\CallMCPToolRequest $req) 用户在 MCP App iframe 内触发的工具调用
  * @method Models\CheckLabelResponse CheckLabel(Models\CheckLabelRequest $req) 校验标签
  * @method Models\CopyAgentFromAppResponse CopyAgentFromApp(Models\CopyAgentFromAppRequest $req) 复制 Agent（目前仅支持claw模式））
  * @method Models\CopyAppResponse CopyApp(Models\CopyAppRequest $req) 复制应用
@@ -142,6 +143,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifySpaceResponse ModifySpace(Models\ModifySpaceRequest $req) 编辑空间
  * @method Models\ModifyVariableResponse ModifyVariable(Models\ModifyVariableRequest $req) 更新参数变量
  * @method Models\PauseAppTriggerResponse PauseAppTrigger(Models\PauseAppTriggerRequest $req) PauseAppTrigger
+ * @method Models\ReadMCPResourceResponse ReadMCPResource(Models\ReadMCPResourceRequest $req) 读取 MCP UI 资源（HTML），供前端 iframe 加载 MCP App 界面
  * @method Models\ReleaseSkillResponse ReleaseSkill(Models\ReleaseSkillRequest $req) 上架skill
  * @method Models\ResetConversationResponse ResetConversation(Models\ResetConversationRequest $req) 重置会话
 注意：当前Claw模式应用会话不支持重置

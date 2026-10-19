@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取notebook id
  * @method void setId(string $Id) 设置notebook id
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class StopNotebookRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class StopNotebookRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @param string $Id notebook id
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class StopNotebookRequest extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

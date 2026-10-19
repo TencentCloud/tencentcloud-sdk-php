@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableMultiZone(boolean $EnableMultiZone) 设置<p>是否启用多可用区扩容。未传时保持已持久化的分区策略，局部更新不得覆盖。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableJobLoadAutoscaling() 获取<p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableJobLoadAutoscaling(boolean $EnableJobLoadAutoscaling) 设置<p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateOverrides extends AbstractModel
 {
@@ -64,6 +68,12 @@ class TemplateOverrides extends AbstractModel
     public $EnableMultiZone;
 
     /**
+     * @var boolean <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableJobLoadAutoscaling;
+
+    /**
      * @param array $InstanceFamilies <p>候选机型族列表，最多 10 个。MULTI_CARD 模式的明确标志字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GpuCountPerNode <p>每节点 GPU 卡数。</p>
@@ -71,6 +81,8 @@ class TemplateOverrides extends AbstractModel
      * @param boolean $EnableMixedGpuCount <p>是否启用混合 GPU 卡数折算，默认 false。未传时保持已持久化的混卡开关。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableMultiZone <p>是否启用多可用区扩容。未传时保持已持久化的分区策略，局部更新不得覆盖。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableJobLoadAutoscaling <p>是否开启按作业负载自动伸缩。开启后扩容数量由队列中排队作业的实际资源需求（节点数 / GPU 卡数）决定；关闭（默认）时按 DesiredCapacity 配额收敛。仅支持 Slurm 集群与同构队列，由服务端校验。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class TemplateOverrides extends AbstractModel
 
         if (array_key_exists("EnableMultiZone",$param) and $param["EnableMultiZone"] !== null) {
             $this->EnableMultiZone = $param["EnableMultiZone"];
+        }
+
+        if (array_key_exists("EnableJobLoadAutoscaling",$param) and $param["EnableJobLoadAutoscaling"] !== null) {
+            $this->EnableJobLoadAutoscaling = $param["EnableJobLoadAutoscaling"];
         }
     }
 }

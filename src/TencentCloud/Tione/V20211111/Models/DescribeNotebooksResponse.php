@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNotebooks返回参数结构体
  *
- * @method array getNotebookSet() 获取notebook详情
- * @method void setNotebookSet(array $NotebookSet) 设置notebook详情
- * @method integer getTotalCount() 获取总条数
- * @method void setTotalCount(integer $TotalCount) 设置总条数
+ * @method array getNotebookSet() 获取<p>notebook详情</p>
+ * @method void setNotebookSet(array $NotebookSet) 设置<p>notebook详情</p>
+ * @method integer getTotalCount() 获取<p>总条数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总条数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeNotebooksResponse extends AbstractModel
 {
     /**
-     * @var array notebook详情
+     * @var array <p>notebook详情</p>
      */
     public $NotebookSet;
 
     /**
-     * @var integer 总条数
+     * @var integer <p>总条数</p>
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeNotebooksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NotebookSet notebook详情
-     * @param integer $TotalCount 总条数
+     * @param array $NotebookSet <p>notebook详情</p>
+     * @param integer $TotalCount <p>总条数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

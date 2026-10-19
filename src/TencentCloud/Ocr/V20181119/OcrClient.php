@@ -340,9 +340,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\QuestionSplitLayoutOCRResponse QuestionSplitLayoutOCR(Models\QuestionSplitLayoutOCRRequest $req) 试卷切题（仅检测）可将整页练习册、试卷或教辅中的题目进行自动切题，返回试题边框的坐标位置。新客户请注意UseNewMode的选择。
 
 默认接口请求频率限制：2次/秒。
- * @method Models\QuestionSplitOCRResponse QuestionSplitOCR(Models\QuestionSplitOCRRequest $req) 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置。新接入客户请注意UseNewModel选择
+ * @method Models\QuestionSplitOCRResponse QuestionSplitOCR(Models\QuestionSplitOCRRequest $req) 试卷切题识别可将整页练习册、试卷或教辅中的题目进行自动切题，并识别出其中的文字内容和坐标位置，新接入客户请注意UseNewModel选择。如果涉及多页试卷录入和单题跨页/跨栏问题可以选择使用[异步试卷切题（提交任务）](https://cloud.tencent.com/document/product/866/137427)
 
-默认接口请求频率限制：2次/秒。
+默认接口请求频率限制：5次/秒。
  * @method Models\RecognizeAgentResponse RecognizeAgent(Models\RecognizeAgentRequest $req) 支持对输入图的内容进行判断、分类以及总结；支持用户对通用文字识别输出结构进行自定义。
  * @method Models\RecognizeEncryptedIDCardOCRResponse RecognizeEncryptedIDCardOCR(Models\RecognizeEncryptedIDCardOCRRequest $req) 身份证识别（安全加密版）接口实现了数据加密传输，能够有效防止个人身份证隐私信息不被窃取泄露。
 

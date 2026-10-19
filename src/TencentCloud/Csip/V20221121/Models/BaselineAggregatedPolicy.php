@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCheckAssetType(string $CheckAssetType) 设置<p>检测资产大类，区分主机基线与容器集群基线。取值：</p><ul><li>HOST：主机</li><li>CLUSTER：容器集群</li></ul>
  * @method boolean getScanned() 获取<p>该基线类别是否被扫描过</p>
  * @method void setScanned(boolean $Scanned) 设置<p>该基线类别是否被扫描过</p>
+ * @method integer getAppID() 获取<p>自定义策略情况下策略的appid</p>
+ * @method void setAppID(integer $AppID) 设置<p>自定义策略情况下策略的appid</p>
  */
 class BaselineAggregatedPolicy extends AbstractModel
 {
@@ -115,6 +117,11 @@ class BaselineAggregatedPolicy extends AbstractModel
     public $Scanned;
 
     /**
+     * @var integer <p>自定义策略情况下策略的appid</p>
+     */
+    public $AppID;
+
+    /**
      * @param integer $ParentCategoryID <p>系统策略所属父分类 ID（仅 PolicyType=SYSTEM 时聚合使用，自定义策略为 0）。</p>
      * @param array $PolicyID <p>本次聚合涉及的基线策略 ID 列表。</p>
      * @param string $Name <p>策略名称（自定义策略为用户输入，系统策略为内置分类名）。</p>
@@ -128,6 +135,7 @@ class BaselineAggregatedPolicy extends AbstractModel
      * @param string $PolicyType <p>基线策略类型。取值：</p><ul><li>SYSTEM：系统策略（CSIP 内置）</li><li>SELF：用户自定义策略</li></ul>
      * @param string $CheckAssetType <p>检测资产大类，区分主机基线与容器集群基线。取值：</p><ul><li>HOST：主机</li><li>CLUSTER：容器集群</li></ul>
      * @param boolean $Scanned <p>该基线类别是否被扫描过</p>
+     * @param integer $AppID <p>自定义策略情况下策略的appid</p>
      */
     function __construct()
     {
@@ -202,6 +210,10 @@ class BaselineAggregatedPolicy extends AbstractModel
 
         if (array_key_exists("Scanned",$param) and $param["Scanned"] !== null) {
             $this->Scanned = $param["Scanned"];
+        }
+
+        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
+            $this->AppID = $param["AppID"];
         }
     }
 }

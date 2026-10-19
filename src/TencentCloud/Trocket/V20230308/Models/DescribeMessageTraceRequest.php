@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryDeadLetterMessage(boolean $QueryDeadLetterMessage) 设置<p>是否是死信消息，默认为false</p>
  * @method boolean getQueryDelayMessage() 获取<p>是否是延时消息，默认为false</p>
  * @method void setQueryDelayMessage(boolean $QueryDelayMessage) 设置<p>是否是延时消息，默认为false</p>
+ * @method boolean getQueryRetryMessage() 获取<p>是否为重试消息</p>
+ * @method void setQueryRetryMessage(boolean $QueryRetryMessage) 设置<p>是否为重试消息</p>
+ * @method string getGroupId() 获取<p>查询重试消息时，需要指定具体的消费组名称</p>
+ * @method void setGroupId(string $GroupId) 设置<p>查询重试消息时，需要指定具体的消费组名称</p>
  */
 class DescribeMessageTraceRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeMessageTraceRequest extends AbstractModel
     public $QueryDelayMessage;
 
     /**
+     * @var boolean <p>是否为重试消息</p>
+     */
+    public $QueryRetryMessage;
+
+    /**
+     * @var string <p>查询重试消息时，需要指定具体的消费组名称</p>
+     */
+    public $GroupId;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      * @param string $MsgId <p>消息 ID，从 <a href="https://cloud.tencent.com/document/api/1493/114593">DescribeMessageList</a> 接口返回的 <a href="https://cloud.tencent.com/document/api/1493/96031#MessageItem">MessageItem</a> 或业务日志中获得。</p>
      * @param boolean $QueryDeadLetterMessage <p>是否是死信消息，默认为false</p>
      * @param boolean $QueryDelayMessage <p>是否是延时消息，默认为false</p>
+     * @param boolean $QueryRetryMessage <p>是否为重试消息</p>
+     * @param string $GroupId <p>查询重试消息时，需要指定具体的消费组名称</p>
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeMessageTraceRequest extends AbstractModel
 
         if (array_key_exists("QueryDelayMessage",$param) and $param["QueryDelayMessage"] !== null) {
             $this->QueryDelayMessage = $param["QueryDelayMessage"];
+        }
+
+        if (array_key_exists("QueryRetryMessage",$param) and $param["QueryRetryMessage"] !== null) {
+            $this->QueryRetryMessage = $param["QueryRetryMessage"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

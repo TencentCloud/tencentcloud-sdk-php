@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginMode(integer $LoginMode) 设置<p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
  * @method string getDomainPrefix() 获取<p>自定义域名前缀</p>
  * @method void setDomainPrefix(string $DomainPrefix) 设置<p>自定义域名前缀</p>
- * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
- * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
- * @method AnonymousLoginInfo getAnonymousLogin() 获取<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
- * @method void setAnonymousLogin(AnonymousLoginInfo $AnonymousLogin) 设置<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+ * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+ * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+ * @method AnonymousLoginInfo getAnonymousLogin() 获取<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+ * @method void setAnonymousLogin(AnonymousLoginInfo $AnonymousLogin) 设置<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
  * @method integer getIntranetType() 获取<p>内网类型，默认为0</p>
  * @method void setIntranetType(integer $IntranetType) 设置<p>内网类型，默认为0</p>
  * @method string getIntranetRegion() 获取<p>内网地域</p>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置<p>内网私有网络VpcId</p>
  * @method string getSubnetId() 获取<p>内网子网SubnetId</p>
  * @method void setSubnetId(string $SubnetId) 设置<p>内网子网SubnetId</p>
- * @method array getAuthRoles() 获取<p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
- * @method void setAuthRoles(array $AuthRoles) 设置<p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+ * @method array getAuthRoles() 获取<p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+ * @method void setAuthRoles(array $AuthRoles) 设置<p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
  * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
  * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
  * @method array getHideParams() 获取<p>自定义隐藏参数</p>
@@ -69,12 +69,12 @@ class CreateConsoleRequest extends AbstractModel
     public $DomainPrefix;
 
     /**
-     * @var array <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+     * @var array <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public $Accounts;
 
     /**
-     * @var AnonymousLoginInfo <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * @var AnonymousLoginInfo <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public $AnonymousLogin;
 
@@ -99,7 +99,7 @@ class CreateConsoleRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var array <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * @var array <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      */
     public $AuthRoles;
 
@@ -132,13 +132,13 @@ class CreateConsoleRequest extends AbstractModel
      * @param array $AccessMode <p>访问方式：public - 公网，internal - 内网</p>
      * @param integer $LoginMode <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      * @param string $DomainPrefix <p>自定义域名前缀</p>
-     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
-     * @param AnonymousLoginInfo $AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
+     * @param AnonymousLoginInfo $AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      * @param integer $IntranetType <p>内网类型，默认为0</p>
      * @param string $IntranetRegion <p>内网地域</p>
      * @param string $VpcId <p>内网私有网络VpcId</p>
      * @param string $SubnetId <p>内网子网SubnetId</p>
-     * @param array $AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * @param array $AuthRoles <p>Auth角色信息</p><p>“第三方认证登录”登录方式必传。<br>SecretId + SecretKey 或 RoleArn需要传其中一种。</p>
      * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
      * @param array $HideParams <p>自定义隐藏参数</p>
      * @param array $AccessControlRules <p>访问控制规则</p><p>“第三方认证登录”登录方式必传 AccessMode: internal &amp;&amp; Action: ACCEPT 规则</p>

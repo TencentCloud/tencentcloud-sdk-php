@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrgWidth(integer $OrgWidth) 设置<p>输入图片宽度</p><p>单位：px</p>
  * @method string getImageBase64() 获取<p>预处理后的图片base64编码</p>
  * @method void setImageBase64(string $ImageBase64) 设置<p>预处理后的图片base64编码</p>
+ * @method string getReturnImageUrl() 获取<p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+ * @method void setReturnImageUrl(string $ReturnImageUrl) 设置<p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
  */
 class QuestionInfo extends AbstractModel
 {
@@ -76,6 +78,11 @@ class QuestionInfo extends AbstractModel
     public $ImageBase64;
 
     /**
+     * @var string <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
+     */
+    public $ReturnImageUrl;
+
+    /**
      * @param float $Angle <p>旋转角度</p>
      * @param integer $Height <p>预处理后图片高度</p><p>单位：px</p>
      * @param integer $Width <p>预处理后图片宽度</p><p>单位：px</p>
@@ -84,6 +91,7 @@ class QuestionInfo extends AbstractModel
      * @param integer $OrgHeight <p>输入图片高度</p><p>单位：px</p>
      * @param integer $OrgWidth <p>输入图片宽度</p><p>单位：px</p>
      * @param string $ImageBase64 <p>预处理后的图片base64编码</p>
+     * @param string $ReturnImageUrl <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
      */
     function __construct()
     {
@@ -129,6 +137,10 @@ class QuestionInfo extends AbstractModel
 
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
             $this->ImageBase64 = $param["ImageBase64"];
+        }
+
+        if (array_key_exists("ReturnImageUrl",$param) and $param["ReturnImageUrl"] !== null) {
+            $this->ReturnImageUrl = $param["ReturnImageUrl"];
         }
     }
 }

@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoordPageIndex() 获取<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
  * @method void setCoordPageIndex(array $CoordPageIndex) 设置<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+ * @method string getRightAnswer() 获取<p>返回正确答案内容</p>
+ * @method void setRightAnswer(string $RightAnswer) 设置<p>返回正确答案内容</p>
+ * @method string getSubject() 获取<p>学科（如语文、数学、英语）</p>
+ * @method void setSubject(string $Subject) 设置<p>学科（如语文、数学、英语）</p>
+ * @method array getKnowledgePoints() 获取<p>返回题目的知识点内容</p>
+ * @method void setKnowledgePoints(array $KnowledgePoints) 设置<p>返回题目的知识点内容</p>
  */
 class ResultList extends AbstractModel
 {
@@ -98,6 +104,21 @@ class ResultList extends AbstractModel
     public $CoordPageIndex;
 
     /**
+     * @var string <p>返回正确答案内容</p>
+     */
+    public $RightAnswer;
+
+    /**
+     * @var string <p>学科（如语文、数学、英语）</p>
+     */
+    public $Subject;
+
+    /**
+     * @var array <p>返回题目的知识点内容</p>
+     */
+    public $KnowledgePoints;
+
+    /**
      * @param array $Question <p>题干</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Option <p>选项</p>
@@ -112,6 +133,9 @@ class ResultList extends AbstractModel
      * @param array $Coord <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     * @param string $RightAnswer <p>返回正确答案内容</p>
+     * @param string $Subject <p>学科（如语文、数学、英语）</p>
+     * @param array $KnowledgePoints <p>返回题目的知识点内容</p>
      */
     function __construct()
     {
@@ -191,6 +215,18 @@ class ResultList extends AbstractModel
 
         if (array_key_exists("CoordPageIndex",$param) and $param["CoordPageIndex"] !== null) {
             $this->CoordPageIndex = $param["CoordPageIndex"];
+        }
+
+        if (array_key_exists("RightAnswer",$param) and $param["RightAnswer"] !== null) {
+            $this->RightAnswer = $param["RightAnswer"];
+        }
+
+        if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
+            $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("KnowledgePoints",$param) and $param["KnowledgePoints"] !== null) {
+            $this->KnowledgePoints = $param["KnowledgePoints"];
         }
     }
 }

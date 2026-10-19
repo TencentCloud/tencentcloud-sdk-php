@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取<p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
  * @method void setStatus(integer $Status) 设置<p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+ * @method string getDisplayStatus() 获取<p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+ * @method void setDisplayStatus(string $DisplayStatus) 设置<p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
  * @method string getProjectModel() 获取<p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectModel(string $ProjectModel) 设置<p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
@@ -107,6 +109,11 @@ class Project extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
+     */
+    public $DisplayStatus;
+
+    /**
      * @var string <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,6 +140,7 @@ class Project extends AbstractModel
      * @param string $ProjectOwnerUin <p>项目责任人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status <p>项目状态：0：禁用，1：启用，-3:禁用中，2：启用中</p>
+     * @param string $DisplayStatus <p>项目状态枚举：ENABLED 正常、UNABLED 已禁用、ENABLING 启用中、UNABLING 禁用中、REMOVING 删除中、DELETED 已删除</p>
      * @param string $ProjectModel <p>项目模式，SIMPLE：简单模式 STANDARD：标准模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WorkspaceExt <p>项目的额外配置参数，{Key: &quot;scheduleMode&quot;, Value: &quot;task|workflow&quot;}</p>
@@ -180,6 +188,10 @@ class Project extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("DisplayStatus",$param) and $param["DisplayStatus"] !== null) {
+            $this->DisplayStatus = $param["DisplayStatus"];
         }
 
         if (array_key_exists("ProjectModel",$param) and $param["ProjectModel"] !== null) {

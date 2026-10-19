@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置<p>分页页码，从 1 开始。非必填，默认 1</p>
  * @method integer getPageSize() 获取<p>每页大小。非必填，默认 10，取值范围 [10, 200]</p>
  * @method void setPageSize(integer $PageSize) 设置<p>每页大小。非必填，默认 10，取值范围 [10, 200]</p>
- * @method string getWorkflowId() 获取<p>工作流ID，精确匹配。非必填，单值</p>
- * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID，精确匹配。非必填，单值</p>
+ * @method string getWorkflowId() 获取<p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
  * @method string getWorkflowNameKeyword() 获取<p>工作流名称关键字，对 WorkflowName 做模糊匹配。非必填，单值</p>
  * @method void setWorkflowNameKeyword(string $WorkflowNameKeyword) 设置<p>工作流名称关键字，对 WorkflowName 做模糊匹配。非必填，单值</p>
  * @method string getCreateStartTime() 获取<p>运行创建时间下界，范围匹配（CreateTime &gt;= 本值），单位：毫秒时间戳。<br>非必填，单值，对应出参 WorkflowRun.CreateTime</p>
@@ -65,7 +65,7 @@ class ListWorkflowRunsRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @var string <p>工作流ID，精确匹配。非必填，单值</p>
+     * @var string <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public $WorkflowId;
 
@@ -118,7 +118,7 @@ class ListWorkflowRunsRequest extends AbstractModel
      * @param string $WorkspaceId <p>工作空间ID，可通过 ListWorkspaces 获取。必填</p>
      * @param integer $PageNumber <p>分页页码，从 1 开始。非必填，默认 1</p>
      * @param integer $PageSize <p>每页大小。非必填，默认 10，取值范围 [10, 200]</p>
-     * @param string $WorkflowId <p>工作流ID，精确匹配。非必填，单值</p>
+     * @param string $WorkflowId <p>工作流ID，精确匹配。非必填，单值</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      * @param string $WorkflowNameKeyword <p>工作流名称关键字，对 WorkflowName 做模糊匹配。非必填，单值</p>
      * @param string $CreateStartTime <p>运行创建时间下界，范围匹配（CreateTime &gt;= 本值），单位：毫秒时间戳。<br>非必填，单值，对应出参 WorkflowRun.CreateTime</p>
      * @param string $CreateEndTime <p>运行创建时间上界，范围匹配（CreateTime &lt;= 本值），单位：毫秒时间戳。<br>非必填，单值，对应出参 WorkflowRun.CreateTime</p>

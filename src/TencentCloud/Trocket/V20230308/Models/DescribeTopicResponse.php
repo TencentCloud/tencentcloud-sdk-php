@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置<p>主题名称</p>
  * @method string getTopicType() 获取<p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
  * @method void setTopicType(string $TopicType) 设置<p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+ * @method integer getQueueNum() 获取<p>队列数量</p>
+ * @method void setQueueNum(integer $QueueNum) 设置<p>队列数量</p>
  * @method string getRemark() 获取<p>备注</p>
  * @method void setRemark(string $Remark) 设置<p>备注</p>
  * @method integer getCreatedTime() 获取<p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
@@ -61,6 +63,11 @@ class DescribeTopicResponse extends AbstractModel
      * @var string <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public $TopicType;
+
+    /**
+     * @var integer <p>队列数量</p>
+     */
+    public $QueueNum;
 
     /**
      * @var string <p>备注</p>
@@ -111,6 +118,7 @@ class DescribeTopicResponse extends AbstractModel
      * @param string $InstanceId <p>实例ID</p>
      * @param string $Topic <p>主题名称</p>
      * @param string $TopicType <p>主题类型<br>UNSPECIFIED:未指定,<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+     * @param integer $QueueNum <p>队列数量</p>
      * @param string $Remark <p>备注</p>
      * @param integer $CreatedTime <p>创建时间，<strong>Unix时间戳（毫秒）</strong></p>
      * @param integer $LastUpdateTime <p>最后写入时间，<strong>Unix时间戳（毫秒）</strong></p>
@@ -144,6 +152,10 @@ class DescribeTopicResponse extends AbstractModel
 
         if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
             $this->TopicType = $param["TopicType"];
+        }
+
+        if (array_key_exists("QueueNum",$param) and $param["QueueNum"] !== null) {
+            $this->QueueNum = $param["QueueNum"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

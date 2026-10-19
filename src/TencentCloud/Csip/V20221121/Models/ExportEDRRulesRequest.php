@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置<p>排序，大小写无关：ASC 升序，DESC降序</p>
  * @method string getBy() 获取<p>排序列，ModifyTime</p>
  * @method void setBy(string $By) 设置<p>排序列，ModifyTime</p>
+ * @method RuleContentFileOperation getFileOperationRules() 获取<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) 设置<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
  */
 class ExportEDRRulesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ExportEDRRulesRequest extends AbstractModel
     public $By;
 
     /**
+     * @var RuleContentFileOperation <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public $FileOperationRules;
+
+    /**
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $Filters <p>过滤条件：Name、RuleContent、RuleType、ContentType、Action、Level、DetectMode、DetectType、AttackStage、Status</p>
      * @param string $Order <p>排序，大小写无关：ASC 升序，DESC降序</p>
      * @param string $By <p>排序列，ModifyTime</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ class ExportEDRRulesRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

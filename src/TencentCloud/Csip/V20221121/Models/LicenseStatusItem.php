@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置<p>最早开始时间（格式：2006-01-02 15:04:05）</p>
  * @method string getEndTime() 获取<p>最晚到期时间（格式：2006-01-02 15:04:05）</p>
  * @method void setEndTime(string $EndTime) 设置<p>最晚到期时间（格式：2006-01-02 15:04:05）</p>
+ * @method string getOrderType() 获取<p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+ * @method void setOrderType(string $OrderType) 设置<p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
  */
 class LicenseStatusItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class LicenseStatusItem extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
+     */
+    public $OrderType;
+
+    /**
      * @param string $ResourceId <p>资源ID</p>
      * @param string $LicenseType <p>授权类型（ENTERPRISE_HP=旗舰版/ADVANCED_HP=专业版/RASP）</p>
      * @param string $Name <p>授权名称（旗舰版/专业版/RASP）</p>
@@ -96,6 +103,7 @@ class LicenseStatusItem extends AbstractModel
      * @param integer $RemainNum <p>剩余</p>
      * @param string $BeginTime <p>最早开始时间（格式：2006-01-02 15:04:05）</p>
      * @param string $EndTime <p>最晚到期时间（格式：2006-01-02 15:04:05）</p>
+     * @param string $OrderType <p>订单类型</p><p>枚举值：</p><ul><li>PURCHASED： 正式订单</li><li>TRIAL： 试用订单</li></ul>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class LicenseStatusItem extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
         }
     }
 }

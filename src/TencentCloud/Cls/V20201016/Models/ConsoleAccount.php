@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置<p>电子邮箱，用于发送验证码</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRoleArn() 获取<p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+ * @method void setRoleArn(string $RoleArn) 设置<p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
  */
 class ConsoleAccount extends AbstractModel
 {
@@ -74,6 +76,11 @@ class ConsoleAccount extends AbstractModel
     public $Email;
 
     /**
+     * @var string <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
+     */
+    public $RoleArn;
+
+    /**
      * @param string $UserName <p>用户名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password <p>用户密码</p>
@@ -84,6 +91,7 @@ class ConsoleAccount extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Email <p>电子邮箱，用于发送验证码</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RoleArn <p>角色的资源描述，可在<a href="https://console.cloud.tencent.com/cam/role">访问管理</a>，点击角色名获取。<br>普通角色：<br>qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName<br>服务角色：<br>qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName</p><p>DataSight将扮演此角色，使用此角色的临时密钥来发起API请求。</p>
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class ConsoleAccount extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("RoleArn",$param) and $param["RoleArn"] !== null) {
+            $this->RoleArn = $param["RoleArn"];
         }
     }
 }

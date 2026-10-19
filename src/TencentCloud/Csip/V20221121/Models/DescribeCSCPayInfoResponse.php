@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewUser(integer $NewUser) 设置<p>是否为新用户。取值：1（新用户）、0（旧用户）。</p>
  * @method array getQuotaList() 获取<p>用户计费信息，Key为L4</p>
  * @method void setQuotaList(array $QuotaList) 设置<p>用户计费信息，Key为L4</p>
+ * @method string getQuotaUsedError() 获取<p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+ * @method void setQuotaUsedError(string $QuotaUsedError) 设置<p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +126,11 @@ class DescribeCSCPayInfoResponse extends AbstractModel
     public $QuotaList;
 
     /**
+     * @var string <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
+     */
+    public $QuotaUsedError;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +150,7 @@ class DescribeCSCPayInfoResponse extends AbstractModel
      * @param string $NickName <p>账号昵称。</p>
      * @param integer $NewUser <p>是否为新用户。取值：1（新用户）、0（旧用户）。</p>
      * @param array $QuotaList <p>用户计费信息，Key为L4</p>
+     * @param string $QuotaUsedError <p>配额用量查询失败提示。仅请求参数 NeedQuotaUsed 为 true 时可能非空：此时订单信息仍正常返回，QuotaList 中的 QuotaUsed 恒为 0；查询正常或未请求用量时为空字符串</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -217,6 +225,10 @@ class DescribeCSCPayInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QuotaList, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaUsedError",$param) and $param["QuotaUsedError"] !== null) {
+            $this->QuotaUsedError = $param["QuotaUsedError"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

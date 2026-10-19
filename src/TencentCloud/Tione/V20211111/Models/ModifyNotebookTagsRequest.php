@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取Notebook Id
  * @method void setId(string $Id) 设置Notebook Id
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method array getTags() 获取Notebook修改标签集合
  * @method void setTags(array $Tags) 设置Notebook修改标签集合
  */
@@ -33,12 +35,18 @@ class ModifyNotebookTagsRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var array Notebook修改标签集合
      */
     public $Tags;
 
     /**
      * @param string $Id Notebook Id
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param array $Tags Notebook修改标签集合
      */
     function __construct()
@@ -56,6 +64,10 @@ class ModifyNotebookTagsRequest extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

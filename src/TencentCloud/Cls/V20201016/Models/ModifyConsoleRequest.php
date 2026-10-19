@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginMode(integer $LoginMode) 设置<p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
  * @method string getDomainPrefix() 获取<p>自定义域名前缀</p>
  * @method void setDomainPrefix(string $DomainPrefix) 设置<p>自定义域名前缀</p>
- * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
- * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
- * @method AnonymousLoginInfo getAnonymousLogin() 获取<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
- * @method void setAnonymousLogin(AnonymousLoginInfo $AnonymousLogin) 设置<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+ * @method array getAccounts() 获取<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
+ * @method void setAccounts(array $Accounts) 设置<p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
+ * @method AnonymousLoginInfo getAnonymousLogin() 获取<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
+ * @method void setAnonymousLogin(AnonymousLoginInfo $AnonymousLogin) 设置<p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
  * @method integer getIntranetType() 获取<p>内网类型，默认为0</p>
  * @method void setIntranetType(integer $IntranetType) 设置<p>内网类型，默认为0</p>
  * @method string getIntranetRegion() 获取<p>内网地域</p>
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置<p>内网私有网络VpcId</p>
  * @method string getSubnetId() 获取<p>内网子网SubnetId</p>
  * @method void setSubnetId(string $SubnetId) 设置<p>内网子网SubnetId</p>
- * @method array getAuthRoles() 获取<p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传</p>
- * @method void setAuthRoles(array $AuthRoles) 设置<p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传</p>
+ * @method array getAuthRoles() 获取<p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
+ * @method void setAuthRoles(array $AuthRoles) 设置<p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
  * @method array getHideParams() 获取<p>自定义隐藏参数</p>
  * @method void setHideParams(array $HideParams) 设置<p>自定义隐藏参数</p>
  * @method array getAccessControlRules() 获取<p>访问控制规则</p><p>“第三方认证登录”登录方式必传 AccessMode: internal &amp;&amp; Action: ACCEPT 规则</p>
@@ -74,12 +74,12 @@ class ModifyConsoleRequest extends AbstractModel
     public $DomainPrefix;
 
     /**
-     * @var array <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+     * @var array <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
      */
     public $Accounts;
 
     /**
-     * @var AnonymousLoginInfo <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * @var AnonymousLoginInfo <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
      */
     public $AnonymousLogin;
 
@@ -104,7 +104,7 @@ class ModifyConsoleRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var array <p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * @var array <p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
      */
     public $AuthRoles;
 
@@ -133,13 +133,13 @@ class ModifyConsoleRequest extends AbstractModel
      * @param array $AccessMode <p>访问方式：public - 公网，internal - 内网</p>
      * @param integer $LoginMode <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      * @param string $DomainPrefix <p>自定义域名前缀</p>
-     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
-     * @param AnonymousLoginInfo $AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传</p>
+     * @param array $Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
+     * @param AnonymousLoginInfo $AnonymousLogin <p>匿名登录账号信息</p><p>“匿名登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
      * @param integer $IntranetType <p>内网类型，默认为0</p>
      * @param string $IntranetRegion <p>内网地域</p>
      * @param string $VpcId <p>内网私有网络VpcId</p>
      * @param string $SubnetId <p>内网子网SubnetId</p>
-     * @param array $AuthRoles <p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传</p>
+     * @param array $AuthRoles <p>Auth用户角色信息</p><p>“第三方认证登录”登录方式必传。<br>如果SecretId、SecretKey、RoleArn都不传，表示不修改这部分鉴权信息。</p>
      * @param array $HideParams <p>自定义隐藏参数</p>
      * @param array $AccessControlRules <p>访问控制规则</p><p>“第三方认证登录”登录方式必传 AccessMode: internal &amp;&amp; Action: ACCEPT 规则</p>
      * @param string $Remarks <p>备注</p>

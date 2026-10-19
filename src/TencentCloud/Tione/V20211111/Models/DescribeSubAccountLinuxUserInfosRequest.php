@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAccountLinuxUserInfos请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method integer getOffset() 获取分页偏移量（0 表示全量）
  * @method void setOffset(integer $Offset) 设置分页偏移量（0 表示全量）
  * @method integer getLimit() 获取每页数量（0 表示全量）
@@ -29,6 +31,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel
 {
+    /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
     /**
      * @var integer 分页偏移量（0 表示全量）
      */
@@ -45,6 +52,7 @@ class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param integer $Offset 分页偏移量（0 表示全量）
      * @param integer $Limit 每页数量（0 表示全量）
      * @param array $Filters 过滤条件
@@ -62,6 +70,10 @@ class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }

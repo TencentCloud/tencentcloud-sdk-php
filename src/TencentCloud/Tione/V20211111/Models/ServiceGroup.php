@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChanger(string $Changer) 设置<p>变更服务的子账户</p>
  * @method string getChangerName() 获取<p>变更服务的子账户名称</p>
  * @method void setChangerName(string $ChangerName) 设置<p>变更服务的子账户名称</p>
+ * @method SmartRouter getSmartRouter() 获取<p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartRouter(SmartRouter $SmartRouter) 设置<p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceGroup extends AbstractModel
 {
@@ -256,6 +260,12 @@ class ServiceGroup extends AbstractModel
     public $ChangerName;
 
     /**
+     * @var SmartRouter <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartRouter;
+
+    /**
      * @param string $ServiceGroupId <p>服务组id</p>
      * @param string $ServiceGroupName <p>服务组名</p>
      * @param string $CreatedBy <p>创建者</p>
@@ -296,6 +306,8 @@ class ServiceGroup extends AbstractModel
      * @param GatewayConfig $GatewayConfig <p>网关路由相关配置</p>
      * @param string $Changer <p>变更服务的子账户</p>
      * @param string $ChangerName <p>变更服务的子账户名称</p>
+     * @param SmartRouter $SmartRouter <p>智能路由（SmartRouter）配置与运行时状态。未开启时该字段为空</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -437,6 +449,11 @@ class ServiceGroup extends AbstractModel
 
         if (array_key_exists("ChangerName",$param) and $param["ChangerName"] !== null) {
             $this->ChangerName = $param["ChangerName"];
+        }
+
+        if (array_key_exists("SmartRouter",$param) and $param["SmartRouter"] !== null) {
+            $this->SmartRouter = new SmartRouter();
+            $this->SmartRouter->deserialize($param["SmartRouter"]);
         }
     }
 }

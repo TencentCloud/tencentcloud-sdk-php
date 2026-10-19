@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 订单配额信息
  *
- * @method string getQuotaKey() 获取配额键
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuotaKey(string $QuotaKey) 设置配额键
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQuotaNum() 获取配额总量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuotaNum(integer $QuotaNum) 设置配额总量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQuotaUsed() 获取配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuotaUsed(integer $QuotaUsed) 设置配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQuotaKey() 获取<p>配额键</p>
+ * @method void setQuotaKey(string $QuotaKey) 设置<p>配额键</p>
+ * @method integer getQuotaNum() 获取<p>配额总量</p>
+ * @method void setQuotaNum(integer $QuotaNum) 设置<p>配额总量</p>
+ * @method integer getQuotaUsed() 获取<p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
+ * @method void setQuotaUsed(integer $QuotaUsed) 设置<p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
+ * @method integer getQuotaGranted() 获取<p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+ * @method void setQuotaGranted(integer $QuotaGranted) 设置<p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
  */
 class OrderQuotaInfo extends AbstractModel
 {
     /**
-     * @var string 配额键
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string <p>配额键</p>
      */
     public $QuotaKey;
 
     /**
-     * @var integer 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer <p>配额总量</p>
      */
     public $QuotaNum;
 
     /**
-     * @var integer 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
      */
     public $QuotaUsed;
 
     /**
-     * @param string $QuotaKey 配额键
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QuotaNum 配额总量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QuotaUsed 配额已使用量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
+     */
+    public $QuotaGranted;
+
+    /**
+     * @param string $QuotaKey <p>配额键</p>
+     * @param integer $QuotaNum <p>配额总量</p>
+     * @param integer $QuotaUsed <p>配额已使用量（含共享给其他账号的消耗）。仅请求参数 NeedQuotaUsed 为 true 时采集；未传或为 false 时恒为 0；用量查询失败时恒为 0，错误提示见响应 QuotaUsedError 字段</p>
+     * @param integer $QuotaGranted <p>赠送配额。仅 CSPM 存在赠送额度，其余计费项为 0</p>
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class OrderQuotaInfo extends AbstractModel
 
         if (array_key_exists("QuotaUsed",$param) and $param["QuotaUsed"] !== null) {
             $this->QuotaUsed = $param["QuotaUsed"];
+        }
+
+        if (array_key_exists("QuotaGranted",$param) and $param["QuotaGranted"] !== null) {
+            $this->QuotaGranted = $param["QuotaGranted"];
         }
     }
 }

@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowNameKeyword(string $WorkflowNameKeyword) 设置<p>工作流名称关键字，对 WorkflowName 做模糊匹配。非必填，单值</p>
  * @method array getWorkflowNames() 获取<p>工作流名称，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
  * @method void setWorkflowNames(array $WorkflowNames) 设置<p>工作流名称，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
- * @method array getWorkflowIds() 获取<p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
- * @method void setWorkflowIds(array $WorkflowIds) 设置<p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+ * @method array getWorkflowIds() 获取<p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
+ * @method void setWorkflowIds(array $WorkflowIds) 设置<p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
  * @method array getRunUserUins() 获取<p>工作流运行人UIN，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
  * @method void setRunUserUins(array $RunUserUins) 设置<p>工作流运行人UIN，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
  * @method array getLabelKeyIds() 获取<p>标签名称ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
  * @method void setLabelKeyIds(array $LabelKeyIds) 设置<p>标签名称ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
  * @method array getLabelValueIds() 获取<p>标签值ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
  * @method void setLabelValueIds(array $LabelValueIds) 设置<p>标签值ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
- * @method string getQuickSelectionType() 获取<p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
- * @method void setQuickSelectionType(string $QuickSelectionType) 设置<p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
- * @method array getOrderBys() 获取<p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
- * @method void setOrderBys(array $OrderBys) 设置<p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+ * @method string getQuickSelectionType() 获取<p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
+ * @method void setQuickSelectionType(string $QuickSelectionType) 设置<p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
+ * @method array getOrderBys() 获取<p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
+ * @method void setOrderBys(array $OrderBys) 设置<p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
  */
 class ListWorkflowsRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ class ListWorkflowsRequest extends AbstractModel
     public $WorkflowNames;
 
     /**
-     * @var array <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+     * @var array <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      */
     public $WorkflowIds;
 
@@ -91,12 +91,12 @@ class ListWorkflowsRequest extends AbstractModel
     public $LabelValueIds;
 
     /**
-     * @var string <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
+     * @var string <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
      */
     public $QuickSelectionType;
 
     /**
-     * @var array <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+     * @var array <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
      */
     public $OrderBys;
 
@@ -106,12 +106,12 @@ class ListWorkflowsRequest extends AbstractModel
      * @param integer $PageSize <p>每页大小。非必填，默认 10，取值范围 [10, 200]</p>
      * @param string $WorkflowNameKeyword <p>工作流名称关键字，对 WorkflowName 做模糊匹配。非必填，单值</p>
      * @param array $WorkflowNames <p>工作流名称，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
-     * @param array $WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
+     * @param array $WorkflowIds <p>工作流ID，精确匹配。非必填，多选（多个值之间为 OR 关系）</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1835/138002">ListWorkflows</a> 返回值 <code>Data</code></p>
      * @param array $RunUserUins <p>工作流运行人UIN，精确匹配。非必填，多选（多个值之间为 OR 关系）</p>
      * @param array $LabelKeyIds <p>标签名称ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
      * @param array $LabelValueIds <p>标签值ID，精确匹配，可通过标签相关接口获取。非必填，多选（多个值之间为 OR 关系）</p>
-     * @param string $QuickSelectionType <p>快速筛选类型。非必填，单值</p><p>对齐老云 API（wedata/2025-10-10）文档示例值：</p><ul><li>MY_FAVORITE：我收藏的</li><li>MY_OWNER：我负责的</li><li>MY_AUTHORITY：我有权限</li><li>WorkflowId：支持多个工作流ID筛选</li></ul><p>后端实现现状：当前仅 MY_FAVORITE 生效（设置 favoriteUserUin 过滤当前用户收藏），MY_OWNER / MY_AUTHORITY 暂未在 Service 层实现，传入会被忽略（按全量返回）。</p>
-     * @param array $OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。<br>可排序字段白名单：CreateTime</p>
+     * @param string $QuickSelectionType <p>快速筛选类型。非必填，单值，当前仅支持 MY_FAVORITE（我收藏的）</p>
+     * @param array $OrderBys <p>排序条件，多个之间按数组顺序表示优先级。非必填。可排序字段白名单：CreateTime</p>
      */
     function __construct()
     {

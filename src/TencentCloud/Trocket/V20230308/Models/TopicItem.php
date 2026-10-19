@@ -20,130 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 列表上的主题信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getTopic() 获取主题名称
- * @method void setTopic(string $Topic) 设置主题名称
- * @method string getTopicType() 获取主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
- * @method void setTopicType(string $TopicType) 设置主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
- * @method integer getQueueNum() 获取队列数量
- * @method void setQueueNum(integer $QueueNum) 设置队列数量
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method string getClusterIdV4() 获取4.x的集群id
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getTopic() 获取<p>主题名称</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名称</p>
+ * @method string getTopicType() 获取<p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+ * @method void setTopicType(string $TopicType) 设置<p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+ * @method integer getQueueNum() 获取<p>队列数量</p>
+ * @method void setQueueNum(integer $QueueNum) 设置<p>队列数量</p>
+ * @method string getRemark() 获取<p>备注信息</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息</p>
+ * @method string getClusterIdV4() 获取<p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterIdV4(string $ClusterIdV4) 设置4.x的集群id
+ * @method void setClusterIdV4(string $ClusterIdV4) 设置<p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNamespaceV4() 获取4.x的命名空间
+ * @method string getNamespaceV4() 获取<p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间
+ * @method void setNamespaceV4(string $NamespaceV4) 设置<p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicV4() 获取4.x的主题名称
+ * @method string getTopicV4() 获取<p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicV4(string $TopicV4) 设置4.x的主题名称
+ * @method void setTopicV4(string $TopicV4) 设置<p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFullNamespaceV4() 获取4.x的完整命名空间
+ * @method string getFullNamespaceV4() 获取<p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间
+ * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置<p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMsgTTL() 获取消息保留时长
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
- * @method array getTagList() 获取绑定的标签列表
- * @method void setTagList(array $TagList) 设置绑定的标签列表
+ * @method integer getMsgTTL() 获取<p>消息保留时长</p>
+ * @method void setMsgTTL(integer $MsgTTL) 设置<p>消息保留时长</p>
+ * @method array getTagList() 获取<p>绑定的标签列表</p>
+ * @method void setTagList(array $TagList) 设置<p>绑定的标签列表</p>
+ * @method boolean getAutoExpireDelete() 获取<p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoExpireDelete(boolean $AutoExpireDelete) 设置<p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoExpireTime() 获取<p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoExpireTime(integer $AutoExpireTime) 设置<p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicItem extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string <p>主题名称</p>
      */
     public $Topic;
 
     /**
-     * @var string 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * @var string <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
      */
     public $TopicType;
 
     /**
-     * @var integer 队列数量
+     * @var integer <p>队列数量</p>
      */
     public $QueueNum;
 
     /**
-     * @var string 备注信息
+     * @var string <p>备注信息</p>
      */
     public $Remark;
 
     /**
-     * @var string 4.x的集群id
+     * @var string <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIdV4;
 
     /**
-     * @var string 4.x的命名空间
+     * @var string <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceV4;
 
     /**
-     * @var string 4.x的主题名称
+     * @var string <p>4.x的主题名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicV4;
 
     /**
-     * @var string 4.x的完整命名空间
+     * @var string <p>4.x的完整命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullNamespaceV4;
 
     /**
-     * @var integer 消息保留时长
+     * @var integer <p>消息保留时长</p>
      */
     public $MsgTTL;
 
     /**
-     * @var array 绑定的标签列表
+     * @var array <p>绑定的标签列表</p>
      */
     public $TagList;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Topic 主题名称
-     * @param string $TopicType 主题类型
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
-     * @param integer $QueueNum 队列数量
-     * @param string $Remark 备注信息
-     * @param string $ClusterIdV4 4.x的集群id
+     * @var boolean <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NamespaceV4 4.x的命名空间
+     */
+    public $AutoExpireDelete;
+
+    /**
+     * @var integer <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicV4 4.x的主题名称
+     */
+    public $AutoExpireTime;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $Topic <p>主题名称</p>
+     * @param string $TopicType <p>主题类型<br>NORMAL:普通消息,<br>FIFO:顺序消息,<br>DELAY:延时消息,<br>TRANSACTION:事务消息</p>
+     * @param integer $QueueNum <p>队列数量</p>
+     * @param string $Remark <p>备注信息</p>
+     * @param string $ClusterIdV4 <p>4.x的集群id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FullNamespaceV4 4.x的完整命名空间
+     * @param string $NamespaceV4 <p>4.x的命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MsgTTL 消息保留时长
-     * @param array $TagList 绑定的标签列表
+     * @param string $TopicV4 <p>4.x的主题名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullNamespaceV4 <p>4.x的完整命名空间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MsgTTL <p>消息保留时长</p>
+     * @param array $TagList <p>绑定的标签列表</p>
+     * @param boolean $AutoExpireDelete <p>LITE 类型 Topic 专用：是否开启自动过期删除</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoExpireTime <p>LITE 类型 Topic 专用：自动过期时间</p><p>单位：分钟</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -205,6 +213,14 @@ TRANSACTION:事务消息
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("AutoExpireDelete",$param) and $param["AutoExpireDelete"] !== null) {
+            $this->AutoExpireDelete = $param["AutoExpireDelete"];
+        }
+
+        if (array_key_exists("AutoExpireTime",$param) and $param["AutoExpireTime"] !== null) {
+            $this->AutoExpireTime = $param["AutoExpireTime"];
         }
     }
 }

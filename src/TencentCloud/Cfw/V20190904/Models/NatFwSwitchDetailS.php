@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(string $Progress) 设置<p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot;      // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot;     // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot;    // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot;   // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot;  // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
  * @method ClusterFwPreAccessCheckResult getCheckResult() 获取<p>预接入检查结果</p>
  * @method void setCheckResult(ClusterFwPreAccessCheckResult $CheckResult) 设置<p>预接入检查结果</p>
+ * @method integer getForbidMode() 获取<p>NAT 集群防火墙开关的可用模式</p><p>枚举值：</p><ul><li>0： 开关无额外限制</li><li>1： 自动接入不可用</li><li>2： 手动接入不可用</li><li>3： 开关不可用，开关不被允许任何操作</li></ul><p>默认值：0</p>
+ * @method void setForbidMode(integer $ForbidMode) 设置<p>NAT 集群防火墙开关的可用模式</p><p>枚举值：</p><ul><li>0： 开关无额外限制</li><li>1： 自动接入不可用</li><li>2： 手动接入不可用</li><li>3： 开关不可用，开关不被允许任何操作</li></ul><p>默认值：0</p>
+ * @method string getForbidCode() 获取<p>开关被限制使用的原因。格式为原因码或 原因码:关联资源ID，按第一个 : 拆分</p><p>枚举值：</p><ul><li>SAME_VPC_OCCUPIED:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可。本开关与 NAT 网关 {NatInsId} 状态同步，请通过该网关操作</li><li>SAME_VPC_DUPLICATE:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可，请通过 NAT 网关 {NatInsId} 开启</li><li>CCN_HAS_AUTO_MODE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已使用自动接入。请先关闭该防火墙或改为手动接入后，再操作本开关</li><li>VPCFW_MODE_INCOMPATIBLE:{防火墙组ID}： 该云联网下的 VPC 防火墙 {FwGroupId} 为主备模式且非自定义开关，与 NAT 集群防火墙不兼容。请先将其调整为自定义开关模式或关闭</li><li>POLICY_ROUTE_UNSUPPORTED： 云联网未开通策略路由，暂不支持自动接入。请提交工单联系云联网开通，或使用手动接入</li><li>AUTO_MODE_EXCLUSIVE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已开启防火墙。自动接入要求该云联网下没有其他 NAT 防火墙，请改用手动接入</li></ul>
+ * @method void setForbidCode(string $ForbidCode) 设置<p>开关被限制使用的原因。格式为原因码或 原因码:关联资源ID，按第一个 : 拆分</p><p>枚举值：</p><ul><li>SAME_VPC_OCCUPIED:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可。本开关与 NAT 网关 {NatInsId} 状态同步，请通过该网关操作</li><li>SAME_VPC_DUPLICATE:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可，请通过 NAT 网关 {NatInsId} 开启</li><li>CCN_HAS_AUTO_MODE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已使用自动接入。请先关闭该防火墙或改为手动接入后，再操作本开关</li><li>VPCFW_MODE_INCOMPATIBLE:{防火墙组ID}： 该云联网下的 VPC 防火墙 {FwGroupId} 为主备模式且非自定义开关，与 NAT 集群防火墙不兼容。请先将其调整为自定义开关模式或关闭</li><li>POLICY_ROUTE_UNSUPPORTED： 云联网未开通策略路由，暂不支持自动接入。请提交工单联系云联网开通，或使用手动接入</li><li>AUTO_MODE_EXCLUSIVE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已开启防火墙。自动接入要求该云联网下没有其他 NAT 防火墙，请改用手动接入</li></ul>
  */
 class NatFwSwitchDetailS extends AbstractModel
 {
@@ -177,6 +181,16 @@ class NatFwSwitchDetailS extends AbstractModel
     public $CheckResult;
 
     /**
+     * @var integer <p>NAT 集群防火墙开关的可用模式</p><p>枚举值：</p><ul><li>0： 开关无额外限制</li><li>1： 自动接入不可用</li><li>2： 手动接入不可用</li><li>3： 开关不可用，开关不被允许任何操作</li></ul><p>默认值：0</p>
+     */
+    public $ForbidMode;
+
+    /**
+     * @var string <p>开关被限制使用的原因。格式为原因码或 原因码:关联资源ID，按第一个 : 拆分</p><p>枚举值：</p><ul><li>SAME_VPC_OCCUPIED:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可。本开关与 NAT 网关 {NatInsId} 状态同步，请通过该网关操作</li><li>SAME_VPC_DUPLICATE:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可，请通过 NAT 网关 {NatInsId} 开启</li><li>CCN_HAS_AUTO_MODE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已使用自动接入。请先关闭该防火墙或改为手动接入后，再操作本开关</li><li>VPCFW_MODE_INCOMPATIBLE:{防火墙组ID}： 该云联网下的 VPC 防火墙 {FwGroupId} 为主备模式且非自定义开关，与 NAT 集群防火墙不兼容。请先将其调整为自定义开关模式或关闭</li><li>POLICY_ROUTE_UNSUPPORTED： 云联网未开通策略路由，暂不支持自动接入。请提交工单联系云联网开通，或使用手动接入</li><li>AUTO_MODE_EXCLUSIVE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已开启防火墙。自动接入要求该云联网下没有其他 NAT 防火墙，请改用手动接入</li></ul>
+     */
+    public $ForbidCode;
+
+    /**
      * @param string $InsObj <p>NAT实例ID</p>
      * @param string $ObjName <p>实例名称</p>
      * @param string $FwType <p>防火墙类型</p>
@@ -200,6 +214,8 @@ class NatFwSwitchDetailS extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Progress <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot;      // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot;     // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot;    // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot;   // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot;  // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
      * @param ClusterFwPreAccessCheckResult $CheckResult <p>预接入检查结果</p>
+     * @param integer $ForbidMode <p>NAT 集群防火墙开关的可用模式</p><p>枚举值：</p><ul><li>0： 开关无额外限制</li><li>1： 自动接入不可用</li><li>2： 手动接入不可用</li><li>3： 开关不可用，开关不被允许任何操作</li></ul><p>默认值：0</p>
+     * @param string $ForbidCode <p>开关被限制使用的原因。格式为原因码或 原因码:关联资源ID，按第一个 : 拆分</p><p>枚举值：</p><ul><li>SAME_VPC_OCCUPIED:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可。本开关与 NAT 网关 {NatInsId} 状态同步，请通过该网关操作</li><li>SAME_VPC_DUPLICATE:{NatInsId}： CCN 内同一 VPC 开启一个 NAT 防火墙开关即可，请通过 NAT 网关 {NatInsId} 开启</li><li>CCN_HAS_AUTO_MODE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已使用自动接入。请先关闭该防火墙或改为手动接入后，再操作本开关</li><li>VPCFW_MODE_INCOMPATIBLE:{防火墙组ID}： 该云联网下的 VPC 防火墙 {FwGroupId} 为主备模式且非自定义开关，与 NAT 集群防火墙不兼容。请先将其调整为自定义开关模式或关闭</li><li>POLICY_ROUTE_UNSUPPORTED： 云联网未开通策略路由，暂不支持自动接入。请提交工单联系云联网开通，或使用手动接入</li><li>AUTO_MODE_EXCLUSIVE:{NatInsId}： 该云联网下的 NAT 网关 {NatInsId} 已开启防火墙。自动接入要求该云联网下没有其他 NAT 防火墙，请改用手动接入</li></ul>
      */
     function __construct()
     {
@@ -307,6 +323,14 @@ class NatFwSwitchDetailS extends AbstractModel
         if (array_key_exists("CheckResult",$param) and $param["CheckResult"] !== null) {
             $this->CheckResult = new ClusterFwPreAccessCheckResult();
             $this->CheckResult->deserialize($param["CheckResult"]);
+        }
+
+        if (array_key_exists("ForbidMode",$param) and $param["ForbidMode"] !== null) {
+            $this->ForbidMode = $param["ForbidMode"];
+        }
+
+        if (array_key_exists("ForbidCode",$param) and $param["ForbidCode"] !== null) {
+            $this->ForbidCode = $param["ForbidCode"];
         }
     }
 }

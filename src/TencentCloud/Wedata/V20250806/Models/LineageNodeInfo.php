@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownStreamCount(integer $DownStreamCount) 设置上游数量
  * @method integer getUpStreamCount() 获取下游数量
  * @method void setUpStreamCount(integer $UpStreamCount) 设置下游数量
+ * @method string getSourceColumnName() 获取查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceColumnName(string $SourceColumnName) 设置查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColumnName() 获取当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumnName(string $ColumnName) 设置当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LineageNodeInfo extends AbstractModel
 {
@@ -58,12 +66,28 @@ class LineageNodeInfo extends AbstractModel
     public $UpStreamCount;
 
     /**
+     * @var string 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceColumnName;
+
+    /**
+     * @var string 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColumnName;
+
+    /**
      * @param LineageResource $Resource 当前资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LineageRelation $Relation 关系
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DownStreamCount 上游数量
      * @param integer $UpStreamCount 下游数量
+     * @param string $SourceColumnName 查询字段名（本次请求携带的字段名，用于聚合）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColumnName 当前结果字段名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -94,6 +118,14 @@ class LineageNodeInfo extends AbstractModel
 
         if (array_key_exists("UpStreamCount",$param) and $param["UpStreamCount"] !== null) {
             $this->UpStreamCount = $param["UpStreamCount"];
+        }
+
+        if (array_key_exists("SourceColumnName",$param) and $param["SourceColumnName"] !== null) {
+            $this->SourceColumnName = $param["SourceColumnName"];
+        }
+
+        if (array_key_exists("ColumnName",$param) and $param["ColumnName"] !== null) {
+            $this->ColumnName = $param["ColumnName"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置训练任务ID
  * @method boolean getLogEnable() 获取是否开启CLS日志投递
  * @method void setLogEnable(boolean $LogEnable) 设置是否开启CLS日志投递
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method LogConfig getLogConfig() 获取日志配置
  * @method void setLogConfig(LogConfig $LogConfig) 设置日志配置
  */
@@ -40,6 +42,11 @@ class EnableTrainingTaskClsConfigRequest extends AbstractModel
     public $LogEnable;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var LogConfig 日志配置
      */
     public $LogConfig;
@@ -47,6 +54,7 @@ class EnableTrainingTaskClsConfigRequest extends AbstractModel
     /**
      * @param string $TaskId 训练任务ID
      * @param boolean $LogEnable 是否开启CLS日志投递
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param LogConfig $LogConfig 日志配置
      */
     function __construct()
@@ -68,6 +76,10 @@ class EnableTrainingTaskClsConfigRequest extends AbstractModel
 
         if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
             $this->LogEnable = $param["LogEnable"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {

@@ -20,146 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 高危命令策略
  *
- * @method string getName() 获取策略名称
- * @method void setName(string $Name) 设置策略名称
- * @method integer getEnable() 获取1:有效 0:无效
- * @method void setEnable(integer $Enable) 设置1:有效 0:无效
- * @method integer getWhite() 获取0:黑名单 1:白名单
- * @method void setWhite(integer $White) 设置0:黑名单 1:白名单
- * @method integer getBashAction() 获取0:告警 1:白名单 2:拦截
- * @method void setBashAction(integer $BashAction) 设置0:告警 1:白名单 2:拦截
- * @method string getRule() 获取正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
- * @method void setRule(string $Rule) 设置正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
- * @method integer getLevel() 获取危险等级(0:无，1: 高危 2:中危 3: 低危)
- * @method void setLevel(integer $Level) 设置危险等级(0:无，1: 高危 2:中危 3: 低危)
- * @method integer getScope() 获取生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
- * @method void setScope(integer $Scope) 设置生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
- * @method integer getId() 获取策略ID
- * @method void setId(integer $Id) 设置策略ID
- * @method string getDescript() 获取策略描述
- * @method void setDescript(string $Descript) 设置策略描述
- * @method integer getEventId() 获取事件列表点击“加入白名单”时,需要传EventId 事件的id
- * @method void setEventId(integer $EventId) 设置事件列表点击“加入白名单”时,需要传EventId 事件的id
- * @method integer getDealOldEvents() 获取是否处理旧事件为白名单 0=不处理 1=处理
- * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理旧事件为白名单 0=不处理 1=处理
- * @method array getQuuids() 获取生效主机的QUUID集合
- * @method void setQuuids(array $Quuids) 设置生效主机的QUUID集合
- * @method integer getCategory() 获取策略类型，0:系统  1:用户
- * @method void setCategory(integer $Category) 设置策略类型，0:系统  1:用户
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
- * @method array getUuids() 获取老版本兼容可能会用到
- * @method void setUuids(array $Uuids) 设置老版本兼容可能会用到
- * @method PolicyRules getRules() 获取规则表达式
- * @method void setRules(PolicyRules $Rules) 设置规则表达式
+ * @method string getName() 获取<p>策略名称</p>
+ * @method void setName(string $Name) 设置<p>策略名称</p>
+ * @method integer getEnable() 获取<p>1:有效 0:无效</p>
+ * @method void setEnable(integer $Enable) 设置<p>1:有效 0:无效</p>
+ * @method integer getWhite() 获取<p>0:黑名单 1:白名单</p>
+ * @method void setWhite(integer $White) 设置<p>0:黑名单 1:白名单</p>
+ * @method integer getBashAction() 获取<p>0:告警 1:白名单 2:拦截</p>
+ * @method void setBashAction(integer $BashAction) 设置<p>0:告警 1:白名单 2:拦截</p>
+ * @method string getRule() 获取<p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
+ * @method void setRule(string $Rule) 设置<p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
+ * @method integer getLevel() 获取<p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
+ * @method void setLevel(integer $Level) 设置<p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
+ * @method integer getScope() 获取<p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
+ * @method void setScope(integer $Scope) 设置<p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
+ * @method integer getId() 获取<p>策略ID</p>
+ * @method void setId(integer $Id) 设置<p>策略ID</p>
+ * @method string getDescript() 获取<p>策略描述</p>
+ * @method void setDescript(string $Descript) 设置<p>策略描述</p>
+ * @method integer getEventId() 获取<p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
+ * @method void setEventId(integer $EventId) 设置<p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
+ * @method integer getDealOldEvents() 获取<p>是否处理旧事件为白名单 0=不处理 1=处理</p>
+ * @method void setDealOldEvents(integer $DealOldEvents) 设置<p>是否处理旧事件为白名单 0=不处理 1=处理</p>
+ * @method array getQuuids() 获取<p>生效主机的QUUID集合</p>
+ * @method void setQuuids(array $Quuids) 设置<p>生效主机的QUUID集合</p>
+ * @method integer getCategory() 获取<p>策略类型，0:系统  1:用户</p>
+ * @method void setCategory(integer $Category) 设置<p>策略类型，0:系统  1:用户</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method array getUuids() 获取<p>老版本兼容可能会用到</p>
+ * @method void setUuids(array $Uuids) 设置<p>老版本兼容可能会用到</p>
+ * @method PolicyRules getRules() 获取<p>规则表达式</p>
+ * @method void setRules(PolicyRules $Rules) 设置<p>规则表达式</p>
+ * @method integer getMatchType() 获取<p>匹配类型：0-命令行（默认） 1-文件操作</p>
+ * @method void setMatchType(integer $MatchType) 设置<p>匹配类型：0-命令行（默认） 1-文件操作</p>
  */
 class BashPolicy extends AbstractModel
 {
     /**
-     * @var string 策略名称
+     * @var string <p>策略名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 1:有效 0:无效
+     * @var integer <p>1:有效 0:无效</p>
      */
     public $Enable;
 
     /**
-     * @var integer 0:黑名单 1:白名单
+     * @var integer <p>0:黑名单 1:白名单</p>
      */
     public $White;
 
     /**
-     * @var integer 0:告警 1:白名单 2:拦截
+     * @var integer <p>0:告警 1:白名单 2:拦截</p>
      */
     public $BashAction;
 
     /**
-     * @var string 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+     * @var string <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
      */
     public $Rule;
 
     /**
-     * @var integer 危险等级(0:无，1: 高危 2:中危 3: 低危)
+     * @var integer <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
      */
     public $Level;
 
     /**
-     * @var integer 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
+     * @var integer <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
      */
     public $Scope;
 
     /**
-     * @var integer 策略ID
+     * @var integer <p>策略ID</p>
      */
     public $Id;
 
     /**
-     * @var string 策略描述
+     * @var string <p>策略描述</p>
      */
     public $Descript;
 
     /**
-     * @var integer 事件列表点击“加入白名单”时,需要传EventId 事件的id
+     * @var integer <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
      */
     public $EventId;
 
     /**
-     * @var integer 是否处理旧事件为白名单 0=不处理 1=处理
+     * @var integer <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
      */
     public $DealOldEvents;
 
     /**
-     * @var array 生效主机的QUUID集合
+     * @var array <p>生效主机的QUUID集合</p>
      */
     public $Quuids;
 
     /**
-     * @var integer 策略类型，0:系统  1:用户
+     * @var integer <p>策略类型，0:系统  1:用户</p>
      */
     public $Category;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var array 老版本兼容可能会用到
+     * @var array <p>老版本兼容可能会用到</p>
      */
     public $Uuids;
 
     /**
-     * @var PolicyRules 规则表达式
+     * @var PolicyRules <p>规则表达式</p>
      */
     public $Rules;
 
     /**
-     * @param string $Name 策略名称
-     * @param integer $Enable 1:有效 0:无效
-     * @param integer $White 0:黑名单 1:白名单
-     * @param integer $BashAction 0:告警 1:白名单 2:拦截
-     * @param string $Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
-     * @param integer $Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
-     * @param integer $Scope 生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）
-     * @param integer $Id 策略ID
-     * @param string $Descript 策略描述
-     * @param integer $EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
-     * @param integer $DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
-     * @param array $Quuids 生效主机的QUUID集合
-     * @param integer $Category 策略类型，0:系统  1:用户
-     * @param string $CreateTime 创建时间
-     * @param string $ModifyTime 修改时间
-     * @param array $Uuids 老版本兼容可能会用到
-     * @param PolicyRules $Rules 规则表达式
+     * @var integer <p>匹配类型：0-命令行（默认） 1-文件操作</p>
+     */
+    public $MatchType;
+
+    /**
+     * @param string $Name <p>策略名称</p>
+     * @param integer $Enable <p>1:有效 0:无效</p>
+     * @param integer $White <p>0:黑名单 1:白名单</p>
+     * @param integer $BashAction <p>0:告警 1:白名单 2:拦截</p>
+     * @param string $Rule <p>正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine</p>
+     * @param integer $Level <p>危险等级(0:无，1: 高危 2:中危 3: 低危)</p>
+     * @param integer $Scope <p>生效范围（0:一组quuid 1:所有专业版(包含旗舰版) 2:所有旗舰版 3:所有主机）</p>
+     * @param integer $Id <p>策略ID</p>
+     * @param string $Descript <p>策略描述</p>
+     * @param integer $EventId <p>事件列表点击“加入白名单”时,需要传EventId 事件的id</p>
+     * @param integer $DealOldEvents <p>是否处理旧事件为白名单 0=不处理 1=处理</p>
+     * @param array $Quuids <p>生效主机的QUUID集合</p>
+     * @param integer $Category <p>策略类型，0:系统  1:用户</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param array $Uuids <p>老版本兼容可能会用到</p>
+     * @param PolicyRules $Rules <p>规则表达式</p>
+     * @param integer $MatchType <p>匹配类型：0-命令行（默认） 1-文件操作</p>
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class BashPolicy extends AbstractModel
         if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
             $this->Rules = new PolicyRules();
             $this->Rules->deserialize($param["Rules"]);
+        }
+
+        if (array_key_exists("MatchType",$param) and $param["MatchType"] !== null) {
+            $this->MatchType = $param["MatchType"];
         }
     }
 }

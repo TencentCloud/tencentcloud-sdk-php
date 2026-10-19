@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetryPolicy(RetryPolicy $RetryPolicy) 设置<p>重试策略</p>
  * @method string getLiteTopic() 获取<p>轻量主题</p>
  * @method void setLiteTopic(string $LiteTopic) 设置<p>轻量主题</p>
+ * @method string getDeadLetterTargetTopic() 获取<p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+ * @method void setDeadLetterTargetTopic(string $DeadLetterTargetTopic) 设置<p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $LiteTopic;
 
     /**
+     * @var string <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
+     */
+    public $DeadLetterTargetTopic;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param integer $MaxRetryTimes <p>最大重试次数，取值范围0～1000</p>
      * @param boolean $ConsumeEnable <p>是否开启消费</p>
@@ -96,6 +103,7 @@ class CreateConsumerGroupRequest extends AbstractModel
      * @param array $TagList <p>标签列表</p>
      * @param RetryPolicy $RetryPolicy <p>重试策略</p>
      * @param string $LiteTopic <p>轻量主题</p>
+     * @param string $DeadLetterTargetTopic <p>自定义死信 Topic</p><p>非必选，死信消息默认投递到系统死信 Topic</p>
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class CreateConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
             $this->LiteTopic = $param["LiteTopic"];
+        }
+
+        if (array_key_exists("DeadLetterTargetTopic",$param) and $param["DeadLetterTargetTopic"] !== null) {
+            $this->DeadLetterTargetTopic = $param["DeadLetterTargetTopic"];
         }
     }
 }

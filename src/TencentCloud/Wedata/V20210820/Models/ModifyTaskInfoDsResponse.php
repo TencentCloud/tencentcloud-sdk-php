@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTaskInfoDs返回参数结构体
  *
- * @method boolean getData() 获取执行结果
- * @method void setData(boolean $Data) 设置执行结果
+ * @method boolean getData() 获取<p>执行结果</p>
+ * @method void setData(boolean $Data) 设置<p>执行结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyTaskInfoDsResponse extends AbstractModel
 {
     /**
-     * @var boolean 执行结果
+     * @var boolean <p>执行结果</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class ModifyTaskInfoDsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Data 执行结果
+     * @param boolean $Data <p>执行结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

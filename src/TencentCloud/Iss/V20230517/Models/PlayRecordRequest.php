@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PlayRecord请求参数结构体
  *
- * @method string getChannelId() 获取通道 ID（从查询通道DescribeDeviceChannel接口中获取）
- * @method void setChannelId(string $ChannelId) 设置通道 ID（从查询通道DescribeDeviceChannel接口中获取）
- * @method integer getStart() 获取起始时间
- * @method void setStart(integer $Start) 设置起始时间
- * @method integer getEnd() 获取 结束时间
- * @method void setEnd(integer $End) 设置 结束时间
- * @method integer getStreamType() 获取流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
- * @method void setStreamType(integer $StreamType) 设置流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
- * @method string getResolution() 获取分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
- * @method void setResolution(string $Resolution) 设置分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
- * @method boolean getIsInternal() 获取是否内网
- * @method void setIsInternal(boolean $IsInternal) 设置是否内网
+ * @method string getChannelId() 获取<p>通道 ID（从查询通道DescribeDeviceChannel接口中获取）</p>
+ * @method void setChannelId(string $ChannelId) 设置<p>通道 ID（从查询通道DescribeDeviceChannel接口中获取）</p>
+ * @method integer getStart() 获取<p>起始时间</p>
+ * @method void setStart(integer $Start) 设置<p>起始时间</p>
+ * @method integer getEnd() 获取<p>结束时间</p>
+ * @method void setEnd(integer $End) 设置<p>结束时间</p>
+ * @method integer getStreamType() 获取<p>流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））</p>
+ * @method void setStreamType(integer $StreamType) 设置<p>流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））</p>
+ * @method string getResolution() 获取<p>分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
+ * @method void setResolution(string $Resolution) 设置<p>分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
+ * @method boolean getIsInternal() 获取<p>是否内网</p>
+ * @method void setIsInternal(boolean $IsInternal) 设置<p>是否内网</p>
  */
 class PlayRecordRequest extends AbstractModel
 {
     /**
-     * @var string 通道 ID（从查询通道DescribeDeviceChannel接口中获取）
+     * @var string <p>通道 ID（从查询通道DescribeDeviceChannel接口中获取）</p>
      */
     public $ChannelId;
 
     /**
-     * @var integer 起始时间
+     * @var integer <p>起始时间</p>
      */
     public $Start;
 
     /**
-     * @var integer  结束时间
+     * @var integer <p>结束时间</p>
      */
     public $End;
 
     /**
-     * @var integer 流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
+     * @var integer <p>流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））</p>
      */
     public $StreamType;
 
     /**
-     * @var string 分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
+     * @var string <p>分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
      */
     public $Resolution;
 
     /**
-     * @var boolean 是否内网
+     * @var boolean <p>是否内网</p>
      */
     public $IsInternal;
 
     /**
-     * @param string $ChannelId 通道 ID（从查询通道DescribeDeviceChannel接口中获取）
-     * @param integer $Start 起始时间
-     * @param integer $End  结束时间
-     * @param integer $StreamType 流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））
-     * @param string $Resolution 分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））
-     * @param boolean $IsInternal 是否内网
+     * @param string $ChannelId <p>通道 ID（从查询通道DescribeDeviceChannel接口中获取）</p>
+     * @param integer $Start <p>起始时间</p>
+     * @param integer $End <p>结束时间</p>
+     * @param integer $StreamType <p>流类型（1:主码流；2:子码流（不可以和 Resolution 同时下发））</p>
+     * @param string $Resolution <p>分辨率（1:QCIF；2:CIF； 3:4CIF； 4:D1； 5:720P； 6:1080P/I； 自定义的19201080等等（需设备支持）（不可以和 StreamType 同时下发））</p>
+     * @param boolean $IsInternal <p>是否内网</p>
      */
     function __construct()
     {

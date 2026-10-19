@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic返回参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method string getTopic() 获取主题名
- * @method void setTopic(string $Topic) 设置主题名
+ * @method string getInstanceId() 获取<p>集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群ID</p>
+ * @method string getTopic() 获取<p>主题名</p>
+ * @method void setTopic(string $Topic) 设置<p>主题名</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTopicResponse extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string <p>主题名</p>
      */
     public $Topic;
 
@@ -45,8 +45,8 @@ class CreateTopicResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param string $Topic 主题名
+     * @param string $InstanceId <p>集群ID</p>
+     * @param string $Topic <p>主题名</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

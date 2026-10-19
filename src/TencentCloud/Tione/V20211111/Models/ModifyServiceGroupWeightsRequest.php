@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组id
  * @method array getWeights() 获取权重设置
  * @method void setWeights(array $Weights) 设置权重设置
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class ModifyServiceGroupWeightsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyServiceGroupWeightsRequest extends AbstractModel
     public $Weights;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param array $Weights 权重设置
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class ModifyServiceGroupWeightsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Weights, $obj);
             }
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

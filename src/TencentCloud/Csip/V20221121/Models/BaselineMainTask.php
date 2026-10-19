@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanFailedCount(integer $ScanFailedCount) 设置<p>扫描失败的资产数量。</p>
  * @method integer getScanTotalCount() 获取<p>子任务总数</p>
  * @method void setScanTotalCount(integer $ScanTotalCount) 设置<p>子任务总数</p>
+ * @method array getPolicyList() 获取<p>检测的策略列表</p>
+ * @method void setPolicyList(array $PolicyList) 设置<p>检测的策略列表</p>
  */
 class BaselineMainTask extends AbstractModel
 {
@@ -122,6 +124,11 @@ class BaselineMainTask extends AbstractModel
     public $ScanTotalCount;
 
     /**
+     * @var array <p>检测的策略列表</p>
+     */
+    public $PolicyList;
+
+    /**
      * @param string $JobID <p>主任务对应的全局任务 ID。</p>
      * @param integer $ID <p>主任务 ID。</p>
      * @param string $Status <p>主任务状态。取值：</p><ul><li>INIT：初始化</li><li>SUBTASK_CREATING：子任务创建中</li><li>SCANNING：扫描中</li><li>TIMEOUT：超时</li><li>USER_CANCELED：用户取消</li><li>ALL_FAILED：全部失败</li><li>SUCCESS：成功</li></ul>
@@ -136,6 +143,7 @@ class BaselineMainTask extends AbstractModel
      * @param integer $ScanSuccessCount <p>扫描成功的资产数量。</p>
      * @param integer $ScanFailedCount <p>扫描失败的资产数量。</p>
      * @param integer $ScanTotalCount <p>子任务总数</p>
+     * @param array $PolicyList <p>检测的策略列表</p>
      */
     function __construct()
     {
@@ -204,6 +212,15 @@ class BaselineMainTask extends AbstractModel
 
         if (array_key_exists("ScanTotalCount",$param) and $param["ScanTotalCount"] !== null) {
             $this->ScanTotalCount = $param["ScanTotalCount"];
+        }
+
+        if (array_key_exists("PolicyList",$param) and $param["PolicyList"] !== null) {
+            $this->PolicyList = [];
+            foreach ($param["PolicyList"] as $key => $value){
+                $obj = new BaselinePolicyBrief();
+                $obj->deserialize($value);
+                array_push($this->PolicyList, $obj);
+            }
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceGroupId() 获取<p>服务组 id</p>
  * @method void setServiceGroupId(string $ServiceGroupId) 设置<p>服务组 id</p>
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method string getName() 获取<p>token 名称</p>
  * @method void setName(string $Name) 设置<p>token 名称</p>
  * @method string getDescription() 获取<p>Description 描述</p>
@@ -37,7 +37,7 @@ class CreateModelServiceAuthTokenRequest extends AbstractModel
     public $ServiceGroupId;
 
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -53,7 +53,7 @@ class CreateModelServiceAuthTokenRequest extends AbstractModel
 
     /**
      * @param string $ServiceGroupId <p>服务组 id</p>
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param string $Name <p>token 名称</p>
      * @param string $Description <p>Description 描述</p>
      */

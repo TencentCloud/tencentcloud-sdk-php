@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置<p>排序方式: [ASC:升序|DESC:降序]</p>
  * @method string getBy() 获取<p>可选排序列: [ModifyTime]</p>
  * @method void setBy(string $By) 设置<p>可选排序列: [ModifyTime]</p>
+ * @method RuleContentFileOperation getFileOperationRules() 获取<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) 设置<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
  */
 class DescribeEDRRuleListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeEDRRuleListRequest extends AbstractModel
     public $By;
 
     /**
+     * @var RuleContentFileOperation <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public $FileOperationRules;
+
+    /**
      * @param array $MemberId <p>集团账号的成员id</p>
      * @param array $Filters <p>PolicyType - int - 是否必填：否 - 策略类型<br>PolicyName - string - 是否必填：否 - 策略名称<br>Domain - string - 是否必填：否 - 域名(先对域名做urlencode,再base64)<br>PolicyAction- int - 是否必填：否 - 策略动作<br>IsEnabled - int - 是否必填：否 - 是否生效</p>
      * @param integer $Limit <p>限制条数,默认10,最大100</p>
      * @param integer $Offset <p>偏移量,默认0</p>
      * @param string $Order <p>排序方式: [ASC:升序|DESC:降序]</p>
      * @param string $By <p>可选排序列: [ModifyTime]</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
      */
     function __construct()
     {
@@ -113,6 +121,11 @@ class DescribeEDRRuleListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

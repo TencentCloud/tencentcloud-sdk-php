@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getOffset() 获取记录偏移量，默认值为0。
- * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0。
- * @method integer getLimit() 获取单次请求返回的数量，默认值为20，最小值为1，最大值为100。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量，默认值为20，最小值为1，最大值为100。
- * @method string getAccountRegexp() 获取匹配账号名的正则表达式，规则同 MySQL 官网。
- * @method void setAccountRegexp(string $AccountRegexp) 设置匹配账号名的正则表达式，规则同 MySQL 官网。
- * @method string getSortBy() 获取默认无排序，支持：ASC、DESC、asc、desc
- * @method void setSortBy(string $SortBy) 设置默认无排序，支持：ASC、DESC、asc、desc
- * @method string getOrderBy() 获取待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
- * @method void setOrderBy(string $OrderBy) 设置待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
- * @method string getHostRegexp() 获取匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
- * @method void setHostRegexp(string $HostRegexp) 设置匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method integer getOffset() 获取<p>记录偏移量，默认值为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>记录偏移量，默认值为0。</p>
+ * @method integer getLimit() 获取<p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
+ * @method string getAccountRegexp() 获取<p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
+ * @method void setAccountRegexp(string $AccountRegexp) 设置<p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
+ * @method string getSortBy() 获取<p>默认无排序，支持：ASC、DESC、asc、desc</p>
+ * @method void setSortBy(string $SortBy) 设置<p>默认无排序，支持：ASC、DESC、asc、desc</p>
+ * @method string getOrderBy() 获取<p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
+ * @method string getHostRegexp() 获取<p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
+ * @method void setHostRegexp(string $HostRegexp) 设置<p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
  */
 class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 记录偏移量，默认值为0。
+     * @var integer <p>记录偏移量，默认值为0。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * @var integer <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var string 匹配账号名的正则表达式，规则同 MySQL 官网。
+     * @var string <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
      */
     public $AccountRegexp;
 
     /**
-     * @var string 默认无排序，支持：ASC、DESC、asc、desc
+     * @var string <p>默认无排序，支持：ASC、DESC、asc、desc</p>
      */
     public $SortBy;
 
     /**
-     * @var string 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
+     * @var string <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
      */
     public $OrderBy;
 
     /**
-     * @var string 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     * @var string <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
      */
     public $HostRegexp;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $Offset 记录偏移量，默认值为0。
-     * @param integer $Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
-     * @param string $AccountRegexp 匹配账号名的正则表达式，规则同 MySQL 官网。
-     * @param string $SortBy 默认无排序，支持：ASC、DESC、asc、desc
-     * @param string $OrderBy 待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)
-     * @param string $HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param integer $Offset <p>记录偏移量，默认值为0。</p>
+     * @param integer $Limit <p>单次请求返回的数量，默认值为20，最小值为1，最大值为100。</p>
+     * @param string $AccountRegexp <p>匹配账号名的正则表达式，规则同 MySQL 官网。</p>
+     * @param string $SortBy <p>默认无排序，支持：ASC、DESC、asc、desc</p>
+     * @param string $OrderBy <p>待排序的时间字段，可选：CreateTime(账号创建时间)、ModifyTime(账号更新时间)、ModifyPasswordTime(密码修改时间)</p>
+     * @param string $HostRegexp <p>匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网</p>
      */
     function __construct()
     {

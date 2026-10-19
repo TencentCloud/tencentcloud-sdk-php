@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelServiceGroups请求参数结构体
  *
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method integer getOffset() 获取<p>偏移量，默认为0</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0</p>
  * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100</p>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeModelServiceGroupsRequest extends AbstractModel
 {
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -81,7 +81,7 @@ class DescribeModelServiceGroupsRequest extends AbstractModel
     public $ServiceCategory;
 
     /**
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param integer $Offset <p>偏移量，默认为0</p>
      * @param integer $Limit <p>返回数量，默认为20，最大值为100</p>
      * @param string $Order <p>输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列</p>

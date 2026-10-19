@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChargeType() 获取<p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
  * @method void setChargeType(string $ChargeType) 设置<p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method string getTaskType() 获取<p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
  * @method void setTaskType(string $TaskType) 设置<p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
  * @method string getResourceType() 获取<p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
@@ -37,7 +37,7 @@ class DescribeBillingSpecsRequest extends AbstractModel
     public $ChargeType;
 
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -53,7 +53,7 @@ class DescribeBillingSpecsRequest extends AbstractModel
 
     /**
      * @param string $ChargeType <p>付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月</p>
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param string $TaskType <p>枚举值：空、TRAIN、NOTEBOOK、INFERENCE或EMS</p>
      * @param string $ResourceType <p>资源类型：[&quot;&quot;, &quot;CALC&quot;, &quot;CPU&quot;, &quot;GPU&quot;, &quot;GPU-SW&quot;]</p>
      */

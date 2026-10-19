@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略规则表达式
  *
- * @method CommandLine getProcess() 获取进程
- * @method void setProcess(CommandLine $Process) 设置进程
- * @method CommandLine getPProcess() 获取父进程
- * @method void setPProcess(CommandLine $PProcess) 设置父进程
- * @method CommandLine getAProcess() 获取祖先进程
- * @method void setAProcess(CommandLine $AProcess) 设置祖先进程
+ * @method CommandLine getProcess() 获取<p>进程</p>
+ * @method void setProcess(CommandLine $Process) 设置<p>进程</p>
+ * @method CommandLine getPProcess() 获取<p>父进程</p>
+ * @method void setPProcess(CommandLine $PProcess) 设置<p>父进程</p>
+ * @method CommandLine getAProcess() 获取<p>祖先进程</p>
+ * @method void setAProcess(CommandLine $AProcess) 设置<p>祖先进程</p>
+ * @method string getFilePath() 获取<p>目标文件路径（匹配类型=文件操作时有效）</p>
+ * @method void setFilePath(string $FilePath) 设置<p>目标文件路径（匹配类型=文件操作时有效）</p>
+ * @method array getFileActions() 获取<p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+ * @method void setFileActions(array $FileActions) 设置<p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
  */
 class PolicyRules extends AbstractModel
 {
     /**
-     * @var CommandLine 进程
+     * @var CommandLine <p>进程</p>
      */
     public $Process;
 
     /**
-     * @var CommandLine 父进程
+     * @var CommandLine <p>父进程</p>
      */
     public $PProcess;
 
     /**
-     * @var CommandLine 祖先进程
+     * @var CommandLine <p>祖先进程</p>
      */
     public $AProcess;
 
     /**
-     * @param CommandLine $Process 进程
-     * @param CommandLine $PProcess 父进程
-     * @param CommandLine $AProcess 祖先进程
+     * @var string <p>目标文件路径（匹配类型=文件操作时有效）</p>
+     */
+    public $FilePath;
+
+    /**
+     * @var array <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
+     */
+    public $FileActions;
+
+    /**
+     * @param CommandLine $Process <p>进程</p>
+     * @param CommandLine $PProcess <p>父进程</p>
+     * @param CommandLine $AProcess <p>祖先进程</p>
+     * @param string $FilePath <p>目标文件路径（匹配类型=文件操作时有效）</p>
+     * @param array $FileActions <p>动作列表（匹配类型=文件操作时有效，多选为或关系）：read-读 write-写 rename-重命名 delete-删除 truncate-清空内容</p>
      */
     function __construct()
     {
@@ -75,6 +91,14 @@ class PolicyRules extends AbstractModel
         if (array_key_exists("AProcess",$param) and $param["AProcess"] !== null) {
             $this->AProcess = new CommandLine();
             $this->AProcess->deserialize($param["AProcess"]);
+        }
+
+        if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
+            $this->FilePath = $param["FilePath"];
+        }
+
+        if (array_key_exists("FileActions",$param) and $param["FileActions"] !== null) {
+            $this->FileActions = $param["FileActions"];
         }
     }
 }

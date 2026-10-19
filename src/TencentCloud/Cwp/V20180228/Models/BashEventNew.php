@@ -20,186 +20,210 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 高危命令数据(新)
  *
- * @method integer getId() 获取数据ID
- * @method void setId(integer $Id) 设置数据ID
- * @method string getUuid() 获取主机安全ID
- * @method void setUuid(string $Uuid) 设置主机安全ID
- * @method string getQuuid() 获取主机ID
- * @method void setQuuid(string $Quuid) 设置主机ID
- * @method string getHostIp() 获取主机内网IP
- * @method void setHostIp(string $HostIp) 设置主机内网IP
- * @method string getUser() 获取执行用户名
- * @method void setUser(string $User) 设置执行用户名
- * @method integer getPlatform() 获取平台类型
- * @method void setPlatform(integer $Platform) 设置平台类型
- * @method string getBashCmd() 获取执行命令
- * @method void setBashCmd(string $BashCmd) 设置执行命令
- * @method integer getRuleId() 获取规则ID
- * @method void setRuleId(integer $RuleId) 设置规则ID
- * @method string getRuleName() 获取规则名称
- * @method void setRuleName(string $RuleName) 设置规则名称
- * @method integer getRuleLevel() 获取规则等级：1-高 2-中 3-低
- * @method void setRuleLevel(integer $RuleLevel) 设置规则等级：1-高 2-中 3-低
- * @method integer getStatus() 获取处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
- * @method void setStatus(integer $Status) 设置处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
- * @method string getCreateTime() 获取发生时间
- * @method void setCreateTime(string $CreateTime) 设置发生时间
- * @method string getMachineName() 获取主机名
- * @method void setMachineName(string $MachineName) 设置主机名
- * @method integer getDetectBy() 获取0: bash日志 1: 实时监控(雷霆版)
- * @method void setDetectBy(integer $DetectBy) 设置0: bash日志 1: 实时监控(雷霆版)
- * @method string getPid() 获取进程id
- * @method void setPid(string $Pid) 设置进程id
- * @method string getExe() 获取进程名称
- * @method void setExe(string $Exe) 设置进程名称
- * @method string getModifyTime() 获取处理时间
- * @method void setModifyTime(string $ModifyTime) 设置处理时间
- * @method integer getRuleCategory() 获取规则类别  0=系统规则，1=用户规则
- * @method void setRuleCategory(integer $RuleCategory) 设置规则类别  0=系统规则，1=用户规则
- * @method string getRegexBashCmd() 获取转义后的正则表达式
- * @method void setRegexBashCmd(string $RegexBashCmd) 设置转义后的正则表达式
- * @method string getRegexExe() 获取转义后的正则表达式
- * @method void setRegexExe(string $RegexExe) 设置转义后的正则表达式
- * @method integer getMachineType() 获取0:普通 1:专业版 2:旗舰版
- * @method void setMachineType(integer $MachineType) 设置0:普通 1:专业版 2:旗舰版
- * @method MachineExtraInfo getMachineExtraInfo() 获取机器额外信息
- * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置机器额外信息
+ * @method integer getId() 获取<p>数据ID</p>
+ * @method void setId(integer $Id) 设置<p>数据ID</p>
+ * @method string getUuid() 获取<p>主机安全ID</p>
+ * @method void setUuid(string $Uuid) 设置<p>主机安全ID</p>
+ * @method string getQuuid() 获取<p>主机ID</p>
+ * @method void setQuuid(string $Quuid) 设置<p>主机ID</p>
+ * @method string getHostIp() 获取<p>主机内网IP</p>
+ * @method void setHostIp(string $HostIp) 设置<p>主机内网IP</p>
+ * @method string getUser() 获取<p>执行用户名</p>
+ * @method void setUser(string $User) 设置<p>执行用户名</p>
+ * @method integer getPlatform() 获取<p>平台类型</p>
+ * @method void setPlatform(integer $Platform) 设置<p>平台类型</p>
+ * @method string getBashCmd() 获取<p>执行命令</p>
+ * @method void setBashCmd(string $BashCmd) 设置<p>执行命令</p>
+ * @method integer getRuleId() 获取<p>规则ID</p>
+ * @method void setRuleId(integer $RuleId) 设置<p>规则ID</p>
+ * @method string getRuleName() 获取<p>规则名称</p>
+ * @method void setRuleName(string $RuleName) 设置<p>规则名称</p>
+ * @method integer getRuleLevel() 获取<p>规则等级：1-高 2-中 3-低</p>
+ * @method void setRuleLevel(integer $RuleLevel) 设置<p>规则等级：1-高 2-中 3-低</p>
+ * @method integer getStatus() 获取<p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
+ * @method void setStatus(integer $Status) 设置<p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
+ * @method string getCreateTime() 获取<p>发生时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>发生时间</p>
+ * @method string getMachineName() 获取<p>主机名</p>
+ * @method void setMachineName(string $MachineName) 设置<p>主机名</p>
+ * @method integer getDetectBy() 获取<p>0: bash日志 1: 实时监控(雷霆版)</p>
+ * @method void setDetectBy(integer $DetectBy) 设置<p>0: bash日志 1: 实时监控(雷霆版)</p>
+ * @method string getPid() 获取<p>进程id</p>
+ * @method void setPid(string $Pid) 设置<p>进程id</p>
+ * @method string getExe() 获取<p>进程名称</p>
+ * @method void setExe(string $Exe) 设置<p>进程名称</p>
+ * @method string getModifyTime() 获取<p>处理时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>处理时间</p>
+ * @method integer getRuleCategory() 获取<p>规则类别  0=系统规则，1=用户规则</p>
+ * @method void setRuleCategory(integer $RuleCategory) 设置<p>规则类别  0=系统规则，1=用户规则</p>
+ * @method string getRegexBashCmd() 获取<p>转义后的正则表达式</p>
+ * @method void setRegexBashCmd(string $RegexBashCmd) 设置<p>转义后的正则表达式</p>
+ * @method string getRegexExe() 获取<p>转义后的正则表达式</p>
+ * @method void setRegexExe(string $RegexExe) 设置<p>转义后的正则表达式</p>
+ * @method integer getMachineType() 获取<p>0:普通 1:专业版 2:旗舰版</p>
+ * @method void setMachineType(integer $MachineType) 设置<p>0:普通 1:专业版 2:旗舰版</p>
+ * @method MachineExtraInfo getMachineExtraInfo() 获取<p>机器额外信息</p>
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置<p>机器额外信息</p>
+ * @method integer getEventCount() 获取<p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+ * @method void setEventCount(integer $EventCount) 设置<p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+ * @method string getFirstDetectTime() 获取<p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+ * @method void setFirstDetectTime(string $FirstDetectTime) 设置<p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+ * @method string getLatestDetectTime() 获取<p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+ * @method void setLatestDetectTime(string $LatestDetectTime) 设置<p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
  */
 class BashEventNew extends AbstractModel
 {
     /**
-     * @var integer 数据ID
+     * @var integer <p>数据ID</p>
      */
     public $Id;
 
     /**
-     * @var string 主机安全ID
+     * @var string <p>主机安全ID</p>
      */
     public $Uuid;
 
     /**
-     * @var string 主机ID
+     * @var string <p>主机ID</p>
      */
     public $Quuid;
 
     /**
-     * @var string 主机内网IP
+     * @var string <p>主机内网IP</p>
      */
     public $HostIp;
 
     /**
-     * @var string 执行用户名
+     * @var string <p>执行用户名</p>
      */
     public $User;
 
     /**
-     * @var integer 平台类型
+     * @var integer <p>平台类型</p>
      */
     public $Platform;
 
     /**
-     * @var string 执行命令
+     * @var string <p>执行命令</p>
      */
     public $BashCmd;
 
     /**
-     * @var integer 规则ID
+     * @var integer <p>规则ID</p>
      */
     public $RuleId;
 
     /**
-     * @var string 规则名称
+     * @var string <p>规则名称</p>
      */
     public $RuleName;
 
     /**
-     * @var integer 规则等级：1-高 2-中 3-低
+     * @var integer <p>规则等级：1-高 2-中 3-低</p>
      */
     public $RuleLevel;
 
     /**
-     * @var integer 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+     * @var integer <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
      */
     public $Status;
 
     /**
-     * @var string 发生时间
+     * @var string <p>发生时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 主机名
+     * @var string <p>主机名</p>
      */
     public $MachineName;
 
     /**
-     * @var integer 0: bash日志 1: 实时监控(雷霆版)
+     * @var integer <p>0: bash日志 1: 实时监控(雷霆版)</p>
      */
     public $DetectBy;
 
     /**
-     * @var string 进程id
+     * @var string <p>进程id</p>
      */
     public $Pid;
 
     /**
-     * @var string 进程名称
+     * @var string <p>进程名称</p>
      */
     public $Exe;
 
     /**
-     * @var string 处理时间
+     * @var string <p>处理时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 规则类别  0=系统规则，1=用户规则
+     * @var integer <p>规则类别  0=系统规则，1=用户规则</p>
      */
     public $RuleCategory;
 
     /**
-     * @var string 转义后的正则表达式
+     * @var string <p>转义后的正则表达式</p>
      */
     public $RegexBashCmd;
 
     /**
-     * @var string 转义后的正则表达式
+     * @var string <p>转义后的正则表达式</p>
      */
     public $RegexExe;
 
     /**
-     * @var integer 0:普通 1:专业版 2:旗舰版
+     * @var integer <p>0:普通 1:专业版 2:旗舰版</p>
      */
     public $MachineType;
 
     /**
-     * @var MachineExtraInfo 机器额外信息
+     * @var MachineExtraInfo <p>机器额外信息</p>
      */
     public $MachineExtraInfo;
 
     /**
-     * @param integer $Id 数据ID
-     * @param string $Uuid 主机安全ID
-     * @param string $Quuid 主机ID
-     * @param string $HostIp 主机内网IP
-     * @param string $User 执行用户名
-     * @param integer $Platform 平台类型
-     * @param string $BashCmd 执行命令
-     * @param integer $RuleId 规则ID
-     * @param string $RuleName 规则名称
-     * @param integer $RuleLevel 规则等级：1-高 2-中 3-低
-     * @param integer $Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
-     * @param string $CreateTime 发生时间
-     * @param string $MachineName 主机名
-     * @param integer $DetectBy 0: bash日志 1: 实时监控(雷霆版)
-     * @param string $Pid 进程id
-     * @param string $Exe 进程名称
-     * @param string $ModifyTime 处理时间
-     * @param integer $RuleCategory 规则类别  0=系统规则，1=用户规则
-     * @param string $RegexBashCmd 转义后的正则表达式
-     * @param string $RegexExe 转义后的正则表达式
-     * @param integer $MachineType 0:普通 1:专业版 2:旗舰版
-     * @param MachineExtraInfo $MachineExtraInfo 机器额外信息
+     * @var integer <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     */
+    public $EventCount;
+
+    /**
+     * @var string <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public $FirstDetectTime;
+
+    /**
+     * @var string <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     */
+    public $LatestDetectTime;
+
+    /**
+     * @param integer $Id <p>数据ID</p>
+     * @param string $Uuid <p>主机安全ID</p>
+     * @param string $Quuid <p>主机ID</p>
+     * @param string $HostIp <p>主机内网IP</p>
+     * @param string $User <p>执行用户名</p>
+     * @param integer $Platform <p>平台类型</p>
+     * @param string $BashCmd <p>执行命令</p>
+     * @param integer $RuleId <p>规则ID</p>
+     * @param string $RuleName <p>规则名称</p>
+     * @param integer $RuleLevel <p>规则等级：1-高 2-中 3-低</p>
+     * @param integer $Status <p>处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略</p>
+     * @param string $CreateTime <p>发生时间</p>
+     * @param string $MachineName <p>主机名</p>
+     * @param integer $DetectBy <p>0: bash日志 1: 实时监控(雷霆版)</p>
+     * @param string $Pid <p>进程id</p>
+     * @param string $Exe <p>进程名称</p>
+     * @param string $ModifyTime <p>处理时间</p>
+     * @param integer $RuleCategory <p>规则类别  0=系统规则，1=用户规则</p>
+     * @param string $RegexBashCmd <p>转义后的正则表达式</p>
+     * @param string $RegexExe <p>转义后的正则表达式</p>
+     * @param integer $MachineType <p>0:普通 1:专业版 2:旗舰版</p>
+     * @param MachineExtraInfo $MachineExtraInfo <p>机器额外信息</p>
+     * @param integer $EventCount <p>告警次数：同一聚合维度当天的告警命中次数，老数据为空</p>
+     * @param string $FirstDetectTime <p>首次发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
+     * @param string $LatestDetectTime <p>最近发现时间（格式 yyyy-MM-dd HH:mm:ss）</p>
      */
     function __construct()
     {
@@ -301,6 +325,18 @@ class BashEventNew extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("EventCount",$param) and $param["EventCount"] !== null) {
+            $this->EventCount = $param["EventCount"];
+        }
+
+        if (array_key_exists("FirstDetectTime",$param) and $param["FirstDetectTime"] !== null) {
+            $this->FirstDetectTime = $param["FirstDetectTime"];
+        }
+
+        if (array_key_exists("LatestDetectTime",$param) and $param["LatestDetectTime"] !== null) {
+            $this->LatestDetectTime = $param["LatestDetectTime"];
         }
     }
 }

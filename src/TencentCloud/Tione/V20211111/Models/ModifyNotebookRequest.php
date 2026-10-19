@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRootAccess(boolean $RootAccess) 设置<p>是否ROOT权限</p>
  * @method boolean getLogEnable() 获取<p>是否上报日志</p>
  * @method void setLogEnable(boolean $LogEnable) 设置<p>是否上报日志</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method string getResourceGroupId() 获取<p>资源组ID(for预付费)</p>
  * @method void setResourceGroupId(string $ResourceGroupId) 设置<p>资源组ID(for预付费)</p>
  * @method string getVpcId() 获取<p>（不允许修改）Vpc-Id</p>
@@ -114,6 +116,11 @@ class ModifyNotebookRequest extends AbstractModel
      * @var boolean <p>是否上报日志</p>
      */
     public $LogEnable;
+
+    /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
 
     /**
      * @var string <p>资源组ID(for预付费)</p>
@@ -214,6 +221,7 @@ class ModifyNotebookRequest extends AbstractModel
      * @param boolean $DirectInternetAccess <p>是否访问公网</p>
      * @param boolean $RootAccess <p>是否ROOT权限</p>
      * @param boolean $LogEnable <p>是否上报日志</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param string $ResourceGroupId <p>资源组ID(for预付费)</p>
      * @param string $VpcId <p>（不允许修改）Vpc-Id</p>
      * @param string $SubnetId <p>（不允许修改）子网Id</p>
@@ -277,6 +285,10 @@ class ModifyNotebookRequest extends AbstractModel
 
         if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
             $this->LogEnable = $param["LogEnable"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {

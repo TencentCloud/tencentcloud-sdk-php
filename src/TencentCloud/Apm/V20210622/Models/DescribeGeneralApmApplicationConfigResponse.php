@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGeneralApmApplicationConfig返回参数结构体
  *
- * @method ApmApplicationConfigView getApmApplicationConfigView() 获取应用配置项
- * @method void setApmApplicationConfigView(ApmApplicationConfigView $ApmApplicationConfigView) 设置应用配置项
+ * @method ApmApplicationConfigView getApmApplicationConfigView() 获取<p>应用配置项</p>
+ * @method void setApmApplicationConfigView(ApmApplicationConfigView $ApmApplicationConfigView) 设置<p>应用配置项</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGeneralApmApplicationConfigResponse extends AbstractModel
 {
     /**
-     * @var ApmApplicationConfigView 应用配置项
+     * @var ApmApplicationConfigView <p>应用配置项</p>
      */
     public $ApmApplicationConfigView;
 
@@ -38,7 +38,7 @@ class DescribeGeneralApmApplicationConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ApmApplicationConfigView $ApmApplicationConfigView 应用配置项
+     * @param ApmApplicationConfigView $ApmApplicationConfigView <p>应用配置项</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

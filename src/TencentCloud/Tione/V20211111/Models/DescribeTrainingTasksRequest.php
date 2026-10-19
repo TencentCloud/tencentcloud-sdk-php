@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrainingTasks请求参数结构体
  *
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method array getFilters() 获取过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
 
 取值范围：
@@ -56,7 +56,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
 class DescribeTrainingTasksRequest extends AbstractModel
 {
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -100,7 +100,7 @@ CHARGE_STATUS（计费状态）：NOT_BILLING（未开始计费）/ BILLING（�
     public $OrderField;
 
     /**
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param array $Filters 过滤器，eg：[{ "Name": "Id", "Values": ["train-23091792777383936"] }]
 
 取值范围：

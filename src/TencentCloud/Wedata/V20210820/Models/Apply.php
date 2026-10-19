@@ -20,222 +20,230 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 审批列表信息
  *
- * @method string getApplicantId() 获取申请人id
- * @method void setApplicantId(string $ApplicantId) 设置申请人id
- * @method string getApplicantName() 获取申请人名称
- * @method void setApplicantName(string $ApplicantName) 设置申请人名称
- * @method string getRemark() 获取审批备注
+ * @method string getApplicantId() 获取<p>申请人id</p>
+ * @method void setApplicantId(string $ApplicantId) 设置<p>申请人id</p>
+ * @method string getApplicantName() 获取<p>申请人名称</p>
+ * @method void setApplicantName(string $ApplicantName) 设置<p>申请人名称</p>
+ * @method string getRemark() 获取<p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemark(string $Remark) 设置审批备注
+ * @method void setRemark(string $Remark) 设置<p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveClassification() 获取审批分类key
- * @method void setApproveClassification(string $ApproveClassification) 设置审批分类key
- * @method string getApproveId() 获取审批单id
- * @method void setApproveId(string $ApproveId) 设置审批单id
- * @method string getApproveType() 获取审批类型key
- * @method void setApproveType(string $ApproveType) 设置审批类型key
- * @method string getReason() 获取申请原因
+ * @method string getApproveClassification() 获取<p>审批分类key</p>
+ * @method void setApproveClassification(string $ApproveClassification) 设置<p>审批分类key</p>
+ * @method string getApproveId() 获取<p>审批单id</p>
+ * @method void setApproveId(string $ApproveId) 设置<p>审批单id</p>
+ * @method string getApproveType() 获取<p>审批类型key</p>
+ * @method void setApproveType(string $ApproveType) 设置<p>审批类型key</p>
+ * @method string getReason() 获取<p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReason(string $Reason) 设置申请原因
+ * @method void setReason(string $Reason) 设置<p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getApproveTime() 获取审批时间
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getApproveTime() 获取<p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveTime(string $ApproveTime) 设置审批时间
+ * @method void setApproveTime(string $ApproveTime) 设置<p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveClassificationName() 获取审批分类名称
- * @method void setApproveClassificationName(string $ApproveClassificationName) 设置审批分类名称
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getApproveTypeName() 获取审批类型名称
- * @method void setApproveTypeName(string $ApproveTypeName) 设置审批类型名称
- * @method string getErrorMessage() 获取审批异常或者失败信息
- * @method void setErrorMessage(string $ErrorMessage) 设置审批异常或者失败信息
- * @method string getApplyName() 获取申请名称
+ * @method string getApproveClassificationName() 获取<p>审批分类名称</p>
+ * @method void setApproveClassificationName(string $ApproveClassificationName) 设置<p>审批分类名称</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getApproveTypeName() 获取<p>审批类型名称</p>
+ * @method void setApproveTypeName(string $ApproveTypeName) 设置<p>审批类型名称</p>
+ * @method string getErrorMessage() 获取<p>审批异常或者失败信息</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>审批异常或者失败信息</p>
+ * @method string getApplyName() 获取<p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplyName(string $ApplyName) 设置申请名称
+ * @method void setApplyName(string $ApplyName) 设置<p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverId() 获取审批人id
+ * @method string getApproverId() 获取<p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverId(string $ApproverId) 设置审批人id
+ * @method void setApproverId(string $ApproverId) 设置<p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproverName() 获取审批人名称
+ * @method string getApproverName() 获取<p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproverName(string $ApproverName) 设置审批人名称
+ * @method void setApproverName(string $ApproverName) 设置<p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApproveProjectName() 获取审批所属项目
+ * @method string getApproveProjectName() 获取<p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveProjectName(string $ApproveProjectName) 设置审批所属项目
+ * @method void setApproveProjectName(string $ApproveProjectName) 设置<p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplyId() 获取审批id
+ * @method string getApplyId() 获取<p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplyId(string $ApplyId) 设置审批id
+ * @method void setApplyId(string $ApplyId) 设置<p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMetadata() 获取扩展字段
+ * @method string getMetadata() 获取<p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetadata(string $Metadata) 设置扩展字段
+ * @method void setMetadata(string $Metadata) 设置<p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTimestamp() 获取创建时间
+ * @method integer getCreateTimestamp() 获取<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTimestamp(integer $CreateTimestamp) 设置创建时间
+ * @method void setCreateTimestamp(integer $CreateTimestamp) 设置<p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getApproveTimestamp() 获取审批时间
+ * @method integer getApproveTimestamp() 获取<p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApproveTimestamp(integer $ApproveTimestamp) 设置审批时间
+ * @method void setApproveTimestamp(integer $ApproveTimestamp) 设置<p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApproveCode() 获取<p>审批扩展码</p>
+ * @method void setApproveCode(string $ApproveCode) 设置<p>审批扩展码</p>
  */
 class Apply extends AbstractModel
 {
     /**
-     * @var string 申请人id
+     * @var string <p>申请人id</p>
      */
     public $ApplicantId;
 
     /**
-     * @var string 申请人名称
+     * @var string <p>申请人名称</p>
      */
     public $ApplicantName;
 
     /**
-     * @var string 审批备注
+     * @var string <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var string 审批分类key
+     * @var string <p>审批分类key</p>
      */
     public $ApproveClassification;
 
     /**
-     * @var string 审批单id
+     * @var string <p>审批单id</p>
      */
     public $ApproveId;
 
     /**
-     * @var string 审批类型key
+     * @var string <p>审批类型key</p>
      */
     public $ApproveType;
 
     /**
-     * @var string 申请原因
+     * @var string <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 审批时间
+     * @var string <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveTime;
 
     /**
-     * @var string 审批分类名称
+     * @var string <p>审批分类名称</p>
      */
     public $ApproveClassificationName;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 审批类型名称
+     * @var string <p>审批类型名称</p>
      */
     public $ApproveTypeName;
 
     /**
-     * @var string 审批异常或者失败信息
+     * @var string <p>审批异常或者失败信息</p>
      */
     public $ErrorMessage;
 
     /**
-     * @var string 申请名称
+     * @var string <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyName;
 
     /**
-     * @var string 审批人id
+     * @var string <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverId;
 
     /**
-     * @var string 审批人名称
+     * @var string <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverName;
 
     /**
-     * @var string 审批所属项目
+     * @var string <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveProjectName;
 
     /**
-     * @var string 审批id
+     * @var string <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyId;
 
     /**
-     * @var string 扩展字段
+     * @var string <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTimestamp;
 
     /**
-     * @var integer 审批时间
+     * @var integer <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveTimestamp;
 
     /**
-     * @param string $ApplicantId 申请人id
-     * @param string $ApplicantName 申请人名称
-     * @param string $Remark 审批备注
+     * @var string <p>审批扩展码</p>
+     */
+    public $ApproveCode;
+
+    /**
+     * @param string $ApplicantId <p>申请人id</p>
+     * @param string $ApplicantName <p>申请人名称</p>
+     * @param string $Remark <p>审批备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveClassification 审批分类key
-     * @param string $ApproveId 审批单id
-     * @param string $ApproveType 审批类型key
-     * @param string $Reason 申请原因
+     * @param string $ApproveClassification <p>审批分类key</p>
+     * @param string $ApproveId <p>审批单id</p>
+     * @param string $ApproveType <p>审批类型key</p>
+     * @param string $Reason <p>申请原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $ApproveTime 审批时间
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $ApproveTime <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveClassificationName 审批分类名称
-     * @param string $Status 状态
-     * @param string $ApproveTypeName 审批类型名称
-     * @param string $ErrorMessage 审批异常或者失败信息
-     * @param string $ApplyName 申请名称
+     * @param string $ApproveClassificationName <p>审批分类名称</p>
+     * @param string $Status <p>状态</p>
+     * @param string $ApproveTypeName <p>审批类型名称</p>
+     * @param string $ErrorMessage <p>审批异常或者失败信息</p>
+     * @param string $ApplyName <p>申请名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverId 审批人id
+     * @param string $ApproverId <p>审批人id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproverName 审批人名称
+     * @param string $ApproverName <p>审批人名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApproveProjectName 审批所属项目
+     * @param string $ApproveProjectName <p>审批所属项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplyId 审批id
+     * @param string $ApplyId <p>审批id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Metadata 扩展字段
+     * @param string $Metadata <p>扩展字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTimestamp 创建时间
+     * @param integer $CreateTimestamp <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ApproveTimestamp 审批时间
+     * @param integer $ApproveTimestamp <p>审批时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApproveCode <p>审批扩展码</p>
      */
     function __construct()
     {
@@ -332,6 +340,10 @@ class Apply extends AbstractModel
 
         if (array_key_exists("ApproveTimestamp",$param) and $param["ApproveTimestamp"] !== null) {
             $this->ApproveTimestamp = $param["ApproveTimestamp"];
+        }
+
+        if (array_key_exists("ApproveCode",$param) and $param["ApproveCode"] !== null) {
+            $this->ApproveCode = $param["ApproveCode"];
         }
     }
 }

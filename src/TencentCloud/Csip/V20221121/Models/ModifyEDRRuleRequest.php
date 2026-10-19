@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageIDsWithAppId(array $ImageIDsWithAppId) 设置<p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
  * @method array getConditionMatches() 获取<p>容器条件匹配</p>
  * @method void setConditionMatches(array $ConditionMatches) 设置<p>容器条件匹配</p>
+ * @method RuleContentFileOperation getFileOperationRules() 获取<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) 设置<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
  */
 class ModifyEDRRuleRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class ModifyEDRRuleRequest extends AbstractModel
     public $ConditionMatches;
 
     /**
+     * @var RuleContentFileOperation <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public $FileOperationRules;
+
+    /**
      * @param integer $RuleType <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      * @param integer $AlertAction <p>执行动作 / Action: 0-告警/Alert, 1-放行/Allow, 2-告警并拦截/Alert and Block</p>
      * @param integer $CWPScope <p>生效资产 / Effective Scope: 0-指定主机/Specified Hosts, 1-全部主机/All Hosts, 2-专业版/Professional, 3-旗舰版/Flagship, 4-专业版+旗舰版/Professional+Flagship     QUUIDS        []string json:&quot;QUUIDS&quot;                                      // 主机列表 / Host QUUIDS (when Scope=0)</p>
@@ -280,6 +287,7 @@ class ModifyEDRRuleRequest extends AbstractModel
      * @param array $ExcludeClusterIDsWithAppId <p>排除集群列表（每项含 AppId + ClusterID）；入参数组上限 3000（超限截断保留前 3000 项）</p>
      * @param array $ImageIDsWithAppId <p>直接选择镜像（每项含 AppId + ImageID，在集群基础上进一步过滤）。多账号场景下各账号只存属于自己的镜像；入参数组上限 3000（超限截断保留前 3000 项）</p>
      * @param array $ConditionMatches <p>容器条件匹配</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
      */
     function __construct()
     {
@@ -453,6 +461,11 @@ class ModifyEDRRuleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConditionMatches, $obj);
             }
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

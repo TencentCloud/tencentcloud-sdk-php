@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterBeginCommit(boolean $FilterBeginCommit) 设置<p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
  * @method boolean getFilterCheckpoint() 获取<p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
  * @method void setFilterCheckpoint(boolean $FilterCheckpoint) 设置<p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
+ * @method SkipDdlOnError getSkipDdlOnError() 获取<p>跳过报错的DDL策略</p>
+ * @method void setSkipDdlOnError(SkipDdlOnError $SkipDdlOnError) 设置<p>跳过报错的DDL策略</p>
  */
 class Options extends AbstractModel
 {
@@ -121,6 +123,11 @@ class Options extends AbstractModel
     public $FilterCheckpoint;
 
     /**
+     * @var SkipDdlOnError <p>跳过报错的DDL策略</p>
+     */
+    public $SkipDdlOnError;
+
+    /**
      * @param string $InitType <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
      * @param string $DealOfExistSameTable <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p>
      * @param string $ConflictHandleType <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p>
@@ -136,6 +143,7 @@ class Options extends AbstractModel
      * @param string $StartPosition <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p>
      * @param boolean $FilterBeginCommit <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
      * @param boolean $FilterCheckpoint <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
+     * @param SkipDdlOnError $SkipDdlOnError <p>跳过报错的DDL策略</p>
      */
     function __construct()
     {
@@ -208,6 +216,11 @@ class Options extends AbstractModel
 
         if (array_key_exists("FilterCheckpoint",$param) and $param["FilterCheckpoint"] !== null) {
             $this->FilterCheckpoint = $param["FilterCheckpoint"];
+        }
+
+        if (array_key_exists("SkipDdlOnError",$param) and $param["SkipDdlOnError"] !== null) {
+            $this->SkipDdlOnError = new SkipDdlOnError();
+            $this->SkipDdlOnError->deserialize($param["SkipDdlOnError"]);
         }
     }
 }

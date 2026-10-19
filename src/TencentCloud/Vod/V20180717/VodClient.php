@@ -628,6 +628,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 注意：新设计、克隆的音色未被激活前无法被更新，需首次使用该新建音色执行一次 TTS 后才被激活。
  * @method Models\VerifyDomainRecordResponse VerifyDomainRecord(Models\VerifyDomainRecordRequest $req) 该接口用于验证域名解析值。
+ * @method Models\VideoDepthEstimationResponse VideoDepthEstimation(Models\VideoDepthEstimationRequest $req) 视频深度估计接口。输入视频，输出灰度深度视频，白色为近、黑色为远。深度值为单视频内归一化的相对深度。输出存储由 OutputConfig 控制，默认临时存储 7 天后过期。任务提交成功后返回任务 ID，可通过 DescribeTaskDetail 查询结果
  * @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) 将点播视频发布到微信小程序，供微信小程序播放器播放。
 本接口支持发布原始视频和转码后视频。
  */

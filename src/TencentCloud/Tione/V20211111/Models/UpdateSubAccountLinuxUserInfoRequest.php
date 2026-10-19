@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateSubAccountLinuxUserInfo请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method array getSubAccountList() 获取子账号信息列表
  * @method void setSubAccountList(array $SubAccountList) 设置子账号信息列表
  */
 class UpdateSubAccountLinuxUserInfoRequest extends AbstractModel
 {
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var array 子账号信息列表
      */
     public $SubAccountList;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param array $SubAccountList 子账号信息列表
      */
     function __construct()
@@ -46,6 +54,10 @@ class UpdateSubAccountLinuxUserInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("SubAccountList",$param) and $param["SubAccountList"] !== null) {
             $this->SubAccountList = [];
             foreach ($param["SubAccountList"] as $key => $value){

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() 获取<p>服务id</p>
  * @method void setServiceId(string $ServiceId) 设置<p>服务id</p>
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method ModelInfo getModelInfo() 获取<p>模型信息，需要挂载模型时填写</p>
  * @method void setModelInfo(ModelInfo $ModelInfo) 设置<p>模型信息，需要挂载模型时填写</p>
  * @method ImageInfo getImageInfo() 获取<p>镜像信息，配置服务运行所需的镜像地址等信息</p>
@@ -107,7 +107,7 @@ class ModifyModelServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -298,7 +298,7 @@ class ModifyModelServiceRequest extends AbstractModel
 
     /**
      * @param string $ServiceId <p>服务id</p>
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param ModelInfo $ModelInfo <p>模型信息，需要挂载模型时填写</p>
      * @param ImageInfo $ImageInfo <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
      * @param array $Env <p>环境变量，可选参数，用于配置容器中的环境变量</p>

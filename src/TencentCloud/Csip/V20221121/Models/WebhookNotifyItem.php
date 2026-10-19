@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevels(array $Levels) 设置<p>风险等级集合<br>枚举值：<br>CRITICAL：严重<br>HIGH：高危<br>MEDIUM：中危<br>LOW：低危<br>INFO：提示<br>不支持等级的子模块传空数组</p>
  * @method array getItems() 获取<p>处理状态等</p>
  * @method void setItems(array $Items) 设置<p>处理状态等</p>
+ * @method array getOptions() 获取<p>可选项</p>
+ * @method void setOptions(array $Options) 设置<p>可选项</p>
  */
 class WebhookNotifyItem extends AbstractModel
 {
@@ -52,10 +54,16 @@ class WebhookNotifyItem extends AbstractModel
     public $Items;
 
     /**
+     * @var array <p>可选项</p>
+     */
+    public $Options;
+
+    /**
      * @param string $Module <p>模块编码（与 ModifyNotifySettingAlert 共用枚举）<br>枚举值：<br>Vul：漏洞与云安全态势<br>Alert：告警中心<br>AkSk：云API风险治理<br>Agent：客户端/主机资产<br>LogAnalysis：日志分析</p>
      * @param string $SubModule <p>子模块编码<br>枚举值（部分）：<br>MALWARE_FILE：恶意文件<br>MALWARE_PROCESS：恶意进程<br>RISK_LOGIN：异常登录<br>BRUTE_FORCE：密码破解<br>MALICIOUS_REQUEST：恶意请求<br>HIGH_RISK_COMMAND：高危命令<br>PRIVILEGE_ESCALATION：本地提权<br>REVERSE_SHELL：反弹Shell<br>NETWORK_ATTACK：网络攻击<br>MULTI_BEHAVIOR_ATTACK：多行为攻击<br>AGENT_OFFLINE：客户端离线<br>AGENT_UNINSTALL：客户端卸载<br>完整枚举见 DescribeWebhookNotifyItemTree</p>
      * @param array $Levels <p>风险等级集合<br>枚举值：<br>CRITICAL：严重<br>HIGH：高危<br>MEDIUM：中危<br>LOW：低危<br>INFO：提示<br>不支持等级的子模块传空数组</p>
      * @param array $Items <p>处理状态等</p>
+     * @param array $Options <p>可选项</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class WebhookNotifyItem extends AbstractModel
 
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = $param["Items"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = $param["Options"];
         }
     }
 }

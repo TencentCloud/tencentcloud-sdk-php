@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConditionMatches(array $ConditionMatches) 设置<p>容器条件匹配</p>
  * @method array getTagItems() 获取<p>安全中心标签</p>
  * @method void setTagItems(array $TagItems) 设置<p>安全中心标签</p>
+ * @method RuleContentFileOperation getFileOperationRules() 获取<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+ * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) 设置<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
  */
 class EDRRule extends AbstractModel
 {
@@ -283,6 +285,11 @@ class EDRRule extends AbstractModel
     public $TagItems;
 
     /**
+     * @var RuleContentFileOperation <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     */
+    public $FileOperationRules;
+
+    /**
      * @param string $RuleID <p>策略ID</p>
      * @param integer $RuleType <p>策略类型，0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      * @param string $Name <p>策略名称</p>
@@ -320,6 +327,7 @@ class EDRRule extends AbstractModel
      * @param array $ExcludeClusterIDs <p>排除集群ID列表（空返回 []）</p>
      * @param array $ConditionMatches <p>容器条件匹配</p>
      * @param array $TagItems <p>安全中心标签</p>
+     * @param RuleContentFileOperation $FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
      */
     function __construct()
     {
@@ -492,6 +500,11 @@ class EDRRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagItems, $obj);
             }
+        }
+
+        if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
+            $this->FileOperationRules = new RuleContentFileOperation();
+            $this->FileOperationRules->deserialize($param["FileOperationRules"]);
         }
     }
 }

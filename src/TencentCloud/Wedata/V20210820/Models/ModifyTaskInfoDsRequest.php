@@ -20,298 +20,306 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTaskInfoDs请求参数结构体
  *
- * @method string getProjectId() 获取项目Id
- * @method void setProjectId(string $ProjectId) 设置项目Id
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method integer getDelayTime() 获取执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
- * @method void setDelayTime(integer $DelayTime) 设置执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
- * @method integer getStartupTime() 获取启动时间：该字段已废弃，无需填写
- * @method void setStartupTime(integer $StartupTime) 设置启动时间：该字段已废弃，无需填写
- * @method integer getSelfDepend() 获取自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
- * @method void setSelfDepend(integer $SelfDepend) 设置自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
- * @method string getStartTime() 获取生效开始时间，格式 yyyy-MM-dd HH:mm:ss
- * @method void setStartTime(string $StartTime) 设置生效开始时间，格式 yyyy-MM-dd HH:mm:ss
- * @method string getEndTime() 获取生效结束时间，格式 yyyy-MM-dd HH:mm:ss
- * @method void setEndTime(string $EndTime) 设置生效结束时间，格式 yyyy-MM-dd HH:mm:ss
- * @method string getTaskAction() 获取调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
- * @method void setTaskAction(string $TaskAction) 设置调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
- * @method integer getCycleType() 获取周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
- * @method void setCycleType(integer $CycleType) 设置周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
- * @method integer getCycleStep() 获取小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
- * @method void setCycleStep(integer $CycleStep) 设置小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
- * @method string getCrontabExpression() 获取cron表达式  周期类型为crontab调度才需要
- * @method void setCrontabExpression(string $CrontabExpression) 设置cron表达式  周期类型为crontab调度才需要
- * @method string getExecutionStartTime() 获取执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
- * @method void setExecutionStartTime(string $ExecutionStartTime) 设置执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
- * @method string getExecutionEndTime() 获取执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
- * @method void setExecutionEndTime(string $ExecutionEndTime) 设置执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
- * @method string getTaskName() 获取任务名，该字段废弃，请勿使用该字段重命名任务
- * @method void setTaskName(string $TaskName) 设置任务名，该字段废弃，请勿使用该字段重命名任务
- * @method integer getRetryWait() 获取失败重试间隔,单位分钟，创建任务的时候已经给了默认值
- * @method void setRetryWait(integer $RetryWait) 设置失败重试间隔,单位分钟，创建任务的时候已经给了默认值
- * @method integer getTryLimit() 获取失败重试次数，创建任务的时候已经给了默认值
- * @method void setTryLimit(integer $TryLimit) 设置失败重试次数，创建任务的时候已经给了默认值
- * @method integer getRetriable() 获取是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
- * @method void setRetriable(integer $Retriable) 设置是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
- * @method integer getRunPriority() 获取运行优先级，4高 5中 6低；暂不支持其他值
- * @method void setRunPriority(integer $RunPriority) 设置运行优先级，4高 5中 6低；暂不支持其他值
- * @method array getTaskExt() 获取任务的扩展配置
- * @method void setTaskExt(array $TaskExt) 设置任务的扩展配置
- * @method string getResourceGroup() 获取执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
- * @method void setResourceGroup(string $ResourceGroup) 设置执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
- * @method string getYarnQueue() 获取资源池队列名称
- * @method void setYarnQueue(string $YarnQueue) 设置资源池队列名称
- * @method string getBrokerIp() 获取资源组下具体执行机，any 表示可以跑在任意一台。
- * @method void setBrokerIp(string $BrokerIp) 设置资源组下具体执行机，any 表示可以跑在任意一台。
- * @method string getInCharge() 获取责任人，多个责任人请用分号隔开
- * @method void setInCharge(string $InCharge) 设置责任人，多个责任人请用分号隔开
- * @method string getNotes() 获取任务备注
- * @method void setNotes(string $Notes) 设置任务备注
- * @method array getTaskParamInfos() 获取任务参数
- * @method void setTaskParamInfos(array $TaskParamInfos) 设置任务参数
- * @method string getSourceServer() 获取源数据源Id
- * @method void setSourceServer(string $SourceServer) 设置源数据源Id
- * @method string getTargetServer() 获取目标数据源Id
- * @method void setTargetServer(string $TargetServer) 设置目标数据源Id
- * @method string getDependencyWorkflow() 获取是否支持工作流依赖 yes / no 默认 no
- * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置是否支持工作流依赖 yes / no 默认 no
- * @method array getDependencyConfigDTOs() 获取依赖配置,仅可修改上游任务实例配置方法
- * @method void setDependencyConfigDTOs(array $DependencyConfigDTOs) 设置依赖配置,仅可修改上游任务实例配置方法
- * @method integer getExecutionTTL() 获取运行耗时超时时间分钟数
- * @method void setExecutionTTL(integer $ExecutionTTL) 设置运行耗时超时时间分钟数
- * @method boolean getScriptChange() 获取脚本是否改变
- * @method void setScriptChange(boolean $ScriptChange) 设置脚本是否改变
- * @method string getScheduleTimeZone() 获取任务时区，仅支持整数时区配置
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置任务时区，仅支持整数时区配置
- * @method integer getScheduleRunType() 获取0 正常调度 1 空跑调度；暂不支持其他值
- * @method void setScheduleRunType(integer $ScheduleRunType) 设置0 正常调度 1 空跑调度；暂不支持其他值
- * @method integer getConcurrentStrategy() 获取0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
- * @method void setConcurrentStrategy(integer $ConcurrentStrategy) 设置0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
- * @method RegisterDsEventPublisherReq getRegisterDsEventPublisherRequest() 获取shell任务发布事件
- * @method void setRegisterDsEventPublisherRequest(RegisterDsEventPublisherReq $RegisterDsEventPublisherRequest) 设置shell任务发布事件
- * @method string getContent() 获取base64编码后脚本内容
- * @method void setContent(string $Content) 设置base64编码后脚本内容
+ * @method string getProjectId() 获取<p>项目Id</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目Id</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
+ * @method integer getDelayTime() 获取<p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
+ * @method void setDelayTime(integer $DelayTime) 设置<p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
+ * @method integer getStartupTime() 获取<p>启动时间：该字段已废弃，无需填写</p>
+ * @method void setStartupTime(integer $StartupTime) 设置<p>启动时间：该字段已废弃，无需填写</p>
+ * @method integer getSelfDepend() 获取<p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
+ * @method void setSelfDepend(integer $SelfDepend) 设置<p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
+ * @method string getStartTime() 获取<p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
+ * @method void setStartTime(string $StartTime) 设置<p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
+ * @method string getEndTime() 获取<p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
+ * @method void setEndTime(string $EndTime) 设置<p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
+ * @method string getTaskAction() 获取<p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
+ * @method void setTaskAction(string $TaskAction) 设置<p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
+ * @method integer getCycleType() 获取<p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
+ * @method void setCycleType(integer $CycleType) 设置<p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
+ * @method integer getCycleStep() 获取<p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
+ * @method void setCycleStep(integer $CycleStep) 设置<p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
+ * @method string getCrontabExpression() 获取<p>cron表达式  周期类型为crontab调度才需要</p>
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>cron表达式  周期类型为crontab调度才需要</p>
+ * @method string getExecutionStartTime() 获取<p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+ * @method void setExecutionStartTime(string $ExecutionStartTime) 设置<p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+ * @method string getExecutionEndTime() 获取<p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+ * @method void setExecutionEndTime(string $ExecutionEndTime) 设置<p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+ * @method string getTaskName() 获取<p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
+ * @method integer getRetryWait() 获取<p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
+ * @method void setRetryWait(integer $RetryWait) 设置<p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
+ * @method integer getTryLimit() 获取<p>失败重试次数，创建任务的时候已经给了默认值</p>
+ * @method void setTryLimit(integer $TryLimit) 设置<p>失败重试次数，创建任务的时候已经给了默认值</p>
+ * @method integer getRetriable() 获取<p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
+ * @method void setRetriable(integer $Retriable) 设置<p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
+ * @method integer getRunPriority() 获取<p>运行优先级，4高 5中 6低；暂不支持其他值</p>
+ * @method void setRunPriority(integer $RunPriority) 设置<p>运行优先级，4高 5中 6低；暂不支持其他值</p>
+ * @method array getTaskExt() 获取<p>任务的扩展配置</p>
+ * @method void setTaskExt(array $TaskExt) 设置<p>任务的扩展配置</p>
+ * @method string getResourceGroup() 获取<p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
+ * @method void setResourceGroup(string $ResourceGroup) 设置<p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
+ * @method string getYarnQueue() 获取<p>资源池队列名称</p>
+ * @method void setYarnQueue(string $YarnQueue) 设置<p>资源池队列名称</p>
+ * @method string getBrokerIp() 获取<p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
+ * @method void setBrokerIp(string $BrokerIp) 设置<p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
+ * @method string getInCharge() 获取<p>责任人，多个责任人请用分号隔开</p>
+ * @method void setInCharge(string $InCharge) 设置<p>责任人，多个责任人请用分号隔开</p>
+ * @method string getNotes() 获取<p>任务备注</p>
+ * @method void setNotes(string $Notes) 设置<p>任务备注</p>
+ * @method array getTaskParamInfos() 获取<p>任务参数</p>
+ * @method void setTaskParamInfos(array $TaskParamInfos) 设置<p>任务参数</p>
+ * @method string getSourceServer() 获取<p>源数据源Id</p>
+ * @method void setSourceServer(string $SourceServer) 设置<p>源数据源Id</p>
+ * @method string getTargetServer() 获取<p>目标数据源Id</p>
+ * @method void setTargetServer(string $TargetServer) 设置<p>目标数据源Id</p>
+ * @method string getDependencyWorkflow() 获取<p>是否支持工作流依赖 yes / no 默认 no</p>
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置<p>是否支持工作流依赖 yes / no 默认 no</p>
+ * @method array getDependencyConfigDTOs() 获取<p>依赖配置,仅可修改上游任务实例配置方法</p>
+ * @method void setDependencyConfigDTOs(array $DependencyConfigDTOs) 设置<p>依赖配置,仅可修改上游任务实例配置方法</p>
+ * @method integer getExecutionTTL() 获取<p>运行耗时超时时间分钟数</p>
+ * @method void setExecutionTTL(integer $ExecutionTTL) 设置<p>运行耗时超时时间分钟数</p>
+ * @method boolean getScriptChange() 获取<p>脚本是否改变</p>
+ * @method void setScriptChange(boolean $ScriptChange) 设置<p>脚本是否改变</p>
+ * @method string getScheduleTimeZone() 获取<p>任务时区，仅支持整数时区配置</p>
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>任务时区，仅支持整数时区配置</p>
+ * @method integer getScheduleRunType() 获取<p>0 正常调度 1 空跑调度；暂不支持其他值</p>
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置<p>0 正常调度 1 空跑调度；暂不支持其他值</p>
+ * @method integer getConcurrentStrategy() 获取<p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
+ * @method void setConcurrentStrategy(integer $ConcurrentStrategy) 设置<p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
+ * @method RegisterDsEventPublisherReq getRegisterDsEventPublisherRequest() 获取<p>shell任务发布事件</p>
+ * @method void setRegisterDsEventPublisherRequest(RegisterDsEventPublisherReq $RegisterDsEventPublisherRequest) 设置<p>shell任务发布事件</p>
+ * @method string getContent() 获取<p>base64编码后脚本内容</p>
+ * @method void setContent(string $Content) 设置<p>base64编码后脚本内容</p>
+ * @method integer getMinuteOffset() 获取<p>分钟任务相位偏移</p>
+ * @method void setMinuteOffset(integer $MinuteOffset) 设置<p>分钟任务相位偏移</p>
  */
 class ModifyTaskInfoDsRequest extends AbstractModel
 {
     /**
-     * @var string 项目Id
+     * @var string <p>项目Id</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 任务ID
+     * @var string <p>任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
+     * @var integer <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
      */
     public $DelayTime;
 
     /**
-     * @var integer 启动时间：该字段已废弃，无需填写
+     * @var integer <p>启动时间：该字段已废弃，无需填写</p>
      */
     public $StartupTime;
 
     /**
-     * @var integer 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
+     * @var integer <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
      */
     public $SelfDepend;
 
     /**
-     * @var string 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
+     * @var string <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public $StartTime;
 
     /**
-     * @var string 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
+     * @var string <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
      */
     public $EndTime;
 
     /**
-     * @var string 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
+     * @var string <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
      */
     public $TaskAction;
 
     /**
-     * @var integer 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
+     * @var integer <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
      */
     public $CycleType;
 
     /**
-     * @var integer 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
+     * @var integer <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
      */
     public $CycleStep;
 
     /**
-     * @var string cron表达式  周期类型为crontab调度才需要
+     * @var string <p>cron表达式  周期类型为crontab调度才需要</p>
      */
     public $CrontabExpression;
 
     /**
-     * @var string 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * @var string <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public $ExecutionStartTime;
 
     /**
-     * @var string 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
+     * @var string <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
      */
     public $ExecutionEndTime;
 
     /**
-     * @var string 任务名，该字段废弃，请勿使用该字段重命名任务
+     * @var string <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
      */
     public $TaskName;
 
     /**
-     * @var integer 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
+     * @var integer <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
      */
     public $RetryWait;
 
     /**
-     * @var integer 失败重试次数，创建任务的时候已经给了默认值
+     * @var integer <p>失败重试次数，创建任务的时候已经给了默认值</p>
      */
     public $TryLimit;
 
     /**
-     * @var integer 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
+     * @var integer <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
      */
     public $Retriable;
 
     /**
-     * @var integer 运行优先级，4高 5中 6低；暂不支持其他值
+     * @var integer <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
      */
     public $RunPriority;
 
     /**
-     * @var array 任务的扩展配置
+     * @var array <p>任务的扩展配置</p>
      */
     public $TaskExt;
 
     /**
-     * @var string 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
+     * @var string <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
      */
     public $ResourceGroup;
 
     /**
-     * @var string 资源池队列名称
+     * @var string <p>资源池队列名称</p>
      */
     public $YarnQueue;
 
     /**
-     * @var string 资源组下具体执行机，any 表示可以跑在任意一台。
+     * @var string <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
      */
     public $BrokerIp;
 
     /**
-     * @var string 责任人，多个责任人请用分号隔开
+     * @var string <p>责任人，多个责任人请用分号隔开</p>
      */
     public $InCharge;
 
     /**
-     * @var string 任务备注
+     * @var string <p>任务备注</p>
      */
     public $Notes;
 
     /**
-     * @var array 任务参数
+     * @var array <p>任务参数</p>
      */
     public $TaskParamInfos;
 
     /**
-     * @var string 源数据源Id
+     * @var string <p>源数据源Id</p>
      */
     public $SourceServer;
 
     /**
-     * @var string 目标数据源Id
+     * @var string <p>目标数据源Id</p>
      */
     public $TargetServer;
 
     /**
-     * @var string 是否支持工作流依赖 yes / no 默认 no
+     * @var string <p>是否支持工作流依赖 yes / no 默认 no</p>
      */
     public $DependencyWorkflow;
 
     /**
-     * @var array 依赖配置,仅可修改上游任务实例配置方法
+     * @var array <p>依赖配置,仅可修改上游任务实例配置方法</p>
      */
     public $DependencyConfigDTOs;
 
     /**
-     * @var integer 运行耗时超时时间分钟数
+     * @var integer <p>运行耗时超时时间分钟数</p>
      */
     public $ExecutionTTL;
 
     /**
-     * @var boolean 脚本是否改变
+     * @var boolean <p>脚本是否改变</p>
      */
     public $ScriptChange;
 
     /**
-     * @var string 任务时区，仅支持整数时区配置
+     * @var string <p>任务时区，仅支持整数时区配置</p>
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var integer 0 正常调度 1 空跑调度；暂不支持其他值
+     * @var integer <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
      */
     public $ScheduleRunType;
 
     /**
-     * @var integer 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
+     * @var integer <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
      */
     public $ConcurrentStrategy;
 
     /**
-     * @var RegisterDsEventPublisherReq shell任务发布事件
+     * @var RegisterDsEventPublisherReq <p>shell任务发布事件</p>
      */
     public $RegisterDsEventPublisherRequest;
 
     /**
-     * @var string base64编码后脚本内容
+     * @var string <p>base64编码后脚本内容</p>
      */
     public $Content;
 
     /**
-     * @param string $ProjectId 项目Id
-     * @param string $TaskId 任务ID
-     * @param integer $DelayTime 执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟
-     * @param integer $StartupTime 启动时间：该字段已废弃，无需填写
-     * @param integer $SelfDepend 自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值
-     * @param string $StartTime 生效开始时间，格式 yyyy-MM-dd HH:mm:ss
-     * @param string $EndTime 生效结束时间，格式 yyyy-MM-dd HH:mm:ss
-     * @param string $TaskAction 调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。
-     * @param integer $CycleType 周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离
-     * @param integer $CycleStep 小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。
-     * @param string $CrontabExpression cron表达式  周期类型为crontab调度才需要
-     * @param string $ExecutionStartTime 执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
-     * @param string $ExecutionEndTime 执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效
-     * @param string $TaskName 任务名，该字段废弃，请勿使用该字段重命名任务
-     * @param integer $RetryWait 失败重试间隔,单位分钟，创建任务的时候已经给了默认值
-     * @param integer $TryLimit 失败重试次数，创建任务的时候已经给了默认值
-     * @param integer $Retriable 是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值
-     * @param integer $RunPriority 运行优先级，4高 5中 6低；暂不支持其他值
-     * @param array $TaskExt 任务的扩展配置
-     * @param string $ResourceGroup 执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器
-     * @param string $YarnQueue 资源池队列名称
-     * @param string $BrokerIp 资源组下具体执行机，any 表示可以跑在任意一台。
-     * @param string $InCharge 责任人，多个责任人请用分号隔开
-     * @param string $Notes 任务备注
-     * @param array $TaskParamInfos 任务参数
-     * @param string $SourceServer 源数据源Id
-     * @param string $TargetServer 目标数据源Id
-     * @param string $DependencyWorkflow 是否支持工作流依赖 yes / no 默认 no
-     * @param array $DependencyConfigDTOs 依赖配置,仅可修改上游任务实例配置方法
-     * @param integer $ExecutionTTL 运行耗时超时时间分钟数
-     * @param boolean $ScriptChange 脚本是否改变
-     * @param string $ScheduleTimeZone 任务时区，仅支持整数时区配置
-     * @param integer $ScheduleRunType 0 正常调度 1 空跑调度；暂不支持其他值
-     * @param integer $ConcurrentStrategy 0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值
-     * @param RegisterDsEventPublisherReq $RegisterDsEventPublisherRequest shell任务发布事件
-     * @param string $Content base64编码后脚本内容
+     * @var integer <p>分钟任务相位偏移</p>
+     */
+    public $MinuteOffset;
+
+    /**
+     * @param string $ProjectId <p>项目Id</p>
+     * @param string $TaskId <p>任务ID</p>
+     * @param integer $DelayTime <p>执行时间，单位分钟，天/周/月/年调度才有。比如天调度，每天的02:00点执行一次，delayTime就是120分钟</p>
+     * @param integer $StartupTime <p>启动时间：该字段已废弃，无需填写</p>
+     * @param integer $SelfDepend <p>自依赖类型  1:有序串行 一次一个 排队  2: 无序串行 一次一个 不排队 3:并行 一次多个；暂不支持其他值</p>
+     * @param string $StartTime <p>生效开始时间，格式 yyyy-MM-dd HH:mm:ss</p>
+     * @param string $EndTime <p>生效结束时间，格式 yyyy-MM-dd HH:mm:ss</p>
+     * @param string $TaskAction <p>调度配置-弹性周期配置，小时/周/月/年调度才有，小时任务指定每天的0点3点4点跑，则为 0,3,4。设置该值时，请把CycleStep字段设置为1（如果原始值不为1）。</p>
+     * @param integer $CycleType <p>周期类型  0:crontab类型, 1:分钟，2:小时，3:天，4:周，5:月，6:一次性，7:用户驱动，10:弹性周期 周,11:弹性周期 月,12:年,13:即时触发Instant类型，与正常周期调度任务逻辑隔离</p>
+     * @param integer $CycleStep <p>小时和分钟任务才有；分钟任务：5、10、15、20、30，表示每隔5【或其他值】分钟执行一次；小时任务：1、2、3、4、5、6、7、8、9、10、11、12，表示每隔1【或其他值】小时执行一次。该值大于1时，请把TaskAction字段设置为空字符串。</p>
+     * @param string $CrontabExpression <p>cron表达式  周期类型为crontab调度才需要</p>
+     * @param string $ExecutionStartTime <p>执行时间左闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+     * @param string $ExecutionEndTime <p>执行时间右闭区间，格式：HH:mm  小时调度才有，例如小时任务, 每日固定区间生效</p>
+     * @param string $TaskName <p>任务名，该字段废弃，请勿使用该字段重命名任务</p>
+     * @param integer $RetryWait <p>失败重试间隔,单位分钟，创建任务的时候已经给了默认值</p>
+     * @param integer $TryLimit <p>失败重试次数，创建任务的时候已经给了默认值</p>
+     * @param integer $Retriable <p>是否可重试，0代码不可重试，1代表可以重试；暂不支持其他值</p>
+     * @param integer $RunPriority <p>运行优先级，4高 5中 6低；暂不支持其他值</p>
+     * @param array $TaskExt <p>任务的扩展配置</p>
+     * @param string $ResourceGroup <p>执行资源组Id，需要去资源管理服务上创建调度资源组，并且绑定cvm机器</p>
+     * @param string $YarnQueue <p>资源池队列名称</p>
+     * @param string $BrokerIp <p>资源组下具体执行机，any 表示可以跑在任意一台。</p>
+     * @param string $InCharge <p>责任人，多个责任人请用分号隔开</p>
+     * @param string $Notes <p>任务备注</p>
+     * @param array $TaskParamInfos <p>任务参数</p>
+     * @param string $SourceServer <p>源数据源Id</p>
+     * @param string $TargetServer <p>目标数据源Id</p>
+     * @param string $DependencyWorkflow <p>是否支持工作流依赖 yes / no 默认 no</p>
+     * @param array $DependencyConfigDTOs <p>依赖配置,仅可修改上游任务实例配置方法</p>
+     * @param integer $ExecutionTTL <p>运行耗时超时时间分钟数</p>
+     * @param boolean $ScriptChange <p>脚本是否改变</p>
+     * @param string $ScheduleTimeZone <p>任务时区，仅支持整数时区配置</p>
+     * @param integer $ScheduleRunType <p>0 正常调度 1 空跑调度；暂不支持其他值</p>
+     * @param integer $ConcurrentStrategy <p>0 并发度达到上限时，本次排队等待 1 并发度达到上限时，本次不执行，直接kill；暂不支持其他值</p>
+     * @param RegisterDsEventPublisherReq $RegisterDsEventPublisherRequest <p>shell任务发布事件</p>
+     * @param string $Content <p>base64编码后脚本内容</p>
+     * @param integer $MinuteOffset <p>分钟任务相位偏移</p>
      */
     function __construct()
     {
@@ -484,6 +492,10 @@ class ModifyTaskInfoDsRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("MinuteOffset",$param) and $param["MinuteOffset"] !== null) {
+            $this->MinuteOffset = $param["MinuteOffset"];
         }
     }
 }

@@ -20,106 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * redo日志详情
  *
- * @method string getFileName() 获取文件名
- * @method void setFileName(string $FileName) 设置文件名
- * @method integer getFileSize() 获取文件大小
- * @method void setFileSize(integer $FileSize) 设置文件大小
- * @method string getBackupTime() 获取备份时间
- * @method void setBackupTime(string $BackupTime) 设置备份时间
- * @method integer getRedoLogId() 获取redoLogId
- * @method void setRedoLogId(integer $RedoLogId) 设置redoLogId
- * @method array getRedoCrossRegions() 获取跨地域信息
- * @method void setRedoCrossRegions(array $RedoCrossRegions) 设置跨地域信息
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getFinishTime() 获取完成时间
- * @method void setFinishTime(string $FinishTime) 设置完成时间
- * @method array getVaultInfos() 获取保险箱信息
- * @method void setVaultInfos(array $VaultInfos) 设置保险箱信息
- * @method string getCopyStatus() 获取备份投递状态
- * @method void setCopyStatus(string $CopyStatus) 设置备份投递状态
- * @method string getEncryptKeyId() 获取加密秘钥key
- * @method void setEncryptKeyId(string $EncryptKeyId) 设置加密秘钥key
- * @method string getEncryptRegion() 获取加密秘钥地域
- * @method void setEncryptRegion(string $EncryptRegion) 设置加密秘钥地域
+ * @method string getFileName() 获取<p>文件名</p>
+ * @method void setFileName(string $FileName) 设置<p>文件名</p>
+ * @method integer getFileSize() 获取<p>文件大小</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>文件大小</p>
+ * @method string getBackupTime() 获取<p>备份时间</p>
+ * @method void setBackupTime(string $BackupTime) 设置<p>备份时间</p>
+ * @method integer getRedoLogId() 获取<p>redoLogId</p>
+ * @method void setRedoLogId(integer $RedoLogId) 设置<p>redoLogId</p>
+ * @method array getRedoCrossRegions() 获取<p>跨地域信息</p>
+ * @method void setRedoCrossRegions(array $RedoCrossRegions) 设置<p>跨地域信息</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getFinishTime() 获取<p>完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>完成时间</p>
+ * @method array getVaultInfos() 获取<p>保险箱信息</p>
+ * @method void setVaultInfos(array $VaultInfos) 设置<p>保险箱信息</p>
+ * @method string getCopyStatus() 获取<p>备份投递状态</p>
+ * @method void setCopyStatus(string $CopyStatus) 设置<p>备份投递状态</p>
+ * @method string getEncryptKeyId() 获取<p>加密秘钥key</p>
+ * @method void setEncryptKeyId(string $EncryptKeyId) 设置<p>加密秘钥key</p>
+ * @method string getEncryptRegion() 获取<p>加密秘钥地域</p>
+ * @method void setEncryptRegion(string $EncryptRegion) 设置<p>加密秘钥地域</p>
  */
 class RedoLogItem extends AbstractModel
 {
     /**
-     * @var string 文件名
+     * @var string <p>文件名</p>
      */
     public $FileName;
 
     /**
-     * @var integer 文件大小
+     * @var integer <p>文件大小</p>
      */
     public $FileSize;
 
     /**
-     * @var string 备份时间
+     * @var string <p>备份时间</p>
      */
     public $BackupTime;
 
     /**
-     * @var integer redoLogId
+     * @var integer <p>redoLogId</p>
      */
     public $RedoLogId;
 
     /**
-     * @var array 跨地域信息
+     * @var array <p>跨地域信息</p>
      */
     public $RedoCrossRegions;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      */
     public $Status;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 完成时间
+     * @var string <p>完成时间</p>
      */
     public $FinishTime;
 
     /**
-     * @var array 保险箱信息
+     * @var array <p>保险箱信息</p>
      */
     public $VaultInfos;
 
     /**
-     * @var string 备份投递状态
+     * @var string <p>备份投递状态</p>
      */
     public $CopyStatus;
 
     /**
-     * @var string 加密秘钥key
+     * @var string <p>加密秘钥key</p>
      */
     public $EncryptKeyId;
 
     /**
-     * @var string 加密秘钥地域
+     * @var string <p>加密秘钥地域</p>
      */
     public $EncryptRegion;
 
     /**
-     * @param string $FileName 文件名
-     * @param integer $FileSize 文件大小
-     * @param string $BackupTime 备份时间
-     * @param integer $RedoLogId redoLogId
-     * @param array $RedoCrossRegions 跨地域信息
-     * @param string $Status 状态
-     * @param string $StartTime 开始时间
-     * @param string $FinishTime 完成时间
-     * @param array $VaultInfos 保险箱信息
-     * @param string $CopyStatus 备份投递状态
-     * @param string $EncryptKeyId 加密秘钥key
-     * @param string $EncryptRegion 加密秘钥地域
+     * @param string $FileName <p>文件名</p>
+     * @param integer $FileSize <p>文件大小</p>
+     * @param string $BackupTime <p>备份时间</p>
+     * @param integer $RedoLogId <p>redoLogId</p>
+     * @param array $RedoCrossRegions <p>跨地域信息</p>
+     * @param string $Status <p>状态</p>
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $FinishTime <p>完成时间</p>
+     * @param array $VaultInfos <p>保险箱信息</p>
+     * @param string $CopyStatus <p>备份投递状态</p>
+     * @param string $EncryptKeyId <p>加密秘钥key</p>
+     * @param string $EncryptRegion <p>加密秘钥地域</p>
      */
     function __construct()
     {

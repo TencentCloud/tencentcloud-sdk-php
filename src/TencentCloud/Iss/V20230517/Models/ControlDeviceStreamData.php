@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取开流地址返回数据
  *
- * @method string getFlv() 获取flv 流地址
- * @method void setFlv(string $Flv) 设置flv 流地址
- * @method string getHls() 获取hls 流地址
- * @method void setHls(string $Hls) 设置hls 流地址
- * @method string getRtmp() 获取rtmp 流地址
- * @method void setRtmp(string $Rtmp) 设置rtmp 流地址
+ * @method string getFlv() 获取<p>flv 流地址</p>
+ * @method void setFlv(string $Flv) 设置<p>flv 流地址</p>
+ * @method string getHls() 获取<p>hls 流地址</p>
+ * @method void setHls(string $Hls) 设置<p>hls 流地址</p>
+ * @method string getRtmp() 获取<p>rtmp 流地址</p>
+ * @method void setRtmp(string $Rtmp) 设置<p>rtmp 流地址</p>
+ * @method string getFMp4() 获取<p>fmp4地址</p>
+ * @method void setFMp4(string $FMp4) 设置<p>fmp4地址</p>
  */
 class ControlDeviceStreamData extends AbstractModel
 {
     /**
-     * @var string flv 流地址
+     * @var string <p>flv 流地址</p>
      */
     public $Flv;
 
     /**
-     * @var string hls 流地址
+     * @var string <p>hls 流地址</p>
      */
     public $Hls;
 
     /**
-     * @var string rtmp 流地址
+     * @var string <p>rtmp 流地址</p>
      */
     public $Rtmp;
 
     /**
-     * @param string $Flv flv 流地址
-     * @param string $Hls hls 流地址
-     * @param string $Rtmp rtmp 流地址
+     * @var string <p>fmp4地址</p>
+     */
+    public $FMp4;
+
+    /**
+     * @param string $Flv <p>flv 流地址</p>
+     * @param string $Hls <p>hls 流地址</p>
+     * @param string $Rtmp <p>rtmp 流地址</p>
+     * @param string $FMp4 <p>fmp4地址</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ControlDeviceStreamData extends AbstractModel
 
         if (array_key_exists("Rtmp",$param) and $param["Rtmp"] !== null) {
             $this->Rtmp = $param["Rtmp"];
+        }
+
+        if (array_key_exists("FMp4",$param) and $param["FMp4"] !== null) {
+            $this->FMp4 = $param["FMp4"];
         }
     }
 }

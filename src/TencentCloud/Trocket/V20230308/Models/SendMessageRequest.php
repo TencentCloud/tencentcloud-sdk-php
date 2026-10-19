@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
  * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
- * @method string getMsgBody() 获取消息内容
- * @method void setMsgBody(string $MsgBody) 设置消息内容
- * @method string getMsgKey() 获取消息Key
- * @method void setMsgKey(string $MsgKey) 设置消息Key
- * @method string getMsgTag() 获取消息Tag
- * @method void setMsgTag(string $MsgTag) 设置消息Tag
- * @method string getLiteTopic() 获取轻量主题
- * @method void setLiteTopic(string $LiteTopic) 设置轻量主题
+ * @method string getMsgBody() 获取<p>消息内容</p>
+ * @method void setMsgBody(string $MsgBody) 设置<p>消息内容</p>
+ * @method string getMsgKey() 获取<p>消息Key</p>
+ * @method void setMsgKey(string $MsgKey) 设置<p>消息Key</p>
+ * @method string getMsgTag() 获取<p>消息Tag</p>
+ * @method void setMsgTag(string $MsgTag) 设置<p>消息Tag</p>
+ * @method string getLiteTopic() 获取<p>轻量主题</p>
+ * @method void setLiteTopic(string $LiteTopic) 设置<p>轻量主题</p>
+ * @method integer getPriority() 获取<p>指定队列优先级</p>
+ * @method void setPriority(integer $Priority) 设置<p>指定队列优先级</p>
  */
 class SendMessageRequest extends AbstractModel
 {
@@ -46,32 +48,38 @@ class SendMessageRequest extends AbstractModel
     public $Topic;
 
     /**
-     * @var string 消息内容
+     * @var string <p>消息内容</p>
      */
     public $MsgBody;
 
     /**
-     * @var string 消息Key
+     * @var string <p>消息Key</p>
      */
     public $MsgKey;
 
     /**
-     * @var string 消息Tag
+     * @var string <p>消息Tag</p>
      */
     public $MsgTag;
 
     /**
-     * @var string 轻量主题
+     * @var string <p>轻量主题</p>
      */
     public $LiteTopic;
 
     /**
+     * @var integer <p>指定队列优先级</p>
+     */
+    public $Priority;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
-     * @param string $MsgBody 消息内容
-     * @param string $MsgKey 消息Key
-     * @param string $MsgTag 消息Tag
-     * @param string $LiteTopic 轻量主题
+     * @param string $MsgBody <p>消息内容</p>
+     * @param string $MsgKey <p>消息Key</p>
+     * @param string $MsgTag <p>消息Tag</p>
+     * @param string $LiteTopic <p>轻量主题</p>
+     * @param integer $Priority <p>指定队列优先级</p>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SendMessageRequest extends AbstractModel
 
         if (array_key_exists("LiteTopic",$param) and $param["LiteTopic"] !== null) {
             $this->LiteTopic = $param["LiteTopic"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
     }
 }

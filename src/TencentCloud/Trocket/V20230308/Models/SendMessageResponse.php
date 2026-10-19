@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendMessage返回参数结构体
  *
- * @method string getMsgId() 获取消息ID
- * @method void setMsgId(string $MsgId) 设置消息ID
+ * @method string getMsgId() 获取<p>消息ID</p>
+ * @method void setMsgId(string $MsgId) 设置<p>消息ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SendMessageResponse extends AbstractModel
 {
     /**
-     * @var string 消息ID
+     * @var string <p>消息ID</p>
      */
     public $MsgId;
 
@@ -38,7 +38,7 @@ class SendMessageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MsgId 消息ID
+     * @param string $MsgId <p>消息ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

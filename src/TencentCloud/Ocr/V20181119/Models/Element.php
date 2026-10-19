@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndex(integer $Index) 设置<p>元素索引</p>
  * @method integer getPageIndex() 获取<p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
  * @method void setPageIndex(integer $PageIndex) 设置<p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+ * @method AnswerElement getAnswerElement() 获取<p>批改时答案的额外数据</p>
+ * @method void setAnswerElement(AnswerElement $AnswerElement) 设置<p>批改时答案的额外数据</p>
  */
 class Element extends AbstractModel
 {
@@ -69,6 +71,11 @@ class Element extends AbstractModel
     public $PageIndex;
 
     /**
+     * @var AnswerElement <p>批改时答案的额外数据</p>
+     */
+    public $AnswerElement;
+
+    /**
      * @param string $Text <p>元素内容，当type为figure时该字段内容为图片的位置</p>
      * @param Polygon $Coord <p>元素坐标</p>
      * @param string $GroupType <p>元素group类型，包括multiple-choice(选择题)、fill-in-the-blank(填空题)、problem-solving(解答题)、arithmetic(算术题)</p>
@@ -76,6 +83,7 @@ class Element extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index <p>元素索引</p>
      * @param integer $PageIndex <p>元素所在页</p><p>单位：页</p><p>默认值：1</p>
+     * @param AnswerElement $AnswerElement <p>批改时答案的额外数据</p>
      */
     function __construct()
     {
@@ -118,6 +126,11 @@ class Element extends AbstractModel
 
         if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
             $this->PageIndex = $param["PageIndex"];
+        }
+
+        if (array_key_exists("AnswerElement",$param) and $param["AnswerElement"] !== null) {
+            $this->AnswerElement = new AnswerElement();
+            $this->AnswerElement->deserialize($param["AnswerElement"]);
         }
     }
 }

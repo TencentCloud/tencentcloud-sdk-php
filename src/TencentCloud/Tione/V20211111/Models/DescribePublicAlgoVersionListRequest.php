@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePublicAlgoVersionList请求参数结构体
  *
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method array getFilters() 获取过滤器
  * @method void setFilters(array $Filters) 设置过滤器
  * @method integer getOffset() 获取偏移量
@@ -31,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribePublicAlgoVersionListRequest extends AbstractModel
 {
+    /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
     /**
      * @var array 过滤器
      */
@@ -52,6 +59,7 @@ class DescribePublicAlgoVersionListRequest extends AbstractModel
     public $NeedsAggregate;
 
     /**
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param array $Filters 过滤器
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回记录条数，默认10
@@ -70,6 +78,10 @@ class DescribePublicAlgoVersionListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){

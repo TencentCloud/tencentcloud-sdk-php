@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置<p>libra节点故障，是否转发给其他节点</p>
  * @method string getLoadBalanceMode() 获取<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
  * @method void setLoadBalanceMode(string $LoadBalanceMode) 设置<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+ * @method boolean getTransAllSplit() 获取<p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+ * @method void setTransAllSplit(boolean $TransAllSplit) 设置<p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
  */
 class ModifyProxyRwSplitRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $LoadBalanceMode;
 
     /**
+     * @var boolean <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+     */
+    public $TransAllSplit;
+
+    /**
      * @param string $ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      * @param string $ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      * @param string $ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
@@ -168,6 +175,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param boolean $ApNodeAsRoNode <p>是否将libra节点当作普通RO节点</p>
      * @param boolean $ApQueryToOtherNode <p>libra节点故障，是否转发给其他节点</p>
      * @param string $LoadBalanceMode <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     * @param boolean $TransAllSplit <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class ModifyProxyRwSplitRequest extends AbstractModel
 
         if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
             $this->LoadBalanceMode = $param["LoadBalanceMode"];
+        }
+
+        if (array_key_exists("TransAllSplit",$param) and $param["TransAllSplit"] !== null) {
+            $this->TransAllSplit = $param["TransAllSplit"];
         }
     }
 }

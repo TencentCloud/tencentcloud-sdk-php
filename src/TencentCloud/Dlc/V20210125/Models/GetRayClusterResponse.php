@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue）</p>
  * @method string getResourceConfigId() 获取<p>资源配置ID</p>
  * @method void setResourceConfigId(string $ResourceConfigId) 设置<p>资源配置ID</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -229,6 +231,11 @@ class GetRayClusterResponse extends AbstractModel
     public $ResourceConfigId;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -263,6 +270,7 @@ class GetRayClusterResponse extends AbstractModel
      * @param integer $StopTime <p>停止时间（最近一次停止/休眠）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue）</p>
      * @param string $ResourceConfigId <p>资源配置ID</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -397,6 +405,10 @@ class GetRayClusterResponse extends AbstractModel
 
         if (array_key_exists("ResourceConfigId",$param) and $param["ResourceConfigId"] !== null) {
             $this->ResourceConfigId = $param["ResourceConfigId"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -96,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置<p>集群组名称</p>
  * @method string getClusterName() 获取<p>集群名称</p>
  * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getNetworkConfig() 获取<p>网络配置，JSON 字符串</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>网络配置，JSON 字符串</p>
  */
 class JobSpec extends AbstractModel
 {
@@ -290,6 +292,11 @@ class JobSpec extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string <p>网络配置，JSON 字符串</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Id <p>配置ID</p>
      * @param string $Name <p>配置名称</p>
      * @param string $Description <p>配置描述</p>
@@ -328,6 +335,7 @@ class JobSpec extends AbstractModel
      * @param string $SubmissionTarget <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
      * @param string $GroupName <p>集群组名称</p>
      * @param string $ClusterName <p>集群名称</p>
+     * @param string $NetworkConfig <p>网络配置，JSON 字符串</p>
      */
     function __construct()
     {
@@ -497,6 +505,10 @@ class JobSpec extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

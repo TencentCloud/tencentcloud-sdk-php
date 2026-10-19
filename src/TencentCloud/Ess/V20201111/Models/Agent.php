@@ -33,7 +33,6 @@ class Agent extends AbstractModel
 {
     /**
      * @var string <p>CA-API应用编号，用于同平台企业下标识不同的CA-API应用</p>
-     * @deprecated
      */
     public $AppId;
 

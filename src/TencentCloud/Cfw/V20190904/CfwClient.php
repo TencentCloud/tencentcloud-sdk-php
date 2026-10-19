@@ -118,6 +118,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeNatRuleScopesResponse DescribeNatRuleScopes(Models\DescribeNatRuleScopesRequest $req) 查询nat规则的配额和使用情况
  * @method Models\DescribeOfflineExportTaskResponse DescribeOfflineExportTask(Models\DescribeOfflineExportTaskRequest $req) 获取日志离线导出任务列表
  * @method Models\DescribeOfflineExportTemporaryCredentialsResponse DescribeOfflineExportTemporaryCredentials(Models\DescribeOfflineExportTemporaryCredentialsRequest $req) 获取日志离线导出任务文件下载临时凭证
+ * @method Models\DescribeOverviewResourceQuotaResponse DescribeOverviewResourceQuota(Models\DescribeOverviewResourceQuotaRequest $req) 查询云防火墙概览页资源与配额详情信息，返回带宽配额、实例与规则配额、日志存储信息及相关能力标识。
  * @method Models\DescribeResourceGroupResponse DescribeResourceGroup(Models\DescribeResourceGroupRequest $req) DescribeResourceGroup资产中心资产树信息
  * @method Models\DescribeResourceGroupNewResponse DescribeResourceGroupNew(Models\DescribeResourceGroupNewRequest $req) 资产中心资产组数数据信息查询
  * @method Models\DescribeRuleOverviewResponse DescribeRuleOverview(Models\DescribeRuleOverviewRequest $req) 查询规则列表概况

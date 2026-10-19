@@ -86,6 +86,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProviderName(string $ProviderName) 设置<p>云厂商名称</p>
  * @method integer getSyncCloudDeviceStatus() 获取<p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
  * @method void setSyncCloudDeviceStatus(integer $SyncCloudDeviceStatus) 设置<p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
+ * @method integer getOwnerAppId() 获取<p>所属账号 AppId</p>
+ * @method void setOwnerAppId(integer $OwnerAppId) 设置<p>所属账号 AppId</p>
+ * @method string getOwnerAccountUin() 获取<p>所属账号 UIN</p>
+ * @method void setOwnerAccountUin(string $OwnerAccountUin) 设置<p>所属账号 UIN</p>
+ * @method string getOwnerAccountName() 获取<p>所属账号展示名</p>
+ * @method void setOwnerAccountName(string $OwnerAccountName) 设置<p>所属账号展示名</p>
  */
 class Device extends AbstractModel
 {
@@ -255,6 +261,21 @@ class Device extends AbstractModel
     public $SyncCloudDeviceStatus;
 
     /**
+     * @var integer <p>所属账号 AppId</p>
+     */
+    public $OwnerAppId;
+
+    /**
+     * @var string <p>所属账号 UIN</p>
+     */
+    public $OwnerAccountUin;
+
+    /**
+     * @var string <p>所属账号展示名</p>
+     */
+    public $OwnerAccountName;
+
+    /**
      * @param integer $Id <p>资产ID</p>
      * @param string $InstanceId <p>实例ID，对应CVM、CDB等实例ID</p>
      * @param string $Name <p>资产名</p>
@@ -288,6 +309,9 @@ class Device extends AbstractModel
      * @param integer $ProviderType <p>云厂商类型1-腾讯云，2-阿里云</p>
      * @param string $ProviderName <p>云厂商名称</p>
      * @param integer $SyncCloudDeviceStatus <p>同步的云资产状态，标记同步的资产的状态情况，0-已删除,1-正常,2-已隔离,3-已过期</p>
+     * @param integer $OwnerAppId <p>所属账号 AppId</p>
+     * @param string $OwnerAccountUin <p>所属账号 UIN</p>
+     * @param string $OwnerAccountName <p>所属账号展示名</p>
      */
     function __construct()
     {
@@ -439,6 +463,18 @@ class Device extends AbstractModel
 
         if (array_key_exists("SyncCloudDeviceStatus",$param) and $param["SyncCloudDeviceStatus"] !== null) {
             $this->SyncCloudDeviceStatus = $param["SyncCloudDeviceStatus"];
+        }
+
+        if (array_key_exists("OwnerAppId",$param) and $param["OwnerAppId"] !== null) {
+            $this->OwnerAppId = $param["OwnerAppId"];
+        }
+
+        if (array_key_exists("OwnerAccountUin",$param) and $param["OwnerAccountUin"] !== null) {
+            $this->OwnerAccountUin = $param["OwnerAccountUin"];
+        }
+
+        if (array_key_exists("OwnerAccountName",$param) and $param["OwnerAccountName"] !== null) {
+            $this->OwnerAccountName = $param["OwnerAccountName"];
         }
     }
 }

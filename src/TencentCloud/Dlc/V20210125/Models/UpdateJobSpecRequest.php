@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method string getDispatchStrategy() 获取<p>集群分派策略</p><p>枚举值：</p><ul><li>RANDOM： 随机分配</li></ul>
  * @method void setDispatchStrategy(string $DispatchStrategy) 设置<p>集群分派策略</p><p>枚举值：</p><ul><li>RANDOM： 随机分配</li></ul>
+ * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  */
 class UpdateJobSpecRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class UpdateJobSpecRequest extends AbstractModel
     public $DispatchStrategy;
 
     /**
+     * @var string <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $SpecId <p>配置ID</p>
      * @param string $Entrypoint <p>入口命令</p>
      * @param string $Name <p>配置名称</p>
@@ -208,6 +215,7 @@ class UpdateJobSpecRequest extends AbstractModel
      * @param integer $Priority <p>作业优先级（1-9，数字越大优先级越高）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
      * @param string $DispatchStrategy <p>集群分派策略</p><p>枚举值：</p><ul><li>RANDOM： 随机分配</li></ul>
+     * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class UpdateJobSpecRequest extends AbstractModel
 
         if (array_key_exists("DispatchStrategy",$param) and $param["DispatchStrategy"] !== null) {
             $this->DispatchStrategy = $param["DispatchStrategy"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

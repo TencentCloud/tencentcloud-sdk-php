@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResumeTraining(boolean $ResumeTraining) 设置<p>是否启用断点续训（创建时的意图声明；实际续训由实例级「断点续训」按钮触发，不传则不更新）</p>
  * @method TrainingTuningParams getTuningParams() 获取<p>调优参数（整体替换，未填字段回模板默认值；不传则不更新；仅 POST_TRAINING）</p>
  * @method void setTuningParams(TrainingTuningParams $TuningParams) 设置<p>调优参数（整体替换，未填字段回模板默认值；不传则不更新；仅 POST_TRAINING）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class ModifyTrainingJobSpecRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class ModifyTrainingJobSpecRequest extends AbstractModel
     public $TuningParams;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $SpecId <p>配置 ID</p>
      * @param string $SpecName <p>配置名称（不传则不更新）</p>
      * @param string $Description <p>配置描述（不传则不更新）</p>
@@ -224,6 +231,7 @@ class ModifyTrainingJobSpecRequest extends AbstractModel
      * @param CheckpointConfig $Checkpoint <p>Checkpoint 产出配置（整体替换，不传则不更新）</p>
      * @param boolean $ResumeTraining <p>是否启用断点续训（创建时的意图声明；实际续训由实例级「断点续训」按钮触发，不传则不更新）</p>
      * @param TrainingTuningParams $TuningParams <p>调优参数（整体替换，未填字段回模板默认值；不传则不更新；仅 POST_TRAINING）</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -349,6 +357,10 @@ class ModifyTrainingJobSpecRequest extends AbstractModel
         if (array_key_exists("TuningParams",$param) and $param["TuningParams"] !== null) {
             $this->TuningParams = new TrainingTuningParams();
             $this->TuningParams->deserialize($param["TuningParams"]);
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

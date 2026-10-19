@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 注册配置治理信息
  *
- * @method boolean getEnableGovernance() 获取是否开启服务注册治理
- * @method void setEnableGovernance(boolean $EnableGovernance) 设置是否开启服务注册治理
- * @method string getGovernanceType() 获取服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
- * @method void setGovernanceType(string $GovernanceType) 设置服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
- * @method array getExclusiveInstances() 获取独享实例列表
+ * @method boolean getEnableGovernance() 获取<p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
+ * @method void setEnableGovernance(boolean $EnableGovernance) 设置<p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
+ * @method string getGovernanceType() 获取<p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
+ * @method void setGovernanceType(string $GovernanceType) 设置<p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
+ * @method array getExclusiveInstances() 获取<p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExclusiveInstances(array $ExclusiveInstances) 设置独享实例列表
+ * @method void setExclusiveInstances(array $ExclusiveInstances) 设置<p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceGovernanceConfig extends AbstractModel
 {
     /**
-     * @var boolean 是否开启服务注册治理
+     * @var boolean <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
      */
     public $EnableGovernance;
 
     /**
-     * @var string 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
+     * @var string <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
      */
     public $GovernanceType;
 
     /**
-     * @var array 独享实例列表
+     * @var array <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExclusiveInstances;
 
     /**
-     * @param boolean $EnableGovernance 是否开启服务注册治理
-     * @param string $GovernanceType 服务治理类型（枚举：SHARE表示共享型、EXCLUSIVE表示独占型）
-     * @param array $ExclusiveInstances 独享实例列表
+     * @param boolean $EnableGovernance <p>是否开启服务注册治理</p><p>枚举值：</p><ul><li>true： 使用Consul或者北极星服务注册治理</li><li>false： 不使用服务注册治理</li></ul>
+     * @param string $GovernanceType <p>服务治理类型</p><p>枚举值：</p><ul><li>SHARE： 使用Consul注册中心</li><li>EXCLUSIVE： 使用北极星注册中心</li></ul>
+     * @param array $ExclusiveInstances <p>北极星实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

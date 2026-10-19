@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableToken(boolean $EnableToken) 设置<p>是否开启token认证</p>
  * @method string getToken() 获取<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
  * @method void setToken(string $Token) 设置<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class LabResponse extends AbstractModel
 {
@@ -307,6 +309,11 @@ class LabResponse extends AbstractModel
     public $Token;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $ExampleId <p>案例模板ID（startMode=EXAMPLE 时使用）</p>
      * @param string $CodeArchiveUrl <p>代码包/工程归档地址</p>
      * @param array $Services <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
@@ -348,6 +355,7 @@ class LabResponse extends AbstractModel
      * @param PersistentWorkDir $PersistentWorkDir <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
      * @param boolean $EnableToken <p>是否开启token认证</p>
      * @param string $Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -531,6 +539,10 @@ class LabResponse extends AbstractModel
 
         if (array_key_exists("Token",$param) and $param["Token"] !== null) {
             $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

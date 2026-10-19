@@ -448,6 +448,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinuteOffset() 获取<p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinuteOffset(integer $MinuteOffset) 设置<p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDsDTO extends AbstractModel
 {
@@ -1094,6 +1098,12 @@ class TaskDsDTO extends AbstractModel
     public $Privilege;
 
     /**
+     * @var integer <p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinuteOffset;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId <p>虚拟任务标记</p>
@@ -1307,6 +1317,8 @@ class TaskDsDTO extends AbstractModel
      * @param integer $LastUpdateTimestamp <p>任务最后更新时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinuteOffset <p>分钟任务相位偏移</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1795,6 +1807,10 @@ class TaskDsDTO extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("MinuteOffset",$param) and $param["MinuteOffset"] !== null) {
+            $this->MinuteOffset = $param["MinuteOffset"];
         }
     }
 }

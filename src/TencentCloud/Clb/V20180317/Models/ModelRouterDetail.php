@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DecisionsConfig getDecisionsConfig() 获取<p>决策模型设置</p>
  * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>决策模型设置</p>
+ * @method ImageConfig getImageConfig() 获取<p>Images 生图配置</p>
+ * @method void setImageConfig(ImageConfig $ImageConfig) 设置<p>Images 生图配置</p>
  */
 class ModelRouterDetail extends AbstractModel
 {
@@ -252,6 +254,11 @@ class ModelRouterDetail extends AbstractModel
     public $DecisionsConfig;
 
     /**
+     * @var ImageConfig <p>Images 生图配置</p>
+     */
+    public $ImageConfig;
+
+    /**
      * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
@@ -288,6 +295,7 @@ class ModelRouterDetail extends AbstractModel
      * @param RerankConfig $RerankConfig <p>Rerank调度配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DecisionsConfig $DecisionsConfig <p>决策模型设置</p>
+     * @param ImageConfig $ImageConfig <p>Images 生图配置</p>
      */
     function __construct()
     {
@@ -443,6 +451,11 @@ class ModelRouterDetail extends AbstractModel
         if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
             $this->DecisionsConfig = new DecisionsConfig();
             $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
+        }
+
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
         }
     }
 }

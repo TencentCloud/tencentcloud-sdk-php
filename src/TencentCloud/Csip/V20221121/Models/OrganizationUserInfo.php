@@ -20,210 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集团账号成员详情
  *
- * @method string getUin() 获取成员账号Uin
- * @method void setUin(string $Uin) 设置成员账号Uin
- * @method string getNickName() 获取成员账号名称
- * @method void setNickName(string $NickName) 设置成员账号名称
- * @method string getNodeName() 获取部门节点名称，账号所属部门
- * @method void setNodeName(string $NodeName) 设置部门节点名称，账号所属部门
- * @method integer getAssetCount() 获取资产数量
- * @method void setAssetCount(integer $AssetCount) 设置资产数量
- * @method integer getRiskCount() 获取风险数量
- * @method void setRiskCount(integer $RiskCount) 设置风险数量
- * @method integer getAttackCount() 获取攻击数量
- * @method void setAttackCount(integer $AttackCount) 设置攻击数量
- * @method string getRole() 获取Member/Admin/;成员或者管理员
- * @method void setRole(string $Role) 设置Member/Admin/;成员或者管理员
- * @method string getMemberId() 获取成员账号id
- * @method void setMemberId(string $MemberId) 设置成员账号id
- * @method string getAppId() 获取成员账号Appid
- * @method void setAppId(string $AppId) 设置成员账号Appid
- * @method string getJoinType() 获取账号加入方式,create/invite
- * @method void setJoinType(string $JoinType) 设置账号加入方式,create/invite
- * @method string getCFWProtect() 获取空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method void setCFWProtect(string $CFWProtect) 设置空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method string getWAFProtect() 获取空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method void setWAFProtect(string $WAFProtect) 设置空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method string getCWPProtect() 获取空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method void setCWPProtect(string $CWPProtect) 设置空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
- * @method integer getEnable() 获取1启用，0未启用
- * @method void setEnable(integer $Enable) 设置1启用，0未启用
- * @method string getCSIPProtect() 获取"Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
- * @method void setCSIPProtect(string $CSIPProtect) 设置"Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
- * @method integer getQuotaConsumer() 获取1为配额消耗者
- * @method void setQuotaConsumer(integer $QuotaConsumer) 设置1为配额消耗者
- * @method integer getCloudType() 获取账户类型，0为腾讯云账户，1为AWS账户
- * @method void setCloudType(integer $CloudType) 设置账户类型，0为腾讯云账户，1为AWS账户
- * @method integer getSyncFrequency() 获取0为缺省值，1为10分钟，2为1小时，3为24小时
- * @method void setSyncFrequency(integer $SyncFrequency) 设置0为缺省值，1为10分钟，2为1小时，3为24小时
- * @method boolean getIsExpired() 获取多云账户是否过期
- * @method void setIsExpired(boolean $IsExpired) 设置多云账户是否过期
- * @method array getPermissionList() 获取多云账户 权限列表
- * @method void setPermissionList(array $PermissionList) 设置多云账户 权限列表
- * @method integer getAuthType() 获取1
- * @method void setAuthType(integer $AuthType) 设置1
- * @method integer getTcMemberType() 获取0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
- * @method void setTcMemberType(integer $TcMemberType) 设置0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
- * @method integer getSubUserCount() 获取子账号数量
- * @method void setSubUserCount(integer $SubUserCount) 设置子账号数量
- * @method string getJoinTypeInfo() 获取加入方式详细信息
- * @method void setJoinTypeInfo(string $JoinTypeInfo) 设置加入方式详细信息
+ * @method string getUin() 获取<p>成员账号Uin</p>
+ * @method void setUin(string $Uin) 设置<p>成员账号Uin</p>
+ * @method string getNickName() 获取<p>成员账号名称</p>
+ * @method void setNickName(string $NickName) 设置<p>成员账号名称</p>
+ * @method string getNodeName() 获取<p>部门节点名称，账号所属部门</p>
+ * @method void setNodeName(string $NodeName) 设置<p>部门节点名称，账号所属部门</p>
+ * @method integer getAssetCount() 获取<p>资产数量</p>
+ * @method void setAssetCount(integer $AssetCount) 设置<p>资产数量</p>
+ * @method integer getRiskCount() 获取<p>风险数量</p>
+ * @method void setRiskCount(integer $RiskCount) 设置<p>风险数量</p>
+ * @method integer getAttackCount() 获取<p>攻击数量</p>
+ * @method void setAttackCount(integer $AttackCount) 设置<p>攻击数量</p>
+ * @method string getRole() 获取<p>Member/Admin/;成员或者管理员</p>
+ * @method void setRole(string $Role) 设置<p>Member/Admin/;成员或者管理员</p>
+ * @method string getMemberId() 获取<p>成员账号id</p>
+ * @method void setMemberId(string $MemberId) 设置<p>成员账号id</p>
+ * @method string getAppId() 获取<p>成员账号Appid</p>
+ * @method void setAppId(string $AppId) 设置<p>成员账号Appid</p>
+ * @method string getJoinType() 获取<p>账号加入方式,create/invite</p>
+ * @method void setJoinType(string $JoinType) 设置<p>账号加入方式,create/invite</p>
+ * @method string getCFWProtect() 获取<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method void setCFWProtect(string $CFWProtect) 设置<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method string getWAFProtect() 获取<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method void setWAFProtect(string $WAFProtect) 设置<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method string getCWPProtect() 获取<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method void setCWPProtect(string $CWPProtect) 设置<p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+ * @method integer getEnable() 获取<p>1启用，0未启用</p>
+ * @method void setEnable(integer $Enable) 设置<p>1启用，0未启用</p>
+ * @method string getCSIPProtect() 获取<p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
+ * @method void setCSIPProtect(string $CSIPProtect) 设置<p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
+ * @method integer getQuotaConsumer() 获取<p>1为配额消耗者</p>
+ * @method void setQuotaConsumer(integer $QuotaConsumer) 设置<p>1为配额消耗者</p>
+ * @method integer getCloudType() 获取<p>账户类型，0为腾讯云账户，1为AWS账户</p>
+ * @method void setCloudType(integer $CloudType) 设置<p>账户类型，0为腾讯云账户，1为AWS账户</p>
+ * @method integer getSyncFrequency() 获取<p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
+ * @method void setSyncFrequency(integer $SyncFrequency) 设置<p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
+ * @method boolean getIsExpired() 获取<p>多云账户是否过期</p>
+ * @method void setIsExpired(boolean $IsExpired) 设置<p>多云账户是否过期</p>
+ * @method array getPermissionList() 获取<p>多云账户 权限列表</p>
+ * @method void setPermissionList(array $PermissionList) 设置<p>多云账户 权限列表</p>
+ * @method integer getAuthType() 获取<p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
+ * @method void setAuthType(integer $AuthType) 设置<p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
+ * @method integer getTcMemberType() 获取<p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
+ * @method void setTcMemberType(integer $TcMemberType) 设置<p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
+ * @method integer getSubUserCount() 获取<p>子账号数量</p>
+ * @method void setSubUserCount(integer $SubUserCount) 设置<p>子账号数量</p>
+ * @method string getJoinTypeInfo() 获取<p>加入方式详细信息</p>
+ * @method void setJoinTypeInfo(string $JoinTypeInfo) 设置<p>加入方式详细信息</p>
+ * @method array getSharedModules() 获取<p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+ * @method void setSharedModules(array $SharedModules) 设置<p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+ * @method integer getSecurityScore() 获取<p>安全分</p>
+ * @method void setSecurityScore(integer $SecurityScore) 设置<p>安全分</p>
  */
 class OrganizationUserInfo extends AbstractModel
 {
     /**
-     * @var string 成员账号Uin
+     * @var string <p>成员账号Uin</p>
      */
     public $Uin;
 
     /**
-     * @var string 成员账号名称
+     * @var string <p>成员账号名称</p>
      */
     public $NickName;
 
     /**
-     * @var string 部门节点名称，账号所属部门
+     * @var string <p>部门节点名称，账号所属部门</p>
      */
     public $NodeName;
 
     /**
-     * @var integer 资产数量
+     * @var integer <p>资产数量</p>
      */
     public $AssetCount;
 
     /**
-     * @var integer 风险数量
+     * @var integer <p>风险数量</p>
      */
     public $RiskCount;
 
     /**
-     * @var integer 攻击数量
+     * @var integer <p>攻击数量</p>
      */
     public $AttackCount;
 
     /**
-     * @var string Member/Admin/;成员或者管理员
+     * @var string <p>Member/Admin/;成员或者管理员</p>
      */
     public $Role;
 
     /**
-     * @var string 成员账号id
+     * @var string <p>成员账号id</p>
      */
     public $MemberId;
 
     /**
-     * @var string 成员账号Appid
+     * @var string <p>成员账号Appid</p>
      */
     public $AppId;
 
     /**
-     * @var string 账号加入方式,create/invite
+     * @var string <p>账号加入方式,create/invite</p>
      */
     public $JoinType;
 
     /**
-     * @var string 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * @var string <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public $CFWProtect;
 
     /**
-     * @var string 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * @var string <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public $WAFProtect;
 
     /**
-     * @var string 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
+     * @var string <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
      */
     public $CWPProtect;
 
     /**
-     * @var integer 1启用，0未启用
+     * @var integer <p>1启用，0未启用</p>
      */
     public $Enable;
 
     /**
-     * @var string "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
+     * @var string <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
      */
     public $CSIPProtect;
 
     /**
-     * @var integer 1为配额消耗者
+     * @var integer <p>1为配额消耗者</p>
      */
     public $QuotaConsumer;
 
     /**
-     * @var integer 账户类型，0为腾讯云账户，1为AWS账户
+     * @var integer <p>账户类型，0为腾讯云账户，1为AWS账户</p>
      */
     public $CloudType;
 
     /**
-     * @var integer 0为缺省值，1为10分钟，2为1小时，3为24小时
+     * @var integer <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
      */
     public $SyncFrequency;
 
     /**
-     * @var boolean 多云账户是否过期
+     * @var boolean <p>多云账户是否过期</p>
      */
     public $IsExpired;
 
     /**
-     * @var array 多云账户 权限列表
+     * @var array <p>多云账户 权限列表</p>
      */
     public $PermissionList;
 
     /**
-     * @var integer 1
+     * @var integer <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
      */
     public $AuthType;
 
     /**
-     * @var integer 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
+     * @var integer <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
      */
     public $TcMemberType;
 
     /**
-     * @var integer 子账号数量
+     * @var integer <p>子账号数量</p>
      */
     public $SubUserCount;
 
     /**
-     * @var string 加入方式详细信息
+     * @var string <p>加入方式详细信息</p>
      */
     public $JoinTypeInfo;
 
     /**
-     * @param string $Uin 成员账号Uin
-     * @param string $NickName 成员账号名称
-     * @param string $NodeName 部门节点名称，账号所属部门
-     * @param integer $AssetCount 资产数量
-     * @param integer $RiskCount 风险数量
-     * @param integer $AttackCount 攻击数量
-     * @param string $Role Member/Admin/;成员或者管理员
-     * @param string $MemberId 成员账号id
-     * @param string $AppId 成员账号Appid
-     * @param string $JoinType 账号加入方式,create/invite
-     * @param string $CFWProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param string $WAFProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param string $CWPProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-     * @param integer $Enable 1启用，0未启用
-     * @param string $CSIPProtect "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-     * @param integer $QuotaConsumer 1为配额消耗者
-     * @param integer $CloudType 账户类型，0为腾讯云账户，1为AWS账户
-     * @param integer $SyncFrequency 0为缺省值，1为10分钟，2为1小时，3为24小时
-     * @param boolean $IsExpired 多云账户是否过期
-     * @param array $PermissionList 多云账户 权限列表
-     * @param integer $AuthType 1
-     * @param integer $TcMemberType 0 腾讯云集团账户
-1 腾讯云接入账户
-2 非腾讯云
-     * @param integer $SubUserCount 子账号数量
-     * @param string $JoinTypeInfo 加入方式详细信息
+     * @var array <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+     */
+    public $SharedModules;
+
+    /**
+     * @var integer <p>安全分</p>
+     */
+    public $SecurityScore;
+
+    /**
+     * @param string $Uin <p>成员账号Uin</p>
+     * @param string $NickName <p>成员账号名称</p>
+     * @param string $NodeName <p>部门节点名称，账号所属部门</p>
+     * @param integer $AssetCount <p>资产数量</p>
+     * @param integer $RiskCount <p>风险数量</p>
+     * @param integer $AttackCount <p>攻击数量</p>
+     * @param string $Role <p>Member/Admin/;成员或者管理员</p>
+     * @param string $MemberId <p>成员账号id</p>
+     * @param string $AppId <p>成员账号Appid</p>
+     * @param string $JoinType <p>账号加入方式,create/invite</p>
+     * @param string $CFWProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param string $WAFProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param string $CWPProtect <p>空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本</p>
+     * @param integer $Enable <p>1启用，0未启用</p>
+     * @param string $CSIPProtect <p>&quot;Free&quot;       //免费版  &quot;Advanced&quot;   //高级版 &quot;Enterprise&quot; //企业版 &quot;Ultimate&quot;   //旗舰版</p>
+     * @param integer $QuotaConsumer <p>1为配额消耗者</p>
+     * @param integer $CloudType <p>账户类型，0为腾讯云账户，1为AWS账户</p>
+     * @param integer $SyncFrequency <p>0为缺省值，1为10分钟，2为1小时，3为24小时</p>
+     * @param boolean $IsExpired <p>多云账户是否过期</p>
+     * @param array $PermissionList <p>多云账户 权限列表</p>
+     * @param integer $AuthType <p>账户权限类型</p><p>枚举值：</p><ul><li>1： 认证类型-Root账号AKSK</li><li>2： 认证类型-子账号AKSK</li><li>3： 认证类型-角色</li></ul>
+     * @param integer $TcMemberType <p>0 腾讯云集团账户<br>1 腾讯云接入账户<br>2 非腾讯云</p>
+     * @param integer $SubUserCount <p>子账号数量</p>
+     * @param string $JoinTypeInfo <p>加入方式详细信息</p>
+     * @param array $SharedModules <p>被共享模块列表</p><p>枚举值：</p><ul><li>AKSK： 云API异常监测</li><li>SDL： 日志分析</li><li>CSPM： 云安全态势管理</li><li>CWP： 主机安全</li><li>COS_AUDIT： COS审计</li><li>IMAGE_SCAN： 容器镜像扫描</li><li>SKILL_SCAN： Skill安全检测</li><li>SKILL_SCAN_POST： Skill安全检测(后付费)</li><li>DSPM： 数据安全态势管理</li></ul><p>默认值：[]</p>
+     * @param integer $SecurityScore <p>安全分</p>
      */
     function __construct()
     {
@@ -332,6 +340,14 @@ class OrganizationUserInfo extends AbstractModel
 
         if (array_key_exists("JoinTypeInfo",$param) and $param["JoinTypeInfo"] !== null) {
             $this->JoinTypeInfo = $param["JoinTypeInfo"];
+        }
+
+        if (array_key_exists("SharedModules",$param) and $param["SharedModules"] !== null) {
+            $this->SharedModules = $param["SharedModules"];
+        }
+
+        if (array_key_exists("SecurityScore",$param) and $param["SecurityScore"] !== null) {
+            $this->SecurityScore = $param["SecurityScore"];
         }
     }
 }

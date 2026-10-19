@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>指定修改后的实例名称。支持 60 个字符内 的中英文、数字、中划线（-）及下划线（_）。</p>
  * @method string getDescription() 获取<p>指定修改后的实例描述。最多支持 200 个字符。</p>
  * @method void setDescription(string $Description) 设置<p>指定修改后的实例描述。最多支持 200 个字符。</p>
+ * @method boolean getCompressed() 获取<p>是否开启压缩</p>
+ * @method void setCompressed(boolean $Compressed) 设置<p>是否开启压缩</p>
  */
 class ModifyMemoryPlusSpaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyMemoryPlusSpaceRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var boolean <p>是否开启压缩</p>
+     */
+    public $Compressed;
+
+    /**
      * @param string $SpaceId <p>指定需要修改的 Memory 实例 ID。</p>
      * @param string $Name <p>指定修改后的实例名称。支持 60 个字符内 的中英文、数字、中划线（-）及下划线（_）。</p>
      * @param string $Description <p>指定修改后的实例描述。最多支持 200 个字符。</p>
+     * @param boolean $Compressed <p>是否开启压缩</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyMemoryPlusSpaceRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Compressed",$param) and $param["Compressed"] !== null) {
+            $this->Compressed = $param["Compressed"];
         }
     }
 }

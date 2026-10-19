@@ -20,185 +20,165 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流统一调度出参
  *
- * @method string getScheduleTimeZone() 获取时区
+ * @method string getScheduleTimeZone() 获取<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置<p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCycleType() 获取周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+ * @method string getCycleType() 获取<p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCycleType(string $CycleType) 设置周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+ * @method void setCycleType(string $CycleType) 设置<p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSelfDepend() 获取自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+ * @method string getSelfDepend() 获取<p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSelfDepend(string $SelfDepend) 设置自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+ * @method void setSelfDepend(string $SelfDepend) 设置<p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取生效开始时间
+ * @method string getStartTime() 获取<p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置生效开始时间
+ * @method void setStartTime(string $StartTime) 设置<p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取生效结束时间
+ * @method string getEndTime() 获取<p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置生效结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDependencyWorkflow() 获取工作流依赖，yes or no
+ * @method string getDependencyWorkflow() 获取<p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置工作流依赖，yes or no
+ * @method void setDependencyWorkflow(string $DependencyWorkflow) 设置<p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionStartTime() 获取执行时间左闭区间，示例：00:00
+ * @method string getExecutionStartTime() 获取<p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionStartTime(string $ExecutionStartTime) 设置执行时间左闭区间，示例：00:00
+ * @method void setExecutionStartTime(string $ExecutionStartTime) 设置<p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecutionEndTime() 获取执行时间右闭区间，示例：23:59
+ * @method string getExecutionEndTime() 获取<p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecutionEndTime(string $ExecutionEndTime) 设置执行时间右闭区间，示例：23:59
+ * @method void setExecutionEndTime(string $ExecutionEndTime) 设置<p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCrontabExpression() 获取cron表达式
+ * @method string getCrontabExpression() 获取<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCrontabExpression(string $CrontabExpression) 设置cron表达式
+ * @method void setCrontabExpression(string $CrontabExpression) 设置<p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarOpen() 获取是否开启日历调度 1 开启 0关闭
+ * @method string getCalendarOpen() 获取<p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarOpen(string $CalendarOpen) 设置是否开启日历调度 1 开启 0关闭
+ * @method void setCalendarOpen(string $CalendarOpen) 设置<p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarName() 获取日历名称
+ * @method string getCalendarName() 获取<p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarName(string $CalendarName) 设置日历名称
+ * @method void setCalendarName(string $CalendarName) 设置<p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCalendarId() 获取日历id
+ * @method string getCalendarId() 获取<p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCalendarId(string $CalendarId) 设置日历id
+ * @method void setCalendarId(string $CalendarId) 设置<p>日历id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinuteOffset() 获取<p>分钟任务相位偏移</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinuteOffset(integer $MinuteOffset) 设置<p>分钟任务相位偏移</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowSchedulerConfiguration extends AbstractModel
 {
     /**
-     * @var string 时区
+     * @var string <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduleTimeZone;
 
     /**
-     * @var string 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @var string <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
-     * @var string 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @var string <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfDepend;
 
     /**
-     * @var string 生效开始时间
+     * @var string <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string 生效结束时间
+     * @var string <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 工作流依赖，yes or no
+     * @var string <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependencyWorkflow;
 
     /**
-     * @var string 执行时间左闭区间，示例：00:00
+     * @var string <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionStartTime;
 
     /**
-     * @var string 执行时间右闭区间，示例：23:59
+     * @var string <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionEndTime;
 
     /**
-     * @var string cron表达式
+     * @var string <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrontabExpression;
 
     /**
-     * @var string 是否开启日历调度 1 开启 0关闭
+     * @var string <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarOpen;
 
     /**
-     * @var string 日历名称
+     * @var string <p>日历名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarName;
 
     /**
-     * @var string 日历id
+     * @var string <p>日历id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalendarId;
 
     /**
-     * @param string $ScheduleTimeZone 时区
+     * @var integer <p>分钟任务相位偏移</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CycleType 周期类型：支持的类型为
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     */
+    public $MinuteOffset;
+
+    /**
+     * @param string $ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @param string $CycleType <p>周期类型：支持的类型为<br>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime 生效开始时间
+     * @param string $SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 生效结束时间
+     * @param string $StartTime <p>生效开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DependencyWorkflow 工作流依赖，yes or no
+     * @param string $EndTime <p>生效结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionStartTime 执行时间左闭区间，示例：00:00
+     * @param string $DependencyWorkflow <p>工作流依赖，yes or no</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecutionEndTime 执行时间右闭区间，示例：23:59
+     * @param string $ExecutionStartTime <p>执行时间左闭区间，示例：00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CrontabExpression cron表达式
+     * @param string $ExecutionEndTime <p>执行时间右闭区间，示例：23:59</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarOpen 是否开启日历调度 1 开启 0关闭
+     * @param string $CrontabExpression <p>cron表达式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarName 日历名称
+     * @param string $CalendarOpen <p>是否开启日历调度 1 开启 0关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CalendarId 日历id
+     * @param string $CalendarName <p>日历名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CalendarId <p>日历id</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinuteOffset <p>分钟任务相位偏移</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +240,10 @@ CRONTAB_CYCLE: crontab表达式类型
 
         if (array_key_exists("CalendarId",$param) and $param["CalendarId"] !== null) {
             $this->CalendarId = $param["CalendarId"];
+        }
+
+        if (array_key_exists("MinuteOffset",$param) and $param["MinuteOffset"] !== null) {
+            $this->MinuteOffset = $param["MinuteOffset"];
         }
     }
 }

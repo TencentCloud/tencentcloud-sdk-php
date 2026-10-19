@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCacheDiskSize(string $CacheDiskSize) 设置<p>缓存盘大小</p>
  * @method integer getCacheDataDiskSize() 获取<p>缓存盘大小</p>
  * @method void setCacheDataDiskSize(integer $CacheDataDiskSize) 设置<p>缓存盘大小</p>
- * @method integer getDiskEncrypt() 获取<p>磁盘加密</p>
- * @method void setDiskEncrypt(integer $DiskEncrypt) 设置<p>磁盘加密</p>
+ * @method integer getDiskEncrypt() 获取<p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
+ * @method void setDiskEncrypt(integer $DiskEncrypt) 设置<p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -168,7 +168,7 @@ class CreateInstanceNewRequest extends AbstractModel
     public $CacheDataDiskSize;
 
     /**
-     * @var integer <p>磁盘加密</p>
+     * @var integer <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     public $DiskEncrypt;
 
@@ -193,7 +193,7 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param integer $SSCCU <p>CU数</p>
      * @param string $CacheDiskSize <p>缓存盘大小</p>
      * @param integer $CacheDataDiskSize <p>缓存盘大小</p>
-     * @param integer $DiskEncrypt <p>磁盘加密</p>
+     * @param integer $DiskEncrypt <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     function __construct()
     {

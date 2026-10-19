@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUserUins() 获取<p>用户 UIN 列表，单次最多100个</p>
  * @method void setUserUins(array $UserUins) 设置<p>用户 UIN 列表，单次最多100个</p>
- * @method array getRoleIds() 获取<p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
- * @method void setRoleIds(array $RoleIds) 设置<p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
+ * @method array getRoleIds() 获取<p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul><p>可通过 ListConsoleRoles 接口获取</p>
+ * @method void setRoleIds(array $RoleIds) 设置<p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul><p>可通过 ListConsoleRoles 接口获取</p>
  */
 class AddConsoleUsersRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AddConsoleUsersRequest extends AbstractModel
     public $UserUins;
 
     /**
-     * @var array <p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
+     * @var array <p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul><p>可通过 ListConsoleRoles 接口获取</p>
      */
     public $RoleIds;
 
     /**
      * @param array $UserUins <p>用户 UIN 列表，单次最多100个</p>
-     * @param array $RoleIds <p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul>
+     * @param array $RoleIds <p>角色 ID 列表</p><p>枚举值：</p><ul><li>2001： 控制台管理员</li><li>2002： 控制台成员</li></ul><p>可通过 ListConsoleRoles 接口获取</p>
      */
     function __construct()
     {

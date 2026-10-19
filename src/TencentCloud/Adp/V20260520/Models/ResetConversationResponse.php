@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetConversation返回参数结构体
  *
+ * @method string getResetTime() 获取<p>重置时间，单位为ms</p>
+ * @method void setResetTime(string $ResetTime) 设置<p>重置时间，单位为ms</p>
+ * @method string getResetThroughRecordId() 获取<p>重置前的最后一条记录的recordId</p>
+ * @method void setResetThroughRecordId(string $ResetThroughRecordId) 设置<p>重置前的最后一条记录的recordId</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ResetConversationResponse extends AbstractModel
 {
     /**
+     * @var string <p>重置时间，单位为ms</p>
+     */
+    public $ResetTime;
+
+    /**
+     * @var string <p>重置前的最后一条记录的recordId</p>
+     */
+    public $ResetThroughRecordId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $ResetTime <p>重置时间，单位为ms</p>
+     * @param string $ResetThroughRecordId <p>重置前的最后一条记录的recordId</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class ResetConversationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ResetTime",$param) and $param["ResetTime"] !== null) {
+            $this->ResetTime = $param["ResetTime"];
+        }
+
+        if (array_key_exists("ResetThroughRecordId",$param) and $param["ResetThroughRecordId"] !== null) {
+            $this->ResetThroughRecordId = $param["ResetThroughRecordId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStopTime(integer $StopTime) 设置<p>停止时间（最近一次停止/休眠）</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue）</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class RayClusterEntity extends AbstractModel
 {
@@ -220,6 +222,11 @@ class RayClusterEntity extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Id <p>集群ID</p>
      * @param string $Type <p>资源类型：CLUSTER-普通集群；WORKSPACE-数据实验室（开发入口）</p>
      * @param string $Name <p>集群名称</p>
@@ -248,6 +255,7 @@ class RayClusterEntity extends AbstractModel
      * @param integer $StartTime <p>启动时间（最近一次启动）</p>
      * @param integer $StopTime <p>停止时间（最近一次停止/休眠）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue）</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -377,6 +385,10 @@ class RayClusterEntity extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将任务与腾讯云标签系统中的标签绑定</p>
  * @method string getOutputModelName() 获取<p>产出模型名称（用于后续模型注册，当前仅保存）</p>
  * @method void setOutputModelName(string $OutputModelName) 设置<p>产出模型名称（用于后续模型注册，当前仅保存）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class SubmitTrainingJobRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class SubmitTrainingJobRequest extends AbstractModel
     public $OutputModelName;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $SpecName <p>训练作业配置名称（≤255 字符）</p>
      * @param string $Description <p>描述（≤1024 字符）</p>
      * @param string $Entrypoint <p>启动命令</p>
@@ -224,6 +231,7 @@ class SubmitTrainingJobRequest extends AbstractModel
      * @param MlFlowConfig $MlFlowConfig <p>MlFlow 实验追踪配置（可选，不传则不启用 MlFlow）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将任务与腾讯云标签系统中的标签绑定</p>
      * @param string $OutputModelName <p>产出模型名称（用于后续模型注册，当前仅保存）</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -349,6 +357,10 @@ class SubmitTrainingJobRequest extends AbstractModel
 
         if (array_key_exists("OutputModelName",$param) and $param["OutputModelName"] !== null) {
             $this->OutputModelName = $param["OutputModelName"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

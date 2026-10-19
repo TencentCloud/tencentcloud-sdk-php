@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountPath(string $MountPath) 设置<p>沙箱实例本地挂载路径</p>
  * @method boolean getReadOnly() 获取<p>存储挂载读写权限配置，默认为false</p>
  * @method void setReadOnly(boolean $ReadOnly) 设置<p>存储挂载读写权限配置，默认为false</p>
+ * @method VolumeRef getVolume() 获取<p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolume(VolumeRef $Volume) 设置<p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method VolumeTemplateRef getVolumeTemplate() 获取<p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeTemplate(VolumeTemplateRef $VolumeTemplate) 设置<p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StorageMount extends AbstractModel
 {
@@ -55,11 +63,27 @@ class StorageMount extends AbstractModel
     public $ReadOnly;
 
     /**
+     * @var VolumeRef <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Volume;
+
+    /**
+     * @var VolumeTemplateRef <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeTemplate;
+
+    /**
      * @param string $Name <p>存储挂载配置名称</p>
      * @param StorageSource $StorageSource <p>存储配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountPath <p>沙箱实例本地挂载路径</p>
      * @param boolean $ReadOnly <p>存储挂载读写权限配置，默认为false</p>
+     * @param VolumeRef $Volume <p>Volume的引用</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VolumeTemplateRef $VolumeTemplate <p>VolumeTemplate 的引用以及派生规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,6 +113,16 @@ class StorageMount extends AbstractModel
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
             $this->ReadOnly = $param["ReadOnly"];
+        }
+
+        if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
+            $this->Volume = new VolumeRef();
+            $this->Volume->deserialize($param["Volume"]);
+        }
+
+        if (array_key_exists("VolumeTemplate",$param) and $param["VolumeTemplate"] !== null) {
+            $this->VolumeTemplate = new VolumeTemplateRef();
+            $this->VolumeTemplate->deserialize($param["VolumeTemplate"]);
         }
     }
 }

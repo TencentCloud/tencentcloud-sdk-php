@@ -202,6 +202,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossAccountStatus(integer $CrossAccountStatus) 设置<p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
  * @method string getCrossAccountPeerId() 获取<p>跨账号关联ID</p>
  * @method void setCrossAccountPeerId(string $CrossAccountPeerId) 设置<p>跨账号关联ID</p>
+ * @method SpanStatusConfig getSpanStatusConfig() 获取<p>自定义 Span 状态配置</p>
+ * @method void setSpanStatusConfig(SpanStatusConfig $SpanStatusConfig) 设置<p>自定义 Span 状态配置</p>
+ * @method boolean getEnableSpanStatusConfig() 获取<p>应用级自定义 Span 状态开关</p>
+ * @method void setEnableSpanStatusConfig(boolean $EnableSpanStatusConfig) 设置<p>应用级自定义 Span 状态开关</p>
  */
 class ApmAppConfig extends AbstractModel
 {
@@ -569,6 +573,16 @@ class ApmAppConfig extends AbstractModel
     public $CrossAccountPeerId;
 
     /**
+     * @var SpanStatusConfig <p>自定义 Span 状态配置</p>
+     */
+    public $SpanStatusConfig;
+
+    /**
+     * @var boolean <p>应用级自定义 Span 状态开关</p>
+     */
+    public $EnableSpanStatusConfig;
+
+    /**
      * @param string $InstanceKey <p>实例ID</p>
      * @param string $ServiceName <p>服务名</p>
      * @param integer $UrlConvergenceSwitch <p>URL收敛开关</p>
@@ -660,6 +674,8 @@ class ApmAppConfig extends AbstractModel
      * @param integer $HeadSamplerArg <p>采样阈值，100等于关闭采样，0表示全采样</p>
      * @param integer $CrossAccountStatus <p>是否为跨账号</p><p>枚举值：</p><ul><li>0： 否</li><li>1： 是</li></ul>
      * @param string $CrossAccountPeerId <p>跨账号关联ID</p>
+     * @param SpanStatusConfig $SpanStatusConfig <p>自定义 Span 状态配置</p>
+     * @param boolean $EnableSpanStatusConfig <p>应用级自定义 Span 状态开关</p>
      */
     function __construct()
     {
@@ -956,6 +972,15 @@ class ApmAppConfig extends AbstractModel
 
         if (array_key_exists("CrossAccountPeerId",$param) and $param["CrossAccountPeerId"] !== null) {
             $this->CrossAccountPeerId = $param["CrossAccountPeerId"];
+        }
+
+        if (array_key_exists("SpanStatusConfig",$param) and $param["SpanStatusConfig"] !== null) {
+            $this->SpanStatusConfig = new SpanStatusConfig();
+            $this->SpanStatusConfig->deserialize($param["SpanStatusConfig"]);
+        }
+
+        if (array_key_exists("EnableSpanStatusConfig",$param) and $param["EnableSpanStatusConfig"] !== null) {
+            $this->EnableSpanStatusConfig = $param["EnableSpanStatusConfig"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddWorkspaceGroups请求参数结构体
  *
- * @method array getGroupIds() 获取用户组ID，可通过 ListWorkspaceGroups 接口获取
- * @method void setGroupIds(array $GroupIds) 设置用户组ID，可通过 ListWorkspaceGroups 接口获取
- * @method string getWorkspaceId() 获取工作空间ID
- * @method void setWorkspaceId(string $WorkspaceId) 设置工作空间ID
- * @method array getRoleIds() 获取角色ID，可通过 ListWorkspaceRoles 接口获取
- * @method void setRoleIds(array $RoleIds) 设置角色ID，可通过 ListWorkspaceRoles 接口获取
+ * @method array getGroupIds() 获取<p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
+ * @method string getWorkspaceId() 获取<p>工作空间ID</p>
+ * @method void setWorkspaceId(string $WorkspaceId) 设置<p>工作空间ID</p>
+ * @method array getRoleIds() 获取<p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
+ * @method void setRoleIds(array $RoleIds) 设置<p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
  */
 class AddWorkspaceGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 用户组ID，可通过 ListWorkspaceGroups 接口获取
+     * @var array <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
      */
     public $GroupIds;
 
     /**
-     * @var string 工作空间ID
+     * @var string <p>工作空间ID</p>
      */
     public $WorkspaceId;
 
     /**
-     * @var array 角色ID，可通过 ListWorkspaceRoles 接口获取
+     * @var array <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
      */
     public $RoleIds;
 
     /**
-     * @param array $GroupIds 用户组ID，可通过 ListWorkspaceGroups 接口获取
-     * @param string $WorkspaceId 工作空间ID
-     * @param array $RoleIds 角色ID，可通过 ListWorkspaceRoles 接口获取
+     * @param array $GroupIds <p>用户组ID，可通过 ListConsoleGroups 接口获取</p>
+     * @param string $WorkspaceId <p>工作空间ID</p>
+     * @param array $RoleIds <p>角色ID，可通过 ListWorkspaceRoles 接口获取</p>
      */
     function __construct()
     {

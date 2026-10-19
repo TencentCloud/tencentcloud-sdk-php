@@ -20,125 +20,92 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeGeneralCardWarn返回参数结构体
  *
- * @method string getCardType() 获取卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
- * @method void setCardType(string $CardType) 设置卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
- * @method GeneralCardWarnInfo getBlur() 获取模糊信息
- * @method void setBlur(GeneralCardWarnInfo $Blur) 设置模糊信息
- * @method GeneralCardWarnInfo getBorderIncomplete() 获取边框不完整信息
- * @method void setBorderIncomplete(GeneralCardWarnInfo $BorderIncomplete) 设置边框不完整信息
- * @method GeneralCardWarnInfo getCopy() 获取复印件信息
- * @method void setCopy(GeneralCardWarnInfo $Copy) 设置复印件信息
- * @method GeneralCardWarnInfo getPs() 获取ps篡改信息
- * @method void setPs(GeneralCardWarnInfo $Ps) 设置ps篡改信息
- * @method GeneralCardWarnInfo getReflection() 获取反光信息
- * @method void setReflection(GeneralCardWarnInfo $Reflection) 设置反光信息
- * @method GeneralCardWarnInfo getReprint() 获取翻拍件信息
- * @method void setReprint(GeneralCardWarnInfo $Reprint) 设置翻拍件信息
- * @method GeneralCardWarnInfo getScreenshot() 获取是否截图
- * @method void setScreenshot(GeneralCardWarnInfo $Screenshot) 设置是否截图
- * @method GeneralCardWarnInfo getCover() 获取是否遮挡
- * @method void setCover(GeneralCardWarnInfo $Cover) 设置是否遮挡
- * @method GeneralCardWarnInfo getOverlap() 获取是否重叠
- * @method void setOverlap(GeneralCardWarnInfo $Overlap) 设置是否重叠
- * @method GeneralCardWarnInfo getWatermark() 获取是否水印
- * @method void setWatermark(GeneralCardWarnInfo $Watermark) 设置是否水印
- * @method GeneralCardWarnInfo getElectron() 获取是否电子证照（目前仅支持电子身份证、电子营业执照识别
- * @method void setElectron(GeneralCardWarnInfo $Electron) 设置是否电子证照（目前仅支持电子身份证、电子营业执照识别
+ * @method string getCardType() 获取<p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
+ * @method void setCardType(string $CardType) 设置<p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
+ * @method GeneralCardWarnInfo getBlur() 获取<p>模糊信息</p>
+ * @method void setBlur(GeneralCardWarnInfo $Blur) 设置<p>模糊信息</p>
+ * @method GeneralCardWarnInfo getBorderIncomplete() 获取<p>边框不完整信息</p>
+ * @method void setBorderIncomplete(GeneralCardWarnInfo $BorderIncomplete) 设置<p>边框不完整信息</p>
+ * @method GeneralCardWarnInfo getCopy() 获取<p>复印件信息</p>
+ * @method void setCopy(GeneralCardWarnInfo $Copy) 设置<p>复印件信息</p>
+ * @method GeneralCardWarnInfo getPs() 获取<p>ps篡改信息</p>
+ * @method void setPs(GeneralCardWarnInfo $Ps) 设置<p>ps篡改信息</p>
+ * @method GeneralCardWarnInfo getReflection() 获取<p>反光信息</p>
+ * @method void setReflection(GeneralCardWarnInfo $Reflection) 设置<p>反光信息</p>
+ * @method GeneralCardWarnInfo getReprint() 获取<p>翻拍件信息</p>
+ * @method void setReprint(GeneralCardWarnInfo $Reprint) 设置<p>翻拍件信息</p>
+ * @method GeneralCardWarnInfo getScreenshot() 获取<p>是否截图</p>
+ * @method void setScreenshot(GeneralCardWarnInfo $Screenshot) 设置<p>是否截图</p>
+ * @method GeneralCardWarnInfo getCover() 获取<p>是否遮挡</p>
+ * @method void setCover(GeneralCardWarnInfo $Cover) 设置<p>是否遮挡</p>
+ * @method GeneralCardWarnInfo getOverlap() 获取<p>是否重叠</p>
+ * @method void setOverlap(GeneralCardWarnInfo $Overlap) 设置<p>是否重叠</p>
+ * @method GeneralCardWarnInfo getWatermark() 获取<p>是否水印</p>
+ * @method void setWatermark(GeneralCardWarnInfo $Watermark) 设置<p>是否水印</p>
+ * @method GeneralCardWarnInfo getElectron() 获取<p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
+ * @method void setElectron(GeneralCardWarnInfo $Electron) 设置<p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeGeneralCardWarnResponse extends AbstractModel
 {
     /**
-     * @var string 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
+     * @var string <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
      */
     public $CardType;
 
     /**
-     * @var GeneralCardWarnInfo 模糊信息
+     * @var GeneralCardWarnInfo <p>模糊信息</p>
      */
     public $Blur;
 
     /**
-     * @var GeneralCardWarnInfo 边框不完整信息
+     * @var GeneralCardWarnInfo <p>边框不完整信息</p>
      */
     public $BorderIncomplete;
 
     /**
-     * @var GeneralCardWarnInfo 复印件信息
+     * @var GeneralCardWarnInfo <p>复印件信息</p>
      */
     public $Copy;
 
     /**
-     * @var GeneralCardWarnInfo ps篡改信息
+     * @var GeneralCardWarnInfo <p>ps篡改信息</p>
      */
     public $Ps;
 
     /**
-     * @var GeneralCardWarnInfo 反光信息
+     * @var GeneralCardWarnInfo <p>反光信息</p>
      */
     public $Reflection;
 
     /**
-     * @var GeneralCardWarnInfo 翻拍件信息
+     * @var GeneralCardWarnInfo <p>翻拍件信息</p>
      */
     public $Reprint;
 
     /**
-     * @var GeneralCardWarnInfo 是否截图
+     * @var GeneralCardWarnInfo <p>是否截图</p>
      */
     public $Screenshot;
 
     /**
-     * @var GeneralCardWarnInfo 是否遮挡
+     * @var GeneralCardWarnInfo <p>是否遮挡</p>
      */
     public $Cover;
 
     /**
-     * @var GeneralCardWarnInfo 是否重叠
+     * @var GeneralCardWarnInfo <p>是否重叠</p>
      */
     public $Overlap;
 
     /**
-     * @var GeneralCardWarnInfo 是否水印
+     * @var GeneralCardWarnInfo <p>是否水印</p>
      */
     public $Watermark;
 
     /**
-     * @var GeneralCardWarnInfo 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     * @var GeneralCardWarnInfo <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
      */
     public $Electron;
 
@@ -148,29 +115,18 @@ SocialSecurityCard：社保卡
     public $RequestId;
 
     /**
-     * @param string $CardType 卡证类型参数，包含以下范围： 
-General：通用卡证
-IDCard：身份证 
-Passport：护照 
-BankCard：银行卡
-VehicleLicense：行驶证
-DriverLicense：驾驶证
-BizLicense：营业执照 
-HmtResidentPermit：港澳台居住证
-ForeignPermanentResident：外国人永居证
-MainlandPermit：港澳台来往内地通行证
-SocialSecurityCard：社保卡
-     * @param GeneralCardWarnInfo $Blur 模糊信息
-     * @param GeneralCardWarnInfo $BorderIncomplete 边框不完整信息
-     * @param GeneralCardWarnInfo $Copy 复印件信息
-     * @param GeneralCardWarnInfo $Ps ps篡改信息
-     * @param GeneralCardWarnInfo $Reflection 反光信息
-     * @param GeneralCardWarnInfo $Reprint 翻拍件信息
-     * @param GeneralCardWarnInfo $Screenshot 是否截图
-     * @param GeneralCardWarnInfo $Cover 是否遮挡
-     * @param GeneralCardWarnInfo $Overlap 是否重叠
-     * @param GeneralCardWarnInfo $Watermark 是否水印
-     * @param GeneralCardWarnInfo $Electron 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     * @param string $CardType <p>卡证类型参数，枚举值：<br>（如入参CardType未填或填入General，返回自动分类的卡证类型，未能分类的其他类型返回General；如入参CardType填入General以外的值，则不进行自动分类、返回相同的值）</p><p>General：其他类型<br>IDCard：身份证<br>Passport：护照<br>BankCard：银行卡<br>VehicleLicense：行驶证<br>DriverLicense：驾驶证<br>BizLicense：营业执照<br>HmtResidentPermit：港澳台居住证<br>ForeignPermanentResident：外国人永居证<br>MainlandPermit：港澳台来往内地通行证<br>SocialSecurityCard：社保卡</p>
+     * @param GeneralCardWarnInfo $Blur <p>模糊信息</p>
+     * @param GeneralCardWarnInfo $BorderIncomplete <p>边框不完整信息</p>
+     * @param GeneralCardWarnInfo $Copy <p>复印件信息</p>
+     * @param GeneralCardWarnInfo $Ps <p>ps篡改信息</p>
+     * @param GeneralCardWarnInfo $Reflection <p>反光信息</p>
+     * @param GeneralCardWarnInfo $Reprint <p>翻拍件信息</p>
+     * @param GeneralCardWarnInfo $Screenshot <p>是否截图</p>
+     * @param GeneralCardWarnInfo $Cover <p>是否遮挡</p>
+     * @param GeneralCardWarnInfo $Overlap <p>是否重叠</p>
+     * @param GeneralCardWarnInfo $Watermark <p>是否水印</p>
+     * @param GeneralCardWarnInfo $Electron <p>是否电子证照（目前仅支持电子身份证、电子营业执照识别</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

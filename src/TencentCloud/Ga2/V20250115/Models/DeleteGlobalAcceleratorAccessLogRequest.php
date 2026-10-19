@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogPushTaskId() 获取<p>日志唯一Id</p>
  * @method void setLogPushTaskId(string $LogPushTaskId) 设置<p>日志唯一Id</p>
- * @method string getGlobalAcceleratorId() 获取<p>GA实例唯一Id</p>
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>GA实例唯一Id</p>
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID</p>
  */
 class DeleteGlobalAcceleratorAccessLogRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteGlobalAcceleratorAccessLogRequest extends AbstractModel
     public $LogPushTaskId;
 
     /**
-     * @var string <p>GA实例唯一Id</p>
+     * @var string <p>全球加速实例ID</p>
      */
     public $GlobalAcceleratorId;
 
     /**
      * @param string $LogPushTaskId <p>日志唯一Id</p>
-     * @param string $GlobalAcceleratorId <p>GA实例唯一Id</p>
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID</p>
      */
     function __construct()
     {

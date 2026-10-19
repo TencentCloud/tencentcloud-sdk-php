@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) 设置<p>镜像名称</p>
  * @method string getAdvancedOptions() 获取<p>高级参数</p>
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数</p>
+ * @method string getNetworkConfig() 获取<p>NetworkConfig</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>NetworkConfig</p>
  */
 class AddDeploymentRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class AddDeploymentRequest extends AbstractModel
     public $AdvancedOptions;
 
     /**
+     * @var string <p>NetworkConfig</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $ServiceId <p>ServiceId</p>
      * @param string $DeploymentName <p>部署名称</p>
      * @param string $Engine <p>推理引擎（vllm / xgboost）</p>
@@ -120,6 +127,7 @@ class AddDeploymentRequest extends AbstractModel
      * @param boolean $AutoscalingEnabled <p>是否启用弹性伸缩</p>
      * @param string $Image <p>镜像名称</p>
      * @param string $AdvancedOptions <p>高级参数</p>
+     * @param string $NetworkConfig <p>NetworkConfig</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class AddDeploymentRequest extends AbstractModel
 
         if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
             $this->AdvancedOptions = $param["AdvancedOptions"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

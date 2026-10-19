@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResources请求参数结构体
  *
- * @method string getApCode() 获取地域码, 如: ap-guangzhou
- * @method void setApCode(string $ApCode) 设置地域码, 如: ap-guangzhou
- * @method string getVpcId() 获取按照堡垒机开通的 VPC 实例ID查询
- * @method void setVpcId(string $VpcId) 设置按照堡垒机开通的 VPC 实例ID查询
- * @method array getResourceIds() 获取资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
- * @method void setResourceIds(array $ResourceIds) 设置资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
- * @method integer getLimit() 获取每页条目数量
- * @method void setLimit(integer $Limit) 设置每页条目数量
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method string getApCode() 获取<p>地域码, 如: ap-guangzhou</p>
+ * @method void setApCode(string $ApCode) 设置<p>地域码, 如: ap-guangzhou</p>
+ * @method string getVpcId() 获取<p>按照堡垒机开通的 VPC 实例ID查询</p>
+ * @method void setVpcId(string $VpcId) 设置<p>按照堡垒机开通的 VPC 实例ID查询</p>
+ * @method array getResourceIds() 获取<p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
+ * @method integer getLimit() 获取<p>每页条目数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页条目数量</p>
+ * @method integer getOffset() 获取<p>分页偏移位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移位置</p>
  */
 class DescribeResourcesRequest extends AbstractModel
 {
     /**
-     * @var string 地域码, 如: ap-guangzhou
+     * @var string <p>地域码, 如: ap-guangzhou</p>
      */
     public $ApCode;
 
     /**
-     * @var string 按照堡垒机开通的 VPC 实例ID查询
+     * @var string <p>按照堡垒机开通的 VPC 实例ID查询</p>
      */
     public $VpcId;
 
     /**
-     * @var array 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
+     * @var array <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
      */
     public $ResourceIds;
 
     /**
-     * @var integer 每页条目数量
+     * @var integer <p>每页条目数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer <p>分页偏移位置</p>
      */
     public $Offset;
 
     /**
-     * @param string $ApCode 地域码, 如: ap-guangzhou
-     * @param string $VpcId 按照堡垒机开通的 VPC 实例ID查询
-     * @param array $ResourceIds 资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId
-     * @param integer $Limit 每页条目数量
-     * @param integer $Offset 分页偏移位置
+     * @param string $ApCode <p>地域码, 如: ap-guangzhou</p>
+     * @param string $VpcId <p>按照堡垒机开通的 VPC 实例ID查询</p>
+     * @param array $ResourceIds <p>资源ID集合，当传入ID集合时忽略 ApCode 和 VpcId</p>
+     * @param integer $Limit <p>每页条目数量</p>
+     * @param integer $Offset <p>分页偏移位置</p>
      */
     function __construct()
     {

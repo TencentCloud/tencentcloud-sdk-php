@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleARN(string $RoleARN) 设置<p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
  * @method string getExternalId() 获取<p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
  * @method void setExternalId(string $ExternalId) 设置<p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
- * @method string getTopicName() 获取<p>topic名称</p>
- * @method void setTopicName(string $TopicName) 设置<p>topic名称</p>
+ * @method string getTopicName() 获取<p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
+ * @method void setTopicName(string $TopicName) 设置<p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
  * @method string getLogsetName() 获取<p>日志集的名称</p>
  * @method void setLogsetName(string $LogsetName) 设置<p>日志集的名称</p>
  */
@@ -63,7 +63,7 @@ class DataTransformResouceInfo extends AbstractModel
     public $ExternalId;
 
     /**
-     * @var string <p>topic名称</p>
+     * @var string <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
      */
     public $TopicName;
 
@@ -78,7 +78,7 @@ class DataTransformResouceInfo extends AbstractModel
      * @param boolean $IsCrossAccount <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
      * @param string $RoleARN <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
      * @param string $ExternalId <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
-     * @param string $TopicName <p>topic名称</p>
+     * @param string $TopicName <p>目标日志主题的名称,当DataTransformType=1(前置加工任务)时, 该值和源日志主题名称的值相同.</p>
      * @param string $LogsetName <p>日志集的名称</p>
      */
     function __construct()

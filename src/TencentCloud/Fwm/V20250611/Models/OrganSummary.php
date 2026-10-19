@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集团概览
  *
- * @method string getGroupName() 获取集团名称
- * @method void setGroupName(string $GroupName) 设置集团名称
- * @method MemberInfo getAdminInfo() 获取管理员账号信息
- * @method void setAdminInfo(MemberInfo $AdminInfo) 设置管理员账号信息
- * @method integer getAdminCount() 获取管理员/委派管理员数量
- * @method void setAdminCount(integer $AdminCount) 设置管理员/委派管理员数量
- * @method integer getJoinedMemberCount() 获取已接入成员数
- * @method void setJoinedMemberCount(integer $JoinedMemberCount) 设置已接入成员数
- * @method integer getMemberLimit() 获取接入成员上限（-1表示无上限）
- * @method void setMemberLimit(integer $MemberLimit) 设置接入成员上限（-1表示无上限）
- * @method string getMemberLimitDisplay() 获取接入成员上限显示
- * @method void setMemberLimitDisplay(string $MemberLimitDisplay) 设置接入成员上限显示
- * @method integer getCfwSharerCount() 获取规格共享者数量
- * @method void setCfwSharerCount(integer $CfwSharerCount) 设置规格共享者数量
- * @method integer getCfwUserCount() 获取规格使用者数量
- * @method void setCfwUserCount(integer $CfwUserCount) 设置规格使用者数量
- * @method array getDepartments() 获取部门名称列表
- * @method void setDepartments(array $Departments) 设置部门名称列表
- * @method integer getManagedMemberCount() 获取纳管账号数
- * @method void setManagedMemberCount(integer $ManagedMemberCount) 设置纳管账号数
- * @method integer getManagedProductCount() 获取纳管产品数
- * @method void setManagedProductCount(integer $ManagedProductCount) 设置纳管产品数
- * @method integer getCfwManageCount() 获取纳管账号数
- * @method void setCfwManageCount(integer $CfwManageCount) 设置纳管账号数
+ * @method string getGroupName() 获取<p>集团名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>集团名称</p>
+ * @method MemberInfo getAdminInfo() 获取<p>管理员账号信息</p>
+ * @method void setAdminInfo(MemberInfo $AdminInfo) 设置<p>管理员账号信息</p>
+ * @method integer getAdminCount() 获取<p>管理员/委派管理员数量</p>
+ * @method void setAdminCount(integer $AdminCount) 设置<p>管理员/委派管理员数量</p>
+ * @method integer getJoinedMemberCount() 获取<p>已接入成员数</p>
+ * @method void setJoinedMemberCount(integer $JoinedMemberCount) 设置<p>已接入成员数</p>
+ * @method integer getMemberLimit() 获取<p>接入成员上限（-1表示无上限）</p>
+ * @method void setMemberLimit(integer $MemberLimit) 设置<p>接入成员上限（-1表示无上限）</p>
+ * @method string getMemberLimitDisplay() 获取<p>接入成员上限显示</p>
+ * @method void setMemberLimitDisplay(string $MemberLimitDisplay) 设置<p>接入成员上限显示</p>
+ * @method integer getCfwSharerCount() 获取<p>规格共享者数量</p>
+ * @method void setCfwSharerCount(integer $CfwSharerCount) 设置<p>规格共享者数量</p>
+ * @method integer getCfwUserCount() 获取<p>规格使用者数量</p>
+ * @method void setCfwUserCount(integer $CfwUserCount) 设置<p>规格使用者数量</p>
+ * @method array getDepartments() 获取<p>部门名称列表</p>
+ * @method void setDepartments(array $Departments) 设置<p>部门名称列表</p>
+ * @method integer getManagedMemberCount() 获取<p>纳管账号数</p>
+ * @method void setManagedMemberCount(integer $ManagedMemberCount) 设置<p>纳管账号数</p>
+ * @method integer getManagedProductCount() 获取<p>纳管产品数</p>
+ * @method void setManagedProductCount(integer $ManagedProductCount) 设置<p>纳管产品数</p>
+ * @method integer getCfwManageCount() 获取<p>纳管账号数</p>
+ * @method void setCfwManageCount(integer $CfwManageCount) 设置<p>纳管账号数</p>
+ * @method integer getFwmShareUserQuota() 获取<p>规格共享总配额</p>
+ * @method void setFwmShareUserQuota(integer $FwmShareUserQuota) 设置<p>规格共享总配额</p>
  */
 class OrganSummary extends AbstractModel
 {
     /**
-     * @var string 集团名称
+     * @var string <p>集团名称</p>
      */
     public $GroupName;
 
     /**
-     * @var MemberInfo 管理员账号信息
+     * @var MemberInfo <p>管理员账号信息</p>
      */
     public $AdminInfo;
 
     /**
-     * @var integer 管理员/委派管理员数量
+     * @var integer <p>管理员/委派管理员数量</p>
      */
     public $AdminCount;
 
     /**
-     * @var integer 已接入成员数
+     * @var integer <p>已接入成员数</p>
      */
     public $JoinedMemberCount;
 
     /**
-     * @var integer 接入成员上限（-1表示无上限）
+     * @var integer <p>接入成员上限（-1表示无上限）</p>
      */
     public $MemberLimit;
 
     /**
-     * @var string 接入成员上限显示
+     * @var string <p>接入成员上限显示</p>
      */
     public $MemberLimitDisplay;
 
     /**
-     * @var integer 规格共享者数量
+     * @var integer <p>规格共享者数量</p>
      */
     public $CfwSharerCount;
 
     /**
-     * @var integer 规格使用者数量
+     * @var integer <p>规格使用者数量</p>
      */
     public $CfwUserCount;
 
     /**
-     * @var array 部门名称列表
+     * @var array <p>部门名称列表</p>
      */
     public $Departments;
 
     /**
-     * @var integer 纳管账号数
+     * @var integer <p>纳管账号数</p>
      */
     public $ManagedMemberCount;
 
     /**
-     * @var integer 纳管产品数
+     * @var integer <p>纳管产品数</p>
      */
     public $ManagedProductCount;
 
     /**
-     * @var integer 纳管账号数
+     * @var integer <p>纳管账号数</p>
      */
     public $CfwManageCount;
 
     /**
-     * @param string $GroupName 集团名称
-     * @param MemberInfo $AdminInfo 管理员账号信息
-     * @param integer $AdminCount 管理员/委派管理员数量
-     * @param integer $JoinedMemberCount 已接入成员数
-     * @param integer $MemberLimit 接入成员上限（-1表示无上限）
-     * @param string $MemberLimitDisplay 接入成员上限显示
-     * @param integer $CfwSharerCount 规格共享者数量
-     * @param integer $CfwUserCount 规格使用者数量
-     * @param array $Departments 部门名称列表
-     * @param integer $ManagedMemberCount 纳管账号数
-     * @param integer $ManagedProductCount 纳管产品数
-     * @param integer $CfwManageCount 纳管账号数
+     * @var integer <p>规格共享总配额</p>
+     */
+    public $FwmShareUserQuota;
+
+    /**
+     * @param string $GroupName <p>集团名称</p>
+     * @param MemberInfo $AdminInfo <p>管理员账号信息</p>
+     * @param integer $AdminCount <p>管理员/委派管理员数量</p>
+     * @param integer $JoinedMemberCount <p>已接入成员数</p>
+     * @param integer $MemberLimit <p>接入成员上限（-1表示无上限）</p>
+     * @param string $MemberLimitDisplay <p>接入成员上限显示</p>
+     * @param integer $CfwSharerCount <p>规格共享者数量</p>
+     * @param integer $CfwUserCount <p>规格使用者数量</p>
+     * @param array $Departments <p>部门名称列表</p>
+     * @param integer $ManagedMemberCount <p>纳管账号数</p>
+     * @param integer $ManagedProductCount <p>纳管产品数</p>
+     * @param integer $CfwManageCount <p>纳管账号数</p>
+     * @param integer $FwmShareUserQuota <p>规格共享总配额</p>
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ class OrganSummary extends AbstractModel
 
         if (array_key_exists("CfwManageCount",$param) and $param["CfwManageCount"] !== null) {
             $this->CfwManageCount = $param["CfwManageCount"];
+        }
+
+        if (array_key_exists("FwmShareUserQuota",$param) and $param["FwmShareUserQuota"] !== null) {
+            $this->FwmShareUserQuota = $param["FwmShareUserQuota"];
         }
     }
 }

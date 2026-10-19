@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRerankConfig(RerankConfig $RerankConfig) 设置<p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
  * @method DecisionsConfig getDecisionsConfig() 获取<p>Decisions 调度配置</p>
  * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>Decisions 调度配置</p>
+ * @method ImageConfig getImageConfig() 获取<p>Images 生图配置</p>
+ * @method void setImageConfig(ImageConfig $ImageConfig) 设置<p>Images 生图配置</p>
  */
 class ModifyModelRouterAttributesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
     public $DecisionsConfig;
 
     /**
+     * @var ImageConfig <p>Images 生图配置</p>
+     */
+    public $ImageConfig;
+
+    /**
      * @param string $ModelRouterId <p>模型路由ID</p>
      * @param string $CertId <p>新的 HTTPS 证书ID，用于替换实例 HTTPS 服务端点当前绑定的证书。常用于证书到期前的更换场景。</p><p>使用限制：</p><ul><li>仅企业型（Enterprise）且服务端点协议为 HTTPS 的实例支持修改证书。</li><li>证书须为 SSL 证书控制台中状态为“已签发”（可用）且未过期的服务器证书（SVR 类型）。可在 <a href="https://console.cloud.tencent.com/ssl">SSL 证书控制台</a> 查看证书ID。</li><li>替换后新证书立即生效，过程中不会中断业务流量。</li><li>若传入的证书与当前绑定的证书相同，接口直接返回成功，不做任何变更。</li></ul><p>不传则证书保持不变。可通过 <code>DescribeModelRouterDetail</code> 接口的 <code>ServiceEndPoints.CertId</code> 字段查询当前绑定的证书。</p>
      * @param string $ModelRouterName <p>模型路由名称</p>
@@ -112,6 +119,7 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
      * @param VideoConfig $VideoConfig <p>Video 调度配置</p>
      * @param RerankConfig $RerankConfig <p>Rerank 调度配置</p><p>传入该参数时，必须传Capability为rerank</p>
      * @param DecisionsConfig $DecisionsConfig <p>Decisions 调度配置</p>
+     * @param ImageConfig $ImageConfig <p>Images 生图配置</p>
      */
     function __construct()
     {
@@ -174,6 +182,11 @@ class ModifyModelRouterAttributesRequest extends AbstractModel
         if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
             $this->DecisionsConfig = new DecisionsConfig();
             $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
+        }
+
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
         }
     }
 }

@@ -40,6 +40,7 @@ use TencentCloud\Cdc\V20201214\Models as Models;
  * @method Models\DescribeDedicatedClusterTypesResponse DescribeDedicatedClusterTypes(Models\DescribeDedicatedClusterTypesRequest $req) 查询专有集群配置列表
  * @method Models\DescribeDedicatedClustersResponse DescribeDedicatedClusters(Models\DescribeDedicatedClustersRequest $req) 查询专用集群列表
  * @method Models\DescribeDedicatedSupportedZonesResponse DescribeDedicatedSupportedZones(Models\DescribeDedicatedSupportedZonesRequest $req) 查询专用集群支持的可用区列表
+ * @method Models\DescribeEdgeHostVmResponse DescribeEdgeHostVm(Models\DescribeEdgeHostVmRequest $req) 查询专属集群宿主机上的虚机信息
  * @method Models\DescribeSitesResponse DescribeSites(Models\DescribeSitesRequest $req) 查询站点列表
  * @method Models\DescribeSitesDetailResponse DescribeSitesDetail(Models\DescribeSitesDetailRequest $req) 查询站点详情
  * @method Models\ModifyDedicatedClusterInfoResponse ModifyDedicatedClusterInfo(Models\ModifyDedicatedClusterInfoRequest $req) 修改本地专用集群信息

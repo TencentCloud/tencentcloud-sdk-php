@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
  * @method integer getLimit() 获取<p>返回数量，默认为10，最大值为10。</p>
  * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为10，最大值为10。</p>
- * @method array getFilters() 获取<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
- * @method void setFilters(array $Filters) 设置<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+ * @method array getFilters() 获取<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
  */
 class DescribeEndpointGroupsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeEndpointGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+     * @var array <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeEndpointGroupsRequest extends AbstractModel
      * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
      * @param integer $Offset <p>偏移量，默认为0。</p>
      * @param integer $Limit <p>返回数量，默认为10，最大值为10。</p>
-     * @param array $Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。</p>
+     * @param array $Filters <p>过滤条件。  endpoint-group-id- String -（过滤条件）终端节点组实例ID。endpoint-group-type- String -（过滤条件）终端节点组实例类型。listener-id- String -（过滤条件）监听器实例ID。endpoint-group-name- String -（过滤条件）终端节点组名称。</p>
      */
     function __construct()
     {

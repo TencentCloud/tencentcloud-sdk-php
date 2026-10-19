@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopModelAccelerateTask返回参数结构体
  *
- * @method string getModelAccTaskId() 获取模型加速任务ID
+ * @method string getModelAccTaskId() 获取<p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAccTaskId(string $ModelAccTaskId) 设置模型加速任务ID
+ * @method void setModelAccTaskId(string $ModelAccTaskId) 设置<p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAsyncTaskId() 获取异步任务ID
+ * @method string getAsyncTaskId() 获取<p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncTaskId(string $AsyncTaskId) 设置异步任务ID
+ * @method void setAsyncTaskId(string $AsyncTaskId) 设置<p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class StopModelAccelerateTaskResponse extends AbstractModel
 {
     /**
-     * @var string 模型加速任务ID
+     * @var string <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAccTaskId;
 
     /**
-     * @var string 异步任务ID
+     * @var string <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncTaskId;
@@ -51,9 +51,9 @@ class StopModelAccelerateTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ModelAccTaskId 模型加速任务ID
+     * @param string $ModelAccTaskId <p>模型加速任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AsyncTaskId 异步任务ID
+     * @param string $AsyncTaskId <p>异步任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

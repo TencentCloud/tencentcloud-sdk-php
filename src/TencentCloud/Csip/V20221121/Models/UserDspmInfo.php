@@ -20,98 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号dspm信息
  *
- * @method integer getAppID() 获取APPID
- * @method void setAppID(integer $AppID) 设置APPID
- * @method string getUin() 获取UIN
- * @method void setUin(string $Uin) 设置UIN
- * @method string getNickName() 获取账号昵称
- * @method void setNickName(string $NickName) 设置账号昵称
- * @method integer getAssetNum() 获取账号下数据库资产数量
- * @method void setAssetNum(integer $AssetNum) 设置账号下数据库资产数量
- * @method integer getUsedAssetNum() 获取账号下开启安全分析数据库资产数量
- * @method void setUsedAssetNum(integer $UsedAssetNum) 设置账号下开启安全分析数据库资产数量
- * @method integer getIsShared() 获取是否被共享，1-被共享，2-未被共享
- * @method void setIsShared(integer $IsShared) 设置是否被共享，1-被共享，2-未被共享
- * @method integer getIsSelfBuy() 获取是否单独购买，1-单独购买，2-未单独购买
- * @method void setIsSelfBuy(integer $IsSelfBuy) 设置是否单独购买，1-单独购买，2-未单独购买
- * @method integer getShareFromAppID() 获取配额来源账号
- * @method void setShareFromAppID(integer $ShareFromAppID) 设置配额来源账号
- * @method integer getCloudType() 获取云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）
- * @method void setCloudType(integer $CloudType) 设置云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）
- * @method boolean getIsIsolating() 获取账号是否隔离中
- * @method void setIsIsolating(boolean $IsIsolating) 设置账号是否隔离中
- * @method boolean getIsDataCleaning() 获取是否正在数据清理
- * @method void setIsDataCleaning(boolean $IsDataCleaning) 设置是否正在数据清理
+ * @method integer getAppID() 获取<p>APPID</p>
+ * @method void setAppID(integer $AppID) 设置<p>APPID</p>
+ * @method string getUin() 获取<p>UIN</p>
+ * @method void setUin(string $Uin) 设置<p>UIN</p>
+ * @method string getNickName() 获取<p>账号昵称</p>
+ * @method void setNickName(string $NickName) 设置<p>账号昵称</p>
+ * @method integer getAssetNum() 获取<p>账号下数据库资产数量</p>
+ * @method void setAssetNum(integer $AssetNum) 设置<p>账号下数据库资产数量</p>
+ * @method integer getUsedAssetNum() 获取<p>账号下开启安全分析数据库资产数量</p>
+ * @method void setUsedAssetNum(integer $UsedAssetNum) 设置<p>账号下开启安全分析数据库资产数量</p>
+ * @method integer getIsShared() 获取<p>是否被共享，1-被共享，2-未被共享</p>
+ * @method void setIsShared(integer $IsShared) 设置<p>是否被共享，1-被共享，2-未被共享</p>
+ * @method integer getIsSelfBuy() 获取<p>是否单独购买，1-单独购买，2-未单独购买</p>
+ * @method void setIsSelfBuy(integer $IsSelfBuy) 设置<p>是否单独购买，1-单独购买，2-未单独购买</p>
+ * @method integer getShareFromAppID() 获取<p>配额来源账号</p>
+ * @method void setShareFromAppID(integer $ShareFromAppID) 设置<p>配额来源账号</p>
+ * @method integer getCloudType() 获取<p>云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）</p>
+ * @method void setCloudType(integer $CloudType) 设置<p>云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）</p>
+ * @method boolean getIsIsolating() 获取<p>账号是否隔离中</p>
+ * @method void setIsIsolating(boolean $IsIsolating) 设置<p>账号是否隔离中</p>
+ * @method boolean getIsDataCleaning() 获取<p>是否正在数据清理</p>
+ * @method void setIsDataCleaning(boolean $IsDataCleaning) 设置<p>是否正在数据清理</p>
+ * @method string getRole() 获取<p>集团账号角色（member-普通成员/admin-管理员/delegatedAdmin-委派管理员），非集团账号为空</p>
+ * @method void setRole(string $Role) 设置<p>集团账号角色（member-普通成员/admin-管理员/delegatedAdmin-委派管理员），非集团账号为空</p>
+ * @method string getNodeName() 获取<p>所属部门名称，未分配部门或非集团账号为空</p>
+ * @method void setNodeName(string $NodeName) 设置<p>所属部门名称，未分配部门或非集团账号为空</p>
  */
 class UserDspmInfo extends AbstractModel
 {
     /**
-     * @var integer APPID
+     * @var integer <p>APPID</p>
      */
     public $AppID;
 
     /**
-     * @var string UIN
+     * @var string <p>UIN</p>
      */
     public $Uin;
 
     /**
-     * @var string 账号昵称
+     * @var string <p>账号昵称</p>
      */
     public $NickName;
 
     /**
-     * @var integer 账号下数据库资产数量
+     * @var integer <p>账号下数据库资产数量</p>
      */
     public $AssetNum;
 
     /**
-     * @var integer 账号下开启安全分析数据库资产数量
+     * @var integer <p>账号下开启安全分析数据库资产数量</p>
      */
     public $UsedAssetNum;
 
     /**
-     * @var integer 是否被共享，1-被共享，2-未被共享
+     * @var integer <p>是否被共享，1-被共享，2-未被共享</p>
      */
     public $IsShared;
 
     /**
-     * @var integer 是否单独购买，1-单独购买，2-未单独购买
+     * @var integer <p>是否单独购买，1-单独购买，2-未单独购买</p>
      */
     public $IsSelfBuy;
 
     /**
-     * @var integer 配额来源账号
+     * @var integer <p>配额来源账号</p>
      */
     public $ShareFromAppID;
 
     /**
-     * @var integer 云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）
+     * @var integer <p>云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）</p>
      */
     public $CloudType;
 
     /**
-     * @var boolean 账号是否隔离中
+     * @var boolean <p>账号是否隔离中</p>
      */
     public $IsIsolating;
 
     /**
-     * @var boolean 是否正在数据清理
+     * @var boolean <p>是否正在数据清理</p>
      */
     public $IsDataCleaning;
 
     /**
-     * @param integer $AppID APPID
-     * @param string $Uin UIN
-     * @param string $NickName 账号昵称
-     * @param integer $AssetNum 账号下数据库资产数量
-     * @param integer $UsedAssetNum 账号下开启安全分析数据库资产数量
-     * @param integer $IsShared 是否被共享，1-被共享，2-未被共享
-     * @param integer $IsSelfBuy 是否单独购买，1-单独购买，2-未单独购买
-     * @param integer $ShareFromAppID 配额来源账号
-     * @param integer $CloudType 云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）
-     * @param boolean $IsIsolating 账号是否隔离中
-     * @param boolean $IsDataCleaning 是否正在数据清理
+     * @var string <p>集团账号角色（member-普通成员/admin-管理员/delegatedAdmin-委派管理员），非集团账号为空</p>
+     */
+    public $Role;
+
+    /**
+     * @var string <p>所属部门名称，未分配部门或非集团账号为空</p>
+     */
+    public $NodeName;
+
+    /**
+     * @param integer $AppID <p>APPID</p>
+     * @param string $Uin <p>UIN</p>
+     * @param string $NickName <p>账号昵称</p>
+     * @param integer $AssetNum <p>账号下数据库资产数量</p>
+     * @param integer $UsedAssetNum <p>账号下开启安全分析数据库资产数量</p>
+     * @param integer $IsShared <p>是否被共享，1-被共享，2-未被共享</p>
+     * @param integer $IsSelfBuy <p>是否单独购买，1-单独购买，2-未单独购买</p>
+     * @param integer $ShareFromAppID <p>配额来源账号</p>
+     * @param integer $CloudType <p>云类型（0：腾讯云 1:亚马逊云 2:微软云 3:谷歌云 4:阿里云 5:华为云）</p>
+     * @param boolean $IsIsolating <p>账号是否隔离中</p>
+     * @param boolean $IsDataCleaning <p>是否正在数据清理</p>
+     * @param string $Role <p>集团账号角色（member-普通成员/admin-管理员/delegatedAdmin-委派管理员），非集团账号为空</p>
+     * @param string $NodeName <p>所属部门名称，未分配部门或非集团账号为空</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class UserDspmInfo extends AbstractModel
 
         if (array_key_exists("IsDataCleaning",$param) and $param["IsDataCleaning"] !== null) {
             $this->IsDataCleaning = $param["IsDataCleaning"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
     }
 }

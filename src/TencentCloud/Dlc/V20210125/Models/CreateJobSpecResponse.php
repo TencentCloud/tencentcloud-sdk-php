@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置<p>计算组名称</p>
  * @method string getClusterName() 获取<p>集群名称</p>
  * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -294,6 +296,11 @@ class CreateJobSpecResponse extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -339,6 +346,7 @@ class CreateJobSpecResponse extends AbstractModel
      * @param string $SubmissionTarget <p>作业提交目标</p><p>枚举值：</p><ul><li>GROUP： 按计算组分派</li></ul>
      * @param string $GroupName <p>计算组名称</p>
      * @param string $ClusterName <p>集群名称</p>
+     * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -505,6 +513,10 @@ class CreateJobSpecResponse extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindTWeTalkAIBot请求参数结构体
+ * DescribeEdgeHostVm请求参数结构体
  *
- * @method string getBotId() 获取智能体ID
- * @method void setBotId(string $BotId) 设置智能体ID
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
+
  */
-class BindTWeTalkAIBotRequest extends AbstractModel
+class DescribeEdgeHostVmRequest extends AbstractModel
 {
-    /**
-     * @var string 智能体ID
-     */
-    public $BotId;
+
 
     /**
-     * @var string 产品ID
-     */
-    public $ProductId;
 
-    /**
-     * @param string $BotId 智能体ID
-     * @param string $ProductId 产品ID
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class BindTWeTalkAIBotRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BotId",$param) and $param["BotId"] !== null) {
-            $this->BotId = $param["BotId"];
-        }
 
-        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
-            $this->ProductId = $param["ProductId"];
-        }
     }
 }

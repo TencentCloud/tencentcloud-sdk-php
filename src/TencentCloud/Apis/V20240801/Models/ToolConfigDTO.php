@@ -41,11 +41,13 @@ class ToolConfigDTO extends AbstractModel
 
     /**
      * @var boolean 是否开启限流配置
+     * @deprecated
      */
     public $InvokeLimitConfigStatus;
 
     /**
      * @var InvokeLimitConfigDTO 限流配置
+     * @deprecated
      */
     public $InvokeLimitConfig;
 

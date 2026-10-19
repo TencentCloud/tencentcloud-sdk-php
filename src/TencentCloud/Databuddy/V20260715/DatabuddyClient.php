@@ -23,11 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Databuddy\V20260715\Models as Models;
 
 /**
- * @method Models\AddConsoleUsersResponse AddConsoleUsers(Models\AddConsoleUsersRequest $req) 添加控制台用户
+ * @method Models\AddConsoleUsersResponse AddConsoleUsers(Models\AddConsoleUsersRequest $req) 添加控制台用户，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\AddWorkspaceGroupsResponse AddWorkspaceGroups(Models\AddWorkspaceGroupsRequest $req) 添加工作空间用户组
  * @method Models\AddWorkspaceUsersResponse AddWorkspaceUsers(Models\AddWorkspaceUsersRequest $req) 创建用户组
  * @method Models\CreateCatalogResponse CreateCatalog(Models\CreateCatalogRequest $req) 创建数据目录接口
- * @method Models\CreateConsoleGroupResponse CreateConsoleGroup(Models\CreateConsoleGroupRequest $req) 创建控制台用户组
+ * @method Models\CreateConsoleGroupResponse CreateConsoleGroup(Models\CreateConsoleGroupRequest $req) 创建控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -39,10 +39,10 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 创建文件夹
  * @method Models\CreateSchemaResponse CreateSchema(Models\CreateSchemaRequest $req) 创建schema
  * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) 创建工作流
- * @method Models\CreateWorkspaceResponse CreateWorkspace(Models\CreateWorkspaceRequest $req) 创建工作空间
+ * @method Models\CreateWorkspaceResponse CreateWorkspace(Models\CreateWorkspaceRequest $req) 创建工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\CreateWorkspaceRoleResponse CreateWorkspaceRole(Models\CreateWorkspaceRoleRequest $req) 创建工作空间角色
  * @method Models\DeleteCatalogResponse DeleteCatalog(Models\DeleteCatalogRequest $req) 删除catalog
- * @method Models\DeleteConsoleGroupsResponse DeleteConsoleGroups(Models\DeleteConsoleGroupsRequest $req) 删除控制台用户组
+ * @method Models\DeleteConsoleGroupsResponse DeleteConsoleGroups(Models\DeleteConsoleGroupsRequest $req) 删除控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\DeleteFileResponse DeleteFile(Models\DeleteFileRequest $req) 将文件移入回收站（软删除），同时清理该文件的版本记录与执行结果快照。
 
 **前置条件**
@@ -109,8 +109,8 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\ListWorkspaceGroupUsersResponse ListWorkspaceGroupUsers(Models\ListWorkspaceGroupUsersRequest $req) 查询工作空间用户组用户列表
  * @method Models\ListWorkspaceGroupsResponse ListWorkspaceGroups(Models\ListWorkspaceGroupsRequest $req) 查询工作空间用户组列表
  * @method Models\ListWorkspaceUsersResponse ListWorkspaceUsers(Models\ListWorkspaceUsersRequest $req) 查询工作空间用户列表
- * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表
- * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准）</p>
+ * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
  * @method Models\RemoveWorkspaceGroupsResponse RemoveWorkspaceGroups(Models\RemoveWorkspaceGroupsRequest $req) 移除工作空间用户组
  * @method Models\RerunWorkflowRunResponse RerunWorkflowRun(Models\RerunWorkflowRunRequest $req) 重跑工作流
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流
@@ -118,8 +118,8 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\StopComputeResponse StopCompute(Models\StopComputeRequest $req) 停止计算资源
  * @method Models\UnbindWorkflowBundleResponse UnbindWorkflowBundle(Models\UnbindWorkflowBundleRequest $req) 解绑工作流Bundle信息
 说明：本接口语义等同于规范动词清单中的 Detach，因兼容既有产品形态保留 Unbind 命名
- * @method Models\UpdateConsoleGroupResponse UpdateConsoleGroup(Models\UpdateConsoleGroupRequest $req) 修改控制台用户组
- * @method Models\UpdateConsoleUsersResponse UpdateConsoleUsers(Models\UpdateConsoleUsersRequest $req) 修改控制台用户角色
+ * @method Models\UpdateConsoleGroupResponse UpdateConsoleGroup(Models\UpdateConsoleGroupRequest $req) 修改控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\UpdateConsoleUsersResponse UpdateConsoleUsers(Models\UpdateConsoleUsersRequest $req) 修改控制台用户角色，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\UpdateFileResponse UpdateFile(Models\UpdateFileRequest $req) 更新文件内容与运行配置（计算资源、默认 catalog/schema、参数等），返回更新后的文件元信息。
 
 **前置条件**
@@ -142,7 +142,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
  * @method Models\UpdateFolderResponse UpdateFolder(Models\UpdateFolderRequest $req) 更新文件夹（支持重命名+移动）
  * @method Models\UpdateWorkflowResponse UpdateWorkflow(Models\UpdateWorkflowRequest $req) 更新工作流
- * @method Models\UpdateWorkspaceResponse UpdateWorkspace(Models\UpdateWorkspaceRequest $req) 修改工作空间
+ * @method Models\UpdateWorkspaceResponse UpdateWorkspace(Models\UpdateWorkspaceRequest $req) 修改工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\UpdateWorkspaceGroupsRolesResponse UpdateWorkspaceGroupsRoles(Models\UpdateWorkspaceGroupsRolesRequest $req) 更新工作空间用户组角色
  * @method Models\UpdateWorkspaceRoleResponse UpdateWorkspaceRole(Models\UpdateWorkspaceRoleRequest $req) 更新工作空间角色
  * @method Models\UpdateWorkspaceUsersRolesResponse UpdateWorkspaceUsersRoles(Models\UpdateWorkspaceUsersRolesRequest $req) 修改工作空间用户角色

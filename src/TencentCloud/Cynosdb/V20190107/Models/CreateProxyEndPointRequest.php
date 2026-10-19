@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceWeights(array $InstanceWeights) 设置<p>实例权重。</p>
  * @method string getLoadBalanceMode() 获取<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
  * @method void setLoadBalanceMode(string $LoadBalanceMode) 设置<p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+ * @method boolean getTransAllSplit() 获取<p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+ * @method void setTransAllSplit(boolean $TransAllSplit) 设置<p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
  */
 class CreateProxyEndPointRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateProxyEndPointRequest extends AbstractModel
     public $LoadBalanceMode;
 
     /**
+     * @var boolean <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
+     */
+    public $TransAllSplit;
+
+    /**
      * @param string $ClusterId <p>集群 ID。</p>
      * @param string $UniqueVpcId <p>私有网络 ID。</p>
      * @param string $UniqueSubnetId <p>私有网络子网 ID。</p>
@@ -176,6 +183,7 @@ class CreateProxyEndPointRequest extends AbstractModel
      * @param string $AccessMode <p>接入模式：<br>nearby：就近访问。<br>balance：均衡分配。</p>
      * @param array $InstanceWeights <p>实例权重。</p>
      * @param string $LoadBalanceMode <p>负载均衡模式</p><p>枚举值：</p><ul><li>static： 静态负载</li><li>dynamic： 动态负载</li></ul>
+     * @param boolean $TransAllSplit <p>是否开启事务全拆分。在一个事务中将事务写前和写后的读拆分到不同的实例上去执行。</p>
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class CreateProxyEndPointRequest extends AbstractModel
 
         if (array_key_exists("LoadBalanceMode",$param) and $param["LoadBalanceMode"] !== null) {
             $this->LoadBalanceMode = $param["LoadBalanceMode"];
+        }
+
+        if (array_key_exists("TransAllSplit",$param) and $param["TransAllSplit"] !== null) {
+            $this->TransAllSplit = $param["TransAllSplit"];
         }
     }
 }

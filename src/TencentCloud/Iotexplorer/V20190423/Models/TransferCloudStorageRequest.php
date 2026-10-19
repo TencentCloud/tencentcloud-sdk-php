@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TransferCloudStorage请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取已开通云存的设备名称
- * @method void setDeviceName(string $DeviceName) 设置已开通云存的设备名称
- * @method string getToDeviceName() 获取未开通云存的设备名称
- * @method void setToDeviceName(string $ToDeviceName) 设置未开通云存的设备名称
- * @method string getToProductId() 获取未开通云存的设备产品ID
- * @method void setToProductId(string $ToProductId) 设置未开通云存的设备产品ID
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getDeviceName() 获取<p>已开通云存的设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>已开通云存的设备名称</p>
+ * @method string getToDeviceName() 获取<p>未开通云存的设备名称</p>
+ * @method void setToDeviceName(string $ToDeviceName) 设置<p>未开通云存的设备名称</p>
+ * @method string getToProductId() 获取<p>未开通云存的设备产品ID</p>
+ * @method void setToProductId(string $ToProductId) 设置<p>未开通云存的设备产品ID</p>
+ * @method integer getChannelId() 获取<p>已开通云存的通道id</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>已开通云存的通道id</p>
+ * @method integer getToChannelId() 获取<p>未开通云存的通道id</p>
+ * @method void setToChannelId(integer $ToChannelId) 设置<p>未开通云存的通道id</p>
  */
 class TransferCloudStorageRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 已开通云存的设备名称
+     * @var string <p>已开通云存的设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 未开通云存的设备名称
+     * @var string <p>未开通云存的设备名称</p>
      */
     public $ToDeviceName;
 
     /**
-     * @var string 未开通云存的设备产品ID
+     * @var string <p>未开通云存的设备产品ID</p>
      */
     public $ToProductId;
 
     /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 已开通云存的设备名称
-     * @param string $ToDeviceName 未开通云存的设备名称
-     * @param string $ToProductId 未开通云存的设备产品ID
+     * @var integer <p>已开通云存的通道id</p>
+     */
+    public $ChannelId;
+
+    /**
+     * @var integer <p>未开通云存的通道id</p>
+     */
+    public $ToChannelId;
+
+    /**
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $DeviceName <p>已开通云存的设备名称</p>
+     * @param string $ToDeviceName <p>未开通云存的设备名称</p>
+     * @param string $ToProductId <p>未开通云存的设备产品ID</p>
+     * @param integer $ChannelId <p>已开通云存的通道id</p>
+     * @param integer $ToChannelId <p>未开通云存的通道id</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class TransferCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("ToProductId",$param) and $param["ToProductId"] !== null) {
             $this->ToProductId = $param["ToProductId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("ToChannelId",$param) and $param["ToChannelId"] !== null) {
+            $this->ToChannelId = $param["ToChannelId"];
         }
     }
 }

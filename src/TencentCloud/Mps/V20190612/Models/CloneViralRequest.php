@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoUrl() 获取<p>爆款视频Url</p>
  * @method void setVideoUrl(string $VideoUrl) 设置<p>爆款视频Url</p>
- * @method CloneViralProduct getProduct() 获取<p>产品信息</p>
- * @method void setProduct(CloneViralProduct $Product) 设置<p>产品信息</p>
+ * @method CloneViralProduct getProduct() 获取<p>产品信息。除深度提取外，其他模式必填</p>
+ * @method void setProduct(CloneViralProduct $Product) 设置<p>产品信息。除深度提取外，其他模式必填</p>
  * @method CloneViralAIGC getAIGCParam() 获取<p>AIGC生视频相关参数</p>
  * @method void setAIGCParam(CloneViralAIGC $AIGCParam) 设置<p>AIGC生视频相关参数</p>
  * @method CloneViralContent getContentParam() 获取<p>内容/风格相关参数</p>
@@ -41,7 +41,7 @@ class CloneViralRequest extends AbstractModel
     public $VideoUrl;
 
     /**
-     * @var CloneViralProduct <p>产品信息</p>
+     * @var CloneViralProduct <p>产品信息。除深度提取外，其他模式必填</p>
      */
     public $Product;
 
@@ -67,7 +67,7 @@ class CloneViralRequest extends AbstractModel
 
     /**
      * @param string $VideoUrl <p>爆款视频Url</p>
-     * @param CloneViralProduct $Product <p>产品信息</p>
+     * @param CloneViralProduct $Product <p>产品信息。除深度提取外，其他模式必填</p>
      * @param CloneViralAIGC $AIGCParam <p>AIGC生视频相关参数</p>
      * @param CloneViralContent $ContentParam <p>内容/风格相关参数</p>
      * @param CloneViralPersona $Persona <p>模特形象</p>

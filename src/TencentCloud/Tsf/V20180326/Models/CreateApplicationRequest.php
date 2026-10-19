@@ -20,140 +20,140 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplication请求参数结构体
  *
- * @method string getApplicationName() 获取应用名称，最长60字符
- * @method void setApplicationName(string $ApplicationName) 设置应用名称，最长60字符
- * @method string getApplicationType() 获取应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
- * @method void setApplicationType(string $ApplicationType) 设置应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
- * @method string getMicroserviceType() 获取应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
- * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
- * @method string getApplicationDesc() 获取应用描述
- * @method void setApplicationDesc(string $ApplicationDesc) 设置应用描述
- * @method string getApplicationLogConfig() 获取应用日志配置项，废弃参数
- * @method void setApplicationLogConfig(string $ApplicationLogConfig) 设置应用日志配置项，废弃参数
- * @method string getApplicationResourceType() 获取应用资源类型，废弃参数
- * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应用资源类型，废弃参数
- * @method string getApplicationRuntimeType() 获取应用runtime类型
- * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
- * @method string getProgramId() 获取【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
- * @method void setProgramId(string $ProgramId) 设置【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
- * @method array getServiceConfigList() 获取服务配置信息列表
- * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
- * @method boolean getIgnoreCreateImageRepository() 获取忽略创建镜像仓库
- * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置忽略创建镜像仓库
- * @method array getProgramIdList() 获取数据集id列表
- * @method void setProgramIdList(array $ProgramIdList) 设置数据集id列表
- * @method string getApmInstanceId() 获取apm业务系统id
- * @method void setApmInstanceId(string $ApmInstanceId) 设置apm业务系统id
- * @method string getProgramLanguage() 获取编程语言:  Java；C/C++；Python；Go；Other
- * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言:  Java；C/C++；Python；Go；Other
- * @method string getFrameworkType() 获取开发框架-SpringCloud/Dubbo/Go-GRPC/Other
- * @method void setFrameworkType(string $FrameworkType) 设置开发框架-SpringCloud/Dubbo/Go-GRPC/Other
- * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理
- * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理
- * @method boolean getCreateSameNameImageRepository() 获取是否创建并关联同名镜像仓库
- * @method void setCreateSameNameImageRepository(boolean $CreateSameNameImageRepository) 设置是否创建并关联同名镜像仓库
+ * @method string getApplicationName() 获取<p>应用名称，最长60字符</p>
+ * @method void setApplicationName(string $ApplicationName) 设置<p>应用名称，最长60字符</p>
+ * @method string getApplicationType() 获取<p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
+ * @method void setApplicationType(string $ApplicationType) 设置<p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
+ * @method string getMicroserviceType() 获取<p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
+ * @method void setMicroserviceType(string $MicroserviceType) 设置<p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
+ * @method string getApplicationDesc() 获取<p>应用描述</p>
+ * @method void setApplicationDesc(string $ApplicationDesc) 设置<p>应用描述</p>
+ * @method string getApplicationLogConfig() 获取<p>应用日志配置项，废弃参数</p>
+ * @method void setApplicationLogConfig(string $ApplicationLogConfig) 设置<p>应用日志配置项，废弃参数</p>
+ * @method string getApplicationResourceType() 获取<p>应用资源类型，废弃参数</p>
+ * @method void setApplicationResourceType(string $ApplicationResourceType) 设置<p>应用资源类型，废弃参数</p>
+ * @method string getApplicationRuntimeType() 获取<p>应用runtime类型</p>
+ * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置<p>应用runtime类型</p>
+ * @method string getProgramId() 获取<p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
+ * @method void setProgramId(string $ProgramId) 设置<p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
+ * @method array getServiceConfigList() 获取<p>服务配置信息列表</p>
+ * @method void setServiceConfigList(array $ServiceConfigList) 设置<p>服务配置信息列表</p>
+ * @method boolean getIgnoreCreateImageRepository() 获取<p>忽略创建镜像仓库</p>
+ * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置<p>忽略创建镜像仓库</p>
+ * @method array getProgramIdList() 获取<p>数据集id列表</p>
+ * @method void setProgramIdList(array $ProgramIdList) 设置<p>数据集id列表</p>
+ * @method string getApmInstanceId() 获取<p>apm业务系统id</p>
+ * @method void setApmInstanceId(string $ApmInstanceId) 设置<p>apm业务系统id</p>
+ * @method string getProgramLanguage() 获取<p>编程语言:  Java；C/C++；Python；Go；Other</p>
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置<p>编程语言:  Java；C/C++；Python；Go；Other</p>
+ * @method string getFrameworkType() 获取<p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
+ * @method void setFrameworkType(string $FrameworkType) 设置<p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取<p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置<p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
+ * @method boolean getCreateSameNameImageRepository() 获取<p>是否创建并关联同名镜像仓库</p>
+ * @method void setCreateSameNameImageRepository(boolean $CreateSameNameImageRepository) 设置<p>是否创建并关联同名镜像仓库</p>
  */
 class CreateApplicationRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称，最长60字符
+     * @var string <p>应用名称，最长60字符</p>
      */
     public $ApplicationName;
 
     /**
-     * @var string 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
+     * @var string <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
      */
     public $ApplicationType;
 
     /**
-     * @var string 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
+     * @var string <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
      */
     public $MicroserviceType;
 
     /**
-     * @var string 应用描述
+     * @var string <p>应用描述</p>
      */
     public $ApplicationDesc;
 
     /**
-     * @var string 应用日志配置项，废弃参数
+     * @var string <p>应用日志配置项，废弃参数</p>
      * @deprecated
      */
     public $ApplicationLogConfig;
 
     /**
-     * @var string 应用资源类型，废弃参数
+     * @var string <p>应用资源类型，废弃参数</p>
      * @deprecated
      */
     public $ApplicationResourceType;
 
     /**
-     * @var string 应用runtime类型
+     * @var string <p>应用runtime类型</p>
      */
     public $ApplicationRuntimeType;
 
     /**
-     * @var string 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+     * @var string <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public $ProgramId;
 
     /**
-     * @var array 服务配置信息列表
+     * @var array <p>服务配置信息列表</p>
      */
     public $ServiceConfigList;
 
     /**
-     * @var boolean 忽略创建镜像仓库
+     * @var boolean <p>忽略创建镜像仓库</p>
      */
     public $IgnoreCreateImageRepository;
 
     /**
-     * @var array 数据集id列表
+     * @var array <p>数据集id列表</p>
      */
     public $ProgramIdList;
 
     /**
-     * @var string apm业务系统id
+     * @var string <p>apm业务系统id</p>
      */
     public $ApmInstanceId;
 
     /**
-     * @var string 编程语言:  Java；C/C++；Python；Go；Other
+     * @var string <p>编程语言:  Java；C/C++；Python；Go；Other</p>
      */
     public $ProgramLanguage;
 
     /**
-     * @var string 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     * @var string <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
      */
     public $FrameworkType;
 
     /**
-     * @var ServiceGovernanceConfig 注册配置治理
+     * @var ServiceGovernanceConfig <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
      */
     public $ServiceGovernanceConfig;
 
     /**
-     * @var boolean 是否创建并关联同名镜像仓库
+     * @var boolean <p>是否创建并关联同名镜像仓库</p>
      */
     public $CreateSameNameImageRepository;
 
     /**
-     * @param string $ApplicationName 应用名称，最长60字符
-     * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
-     * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
-     * @param string $ApplicationDesc 应用描述
-     * @param string $ApplicationLogConfig 应用日志配置项，废弃参数
-     * @param string $ApplicationResourceType 应用资源类型，废弃参数
-     * @param string $ApplicationRuntimeType 应用runtime类型
-     * @param string $ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
-     * @param array $ServiceConfigList 服务配置信息列表
-     * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
-     * @param array $ProgramIdList 数据集id列表
-     * @param string $ApmInstanceId apm业务系统id
-     * @param string $ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
-     * @param string $FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
-     * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理
-     * @param boolean $CreateSameNameImageRepository 是否创建并关联同名镜像仓库
+     * @param string $ApplicationName <p>应用名称，最长60字符</p>
+     * @param string $ApplicationType <p>应用类型，V：虚拟机应用；C：容器应用；S：serverless应用</p>
+     * @param string $MicroserviceType <p>应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用</p>
+     * @param string $ApplicationDesc <p>应用描述</p>
+     * @param string $ApplicationLogConfig <p>应用日志配置项，废弃参数</p>
+     * @param string $ApplicationResourceType <p>应用资源类型，废弃参数</p>
+     * @param string $ApplicationRuntimeType <p>应用runtime类型</p>
+     * @param string $ProgramId <p>【数据集ID】。可通过调用<a href="https://cloud.tencent.com/document/product/649/73477">DescribePrograms</a>查询已创建的数据集列表或登录<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program&amp;roleId=role-a26486wy">控制台</a>进行查看；也可以调用<a href="https://cloud.tencent.com/document/product/649/108544">CreateProgram</a>创建新的数据集。</p>
+     * @param array $ServiceConfigList <p>服务配置信息列表</p>
+     * @param boolean $IgnoreCreateImageRepository <p>忽略创建镜像仓库</p>
+     * @param array $ProgramIdList <p>数据集id列表</p>
+     * @param string $ApmInstanceId <p>apm业务系统id</p>
+     * @param string $ProgramLanguage <p>编程语言:  Java；C/C++；Python；Go；Other</p>
+     * @param string $FrameworkType <p>开发框架-SpringCloud/Dubbo/Go-GRPC/Other</p>
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig <p>注册配置治理，关闭注册配置治理或者使用北极星注册中心时必须传值</p>
+     * @param boolean $CreateSameNameImageRepository <p>是否创建并关联同名镜像仓库</p>
      */
     function __construct()
     {

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置<p>优先级（1-9，数字越大优先级越高）</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+ * @method string getNetworkConfig() 获取<p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
  */
 class CreateRayClusterRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateRayClusterRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Name <p>集群名称（可选，不填写则默认使用集群ID）</p>
      * @param string $Description <p>集群描述</p>
      * @param string $GroupId <p>所属计算组 ID</p>
@@ -136,6 +143,7 @@ class CreateRayClusterRequest extends AbstractModel
      * @param string $AdvancedOptions <p>高级参数（规范化后的扁平 KV JSON）</p>
      * @param integer $Priority <p>优先级（1-9，数字越大优先级越高）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+     * @param string $NetworkConfig <p>自定义网络配置</p><p>参数格式：{"appId":22,"uin":"111","uniqVpcId":"vpc-xxx","subnetId":"subnet-xxx"}</p>
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class CreateRayClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

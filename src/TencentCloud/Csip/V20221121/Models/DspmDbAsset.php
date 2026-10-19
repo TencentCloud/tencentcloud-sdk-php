@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalAuditLogs(integer $TotalAuditLogs) 设置<p>当前实例的总日志数</p>
  * @method string getLogDeliveryDisableReason() 获取<p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
  * @method void setLogDeliveryDisableReason(string $LogDeliveryDisableReason) 设置<p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+ * @method string getLogDeliveryDisableMessage() 获取<p>日志审计禁止开通时的详细说明</p>
+ * @method void setLogDeliveryDisableMessage(string $LogDeliveryDisableMessage) 设置<p>日志审计禁止开通时的详细说明</p>
  * @method integer getOldestOnlineLogTimestamp() 获取<p>在线日志的起始时间戳，精确到秒</p>
  * @method void setOldestOnlineLogTimestamp(integer $OldestOnlineLogTimestamp) 设置<p>在线日志的起始时间戳，精确到秒</p>
  * @method integer getNewestOnlineLogTimestamp() 获取<p>在线日志的最新时间戳，精确到秒</p>
@@ -98,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置<p>集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbVersion() 获取<p>数据库版本</p>
+ * @method void setDbVersion(string $DbVersion) 设置<p>数据库版本</p>
  */
 class DspmDbAsset extends AbstractModel
 {
@@ -242,6 +246,11 @@ class DspmDbAsset extends AbstractModel
     public $LogDeliveryDisableReason;
 
     /**
+     * @var string <p>日志审计禁止开通时的详细说明</p>
+     */
+    public $LogDeliveryDisableMessage;
+
+    /**
      * @var integer <p>在线日志的起始时间戳，精确到秒</p>
      */
     public $OldestOnlineLogTimestamp;
@@ -289,6 +298,11 @@ class DspmDbAsset extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string <p>数据库版本</p>
+     */
+    public $DbVersion;
+
+    /**
      * @param string $AssetId <p>资产实例Id</p>
      * @param string $AssetType <p>资产类型</p>
      * @param string $Name <p>资产名</p>
@@ -317,6 +331,7 @@ class DspmDbAsset extends AbstractModel
      * @param integer $SecurityAnalyseStatus <p>安全分析状态（0-关闭 1-打开 2-开通中 3-关闭中）</p>
      * @param integer $TotalAuditLogs <p>当前实例的总日志数</p>
      * @param string $LogDeliveryDisableReason <p>日志审计禁止开通的原因，可选值：VersionNotSupportLogSubscription, InstanceIsUpgrading, CdbRuleAuditEnabled, AssetNotExists</p>
+     * @param string $LogDeliveryDisableMessage <p>日志审计禁止开通时的详细说明</p>
      * @param integer $OldestOnlineLogTimestamp <p>在线日志的起始时间戳，精确到秒</p>
      * @param integer $NewestOnlineLogTimestamp <p>在线日志的最新时间戳，精确到秒</p>
      * @param string $OperationErrorMsg <p>操作错误信息</p>
@@ -328,6 +343,7 @@ class DspmDbAsset extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName <p>集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbVersion <p>数据库版本</p>
      */
     function __construct()
     {
@@ -461,6 +477,10 @@ class DspmDbAsset extends AbstractModel
             $this->LogDeliveryDisableReason = $param["LogDeliveryDisableReason"];
         }
 
+        if (array_key_exists("LogDeliveryDisableMessage",$param) and $param["LogDeliveryDisableMessage"] !== null) {
+            $this->LogDeliveryDisableMessage = $param["LogDeliveryDisableMessage"];
+        }
+
         if (array_key_exists("OldestOnlineLogTimestamp",$param) and $param["OldestOnlineLogTimestamp"] !== null) {
             $this->OldestOnlineLogTimestamp = $param["OldestOnlineLogTimestamp"];
         }
@@ -495,6 +515,10 @@ class DspmDbAsset extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTWeTalkAIBot请求参数结构体
+ * DescribeOverviewResourceQuota请求参数结构体
  *
- * @method string getBotId() 获取智能体ID
- * @method void setBotId(string $BotId) 设置智能体ID
+ * @method string getScene() 获取<p>返回视图范围</p><p>默认值：不传该参数时，默认返回完整的资源与配额详情数据</p>
+ * @method void setScene(string $Scene) 设置<p>返回视图范围</p><p>默认值：不传该参数时，默认返回完整的资源与配额详情数据</p>
  */
-class DescribeTWeTalkAIBotRequest extends AbstractModel
+class DescribeOverviewResourceQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 智能体ID
+     * @var string <p>返回视图范围</p><p>默认值：不传该参数时，默认返回完整的资源与配额详情数据</p>
      */
-    public $BotId;
+    public $Scene;
 
     /**
-     * @param string $BotId 智能体ID
+     * @param string $Scene <p>返回视图范围</p><p>默认值：不传该参数时，默认返回完整的资源与配额详情数据</p>
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeTWeTalkAIBotRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BotId",$param) and $param["BotId"] !== null) {
-            $this->BotId = $param["BotId"];
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

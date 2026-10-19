@@ -40,21 +40,25 @@ class AgentAppModelServiceDTO extends AbstractModel
 
     /**
      * @var boolean 是否开启流量控制
+     * @deprecated
      */
     public $InvokeLimitConfigStatus;
 
     /**
      * @var InvokeLimitConfigDTO 流量控制
+     * @deprecated
      */
     public $InvokeLimitConfig;
 
     /**
      * @var boolean 是否开启token控制
+     * @deprecated
      */
     public $TokenLimitStatus;
 
     /**
      * @var TokenLimitConfigDTO token控制
+     * @deprecated
      */
     public $TokenLimitConfig;
 

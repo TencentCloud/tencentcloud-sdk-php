@@ -29,6 +29,7 @@ use TencentCloud\Fwm\V20250611\Models as Models;
  * @method Models\CreateEdgeAclRuleGroupResponse CreateEdgeAclRuleGroup(Models\CreateEdgeAclRuleGroupRequest $req) 创建互联网边界ACL规则组，支持同时创建多条规则。Product 必须为 cfw_edge_acl。规则支持 IP、域名、参数模板、实例、标签等多种源/目标类型。
  * @method Models\CreateNatAclRuleResponse CreateNatAclRule(Models\CreateNatAclRuleRequest $req) 在已有规则组中添加NAT ACL规则
  * @method Models\CreateNatAclRuleGroupResponse CreateNatAclRuleGroup(Models\CreateNatAclRuleGroupRequest $req) 创建NAT ACL规则组（NAT边界防火墙规则组管理）
+ * @method Models\CreateRuleGroupResponse CreateRuleGroup(Models\CreateRuleGroupRequest $req) 创建一个不含规则的规则组，归属产品由 Product 指定。规则组是四类防火墙产品共用的资源，落库于 fwm_rule_group 并以 product 字段区分归属；规则需另行通过 CreateSecurityGroupRule / CreateVpcAclRule / CreateNatAclRule / CreateEdgeAclRule 追加。规则组的查询/修改/删除已由 DescribeRuleGroup / DescribeRuleGroups / ModifyRuleGroup / DeleteRuleGroup 统一承载，本接口补齐创建侧，供 Terraform 等需要「建组」与「建规则」分离的资源模型使用。返回新规则组 ID（fwmrg- 前缀），初始 RuleCount 为 0。注意：创建空规则组同样计入规则组配额，且三墙（VPC/NAT/Edge）受预付费写门禁约束，企业安全组不受该门禁约束。
  * @method Models\CreateSecurityGroupRuleResponse CreateSecurityGroupRule(Models\CreateSecurityGroupRuleRequest $req) 规则组编辑时添加规则（规则组管理）
  * @method Models\CreateSecurityGroupRuleGroupResponse CreateSecurityGroupRuleGroup(Models\CreateSecurityGroupRuleGroupRequest $req) 创建规则组（规则组管理）
  * @method Models\CreateStrategyResponse CreateStrategy(Models\CreateStrategyRequest $req) 创建策略

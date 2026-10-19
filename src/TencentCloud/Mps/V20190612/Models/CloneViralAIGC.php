@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatio(string $AspectRatio) 设置<p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
  * @method string getResolution() 获取<p>分辨率。支持720p（默认）/1080p/2k/4k</p>
  * @method void setResolution(string $Resolution) 设置<p>分辨率。支持720p（默认）/1080p/2k/4k</p>
- * @method string getModelTier() 获取<p>模型等级。flagship（默认）、standard</p>
- * @method void setModelTier(string $ModelTier) 设置<p>模型等级。flagship（默认）、standard</p>
+ * @method string getModelTier() 获取<p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+ * @method void setModelTier(string $ModelTier) 设置<p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
  */
 class CloneViralAIGC extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CloneViralAIGC extends AbstractModel
     public $Resolution;
 
     /**
-     * @var string <p>模型等级。flagship（默认）、standard</p>
+     * @var string <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
      */
     public $ModelTier;
 
@@ -55,7 +55,7 @@ class CloneViralAIGC extends AbstractModel
      * @param integer $Duration <p>视频时长</p><p>取值范围：[4, 15]</p>
      * @param string $AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
      * @param string $Resolution <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
-     * @param string $ModelTier <p>模型等级。flagship（默认）、standard</p>
+     * @param string $ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
      */
     function __construct()
     {

@@ -34,6 +34,7 @@ https://cloud.tencent.com/document/product/1278/85305
  * @method Models\CreateModelServiceAuthTokenResponse CreateModelServiceAuthToken(Models\CreateModelServiceAuthTokenRequest $req) 创建一个 AuthToken
  * @method Models\CreateMountLimitResponse CreateMountLimit(Models\CreateMountLimitRequest $req) 创建挂载限制
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
+ * @method Models\CreateNotebookImageResponse CreateNotebookImage(Models\CreateNotebookImageRequest $req) 保存镜像
  * @method Models\CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrl(Models\CreatePresignedNotebookUrlRequest $req) 生成Notebook访问链接
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopModelAccelerateTask请求参数结构体
  *
- * @method string getModelAccTaskId() 获取模型加速任务ID
- * @method void setModelAccTaskId(string $ModelAccTaskId) 设置模型加速任务ID
+ * @method string getModelAccTaskId() 获取<p>模型加速任务ID</p>
+ * @method void setModelAccTaskId(string $ModelAccTaskId) 设置<p>模型加速任务ID</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class StopModelAccelerateTaskRequest extends AbstractModel
 {
     /**
-     * @var string 模型加速任务ID
+     * @var string <p>模型加速任务ID</p>
      */
     public $ModelAccTaskId;
 
     /**
-     * @param string $ModelAccTaskId 模型加速任务ID
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @param string $ModelAccTaskId <p>模型加速任务ID</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class StopModelAccelerateTaskRequest extends AbstractModel
         }
         if (array_key_exists("ModelAccTaskId",$param) and $param["ModelAccTaskId"] !== null) {
             $this->ModelAccTaskId = $param["ModelAccTaskId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

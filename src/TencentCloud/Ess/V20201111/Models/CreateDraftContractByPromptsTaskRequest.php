@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDraftContractByPromptsTask请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
- * @method string getRequirement() 获取起草要求，范围要求 5-1000 字
- * @method void setRequirement(string $Requirement) 设置起草要求，范围要求 5-1000 字
- * @method string getReferenceTemplateId() 获取参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
- * @method void setReferenceTemplateId(string $ReferenceTemplateId) 设置参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
- * @method array getRequirementFileIds() 获取相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
- * @method void setRequirementFileIds(array $RequirementFileIds) 设置相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
- * @method string getContractLanguage() 获取起草合同的语言要求（zh，en）默认zh
- * @method void setContractLanguage(string $ContractLanguage) 设置起草合同的语言要求（zh，en）默认zh
+ * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+ * @method string getRequirement() 获取<p>起草要求，范围要求 5-1000 字</p>
+ * @method void setRequirement(string $Requirement) 设置<p>起草要求，范围要求 5-1000 字</p>
+ * @method string getReferenceTemplateId() 获取<p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+ * @method void setReferenceTemplateId(string $ReferenceTemplateId) 设置<p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+ * @method array getRequirementFileIds() 获取<p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+ * @method void setRequirementFileIds(array $RequirementFileIds) 设置<p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+ * @method string getContractLanguage() 获取<p>起草合同的语言要求（zh，en）默认zh</p>
+ * @method void setContractLanguage(string $ContractLanguage) 设置<p>起草合同的语言要求（zh，en）默认zh</p>
+ * @method string getReviewTaskId() 获取<p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+ * @method void setReviewTaskId(string $ReviewTaskId) 设置<p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
  */
 class CreateDraftContractByPromptsTaskRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
+     * @var UserInfo <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
      */
     public $Operator;
 
     /**
-     * @var string 起草要求，范围要求 5-1000 字
+     * @var string <p>起草要求，范围要求 5-1000 字</p>
      */
     public $Requirement;
 
     /**
-     * @var string 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * @var string <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public $ReferenceTemplateId;
 
     /**
-     * @var array 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * @var array <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
      */
     public $RequirementFileIds;
 
     /**
-     * @var string 起草合同的语言要求（zh，en）默认zh
+     * @var string <p>起草合同的语言要求（zh，en）默认zh</p>
      */
     public $ContractLanguage;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。
-     * @param string $Requirement 起草要求，范围要求 5-1000 字
-     * @param string $ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
-     * @param array $RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
-     * @param string $ContractLanguage 起草合同的语言要求（zh，en）默认zh
+     * @var string <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
+     */
+    public $ReviewTaskId;
+
+    /**
+     * @param UserInfo $Operator <p>执行本接口操作的员工信息。 注: 在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</p>
+     * @param string $Requirement <p>起草要求，范围要求 5-1000 字</p>
+     * @param string $ReferenceTemplateId <p>参考模板文件资源id（PDF/Word格式），大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+     * @param array $RequirementFileIds <p>相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">上传文件</a>接口来获取。</p>
+     * @param string $ContractLanguage <p>起草合同的语言要求（zh，en）默认zh</p>
+     * @param string $ReviewTaskId <p>审查任务id，仅支持传入1个，通过<a href="https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchContractReviewTask/">批量创建合同审查任务</a>接口来获取。</p>
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CreateDraftContractByPromptsTaskRequest extends AbstractModel
 
         if (array_key_exists("ContractLanguage",$param) and $param["ContractLanguage"] !== null) {
             $this->ContractLanguage = $param["ContractLanguage"];
+        }
+
+        if (array_key_exists("ReviewTaskId",$param) and $param["ReviewTaskId"] !== null) {
+            $this->ReviewTaskId = $param["ReviewTaskId"];
         }
     }
 }

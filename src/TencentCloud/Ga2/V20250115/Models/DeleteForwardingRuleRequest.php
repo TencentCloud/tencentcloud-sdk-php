@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteForwardingRule请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getListenerId() 获取监听器ID。
- * @method void setListenerId(string $ListenerId) 设置监听器ID。
- * @method string getForwardingPolicyId() 获取策略ID。
- * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置策略ID。
- * @method string getForwardingRuleId() 获取七层转发规则ID。
- * @method void setForwardingRuleId(string $ForwardingRuleId) 设置七层转发规则ID。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getListenerId() 获取<p>监听器ID。</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>监听器ID。</p>
+ * @method string getForwardingPolicyId() 获取<p>七层转发策略ID。</p>
+ * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>七层转发策略ID。</p>
+ * @method string getForwardingRuleId() 获取<p>七层转发规则ID。</p>
+ * @method void setForwardingRuleId(string $ForwardingRuleId) 设置<p>七层转发规则ID。</p>
  */
 class DeleteForwardingRuleRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 监听器ID。
+     * @var string <p>监听器ID。</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 策略ID。
+     * @var string <p>七层转发策略ID。</p>
      */
     public $ForwardingPolicyId;
 
     /**
-     * @var string 七层转发规则ID。
+     * @var string <p>七层转发规则ID。</p>
      */
     public $ForwardingRuleId;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $ListenerId 监听器ID。
-     * @param string $ForwardingPolicyId 策略ID。
-     * @param string $ForwardingRuleId 七层转发规则ID。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $ListenerId <p>监听器ID。</p>
+     * @param string $ForwardingPolicyId <p>七层转发策略ID。</p>
+     * @param string $ForwardingRuleId <p>七层转发规则ID。</p>
      */
     function __construct()
     {

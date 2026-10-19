@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityGroupRule请求参数结构体
  *
- * @method string getGroupId() 获取规则组Id
- * @method void setGroupId(string $GroupId) 设置规则组Id
- * @method array getRules() 获取规则列表
- * @method void setRules(array $Rules) 设置规则列表
+ * @method string getGroupId() 获取<p>规则组Id</p>
+ * @method void setGroupId(string $GroupId) 设置<p>规则组Id</p>
+ * @method array getRules() 获取<p>规则列表</p>
+ * @method void setRules(array $Rules) 设置<p>规则列表</p>
  */
 class CreateSecurityGroupRuleRequest extends AbstractModel
 {
     /**
-     * @var string 规则组Id
+     * @var string <p>规则组Id</p>
      */
     public $GroupId;
 
     /**
-     * @var array 规则列表
+     * @var array <p>规则列表</p>
      */
     public $Rules;
 
     /**
-     * @param string $GroupId 规则组Id
-     * @param array $Rules 规则列表
+     * @param string $GroupId <p>规则组Id</p>
+     * @param array $Rules <p>规则列表</p>
      */
     function __construct()
     {

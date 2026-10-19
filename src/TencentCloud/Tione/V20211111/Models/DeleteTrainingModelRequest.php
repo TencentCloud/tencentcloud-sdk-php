@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTrainingModelId() 获取模型ID
  * @method void setTrainingModelId(string $TrainingModelId) 设置模型ID
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method boolean getEnableDeleteCos() 获取是否同步清理cos
  * @method void setEnableDeleteCos(boolean $EnableDeleteCos) 设置是否同步清理cos
  * @method string getModelVersionType() 获取删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
@@ -35,6 +37,11 @@ class DeleteTrainingModelRequest extends AbstractModel
     public $TrainingModelId;
 
     /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
      * @var boolean 是否同步清理cos
      */
     public $EnableDeleteCos;
@@ -46,6 +53,7 @@ class DeleteTrainingModelRequest extends AbstractModel
 
     /**
      * @param string $TrainingModelId 模型ID
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param boolean $EnableDeleteCos 是否同步清理cos
      * @param string $ModelVersionType 删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
      */
@@ -64,6 +72,10 @@ class DeleteTrainingModelRequest extends AbstractModel
         }
         if (array_key_exists("TrainingModelId",$param) and $param["TrainingModelId"] !== null) {
             $this->TrainingModelId = $param["TrainingModelId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("EnableDeleteCos",$param) and $param["EnableDeleteCos"] !== null) {

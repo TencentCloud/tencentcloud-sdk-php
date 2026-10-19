@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置<p>优先级（1-9，数字越大优先级越高）</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class UpdateRayClusterRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class UpdateRayClusterRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Id <p>集群ID</p>
      * @param string $Name <p>集群名称（可选，不填写则默认使用集群ID）</p>
      * @param string $Description <p>集群描述</p>
@@ -144,6 +151,7 @@ class UpdateRayClusterRequest extends AbstractModel
      * @param string $AdvancedOptions <p>高级参数（规范化后的扁平 KV JSON）</p>
      * @param integer $Priority <p>优先级（1-9，数字越大优先级越高）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class UpdateRayClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

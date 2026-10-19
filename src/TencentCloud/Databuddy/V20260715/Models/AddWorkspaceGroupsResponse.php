@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddWorkspaceGroups返回参数结构体
  *
- * @method PlatformStatusRsp getData() 获取添加结果
- * @method void setData(PlatformStatusRsp $Data) 设置添加结果
+ * @method PlatformStatusRsp getData() 获取<p>添加结果</p>
+ * @method void setData(PlatformStatusRsp $Data) 设置<p>添加结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddWorkspaceGroupsResponse extends AbstractModel
 {
     /**
-     * @var PlatformStatusRsp 添加结果
+     * @var PlatformStatusRsp <p>添加结果</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class AddWorkspaceGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param PlatformStatusRsp $Data 添加结果
+     * @param PlatformStatusRsp $Data <p>添加结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

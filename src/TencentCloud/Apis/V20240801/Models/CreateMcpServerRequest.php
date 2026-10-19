@@ -136,11 +136,13 @@ class CreateMcpServerRequest extends AbstractModel
 
     /**
      * @var boolean <p>流量控制开启状态</p>
+     * @deprecated
      */
     public $InvokeLimitConfigStatus;
 
     /**
      * @var InvokeLimitConfigDTO <p>流量控制配置</p>
+     * @deprecated
      */
     public $InvokeLimitConfig;
 

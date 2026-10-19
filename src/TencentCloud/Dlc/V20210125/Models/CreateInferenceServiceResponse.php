@@ -122,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeploymentMode(string $DeploymentMode) 设置<p>部署模式</p>
  * @method boolean getIsCustom() 获取<p>是否是自定义 RayServe 创建</p>
  * @method void setIsCustom(boolean $IsCustom) 设置<p>是否是自定义 RayServe 创建</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -299,6 +301,11 @@ class CreateInferenceServiceResponse extends AbstractModel
     public $IsCustom;
 
     /**
+     * @var string <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -355,6 +362,7 @@ class CreateInferenceServiceResponse extends AbstractModel
      * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
      * @param string $DeploymentMode <p>部署模式</p>
      * @param boolean $IsCustom <p>是否是自定义 RayServe 创建</p>
+     * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -494,6 +502,10 @@ class CreateInferenceServiceResponse extends AbstractModel
 
         if (array_key_exists("IsCustom",$param) and $param["IsCustom"] !== null) {
             $this->IsCustom = $param["IsCustom"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

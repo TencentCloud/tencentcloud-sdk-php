@@ -71,7 +71,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取<p>规则id  等同RuleUuid</p>
  * @method void setId(integer $Id) 设置<p>规则id  等同RuleUuid</p>
  * @method SgDnsParseCount getDnsParseCount() 获取<p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置<p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScope() 获取<p>规则生效范围</p>
  * @method void setScope(string $Scope) 设置<p>规则生效范围</p>
  * @method integer getIsNew() 获取<p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
@@ -210,6 +212,7 @@ class SecGroupRuleResp extends AbstractModel
 
     /**
      * @var SgDnsParseCount <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DnsParseCount;
 
@@ -256,6 +259,7 @@ class SecGroupRuleResp extends AbstractModel
      * @param string $ProtocolPortName <p>端口模板名称</p>
      * @param integer $Id <p>规则id  等同RuleUuid</p>
      * @param SgDnsParseCount $DnsParseCount <p>域名解析的IP统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scope <p>规则生效范围</p>
      * @param integer $IsNew <p>规则最近一次是否有改动 取值范围：0/1 0:否 1:是</p>
      * @param MemberInfo $BelongMember <p>规则归属的成员账号（当FwGroupId为cfwg-xxx或SourceType/DestType为instance/tag时必填)</p>

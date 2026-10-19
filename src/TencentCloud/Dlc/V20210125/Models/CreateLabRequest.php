@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePullType(string $ImagePullType) 设置<p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method string getLabImagePullType() 获取<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method void setLabImagePullType(string $LabImagePullType) 设置<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  */
 class CreateLabRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class CreateLabRequest extends AbstractModel
     public $LabImagePullType;
 
     /**
+     * @var string <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Name <p>数据实验室名称</p>
      * @param string $ResourcePartitionId <p>资源分区ID</p>
      * @param string $Queue <p>队列名称</p>
@@ -200,6 +207,7 @@ class CreateLabRequest extends AbstractModel
      * @param boolean $EnableToken <p>是否开启token认证</p>
      * @param string $ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
+     * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
      */
     function __construct()
     {
@@ -306,6 +314,10 @@ class CreateLabRequest extends AbstractModel
 
         if (array_key_exists("LabImagePullType",$param) and $param["LabImagePullType"] !== null) {
             $this->LabImagePullType = $param["LabImagePullType"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

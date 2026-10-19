@@ -148,6 +148,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployCvmCount(integer $DeployCvmCount) 设置<p>部署的cvm个数</p>
  * @method array getResourceZoneSet() 获取<p>堡垒机实例的可用区信息</p>
  * @method void setResourceZoneSet(array $ResourceZoneSet) 设置<p>堡垒机实例的可用区信息</p>
+ * @method integer getOrgAccountQuota() 获取<p>多账号额度</p>
+ * @method void setOrgAccountQuota(integer $OrgAccountQuota) 设置<p>多账号额度</p>
  */
 class Resource extends AbstractModel
 {
@@ -473,6 +475,11 @@ class Resource extends AbstractModel
     public $ResourceZoneSet;
 
     /**
+     * @var integer <p>多账号额度</p>
+     */
+    public $OrgAccountQuota;
+
+    /**
      * @param string $ResourceId <p>服务实例ID，如bh-saas-s3ed4r5e</p>
      * @param string $ApCode <p>地域编码</p>
      * @param string $SvArgs <p>服务实例规格信息</p>
@@ -537,6 +544,7 @@ class Resource extends AbstractModel
      * @param string $BillingZone <p>计费侧可用区</p>
      * @param integer $DeployCvmCount <p>部署的cvm个数</p>
      * @param array $ResourceZoneSet <p>堡垒机实例的可用区信息</p>
+     * @param integer $OrgAccountQuota <p>多账号额度</p>
      */
     function __construct()
     {
@@ -815,6 +823,10 @@ class Resource extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceZoneSet, $obj);
             }
+        }
+
+        if (array_key_exists("OrgAccountQuota",$param) and $param["OrgAccountQuota"] !== null) {
+            $this->OrgAccountQuota = $param["OrgAccountQuota"];
         }
     }
 }

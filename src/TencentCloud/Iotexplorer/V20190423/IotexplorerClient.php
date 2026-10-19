@@ -35,7 +35,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备
  * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品。
- * @method Models\BindTWeTalkAIBotResponse BindTWeTalkAIBot(Models\BindTWeTalkAIBotRequest $req) 用于绑定一个产品和智能体。
  * @method Models\BindTWeTalkAgentResponse BindTWeTalkAgent(Models\BindTWeTalkAgentRequest $req) 绑定智能体到产品或设备
 - `BindingScope=product` 时，`DeviceName` 必须为空。
 - `BindingScope=device` 时，`DeviceName` 必填。
@@ -110,7 +109,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFile(Models\CreateTWeSeeRecognitionTaskWithFileRequest $req) 同步执行 TWeSee 语义理解任务
  * @method Models\CreateTWeSeeServiceResponse CreateTWeSeeService(Models\CreateTWeSeeServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscription(Models\CreateTWeSeeSubscriptionRequest $req) 开通 TWeSee 预付费订阅
- * @method Models\CreateTWeTalkAIBotResponse CreateTWeTalkAIBot(Models\CreateTWeTalkAIBotRequest $req) 用于新增TWeTalk智能体。
  * @method Models\CreateTWeTalkAgentResponse CreateTWeTalkAgent(Models\CreateTWeTalkAgentRequest $req) 新增TWeTalk智能体。
  * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
@@ -132,7 +130,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteTWeSeeFaceResponse DeleteTWeSeeFace(Models\DeleteTWeSeeFaceRequest $req) 删除指定 TWeSee 人脸。
  * @method Models\DeleteTWeSeePersonResponse DeleteTWeSeePerson(Models\DeleteTWeSeePersonRequest $req) 删除指定 TWeSee 人员，可选择同时删除其关联人脸。
  * @method Models\DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(Models\DeleteTWeSeeTasksByConditionRequest $req) 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
- * @method Models\DeleteTWeTalkAIBotResponse DeleteTWeTalkAIBot(Models\DeleteTWeTalkAIBotRequest $req) 用于删除TWeTalk智能体。
  * @method Models\DeleteTWeTalkAgentResponse DeleteTWeTalkAgent(Models\DeleteTWeTalkAgentRequest $req) 用于删除TWeTalk智能体
  * @method Models\DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(Models\DeleteTWeTalkProductConfigV2Request $req) 用于删除配置TWeTalk服务连接产品配置信息。
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
@@ -204,7 +201,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeTWeSeeSubscriptionResponse DescribeTWeSeeSubscription(Models\DescribeTWeSeeSubscriptionRequest $req) 查询 TWeSee 预付费订阅
  * @method Models\DescribeTWeSeeTaskResponse DescribeTWeSeeTask(Models\DescribeTWeSeeTaskRequest $req) 查询 TWeSee 任务详情
  * @method Models\DescribeTWeSeeTaskStatisticsResponse DescribeTWeSeeTaskStatistics(Models\DescribeTWeSeeTaskStatisticsRequest $req) 获取 TWeSee 任务统计数据
- * @method Models\DescribeTWeTalkAIBotResponse DescribeTWeTalkAIBot(Models\DescribeTWeTalkAIBotRequest $req) 用于查询TWeTalk智能体详情。
  * @method Models\DescribeTWeTalkAgentResponse DescribeTWeTalkAgent(Models\DescribeTWeTalkAgentRequest $req) 用户查询TWeTalk智能体详情
  * @method Models\DescribeTWeTalkAgentBindingResponse DescribeTWeTalkAgentBinding(Models\DescribeTWeTalkAgentBindingRequest $req) 查询智能体绑定关系
  * @method Models\DescribeTWeTalkAgentListResponse DescribeTWeTalkAgentList(Models\DescribeTWeTalkAgentListRequest $req) 分页查询智能体列表
@@ -238,7 +234,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetProjectListResponse GetProjectList(Models\GetProjectListRequest $req) 提供查询用户所创建的项目列表查询功能。
  * @method Models\GetStudioProductListResponse GetStudioProductList(Models\GetStudioProductListRequest $req) 提供查询某个项目下所有产品信息的能力。
  * @method Models\GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(Models\GetTWeCallActiveStatusRequest $req) 查询激活状态
- * @method Models\GetTWeTalkAIBotListResponse GetTWeTalkAIBotList(Models\GetTWeTalkAIBotListRequest $req) 用于查询TWeTalk智能体列表。
  * @method Models\GetTWeTalkActiveRecordListResponse GetTWeTalkActiveRecordList(Models\GetTWeTalkActiveRecordListRequest $req) TWeTalk消耗账单明细。
  * @method Models\GetTWeTalkActiveStatusResponse GetTWeTalkActiveStatus(Models\GetTWeTalkActiveStatusRequest $req) 查询TWeTalk设备激活状态。
  * @method Models\GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(Models\GetTWeTalkProductConfigListRequest $req) 用于获取TWeTalk服务连接产品配置信息列表。
@@ -286,7 +281,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyTWeSeePersonResponse ModifyTWeSeePerson(Models\ModifyTWeSeePersonRequest $req) 修改指定 TWeSee 人员的名称或记忆状态。Name、IsRemembered 至少传入一项，不支持取消持久记忆。
  * @method Models\ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(Models\ModifyTWeSeeSubscriptionRequest $req) 修改 TWeSee 预付费订阅
  * @method Models\ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(Models\ModifyTWeSeeSubscriptionRenewFlagRequest $req) 修改 TWeSee 预付费订阅续费标识
- * @method Models\ModifyTWeTalkAIBotResponse ModifyTWeTalkAIBot(Models\ModifyTWeTalkAIBotRequest $req) 用于修改TWeTalk智能体。
  * @method Models\ModifyTWeTalkAgentResponse ModifyTWeTalkAgent(Models\ModifyTWeTalkAgentRequest $req) 修改TWeTalk智能体
  * @method Models\ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(Models\ModifyTWeTalkProductConfigRequest $req) 用于修改TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2(Models\ModifyTWeTalkProductConfigV2Request $req) 用于修改配置TWeTalk服务连接产品配置信息。
@@ -331,7 +325,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备
  * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品。
- * @method Models\UnbindTWeTalkAIBotResponse UnbindTWeTalkAIBot(Models\UnbindTWeTalkAIBotRequest $req) 用于解除一个产品和智能体的绑定。
  * @method Models\UnbindTWeTalkAgentResponse UnbindTWeTalkAgent(Models\UnbindTWeTalkAgentRequest $req) 解绑产品或设备上的智能体
  * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckPath(string $HealthCheckPath) 设置<p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
  * @method string getHealthCheckMethod() 获取<p>健康检查方式。</p>
  * @method void setHealthCheckMethod(string $HealthCheckMethod) 设置<p>健康检查方式。</p>
+ * @method integer getHealthCheckTimeout() 获取<p>健康检查超时时间</p><p>单位：秒</p><p>默认值：15</p>
+ * @method void setHealthCheckTimeout(integer $HealthCheckTimeout) 设置<p>健康检查超时时间</p><p>单位：秒</p><p>默认值：15</p>
  */
 class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel
 {
@@ -79,6 +81,11 @@ class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel
     public $HealthCheckMethod;
 
     /**
+     * @var integer <p>健康检查超时时间</p><p>单位：秒</p><p>默认值：15</p>
+     */
+    public $HealthCheckTimeout;
+
+    /**
      * @param boolean $HealthCheckEnabled <p>是否开启健康检查</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      * @param integer $HealthCheckInterval <p>健康检查间隔。支持以300s为步长配置。</p><p>单位：s</p><p>默认值：300</p>
      * @param integer $HealthCheckUnhealthyThreshold <p>不健康阈值。表示当模型连续多少次不健康时认为该模型不健康。</p><p>取值范围：[1, 10]</p><p>默认值：1</p>
@@ -88,6 +95,7 @@ class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthCheckPath <p>健康检查路径。仅HealthCheckMethod为Service时生效。</p>
      * @param string $HealthCheckMethod <p>健康检查方式。</p>
+     * @param integer $HealthCheckTimeout <p>健康检查超时时间</p><p>单位：秒</p><p>默认值：15</p>
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class ServiceProviderHealthCheckConfigItemOutput extends AbstractModel
 
         if (array_key_exists("HealthCheckMethod",$param) and $param["HealthCheckMethod"] !== null) {
             $this->HealthCheckMethod = $param["HealthCheckMethod"];
+        }
+
+        if (array_key_exists("HealthCheckTimeout",$param) and $param["HealthCheckTimeout"] !== null) {
+            $this->HealthCheckTimeout = $param["HealthCheckTimeout"];
         }
     }
 }

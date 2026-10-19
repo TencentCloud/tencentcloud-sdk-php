@@ -200,11 +200,13 @@ class ModifyServiceRequest extends AbstractModel
 
     /**
      * @var boolean <p>流量控制</p>
+     * @deprecated
      */
     public $InvokeLimitConfigStatus;
 
     /**
      * @var InvokeLimitConfigDTO <p>流量控制</p>
+     * @deprecated
      */
     public $InvokeLimitConfig;
 

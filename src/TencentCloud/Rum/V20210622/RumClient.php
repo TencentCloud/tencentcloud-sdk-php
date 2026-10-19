@@ -78,6 +78,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeFOOMProblemDetailResponse DescribeFOOMProblemDetail(Models\DescribeFOOMProblemDetailRequest $req) 获取FOOM问题详情数据
  * @method Models\DescribeFOOMProblemListResponse DescribeFOOMProblemList(Models\DescribeFOOMProblemListRequest $req) 获取FOOM问题列表数据
  * @method Models\DescribeFOOMReportListResponse DescribeFOOMReportList(Models\DescribeFOOMReportListRequest $req) 获取FOOM问题上报列表
+ * @method Models\DescribeFileCertificateResponse DescribeFileCertificate(Models\DescribeFileCertificateRequest $req) 获取COS存储的临时密钥，具体到ProjectId
  * @method Models\DescribeIssuesDistributionResponse DescribeIssuesDistribution(Models\DescribeIssuesDistributionRequest $req) 获取问题分布数据
  * @method Models\DescribeIssuesListResponse DescribeIssuesList(Models\DescribeIssuesListRequest $req) 获取问题列表数据
  * @method Models\DescribeIssuesStatisticsTrendResponse DescribeIssuesStatisticsTrend(Models\DescribeIssuesStatisticsTrendRequest $req) 获取问题趋势数据

@@ -33,6 +33,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加访问控制（自定义策略）
  * @method Models\AddCustomWhiteRuleResponse AddCustomWhiteRule(Models\AddCustomWhiteRuleRequest $req) 增加精准白名单规则
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
+ * @method Models\AddLLMSdkAccessResponse AddLLMSdkAccess(Models\AddLLMSdkAccessRequest $req) llmwaf-sdk新增接入配置接口
  * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加SaaS型WAF防护域名
  * @method Models\BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRules(Models\BatchOperateUserSignatureRulesRequest $req) 批量操作tiga子规则
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
@@ -78,6 +79,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAccessFastAnalysisResponse DescribeAccessFastAnalysis(Models\DescribeAccessFastAnalysisRequest $req) 本接口用于访问日志的快速分析
  * @method Models\DescribeAccessHistogramResponse DescribeAccessHistogram(Models\DescribeAccessHistogramRequest $req) 本接口用于访问日志柱状趋势图
  * @method Models\DescribeAccessIndexResponse DescribeAccessIndex(Models\DescribeAccessIndexRequest $req) 本接口用于获取访问日志索引配置信息
+ * @method Models\DescribeAfterPayInstancesResponse DescribeAfterPayInstances(Models\DescribeAfterPayInstancesRequest $req) 查询后付费实例列表（仅 Edition=llm-sdk-waf）。请求参数与 DescribeInstances 一致；仅返回 tb_instance_conf 基础数据，不含套餐/标签等扩展信息。
  * @method Models\DescribeAntiFakeRulesResponse DescribeAntiFakeRules(Models\DescribeAntiFakeRulesRequest $req) 获取防篡改url
  * @method Models\DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(Models\DescribeAntiInfoLeakageRulesRequest $req) 取得信息防泄漏规则列表
  * @method Models\DescribeApiAggregateTopNResponse DescribeApiAggregateTopN(Models\DescribeApiAggregateTopNRequest $req) 获取Api安全模块的访问日志聚合topN

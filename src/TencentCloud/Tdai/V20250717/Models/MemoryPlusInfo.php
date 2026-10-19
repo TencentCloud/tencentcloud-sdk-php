@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemoryUsage(integer $MemoryUsage) 设置<p>记忆条数</p>
  * @method float getCreditUsage() 获取<p>当月积分数</p>
  * @method void setCreditUsage(float $CreditUsage) 设置<p>当月积分数</p>
+ * @method boolean getCompressed() 获取<p>是否开启压缩</p>
+ * @method void setCompressed(boolean $Compressed) 设置<p>是否开启压缩</p>
  * @method array getResourceTags() 获取<p>资源标签</p>
  * @method void setResourceTags(array $ResourceTags) 设置<p>资源标签</p>
  * @method string getVersion() 获取<p>版本号</p>
@@ -99,6 +101,11 @@ class MemoryPlusInfo extends AbstractModel
     public $CreditUsage;
 
     /**
+     * @var boolean <p>是否开启压缩</p>
+     */
+    public $Compressed;
+
+    /**
      * @var array <p>资源标签</p>
      */
     public $ResourceTags;
@@ -138,6 +145,7 @@ class MemoryPlusInfo extends AbstractModel
      * @param integer $AutoRenew <p>是否自动续费</p><p>枚举值：</p><ul><li>0： 不自动续费</li><li>1： 自动续费</li></ul>
      * @param integer $MemoryUsage <p>记忆条数</p>
      * @param float $CreditUsage <p>当月积分数</p>
+     * @param boolean $Compressed <p>是否开启压缩</p>
      * @param array $ResourceTags <p>资源标签</p>
      * @param string $Version <p>版本号</p>
      * @param string $CreatedAt <p>创建时间</p>
@@ -192,6 +200,10 @@ class MemoryPlusInfo extends AbstractModel
 
         if (array_key_exists("CreditUsage",$param) and $param["CreditUsage"] !== null) {
             $this->CreditUsage = $param["CreditUsage"];
+        }
+
+        if (array_key_exists("Compressed",$param) and $param["Compressed"] !== null) {
+            $this->Compressed = $param["Compressed"];
         }
 
         if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentAppServices请求参数结构体
  *
- * @method string getInstanceID() 获取<p>实例ID</p>
- * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
  * @method integer getLimit() 获取<p>数据量</p>
  * @method void setLimit(integer $Limit) 设置<p>数据量</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
  * @method array getIDs() 获取<p>IDs</p>
  * @method void setIDs(array $IDs) 设置<p>IDs</p>
  * @method array getAgentAppIDs() 获取<p>应用IDs</p>
@@ -42,14 +42,14 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAgentAppServicesRequest extends AbstractModel
 {
     /**
-     * @var string <p>实例ID</p>
-     */
-    public $InstanceID;
-
-    /**
      * @var integer <p>数据量</p>
      */
     public $Limit;
+
+    /**
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceID;
 
     /**
      * @var array <p>IDs</p>
@@ -87,8 +87,8 @@ class DescribeAgentAppServicesRequest extends AbstractModel
     public $AgentCredentialIDs;
 
     /**
-     * @param string $InstanceID <p>实例ID</p>
      * @param integer $Limit <p>数据量</p>
+     * @param string $InstanceID <p>实例ID</p>
      * @param array $IDs <p>IDs</p>
      * @param array $AgentAppIDs <p>应用IDs</p>
      * @param array $ServiceIDs <p>服务IDs</p>
@@ -110,12 +110,12 @@ class DescribeAgentAppServicesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
 
         if (array_key_exists("IDs",$param) and $param["IDs"] !== null) {

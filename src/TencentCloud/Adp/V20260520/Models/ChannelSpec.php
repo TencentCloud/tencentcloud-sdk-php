@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWecomRobot(WecomRobotChannelConfig $WecomRobot) 设置<p>企微机器人配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getShareGroupConversation() 获取<p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShareGroupConversation(boolean $ShareGroupConversation) 设置<p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDebug() 获取<p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDebug(boolean $IsDebug) 设置<p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelSpec extends AbstractModel
 {
@@ -152,6 +160,18 @@ class ChannelSpec extends AbstractModel
     public $WecomRobot;
 
     /**
+     * @var boolean <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShareGroupConversation;
+
+    /**
+     * @var boolean <p>是否调试态</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDebug;
+
+    /**
      * @param string $ChannelName <p>渠道名称</p>
      * @param integer $ChannelType <p>渠道类型，详见ChannelType枚举</p><p>枚举值：</p><ul><li>10000： 微信服务号(Wechat)</li><li>10002： 企微应用(WeComApp)</li><li>10004： 微信客服(WechatCustomerService)</li><li>10009： 企微智能机器人(WeComRobot)</li><li>10013： 钉钉机器人(DingTalk)</li><li>10014： 企微智能机器人WebSocket(WeComRobot)</li><li>10015： 微信ClawBot(WechatClawBot)</li><li>10011： LINE(Line)</li><li>10012： Telegram(Telegram)</li><li>10016： 飞书机器人(Lark) </li></ul><p>C端场景（Scene=1时）只支持10014和10015</p>
      * @param string $Description <p>备注</p>
@@ -175,6 +195,10 @@ class ChannelSpec extends AbstractModel
      * @param WecomAppChannelConfig $WecomApp <p>企微应用配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WecomRobotChannelConfig $WecomRobot <p>企微机器人配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ShareGroupConversation <p>共享群聊会话</p><p>false不共享群聊会话; true共享群聊会话</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDebug <p>是否调试态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -254,6 +278,14 @@ class ChannelSpec extends AbstractModel
         if (array_key_exists("WecomRobot",$param) and $param["WecomRobot"] !== null) {
             $this->WecomRobot = new WecomRobotChannelConfig();
             $this->WecomRobot->deserialize($param["WecomRobot"]);
+        }
+
+        if (array_key_exists("ShareGroupConversation",$param) and $param["ShareGroupConversation"] !== null) {
+            $this->ShareGroupConversation = $param["ShareGroupConversation"];
+        }
+
+        if (array_key_exists("IsDebug",$param) and $param["IsDebug"] !== null) {
+            $this->IsDebug = $param["IsDebug"];
         }
     }
 }

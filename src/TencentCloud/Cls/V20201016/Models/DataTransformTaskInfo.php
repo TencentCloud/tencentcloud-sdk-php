@@ -20,226 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据加工任务基本详情
  *
- * @method string getName() 获取数据加工任务名称
- * @method void setName(string $Name) 设置数据加工任务名称
- * @method string getTaskId() 获取数据加工任务id
- * @method void setTaskId(string $TaskId) 设置数据加工任务id
- * @method integer getEnableFlag() 获取任务启用状态，默认为1，正常开启,  2关闭
- * @method void setEnableFlag(integer $EnableFlag) 设置任务启用状态，默认为1，正常开启,  2关闭
- * @method integer getType() 获取加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
- * @method void setType(integer $Type) 设置加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
- * @method string getSrcTopicId() 获取源日志主题
- * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题
- * @method integer getStatus() 获取当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
- * @method void setStatus(integer $Status) 设置当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
- * @method string getCreateTime() 获取创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setCreateTime(string $CreateTime) 设置创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method string getUpdateTime() 获取最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method string getLastEnableTime() 获取最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setLastEnableTime(string $LastEnableTime) 设置最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
- * @method string getSrcTopicName() 获取日志主题名称
- * @method void setSrcTopicName(string $SrcTopicName) 设置日志主题名称
- * @method string getLogsetId() 获取日志集id
- * @method void setLogsetId(string $LogsetId) 设置日志集id
- * @method array getDstResources() 获取加工任务目的topic_id以及别名
- * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
- * @method string getEtlContent() 获取加工逻辑函数。
- * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数。
- * @method string getBackupTopicID() 获取兜底topic_id
- * @method void setBackupTopicID(string $BackupTopicID) 设置兜底topic_id
- * @method boolean getBackupGiveUpData() 获取超限之后是否丢弃日志数据
- * @method void setBackupGiveUpData(boolean $BackupGiveUpData) 设置超限之后是否丢弃日志数据
- * @method integer getHasServicesLog() 获取是否开启投递服务日志。 1关闭,2开启
- * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。 1关闭,2开启
- * @method integer getTaskDstCount() 获取任务目标日志主题数量
- * @method void setTaskDstCount(integer $TaskDstCount) 设置任务目标日志主题数量
- * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务；1：前置加工任务。
- * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务；1：前置加工任务。
- * @method integer getKeepFailureLog() 获取保留失败日志状态。 1:不保留，2:保留
- * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态。 1:不保留，2:保留
- * @method string getFailureLogKey() 获取失败日志的字段名称
- * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
- * @method integer getProcessFromTimestamp() 获取指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
- * @method void setProcessFromTimestamp(integer $ProcessFromTimestamp) 设置指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
- * @method integer getProcessToTimestamp() 获取指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
- * @method void setProcessToTimestamp(integer $ProcessToTimestamp) 设置指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
- * @method array getDataTransformSqlDataSources() 获取sql数据源信息
- * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) 设置sql数据源信息
- * @method array getEnvInfos() 获取环境变量
- * @method void setEnvInfos(array $EnvInfos) 设置环境变量
+ * @method string getName() 获取<p>数据加工任务名称</p>
+ * @method void setName(string $Name) 设置<p>数据加工任务名称</p>
+ * @method string getTaskId() 获取<p>数据加工任务id</p>
+ * @method void setTaskId(string $TaskId) 设置<p>数据加工任务id</p>
+ * @method integer getEnableFlag() 获取<p>任务启用状态，默认为1，正常开启,  2关闭</p>
+ * @method void setEnableFlag(integer $EnableFlag) 设置<p>任务启用状态，默认为1，正常开启,  2关闭</p>
+ * @method integer getType() 获取<p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
+ * @method void setType(integer $Type) 设置<p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
+ * @method string getSrcTopicId() 获取<p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
+ * @method void setSrcTopicId(string $SrcTopicId) 设置<p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
+ * @method integer getStatus() 获取<p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
+ * @method void setStatus(integer $Status) 设置<p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
+ * @method string getCreateTime() 获取<p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method string getUpdateTime() 获取<p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method string getLastEnableTime() 获取<p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method void setLastEnableTime(string $LastEnableTime) 设置<p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+ * @method string getSrcTopicName() 获取<p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
+ * @method void setSrcTopicName(string $SrcTopicName) 设置<p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
+ * @method string getLogsetId() 获取<p>日志集id</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集id</p>
+ * @method array getDstResources() 获取<p>加工任务目的topic_id以及别名</p>
+ * @method void setDstResources(array $DstResources) 设置<p>加工任务目的topic_id以及别名</p>
+ * @method string getEtlContent() 获取<p>加工逻辑函数。</p>
+ * @method void setEtlContent(string $EtlContent) 设置<p>加工逻辑函数。</p>
+ * @method string getBackupTopicID() 获取<p>兜底topic_id</p>
+ * @method void setBackupTopicID(string $BackupTopicID) 设置<p>兜底topic_id</p>
+ * @method boolean getBackupGiveUpData() 获取<p>超限之后是否丢弃日志数据</p>
+ * @method void setBackupGiveUpData(boolean $BackupGiveUpData) 设置<p>超限之后是否丢弃日志数据</p>
+ * @method integer getHasServicesLog() 获取<p>是否开启投递服务日志。 1关闭,2开启</p>
+ * @method void setHasServicesLog(integer $HasServicesLog) 设置<p>是否开启投递服务日志。 1关闭,2开启</p>
+ * @method integer getTaskDstCount() 获取<p>任务目标日志主题数量</p>
+ * @method void setTaskDstCount(integer $TaskDstCount) 设置<p>任务目标日志主题数量</p>
+ * @method integer getDataTransformType() 获取<p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
+ * @method void setDataTransformType(integer $DataTransformType) 设置<p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
+ * @method integer getKeepFailureLog() 获取<p>保留失败日志状态。 1:不保留，2:保留</p>
+ * @method void setKeepFailureLog(integer $KeepFailureLog) 设置<p>保留失败日志状态。 1:不保留，2:保留</p>
+ * @method string getFailureLogKey() 获取<p>失败日志的字段名称</p>
+ * @method void setFailureLogKey(string $FailureLogKey) 设置<p>失败日志的字段名称</p>
+ * @method integer getProcessFromTimestamp() 获取<p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
+ * @method void setProcessFromTimestamp(integer $ProcessFromTimestamp) 设置<p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
+ * @method integer getProcessToTimestamp() 获取<p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
+ * @method void setProcessToTimestamp(integer $ProcessToTimestamp) 设置<p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
+ * @method array getDataTransformSqlDataSources() 获取<p>sql数据源信息</p>
+ * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) 设置<p>sql数据源信息</p>
+ * @method array getEnvInfos() 获取<p>环境变量</p>
+ * @method void setEnvInfos(array $EnvInfos) 设置<p>环境变量</p>
  */
 class DataTransformTaskInfo extends AbstractModel
 {
     /**
-     * @var string 数据加工任务名称
+     * @var string <p>数据加工任务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 数据加工任务id
+     * @var string <p>数据加工任务id</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 任务启用状态，默认为1，正常开启,  2关闭
+     * @var integer <p>任务启用状态，默认为1，正常开启,  2关闭</p>
      */
     public $EnableFlag;
 
     /**
-     * @var integer 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
+     * @var integer <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
      */
     public $Type;
 
     /**
-     * @var string 源日志主题
+     * @var string <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
      */
     public $SrcTopicId;
 
     /**
-     * @var integer 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
+     * @var integer <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
      */
     public $Status;
 
     /**
-     * @var string 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public $LastEnableTime;
 
     /**
-     * @var string 日志主题名称
+     * @var string <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
      */
     public $SrcTopicName;
 
     /**
-     * @var string 日志集id
+     * @var string <p>日志集id</p>
      */
     public $LogsetId;
 
     /**
-     * @var array 加工任务目的topic_id以及别名
+     * @var array <p>加工任务目的topic_id以及别名</p>
      */
     public $DstResources;
 
     /**
-     * @var string 加工逻辑函数。
+     * @var string <p>加工逻辑函数。</p>
      */
     public $EtlContent;
 
     /**
-     * @var string 兜底topic_id
+     * @var string <p>兜底topic_id</p>
      */
     public $BackupTopicID;
 
     /**
-     * @var boolean 超限之后是否丢弃日志数据
+     * @var boolean <p>超限之后是否丢弃日志数据</p>
      */
     public $BackupGiveUpData;
 
     /**
-     * @var integer 是否开启投递服务日志。 1关闭,2开启
+     * @var integer <p>是否开启投递服务日志。 1关闭,2开启</p>
      */
     public $HasServicesLog;
 
     /**
-     * @var integer 任务目标日志主题数量
+     * @var integer <p>任务目标日志主题数量</p>
      */
     public $TaskDstCount;
 
     /**
-     * @var integer 数据加工类型。0：标准加工任务；1：前置加工任务。
+     * @var integer <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
      */
     public $DataTransformType;
 
     /**
-     * @var integer 保留失败日志状态。 1:不保留，2:保留
+     * @var integer <p>保留失败日志状态。 1:不保留，2:保留</p>
      */
     public $KeepFailureLog;
 
     /**
-     * @var string 失败日志的字段名称
+     * @var string <p>失败日志的字段名称</p>
      */
     public $FailureLogKey;
 
     /**
-     * @var integer 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
+     * @var integer <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
      */
     public $ProcessFromTimestamp;
 
     /**
-     * @var integer 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
+     * @var integer <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
      */
     public $ProcessToTimestamp;
 
     /**
-     * @var array sql数据源信息
+     * @var array <p>sql数据源信息</p>
      */
     public $DataTransformSqlDataSources;
 
     /**
-     * @var array 环境变量
+     * @var array <p>环境变量</p>
      */
     public $EnvInfos;
 
     /**
-     * @param string $Name 数据加工任务名称
-     * @param string $TaskId 数据加工任务id
-     * @param integer $EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
-     * @param integer $Type 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
-     * @param string $SrcTopicId 源日志主题
-     * @param integer $Status 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
-     * @param string $CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param string $UpdateTime 最近修改时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param string $LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param string $SrcTopicName 日志主题名称
-     * @param string $LogsetId 日志集id
-     * @param array $DstResources 加工任务目的topic_id以及别名
-     * @param string $EtlContent 加工逻辑函数。
-     * @param string $BackupTopicID 兜底topic_id
-     * @param boolean $BackupGiveUpData 超限之后是否丢弃日志数据
-     * @param integer $HasServicesLog 是否开启投递服务日志。 1关闭,2开启
-     * @param integer $TaskDstCount 任务目标日志主题数量
-     * @param integer $DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
-     * @param integer $KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
-     * @param string $FailureLogKey 失败日志的字段名称
-     * @param integer $ProcessFromTimestamp 指定加工数据的开始时间，秒级时间戳。
-- 日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。
-     * @param integer $ProcessToTimestamp 指定加工数据的结束时间，秒级时间戳。
-1. 不可指定未来的时间
-2. 不填则表示持续执行
-     * @param array $DataTransformSqlDataSources sql数据源信息
-     * @param array $EnvInfos 环境变量
+     * @param string $Name <p>数据加工任务名称</p>
+     * @param string $TaskId <p>数据加工任务id</p>
+     * @param integer $EnableFlag <p>任务启用状态，默认为1，正常开启,  2关闭</p>
+     * @param integer $Type <p>加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)</p>
+     * @param string $SrcTopicId <p>源日志主题ID,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题的ID值相同.</p>
+     * @param integer $Status <p>当前加工任务状态（1准备中/2运行中/3停止中/4已停止）</p>
+     * @param string $CreateTime <p>创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param string $UpdateTime <p>最近修改时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param string $LastEnableTime <p>最后启用时间，如果需要重建集群，修改该时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param string $SrcTopicName <p>源日志主题名称,当DataTransformType=1,代表当前任务的类型是前置加工任务,该值和目标日志主题名称的值相同.</p>
+     * @param string $LogsetId <p>日志集id</p>
+     * @param array $DstResources <p>加工任务目的topic_id以及别名</p>
+     * @param string $EtlContent <p>加工逻辑函数。</p>
+     * @param string $BackupTopicID <p>兜底topic_id</p>
+     * @param boolean $BackupGiveUpData <p>超限之后是否丢弃日志数据</p>
+     * @param integer $HasServicesLog <p>是否开启投递服务日志。 1关闭,2开启</p>
+     * @param integer $TaskDstCount <p>任务目标日志主题数量</p>
+     * @param integer $DataTransformType <p>数据加工类型。0：标准加工任务；1：前置加工任务。当该值=1时, 源日志主题和目标日志主题的名称和ID相同.</p><p>枚举值：</p><ul><li>1： 前置加工任务</li><li>0： 标准加工任务</li></ul>
+     * @param integer $KeepFailureLog <p>保留失败日志状态。 1:不保留，2:保留</p>
+     * @param string $FailureLogKey <p>失败日志的字段名称</p>
+     * @param integer $ProcessFromTimestamp <p>指定加工数据的开始时间，秒级时间戳。</p><ul><li>日志主题生命周期内的任意时间范围，如果超出了生命周期,只处理生命周期内有数据的部分。</li></ul>
+     * @param integer $ProcessToTimestamp <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
+     * @param array $DataTransformSqlDataSources <p>sql数据源信息</p>
+     * @param array $EnvInfos <p>环境变量</p>
      */
     function __construct()
     {

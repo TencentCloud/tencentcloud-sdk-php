@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProbe(ProbeConfiguration $Probe) 设置<p>探针配置</p>
  * @method DNSConfig getDNSConfig() 获取<p>沙箱 DNS 配置</p>
  * @method void setDNSConfig(DNSConfig $DNSConfig) 设置<p>沙箱 DNS 配置</p>
+ * @method SecurityContext getSecurityContext() 获取<p>沙箱安全上下文</p>
+ * @method void setSecurityContext(SecurityContext $SecurityContext) 设置<p>沙箱安全上下文</p>
  */
 class CustomConfigurationDetail extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CustomConfigurationDetail extends AbstractModel
     public $DNSConfig;
 
     /**
+     * @var SecurityContext <p>沙箱安全上下文</p>
+     */
+    public $SecurityContext;
+
+    /**
      * @param string $Image <p>镜像地址</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code>。</p><p>枚举值：</p><ul><li>enterprise： TCR 企业容器镜像服务</li><li>personal： CCR 个人容器镜像服务</li></ul>
      * @param string $ImageDigest <p>镜像 Digest</p>
@@ -104,6 +111,7 @@ class CustomConfigurationDetail extends AbstractModel
      * @param ResourceConfiguration $Resources <p>资源配置</p>
      * @param ProbeConfiguration $Probe <p>探针配置</p>
      * @param DNSConfig $DNSConfig <p>沙箱 DNS 配置</p>
+     * @param SecurityContext $SecurityContext <p>沙箱安全上下文</p>
      */
     function __construct()
     {
@@ -169,6 +177,11 @@ class CustomConfigurationDetail extends AbstractModel
         if (array_key_exists("DNSConfig",$param) and $param["DNSConfig"] !== null) {
             $this->DNSConfig = new DNSConfig();
             $this->DNSConfig->deserialize($param["DNSConfig"]);
+        }
+
+        if (array_key_exists("SecurityContext",$param) and $param["SecurityContext"] !== null) {
+            $this->SecurityContext = new SecurityContext();
+            $this->SecurityContext->deserialize($param["SecurityContext"]);
         }
     }
 }

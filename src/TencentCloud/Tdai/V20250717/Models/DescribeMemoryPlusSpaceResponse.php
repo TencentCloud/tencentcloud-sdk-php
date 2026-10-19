@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreditUsage(float $CreditUsage) 设置<p>Memory 实例当前 Credit 的使用数量。</p>
  * @method float getCreditLimit() 获取<p>Memory 实例 Credit 的最大使用数量。</p>
  * @method void setCreditLimit(float $CreditLimit) 设置<p>Memory 实例 Credit 的最大使用数量。</p>
+ * @method boolean getCompressed() 获取<p>是否开启压缩</p>
+ * @method void setCompressed(boolean $Compressed) 设置<p>是否开启压缩</p>
  * @method string getAccessUrl() 获取<p>Memory 实例的内网访问地址。</p>
  * @method void setAccessUrl(string $AccessUrl) 设置<p>Memory 实例的内网访问地址。</p>
  * @method string getWanAccessUrl() 获取<p>Memory 实例的外网访问地址。</p>
@@ -136,6 +138,11 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
     public $CreditLimit;
 
     /**
+     * @var boolean <p>是否开启压缩</p>
+     */
+    public $Compressed;
+
+    /**
      * @var string <p>Memory 实例的内网访问地址。</p>
      */
     public $AccessUrl;
@@ -185,6 +192,7 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
      * @param integer $MemoryLimit <p>Memory 实例记忆条数配额上限。</p>
      * @param float $CreditUsage <p>Memory 实例当前 Credit 的使用数量。</p>
      * @param float $CreditLimit <p>Memory 实例 Credit 的最大使用数量。</p>
+     * @param boolean $Compressed <p>是否开启压缩</p>
      * @param string $AccessUrl <p>Memory 实例的内网访问地址。</p>
      * @param string $WanAccessUrl <p>Memory 实例的外网访问地址。</p>
      * @param string $CreatedAt <p>Memory 实例的创建时间。</p>
@@ -265,6 +273,10 @@ class DescribeMemoryPlusSpaceResponse extends AbstractModel
 
         if (array_key_exists("CreditLimit",$param) and $param["CreditLimit"] !== null) {
             $this->CreditLimit = $param["CreditLimit"];
+        }
+
+        if (array_key_exists("Compressed",$param) and $param["Compressed"] !== null) {
+            $this->Compressed = $param["Compressed"];
         }
 
         if (array_key_exists("AccessUrl",$param) and $param["AccessUrl"] !== null) {

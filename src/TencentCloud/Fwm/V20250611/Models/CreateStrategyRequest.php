@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStrategy请求参数结构体
  *
- * @method string getProduct() 获取产品类型
- * @method void setProduct(string $Product) 设置产品类型
- * @method array getReceiveAccount() 获取下发账号
- * @method void setReceiveAccount(array $ReceiveAccount) 设置下发账号
- * @method array getPreStrategy() 获取前区规则组
- * @method void setPreStrategy(array $PreStrategy) 设置前区规则组
- * @method array getPostStrategy() 获取后区规则组
- * @method void setPostStrategy(array $PostStrategy) 设置后区规则组
- * @method array getReceiveGroup() 获取下发账号组
- * @method void setReceiveGroup(array $ReceiveGroup) 设置下发账号组
+ * @method string getProduct() 获取<p>产品类型</p>
+ * @method void setProduct(string $Product) 设置<p>产品类型</p>
+ * @method array getReceiveAccount() 获取<p>下发账号</p>
+ * @method void setReceiveAccount(array $ReceiveAccount) 设置<p>下发账号</p>
+ * @method array getPreStrategy() 获取<p>前区规则组</p>
+ * @method void setPreStrategy(array $PreStrategy) 设置<p>前区规则组</p>
+ * @method array getPostStrategy() 获取<p>后区规则组</p>
+ * @method void setPostStrategy(array $PostStrategy) 设置<p>后区规则组</p>
+ * @method array getReceiveGroup() 获取<p>下发账号组</p>
+ * @method void setReceiveGroup(array $ReceiveGroup) 设置<p>下发账号组</p>
  */
 class CreateStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 产品类型
+     * @var string <p>产品类型</p>
      */
     public $Product;
 
     /**
-     * @var array 下发账号
+     * @var array <p>下发账号</p>
      */
     public $ReceiveAccount;
 
     /**
-     * @var array 前区规则组
+     * @var array <p>前区规则组</p>
      */
     public $PreStrategy;
 
     /**
-     * @var array 后区规则组
+     * @var array <p>后区规则组</p>
      */
     public $PostStrategy;
 
     /**
-     * @var array 下发账号组
+     * @var array <p>下发账号组</p>
      */
     public $ReceiveGroup;
 
     /**
-     * @param string $Product 产品类型
-     * @param array $ReceiveAccount 下发账号
-     * @param array $PreStrategy 前区规则组
-     * @param array $PostStrategy 后区规则组
-     * @param array $ReceiveGroup 下发账号组
+     * @param string $Product <p>产品类型</p>
+     * @param array $ReceiveAccount <p>下发账号</p>
+     * @param array $PreStrategy <p>前区规则组</p>
+     * @param array $PostStrategy <p>后区规则组</p>
+     * @param array $ReceiveGroup <p>下发账号组</p>
      */
     function __construct()
     {

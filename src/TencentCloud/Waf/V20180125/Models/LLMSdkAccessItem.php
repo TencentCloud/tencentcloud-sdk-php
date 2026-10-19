@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>服务名称</p>
  * @method string getRemark() 获取<p>备注</p>
  * @method void setRemark(string $Remark) 设置<p>备注</p>
- * @method string getSdkSource() 获取<p>SDK接入来源，tokenhub 表示通过 TokenHub 创建，空字符串表示通过控制台创建</p>
- * @method void setSdkSource(string $SdkSource) 设置<p>SDK接入来源，tokenhub 表示通过 TokenHub 创建，空字符串表示通过控制台创建</p>
+ * @method string getSdkSource() 获取<p>SDK接入来源，可不填</p>
+ * @method void setSdkSource(string $SdkSource) 设置<p>SDK接入来源，可不填</p>
  * @method boolean getMainStatus() 获取<p>总开关</p>
  * @method void setMainStatus(boolean $MainStatus) 设置<p>总开关</p>
  * @method boolean getLimitRuleStatus() 获取<p>限速开关</p>
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillsStatus(boolean $SkillsStatus) 设置<p>skills防护开关</p>
  * @method boolean getIntentStatus() 获取<p>意图识别检测开关</p>
  * @method void setIntentStatus(boolean $IntentStatus) 设置<p>意图识别检测开关</p>
+ * @method boolean getUrlDetectStatus() 获取<p>恶意URL检测开关</p>
+ * @method void setUrlDetectStatus(boolean $UrlDetectStatus) 设置<p>恶意URL检测开关</p>
  * @method integer getEffectiveRules() 获取<p>生效规则数量</p>
  * @method void setEffectiveRules(integer $EffectiveRules) 设置<p>生效规则数量</p>
  */
@@ -75,7 +77,7 @@ class LLMSdkAccessItem extends AbstractModel
     public $Remark;
 
     /**
-     * @var string <p>SDK接入来源，tokenhub 表示通过 TokenHub 创建，空字符串表示通过控制台创建</p>
+     * @var string <p>SDK接入来源，可不填</p>
      */
     public $SdkSource;
 
@@ -145,6 +147,11 @@ class LLMSdkAccessItem extends AbstractModel
     public $IntentStatus;
 
     /**
+     * @var boolean <p>恶意URL检测开关</p>
+     */
+    public $UrlDetectStatus;
+
+    /**
      * @var integer <p>生效规则数量</p>
      */
     public $EffectiveRules;
@@ -153,7 +160,7 @@ class LLMSdkAccessItem extends AbstractModel
      * @param string $Domain <p>服务id</p>
      * @param string $Name <p>服务名称</p>
      * @param string $Remark <p>备注</p>
-     * @param string $SdkSource <p>SDK接入来源，tokenhub 表示通过 TokenHub 创建，空字符串表示通过控制台创建</p>
+     * @param string $SdkSource <p>SDK接入来源，可不填</p>
      * @param boolean $MainStatus <p>总开关</p>
      * @param boolean $LimitRuleStatus <p>限速开关</p>
      * @param boolean $ContentRuleStatus <p>内容安全开关</p>
@@ -167,6 +174,7 @@ class LLMSdkAccessItem extends AbstractModel
      * @param boolean $DLPStatus <p>dlp防护开关</p>
      * @param boolean $SkillsStatus <p>skills防护开关</p>
      * @param boolean $IntentStatus <p>意图识别检测开关</p>
+     * @param boolean $UrlDetectStatus <p>恶意URL检测开关</p>
      * @param integer $EffectiveRules <p>生效规则数量</p>
      */
     function __construct()
@@ -248,6 +256,10 @@ class LLMSdkAccessItem extends AbstractModel
 
         if (array_key_exists("IntentStatus",$param) and $param["IntentStatus"] !== null) {
             $this->IntentStatus = $param["IntentStatus"];
+        }
+
+        if (array_key_exists("UrlDetectStatus",$param) and $param["UrlDetectStatus"] !== null) {
+            $this->UrlDetectStatus = $param["UrlDetectStatus"];
         }
 
         if (array_key_exists("EffectiveRules",$param) and $param["EffectiveRules"] !== null) {

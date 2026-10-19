@@ -30,6 +30,8 @@ VERSION：导入新版本
 EXIST：导入现有版本
  * @method string getReasoningEnvironmentSource() 获取推理环境来源（SYSTEM/CUSTOM）
  * @method void setReasoningEnvironmentSource(string $ReasoningEnvironmentSource) 设置推理环境来源（SYSTEM/CUSTOM）
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method string getTrainingModelName() 获取模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
  * @method void setTrainingModelName(string $TrainingModelName) 设置模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
  * @method array getTags() 获取标签配置
@@ -97,6 +99,11 @@ EXIST：导入现有版本
      * @var string 推理环境来源（SYSTEM/CUSTOM）
      */
     public $ReasoningEnvironmentSource;
+
+    /**
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
 
     /**
      * @var string 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
@@ -226,6 +233,7 @@ MODEL：导入新模型
 VERSION：导入新版本
 EXIST：导入现有版本
      * @param string $ReasoningEnvironmentSource 推理环境来源（SYSTEM/CUSTOM）
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param string $TrainingModelName 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param array $Tags 标签配置
      * @param string $TrainingJobName 训练任务名称
@@ -272,6 +280,10 @@ EXIST：导入现有版本
 
         if (array_key_exists("ReasoningEnvironmentSource",$param) and $param["ReasoningEnvironmentSource"] !== null) {
             $this->ReasoningEnvironmentSource = $param["ReasoningEnvironmentSource"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
 
         if (array_key_exists("TrainingModelName",$param) and $param["TrainingModelName"] !== null) {

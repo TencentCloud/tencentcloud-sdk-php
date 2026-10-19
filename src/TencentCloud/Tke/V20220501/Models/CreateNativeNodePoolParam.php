@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置<p>原生节点池密码</p>
  * @method string getCustomImage() 获取<p>自定义镜像 ID</p>
  * @method void setCustomImage(string $CustomImage) 设置<p>自定义镜像 ID</p>
+ * @method string getRuntimeVersion() 获取原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
@@ -206,6 +208,11 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $CustomImage;
 
     /**
+     * @var string 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param MachineSetScaling $Scaling <p>节点池伸缩配置</p>
      * @param array $SubnetIds <p>子网列表</p>
      * @param string $InstanceChargeType <p>节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；</p>
@@ -232,6 +239,7 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param boolean $AutomationService <p>原生节点池安装节点自动化助手开关</p>
      * @param string $Password <p>原生节点池密码</p>
      * @param string $CustomImage <p>自定义镜像 ID</p>
+     * @param string $RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
      */
     function __construct()
     {
@@ -365,6 +373,10 @@ class CreateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("CustomImage",$param) and $param["CustomImage"] !== null) {
             $this->CustomImage = $param["CustomImage"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

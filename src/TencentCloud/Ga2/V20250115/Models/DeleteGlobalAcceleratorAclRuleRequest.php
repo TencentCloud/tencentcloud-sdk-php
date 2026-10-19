@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGlobalAcceleratorAclRule请求参数结构体
  *
- * @method string getGlobalAcceleratorId() 获取全球加速实例ID。
- * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置全球加速实例ID。
- * @method string getGlobalAcceleratorAclPolicyId() 获取安全策略ID
- * @method void setGlobalAcceleratorAclPolicyId(string $GlobalAcceleratorAclPolicyId) 设置安全策略ID
- * @method array getGlobalAcceleratorAclRuleIds() 获取Acl规则ID。
- * @method void setGlobalAcceleratorAclRuleIds(array $GlobalAcceleratorAclRuleIds) 设置Acl规则ID。
+ * @method string getGlobalAcceleratorId() 获取<p>全球加速实例ID。</p>
+ * @method void setGlobalAcceleratorId(string $GlobalAcceleratorId) 设置<p>全球加速实例ID。</p>
+ * @method string getGlobalAcceleratorAclPolicyId() 获取<p>访问控制策略ID</p>
+ * @method void setGlobalAcceleratorAclPolicyId(string $GlobalAcceleratorAclPolicyId) 设置<p>访问控制策略ID</p>
+ * @method array getGlobalAcceleratorAclRuleIds() 获取<p>访问规则ID</p>
+ * @method void setGlobalAcceleratorAclRuleIds(array $GlobalAcceleratorAclRuleIds) 设置<p>访问规则ID</p>
  */
 class DeleteGlobalAcceleratorAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string 全球加速实例ID。
+     * @var string <p>全球加速实例ID。</p>
      */
     public $GlobalAcceleratorId;
 
     /**
-     * @var string 安全策略ID
+     * @var string <p>访问控制策略ID</p>
      */
     public $GlobalAcceleratorAclPolicyId;
 
     /**
-     * @var array Acl规则ID。
+     * @var array <p>访问规则ID</p>
      */
     public $GlobalAcceleratorAclRuleIds;
 
     /**
-     * @param string $GlobalAcceleratorId 全球加速实例ID。
-     * @param string $GlobalAcceleratorAclPolicyId 安全策略ID
-     * @param array $GlobalAcceleratorAclRuleIds Acl规则ID。
+     * @param string $GlobalAcceleratorId <p>全球加速实例ID。</p>
+     * @param string $GlobalAcceleratorAclPolicyId <p>访问控制策略ID</p>
+     * @param array $GlobalAcceleratorAclRuleIds <p>访问规则ID</p>
      */
     function __construct()
     {

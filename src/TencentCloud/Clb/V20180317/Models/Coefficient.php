@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputVideoSecondCoefficient(float $InputVideoSecondCoefficient) 设置<p>输入视频每秒系数</p>
  * @method float getOutputVideoSecondCoefficient() 获取<p>输出视频每秒系数</p>
  * @method void setOutputVideoSecondCoefficient(float $OutputVideoSecondCoefficient) 设置<p>输出视频每秒系数</p>
+ * @method float getOutputImageCoefficient() 获取<p>输出图片系数</p>
+ * @method void setOutputImageCoefficient(float $OutputImageCoefficient) 设置<p>输出图片系数</p>
  */
 class Coefficient extends AbstractModel
 {
@@ -73,6 +75,11 @@ class Coefficient extends AbstractModel
     public $OutputVideoSecondCoefficient;
 
     /**
+     * @var float <p>输出图片系数</p>
+     */
+    public $OutputImageCoefficient;
+
+    /**
      * @param float $InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
      * @param float $InputCacheCreationCoefficient <p>缓存创建积分系数</p>
      * @param float $InputCoefficient <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
@@ -80,6 +87,7 @@ class Coefficient extends AbstractModel
      * @param float $InputImageCoefficient <p>输入图片系数</p>
      * @param float $InputVideoSecondCoefficient <p>输入视频每秒系数</p>
      * @param float $OutputVideoSecondCoefficient <p>输出视频每秒系数</p>
+     * @param float $OutputImageCoefficient <p>输出图片系数</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class Coefficient extends AbstractModel
 
         if (array_key_exists("OutputVideoSecondCoefficient",$param) and $param["OutputVideoSecondCoefficient"] !== null) {
             $this->OutputVideoSecondCoefficient = $param["OutputVideoSecondCoefficient"];
+        }
+
+        if (array_key_exists("OutputImageCoefficient",$param) and $param["OutputImageCoefficient"] !== null) {
+            $this->OutputImageCoefficient = $param["OutputImageCoefficient"];
         }
     }
 }

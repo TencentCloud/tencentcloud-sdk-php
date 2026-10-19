@@ -126,6 +126,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDnsParseCnt() 获取域名数
  * @method void setDnsParseCnt(integer $DnsParseCnt) 设置域名数
+ * @method integer getHitCount() 获取命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+ * @method void setHitCount(integer $HitCount) 设置命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+ * @method string getLastHitTime() 获取最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+ * @method void setLastHitTime(string $LastHitTime) 设置最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
  */
 class NatAclRuleResp extends AbstractModel
 {
@@ -311,6 +315,16 @@ class NatAclRuleResp extends AbstractModel
     public $DnsParseCnt;
 
     /**
+     * @var integer 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+     */
+    public $HitCount;
+
+    /**
+     * @var string 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
+     */
+    public $LastHitTime;
+
+    /**
      * @param string $RuleId 规则ID
      * @param integer $Sequence 优先级
      * @param integer $Direction 规则方向：0-出向，1-入向
@@ -364,6 +378,8 @@ class NatAclRuleResp extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DnsParseCnt 域名数
+     * @param integer $HitCount 命中次数。该规则在所有已下发成员账号下的累计命中次数合计，直接采用云防火墙返回值，不做时间窗口换算；从未命中时为 0
+     * @param string $LastHitTime 最近命中时间。取该规则在所有已下发成员账号中最新的命中时间；从未命中时为 "-"
      */
     function __construct()
     {
@@ -505,6 +521,14 @@ class NatAclRuleResp extends AbstractModel
 
         if (array_key_exists("DnsParseCnt",$param) and $param["DnsParseCnt"] !== null) {
             $this->DnsParseCnt = $param["DnsParseCnt"];
+        }
+
+        if (array_key_exists("HitCount",$param) and $param["HitCount"] !== null) {
+            $this->HitCount = $param["HitCount"];
+        }
+
+        if (array_key_exists("LastHitTime",$param) and $param["LastHitTime"] !== null) {
+            $this->LastHitTime = $param["LastHitTime"];
         }
     }
 }

@@ -20,109 +20,125 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Dspm 风险统计数
  *
- * @method integer getUnprocessedRisk() 获取待处理风险个数
- * @method void setUnprocessedRisk(integer $UnprocessedRisk) 设置待处理风险个数
- * @method integer getConfigurationRisk() 获取配置风险个数
- * @method void setConfigurationRisk(integer $ConfigurationRisk) 设置配置风险个数
- * @method integer getBaselineDeviation() 获取基线风险个数
- * @method void setBaselineDeviation(integer $BaselineDeviation) 设置基线风险个数
- * @method integer getLeakDetection() 获取泄露风险个数
- * @method void setLeakDetection(integer $LeakDetection) 设置泄露风险个数
- * @method integer getSQLBehaviorAnomaly() 获取SQL行为异常风险个数
- * @method void setSQLBehaviorAnomaly(integer $SQLBehaviorAnomaly) 设置SQL行为异常风险个数
- * @method integer getPermissionAnomaly() 获取权限异常风险个数
- * @method void setPermissionAnomaly(integer $PermissionAnomaly) 设置权限异常风险个数
- * @method integer getLoginBehaviorAnomaly() 获取登录行为异常风险个数
- * @method void setLoginBehaviorAnomaly(integer $LoginBehaviorAnomaly) 设置登录行为异常风险个数
- * @method integer getAttackSurfaceRisk() 获取攻击面风险个数
- * @method void setAttackSurfaceRisk(integer $AttackSurfaceRisk) 设置攻击面风险个数
- * @method integer getAccountSensitiveOperation() 获取账号敏感操作个数
- * @method void setAccountSensitiveOperation(integer $AccountSensitiveOperation) 设置账号敏感操作个数
- * @method integer getUnprocessedAlarm() 获取待处理告警个数
- * @method void setUnprocessedAlarm(integer $UnprocessedAlarm) 设置待处理告警个数
- * @method integer getNumOfNewAlarmEvent() 获取新增事件告警
- * @method void setNumOfNewAlarmEvent(integer $NumOfNewAlarmEvent) 设置新增事件告警
- * @method integer getNumOfNewConfigRisk() 获取新增配置风险
- * @method void setNumOfNewConfigRisk(integer $NumOfNewConfigRisk) 设置新增配置风险
+ * @method integer getUnprocessedRisk() 获取<p>待处理风险个数</p>
+ * @method void setUnprocessedRisk(integer $UnprocessedRisk) 设置<p>待处理风险个数</p>
+ * @method integer getConfigurationRisk() 获取<p>配置风险个数</p>
+ * @method void setConfigurationRisk(integer $ConfigurationRisk) 设置<p>配置风险个数</p>
+ * @method integer getBaselineDeviation() 获取<p>基线风险个数</p>
+ * @method void setBaselineDeviation(integer $BaselineDeviation) 设置<p>基线风险个数</p>
+ * @method integer getLeakDetection() 获取<p>泄露风险个数</p>
+ * @method void setLeakDetection(integer $LeakDetection) 设置<p>泄露风险个数</p>
+ * @method integer getSQLBehaviorAnomaly() 获取<p>SQL行为异常风险个数</p>
+ * @method void setSQLBehaviorAnomaly(integer $SQLBehaviorAnomaly) 设置<p>SQL行为异常风险个数</p>
+ * @method integer getPermissionAnomaly() 获取<p>权限异常风险个数</p>
+ * @method void setPermissionAnomaly(integer $PermissionAnomaly) 设置<p>权限异常风险个数</p>
+ * @method integer getLoginBehaviorAnomaly() 获取<p>登录行为异常风险个数</p>
+ * @method void setLoginBehaviorAnomaly(integer $LoginBehaviorAnomaly) 设置<p>登录行为异常风险个数</p>
+ * @method integer getAttackSurfaceRisk() 获取<p>攻击面风险个数</p>
+ * @method void setAttackSurfaceRisk(integer $AttackSurfaceRisk) 设置<p>攻击面风险个数</p>
+ * @method integer getAccountSensitiveOperation() 获取<p>账号敏感操作个数</p>
+ * @method void setAccountSensitiveOperation(integer $AccountSensitiveOperation) 设置<p>账号敏感操作个数</p>
+ * @method integer getUnprocessedAlarm() 获取<p>待处理告警个数</p>
+ * @method void setUnprocessedAlarm(integer $UnprocessedAlarm) 设置<p>待处理告警个数</p>
+ * @method integer getNumOfNewAlarmEvent() 获取<p>新增事件告警</p>
+ * @method void setNumOfNewAlarmEvent(integer $NumOfNewAlarmEvent) 设置<p>新增事件告警</p>
+ * @method integer getNumOfNewConfigRisk() 获取<p>新增配置风险</p>
+ * @method void setNumOfNewConfigRisk(integer $NumOfNewConfigRisk) 设置<p>新增配置风险</p>
+ * @method integer getAccountRisk() 获取<p>账号风险条数</p>
+ * @method void setAccountRisk(integer $AccountRisk) 设置<p>账号风险条数</p>
+ * @method integer getConfigRisk() 获取<p>配置风险条数</p>
+ * @method void setConfigRisk(integer $ConfigRisk) 设置<p>配置风险条数</p>
  */
 class DspmRiskCount extends AbstractModel
 {
     /**
-     * @var integer 待处理风险个数
+     * @var integer <p>待处理风险个数</p>
      */
     public $UnprocessedRisk;
 
     /**
-     * @var integer 配置风险个数
+     * @var integer <p>配置风险个数</p>
      * @deprecated
      */
     public $ConfigurationRisk;
 
     /**
-     * @var integer 基线风险个数
+     * @var integer <p>基线风险个数</p>
      * @deprecated
      */
     public $BaselineDeviation;
 
     /**
-     * @var integer 泄露风险个数
+     * @var integer <p>泄露风险个数</p>
      * @deprecated
      */
     public $LeakDetection;
 
     /**
-     * @var integer SQL行为异常风险个数
+     * @var integer <p>SQL行为异常风险个数</p>
      */
     public $SQLBehaviorAnomaly;
 
     /**
-     * @var integer 权限异常风险个数
+     * @var integer <p>权限异常风险个数</p>
      */
     public $PermissionAnomaly;
 
     /**
-     * @var integer 登录行为异常风险个数
+     * @var integer <p>登录行为异常风险个数</p>
      */
     public $LoginBehaviorAnomaly;
 
     /**
-     * @var integer 攻击面风险个数
+     * @var integer <p>攻击面风险个数</p>
      */
     public $AttackSurfaceRisk;
 
     /**
-     * @var integer 账号敏感操作个数
+     * @var integer <p>账号敏感操作个数</p>
      */
     public $AccountSensitiveOperation;
 
     /**
-     * @var integer 待处理告警个数
+     * @var integer <p>待处理告警个数</p>
      */
     public $UnprocessedAlarm;
 
     /**
-     * @var integer 新增事件告警
+     * @var integer <p>新增事件告警</p>
      */
     public $NumOfNewAlarmEvent;
 
     /**
-     * @var integer 新增配置风险
+     * @var integer <p>新增配置风险</p>
      */
     public $NumOfNewConfigRisk;
 
     /**
-     * @param integer $UnprocessedRisk 待处理风险个数
-     * @param integer $ConfigurationRisk 配置风险个数
-     * @param integer $BaselineDeviation 基线风险个数
-     * @param integer $LeakDetection 泄露风险个数
-     * @param integer $SQLBehaviorAnomaly SQL行为异常风险个数
-     * @param integer $PermissionAnomaly 权限异常风险个数
-     * @param integer $LoginBehaviorAnomaly 登录行为异常风险个数
-     * @param integer $AttackSurfaceRisk 攻击面风险个数
-     * @param integer $AccountSensitiveOperation 账号敏感操作个数
-     * @param integer $UnprocessedAlarm 待处理告警个数
-     * @param integer $NumOfNewAlarmEvent 新增事件告警
-     * @param integer $NumOfNewConfigRisk 新增配置风险
+     * @var integer <p>账号风险条数</p>
+     */
+    public $AccountRisk;
+
+    /**
+     * @var integer <p>配置风险条数</p>
+     */
+    public $ConfigRisk;
+
+    /**
+     * @param integer $UnprocessedRisk <p>待处理风险个数</p>
+     * @param integer $ConfigurationRisk <p>配置风险个数</p>
+     * @param integer $BaselineDeviation <p>基线风险个数</p>
+     * @param integer $LeakDetection <p>泄露风险个数</p>
+     * @param integer $SQLBehaviorAnomaly <p>SQL行为异常风险个数</p>
+     * @param integer $PermissionAnomaly <p>权限异常风险个数</p>
+     * @param integer $LoginBehaviorAnomaly <p>登录行为异常风险个数</p>
+     * @param integer $AttackSurfaceRisk <p>攻击面风险个数</p>
+     * @param integer $AccountSensitiveOperation <p>账号敏感操作个数</p>
+     * @param integer $UnprocessedAlarm <p>待处理告警个数</p>
+     * @param integer $NumOfNewAlarmEvent <p>新增事件告警</p>
+     * @param integer $NumOfNewConfigRisk <p>新增配置风险</p>
+     * @param integer $AccountRisk <p>账号风险条数</p>
+     * @param integer $ConfigRisk <p>配置风险条数</p>
      */
     function __construct()
     {
@@ -183,6 +199,14 @@ class DspmRiskCount extends AbstractModel
 
         if (array_key_exists("NumOfNewConfigRisk",$param) and $param["NumOfNewConfigRisk"] !== null) {
             $this->NumOfNewConfigRisk = $param["NumOfNewConfigRisk"];
+        }
+
+        if (array_key_exists("AccountRisk",$param) and $param["AccountRisk"] !== null) {
+            $this->AccountRisk = $param["AccountRisk"];
+        }
+
+        if (array_key_exists("ConfigRisk",$param) and $param["ConfigRisk"] !== null) {
+            $this->ConfigRisk = $param["ConfigRisk"];
         }
     }
 }

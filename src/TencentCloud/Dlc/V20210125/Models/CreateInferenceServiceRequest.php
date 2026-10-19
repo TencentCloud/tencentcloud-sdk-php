@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCustom(boolean $IsCustom) 设置<p>自定义RayServe提交</p>
  * @method string getRuntimeEnv() 获取<p>python runtime env</p>
  * @method void setRuntimeEnv(string $RuntimeEnv) 设置<p>python runtime env</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  */
 class CreateInferenceServiceRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $RuntimeEnv;
 
     /**
+     * @var string <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $Name <p>推理服务名称</p>
      * @param string $ModelUid <p>模型 UID（业务级唯一标识）</p>
      * @param string $Engine <p>推理引擎（vllm / xgboost）</p>
@@ -200,6 +207,7 @@ class CreateInferenceServiceRequest extends AbstractModel
      * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
      * @param boolean $IsCustom <p>自定义RayServe提交</p>
      * @param string $RuntimeEnv <p>python runtime env</p>
+     * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class CreateInferenceServiceRequest extends AbstractModel
 
         if (array_key_exists("RuntimeEnv",$param) and $param["RuntimeEnv"] !== null) {
             $this->RuntimeEnv = $param["RuntimeEnv"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

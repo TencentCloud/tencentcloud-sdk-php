@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改数据库地址
  *
- * @method string getNewIPAddress() 获取新IP地址。
- * @method void setNewIPAddress(string $NewIPAddress) 设置新IP地址。
- * @method string getOldIpAddress() 获取原IP地址。
- * @method void setOldIpAddress(string $OldIpAddress) 设置原IP地址。
+ * @method string getNewIPAddress() 获取<p>新IP地址。</p>
+ * @method void setNewIPAddress(string $NewIPAddress) 设置<p>新IP地址。</p>
+ * @method string getOldIpAddress() 获取<p>原IP地址。</p>
+ * @method void setOldIpAddress(string $OldIpAddress) 设置<p>原IP地址。</p>
+ * @method string getNodeType() 获取<p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+ * @method void setNodeType(string $NodeType) 设置<p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
  */
 class ModifyNetworkAddress extends AbstractModel
 {
     /**
-     * @var string 新IP地址。
+     * @var string <p>新IP地址。</p>
      */
     public $NewIPAddress;
 
     /**
-     * @var string 原IP地址。
+     * @var string <p>原IP地址。</p>
      */
     public $OldIpAddress;
 
     /**
-     * @param string $NewIPAddress 新IP地址。
-     * @param string $OldIpAddress 原IP地址。
+     * @var string <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
+     */
+    public $NodeType;
+
+    /**
+     * @param string $NewIPAddress <p>新IP地址。</p>
+     * @param string $OldIpAddress <p>原IP地址。</p>
+     * @param string $NodeType <p>在副本集时，修改网络需要传此字段，用于标识该ip地址为主节点或者hidden节点</p><p>枚举值：</p><ul><li>PRIMARY： 主节点</li><li>HIDDEN： hidden节点</li></ul>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyNetworkAddress extends AbstractModel
 
         if (array_key_exists("OldIpAddress",$param) and $param["OldIpAddress"] !== null) {
             $this->OldIpAddress = $param["OldIpAddress"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
     }
 }

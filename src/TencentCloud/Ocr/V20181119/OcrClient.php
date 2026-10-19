@@ -58,7 +58,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求并发限制：2次/分钟。
  * @method Models\DescribeMultimodalDocParseJobResponse DescribeMultimodalDocParseJob(Models\DescribeMultimodalDocParseJobRequest $req) 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
 
-创建任务接口文档地址：https://cloud.tencent.com/document/product/1024/953218
+创建任务接口文档地址：https://cloud.tencent.com/document/product/866/139312
 
 默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJob(Models\DescribeQuestionMarkAgentJobRequest $req) 用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
@@ -296,7 +296,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
     </table>
 
 默认接口请求频率限制：20次/秒。
- * @method Models\ImageEnhancementResponse ImageEnhancement(Models\ImageEnhancementRequest $req) 文本图像增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度。
+ * @method Models\ImageEnhancementResponse ImageEnhancement(Models\ImageEnhancementRequest $req) 产品规划
+
+文本图像增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度。
 
 默认接口请求频率限制：10次/秒。
  * @method Models\LicensePlateOCRResponse LicensePlateOCR(Models\LicensePlateOCRRequest $req) 本接口支持对中国大陆机动车车牌的自动定位和识别，返回地域编号和车牌号码与车牌颜色信息。 
@@ -318,7 +320,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求频率限制：5次/秒。
  * @method Models\MultimodalDocParseResponse MultimodalDocParse(Models\MultimodalDocParseRequest $req) 本接口支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），返回解析后的结果文件下载地址（zip压缩包，包含markdown、json和图片）。
 
-支持的文件大小：PDF/Word/PPT支持150M且300页以内、Excel支持10M以内、TXT支持10M以内、图片文件支持70M以内。
+支持的文件大小：PDF/Word/PPT支持150M且300页以内、Excel支持10M以内、TXT支持10M以内、图片文件支持30M以内。
 
 默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\PassportOCRResponse PassportOCR(Models\PassportOCRRequest $req) <b>此接口为护照识别（中国大陆地区护照）的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/37657">护照识别（多国多地区护照）</a>。</b>
@@ -656,7 +658,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 默认接口请求并发限制：2次/分钟。
  * @method Models\SubmitMultimodalDocParseJobResponse SubmitMultimodalDocParseJob(Models\SubmitMultimodalDocParseJobRequest $req) 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
 
-查询任务接口文档地址：https://cloud.tencent.com/document/product/1024/953219
+查询任务接口文档地址：https://cloud.tencent.com/document/product/866/139313
 
 默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
  * @method Models\SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJob(Models\SubmitQuestionMarkAgentJobRequest $req) 用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRerankConfig(RerankConfig $RerankConfig) 设置<p>Rerank 调度配置</p>
  * @method DecisionsConfig getDecisionsConfig() 获取<p>Decisions 调度配置</p>
  * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>Decisions 调度配置</p>
+ * @method ImageConfig getImageConfig() 获取<p>Images 生图配置</p>
+ * @method void setImageConfig(ImageConfig $ImageConfig) 设置<p>Images 生图配置</p>
  */
 class CreateModelRouterRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreateModelRouterRequest extends AbstractModel
     public $DecisionsConfig;
 
     /**
+     * @var ImageConfig <p>Images 生图配置</p>
+     */
+    public $ImageConfig;
+
+    /**
      * @param string $ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      * @param string $BudgetId <p>关联的积分预算ID</p>
      * @param string $CertId <p>证书ID</p><p>入参限制：当Scheme为HTTPS时，该参数必传</p>
@@ -192,6 +199,7 @@ class CreateModelRouterRequest extends AbstractModel
      * @param VideoConfig $VideoConfig <p>Video 配置</p>
      * @param RerankConfig $RerankConfig <p>Rerank 调度配置</p>
      * @param DecisionsConfig $DecisionsConfig <p>Decisions 调度配置</p>
+     * @param ImageConfig $ImageConfig <p>Images 生图配置</p>
      */
     function __construct()
     {
@@ -301,6 +309,11 @@ class CreateModelRouterRequest extends AbstractModel
         if (array_key_exists("DecisionsConfig",$param) and $param["DecisionsConfig"] !== null) {
             $this->DecisionsConfig = new DecisionsConfig();
             $this->DecisionsConfig->deserialize($param["DecisionsConfig"]);
+        }
+
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
         }
     }
 }

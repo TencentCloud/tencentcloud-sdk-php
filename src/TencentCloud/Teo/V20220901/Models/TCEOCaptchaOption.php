@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EdgeOne 人机校验认证实例信息。
  *
- * @method string getCaptchaMode() 获取EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
- * @method void setCaptchaMode(string $CaptchaMode) 设置EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+ * @method string getCaptchaMode() 获取<p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
+ * @method void setCaptchaMode(string $CaptchaMode) 设置<p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
+ * @method string getMobileCaptchaMode() 获取<p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+ * @method void setMobileCaptchaMode(string $MobileCaptchaMode) 设置<p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
  */
 class TCEOCaptchaOption extends AbstractModel
 {
     /**
-     * @var string EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+     * @var string <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
      */
     public $CaptchaMode;
 
     /**
-     * @param string $CaptchaMode EdgeOne 人机校验模式，取值有：<li> Invisible：无感验证；</li><li>Adaptive：自适应交互验证。</li>
+     * @var string <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
+     */
+    public $MobileCaptchaMode;
+
+    /**
+     * @param string $CaptchaMode <p>浏览器端 WebView 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Adaptive： 自适应交互验证</li></ul><p>默认值：Invisible</p>
+     * @param string $MobileCaptchaMode <p>移动端原生 App 人机校验交互模式。</p><p>枚举值：</p><ul><li>Invisible： 无感验证</li><li>Visible： 交互验证</li></ul><p>默认值：Invisible</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TCEOCaptchaOption extends AbstractModel
         }
         if (array_key_exists("CaptchaMode",$param) and $param["CaptchaMode"] !== null) {
             $this->CaptchaMode = $param["CaptchaMode"];
+        }
+
+        if (array_key_exists("MobileCaptchaMode",$param) and $param["MobileCaptchaMode"] !== null) {
+            $this->MobileCaptchaMode = $param["MobileCaptchaMode"];
         }
     }
 }

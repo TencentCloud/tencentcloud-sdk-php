@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelAccelerateTask返回参数结构体
  *
- * @method ModelAccelerateTask getModelAccelerateTask() 获取模型加速任务详情
+ * @method ModelAccelerateTask getModelAccelerateTask() 获取<p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAccelerateTask(ModelAccelerateTask $ModelAccelerateTask) 设置模型加速任务详情
+ * @method void setModelAccelerateTask(ModelAccelerateTask $ModelAccelerateTask) 设置<p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getModelAccRuntimeInSecond() 获取模型加速时长，单位s
+ * @method integer getModelAccRuntimeInSecond() 获取<p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAccRuntimeInSecond(integer $ModelAccRuntimeInSecond) 设置模型加速时长，单位s
+ * @method void setModelAccRuntimeInSecond(integer $ModelAccRuntimeInSecond) 设置<p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelAccStartTime() 获取模型加速任务开始时间
+ * @method string getModelAccStartTime() 获取<p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAccStartTime(string $ModelAccStartTime) 设置模型加速任务开始时间
+ * @method void setModelAccStartTime(string $ModelAccStartTime) 设置<p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelAccEndTime() 获取模型加速任务结束时间
+ * @method string getModelAccEndTime() 获取<p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAccEndTime(string $ModelAccEndTime) 设置模型加速任务结束时间
+ * @method void setModelAccEndTime(string $ModelAccEndTime) 设置<p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,25 +42,25 @@ use TencentCloud\Common\AbstractModel;
 class DescribeModelAccelerateTaskResponse extends AbstractModel
 {
     /**
-     * @var ModelAccelerateTask 模型加速任务详情
+     * @var ModelAccelerateTask <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAccelerateTask;
 
     /**
-     * @var integer 模型加速时长，单位s
+     * @var integer <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAccRuntimeInSecond;
 
     /**
-     * @var string 模型加速任务开始时间
+     * @var string <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAccStartTime;
 
     /**
-     * @var string 模型加速任务结束时间
+     * @var string <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAccEndTime;
@@ -71,13 +71,13 @@ class DescribeModelAccelerateTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ModelAccelerateTask $ModelAccelerateTask 模型加速任务详情
+     * @param ModelAccelerateTask $ModelAccelerateTask <p>模型加速任务详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ModelAccRuntimeInSecond 模型加速时长，单位s
+     * @param integer $ModelAccRuntimeInSecond <p>模型加速时长，单位s</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelAccStartTime 模型加速任务开始时间
+     * @param string $ModelAccStartTime <p>模型加速任务开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelAccEndTime 模型加速任务结束时间
+     * @param string $ModelAccEndTime <p>模型加速任务结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccessCert请求参数结构体
  *
- * @method string getCertDesc() 获取证书描述，不超过64字符
- * @method void setCertDesc(string $CertDesc) 设置证书描述，不超过64字符
+ * @method string getCertDesc() 获取<p>证书描述，不超过64字符</p>
+ * @method void setCertDesc(string $CertDesc) 设置<p>证书描述，不超过64字符</p>
+ * @method string getType() 获取<p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+ * @method void setType(string $Type) 设置<p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
  */
 class CreateAccessCertRequest extends AbstractModel
 {
     /**
-     * @var string 证书描述，不超过64字符
+     * @var string <p>证书描述，不超过64字符</p>
      */
     public $CertDesc;
 
     /**
-     * @param string $CertDesc 证书描述，不超过64字符
+     * @var string <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
+     */
+    public $Type;
+
+    /**
+     * @param string $CertDesc <p>证书描述，不超过64字符</p>
+     * @param string $Type <p>凭证类型</p><p>枚举值：</p><ul><li>ssh： 通用系列文件系统凭证</li><li>gss： Turbo系列文件系统凭证</li></ul><p>默认值：ssh</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateAccessCertRequest extends AbstractModel
         }
         if (array_key_exists("CertDesc",$param) and $param["CertDesc"] !== null) {
             $this->CertDesc = $param["CertDesc"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

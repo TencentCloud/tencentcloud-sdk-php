@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageId(string $StorageId) 设置存储实例ID
  * @method boolean getLimitMount() 获取限制开关是否开启，只有开启时才有限制，默认关闭
  * @method void setLimitMount(boolean $LimitMount) 设置限制开关是否开启，只有开启时才有限制，默认关闭
- * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
- * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class UpdateMountLimitRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class UpdateMountLimitRequest extends AbstractModel
     public $LimitMount;
 
     /**
-     * @var string <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     public $TiProjectId;
 
@@ -55,7 +55,7 @@ class UpdateMountLimitRequest extends AbstractModel
      * @param string $Type 数据源类型英文名
      * @param string $StorageId 存储实例ID
      * @param boolean $LimitMount 限制开关是否开启，只有开启时才有限制，默认关闭
-     * @param string $TiProjectId <p>TI工作空间ID</p><p>仅用于“工作空间”白名单功能。如需使用，请联系TI管理员开通白名单。</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {

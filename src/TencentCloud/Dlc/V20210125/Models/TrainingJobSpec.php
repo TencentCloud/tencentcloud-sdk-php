@@ -130,6 +130,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResumeTraining(boolean $ResumeTraining) 设置<p>提交时的断点续训意图声明（仅详情返回）</p>
  * @method string getAdvancedOptions() 获取<p>高级参数 JSON（透传给 Neutrino advanced_options）</p>
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数 JSON（透传给 Neutrino advanced_options）</p>
+ * @method string getSubAccountUin() 获取<p>创建人子账号 UIN（实际提交者）</p>
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>创建人子账号 UIN（实际提交者）</p>
+ * @method string getSubAccountName() 获取<p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+ * @method string getNetworkConfig() 获取<p>用户网络配置(JSON，跨租户 ENI 等)</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置(JSON，跨租户 ENI 等)</p>
  */
 class TrainingJobSpec extends AbstractModel
 {
@@ -333,6 +339,21 @@ class TrainingJobSpec extends AbstractModel
     public $AdvancedOptions;
 
     /**
+     * @var string <p>创建人子账号 UIN（实际提交者）</p>
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+     */
+    public $SubAccountName;
+
+    /**
+     * @var string <p>用户网络配置(JSON，跨租户 ENI 等)</p>
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $SpecId <p>训练作业配置 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName <p>训练作业配置名称</p>
@@ -388,6 +409,9 @@ class TrainingJobSpec extends AbstractModel
      * @param TrainingTuningParams $TuningParams <p>提交时的调优参数（仅 POST_TRAINING，仅详情返回）</p>
      * @param boolean $ResumeTraining <p>提交时的断点续训意图声明（仅详情返回）</p>
      * @param string $AdvancedOptions <p>高级参数 JSON（透传给 Neutrino advanced_options）</p>
+     * @param string $SubAccountUin <p>创建人子账号 UIN（实际提交者）</p>
+     * @param string $SubAccountName <p>创建人子账号名称（CAM 解析，解析失败为 null）</p>
+     * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
      */
     function __construct()
     {
@@ -557,6 +581,18 @@ class TrainingJobSpec extends AbstractModel
 
         if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
             $this->AdvancedOptions = $param["AdvancedOptions"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
         }
     }
 }

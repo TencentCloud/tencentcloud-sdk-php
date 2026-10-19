@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetCloudStorage请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getDeviceName() 获取设备名称
- * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method integer getChannelId() 获取通道ID 非NVR设备则不填 NVR设备则必填 默认为无
- * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备则不填 NVR设备则必填 默认为无
- * @method string getUserId() 获取云存用户Id，为空则为默认云存空间。
- * @method void setUserId(string $UserId) 设置云存用户Id，为空则为默认云存空间。
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getDeviceName() 获取<p>设备名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>设备名称</p>
+ * @method integer getChannelId() 获取<p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
+ * @method void setChannelId(integer $ChannelId) 设置<p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
+ * @method string getUserId() 获取<p>云存用户Id，为空则为默认云存空间。</p>
+ * @method void setUserId(string $UserId) 设置<p>云存用户Id，为空则为默认云存空间。</p>
+ * @method string getOrderId() 获取<p>订单id</p>
+ * @method void setOrderId(string $OrderId) 设置<p>订单id</p>
  */
 class ResetCloudStorageRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 设备名称
+     * @var string <p>设备名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var integer 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @var integer <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
      */
     public $ChannelId;
 
     /**
-     * @var string 云存用户Id，为空则为默认云存空间。
+     * @var string <p>云存用户Id，为空则为默认云存空间。</p>
      */
     public $UserId;
 
     /**
-     * @param string $ProductId 产品ID
-     * @param string $DeviceName 设备名称
-     * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
-     * @param string $UserId 云存用户Id，为空则为默认云存空间。
+     * @var string <p>订单id</p>
+     */
+    public $OrderId;
+
+    /**
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $DeviceName <p>设备名称</p>
+     * @param integer $ChannelId <p>通道ID 非NVR设备则不填 NVR设备则必填 默认为无</p>
+     * @param string $UserId <p>云存用户Id，为空则为默认云存空间。</p>
+     * @param string $OrderId <p>订单id</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ResetCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
+            $this->OrderId = $param["OrderId"];
         }
     }
 }

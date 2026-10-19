@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrainingModelVersion请求参数结构体
  *
- * @method string getTrainingModelVersionId() 获取模型版本ID
- * @method void setTrainingModelVersionId(string $TrainingModelVersionId) 设置模型版本ID
+ * @method string getTrainingModelVersionId() 获取<p>模型版本ID</p>
+ * @method void setTrainingModelVersionId(string $TrainingModelVersionId) 设置<p>模型版本ID</p>
+ * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+ * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  */
 class DescribeTrainingModelVersionRequest extends AbstractModel
 {
     /**
-     * @var string 模型版本ID
+     * @var string <p>模型版本ID</p>
      */
     public $TrainingModelVersionId;
 
     /**
-     * @param string $TrainingModelVersionId 模型版本ID
+     * @var string <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
+     */
+    public $TiProjectId;
+
+    /**
+     * @param string $TrainingModelVersionId <p>模型版本ID</p>
+     * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeTrainingModelVersionRequest extends AbstractModel
         }
         if (array_key_exists("TrainingModelVersionId",$param) and $param["TrainingModelVersionId"] !== null) {
             $this->TrainingModelVersionId = $param["TrainingModelVersionId"];
+        }
+
+        if (array_key_exists("TiProjectId",$param) and $param["TiProjectId"] !== null) {
+            $this->TiProjectId = $param["TiProjectId"];
         }
     }
 }

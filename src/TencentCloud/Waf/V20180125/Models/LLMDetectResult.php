@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置<p>规则动作</p>
  * @method string getPayload() 获取<p>攻击payload</p>
  * @method void setPayload(string $Payload) 设置<p>攻击payload</p>
+ * @method string getDesensitization() 获取<p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+ * @method void setDesensitization(string $Desensitization) 设置<p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
  * @method array getImageResult() 获取<p>图片检测结果</p>
  * @method void setImageResult(array $ImageResult) 设置<p>图片检测结果</p>
  * @method string getMsgID() 获取<p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
@@ -44,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToolCallResult(ToolCallResult $ToolCallResult) 设置<p>toolcall的检测结果</p>
  * @method IntentDetectResult getIntentDetectResult() 获取<p>意图检测结果</p>
  * @method void setIntentDetectResult(IntentDetectResult $IntentDetectResult) 设置<p>意图检测结果</p>
+ * @method UrlDetectResult getUrlDetectResult() 获取<p>恶意URL检测结果</p>
+ * @method void setUrlDetectResult(UrlDetectResult $UrlDetectResult) 设置<p>恶意URL检测结果</p>
  */
 class LLMDetectResult extends AbstractModel
 {
@@ -88,6 +92,11 @@ class LLMDetectResult extends AbstractModel
     public $Payload;
 
     /**
+     * @var string <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
+     */
+    public $Desensitization;
+
+    /**
      * @var array <p>图片检测结果</p>
      */
     public $ImageResult;
@@ -108,6 +117,11 @@ class LLMDetectResult extends AbstractModel
     public $IntentDetectResult;
 
     /**
+     * @var UrlDetectResult <p>恶意URL检测结果</p>
+     */
+    public $UrlDetectResult;
+
+    /**
      * @param array $SensitiveResult <p>仅输出侧：涉敏信息</p>
      * @param array $KeyWordsResult <p>输入输出均检测：关键词库命中信息</p>
      * @param array $DataCategoryResult <p>输入输出均检测：数据分类分级结果</p>
@@ -116,10 +130,12 @@ class LLMDetectResult extends AbstractModel
      * @param string $RuleName <p>命中的规则名称</p>
      * @param string $Action <p>规则动作</p>
      * @param string $Payload <p>攻击payload</p>
+     * @param string $Desensitization <p>脱敏后的内容。Action为mask时返回；如果未生成脱敏证据，则返回原文。</p>
      * @param array $ImageResult <p>图片检测结果</p>
      * @param string $MsgID <p>要代答的消息id，此消息id用于作为GenerateLLMSecAnswer接口的入参</p>
      * @param ToolCallResult $ToolCallResult <p>toolcall的检测结果</p>
      * @param IntentDetectResult $IntentDetectResult <p>意图检测结果</p>
+     * @param UrlDetectResult $UrlDetectResult <p>恶意URL检测结果</p>
      */
     function __construct()
     {
@@ -177,6 +193,10 @@ class LLMDetectResult extends AbstractModel
             $this->Payload = $param["Payload"];
         }
 
+        if (array_key_exists("Desensitization",$param) and $param["Desensitization"] !== null) {
+            $this->Desensitization = $param["Desensitization"];
+        }
+
         if (array_key_exists("ImageResult",$param) and $param["ImageResult"] !== null) {
             $this->ImageResult = [];
             foreach ($param["ImageResult"] as $key => $value){
@@ -198,6 +218,11 @@ class LLMDetectResult extends AbstractModel
         if (array_key_exists("IntentDetectResult",$param) and $param["IntentDetectResult"] !== null) {
             $this->IntentDetectResult = new IntentDetectResult();
             $this->IntentDetectResult->deserialize($param["IntentDetectResult"]);
+        }
+
+        if (array_key_exists("UrlDetectResult",$param) and $param["UrlDetectResult"] !== null) {
+            $this->UrlDetectResult = new UrlDetectResult();
+            $this->UrlDetectResult->deserialize($param["UrlDetectResult"]);
         }
     }
 }

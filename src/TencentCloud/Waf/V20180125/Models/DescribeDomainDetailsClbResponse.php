@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainDetailsClb返回参数结构体
  *
- * @method ClbDomainsInfo getDomainsClbPartInfo() 获取clb域名详情
- * @method void setDomainsClbPartInfo(ClbDomainsInfo $DomainsClbPartInfo) 设置clb域名详情
+ * @method ClbDomainsInfo getDomainsClbPartInfo() 获取<p>clb域名详情</p>
+ * @method void setDomainsClbPartInfo(ClbDomainsInfo $DomainsClbPartInfo) 设置<p>clb域名详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainDetailsClbResponse extends AbstractModel
 {
     /**
-     * @var ClbDomainsInfo clb域名详情
+     * @var ClbDomainsInfo <p>clb域名详情</p>
      */
     public $DomainsClbPartInfo;
 
@@ -38,7 +38,7 @@ class DescribeDomainDetailsClbResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ClbDomainsInfo $DomainsClbPartInfo clb域名详情
+     * @param ClbDomainsInfo $DomainsClbPartInfo <p>clb域名详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

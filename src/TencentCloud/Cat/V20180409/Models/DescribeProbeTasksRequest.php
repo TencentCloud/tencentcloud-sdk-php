@@ -20,202 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProbeTasks请求参数结构体
  *
- * @method array getTaskIDs() 获取任务 ID  列表
- * @method void setTaskIDs(array $TaskIDs) 设置任务 ID  列表
- * @method string getTaskName() 获取任务名
- * @method void setTaskName(string $TaskName) 设置任务名
- * @method string getTargetAddress() 获取拨测目标
- * @method void setTargetAddress(string $TargetAddress) 设置拨测目标
- * @method array getTaskStatus() 获取任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
- * @method void setTaskStatus(array $TaskStatus) 设置任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
- * @method integer getPayMode() 获取付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
- * @method void setPayMode(integer $PayMode) 设置付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
- * @method integer getOrderState() 获取订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
- * @method void setOrderState(integer $OrderState) 设置订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
- * @method array getTaskType() 获取拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
- * @method void setTaskType(array $TaskType) 设置拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
- * @method array getTaskCategory() 获取节点类型
- * @method void setTaskCategory(array $TaskCategory) 设置节点类型
- * @method string getOrderBy() 获取排序的列
- * @method void setOrderBy(string $OrderBy) 设置排序的列
- * @method boolean getAscend() 获取是否正序
- * @method void setAscend(boolean $Ascend) 设置是否正序
- * @method array getTagFilters() 获取资源标签值
- * @method void setTagFilters(array $TagFilters) 设置资源标签值
+ * @method array getTaskIDs() 获取<p>任务 ID  列表</p>
+ * @method void setTaskIDs(array $TaskIDs) 设置<p>任务 ID  列表</p>
+ * @method string getTaskName() 获取<p>任务名</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名</p>
+ * @method string getTargetAddress() 获取<p>拨测目标</p>
+ * @method void setTargetAddress(string $TargetAddress) 设置<p>拨测目标</p>
+ * @method array getTaskStatus() 获取<p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
+ * @method void setTaskStatus(array $TaskStatus) 设置<p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
+ * @method integer getOffset() 获取<p>偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100</p>
+ * @method integer getPayMode() 获取<p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
+ * @method integer getOrderState() 获取<p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
+ * @method void setOrderState(integer $OrderState) 设置<p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
+ * @method array getTaskType() 获取<p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
+ * @method void setTaskType(array $TaskType) 设置<p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
+ * @method array getTaskCategory() 获取<p>节点类型</p>
+ * @method void setTaskCategory(array $TaskCategory) 设置<p>节点类型</p>
+ * @method string getOrderBy() 获取<p>排序的列</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序的列</p>
+ * @method boolean getAscend() 获取<p>是否正序</p>
+ * @method void setAscend(boolean $Ascend) 设置<p>是否正序</p>
+ * @method array getTagFilters() 获取<p>资源标签值</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>资源标签值</p>
  */
 class DescribeProbeTasksRequest extends AbstractModel
 {
     /**
-     * @var array 任务 ID  列表
+     * @var array <p>任务 ID  列表</p>
      */
     public $TaskIDs;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
      */
     public $TaskName;
 
     /**
-     * @var string 拨测目标
+     * @var string <p>拨测目标</p>
      */
     public $TargetAddress;
 
     /**
-     * @var array 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
+     * @var array <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
      */
     public $TaskStatus;
 
     /**
-     * @var integer 偏移量，默认为0
+     * @var integer <p>偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer <p>返回数量，默认为20，最大值为100</p>
      */
     public $Limit;
 
     /**
-     * @var integer 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
+     * @var integer <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
      */
     public $PayMode;
 
     /**
-     * @var integer 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
+     * @var integer <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
      */
     public $OrderState;
 
     /**
-     * @var array 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
+     * @var array <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
      */
     public $TaskType;
 
     /**
-     * @var array 节点类型
+     * @var array <p>节点类型</p>
      */
     public $TaskCategory;
 
     /**
-     * @var string 排序的列
+     * @var string <p>排序的列</p>
      */
     public $OrderBy;
 
     /**
-     * @var boolean 是否正序
+     * @var boolean <p>是否正序</p>
      */
     public $Ascend;
 
     /**
-     * @var array 资源标签值
+     * @var array <p>资源标签值</p>
      */
     public $TagFilters;
 
     /**
-     * @param array $TaskIDs 任务 ID  列表
-     * @param string $TaskName 任务名
-     * @param string $TargetAddress 拨测目标
-     * @param array $TaskStatus 任务状态列表
-<li>1 = 创建中</li>
-<li> 2 = 运行中 </li>
-<li> 3 = 运行异常 </li>
-<li> 4 = 暂停中 </li>
-<li> 5 = 暂停异常 </li>
-<li> 6 = 任务暂停 </li>
-<li> 7 = 任务删除中 </li>
-<li> 8 = 任务删除异常 </li>
-<li> 9 = 任务删除</li>
-<li> 10 = 定时任务暂停中 </li>
-     * @param integer $Offset 偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为100
-     * @param integer $PayMode 付费模式
-<li>1 = 试用版本</li>
-<li> 2 = 付费版本 </li>
-     * @param integer $OrderState 订单状态
-<li>1 = 正常</li>
-<li> 2 = 欠费 </li>
-     * @param array $TaskType 拨测类型
-<li>1 = 页面浏览</li>
-<li> 2 =文件上传 </li>
-<li> 3 = 文件下载</li>
-<li> 4 = 端口性能 </li>
-<li> 5 = 网络质量 </li>
-<li> 6 =流媒体 </li>
-
-即使拨测只支持页面浏览，网络质量，文件下载
-     * @param array $TaskCategory 节点类型
-     * @param string $OrderBy 排序的列
-     * @param boolean $Ascend 是否正序
-     * @param array $TagFilters 资源标签值
+     * @param array $TaskIDs <p>任务 ID  列表</p>
+     * @param string $TaskName <p>任务名</p>
+     * @param string $TargetAddress <p>拨测目标</p>
+     * @param array $TaskStatus <p>任务状态列表</p><li>1 = 创建中</li><li> 2 = 运行中 </li><li> 3 = 运行异常 </li><li> 4 = 暂停中 </li><li> 5 = 暂停异常 </li><li> 6 = 任务暂停 </li><li> 7 = 任务删除中 </li><li> 8 = 任务删除异常 </li><li> 9 = 任务删除</li><li> 10 = 定时任务暂停中 </li>
+     * @param integer $Offset <p>偏移量，默认为0</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100</p>
+     * @param integer $PayMode <p>付费模式</p><li>1 = 试用版本</li><li> 2 = 付费版本 </li>
+     * @param integer $OrderState <p>订单状态</p><li>1 = 正常</li><li> 2 = 欠费 </li>
+     * @param array $TaskType <p>拨测类型</p><li>1 = 页面浏览</li><li> 2 =文件上传 </li><li> 3 = 文件下载</li><li> 4 = 端口性能 </li><li> 5 = 网络质量 </li><li> 6 =流媒体 </li><p>即使拨测只支持页面浏览，网络质量，文件下载</p>
+     * @param array $TaskCategory <p>节点类型</p>
+     * @param string $OrderBy <p>排序的列</p>
+     * @param boolean $Ascend <p>是否正序</p>
+     * @param array $TagFilters <p>资源标签值</p>
      */
     function __construct()
     {

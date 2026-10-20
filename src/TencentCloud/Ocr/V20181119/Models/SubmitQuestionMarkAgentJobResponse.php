@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestionInfo(array $QuestionInfo) 设置<p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
  * @method string getQuestionCount() 获取<p>题目切题数量，作为计费题目数总量</p>
  * @method void setQuestionCount(string $QuestionCount) 设置<p>题目切题数量，作为计费题目数总量</p>
- * @method string getOriginalImageUrl() 获取<p>废弃字段</p>
- * @method void setOriginalImageUrl(string $OriginalImageUrl) 设置<p>废弃字段</p>
+ * @method string getOriginalImageUrl() 获取<p>【废弃字段】</p>
+ * @method void setOriginalImageUrl(string $OriginalImageUrl) 设置<p>【废弃字段】</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +49,7 @@ class SubmitQuestionMarkAgentJobResponse extends AbstractModel
     public $QuestionCount;
 
     /**
-     * @var string <p>废弃字段</p>
+     * @var string <p>【废弃字段】</p>
      */
     public $OriginalImageUrl;
 
@@ -62,7 +62,7 @@ class SubmitQuestionMarkAgentJobResponse extends AbstractModel
      * @param string $JobId <p>任务唯一ID。由服务端生成.</p>
      * @param array $QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
      * @param string $QuestionCount <p>题目切题数量，作为计费题目数总量</p>
-     * @param string $OriginalImageUrl <p>废弃字段</p>
+     * @param string $OriginalImageUrl <p>【废弃字段】</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

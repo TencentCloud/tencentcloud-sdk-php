@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLLMWafProtectRules请求参数结构体
  *
- * @method string getServiceId() 获取<p>服务ID</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
+ * @method string getServiceId() 获取<p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
  * @method string getInstanceId() 获取<p>实例id</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
  * @method string getRuleType() 获取<p>规则类型</p>
  * @method void setRuleType(string $RuleType) 设置<p>规则类型</p>
+ * @method string getDomain() 获取<p>域名模式传 Domain（与 ServiceId 二选一）</p>
+ * @method void setDomain(string $Domain) 设置<p>域名模式传 Domain（与 ServiceId 二选一）</p>
  */
 class DescribeLLMWafProtectRulesRequest extends AbstractModel
 {
     /**
-     * @var string <p>服务ID</p>
+     * @var string <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      */
     public $ServiceId;
 
@@ -45,9 +47,15 @@ class DescribeLLMWafProtectRulesRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @param string $ServiceId <p>服务ID</p>
+     * @var string <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public $Domain;
+
+    /**
+     * @param string $ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      * @param string $InstanceId <p>实例id</p>
      * @param string $RuleType <p>规则类型</p>
+     * @param string $Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeLLMWafProtectRulesRequest extends AbstractModel
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

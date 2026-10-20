@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainDetailsClb请求参数结构体
  *
- * @method string getDomain() 获取域名
- * @method void setDomain(string $Domain) 设置域名
- * @method string getDomainId() 获取域名id
- * @method void setDomainId(string $DomainId) 设置域名id
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getDomain() 获取<p>域名</p>
+ * @method void setDomain(string $Domain) 设置<p>域名</p>
+ * @method string getDomainId() 获取<p>域名id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>域名id</p>
+ * @method string getInstanceId() 获取<p>实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
  */
 class DescribeDomainDetailsClbRequest extends AbstractModel
 {
     /**
-     * @var string 域名
+     * @var string <p>域名</p>
      */
     public $Domain;
 
     /**
-     * @var string 域名id
+     * @var string <p>域名id</p>
      */
     public $DomainId;
 
     /**
-     * @var string 实例id
+     * @var string <p>实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $Domain 域名
-     * @param string $DomainId 域名id
-     * @param string $InstanceId 实例id
+     * @param string $Domain <p>域名</p>
+     * @param string $DomainId <p>域名id</p>
+     * @param string $InstanceId <p>实例id</p>
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceIds() 获取资源id
  * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置状态，0表示关闭，1表示开启
  * @method integer getRegion() 获取地域
  * @method void setRegion(integer $Region) 设置地域
  * @method string getBeginTime() 获取开始时间
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getCount() 获取购买数量
  * @method void setCount(integer $Count) 设置购买数量
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+ * @method integer getRenewFlag() 获取续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标识，0表示手动续费，1表示自动续费，2表示到期不续
  * @method string getBillingItem() 获取计费项
  * @method void setBillingItem(string $BillingItem) 设置计费项
  * @method integer getGatewayType() 获取小程序网关类型 1新网关；0老网关
@@ -47,7 +47,7 @@ class MiniPkg extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 状态
+     * @var integer 状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -72,7 +72,7 @@ class MiniPkg extends AbstractModel
     public $Count;
 
     /**
-     * @var integer 续费标志
+     * @var integer 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public $RenewFlag;
 
@@ -88,12 +88,12 @@ class MiniPkg extends AbstractModel
 
     /**
      * @param string $ResourceIds 资源id
-     * @param integer $Status 状态
+     * @param integer $Status 状态，0表示关闭，1表示开启
      * @param integer $Region 地域
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $Count 购买数量
-     * @param integer $RenewFlag 续费标志
+     * @param integer $RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      * @param string $BillingItem 计费项
      * @param integer $GatewayType 小程序网关类型 1新网关；0老网关
      */

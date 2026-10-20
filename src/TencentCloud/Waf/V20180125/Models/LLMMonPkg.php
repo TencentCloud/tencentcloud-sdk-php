@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceIds() 获取资源id
  * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置状态，0表示关闭，1表示开启
  * @method integer getRegion() 获取地域
  * @method void setRegion(integer $Region) 设置地域
  * @method string getBeginTime() 获取开始时间
@@ -49,7 +49,7 @@ class LLMMonPkg extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 状态
+     * @var integer 状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -91,7 +91,7 @@ class LLMMonPkg extends AbstractModel
 
     /**
      * @param string $ResourceIds 资源id
-     * @param integer $Status 状态
+     * @param integer $Status 状态，0表示关闭，1表示开启
      * @param integer $Region 地域
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间

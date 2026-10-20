@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置连接器类型：MCP_SERVER / A2A / API_SERVICE
  * @method string getServiceUrl() 获取上游服务地址
  * @method void setServiceUrl(string $ServiceUrl) 设置上游服务地址
- * @method array getAuthModes() 获取授权方式列表：NONE / ONEID / OAUTH2_IDP
- * @method void setAuthModes(array $AuthModes) 设置授权方式列表：NONE / ONEID / OAUTH2_IDP
+ * @method array getAuthModes() 获取授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
+ * @method void setAuthModes(array $AuthModes) 设置授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
  * @method integer getLatestVersionNo() 获取最新版本号
  * @method void setLatestVersionNo(integer $LatestVersionNo) 设置最新版本号
  * @method string getStatus() 获取连接器状态：ACTIVE / DISABLED
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间（ISO8601，UTC）
  * @method string getModifiedTime() 获取最后修改时间（ISO8601，UTC）
  * @method void setModifiedTime(string $ModifiedTime) 设置最后修改时间（ISO8601，UTC）
+ * @method string getVpcConfigId() 获取VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+ * @method void setVpcConfigId(string $VpcConfigId) 设置VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
  */
 class ConnectorInfo extends AbstractModel
 {
@@ -106,7 +108,7 @@ class ConnectorInfo extends AbstractModel
     public $ServiceUrl;
 
     /**
-     * @var array 授权方式列表：NONE / ONEID / OAUTH2_IDP
+     * @var array 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
      */
     public $AuthModes;
 
@@ -136,6 +138,11 @@ class ConnectorInfo extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var string VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     */
+    public $VpcConfigId;
+
+    /**
      * @param string $ConnectorId 连接器 ID
      * @param string $ConnectorSlug 连接器短标识（终身不变，跨版本稳定）
      * @param string $ConnectorKey 版本级连接器密钥
@@ -146,12 +153,13 @@ class ConnectorInfo extends AbstractModel
      * @param string $EnterpriseId 归属企业 ID
      * @param string $Type 连接器类型：MCP_SERVER / A2A / API_SERVICE
      * @param string $ServiceUrl 上游服务地址
-     * @param array $AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP
+     * @param array $AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
      * @param integer $LatestVersionNo 最新版本号
      * @param string $Status 连接器状态：ACTIVE / DISABLED
      * @param string $CreatorId 创建人 ID
      * @param string $CreatedTime 创建时间（ISO8601，UTC）
      * @param string $ModifiedTime 最后修改时间（ISO8601，UTC）
+     * @param string $VpcConfigId VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class ConnectorInfo extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("VpcConfigId",$param) and $param["VpcConfigId"] !== null) {
+            $this->VpcConfigId = $param["VpcConfigId"];
         }
     }
 }

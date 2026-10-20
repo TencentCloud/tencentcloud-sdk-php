@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstantTasks请求参数结构体
  *
- * @method integer getLimit() 获取数量
- * @method void setLimit(integer $Limit) 设置数量
- * @method integer getOffset() 获取起始位置
- * @method void setOffset(integer $Offset) 设置起始位置
+ * @method integer getLimit() 获取<p>数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>数量</p>
+ * @method integer getOffset() 获取<p>起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>起始位置</p>
  */
 class DescribeInstantTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 数量
+     * @var integer <p>数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 起始位置
+     * @var integer <p>起始位置</p>
      */
     public $Offset;
 
     /**
-     * @param integer $Limit 数量
-     * @param integer $Offset 起始位置
+     * @param integer $Limit <p>数量</p>
+     * @param integer $Offset <p>起始位置</p>
      */
     function __construct()
     {

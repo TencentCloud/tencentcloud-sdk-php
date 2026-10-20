@@ -122,8 +122,16 @@ https：使用https协议回源
  * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
  * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
- * @method integer getUpstreamPolicy() 获取回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
- * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+ * @method integer getUpstreamPolicy() 获取回源策略。
+枚举值：
+0：负载均衡回源（默认值）
+1：分流回源
+2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源
+ * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略。
+枚举值：
+0：负载均衡回源（默认值）
+1：分流回源
+2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源
  * @method array getUpstreamRules() 获取分流回源时生效，分流回源的规则。
  * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
  * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
@@ -367,7 +375,11 @@ https：使用https协议回源
     public $GmSSLId;
 
     /**
-     * @var integer 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * @var integer 回源策略。
+枚举值：
+0：负载均衡回源（默认值）
+1：分流回源
+2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源
      */
     public $UpstreamPolicy;
 
@@ -438,7 +450,11 @@ https：使用https协议回源
      * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
      * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * @param integer $UpstreamPolicy 回源策略。
+枚举值：
+0：负载均衡回源（默认值）
+1：分流回源
+2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源
      * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
      * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      * @param integer $Gzip gzip开关。0：关闭 1：默认值，打开

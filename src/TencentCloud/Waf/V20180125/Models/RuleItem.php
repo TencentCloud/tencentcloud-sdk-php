@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(array $Value) 设置信息类型
  * @method array getLevels() 获取信息类
  * @method void setLevels(array $Levels) 设置信息类
+ * @method string getName() 获取Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+ * @method void setName(string $Name) 设置Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
  */
 class RuleItem extends AbstractModel
 {
@@ -55,11 +57,17 @@ class RuleItem extends AbstractModel
     public $Levels;
 
     /**
+     * @var string Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
+     */
+    public $Name;
+
+    /**
      * @param string $Key  信息类型
      * @param string $Op  操作符，默认是包含
 
      * @param array $Value 信息类型
      * @param array $Levels 信息类
+     * @param string $Name Toolcall工具参数名，支持多层路径(如apiData.operate_op)，仅tool_args信息类型使用
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ class RuleItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Levels, $obj);
             }
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

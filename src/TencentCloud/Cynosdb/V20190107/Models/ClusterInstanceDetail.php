@@ -34,14 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
  * @method string getInstanceType() 获取<p>引擎类型</p>
  * @method void setInstanceType(string $InstanceType) 设置<p>引擎类型</p>
+ * @method string getStatus() 获取<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+ * @method void setStatus(string $Status) 设置<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
  * @method string getInstanceStatus() 获取<p>实例状态</p>
  * @method void setInstanceStatus(string $InstanceStatus) 设置<p>实例状态</p>
+ * @method string getStatusDesc() 获取<p>实例状态中文描述</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>实例状态中文描述</p>
  * @method string getInstanceStatusDesc() 获取<p>实例状态描述</p>
  * @method void setInstanceStatusDesc(string $InstanceStatusDesc) 设置<p>实例状态描述</p>
- * @method integer getInstanceCpu() 获取<p>cpu核数</p>
- * @method void setInstanceCpu(integer $InstanceCpu) 设置<p>cpu核数</p>
  * @method integer getCpu() 获取<p>Cpu</p><p>单位：核</p>
  * @method void setCpu(integer $Cpu) 设置<p>Cpu</p><p>单位：核</p>
+ * @method integer getInstanceCpu() 获取<p>cpu核数</p>
+ * @method void setInstanceCpu(integer $InstanceCpu) 设置<p>cpu核数</p>
  * @method float getMinCpu() 获取<p>serverless实例cpu下限</p><p>单位：核</p>
  * @method void setMinCpu(float $MinCpu) 设置<p>serverless实例cpu下限</p><p>单位：核</p>
  * @method float getMaxCpu() 获取<p>serverless实例cpu上限</p><p>单位：核</p>
@@ -62,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置<p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
  * @method array getInstanceTasks() 获取<p>实例任务信息</p>
  * @method void setInstanceTasks(array $InstanceTasks) 设置<p>实例任务信息</p>
+ * @method string getDeviceType() 获取<p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+ * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
  * @method string getInstanceDeviceType() 获取<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
  * @method void setInstanceDeviceType(string $InstanceDeviceType) 设置<p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
  * @method string getInstanceStorageType() 获取<p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
@@ -82,10 +88,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置<p>可用区</p>
  * @method string getPhysicalZone() 获取<p>实例所在的物理可用区</p>
  * @method void setPhysicalZone(string $PhysicalZone) 设置<p>实例所在的物理可用区</p>
- * @method string getStatus() 获取<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
- * @method void setStatus(string $Status) 设置<p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
- * @method string getStatusDesc() 获取<p>实例状态中文描述</p>
- * @method void setStatusDesc(string $StatusDesc) 设置<p>实例状态中文描述</p>
  * @method string getDbType() 获取<p>数据库类型</p>
  * @method void setDbType(string $DbType) 设置<p>数据库类型</p>
  * @method string getDbVersion() 获取<p>数据库版本</p>
@@ -144,8 +146,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceAbility getInstanceAbility() 获取<p>当前实例支持的能力</p>
  * @method void setInstanceAbility(InstanceAbility $InstanceAbility) 设置<p>当前实例支持的能力</p>
- * @method string getDeviceType() 获取<p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
- * @method void setDeviceType(string $DeviceType) 设置<p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
  * @method string getGdnId() 获取<p>全球数据库唯一标识</p>
  * @method void setGdnId(string $GdnId) 设置<p>全球数据库唯一标识</p>
  */
@@ -187,25 +187,37 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
+     */
+    public $Status;
+
+    /**
      * @var string <p>实例状态</p>
+     * @deprecated
      */
     public $InstanceStatus;
 
     /**
+     * @var string <p>实例状态中文描述</p>
+     */
+    public $StatusDesc;
+
+    /**
      * @var string <p>实例状态描述</p>
+     * @deprecated
      */
     public $InstanceStatusDesc;
+
+    /**
+     * @var integer <p>Cpu</p><p>单位：核</p>
+     */
+    public $Cpu;
 
     /**
      * @var integer <p>cpu核数</p>
      * @deprecated
      */
     public $InstanceCpu;
-
-    /**
-     * @var integer <p>Cpu</p><p>单位：核</p>
-     */
-    public $Cpu;
 
     /**
      * @var float <p>serverless实例cpu下限</p><p>单位：核</p>
@@ -224,6 +236,7 @@ class ClusterInstanceDetail extends AbstractModel
 
     /**
      * @var integer <p>内存</p>
+     * @deprecated
      */
     public $InstanceMemory;
 
@@ -258,7 +271,13 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceTasks;
 
     /**
+     * @var string <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
+     */
+    public $DeviceType;
+
+    /**
      * @var string <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
+     * @deprecated
      */
     public $InstanceDeviceType;
 
@@ -306,16 +325,6 @@ class ClusterInstanceDetail extends AbstractModel
      * @var string <p>实例所在的物理可用区</p>
      */
     public $PhysicalZone;
-
-    /**
-     * @var string <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-     */
-    public $Status;
-
-    /**
-     * @var string <p>实例状态中文描述</p>
-     */
-    public $StatusDesc;
 
     /**
      * @var string <p>数据库类型</p>
@@ -459,11 +468,6 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceAbility;
 
     /**
-     * @var string <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
-     */
-    public $DeviceType;
-
-    /**
      * @var string <p>全球数据库唯一标识</p>
      */
     public $GdnId;
@@ -476,10 +480,12 @@ class ClusterInstanceDetail extends AbstractModel
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $InstanceType <p>引擎类型</p>
+     * @param string $Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
      * @param string $InstanceStatus <p>实例状态</p>
+     * @param string $StatusDesc <p>实例状态中文描述</p>
      * @param string $InstanceStatusDesc <p>实例状态描述</p>
-     * @param integer $InstanceCpu <p>cpu核数</p>
      * @param integer $Cpu <p>Cpu</p><p>单位：核</p>
+     * @param integer $InstanceCpu <p>cpu核数</p>
      * @param float $MinCpu <p>serverless实例cpu下限</p><p>单位：核</p>
      * @param float $MaxCpu <p>serverless实例cpu上限</p><p>单位：核</p>
      * @param integer $Memory <p>内存</p><p>单位：GB</p>
@@ -490,6 +496,7 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $MaintainDuration <p>持续的时间(单位：秒)</p>
      * @param array $MaintainWeekDays <p>可以执行的时间，枚举值：[&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]</p>
      * @param array $InstanceTasks <p>实例任务信息</p>
+     * @param string $DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
      * @param string $InstanceDeviceType <p>实例机器类型</p><ol><li>common，通用型。</li><li>exclusive，独享型。</li></ol>
      * @param string $InstanceStorageType <p>实例存储类型<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      * @param string $DbMode <p>数据库类型</p>
@@ -500,8 +507,6 @@ class ClusterInstanceDetail extends AbstractModel
      * @param string $Region <p>地域</p>
      * @param string $Zone <p>可用区</p>
      * @param string $PhysicalZone <p>实例所在的物理可用区</p>
-     * @param string $Status <p>实例状态</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>running： 运行中</li><li>isolating： 隔离中</li><li>isolated： 已隔离</li><li>activating： 恢复中</li><li>offlining： 下线中</li><li>offlined： 已下线</li></ul>
-     * @param string $StatusDesc <p>实例状态中文描述</p>
      * @param string $DbType <p>数据库类型</p>
      * @param string $DbVersion <p>数据库版本</p>
      * @param integer $Storage <p>存储量</p><p>单位：GB</p>
@@ -531,7 +536,6 @@ class ClusterInstanceDetail extends AbstractModel
      * @param array $ResourceTags <p>资源标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAbility $InstanceAbility <p>当前实例支持的能力</p>
-     * @param string $DeviceType <p>实例机器类型</p><p>枚举值：</p><ul><li>common： 通用型</li><li>exclusive： 独享型</li></ul>
      * @param string $GdnId <p>全球数据库唯一标识</p>
      */
     function __construct()
@@ -575,20 +579,28 @@ class ClusterInstanceDetail extends AbstractModel
             $this->InstanceType = $param["InstanceType"];
         }
 
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
+            $this->StatusDesc = $param["StatusDesc"];
         }
 
         if (array_key_exists("InstanceStatusDesc",$param) and $param["InstanceStatusDesc"] !== null) {
             $this->InstanceStatusDesc = $param["InstanceStatusDesc"];
         }
 
-        if (array_key_exists("InstanceCpu",$param) and $param["InstanceCpu"] !== null) {
-            $this->InstanceCpu = $param["InstanceCpu"];
-        }
-
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("InstanceCpu",$param) and $param["InstanceCpu"] !== null) {
+            $this->InstanceCpu = $param["InstanceCpu"];
         }
 
         if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
@@ -636,6 +648,10 @@ class ClusterInstanceDetail extends AbstractModel
             }
         }
 
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
         if (array_key_exists("InstanceDeviceType",$param) and $param["InstanceDeviceType"] !== null) {
             $this->InstanceDeviceType = $param["InstanceDeviceType"];
         }
@@ -675,14 +691,6 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
             $this->PhysicalZone = $param["PhysicalZone"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
-            $this->StatusDesc = $param["StatusDesc"];
         }
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
@@ -811,10 +819,6 @@ class ClusterInstanceDetail extends AbstractModel
         if (array_key_exists("InstanceAbility",$param) and $param["InstanceAbility"] !== null) {
             $this->InstanceAbility = new InstanceAbility();
             $this->InstanceAbility->deserialize($param["InstanceAbility"]);
-        }
-
-        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
-            $this->DeviceType = $param["DeviceType"];
         }
 
         if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {

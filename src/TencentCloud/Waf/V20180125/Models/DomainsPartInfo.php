@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCls(integer $Cls) 设置<p>日志包是否开启。<br>0：关闭<br>1：开启</p>
  * @method string getCname() 获取<p>接入Cname，SaaS型域名使用此Cname进行接入</p>
  * @method void setCname(string $Cname) 设置<p>接入Cname，SaaS型域名使用此Cname进行接入</p>
+ * @method string getDnssecCname() 获取<p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+ * @method void setDnssecCname(string $DnssecCname) 设置<p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
  * @method integer getIsKeepAlive() 获取<p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
  * @method void setIsKeepAlive(integer $IsKeepAlive) 设置<p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
  * @method integer getActiveCheck() 获取<p>是否开启主动健康检测。<br>0：不开启<br>1：开启</p>
@@ -282,6 +284,11 @@ class DomainsPartInfo extends AbstractModel
     public $Cname;
 
     /**
+     * @var string <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
+     */
+    public $DnssecCname;
+
+    /**
      * @var integer <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
      */
     public $IsKeepAlive;
@@ -479,6 +486,7 @@ class DomainsPartInfo extends AbstractModel
      * @param string $UpstreamScheme <p>服务配置有HTTPS端口时，HTTPS的回源协议。<br>http：使用http协议回源，和HttpsUpstreamPort配合使用<br>https：使用https协议回源</p>
      * @param integer $Cls <p>日志包是否开启。<br>0：关闭<br>1：开启</p>
      * @param string $Cname <p>接入Cname，SaaS型域名使用此Cname进行接入</p>
+     * @param string $DnssecCname <p>DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。<br>默认值：&quot;&quot;</p>
      * @param integer $IsKeepAlive <p>是否开启长连接。<br>0： 短连接<br>1： 长连接</p>
      * @param integer $ActiveCheck <p>是否开启主动健康检测。<br>0：不开启<br>1：开启</p>
      * @param integer $TLSVersion <p>TLS版本信息</p>
@@ -638,6 +646,10 @@ class DomainsPartInfo extends AbstractModel
 
         if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
             $this->Cname = $param["Cname"];
+        }
+
+        if (array_key_exists("DnssecCname",$param) and $param["DnssecCname"] !== null) {
+            $this->DnssecCname = $param["DnssecCname"];
         }
 
         if (array_key_exists("IsKeepAlive",$param) and $param["IsKeepAlive"] !== null) {

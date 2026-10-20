@@ -20,94 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProbeMetricTagValues请求参数结构体
  *
- * @method string getAnalyzeTaskType() 获取分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
- * @method void setAnalyzeTaskType(string $AnalyzeTaskType) 设置分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
- * @method string getKey() 获取维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
- * @method void setKey(string $Key) 设置维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
- * @method string getFilter() 获取过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
- * @method void setFilter(string $Filter) 设置过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
- * @method array getFilters() 获取过滤条件数组
- * @method void setFilters(array $Filters) 设置过滤条件数组
- * @method string getTimeRange() 获取时间范围
- * @method void setTimeRange(string $TimeRange) 设置时间范围
+ * @method string getAnalyzeTaskType() 获取<p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+ * @method void setAnalyzeTaskType(string $AnalyzeTaskType) 设置<p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+ * @method string getKey() 获取<p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
+ * @method void setKey(string $Key) 设置<p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
+ * @method string getFilter() 获取<p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
+ * @method void setFilter(string $Filter) 设置<p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
+ * @method array getFilters() 获取<p>过滤条件数组</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件数组</p>
+ * @method string getTimeRange() 获取<p>时间范围</p>
+ * @method void setTimeRange(string $TimeRange) 设置<p>时间范围</p>
  */
 class DescribeProbeMetricTagValuesRequest extends AbstractModel
 {
     /**
-     * @var string 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
+     * @var string <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
      */
     public $AnalyzeTaskType;
 
     /**
-     * @var string 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
+     * @var string <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
      */
     public $Key;
 
     /**
-     * @var string 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
+     * @var string <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
      */
     public $Filter;
 
     /**
-     * @var array 过滤条件数组
+     * @var array <p>过滤条件数组</p>
      */
     public $Filters;
 
     /**
-     * @var string 时间范围
+     * @var string <p>时间范围</p>
      */
     public $TimeRange;
 
     /**
-     * @param string $AnalyzeTaskType 分析任务类型，支持以下几种类型：
-AnalyzeTaskType_Network：网络质量
-AnalyzeTaskType_Browse：页面性能 
-AnalyzeTaskType_Transport：端口性能
-AnalyzeTaskType_UploadDownload：文件传输
-AnalyzeTaskType_MediaStream：音视频体验
-
-     * @param string $Key 维度标签值，参考：
-host：任务域名
-errorInfo：状态类型
-area：拨测点地区
-operator：拨测点运营商
-taskId：任务ID
-     * @param string $Filter 过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配
-     * @param array $Filters 过滤条件数组
-     * @param string $TimeRange 时间范围
+     * @param string $AnalyzeTaskType <p>分析任务类型，支持以下几种类型：<br>AnalyzeTaskType_Network：网络质量<br>AnalyzeTaskType_Browse：页面性能<br>AnalyzeTaskType_Transport：端口性能<br>AnalyzeTaskType_UploadDownload：文件传输<br>AnalyzeTaskType_MediaStream：音视频体验</p>
+     * @param string $Key <p>维度标签值，参考：<br>host：任务域名<br>errorInfo：状态类型<br>area：拨测点地区<br>operator：拨测点运营商<br>taskId：任务ID</p>
+     * @param string $Filter <p>过滤条件，可以传单个过滤条件也可以拼接多个参数，支持正则匹配</p>
+     * @param array $Filters <p>过滤条件数组</p>
+     * @param string $TimeRange <p>时间范围</p>
      */
     function __construct()
     {

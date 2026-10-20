@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCname(string $Cname) 设置<p>cname地址</p>
  * @method string getEdition() 获取<p>域名所属实例类型。<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例</p>
  * @method void setEdition(string $Edition) 设置<p>域名所属实例类型。<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例</p>
- * @method string getRegion() 获取<p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;</p>
- * @method void setRegion(string $Region) 设置<p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;</p>
+ * @method string getRegion() 获取<p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;<br>与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式</p>
+ * @method void setRegion(string $Region) 设置<p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;<br>与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式</p>
  * @method string getInstanceName() 获取<p>实例名</p>
  * @method void setInstanceName(string $InstanceName) 设置<p>实例名</p>
  * @method integer getClsStatus() 获取<p>访问日志开关状态。<br>0：关闭<br>1：开启</p>
@@ -56,6 +56,108 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置<p>用户id</p>
  * @method integer getState() 获取<p>SAAS型WAF域名状态：<br>-2：配置下发失败<br>-1：配置下发中<br>0：DNS解析中<br>1：无DNS解析记录，请接入WAF<br>10：DNS解析未知，域名启用了代理<br>11：DNS解析异常，使用A记录接入WAF IP<br>200：检测源站不可达<br>220：源站不支持长连接<br>311：证书过期<br>312：证书即将过期<br>310：证书异常<br>316：备案异常<br>5：WAF回源已变更<br>负载均衡型WAF域名LB监听器状态：<br>0：操作成功<br>4：正在绑定LB<br>6：正在解绑LB<br>7：解绑LB失败<br>8：绑定LB失败<br>10：内部错误</p>
  * @method void setState(integer $State) 设置<p>SAAS型WAF域名状态：<br>-2：配置下发失败<br>-1：配置下发中<br>0：DNS解析中<br>1：无DNS解析记录，请接入WAF<br>10：DNS解析未知，域名启用了代理<br>11：DNS解析异常，使用A记录接入WAF IP<br>200：检测源站不可达<br>220：源站不支持长连接<br>311：证书过期<br>312：证书即将过期<br>310：证书异常<br>316：备案异常<br>5：WAF回源已变更<br>负载均衡型WAF域名LB监听器状态：<br>0：操作成功<br>4：正在绑定LB<br>6：正在解绑LB<br>7：解绑LB失败<br>8：绑定LB失败<br>10：内部错误</p>
+ * @method array getApRegion() 获取域名所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写，本字段为标准地域名数组。负载均衡型多地域接入时数组可含多个元素
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+ * @method void setApRegion(array $ApRegion) 设置域名所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写，本字段为标准地域名数组。负载均衡型多地域接入时数组可含多个元素
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+ * @method string getDnssecCname() 获取DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。
+默认值：""
+ * @method void setDnssecCname(string $DnssecCname) 设置DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。
+默认值：""
  * @method string getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  * @method string getModifyTime() 获取<p>编辑时间</p>
@@ -133,7 +235,7 @@ class DomainInfo extends AbstractModel
     public $Edition;
 
     /**
-     * @var string <p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;</p>
+     * @var string <p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;<br>与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式</p>
      */
     public $Region;
 
@@ -196,6 +298,65 @@ class DomainInfo extends AbstractModel
      * @var integer <p>SAAS型WAF域名状态：<br>-2：配置下发失败<br>-1：配置下发中<br>0：DNS解析中<br>1：无DNS解析记录，请接入WAF<br>10：DNS解析未知，域名启用了代理<br>11：DNS解析异常，使用A记录接入WAF IP<br>200：检测源站不可达<br>220：源站不支持长连接<br>311：证书过期<br>312：证书即将过期<br>310：证书异常<br>316：备案异常<br>5：WAF回源已变更<br>负载均衡型WAF域名LB监听器状态：<br>0：操作成功<br>4：正在绑定LB<br>6：正在解绑LB<br>7：解绑LB失败<br>8：绑定LB失败<br>10：内部错误</p>
      */
     public $State;
+
+    /**
+     * @var array 域名所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写，本字段为标准地域名数组。负载均衡型多地域接入时数组可含多个元素
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+     */
+    public $ApRegion;
+
+    /**
+     * @var string DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。
+默认值：""
+     */
+    public $DnssecCname;
 
     /**
      * @var string <p>创建时间</p>
@@ -323,7 +484,7 @@ class DomainInfo extends AbstractModel
      * @param string $InstanceId <p>实例ID</p>
      * @param string $Cname <p>cname地址</p>
      * @param string $Edition <p>域名所属实例类型。<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例</p>
-     * @param string $Region <p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;</p>
+     * @param string $Region <p>地域。<br>&quot;多伦多&quot;: &quot;ca&quot;<br>&quot;广州&quot;: &quot;gz&quot;<br>&quot;成都&quot;: &quot;cd&quot;<br>&quot;福州&quot;: &quot;fzec&quot;<br>&quot;深圳&quot;: &quot;szx&quot;<br>&quot;印度&quot;: &quot;in&quot;<br>&quot;济南&quot;: &quot;jnec&quot;<br>&quot;重庆&quot;: &quot;cq&quot;<br>&quot;天津&quot;: &quot;tsn&quot;<br>&quot;欧洲东北&quot;: &quot;ru&quot;<br>&quot;南京&quot;: &quot;nj&quot;<br>&quot;美国硅谷&quot;: &quot;usw&quot;<br>&quot;泰国&quot;: &quot;th&quot;<br>&quot;广州Open&quot;: &quot;gzopen&quot;<br>&quot;深圳金融&quot;: &quot;szjr&quot;<br>&quot;法兰克福&quot;: &quot;de&quot;<br>&quot;日本&quot;: &quot;jp&quot;<br>&quot;弗吉尼亚&quot;: &quot;use&quot;<br>&quot;北京&quot;: &quot;bj&quot;<br>&quot;中国香港&quot;: &quot;hk&quot;<br>&quot;杭州&quot;: &quot;hzec&quot;<br>&quot;北京金融&quot;: &quot;bjjr&quot;<br>&quot;上海金融&quot;: &quot;shjr&quot;<br>&quot;台北&quot;: &quot;tpe&quot;<br>&quot;首尔&quot;: &quot;kr&quot;<br>&quot;上海&quot;: &quot;sh&quot;<br>&quot;新加坡&quot;: &quot;sg&quot;<br>&quot;清远&quot;: &quot;qy&quot;<br>与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式</p>
      * @param string $InstanceName <p>实例名</p>
      * @param integer $ClsStatus <p>访问日志开关状态。<br>0：关闭<br>1：开启</p>
      * @param integer $FlowMode <p>负载均衡型WAF使用模式。<br>0：镜像模式<br>1：清洗模式</p>
@@ -336,6 +497,57 @@ class DomainInfo extends AbstractModel
      * @param array $LoadBalancerSet <p>负载均衡器相关配置</p>
      * @param integer $AppId <p>用户id</p>
      * @param integer $State <p>SAAS型WAF域名状态：<br>-2：配置下发失败<br>-1：配置下发中<br>0：DNS解析中<br>1：无DNS解析记录，请接入WAF<br>10：DNS解析未知，域名启用了代理<br>11：DNS解析异常，使用A记录接入WAF IP<br>200：检测源站不可达<br>220：源站不支持长连接<br>311：证书过期<br>312：证书即将过期<br>310：证书异常<br>316：备案异常<br>5：WAF回源已变更<br>负载均衡型WAF域名LB监听器状态：<br>0：操作成功<br>4：正在绑定LB<br>6：正在解绑LB<br>7：解绑LB失败<br>8：绑定LB失败<br>10：内部错误</p>
+     * @param array $ApRegion 域名所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写，本字段为标准地域名数组。负载均衡型多地域接入时数组可含多个元素
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+     * @param string $DnssecCname DNSSEC CNAME 地址。客户开启 DNSSEC CNAME 校验后，将业务域名 CNAME 到该地址即可接入。开关关闭、非 SaaS CNAME 接入或无法映射时为空字符串。
+默认值：""
      * @param string $CreateTime <p>创建时间</p>
      * @param string $ModifyTime <p>编辑时间</p>
      * @param integer $Ipv6Status <p>Ipv6开关状态。<br>0：关闭<br>1：开启</p>
@@ -454,6 +666,14 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("ApRegion",$param) and $param["ApRegion"] !== null) {
+            $this->ApRegion = $param["ApRegion"];
+        }
+
+        if (array_key_exists("DnssecCname",$param) and $param["DnssecCname"] !== null) {
+            $this->DnssecCname = $param["DnssecCname"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

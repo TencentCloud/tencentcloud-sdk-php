@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCompute请求参数结构体
  *
- * @method string getResourceId() 获取计算资源 ID
- * @method void setResourceId(string $ResourceId) 设置计算资源 ID
  * @method string getWorkspaceId() 获取工作空间 ID
  * @method void setWorkspaceId(string $WorkspaceId) 设置工作空间 ID
+ * @method string getComputeResourceId() 获取计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+ * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+ * @method string getResourceId() 获取[已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+ * @method void setResourceId(string $ResourceId) 设置[已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
  */
 class StartComputeRequest extends AbstractModel
 {
-    /**
-     * @var string 计算资源 ID
-     */
-    public $ResourceId;
-
     /**
      * @var string 工作空间 ID
      */
     public $WorkspaceId;
 
     /**
-     * @param string $ResourceId 计算资源 ID
+     * @var string 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+     */
+    public $ComputeResourceId;
+
+    /**
+     * @var string [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
+     */
+    public $ResourceId;
+
+    /**
      * @param string $WorkspaceId 工作空间 ID
+     * @param string $ComputeResourceId 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）。替代已废弃的 ResourceId；过渡期 ComputeResourceId 与 ResourceId 至少传一个，同时传时必须一致
+     * @param string $ResourceId [已废弃，请使用 ComputeResourceId] 计算资源 ID，可通过 ListComputes 接口获取（返回字段 Items[].BasicInfo.ResourceId）
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class StartComputeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
-            $this->ResourceId = $param["ResourceId"];
-        }
-
         if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
             $this->WorkspaceId = $param["WorkspaceId"];
+        }
+
+        if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
+            $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

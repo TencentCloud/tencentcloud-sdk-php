@@ -34,6 +34,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\BindClusterResourcePackagesResponse BindClusterResourcePackages(Models\BindClusterResourcePackagesRequest $req) 本接口（BindClusterResourcePackages）用于为集群绑定资源包。
  * @method Models\CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(Models\CalculateBackupSaveSecExpiresRequest $req) 计算修改备份保留时长后将会过期删除的备份文件列表
  * @method Models\CancelClusterServerlessScalePlanResponse CancelClusterServerlessScalePlan(Models\CancelClusterServerlessScalePlanRequest $req) 取消Serverless集群的弹性计划
+ * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 取消等待执行的任务
  * @method Models\CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(Models\CheckCreateLibraDBInstanceRequest $req) 本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
  * @method Models\CheckTransferClusterZoneResponse CheckTransferClusterZone(Models\CheckTransferClusterZoneRequest $req) 本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 本接口（CloseAuditService）用于关闭 TDSQL-C MySQL 实例的数据库审计服务。
@@ -143,6 +144,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeProxiesResponse DescribeProxies(Models\DescribeProxiesRequest $req) 本接口（DescribeProxies）用于查询数据库代理列表。
  * @method Models\DescribeProxyNodesResponse DescribeProxyNodes(Models\DescribeProxyNodesRequest $req) 本接口（DescribeProxyNodes）用于查询代理节点列表。
  * @method Models\DescribeProxySpecsResponse DescribeProxySpecs(Models\DescribeProxySpecsRequest $req) 本接口（DescribeProxySpecs）用于查询数据库代理规格。
+ * @method Models\DescribeProxyZoneStocksResponse DescribeProxyZoneStocks(Models\DescribeProxyZoneStocksRequest $req) 该接口(DescribeProxyZoneStocks)查询数据库代理地域库存
  * @method Models\DescribeRedoLogListByVaultResponse DescribeRedoLogListByVault(Models\DescribeRedoLogListByVaultRequest $req) 查询RedoLog备份
  * @method Models\DescribeRedoLogsResponse DescribeRedoLogs(Models\DescribeRedoLogsRequest $req) 本接口（DescribeRedoLogs）用于查询redo日志列表。
  * @method Models\DescribeResourcePackageDetailResponse DescribeResourcePackageDetail(Models\DescribeResourcePackageDetailRequest $req) 本接口（DescribeResourcePackageDetail）用于查询资源包使用详情。

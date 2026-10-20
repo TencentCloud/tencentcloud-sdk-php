@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableBot(integer $EnableBot) 设置<p>1:开启 0:不开启</p>
  * @method integer getEnableResponse() 获取<p>响应方向body<br>1:开启 0:不开启</p>
  * @method void setEnableResponse(integer $EnableResponse) 设置<p>响应方向body<br>1:开启 0:不开启</p>
+ * @method integer getEnableResponseHeaders() 获取<p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+ * @method void setEnableResponseHeaders(integer $EnableResponseHeaders) 设置<p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+ * @method integer getEnableResponseLength() 获取<p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+ * @method void setEnableResponseLength(integer $EnableResponseLength) 设置<p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+ * @method integer getEnableResponseStatusLine() 获取<p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+ * @method void setEnableResponseStatusLine(integer $EnableResponseStatusLine) 设置<p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
  */
 class FieldWriteConfig extends AbstractModel
 {
@@ -52,10 +58,28 @@ class FieldWriteConfig extends AbstractModel
     public $EnableResponse;
 
     /**
+     * @var integer <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+     */
+    public $EnableResponseHeaders;
+
+    /**
+     * @var integer <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+     */
+    public $EnableResponseLength;
+
+    /**
+     * @var integer <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+     */
+    public $EnableResponseStatusLine;
+
+    /**
      * @param integer $EnableHeaders <p>1:开启 0:不开启</p>
      * @param integer $EnableBody <p>1:开启 0:不开启</p>
      * @param integer $EnableBot <p>1:开启 0:不开启</p>
      * @param integer $EnableResponse <p>响应方向body<br>1:开启 0:不开启</p>
+     * @param integer $EnableResponseHeaders <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
+     * @param integer $EnableResponseLength <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
+     * @param integer $EnableResponseStatusLine <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class FieldWriteConfig extends AbstractModel
 
         if (array_key_exists("EnableResponse",$param) and $param["EnableResponse"] !== null) {
             $this->EnableResponse = $param["EnableResponse"];
+        }
+
+        if (array_key_exists("EnableResponseHeaders",$param) and $param["EnableResponseHeaders"] !== null) {
+            $this->EnableResponseHeaders = $param["EnableResponseHeaders"];
+        }
+
+        if (array_key_exists("EnableResponseLength",$param) and $param["EnableResponseLength"] !== null) {
+            $this->EnableResponseLength = $param["EnableResponseLength"];
+        }
+
+        if (array_key_exists("EnableResponseStatusLine",$param) and $param["EnableResponseStatusLine"] !== null) {
+            $this->EnableResponseStatusLine = $param["EnableResponseStatusLine"];
         }
     }
 }

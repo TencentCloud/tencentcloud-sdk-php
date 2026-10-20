@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceIds() 获取资源id
  * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置状态，0表示关闭，1表示开启
  * @method integer getRegion() 获取地域
  * @method void setRegion(integer $Region) 设置地域
  * @method string getBeginTime() 获取开始时间
@@ -34,10 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInquireNum(integer $InquireNum) 设置申请数量
  * @method integer getUsedNum() 获取使用数量
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+ * @method integer getRenewFlag() 获取续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标识，0表示手动续费，1表示自动续费，2表示到期不续
  * @method string getBillingItem() 获取计费项
  * @method void setBillingItem(string $BillingItem) 设置计费项
+ * @method integer getElasticMode() 获取弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+ * @method void setElasticMode(integer $ElasticMode) 设置弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+ * @method integer getElasticBilling() 获取弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+ * @method void setElasticBilling(integer $ElasticBilling) 设置弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
  */
 class RCEPkg extends AbstractModel
 {
@@ -47,7 +51,7 @@ class RCEPkg extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 状态
+     * @var integer 状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -77,7 +81,7 @@ class RCEPkg extends AbstractModel
     public $UsedNum;
 
     /**
-     * @var integer 续费标志
+     * @var integer 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public $RenewFlag;
 
@@ -87,15 +91,27 @@ class RCEPkg extends AbstractModel
     public $BillingItem;
 
     /**
+     * @var integer 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+     */
+    public $ElasticMode;
+
+    /**
+     * @var integer 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
+     */
+    public $ElasticBilling;
+
+    /**
      * @param string $ResourceIds 资源id
-     * @param integer $Status 状态
+     * @param integer $Status 状态，0表示关闭，1表示开启
      * @param integer $Region 地域
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $InquireNum 申请数量
      * @param integer $UsedNum 使用数量
-     * @param integer $RenewFlag 续费标志
+     * @param integer $RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      * @param string $BillingItem 计费项
+     * @param integer $ElasticMode 弹性开关。0表示关闭，1表示开启。没有弹性资源时为0
+     * @param integer $ElasticBilling 弹性QPS上限，单位QPS。合法区间为10000到300000。开关关闭时仍保留上次设置的上限
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class RCEPkg extends AbstractModel
 
         if (array_key_exists("BillingItem",$param) and $param["BillingItem"] !== null) {
             $this->BillingItem = $param["BillingItem"];
+        }
+
+        if (array_key_exists("ElasticMode",$param) and $param["ElasticMode"] !== null) {
+            $this->ElasticMode = $param["ElasticMode"];
+        }
+
+        if (array_key_exists("ElasticBilling",$param) and $param["ElasticBilling"] !== null) {
+            $this->ElasticBilling = $param["ElasticBilling"];
         }
     }
 }

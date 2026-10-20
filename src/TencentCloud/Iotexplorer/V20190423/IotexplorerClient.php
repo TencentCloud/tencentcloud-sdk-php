@@ -296,6 +296,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\PublishRRPCMessageResponse PublishRRPCMessage(Models\PublishRRPCMessageRequest $req) 发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
 
 下发RRPC消息
+ * @method Models\PurchaseImagePackageResponse PurchaseImagePackage(Models\PurchaseImagePackageRequest $req) 新购图片云存资源包
+ * @method Models\PurchaseVideoPackageResponse PurchaseVideoPackage(Models\PurchaseVideoPackageRequest $req) 新购视频云存资源包
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
  * @method Models\RemoveUserByRoomIdFromTRTCResponse RemoveUserByRoomIdFromTRTC(Models\RemoveUserByRoomIdFromTRTCRequest $req) TRTC操作，将用户从房间移出
  * @method Models\RenewTWeSeeSubscriptionResponse RenewTWeSeeSubscription(Models\RenewTWeSeeSubscriptionRequest $req) 续费 TWeSee 预付费订阅
@@ -320,6 +322,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
 2. 只读定位 Owner（必须已存在），并校验 Owner 确实持有该设备；
 3. 兜底创建被分享用户（已存在则复用，昵称不覆盖）；
 4. 写入分享关系（重复分享幂等成功，不修改原 CreateTime）。
+ * @method Models\StartPackageUsageReportResponse StartPackageUsageReport(Models\StartPackageUsageReportRequest $req) 启用套餐用量上报
+ * @method Models\StopPackageUsageReportResponse StopPackageUsageReport(Models\StopPackageUsageReportRequest $req) 停用套餐用量上报
  * @method Models\TerminateTWeSeeSubscriptionResponse TerminateTWeSeeSubscription(Models\TerminateTWeSeeSubscriptionRequest $req) 退订 TWeSee 预付费订阅
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备

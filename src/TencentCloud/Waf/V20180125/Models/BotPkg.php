@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceIds() 获取资源id
  * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置状态，0表示关闭，1表示开启
  * @method integer getRegion() 获取地域
  * @method void setRegion(integer $Region) 设置地域
  * @method string getBeginTime() 获取开始时间
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
  * @method string getType() 获取子产品code
  * @method void setType(string $Type) 设置子产品code
- * @method integer getRenewFlag() 获取续费标志	
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志	
+ * @method integer getRenewFlag() 获取续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标识，0表示手动续费，1表示自动续费，2表示到期不续
  * @method integer getBotCPWaf() 获取购买页bot6折
  * @method void setBotCPWaf(integer $BotCPWaf) 设置购买页bot6折
  * @method integer getBotNPWaf() 获取控制台买bot5折
@@ -53,7 +53,7 @@ class BotPkg extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 状态
+     * @var integer 状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -88,7 +88,7 @@ class BotPkg extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 续费标志	
+     * @var integer 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public $RenewFlag;
 
@@ -109,14 +109,14 @@ class BotPkg extends AbstractModel
 
     /**
      * @param string $ResourceIds 资源id
-     * @param integer $Status 状态
+     * @param integer $Status 状态，0表示关闭，1表示开启
      * @param integer $Region 地域
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $InquireNum 申请数量
      * @param integer $UsedNum 使用数量
      * @param string $Type 子产品code
-     * @param integer $RenewFlag 续费标志	
+     * @param integer $RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      * @param integer $BotCPWaf 购买页bot6折
      * @param integer $BotNPWaf 控制台买bot5折
      * @param integer $IsBotTrial 7天bot试用标识 1 试用 0 没有试用

@@ -52,6 +52,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 创建一个特殊类型的策略，您可以关联到企业组织Root节点、企业部门节点或者企业的成员账号。
  * @method Models\CreateRoleAssignmentResponse CreateRoleAssignment(Models\CreateRoleAssignmentRequest $req) 在成员账号上授权
  * @method Models\CreateRoleConfigurationResponse CreateRoleConfiguration(Models\CreateRoleConfigurationRequest $req) 创建权限配置
+ * @method Models\CreateRoleConfigurationApplyScopeResponse CreateRoleConfigurationApplyScope(Models\CreateRoleConfigurationApplyScopeRequest $req) 创建权限申请范围，支持批量upsert
  * @method Models\CreateSCIMCredentialResponse CreateSCIMCredential(Models\CreateSCIMCredentialRequest $req) 创建SCIM密钥
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateUserSyncProvisioningResponse CreateUserSyncProvisioning(Models\CreateUserSyncProvisioningRequest $req) 创建子用户同步任务
@@ -67,6 +68,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 删除策略
  * @method Models\DeleteRoleAssignmentResponse DeleteRoleAssignment(Models\DeleteRoleAssignmentRequest $req) 移除成员账号上的授权
  * @method Models\DeleteRoleConfigurationResponse DeleteRoleConfiguration(Models\DeleteRoleConfigurationRequest $req) 删除权限配置信息
+ * @method Models\DeleteRoleConfigurationApplyScopeResponse DeleteRoleConfigurationApplyScope(Models\DeleteRoleConfigurationApplyScopeRequest $req) 删除权限申请范围
  * @method Models\DeleteSCIMCredentialResponse DeleteSCIMCredential(Models\DeleteSCIMCredentialRequest $req) 删除SCIM密钥
  * @method Models\DeleteShareUnitResponse DeleteShareUnit(Models\DeleteShareUnitRequest $req) 删除共享单元。
  * @method Models\DeleteShareUnitMembersResponse DeleteShareUnitMembers(Models\DeleteShareUnitMembersRequest $req) 删除共享单元成员
@@ -120,10 +122,12 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\ListOrgServiceAssignMemberResponse ListOrgServiceAssignMember(Models\ListOrgServiceAssignMemberRequest $req) 获取集团服务委派管理员列表
  * @method Models\ListOrganizationIdentityResponse ListOrganizationIdentity(Models\ListOrganizationIdentityRequest $req) 获取组织成员访问身份列表
  * @method Models\ListOrganizationServiceResponse ListOrganizationService(Models\ListOrganizationServiceRequest $req) 获取集团服务设置列表
+ * @method Models\ListPermissionApplyOrdersResponse ListPermissionApplyOrders(Models\ListPermissionApplyOrdersRequest $req) 管理员审批列表
  * @method Models\ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfiguration(Models\ListPermissionPoliciesInRoleConfigurationRequest $req) 获取权限配置中的策略列表
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询查看策略列表数据
  * @method Models\ListPoliciesForTargetResponse ListPoliciesForTarget(Models\ListPoliciesForTargetRequest $req) 本接口（ListPoliciesForTarget）查询目标关联的策略列表
  * @method Models\ListRoleAssignmentsResponse ListRoleAssignments(Models\ListRoleAssignmentsRequest $req) 查询授权列表
+ * @method Models\ListRoleConfigurationApplyScopesResponse ListRoleConfigurationApplyScopes(Models\ListRoleConfigurationApplyScopesRequest $req) 权限申请范围列表
  * @method Models\ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisionings(Models\ListRoleConfigurationProvisioningsRequest $req) 查询权限配置部署列表
  * @method Models\ListRoleConfigurationsResponse ListRoleConfigurations(Models\ListRoleConfigurationsRequest $req) 查询权限配置列表
  * @method Models\ListSCIMCredentialsResponse ListSCIMCredentials(Models\ListSCIMCredentialsRequest $req) 查询用户SCIM密钥列表

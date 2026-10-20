@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置<p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
  * @method array getTags() 获取<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
  * @method void setTags(array $Tags) 设置<p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
+ * @method CloudProductTopicConfig getTopicConfig() 获取<p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+ * @method void setTopicConfig(CloudProductTopicConfig $TopicConfig) 设置<p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
  */
 class CreateCloudProductLogCollectionRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var CloudProductTopicConfig <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
+     */
+    public $TopicConfig;
+
+    /**
      * @param string $InstanceId <p>实例ID</p><ul><li>通过各个接入云产品官方文档获取</li></ul>
      * @param string $AssumerName <p>云产品标识。支持以下产品</p><ul><li>APIS</li><li>BH</li><li>CDB</li><li>CDS</li><li>CFS</li><li>CLB</li><li>CSIP</li><li>CWP</li><li>DCDB</li><li>DNSPod</li><li>EMR</li><li>HTTPDNS</li><li>KHL</li><li>llmsgw</li><li>MariaDB</li><li>MDP</li><li>MongoDB</li><li>PostgreSQL</li><li>TCSS</li><li>TDSQL-C</li><li>TDStore</li><li>TencentDB-Redis</li><li>TEO</li><li>TokenHub</li><li>TSE</li></ul>
      * @param string $LogType <p>各云产品支持的日志类型如下：</p><table><thead><tr><th>assumer_name</th><th>支持的 log_type</th></tr></thead><tbody><tr><td>APIS</td><td>APIS-ACCESS</td></tr><tr><td>BH</td><td>BH-COMMANDLOG, BH-FILELOG</td></tr><tr><td>CDB</td><td>CDB-AUDIT</td></tr><tr><td>CDS</td><td>CDS-AUDIT, CDS-RISK</td></tr><tr><td>CFS</td><td>CFS-AUDIT</td></tr><tr><td>CLB</td><td>CMR-SPEND</td></tr><tr><td>CSIP</td><td>CSIP</td></tr><tr><td>CWP</td><td>CWP</td></tr><tr><td>DCDB</td><td>DCDB-AUDIT, DCDB-ERROR, DCDB-SLOW</td></tr><tr><td>DNSPod</td><td>DNSPod-RESOLVELOG</td></tr><tr><td>EMR</td><td>EMR-OPERATION</td></tr><tr><td>HTTPDNS</td><td>HTTPDNS-RESOLVELOG</td></tr><tr><td>MariaDB</td><td>MariaDB-AUDIT, MariaDB-ERROR, MariaDB-SLOW</td></tr><tr><td>MDP</td><td>MDP-SSAI</td></tr><tr><td>MongoDB</td><td>MongoDB-AUDIT, MongoDB-ErrorLog, MongoDB-OperationLog, MongoDB-SlowLog</td></tr><tr><td>PostgreSQL</td><td>PostgreSQL-AUDIT, PostgreSQL-ERROR, PostgreSQL-SLOW</td></tr><tr><td>TCSS</td><td>TCSS</td></tr><tr><td>TDSQL-C</td><td>TDSQL-C-AUDIT</td></tr><tr><td>TDStore</td><td>TDMYSQL-SLOW</td></tr><tr><td>TencentDB-Redis</td><td>Redis-AUDIT, Redis-ERROR, Redis-SLOW</td></tr><tr><td>TEO</td><td>TEO-INEFERENCE</td></tr><tr><td>llmsgw</td><td>llmsgw-mcp-security-alarm</td></tr></tbody></table>
@@ -112,6 +119,7 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
      * @param string $LogsetId <p>日志集id</p><ul><li>通过<a href="https://cloud.tencent.com/document/api/614/58624">获取日志集列表</a>获取日志集Id。</li></ul>
      * @param string $TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      * @param array $Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。</p>
+     * @param CloudProductTopicConfig $TopicConfig <p>日志主题信息。当创建云产品投递任务并传递TopicName时，会创建具备这些属性的日志主题。</p>
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TopicConfig",$param) and $param["TopicConfig"] !== null) {
+            $this->TopicConfig = new CloudProductTopicConfig();
+            $this->TopicConfig->deserialize($param["TopicConfig"]);
         }
     }
 }

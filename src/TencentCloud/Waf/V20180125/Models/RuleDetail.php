@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesensitizeSample(string $DesensitizeSample) 设置<p>脱敏样例</p>
  * @method integer getDirection() 获取<p>检测方向</p><p>取值范围：[0, 3]</p>
  * @method void setDirection(integer $Direction) 设置<p>检测方向</p><p>取值范围：[0, 3]</p>
+ * @method integer getUpdateTime() 获取<p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
  */
 class RuleDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class RuleDetail extends AbstractModel
     public $Direction;
 
     /**
+     * @var integer <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $RuleId <p>规则ID</p>
      * @param string $RuleName <p>规则名称</p>
      * @param string $Description <p>描述</p>
@@ -88,6 +95,7 @@ class RuleDetail extends AbstractModel
      * @param integer $Status <p>开关</p>
      * @param string $DesensitizeSample <p>脱敏样例</p>
      * @param integer $Direction <p>检测方向</p><p>取值范围：[0, 3]</p>
+     * @param integer $UpdateTime <p>规则修改时间（秒级时间戳）：租户对该规则的最近一次修改时间，从未修改则为0</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class RuleDetail extends AbstractModel
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

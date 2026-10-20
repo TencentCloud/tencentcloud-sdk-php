@@ -18,7 +18,7 @@ namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 后付费实例（Edition=llm-sdk-waf）的基础信息，仅包含 tb_instance_conf 基础字段
+ * 后付费实例详情，结构与 DescribeInstances 的 InstanceInfo 保持一致，全量返回实例字段（含各类套餐包信息），并额外填充 LLMTokenUsage；基础安全实例另返回 DomainCount、ExpertRuleCount、CustomRuleCount 实时统计
  *
  * @method integer getAppId() 获取<p>用户appid</p>
  * @method void setAppId(integer $AppId) 设置<p>用户appid</p>
@@ -66,6 +66,86 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLLMPkg(LLMPkg $LLMPkg) 设置<p>大模型安全「后付费」资源信息，结构与内容与 DescribeInstances 的 InstanceDetail.LLMPkg 保持一致</p>
  * @method LLMTokenUsage getLLMTokenUsage() 获取<p>LLM实例当天4个计费模块token消耗量及近7天趋势（仅后付费llm-sdk-waf实例返回）</p>
  * @method void setLLMTokenUsage(LLMTokenUsage $LLMTokenUsage) 设置<p>LLM实例当天4个计费模块token消耗量及近7天趋势（仅后付费llm-sdk-waf实例返回）</p>
+ * @method integer getMode() 获取<p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+ * @method void setMode(integer $Mode) 设置<p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+ * @method integer getDomainCount() 获取<p>已配置域名个数。</p><p>按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回实时去重后的接入域名数，统计范围覆盖SaaS接入域名、云原生防护对象（含默认虚拟域名）与四层REIP接入域名，同一域名多条接入记录只计一次。</p>
+ * @method void setDomainCount(integer $DomainCount) 设置<p>已配置域名个数。</p><p>按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回实时去重后的接入域名数，统计范围覆盖SaaS接入域名、云原生防护对象（含默认虚拟域名）与四层REIP接入域名，同一域名多条接入记录只计一次。</p>
+ * @method integer getMainDomainCount() 获取<p>已配置主域名个数。</p><p>按接入域名归属的主域名去重统计；未接入任何域名时为0。</p>
+ * @method void setMainDomainCount(integer $MainDomainCount) 设置<p>已配置主域名个数。</p><p>按接入域名归属的主域名去重统计；未接入任何域名时为0。</p>
+ * @method integer getExpertRuleCount() 获取<p>实例当前实时开启的专家规则数量。统计口径：接入一个防护对象（域名）即默认计1个专家规则，即等于该实例的实时接入域名数DomainCount；未接入任何对象时为0。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值ExpertUsage可能存在差异。</p>
+ * @method void setExpertRuleCount(integer $ExpertRuleCount) 设置<p>实例当前实时开启的专家规则数量。统计口径：接入一个防护对象（域名）即默认计1个专家规则，即等于该实例的实时接入域名数DomainCount；未接入任何对象时为0。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值ExpertUsage可能存在差异。</p>
+ * @method integer getCustomRuleCount() 获取<p>实例下所有接入域名的实时自定义规则条数之和。统计范围包含自定义策略、规则白名单、IP封禁、自定义CC、紧急CC、地域封禁、防信息泄露、防篡改、IP黑白名单等模块；同一条批量规则命中该实例下N个域名时计N条。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照且不做多实例平分，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值CustomUsage可能存在差异。</p>
+ * @method void setCustomRuleCount(integer $CustomRuleCount) 设置<p>实例下所有接入域名的实时自定义规则条数之和。统计范围包含自定义策略、规则白名单、IP封禁、自定义CC、紧急CC、地域封禁、防信息泄露、防篡改、IP黑白名单等模块；同一条批量规则命中该实例下N个域名时计N条。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照且不做多实例平分，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值CustomUsage可能存在差异。</p>
+ * @method integer getMaxQPS() 获取<p>实例30天内QPS峰值</p>
+ * @method void setMaxQPS(integer $MaxQPS) 设置<p>实例30天内QPS峰值</p>
+ * @method QPSPackageNew getQPS() 获取<p>qps扩展包信息</p>
+ * @method void setQPS(QPSPackageNew $QPS) 设置<p>qps扩展包信息</p>
+ * @method DomainPackageNew getDomainPkg() 获取<p>域名扩展包信息</p>
+ * @method void setDomainPkg(DomainPackageNew $DomainPkg) 设置<p>域名扩展包信息</p>
+ * @method FraudPkg getFraudPkg() 获取<p>业务安全包</p>
+ * @method void setFraudPkg(FraudPkg $FraudPkg) 设置<p>业务安全包</p>
+ * @method BotPkg getBotPkg() 获取<p>Bot资源包</p>
+ * @method void setBotPkg(BotPkg $BotPkg) 设置<p>Bot资源包</p>
+ * @method BotQPS getBotQPS() 获取<p>bot的qps详情</p>
+ * @method void setBotQPS(BotQPS $BotQPS) 设置<p>bot的qps详情</p>
+ * @method integer getMaxBandwidth() 获取<p>带宽峰值，单位为B/s(字节每秒)</p>
+ * @method void setMaxBandwidth(integer $MaxBandwidth) 设置<p>带宽峰值，单位为B/s(字节每秒)</p>
+ * @method integer getQpsStandard() 获取<p>购买的qps规格</p>
+ * @method void setQpsStandard(integer $QpsStandard) 设置<p>购买的qps规格</p>
+ * @method integer getBandwidthStandard() 获取<p>购买的带宽规格</p>
+ * @method void setBandwidthStandard(integer $BandwidthStandard) 设置<p>购买的带宽规格</p>
+ * @method integer getStatus() 获取<p>实例状态</p>
+ * @method void setStatus(integer $Status) 设置<p>实例状态</p>
+ * @method integer getSandboxQps() 获取<p>实例沙箱qps值</p>
+ * @method void setSandboxQps(integer $SandboxQps) 设置<p>实例沙箱qps值</p>
+ * @method MajorEventsPkg getMajorEventsPkg() 获取<p>重保包</p>
+ * @method void setMajorEventsPkg(MajorEventsPkg $MajorEventsPkg) 设置<p>重保包</p>
+ * @method HybridPkg getHybridPkg() 获取<p>混合云子节点包</p>
+ * @method void setHybridPkg(HybridPkg $HybridPkg) 设置<p>混合云子节点包</p>
+ * @method ApiPkg getApiPkg() 获取<p>API安全资源包</p>
+ * @method void setApiPkg(ApiPkg $ApiPkg) 设置<p>API安全资源包</p>
+ * @method MiniPkg getMiniPkg() 获取<p>小程序安全加速包</p>
+ * @method void setMiniPkg(MiniPkg $MiniPkg) 设置<p>小程序安全加速包</p>
+ * @method integer getMiniQpsStandard() 获取<p>小程序qps规格</p>
+ * @method void setMiniQpsStandard(integer $MiniQpsStandard) 设置<p>小程序qps规格</p>
+ * @method integer getMiniMaxQPS() 获取<p>小程序qps峰值</p>
+ * @method void setMiniMaxQPS(integer $MiniMaxQPS) 设置<p>小程序qps峰值</p>
+ * @method string getLastQpsExceedTime() 获取<p>最近一次超量时间</p>
+ * @method void setLastQpsExceedTime(string $LastQpsExceedTime) 设置<p>最近一次超量时间</p>
+ * @method MiniExtendPkg getMiniExtendPkg() 获取<p>小程序安全接入ID数量扩张包</p>
+ * @method void setMiniExtendPkg(MiniExtendPkg $MiniExtendPkg) 设置<p>小程序安全接入ID数量扩张包</p>
+ * @method integer getLast3MaxQPS() 获取<p>最近3天最大qps</p>
+ * @method void setLast3MaxQPS(integer $Last3MaxQPS) 设置<p>最近3天最大qps</p>
+ * @method integer getLast3MaxBandwidth() 获取<p>最近3天最大带宽</p>
+ * @method void setLast3MaxBandwidth(integer $Last3MaxBandwidth) 设置<p>最近3天最大带宽</p>
+ * @method integer getLast7MaxMiniBandwidth() 获取<p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+ * @method void setLast7MaxMiniBandwidth(integer $Last7MaxMiniBandwidth) 设置<p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+ * @method integer getMiniBandwidthStandard() 获取<p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+ * @method void setMiniBandwidthStandard(integer $MiniBandwidthStandard) 设置<p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+ * @method MajorEventsProPkg getMajorEventsProPkg() 获取<p>重保增强包</p>
+ * @method void setMajorEventsProPkg(MajorEventsProPkg $MajorEventsProPkg) 设置<p>重保增强包</p>
+ * @method NetworkConfig getNetworkConfig() 获取<p>实例的网络配置</p>
+ * @method void setNetworkConfig(NetworkConfig $NetworkConfig) 设置<p>实例的网络配置</p>
+ * @method RCEPkg getRCEPkg() 获取<p>RCE设备安全信息包</p>
+ * @method void setRCEPkg(RCEPkg $RCEPkg) 设置<p>RCE设备安全信息包</p>
+ * @method integer getExceedPolicy() 获取<p>超量策略。0：超量沙箱<br>1：超量限流</p>
+ * @method void setExceedPolicy(integer $ExceedPolicy) 设置<p>超量策略。0：超量沙箱<br>1：超量限流</p>
+ * @method string getElasticResourceId() 获取<p>弹性资源Id</p>
+ * @method void setElasticResourceId(string $ElasticResourceId) 设置<p>弹性资源Id</p>
+ * @method LLMMonPkg getLLMMonPkg() 获取<p>预付费大模型安全信息包</p>
+ * @method void setLLMMonPkg(LLMMonPkg $LLMMonPkg) 设置<p>预付费大模型安全信息包</p>
+ * @method integer getRegionId() 获取<p>地域id</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域id</p>
+ * @method BotSecurityPkg getBotSecurityPkg() 获取<p>BOT安全护航信息</p>
+ * @method void setBotSecurityPkg(BotSecurityPkg $BotSecurityPkg) 设置<p>BOT安全护航信息</p>
+ * @method BotMonitorPkg getBotMonitorPkg() 获取<p>BOT安全监测资源信息</p>
+ * @method void setBotMonitorPkg(BotMonitorPkg $BotMonitorPkg) 设置<p>BOT安全监测资源信息</p>
+ * @method DedicatedIPPkg getDedicatedIPPkg() 获取<p>独享ip资源信息</p>
+ * @method void setDedicatedIPPkg(DedicatedIPPkg $DedicatedIPPkg) 设置<p>独享ip资源信息</p>
+ * @method integer getDedicatedIPCount() 获取<p>已经配置独享ip的数量</p>
+ * @method void setDedicatedIPCount(integer $DedicatedIPCount) 设置<p>已经配置独享ip的数量</p>
+ * @method array getTagInfos() 获取<p>标签结构体</p>
+ * @method void setTagInfos(array $TagInfos) 设置<p>标签结构体</p>
  */
 class AfterPayInstanceInfo extends AbstractModel
 {
@@ -185,6 +265,206 @@ class AfterPayInstanceInfo extends AbstractModel
     public $LLMTokenUsage;
 
     /**
+     * @var integer <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+     */
+    public $Mode;
+
+    /**
+     * @var integer <p>已配置域名个数。</p><p>按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回实时去重后的接入域名数，统计范围覆盖SaaS接入域名、云原生防护对象（含默认虚拟域名）与四层REIP接入域名，同一域名多条接入记录只计一次。</p>
+     */
+    public $DomainCount;
+
+    /**
+     * @var integer <p>已配置主域名个数。</p><p>按接入域名归属的主域名去重统计；未接入任何域名时为0。</p>
+     */
+    public $MainDomainCount;
+
+    /**
+     * @var integer <p>实例当前实时开启的专家规则数量。统计口径：接入一个防护对象（域名）即默认计1个专家规则，即等于该实例的实时接入域名数DomainCount；未接入任何对象时为0。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值ExpertUsage可能存在差异。</p>
+     */
+    public $ExpertRuleCount;
+
+    /**
+     * @var integer <p>实例下所有接入域名的实时自定义规则条数之和。统计范围包含自定义策略、规则白名单、IP封禁、自定义CC、紧急CC、地域封禁、防信息泄露、防篡改、IP黑白名单等模块；同一条批量规则命中该实例下N个域名时计N条。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照且不做多实例平分，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值CustomUsage可能存在差异。</p>
+     */
+    public $CustomRuleCount;
+
+    /**
+     * @var integer <p>实例30天内QPS峰值</p>
+     */
+    public $MaxQPS;
+
+    /**
+     * @var QPSPackageNew <p>qps扩展包信息</p>
+     */
+    public $QPS;
+
+    /**
+     * @var DomainPackageNew <p>域名扩展包信息</p>
+     */
+    public $DomainPkg;
+
+    /**
+     * @var FraudPkg <p>业务安全包</p>
+     */
+    public $FraudPkg;
+
+    /**
+     * @var BotPkg <p>Bot资源包</p>
+     */
+    public $BotPkg;
+
+    /**
+     * @var BotQPS <p>bot的qps详情</p>
+     */
+    public $BotQPS;
+
+    /**
+     * @var integer <p>带宽峰值，单位为B/s(字节每秒)</p>
+     */
+    public $MaxBandwidth;
+
+    /**
+     * @var integer <p>购买的qps规格</p>
+     */
+    public $QpsStandard;
+
+    /**
+     * @var integer <p>购买的带宽规格</p>
+     */
+    public $BandwidthStandard;
+
+    /**
+     * @var integer <p>实例状态</p>
+     */
+    public $Status;
+
+    /**
+     * @var integer <p>实例沙箱qps值</p>
+     */
+    public $SandboxQps;
+
+    /**
+     * @var MajorEventsPkg <p>重保包</p>
+     */
+    public $MajorEventsPkg;
+
+    /**
+     * @var HybridPkg <p>混合云子节点包</p>
+     */
+    public $HybridPkg;
+
+    /**
+     * @var ApiPkg <p>API安全资源包</p>
+     */
+    public $ApiPkg;
+
+    /**
+     * @var MiniPkg <p>小程序安全加速包</p>
+     */
+    public $MiniPkg;
+
+    /**
+     * @var integer <p>小程序qps规格</p>
+     */
+    public $MiniQpsStandard;
+
+    /**
+     * @var integer <p>小程序qps峰值</p>
+     */
+    public $MiniMaxQPS;
+
+    /**
+     * @var string <p>最近一次超量时间</p>
+     */
+    public $LastQpsExceedTime;
+
+    /**
+     * @var MiniExtendPkg <p>小程序安全接入ID数量扩张包</p>
+     */
+    public $MiniExtendPkg;
+
+    /**
+     * @var integer <p>最近3天最大qps</p>
+     */
+    public $Last3MaxQPS;
+
+    /**
+     * @var integer <p>最近3天最大带宽</p>
+     */
+    public $Last3MaxBandwidth;
+
+    /**
+     * @var integer <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     */
+    public $Last7MaxMiniBandwidth;
+
+    /**
+     * @var integer <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     */
+    public $MiniBandwidthStandard;
+
+    /**
+     * @var MajorEventsProPkg <p>重保增强包</p>
+     */
+    public $MajorEventsProPkg;
+
+    /**
+     * @var NetworkConfig <p>实例的网络配置</p>
+     */
+    public $NetworkConfig;
+
+    /**
+     * @var RCEPkg <p>RCE设备安全信息包</p>
+     */
+    public $RCEPkg;
+
+    /**
+     * @var integer <p>超量策略。0：超量沙箱<br>1：超量限流</p>
+     */
+    public $ExceedPolicy;
+
+    /**
+     * @var string <p>弹性资源Id</p>
+     */
+    public $ElasticResourceId;
+
+    /**
+     * @var LLMMonPkg <p>预付费大模型安全信息包</p>
+     */
+    public $LLMMonPkg;
+
+    /**
+     * @var integer <p>地域id</p>
+     */
+    public $RegionId;
+
+    /**
+     * @var BotSecurityPkg <p>BOT安全护航信息</p>
+     */
+    public $BotSecurityPkg;
+
+    /**
+     * @var BotMonitorPkg <p>BOT安全监测资源信息</p>
+     */
+    public $BotMonitorPkg;
+
+    /**
+     * @var DedicatedIPPkg <p>独享ip资源信息</p>
+     */
+    public $DedicatedIPPkg;
+
+    /**
+     * @var integer <p>已经配置独享ip的数量</p>
+     */
+    public $DedicatedIPCount;
+
+    /**
+     * @var array <p>标签结构体</p>
+     */
+    public $TagInfos;
+
+    /**
      * @param integer $AppId <p>用户appid</p>
      * @param string $InstanceId <p>实例唯一ID</p>
      * @param string $InstanceName <p>实例名称</p>
@@ -208,6 +488,46 @@ class AfterPayInstanceInfo extends AbstractModel
      * @param integer $BasicFlag <p>1是基础2025版本；0不是</p>
      * @param LLMPkg $LLMPkg <p>大模型安全「后付费」资源信息，结构与内容与 DescribeInstances 的 InstanceDetail.LLMPkg 保持一致</p>
      * @param LLMTokenUsage $LLMTokenUsage <p>LLM实例当天4个计费模块token消耗量及近7天趋势（仅后付费llm-sdk-waf实例返回）</p>
+     * @param integer $Mode <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
+     * @param integer $DomainCount <p>已配置域名个数。</p><p>按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回实时去重后的接入域名数，统计范围覆盖SaaS接入域名、云原生防护对象（含默认虚拟域名）与四层REIP接入域名，同一域名多条接入记录只计一次。</p>
+     * @param integer $MainDomainCount <p>已配置主域名个数。</p><p>按接入域名归属的主域名去重统计；未接入任何域名时为0。</p>
+     * @param integer $ExpertRuleCount <p>实例当前实时开启的专家规则数量。统计口径：接入一个防护对象（域名）即默认计1个专家规则，即等于该实例的实时接入域名数DomainCount；未接入任何对象时为0。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值ExpertUsage可能存在差异。</p>
+     * @param integer $CustomRuleCount <p>实例下所有接入域名的实时自定义规则条数之和。统计范围包含自定义策略、规则白名单、IP封禁、自定义CC、紧急CC、地域封禁、防信息泄露、防篡改、IP黑白名单等模块；同一条批量规则命中该实例下N个域名时计N条。</p><p>仅按量后付费基础安全实例（Edition为sparta-waf或clb-waf）返回，其余实例类型固定为0。</p><p>该值为实时快照且不做多实例平分，与账单接口DescribeWafPostpaidBillDetail返回的小时计量值CustomUsage可能存在差异。</p>
+     * @param integer $MaxQPS <p>实例30天内QPS峰值</p>
+     * @param QPSPackageNew $QPS <p>qps扩展包信息</p>
+     * @param DomainPackageNew $DomainPkg <p>域名扩展包信息</p>
+     * @param FraudPkg $FraudPkg <p>业务安全包</p>
+     * @param BotPkg $BotPkg <p>Bot资源包</p>
+     * @param BotQPS $BotQPS <p>bot的qps详情</p>
+     * @param integer $MaxBandwidth <p>带宽峰值，单位为B/s(字节每秒)</p>
+     * @param integer $QpsStandard <p>购买的qps规格</p>
+     * @param integer $BandwidthStandard <p>购买的带宽规格</p>
+     * @param integer $Status <p>实例状态</p>
+     * @param integer $SandboxQps <p>实例沙箱qps值</p>
+     * @param MajorEventsPkg $MajorEventsPkg <p>重保包</p>
+     * @param HybridPkg $HybridPkg <p>混合云子节点包</p>
+     * @param ApiPkg $ApiPkg <p>API安全资源包</p>
+     * @param MiniPkg $MiniPkg <p>小程序安全加速包</p>
+     * @param integer $MiniQpsStandard <p>小程序qps规格</p>
+     * @param integer $MiniMaxQPS <p>小程序qps峰值</p>
+     * @param string $LastQpsExceedTime <p>最近一次超量时间</p>
+     * @param MiniExtendPkg $MiniExtendPkg <p>小程序安全接入ID数量扩张包</p>
+     * @param integer $Last3MaxQPS <p>最近3天最大qps</p>
+     * @param integer $Last3MaxBandwidth <p>最近3天最大带宽</p>
+     * @param integer $Last7MaxMiniBandwidth <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     * @param integer $MiniBandwidthStandard <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     * @param MajorEventsProPkg $MajorEventsProPkg <p>重保增强包</p>
+     * @param NetworkConfig $NetworkConfig <p>实例的网络配置</p>
+     * @param RCEPkg $RCEPkg <p>RCE设备安全信息包</p>
+     * @param integer $ExceedPolicy <p>超量策略。0：超量沙箱<br>1：超量限流</p>
+     * @param string $ElasticResourceId <p>弹性资源Id</p>
+     * @param LLMMonPkg $LLMMonPkg <p>预付费大模型安全信息包</p>
+     * @param integer $RegionId <p>地域id</p>
+     * @param BotSecurityPkg $BotSecurityPkg <p>BOT安全护航信息</p>
+     * @param BotMonitorPkg $BotMonitorPkg <p>BOT安全监测资源信息</p>
+     * @param DedicatedIPPkg $DedicatedIPPkg <p>独享ip资源信息</p>
+     * @param integer $DedicatedIPCount <p>已经配置独享ip的数量</p>
+     * @param array $TagInfos <p>标签结构体</p>
      */
     function __construct()
     {
@@ -314,6 +634,188 @@ class AfterPayInstanceInfo extends AbstractModel
         if (array_key_exists("LLMTokenUsage",$param) and $param["LLMTokenUsage"] !== null) {
             $this->LLMTokenUsage = new LLMTokenUsage();
             $this->LLMTokenUsage->deserialize($param["LLMTokenUsage"]);
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("DomainCount",$param) and $param["DomainCount"] !== null) {
+            $this->DomainCount = $param["DomainCount"];
+        }
+
+        if (array_key_exists("MainDomainCount",$param) and $param["MainDomainCount"] !== null) {
+            $this->MainDomainCount = $param["MainDomainCount"];
+        }
+
+        if (array_key_exists("ExpertRuleCount",$param) and $param["ExpertRuleCount"] !== null) {
+            $this->ExpertRuleCount = $param["ExpertRuleCount"];
+        }
+
+        if (array_key_exists("CustomRuleCount",$param) and $param["CustomRuleCount"] !== null) {
+            $this->CustomRuleCount = $param["CustomRuleCount"];
+        }
+
+        if (array_key_exists("MaxQPS",$param) and $param["MaxQPS"] !== null) {
+            $this->MaxQPS = $param["MaxQPS"];
+        }
+
+        if (array_key_exists("QPS",$param) and $param["QPS"] !== null) {
+            $this->QPS = new QPSPackageNew();
+            $this->QPS->deserialize($param["QPS"]);
+        }
+
+        if (array_key_exists("DomainPkg",$param) and $param["DomainPkg"] !== null) {
+            $this->DomainPkg = new DomainPackageNew();
+            $this->DomainPkg->deserialize($param["DomainPkg"]);
+        }
+
+        if (array_key_exists("FraudPkg",$param) and $param["FraudPkg"] !== null) {
+            $this->FraudPkg = new FraudPkg();
+            $this->FraudPkg->deserialize($param["FraudPkg"]);
+        }
+
+        if (array_key_exists("BotPkg",$param) and $param["BotPkg"] !== null) {
+            $this->BotPkg = new BotPkg();
+            $this->BotPkg->deserialize($param["BotPkg"]);
+        }
+
+        if (array_key_exists("BotQPS",$param) and $param["BotQPS"] !== null) {
+            $this->BotQPS = new BotQPS();
+            $this->BotQPS->deserialize($param["BotQPS"]);
+        }
+
+        if (array_key_exists("MaxBandwidth",$param) and $param["MaxBandwidth"] !== null) {
+            $this->MaxBandwidth = $param["MaxBandwidth"];
+        }
+
+        if (array_key_exists("QpsStandard",$param) and $param["QpsStandard"] !== null) {
+            $this->QpsStandard = $param["QpsStandard"];
+        }
+
+        if (array_key_exists("BandwidthStandard",$param) and $param["BandwidthStandard"] !== null) {
+            $this->BandwidthStandard = $param["BandwidthStandard"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SandboxQps",$param) and $param["SandboxQps"] !== null) {
+            $this->SandboxQps = $param["SandboxQps"];
+        }
+
+        if (array_key_exists("MajorEventsPkg",$param) and $param["MajorEventsPkg"] !== null) {
+            $this->MajorEventsPkg = new MajorEventsPkg();
+            $this->MajorEventsPkg->deserialize($param["MajorEventsPkg"]);
+        }
+
+        if (array_key_exists("HybridPkg",$param) and $param["HybridPkg"] !== null) {
+            $this->HybridPkg = new HybridPkg();
+            $this->HybridPkg->deserialize($param["HybridPkg"]);
+        }
+
+        if (array_key_exists("ApiPkg",$param) and $param["ApiPkg"] !== null) {
+            $this->ApiPkg = new ApiPkg();
+            $this->ApiPkg->deserialize($param["ApiPkg"]);
+        }
+
+        if (array_key_exists("MiniPkg",$param) and $param["MiniPkg"] !== null) {
+            $this->MiniPkg = new MiniPkg();
+            $this->MiniPkg->deserialize($param["MiniPkg"]);
+        }
+
+        if (array_key_exists("MiniQpsStandard",$param) and $param["MiniQpsStandard"] !== null) {
+            $this->MiniQpsStandard = $param["MiniQpsStandard"];
+        }
+
+        if (array_key_exists("MiniMaxQPS",$param) and $param["MiniMaxQPS"] !== null) {
+            $this->MiniMaxQPS = $param["MiniMaxQPS"];
+        }
+
+        if (array_key_exists("LastQpsExceedTime",$param) and $param["LastQpsExceedTime"] !== null) {
+            $this->LastQpsExceedTime = $param["LastQpsExceedTime"];
+        }
+
+        if (array_key_exists("MiniExtendPkg",$param) and $param["MiniExtendPkg"] !== null) {
+            $this->MiniExtendPkg = new MiniExtendPkg();
+            $this->MiniExtendPkg->deserialize($param["MiniExtendPkg"]);
+        }
+
+        if (array_key_exists("Last3MaxQPS",$param) and $param["Last3MaxQPS"] !== null) {
+            $this->Last3MaxQPS = $param["Last3MaxQPS"];
+        }
+
+        if (array_key_exists("Last3MaxBandwidth",$param) and $param["Last3MaxBandwidth"] !== null) {
+            $this->Last3MaxBandwidth = $param["Last3MaxBandwidth"];
+        }
+
+        if (array_key_exists("Last7MaxMiniBandwidth",$param) and $param["Last7MaxMiniBandwidth"] !== null) {
+            $this->Last7MaxMiniBandwidth = $param["Last7MaxMiniBandwidth"];
+        }
+
+        if (array_key_exists("MiniBandwidthStandard",$param) and $param["MiniBandwidthStandard"] !== null) {
+            $this->MiniBandwidthStandard = $param["MiniBandwidthStandard"];
+        }
+
+        if (array_key_exists("MajorEventsProPkg",$param) and $param["MajorEventsProPkg"] !== null) {
+            $this->MajorEventsProPkg = new MajorEventsProPkg();
+            $this->MajorEventsProPkg->deserialize($param["MajorEventsProPkg"]);
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = new NetworkConfig();
+            $this->NetworkConfig->deserialize($param["NetworkConfig"]);
+        }
+
+        if (array_key_exists("RCEPkg",$param) and $param["RCEPkg"] !== null) {
+            $this->RCEPkg = new RCEPkg();
+            $this->RCEPkg->deserialize($param["RCEPkg"]);
+        }
+
+        if (array_key_exists("ExceedPolicy",$param) and $param["ExceedPolicy"] !== null) {
+            $this->ExceedPolicy = $param["ExceedPolicy"];
+        }
+
+        if (array_key_exists("ElasticResourceId",$param) and $param["ElasticResourceId"] !== null) {
+            $this->ElasticResourceId = $param["ElasticResourceId"];
+        }
+
+        if (array_key_exists("LLMMonPkg",$param) and $param["LLMMonPkg"] !== null) {
+            $this->LLMMonPkg = new LLMMonPkg();
+            $this->LLMMonPkg->deserialize($param["LLMMonPkg"]);
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("BotSecurityPkg",$param) and $param["BotSecurityPkg"] !== null) {
+            $this->BotSecurityPkg = new BotSecurityPkg();
+            $this->BotSecurityPkg->deserialize($param["BotSecurityPkg"]);
+        }
+
+        if (array_key_exists("BotMonitorPkg",$param) and $param["BotMonitorPkg"] !== null) {
+            $this->BotMonitorPkg = new BotMonitorPkg();
+            $this->BotMonitorPkg->deserialize($param["BotMonitorPkg"]);
+        }
+
+        if (array_key_exists("DedicatedIPPkg",$param) and $param["DedicatedIPPkg"] !== null) {
+            $this->DedicatedIPPkg = new DedicatedIPPkg();
+            $this->DedicatedIPPkg->deserialize($param["DedicatedIPPkg"]);
+        }
+
+        if (array_key_exists("DedicatedIPCount",$param) and $param["DedicatedIPCount"] !== null) {
+            $this->DedicatedIPCount = $param["DedicatedIPCount"];
+        }
+
+        if (array_key_exists("TagInfos",$param) and $param["TagInfos"] !== null) {
+            $this->TagInfos = [];
+            foreach ($param["TagInfos"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfos, $obj);
+            }
         }
     }
 }

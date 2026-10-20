@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentLogicalOp(string $ContentLogicalOp) 设置<p>检测内容and or表达式,默认为and</p>
  * @method string getInstanceId() 获取<p>实例id，必填项</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id，必填项</p>
- * @method integer getReplyType() 获取<p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
- * @method void setReplyType(integer $ReplyType) 设置<p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+ * @method integer getReplyType() 获取<p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
+ * @method void setReplyType(integer $ReplyType) 设置<p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
  * @method string getCustomReplyRuleId() 获取<p>自定义回答模板</p>
  * @method void setCustomReplyRuleId(string $CustomReplyRuleId) 设置<p>自定义回答模板</p>
  * @method integer getModalType() 获取<p>模态类型：0-文本（默认），1-图片</p><p>枚举值：</p><ul><li>0： 文本</li><li>1： 图片</li></ul>
@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) 设置<p>白名单规则生效范围：多个serviceId/domain列表（Category=white时使用），表示该白名单规则同时生效于哪些域名/serviceId。黑名单规则不使用此字段。</p>
  * @method array getAppliedModules() 获取<p>加白生效模块type列表（Category=white时使用），表示该白名单规则命中后对哪些防护模块生效(放行)。取值：2-算力消耗规则，3-自定义防护规则，4-ToolCall防护，5-提示词攻击防护，6-内容合规检测，7-敏感数据检测。</p>
  * @method void setAppliedModules(array $AppliedModules) 设置<p>加白生效模块type列表（Category=white时使用），表示该白名单规则命中后对哪些防护模块生效(放行)。取值：2-算力消耗规则，3-自定义防护规则，4-ToolCall防护，5-提示词攻击防护，6-内容合规检测，7-敏感数据检测。</p>
+ * @method string getRiskLevel() 获取<p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+ * @method void setRiskLevel(string $RiskLevel) 设置<p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
  */
 class ModifyLLMContentRuleRequest extends AbstractModel
 {
@@ -134,7 +136,7 @@ class ModifyLLMContentRuleRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+     * @var integer <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
      */
     public $ReplyType;
 
@@ -164,6 +166,11 @@ class ModifyLLMContentRuleRequest extends AbstractModel
     public $AppliedModules;
 
     /**
+     * @var string <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
+     */
+    public $RiskLevel;
+
+    /**
      * @param string $Name <p>名称</p>
      * @param integer $Priority <p>优先级</p>
      * @param integer $Status <p>规则开关</p>
@@ -178,12 +185,13 @@ class ModifyLLMContentRuleRequest extends AbstractModel
      * @param integer $PageId <p>拦截页面id</p>
      * @param string $ContentLogicalOp <p>检测内容and or表达式,默认为and</p>
      * @param string $InstanceId <p>实例id，必填项</p>
-     * @param integer $ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答（ActionType=reply时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答ActionType=reply时生效</li></ul>
+     * @param integer $ReplyType <p>代答类型：1-内置可信模型安全代答，2-自定义代答(ActionType=reply)时生效</p><p>枚举值：</p><ul><li>1： 内置可信模型安全代答</li><li>2： 自定义代答(ActionType=reply)时生效</li></ul>
      * @param string $CustomReplyRuleId <p>自定义回答模板</p>
      * @param integer $ModalType <p>模态类型：0-文本（默认），1-图片</p><p>枚举值：</p><ul><li>0： 文本</li><li>1： 图片</li></ul>
      * @param string $Category <p>规则类别：black-普通规则(默认)，white-白名单规则；空值按black处理。white时ActionType仅允许pass(放行)，RuleItem支持白名单匹配字段(Key: ip/geo/type/content/chat_id/user_id/tool_name/tool_args/keyword_whitelist；Op: belong/not_belong/equal/not_equal/contain/not_contain/prefix/suffix/wildcard)</p>
      * @param array $Domains <p>白名单规则生效范围：多个serviceId/domain列表（Category=white时使用），表示该白名单规则同时生效于哪些域名/serviceId。黑名单规则不使用此字段。</p>
      * @param array $AppliedModules <p>加白生效模块type列表（Category=white时使用），表示该白名单规则命中后对哪些防护模块生效(放行)。取值：2-算力消耗规则，3-自定义防护规则，4-ToolCall防护，5-提示词攻击防护，6-内容合规检测，7-敏感数据检测。</p>
+     * @param string $RiskLevel <p>严重程度：critical-超高危，high-高危，medium-中危(默认)，low-低危。命中该规则时攻击日志按此展示风险等级；不传或空值按medium处理。</p><p>枚举值：</p><ul><li>critical： 超高危</li><li>high： 高危</li><li>medium： 中危(默认)</li><li>low： 低危</li></ul>
      */
     function __construct()
     {
@@ -286,6 +294,10 @@ class ModifyLLMContentRuleRequest extends AbstractModel
 
         if (array_key_exists("AppliedModules",$param) and $param["AppliedModules"] !== null) {
             $this->AppliedModules = $param["AppliedModules"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

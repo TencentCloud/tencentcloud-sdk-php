@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProbeMetricTagValues返回参数结构体
  *
- * @method string getTagValueSet() 获取标签值序列化后的字符串
- * @method void setTagValueSet(string $TagValueSet) 设置标签值序列化后的字符串
+ * @method string getTagValueSet() 获取<p>标签值序列化后的字符串</p>
+ * @method void setTagValueSet(string $TagValueSet) 设置<p>标签值序列化后的字符串</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProbeMetricTagValuesResponse extends AbstractModel
 {
     /**
-     * @var string 标签值序列化后的字符串
+     * @var string <p>标签值序列化后的字符串</p>
      */
     public $TagValueSet;
 
@@ -38,7 +38,7 @@ class DescribeProbeMetricTagValuesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TagValueSet 标签值序列化后的字符串
+     * @param string $TagValueSet <p>标签值序列化后的字符串</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntentContent(IntentContent $IntentContent) 设置<p>意图检测请求内容</p>
  * @method string getClientIP() 获取<p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
  * @method void setClientIP(string $ClientIP) 设置<p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+ * @method array getHistory() 获取多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+ * @method void setHistory(array $History) 设置多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+ * @method array getUrls() 获取待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+ * @method void setUrls(array $Urls) 设置待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
  */
 class DescribeLLMContentSecCheckRequest extends AbstractModel
 {
@@ -115,6 +123,18 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
     public $ClientIP;
 
     /**
+     * @var array 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+     */
+    public $History;
+
+    /**
+     * @var array 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
+     */
+    public $Urls;
+
+    /**
      * @param string $ServiceId <p>服务id，使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      * @param integer $Type <p>流量类型，是入向流量还是出向流量，入向：1，出向：2；入向和出向必填</p>
      * @param string $InstanceId <p>实例id，必传</p>
@@ -128,6 +148,10 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
      * @param string $SessionId <p>多轮对话的id</p>
      * @param IntentContent $IntentContent <p>意图检测请求内容</p>
      * @param string $ClientIP <p>客户端来源IP地址，用于白名单匹配等场景，支持IPv4和IPv6格式</p>
+     * @param array $History 多轮历史用户输入，按时间旧到新排列，仅用于提示词注入检测
+入参限制：最多10条，超出保留最新10条；History + Content 拼接后不超过6K字符，超限从最早History开始丢弃
+     * @param array $Urls 待检测的URL列表，用于恶意URL检测
+入参限制：最多50个，单个URL长度不超过2048字符，超出截断
      */
     function __construct()
     {
@@ -193,6 +217,14 @@ class DescribeLLMContentSecCheckRequest extends AbstractModel
 
         if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
             $this->ClientIP = $param["ClientIP"];
+        }
+
+        if (array_key_exists("History",$param) and $param["History"] !== null) {
+            $this->History = $param["History"];
+        }
+
+        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
+            $this->Urls = $param["Urls"];
         }
     }
 }

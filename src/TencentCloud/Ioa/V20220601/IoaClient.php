@@ -34,6 +34,8 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\CreatePrivilegeCodeResponse CreatePrivilegeCode(Models\CreatePrivilegeCodeRequest $req) 生成特权码，私有化调用path为：capi/Assets/Device/CreatePrivilegeCode，生成的特权码、卸载码，仅对该设备当天有效
  * @method Models\DeleteAccountGroupResponse DeleteAccountGroup(Models\DeleteAccountGroupRequest $req) 管理员在目录管理页面删除一个分组，私有化调用path为：capi/Assets/DeleteAccountGroup
  * @method Models\DeleteAccountGroupResourcesResponse DeleteAccountGroupResources(Models\DeleteAccountGroupResourcesRequest $req) 删除账户组资源授权，私有化调用path为：capi/NGN/DeleteAccountGroupResources
+ * @method Models\DeleteDeliveryServerResponse DeleteDeliveryServer(Models\DeleteDeliveryServerRequest $req) 删除转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryServer
+ * @method Models\DeleteDeliveryStrategyResponse DeleteDeliveryStrategy(Models\DeleteDeliveryStrategyRequest $req) 删除转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/DeleteDeliveryStrategy
  * @method Models\DeleteDeviceVirtualGroupResponse DeleteDeviceVirtualGroup(Models\DeleteDeviceVirtualGroupRequest $req) 删除终端自定义分组，私有化调用path为：/capi/Assets/Device/DeleteDeviceVirtualGroup
  * @method Models\DescribeAccountGroupsResponse DescribeAccountGroups(Models\DescribeAccountGroupsRequest $req) 以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
  * @method Models\DescribeAccountVirtualGroupsResponse DescribeAccountVirtualGroups(Models\DescribeAccountVirtualGroupsRequest $req) 列表账户虚拟组，支持分页，名称搜索，私有化调用path为：capi/Assets/DescribeAccountVirtualGroups，从7.x版本开始支持
@@ -46,6 +48,8 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeDLPEdgeNodesResponse DescribeDLPEdgeNodes(Models\DescribeDLPEdgeNodesRequest $req) 查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
  * @method Models\DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(Models\DescribeDLPFileDetectResultRequest $req) webservice查询文件检测结果
  * @method Models\DescribeDLPFileDetectTaskResultResponse DescribeDLPFileDetectTaskResult(Models\DescribeDLPFileDetectTaskResultRequest $req) 查询文件鉴定任务结果
+ * @method Models\DescribeDeliveryServerResponse DescribeDeliveryServer(Models\DescribeDeliveryServerRequest $req) 转发服务器详情，私有化调用path为：capi/LogCenter/DescribeDeliveryServer
+ * @method Models\DescribeDeliveryStrategyResponse DescribeDeliveryStrategy(Models\DescribeDeliveryStrategyRequest $req) 转发策略详情，私有化调用path为：capi/LogCenter/DeliveryLog/DescribeDeliveryStrategy
  * @method Models\DescribeDeviceChildGroupsResponse DescribeDeviceChildGroups(Models\DescribeDeviceChildGroupsRequest $req) 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
  * @method Models\DescribeDeviceDetailListResponse DescribeDeviceDetailList(Models\DescribeDeviceDetailListRequest $req) 不使用了
 
@@ -58,6 +62,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeDirectAccountGroupResourcesResponse DescribeDirectAccountGroupResources(Models\DescribeDirectAccountGroupResourcesRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeDirectAccountGroupResources
  * @method Models\DescribeLocalAccountsResponse DescribeLocalAccounts(Models\DescribeLocalAccountsRequest $req) 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
  * @method Models\DescribeProfileFieldsMenuResponse DescribeProfileFieldsMenu(Models\DescribeProfileFieldsMenuRequest $req) 查询终端描述字段数据,私有化调用path为：capi/Assets/Device/DescribeProfileFieldsMenu
+ * @method Models\DescribePublicEncryptKeyResponse DescribePublicEncryptKey(Models\DescribePublicEncryptKeyRequest $req) 获取用于RSA加密的公钥，对敏感数据进行加密传输。
  * @method Models\DescribeResourceGrantedAccountGroupsResponse DescribeResourceGrantedAccountGroups(Models\DescribeResourceGrantedAccountGroupsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
  * @method Models\DescribeResourceGrantedAccountsResponse DescribeResourceGrantedAccounts(Models\DescribeResourceGrantedAccountsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedAccounts
  * @method Models\DescribeResourceGrantedVirtualGroupsResponse DescribeResourceGrantedVirtualGroups(Models\DescribeResourceGrantedVirtualGroupsRequest $req) 列表账户组直接关联的资源，私有化调用path为：capi/NGN/DescribeResourceGrantedVirtualGroups
@@ -73,6 +78,8 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroups(Models\GrantResourcesByVirtualGroupsRequest $req) 添加资源授权到账号组
  * @method Models\ModifyBusinessResourceResponse ModifyBusinessResource(Models\ModifyBusinessResourceRequest $req) 修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
  * @method Models\ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfig(Models\ModifyCompanyDirectoryConfigRequest $req) 编辑企业目录配置
+ * @method Models\ModifyDeliveryServerResponse ModifyDeliveryServer(Models\ModifyDeliveryServerRequest $req) 创建或编辑日志转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryServer
+ * @method Models\ModifyDeliveryStrategyResponse ModifyDeliveryStrategy(Models\ModifyDeliveryStrategyRequest $req) 创建或编辑日志转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryStrategy
  * @method Models\ModifyDeviceTrustStatusResponse ModifyDeviceTrustStatus(Models\ModifyDeviceTrustStatusRequest $req) 给接入设备加黑加白,私有化调用path为：capi/NGN/ModifyDeviceTrustStatus
  * @method Models\ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(Models\ModifyVirtualDeviceGroupsRequest $req) 终端自定义分组批量增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
  * @method Models\UnbindVirtualAccountsResponse UnbindVirtualAccounts(Models\UnbindVirtualAccountsRequest $req) 取消关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/UnbindVirtualAccount，从7.x版本开始支持

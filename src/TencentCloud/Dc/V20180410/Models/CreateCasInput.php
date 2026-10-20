@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBIapLinkProtected(boolean $BIapLinkProtected) 设置<p>运营商链路是否有保护</p>
  * @method string getServiceType() 获取<p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
  * @method void setServiceType(string $ServiceType) 设置<p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+ * @method string getAccessPointId() 获取<p>接入点ID</p>
+ * @method void setAccessPointId(string $AccessPointId) 设置<p>接入点ID</p>
  */
 class CreateCasInput extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateCasInput extends AbstractModel
     public $ServiceType;
 
     /**
+     * @var string <p>接入点ID</p>
+     */
+    public $AccessPointId;
+
+    /**
      * @param string $Name <p>敏捷上云名称</p>
      * @param string $IdcAddress <p>需要接入敏捷上云的IDC的地址</p>
      * @param string $IdcType <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
@@ -104,6 +111,7 @@ class CreateCasInput extends AbstractModel
      * @param string $IdcPointType <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
      * @param boolean $BIapLinkProtected <p>运营商链路是否有保护</p>
      * @param string $ServiceType <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+     * @param string $AccessPointId <p>接入点ID</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateCasInput extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("AccessPointId",$param) and $param["AccessPointId"] !== null) {
+            $this->AccessPointId = $param["AccessPointId"];
         }
     }
 }

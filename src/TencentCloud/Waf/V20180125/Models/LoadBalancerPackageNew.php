@@ -60,6 +60,7 @@ use TencentCloud\Common\AbstractModel;
     "新加坡": "sg",
     "清远": "qy",
     "雅加达": "jkt"
+与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式
  * @method void setRegion(string $Region) 设置地区
     "多伦多": "ca",
     "广州": "gz",
@@ -90,6 +91,7 @@ use TencentCloud\Common\AbstractModel;
     "新加坡": "sg",
     "清远": "qy",
     "雅加达": "jkt"
+与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式
  * @method string getVip() 获取接入IP
  * @method void setVip(string $Vip) 设置接入IP
  * @method integer getVport() 获取接入端口
@@ -100,6 +102,104 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置VPCID
  * @method string getLoadBalancerType() 获取CLB类型
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置CLB类型
+ * @method array getApRegion() 获取负载均衡实例所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1
+出参在可识别时填充，无法识别时为空数组
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+ * @method void setApRegion(array $ApRegion) 设置负载均衡实例所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1
+出参在可识别时填充，无法识别时为空数组
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
  * @method string getLoadBalancerDomain() 获取负载均衡器的域名
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡器的域名
  * @method integer getMemberAppId() 获取监听器所属appid
@@ -169,6 +269,7 @@ class LoadBalancerPackageNew extends AbstractModel
     "新加坡": "sg",
     "清远": "qy",
     "雅加达": "jkt"
+与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式
      */
     public $Region;
 
@@ -196,6 +297,59 @@ class LoadBalancerPackageNew extends AbstractModel
      * @var string CLB类型
      */
     public $LoadBalancerType;
+
+    /**
+     * @var array 负载均衡实例所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1
+出参在可识别时填充，无法识别时为空数组
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+     */
+    public $ApRegion;
 
     /**
      * @var string 负载均衡器的域名
@@ -258,11 +412,61 @@ class LoadBalancerPackageNew extends AbstractModel
     "新加坡": "sg",
     "清远": "qy",
     "雅加达": "jkt"
+与 ApRegion 表达同一含义、格式不同：本字段为地域缩写，ApRegion 为腾讯云标准 ap-xxx 格式
      * @param string $Vip 接入IP
      * @param integer $Vport 接入端口
      * @param string $Zone 地域
      * @param integer $NumericalVpcId VPCID
      * @param string $LoadBalancerType CLB类型
+     * @param array $ApRegion 负载均衡实例所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1
+出参在可识别时填充，无法识别时为空数组
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
      * @param string $LoadBalancerDomain 负载均衡器的域名
      * @param integer $MemberAppId 监听器所属appid
      * @param string $MemberUin 监听器自身所属uin
@@ -324,6 +528,10 @@ class LoadBalancerPackageNew extends AbstractModel
 
         if (array_key_exists("LoadBalancerType",$param) and $param["LoadBalancerType"] !== null) {
             $this->LoadBalancerType = $param["LoadBalancerType"];
+        }
+
+        if (array_key_exists("ApRegion",$param) and $param["ApRegion"] !== null) {
+            $this->ApRegion = $param["ApRegion"];
         }
 
         if (array_key_exists("LoadBalancerDomain",$param) and $param["LoadBalancerDomain"] !== null) {

@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeGroups请求参数结构体
  *
- * @method array getNodeType() 获取节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
- * @method void setNodeType(array $NodeType) 设置节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
- * @method integer getTaskCategory() 获取节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
- * @method void setTaskCategory(integer $TaskCategory) 设置节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
- * @method integer getIPType() 获取IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
- * @method void setIPType(integer $IPType) 设置IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
- * @method string getName() 获取拨测点描述关键词。
- * @method void setName(string $Name) 设置拨测点描述关键词。
- * @method integer getRegionID() 获取地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
- * @method void setRegionID(integer $RegionID) 设置地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
- * @method integer getDistrictID() 获取省份或国家ID。0表示全部，不填默认为0
- * @method void setDistrictID(integer $DistrictID) 设置省份或国家ID。0表示全部，不填默认为0
- * @method integer getNetServiceID() 获取运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
- * @method void setNetServiceID(integer $NetServiceID) 设置运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
- * @method integer getNodeGroupType() 获取节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
- * @method void setNodeGroupType(integer $NodeGroupType) 设置节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
- * @method integer getTaskType() 获取任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
- * @method void setTaskType(integer $TaskType) 设置任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
- * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
- * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+ * @method array getNodeType() 获取<p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
+ * @method void setNodeType(array $NodeType) 设置<p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
+ * @method integer getTaskCategory() 获取<p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
+ * @method void setTaskCategory(integer $TaskCategory) 设置<p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
+ * @method integer getIPType() 获取<p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
+ * @method void setIPType(integer $IPType) 设置<p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
+ * @method string getName() 获取<p>拨测点描述关键词。</p>
+ * @method void setName(string $Name) 设置<p>拨测点描述关键词。</p>
+ * @method integer getRegionID() 获取<p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
+ * @method void setRegionID(integer $RegionID) 设置<p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
+ * @method integer getDistrictID() 获取<p>省份或国家ID。0表示全部，不填默认为0</p>
+ * @method void setDistrictID(integer $DistrictID) 设置<p>省份或国家ID。0表示全部，不填默认为0</p>
+ * @method integer getNetServiceID() 获取<p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
+ * @method void setNetServiceID(integer $NetServiceID) 设置<p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
+ * @method integer getNodeGroupType() 获取<p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
+ * @method void setNodeGroupType(integer $NodeGroupType) 设置<p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
+ * @method integer getTaskType() 获取<p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
+ * @method integer getProbeType() 获取<p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
+ * @method void setProbeType(integer $ProbeType) 设置<p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
  */
 class DescribeNodeGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
+     * @var array <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
      */
     public $NodeType;
 
     /**
-     * @var integer 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
+     * @var integer <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
      */
     public $TaskCategory;
 
     /**
-     * @var integer IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
+     * @var integer <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
      */
     public $IPType;
 
     /**
-     * @var string 拨测点描述关键词。
+     * @var string <p>拨测点描述关键词。</p>
      */
     public $Name;
 
     /**
-     * @var integer 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
+     * @var integer <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
      */
     public $RegionID;
 
     /**
-     * @var integer 省份或国家ID。0表示全部，不填默认为0
+     * @var integer <p>省份或国家ID。0表示全部，不填默认为0</p>
      */
     public $DistrictID;
 
     /**
-     * @var integer 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
+     * @var integer <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
      */
     public $NetServiceID;
 
     /**
-     * @var integer 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
+     * @var integer <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
      */
     public $NodeGroupType;
 
     /**
-     * @var integer 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
+     * @var integer <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
      */
     public $TaskType;
 
     /**
-     * @var integer 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * @var integer <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     public $ProbeType;
 
     /**
-     * @param array $NodeType 节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0
-     * @param integer $TaskCategory 节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。
-     * @param integer $IPType IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0
-     * @param string $Name 拨测点描述关键词。
-     * @param integer $RegionID 地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0
-     * @param integer $DistrictID 省份或国家ID。0表示全部，不填默认为0
-     * @param integer $NetServiceID 运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0
-     * @param integer $NodeGroupType 节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0
-     * @param integer $TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤
-     * @param integer $ProbeType 测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。
+     * @param array $NodeType <p>节点类型。0: 全部 1: IDC 2: LastMile 3: Mobile，不填默认为0</p>
+     * @param integer $TaskCategory <p>节点分类。0: 全部 1: PC 2：Mobile，不填默认为0。PC分类包括IDC和LM节点类型，Mobile分类包括Mobile节点类型。与NodeType参数取交集。</p>
+     * @param integer $IPType <p>IP类型。0: 全部 1: IPv4 2: IPv6，不填默认为0</p>
+     * @param string $Name <p>拨测点描述关键词。</p>
+     * @param integer $RegionID <p>地域ID。0: 精选拨测点 1: 国内 2: 港澳台 3: 亚太 4: 欧洲与美洲 5: 非洲与大洋洲，不填默认为0</p>
+     * @param integer $DistrictID <p>省份或国家ID。0表示全部，不填默认为0</p>
+     * @param integer $NetServiceID <p>运营商ID。0: 全部 1: 中国电信 2: 中国联通 3: 中国移动 99: 其他，不填默认为0</p>
+     * @param integer $NodeGroupType <p>节点组类型。0: 高级拨测点组 1: 可用性节点 2: 我的拨测点组，不填默认为0</p>
+     * @param integer $TaskType <p>任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois，不填默认为0，不对任务类型做过滤</p>
+     * @param integer $ProbeType <p>测试类型，包含定时测试与即时测试。0-定时拨测，其它表示即时拨测。</p>
      */
     function __construct()
     {

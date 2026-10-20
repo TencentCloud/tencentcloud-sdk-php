@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置容量
  * @method array getFilters() 获取过滤数组
  * @method void setFilters(array $Filters) 设置过滤数组
- * @method integer getFreeDelayFlag() 获取释放延期标识
- * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置释放延期标识
+ * @method integer getFreeDelayFlag() 获取释放延期标识，0表示不延期，1表示延期释放
+ * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置释放延期标识，0表示不延期，1表示延期释放
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 释放延期标识
+     * @var integer 释放延期标识，0表示不延期，1表示延期释放
      */
     public $FreeDelayFlag;
 
@@ -55,7 +55,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 容量
      * @param array $Filters 过滤数组
-     * @param integer $FreeDelayFlag 释放延期标识
+     * @param integer $FreeDelayFlag 释放延期标识，0表示不延期，1表示延期释放
      */
     function __construct()
     {

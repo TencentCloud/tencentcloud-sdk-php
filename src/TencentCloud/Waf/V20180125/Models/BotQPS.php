@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置资源所在地区
  * @method integer getMaxBotQPS() 获取使用qps的最大值
  * @method void setMaxBotQPS(integer $MaxBotQPS) 设置使用qps的最大值
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+ * @method integer getRenewFlag() 获取续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标识，0表示手动续费，1表示自动续费，2表示到期不续
  */
 class BotQPS extends AbstractModel
 {
@@ -61,7 +61,7 @@ class BotQPS extends AbstractModel
     public $MaxBotQPS;
 
     /**
-     * @var integer 续费标志
+     * @var integer 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public $RenewFlag;
 
@@ -71,7 +71,7 @@ class BotQPS extends AbstractModel
      * @param integer $Count 资源数量
      * @param string $Region 资源所在地区
      * @param integer $MaxBotQPS 使用qps的最大值
-     * @param integer $RenewFlag 续费标志
+     * @param integer $RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     function __construct()
     {

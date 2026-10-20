@@ -49,6 +49,7 @@ use TencentCloud\Fwm\V20250611\Models as Models;
  * @method Models\DescribeRiskAnalysisDetailsResponse DescribeRiskAnalysisDetails(Models\DescribeRiskAnalysisDetailsRequest $req) 获取实时分析风险详情
  * @method Models\DescribeRiskCategoryStatsResponse DescribeRiskCategoryStats(Models\DescribeRiskCategoryStatsRequest $req) 查询策略体检风险分类统计数据,包含各类风险的规则数量、处置状态、整改率等信息
  * @method Models\DescribeRiskListResponse DescribeRiskList(Models\DescribeRiskListRequest $req) 查询用户所有规则的策略问题
+ * @method Models\DescribeRuleGroupsResponse DescribeRuleGroups(Models\DescribeRuleGroupsRequest $req) 查询规则组列表
  * @method Models\DescribeSecurityGroupRuleResponse DescribeSecurityGroupRule(Models\DescribeSecurityGroupRuleRequest $req) 查询规则详情（规则组管理）
  * @method Models\DescribeSecurityGroupRulesResponse DescribeSecurityGroupRules(Models\DescribeSecurityGroupRulesRequest $req) 查询规则组中规则列表接口
  * @method Models\DescribeStrategiesResponse DescribeStrategies(Models\DescribeStrategiesRequest $req) 查询策略列表

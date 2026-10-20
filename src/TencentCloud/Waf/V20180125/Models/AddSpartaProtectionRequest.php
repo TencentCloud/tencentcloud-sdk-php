@@ -112,8 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置<p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
  * @method string getGmSSLId() 获取<p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
  * @method void setGmSSLId(string $GmSSLId) 设置<p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
- * @method integer getUpstreamPolicy() 获取<p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
- * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置<p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
+ * @method integer getUpstreamPolicy() 获取<p>回源策略。<br>枚举值：<br>0：负载均衡回源（默认值）<br>1：分流回源<br>2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源</p>
+ * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置<p>回源策略。<br>枚举值：<br>0：负载均衡回源（默认值）<br>1：分流回源<br>2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源</p>
  * @method array getUpstreamRules() 获取<p>分流回源时生效，分流回源的规则。</p>
  * @method void setUpstreamRules(array $UpstreamRules) 设置<p>分流回源时生效，分流回源的规则。</p>
  * @method integer getUseCase() 获取<p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
@@ -362,7 +362,7 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $GmSSLId;
 
     /**
-     * @var integer <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
+     * @var integer <p>回源策略。<br>枚举值：<br>0：负载均衡回源（默认值）<br>1：分流回源<br>2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源</p>
      */
     public $UpstreamPolicy;
 
@@ -433,7 +433,7 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param string $GmEncCert <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书</p>
      * @param string $GmEncPrivateKey <p>GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥</p>
      * @param string $GmSSLId <p>GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id</p>
-     * @param integer $UpstreamPolicy <p>回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源</p>
+     * @param integer $UpstreamPolicy <p>回源策略。<br>枚举值：<br>0：负载均衡回源（默认值）<br>1：分流回源<br>2：五元组精准回源，每个服务端口通过 UpstreamIps 单独配置回源 IP。仅高级版及以上可用，且仅支持 IP 回源</p>
      * @param array $UpstreamRules <p>分流回源时生效，分流回源的规则。</p>
      * @param integer $UseCase <p>业务场景。0：默认值，表示常规业务场景 1：大模型业务场景</p>
      * @param integer $Gzip <p>gzip开关。0：关闭 1：默认值，打开。</p>

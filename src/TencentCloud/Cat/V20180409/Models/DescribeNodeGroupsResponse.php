@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeGroups返回参数结构体
  *
- * @method array getNodeList() 获取树状节点列表，总共两级
+ * @method array getNodeList() 获取<p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeList(array $NodeList) 设置树状节点列表，总共两级
+ * @method void setNodeList(array $NodeList) 设置<p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDistrictList() 获取省份或国家列表
+ * @method array getDistrictList() 获取<p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDistrictList(array $DistrictList) 设置省份或国家列表
+ * @method void setDistrictList(array $DistrictList) 设置<p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNetServiceList() 获取运营商列表
+ * @method array getNetServiceList() 获取<p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetServiceList(array $NetServiceList) 设置运营商列表
+ * @method void setNetServiceList(array $NetServiceList) 设置<p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNodeGroupsResponse extends AbstractModel
 {
     /**
-     * @var array 树状节点列表，总共两级
+     * @var array <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeList;
 
     /**
-     * @var array 省份或国家列表
+     * @var array <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DistrictList;
 
     /**
-     * @var array 运营商列表
+     * @var array <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetServiceList;
@@ -61,11 +61,11 @@ class DescribeNodeGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NodeList 树状节点列表，总共两级
+     * @param array $NodeList <p>树状节点列表，总共两级</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DistrictList 省份或国家列表
+     * @param array $DistrictList <p>省份或国家列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NetServiceList 运营商列表
+     * @param array $NetServiceList <p>运营商列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -73,7 +73,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLoadBalancerSet() 获取绑定的负载均衡器信息列表
  * @method void setLoadBalancerSet(array $LoadBalancerSet) 设置绑定的负载均衡器信息列表
  * @method string getRegion() 获取域名绑定的LB的地域，以逗号分割多个地域
+与 ApRegion 表达同一含义、格式不同。本字段为地域缩写，多个地域以英文逗号拼接；入参与 ApRegion 同时传入时以 ApRegion 为准
  * @method void setRegion(string $Region) 设置域名绑定的LB的地域，以逗号分割多个地域
+与 ApRegion 表达同一含义、格式不同。本字段为地域缩写，多个地域以英文逗号拼接；入参与 ApRegion 同时传入时以 ApRegion 为准
  * @method string getEdition() 获取域名所属实例类型。负载均衡型WAF为"clb-waf"
  * @method void setEdition(string $Edition) 设置域名所属实例类型。负载均衡型WAF为"clb-waf"
  * @method integer getFlowMode() 获取负载均衡型WAF域名的流量模式。
@@ -88,6 +90,106 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsStatus(integer $ClsStatus) 设置是否开启访问日志。
 1：开启
 0：关闭
+ * @method array getApRegion() 获取域名绑定的负载均衡所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写且多个地域以英文逗号拼接，本字段为标准地域名数组
+入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+ * @method void setApRegion(array $ApRegion) 设置域名绑定的负载均衡所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写且多个地域以英文逗号拼接，本字段为标准地域名数组
+入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
  * @method integer getLevel() 获取防护等级，可选值100,200,300
  * @method void setLevel(integer $Level) 设置防护等级，可选值100,200,300
  * @method array getCdcClusters() 获取域名需要下发到的cdc集群列表。仅CDC场景下填充
@@ -187,6 +289,7 @@ class HostRecord extends AbstractModel
 
     /**
      * @var string 域名绑定的LB的地域，以逗号分割多个地域
+与 ApRegion 表达同一含义、格式不同。本字段为地域缩写，多个地域以英文逗号拼接；入参与 ApRegion 同时传入时以 ApRegion 为准
      */
     public $Region;
 
@@ -208,6 +311,60 @@ class HostRecord extends AbstractModel
 0：关闭
      */
     public $ClsStatus;
+
+    /**
+     * @var array 域名绑定的负载均衡所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写且多个地域以英文逗号拼接，本字段为标准地域名数组
+入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
+     */
+    public $ApRegion;
 
     /**
      * @var integer 防护等级，可选值100,200,300
@@ -281,6 +438,7 @@ hybrid:混合云
      * @param integer $IsCdn waf前是否部署有七层代理服务。 0：没有部署代理服务 1：有部署代理服务，waf将使用XFF获取客户端IP 2：有部署代理服务，waf将使用remote_addr获取客户端IP 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      * @param array $LoadBalancerSet 绑定的负载均衡器信息列表
      * @param string $Region 域名绑定的LB的地域，以逗号分割多个地域
+与 ApRegion 表达同一含义、格式不同。本字段为地域缩写，多个地域以英文逗号拼接；入参与 ApRegion 同时传入时以 ApRegion 为准
      * @param string $Edition 域名所属实例类型。负载均衡型WAF为"clb-waf"
      * @param integer $FlowMode 负载均衡型WAF域名的流量模式。
 1：清洗模式
@@ -288,6 +446,56 @@ hybrid:混合云
      * @param integer $ClsStatus 是否开启访问日志。
 1：开启
 0：关闭
+     * @param array $ApRegion 域名绑定的负载均衡所在地域，腾讯云标准地域格式
+参数格式：形如 ap-guangzhou
+与 Region 表达同一含义、格式不同：Region 为地域缩写且多个地域以英文逗号拼接，本字段为标准地域名数组
+入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion
+出参在可识别时填充，无法识别的地域不返回对应元素
+枚举值：
+ap-guangzhou：广州
+ap-shanghai：上海
+ap-beijing：北京
+ap-chengdu：成都
+ap-chongqing：重庆
+ap-hongkong：中国香港
+ap-nanjing：南京
+ap-tianjin：天津
+ap-shenzhen：深圳
+ap-qingyuan：清远
+ap-guangzhou-open：广州Open
+ap-shenzhen-fsi：深圳金融
+ap-beijing-fsi：北京金融
+ap-shanghai-fsi：上海金融
+ap-hangzhou-ec：杭州
+ap-fuzhou-ec：福州
+ap-jinan-ec：济南
+ap-wuhan-ec：武汉
+ap-changsha-ec：长沙
+ap-hefei-ec：合肥
+ap-shenyang-ec：沈阳
+ap-xian-ec：西安
+ap-xibei-ec：西北
+ap-shijiazhuang-ec：石家庄
+ap-zhengzhou-ec：郑州
+ap-qingyuan-xinan：清远信安
+ap-shanghai-adc：上海ADC
+ap-shanghai-wxp-ops：上海无线城市运营
+ap-singapore：新加坡
+ap-seoul：首尔
+ap-tokyo：东京
+ap-osaka：大阪
+ap-mumbai：孟买
+ap-bangkok：曼谷
+ap-jakarta：雅加达
+ap-taipei：台北
+ap-johorbahru：柔佛巴鲁
+eu-frankfurt：法兰克福
+eu-moscow：莫斯科
+na-ashburn：弗吉尼亚
+na-siliconvalley：硅谷
+na-toronto：多伦多
+sa-saopaulo：圣保罗
+me-saudi-arabia：沙特阿拉伯
      * @param integer $Level 防护等级，可选值100,200,300
      * @param array $CdcClusters 域名需要下发到的cdc集群列表。仅CDC场景下填充
      * @param string $AlbType 应用型负载均衡类型，默认clb。 
@@ -373,6 +581,10 @@ hybrid:混合云
 
         if (array_key_exists("ClsStatus",$param) and $param["ClsStatus"] !== null) {
             $this->ClsStatus = $param["ClsStatus"];
+        }
+
+        if (array_key_exists("ApRegion",$param) and $param["ApRegion"] !== null) {
+            $this->ApRegion = $param["ApRegion"];
         }
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {

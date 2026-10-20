@@ -20,89 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserVerifyUrl返回参数结构体
  *
- * @method string getUserVerifyUrl() 获取腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
-
-<strong>1.如果EndPoint是APP</strong>：
-得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
-
-<strong>2.如果EndPoint是HTTP</strong>：
-得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>4.如果EndPoint是H5</strong>：
-得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-<strong>5.如果EndPoint是H5_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-
-`注：` <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font>
-示例值：https://essurl.cn/2n**42Nd
- * @method void setUserVerifyUrl(string $UserVerifyUrl) 设置腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
-
-<strong>1.如果EndPoint是APP</strong>：
-得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
-
-<strong>2.如果EndPoint是HTTP</strong>：
-得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>4.如果EndPoint是H5</strong>：
-得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-<strong>5.如果EndPoint是H5_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-
-`注：` <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font>
-示例值：https://essurl.cn/2n**42Nd
- * @method integer getExpireTime() 获取链接过期时间，为Unix时间戳（单位为秒）。
- * @method void setExpireTime(integer $ExpireTime) 设置链接过期时间，为Unix时间戳（单位为秒）。
- * @method string getMiniAppId() 获取小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回
- * @method void setMiniAppId(string $MiniAppId) 设置小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回
+ * @method string getUserVerifyUrl() 获取<p>腾讯电子签小程序的实名认证链接。<br>如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。</p><p><strong>1.如果EndPoint是APP</strong>：<br>得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&amp;shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的&quot;跳转到小程序的实现&quot;</p><p><strong>2.如果EndPoint是HTTP</strong>：<br>得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&amp;shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>4.如果EndPoint是H5</strong>：<br>得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU<strong><strong>VJhsS5q&amp;CodeType=xxx&amp;shortKey=yD*</strong></strong>frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><strong>5.如果EndPoint是H5_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><code>注：</code> <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font><br>示例值：https://essurl.cn/2n**42Nd</p>
+ * @method void setUserVerifyUrl(string $UserVerifyUrl) 设置<p>腾讯电子签小程序的实名认证链接。<br>如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。</p><p><strong>1.如果EndPoint是APP</strong>：<br>得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&amp;shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的&quot;跳转到小程序的实现&quot;</p><p><strong>2.如果EndPoint是HTTP</strong>：<br>得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&amp;shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>4.如果EndPoint是H5</strong>：<br>得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU<strong><strong>VJhsS5q&amp;CodeType=xxx&amp;shortKey=yD*</strong></strong>frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><strong>5.如果EndPoint是H5_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><code>注：</code> <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font><br>示例值：https://essurl.cn/2n**42Nd</p>
+ * @method integer getExpireTime() 获取<p>链接过期时间，为Unix时间戳（单位为秒）。</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>链接过期时间，为Unix时间戳（单位为秒）。</p>
+ * @method string getMiniAppId() 获取<p>小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回</p>
+ * @method void setMiniAppId(string $MiniAppId) 设置<p>小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserVerifyUrlResponse extends AbstractModel
 {
     /**
-     * @var string 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
-
-<strong>1.如果EndPoint是APP</strong>：
-得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
-
-<strong>2.如果EndPoint是HTTP</strong>：
-得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>4.如果EndPoint是H5</strong>：
-得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-<strong>5.如果EndPoint是H5_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-
-`注：` <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font>
-示例值：https://essurl.cn/2n**42Nd
+     * @var string <p>腾讯电子签小程序的实名认证链接。<br>如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。</p><p><strong>1.如果EndPoint是APP</strong>：<br>得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&amp;shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的&quot;跳转到小程序的实现&quot;</p><p><strong>2.如果EndPoint是HTTP</strong>：<br>得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&amp;shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>4.如果EndPoint是H5</strong>：<br>得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU<strong><strong>VJhsS5q&amp;CodeType=xxx&amp;shortKey=yD*</strong></strong>frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><strong>5.如果EndPoint是H5_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><code>注：</code> <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font><br>示例值：https://essurl.cn/2n**42Nd</p>
      */
     public $UserVerifyUrl;
 
     /**
-     * @var integer 链接过期时间，为Unix时间戳（单位为秒）。
+     * @var integer <p>链接过期时间，为Unix时间戳（单位为秒）。</p>
      */
     public $ExpireTime;
 
     /**
-     * @var string 小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回
+     * @var string <p>小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回</p>
      */
     public $MiniAppId;
 
@@ -112,29 +52,9 @@ class CreateUserVerifyUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UserVerifyUrl 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
-
-<strong>1.如果EndPoint是APP</strong>：
-得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
-
-<strong>2.如果EndPoint是HTTP</strong>：
-得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
-
-<strong>4.如果EndPoint是H5</strong>：
-得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU****VJhsS5q&CodeType=xxx&shortKey=yD*****frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-<strong>5.如果EndPoint是H5_SHORT_URL</strong>：
-得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署
-
-
-`注：` <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font>
-示例值：https://essurl.cn/2n**42Nd
-     * @param integer $ExpireTime 链接过期时间，为Unix时间戳（单位为秒）。
-     * @param string $MiniAppId 小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回
+     * @param string $UserVerifyUrl <p>腾讯电子签小程序的实名认证链接。<br>如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。</p><p><strong>1.如果EndPoint是APP</strong>：<br>得到的链接类似于<a href="">pages/guide/index?to=MP_PERSONAL_VERIFY&amp;shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的&quot;跳转到小程序的实现&quot;</p><p><strong>2.如果EndPoint是HTTP</strong>：<br>得到的链接类似于 <a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=TAG_VERIFY&amp;shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>3.如果EndPoint是HTTP_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署</p><p><strong>4.如果EndPoint是H5</strong>：<br>得到的链接类似于 <a href="">https://quick.test.qian.tencent.cn/guide?Code=yDU<strong><strong>VJhsS5q&amp;CodeType=xxx&amp;shortKey=yD*</strong></strong>frcb</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><strong>5.如果EndPoint是H5_SHORT_URL</strong>：<br>得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签H5页面进行签署</p><p><code>注：</code> <font color="red">生成的链路后面不能再增加参数，防止出错重复参数覆盖原有的参数</font><br>示例值：https://essurl.cn/2n**42Nd</p>
+     * @param integer $ExpireTime <p>链接过期时间，为Unix时间戳（单位为秒）。</p>
+     * @param string $MiniAppId <p>小程序appid，用于半屏拉起电子签小程序， 仅在 Endpoint 设置为 APP 的时候返回</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

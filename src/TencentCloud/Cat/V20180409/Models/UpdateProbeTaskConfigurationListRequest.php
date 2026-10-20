@@ -20,78 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateProbeTaskConfigurationList请求参数结构体
  *
- * @method array getTaskIds() 获取任务 ID，如task-n1wchki8
- * @method void setTaskIds(array $TaskIds) 设置任务 ID，如task-n1wchki8
- * @method array getNodes() 获取拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
- * @method void setNodes(array $Nodes) 设置拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
- * @method integer getInterval() 获取拨测间隔，如30，单位为分钟。
- * @method void setInterval(integer $Interval) 设置拨测间隔，如30，单位为分钟。
- * @method string getParameters() 获取拨测参数，详细参数配置可参考云拨测官网文档。
- * @method void setParameters(string $Parameters) 设置拨测参数，详细参数配置可参考云拨测官网文档。
- * @method string getCron() 获取定时任务cron表达式
- * @method void setCron(string $Cron) 设置定时任务cron表达式
- * @method array getResourceIDs() 获取预付费套餐id
-需要与taskId对应
- * @method void setResourceIDs(array $ResourceIDs) 设置预付费套餐id
-需要与taskId对应
- * @method integer getNodeIpType() 获取拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
- * @method void setNodeIpType(integer $NodeIpType) 设置拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
- * @method array getBatchTasks() 获取批量任务名-地址
- * @method void setBatchTasks(array $BatchTasks) 设置批量任务名-地址
+ * @method array getTaskIds() 获取<p>任务 ID，如task-n1wchki8</p>
+ * @method void setTaskIds(array $TaskIds) 设置<p>任务 ID，如task-n1wchki8</p>
+ * @method array getNodes() 获取<p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
+ * @method void setNodes(array $Nodes) 设置<p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
+ * @method integer getInterval() 获取<p>拨测间隔，如30，单位为分钟。</p>
+ * @method void setInterval(integer $Interval) 设置<p>拨测间隔，如30，单位为分钟。</p>
+ * @method string getParameters() 获取<p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
+ * @method void setParameters(string $Parameters) 设置<p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
+ * @method string getCron() 获取<p>定时任务cron表达式</p>
+ * @method void setCron(string $Cron) 设置<p>定时任务cron表达式</p>
+ * @method array getResourceIDs() 获取<p>预付费套餐id<br>需要与taskId对应</p>
+ * @method void setResourceIDs(array $ResourceIDs) 设置<p>预付费套餐id<br>需要与taskId对应</p>
+ * @method integer getNodeIpType() 获取<p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
+ * @method void setNodeIpType(integer $NodeIpType) 设置<p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
+ * @method array getBatchTasks() 获取<p>批量任务名-地址</p>
+ * @method void setBatchTasks(array $BatchTasks) 设置<p>批量任务名-地址</p>
  */
 class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 {
     /**
-     * @var array 任务 ID，如task-n1wchki8
+     * @var array <p>任务 ID，如task-n1wchki8</p>
      */
     public $TaskIds;
 
     /**
-     * @var array 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
+     * @var array <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
      */
     public $Nodes;
 
     /**
-     * @var integer 拨测间隔，如30，单位为分钟。
+     * @var integer <p>拨测间隔，如30，单位为分钟。</p>
      */
     public $Interval;
 
     /**
-     * @var string 拨测参数，详细参数配置可参考云拨测官网文档。
+     * @var string <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
      */
     public $Parameters;
 
     /**
-     * @var string 定时任务cron表达式
+     * @var string <p>定时任务cron表达式</p>
      */
     public $Cron;
 
     /**
-     * @var array 预付费套餐id
-需要与taskId对应
+     * @var array <p>预付费套餐id<br>需要与taskId对应</p>
      */
     public $ResourceIDs;
 
     /**
-     * @var integer 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+     * @var integer <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
      */
     public $NodeIpType;
 
     /**
-     * @var array 批量任务名-地址
+     * @var array <p>批量任务名-地址</p>
      */
     public $BatchTasks;
 
     /**
-     * @param array $TaskIds 任务 ID，如task-n1wchki8
-     * @param array $Nodes 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
-     * @param integer $Interval 拨测间隔，如30，单位为分钟。
-     * @param string $Parameters 拨测参数，详细参数配置可参考云拨测官网文档。
-     * @param string $Cron 定时任务cron表达式
-     * @param array $ResourceIDs 预付费套餐id
-需要与taskId对应
-     * @param integer $NodeIpType 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
-     * @param array $BatchTasks 批量任务名-地址
+     * @param array $TaskIds <p>任务 ID，如task-n1wchki8</p>
+     * @param array $Nodes <p>拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。</p>
+     * @param integer $Interval <p>拨测间隔，如30，单位为分钟。</p>
+     * @param string $Parameters <p>拨测参数，详细参数配置可参考云拨测官网文档。</p>
+     * @param string $Cron <p>定时任务cron表达式</p>
+     * @param array $ResourceIDs <p>预付费套餐id<br>需要与taskId对应</p>
+     * @param integer $NodeIpType <p>拨测节点的IP类型，0-不限，1-IPv4，2-IPv6</p>
+     * @param array $BatchTasks <p>批量任务名-地址</p>
      */
     function __construct()
     {

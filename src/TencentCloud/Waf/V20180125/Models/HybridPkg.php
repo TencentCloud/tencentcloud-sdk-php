@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceIds() 获取资源id
  * @method void setResourceIds(string $ResourceIds) 设置资源id
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置状态，0表示关闭，1表示开启
  * @method integer getRegion() 获取地域
  * @method void setRegion(integer $Region) 设置地域
  * @method string getBeginTime() 获取开始时间
@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInquireNum(integer $InquireNum) 设置申请数量
  * @method integer getUsedNum() 获取使用数量
  * @method void setUsedNum(integer $UsedNum) 设置使用数量
- * @method integer getRenewFlag() 获取续费标志
- * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+ * @method integer getRenewFlag() 获取续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method void setRenewFlag(integer $RenewFlag) 设置续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+ * @method integer getElasticNodeNum() 获取可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+ * @method void setElasticNodeNum(integer $ElasticNodeNum) 设置可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
  */
 class HybridPkg extends AbstractModel
 {
@@ -45,7 +47,7 @@ class HybridPkg extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 状态
+     * @var integer 状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -75,19 +77,25 @@ class HybridPkg extends AbstractModel
     public $UsedNum;
 
     /**
-     * @var integer 续费标志
+     * @var integer 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
      */
     public $RenewFlag;
 
     /**
+     * @var integer 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
+     */
+    public $ElasticNodeNum;
+
+    /**
      * @param string $ResourceIds 资源id
-     * @param integer $Status 状态
+     * @param integer $Status 状态，0表示关闭，1表示开启
      * @param integer $Region 地域
      * @param string $BeginTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $InquireNum 申请数量
      * @param integer $UsedNum 使用数量
-     * @param integer $RenewFlag 续费标志
+     * @param integer $RenewFlag 续费标识，0表示手动续费，1表示自动续费，2表示到期不续
+     * @param integer $ElasticNodeNum 可接入弹性节点数。仅 Edition 为 clb-waf 的实例有混合云接入节点；弹性关闭或不满足版本、已购混合云节点条件时为 0；满足时为 1 + floor(弹性计费 QPS 上限 / 5000)，不含已购买节点数
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class HybridPkg extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("ElasticNodeNum",$param) and $param["ElasticNodeNum"] !== null) {
+            $this->ElasticNodeNum = $param["ElasticNodeNum"];
         }
     }
 }

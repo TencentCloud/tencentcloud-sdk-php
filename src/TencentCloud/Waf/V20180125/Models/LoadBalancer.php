@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 负载均衡的监听器
  *
- * @method string getLoadBalancerId() 获取负载均衡LD的ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡LD的ID
- * @method string getLoadBalancerName() 获取负载均衡LD的名称
- * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡LD的名称
- * @method string getListenerId() 获取负载均衡监听器的ID
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器的ID
- * @method string getListenerName() 获取负载均衡监听器的名称
- * @method void setListenerName(string $ListenerName) 设置负载均衡监听器的名称
- * @method integer getVport() 获取负载均衡实例的端口
- * @method void setVport(integer $Vport) 设置负载均衡实例的端口
- * @method string getRegion() 获取负载均衡LD的地域
- * @method void setRegion(string $Region) 设置负载均衡LD的地域
- * @method string getProtocol() 获取监听器协议，http、https
- * @method void setProtocol(string $Protocol) 设置监听器协议，http、https
- * @method string getZone() 获取负载均衡监听器所在的zone
- * @method void setZone(string $Zone) 设置负载均衡监听器所在的zone
- * @method string getVip() 获取负载均衡实例的IP。域名化CLB VIP可填空。
- * @method void setVip(string $Vip) 设置负载均衡实例的IP。域名化CLB VIP可填空。
- * @method integer getNumericalVpcId() 获取负载均衡的VPCID，公网为-1，内网按实际填写
- * @method void setNumericalVpcId(integer $NumericalVpcId) 设置负载均衡的VPCID，公网为-1，内网按实际填写
- * @method string getLoadBalancerType() 获取负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
- * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
- * @method string getLoadBalancerDomain() 获取负载均衡的域名
- * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡的域名
- * @method integer getMemberAppId() 获取监听器所属成员id
- * @method void setMemberAppId(integer $MemberAppId) 设置监听器所属成员id
- * @method string getMemberUin() 获取监听器所属成员的uin
- * @method void setMemberUin(string $MemberUin) 设置监听器所属成员的uin
+ * @method string getLoadBalancerId() 获取<p>负载均衡LD的ID</p>
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡LD的ID</p>
+ * @method string getLoadBalancerName() 获取<p>负载均衡LD的名称</p>
+ * @method void setLoadBalancerName(string $LoadBalancerName) 设置<p>负载均衡LD的名称</p>
+ * @method string getListenerId() 获取<p>负载均衡监听器的ID</p>
+ * @method void setListenerId(string $ListenerId) 设置<p>负载均衡监听器的ID</p>
+ * @method string getListenerName() 获取<p>负载均衡监听器的名称</p>
+ * @method void setListenerName(string $ListenerName) 设置<p>负载均衡监听器的名称</p>
+ * @method integer getVport() 获取<p>负载均衡实例的端口</p>
+ * @method void setVport(integer $Vport) 设置<p>负载均衡实例的端口</p>
+ * @method string getRegion() 获取<p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
+ * @method void setRegion(string $Region) 设置<p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
+ * @method string getProtocol() 获取<p>监听器协议，http、https</p>
+ * @method void setProtocol(string $Protocol) 设置<p>监听器协议，http、https</p>
+ * @method string getZone() 获取<p>负载均衡监听器所在的zone</p>
+ * @method void setZone(string $Zone) 设置<p>负载均衡监听器所在的zone</p>
+ * @method array getApRegion() 获取<p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+ * @method void setApRegion(array $ApRegion) 设置<p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+ * @method string getVip() 获取<p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
+ * @method void setVip(string $Vip) 设置<p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
+ * @method integer getNumericalVpcId() 获取<p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置<p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
+ * @method string getLoadBalancerType() 获取<p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
+ * @method void setLoadBalancerType(string $LoadBalancerType) 设置<p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
+ * @method string getLoadBalancerDomain() 获取<p>负载均衡的域名</p>
+ * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置<p>负载均衡的域名</p>
+ * @method integer getMemberAppId() 获取<p>监听器所属成员id</p>
+ * @method void setMemberAppId(integer $MemberAppId) 设置<p>监听器所属成员id</p>
+ * @method string getMemberUin() 获取<p>监听器所属成员的uin</p>
+ * @method void setMemberUin(string $MemberUin) 设置<p>监听器所属成员的uin</p>
  */
 class LoadBalancer extends AbstractModel
 {
     /**
-     * @var string 负载均衡LD的ID
+     * @var string <p>负载均衡LD的ID</p>
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡LD的名称
+     * @var string <p>负载均衡LD的名称</p>
      */
     public $LoadBalancerName;
 
     /**
-     * @var string 负载均衡监听器的ID
+     * @var string <p>负载均衡监听器的ID</p>
      */
     public $ListenerId;
 
     /**
-     * @var string 负载均衡监听器的名称
+     * @var string <p>负载均衡监听器的名称</p>
      */
     public $ListenerName;
 
     /**
-     * @var integer 负载均衡实例的端口
+     * @var integer <p>负载均衡实例的端口</p>
      */
     public $Vport;
 
     /**
-     * @var string 负载均衡LD的地域
+     * @var string <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
      */
     public $Region;
 
     /**
-     * @var string 监听器协议，http、https
+     * @var string <p>监听器协议，http、https</p>
      */
     public $Protocol;
 
     /**
-     * @var string 负载均衡监听器所在的zone
+     * @var string <p>负载均衡监听器所在的zone</p>
      */
     public $Zone;
 
     /**
-     * @var string 负载均衡实例的IP。域名化CLB VIP可填空。
+     * @var array <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+     */
+    public $ApRegion;
+
+    /**
+     * @var string <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
      */
     public $Vip;
 
     /**
-     * @var integer 负载均衡的VPCID，公网为-1，内网按实际填写
+     * @var integer <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
      */
     public $NumericalVpcId;
 
     /**
-     * @var string 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+     * @var string <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
      */
     public $LoadBalancerType;
 
     /**
-     * @var string 负载均衡的域名
+     * @var string <p>负载均衡的域名</p>
      */
     public $LoadBalancerDomain;
 
     /**
-     * @var integer 监听器所属成员id
+     * @var integer <p>监听器所属成员id</p>
      */
     public $MemberAppId;
 
     /**
-     * @var string 监听器所属成员的uin
+     * @var string <p>监听器所属成员的uin</p>
      */
     public $MemberUin;
 
     /**
-     * @param string $LoadBalancerId 负载均衡LD的ID
-     * @param string $LoadBalancerName 负载均衡LD的名称
-     * @param string $ListenerId 负载均衡监听器的ID
-     * @param string $ListenerName 负载均衡监听器的名称
-     * @param integer $Vport 负载均衡实例的端口
-     * @param string $Region 负载均衡LD的地域
-     * @param string $Protocol 监听器协议，http、https
-     * @param string $Zone 负载均衡监听器所在的zone
-     * @param string $Vip 负载均衡实例的IP。域名化CLB VIP可填空。
-     * @param integer $NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
-     * @param string $LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
-     * @param string $LoadBalancerDomain 负载均衡的域名
-     * @param integer $MemberAppId 监听器所属成员id
-     * @param string $MemberUin 监听器所属成员的uin
+     * @param string $LoadBalancerId <p>负载均衡LD的ID</p>
+     * @param string $LoadBalancerName <p>负载均衡LD的名称</p>
+     * @param string $ListenerId <p>负载均衡监听器的ID</p>
+     * @param string $ListenerName <p>负载均衡监听器的名称</p>
+     * @param integer $Vport <p>负载均衡实例的端口</p>
+     * @param string $Region <p>负载均衡LD的地域<br>与 ApRegion 表达同一含义、格式不同。本字段为地域缩写；入参与 ApRegion 同时传入时以 ApRegion 为准</p>
+     * @param string $Protocol <p>监听器协议，http、https</p>
+     * @param string $Zone <p>负载均衡监听器所在的zone</p>
+     * @param array $ApRegion <p>负载均衡实例所在地域，腾讯云标准地域格式<br>参数格式：形如 ap-guangzhou<br>与 Region 表达同一含义、格式不同。监听器恒为单地域，数组长度恒为 0 或 1<br>入参可选；与 Region 同时传入时以本字段为准；取值不在枚举范围内时返回 UnsupportedRegion<br>出参在可识别时填充，无法识别时为空数组<br>枚举值：<br>ap-guangzhou：广州<br>ap-shanghai：上海<br>ap-beijing：北京<br>ap-chengdu：成都<br>ap-chongqing：重庆<br>ap-hongkong：中国香港<br>ap-nanjing：南京<br>ap-tianjin：天津<br>ap-shenzhen：深圳<br>ap-qingyuan：清远<br>ap-guangzhou-open：广州Open<br>ap-shenzhen-fsi：深圳金融<br>ap-beijing-fsi：北京金融<br>ap-shanghai-fsi：上海金融<br>ap-hangzhou-ec：杭州<br>ap-fuzhou-ec：福州<br>ap-jinan-ec：济南<br>ap-wuhan-ec：武汉<br>ap-changsha-ec：长沙<br>ap-hefei-ec：合肥<br>ap-shenyang-ec：沈阳<br>ap-xian-ec：西安<br>ap-xibei-ec：西北<br>ap-shijiazhuang-ec：石家庄<br>ap-zhengzhou-ec：郑州<br>ap-qingyuan-xinan：清远信安<br>ap-shanghai-adc：上海ADC<br>ap-shanghai-wxp-ops：上海无线城市运营<br>ap-singapore：新加坡<br>ap-seoul：首尔<br>ap-tokyo：东京<br>ap-osaka：大阪<br>ap-mumbai：孟买<br>ap-bangkok：曼谷<br>ap-jakarta：雅加达<br>ap-taipei：台北<br>ap-johorbahru：柔佛巴鲁<br>eu-frankfurt：法兰克福<br>eu-moscow：莫斯科<br>na-ashburn：弗吉尼亚<br>na-siliconvalley：硅谷<br>na-toronto：多伦多<br>sa-saopaulo：圣保罗<br>me-saudi-arabia：沙特阿拉伯</p>
+     * @param string $Vip <p>负载均衡实例的IP。域名化CLB VIP可填空。</p>
+     * @param integer $NumericalVpcId <p>负载均衡的VPCID，公网为-1，内网按实际填写</p>
+     * @param string $LoadBalancerType <p>负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网</p>
+     * @param string $LoadBalancerDomain <p>负载均衡的域名</p>
+     * @param integer $MemberAppId <p>监听器所属成员id</p>
+     * @param string $MemberUin <p>监听器所属成员的uin</p>
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ApRegion",$param) and $param["ApRegion"] !== null) {
+            $this->ApRegion = $param["ApRegion"];
         }
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {

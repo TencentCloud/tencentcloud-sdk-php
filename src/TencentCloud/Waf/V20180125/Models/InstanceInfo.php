@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIds(string $ResourceIds) 设置<p>实例对应资源ID，计费使用</p>
  * @method string getRegion() 获取<p>实例所属地域</p>
  * @method void setRegion(string $Region) 设置<p>实例所属地域</p>
- * @method integer getPayMode() 获取<p>付费模式</p>
- * @method void setPayMode(integer $PayMode) 设置<p>付费模式</p>
+ * @method integer getPayMode() 获取付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
+ * @method void setPayMode(integer $PayMode) 设置付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
  * @method integer getRenewFlag() 获取<p>自动续费标识。<br>0：关闭<br>1：开启</p>
  * @method void setRenewFlag(integer $RenewFlag) 设置<p>自动续费标识。<br>0：关闭<br>1：开启</p>
  * @method integer getMode() 获取<p>弹性计费开关。<br>0：关闭<br>1：开启</p>
@@ -74,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAPISecurity(integer $APISecurity) 设置<p>api安全是否购买</p>
  * @method integer getQpsStandard() 获取<p>购买的qps规格</p>
  * @method void setQpsStandard(integer $QpsStandard) 设置<p>购买的qps规格</p>
- * @method integer getBandwidthStandard() 获取<p>购买的带宽规格</p>
- * @method void setBandwidthStandard(integer $BandwidthStandard) 设置<p>购买的带宽规格</p>
- * @method integer getStatus() 获取<p>实例状态</p>
- * @method void setStatus(integer $Status) 设置<p>实例状态</p>
+ * @method integer getBandwidthStandard() 获取购买的带宽规格上限，单位：Mbps
+ * @method void setBandwidthStandard(integer $BandwidthStandard) 设置购买的带宽规格上限，单位：Mbps
+ * @method integer getStatus() 获取实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
+ * @method void setStatus(integer $Status) 设置实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
  * @method integer getSandboxQps() 获取<p>实例沙箱qps值</p>
  * @method void setSandboxQps(integer $SandboxQps) 设置<p>实例沙箱qps值</p>
  * @method integer getIsAPISecurityTrial() 获取<p>是否api 安全试用</p>
@@ -88,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHybridPkg(HybridPkg $HybridPkg) 设置<p>混合云子节点包</p>
  * @method ApiPkg getApiPkg() 获取<p>API安全资源包</p>
  * @method void setApiPkg(ApiPkg $ApiPkg) 设置<p>API安全资源包</p>
- * @method MiniPkg getMiniPkg() 获取<p>小程序安全加速包</p>
- * @method void setMiniPkg(MiniPkg $MiniPkg) 设置<p>小程序安全加速包</p>
+ * @method MiniPkg getMiniPkg() 获取<p>小程序安全防护包</p>
+ * @method void setMiniPkg(MiniPkg $MiniPkg) 设置<p>小程序安全防护包</p>
  * @method integer getMiniQpsStandard() 获取<p>小程序qps规格</p>
  * @method void setMiniQpsStandard(integer $MiniQpsStandard) 设置<p>小程序qps规格</p>
  * @method integer getMiniMaxQPS() 获取<p>小程序qps峰值</p>
@@ -100,12 +100,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMiniExtendPkg(MiniExtendPkg $MiniExtendPkg) 设置<p>小程序安全接入ID数量扩张包</p>
  * @method string getBillingItem() 获取<p>计费项</p>
  * @method void setBillingItem(string $BillingItem) 设置<p>计费项</p>
- * @method integer getFreeDelayFlag() 获取<p>实例延期释放标识</p>
- * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置<p>实例延期释放标识</p>
+ * @method integer getFreeDelayFlag() 获取实例延期释放标识，0表示不延期，1表示延期释放
+ * @method void setFreeDelayFlag(integer $FreeDelayFlag) 设置实例延期释放标识，0表示不延期，1表示延期释放
  * @method integer getLast3MaxQPS() 获取<p>最近3天最大qps</p>
  * @method void setLast3MaxQPS(integer $Last3MaxQPS) 设置<p>最近3天最大qps</p>
  * @method integer getLast3MaxBandwidth() 获取<p>最近3天最大带宽</p>
  * @method void setLast3MaxBandwidth(integer $Last3MaxBandwidth) 设置<p>最近3天最大带宽</p>
+ * @method integer getLast7MaxMiniBandwidth() 获取<p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+ * @method void setLast7MaxMiniBandwidth(integer $Last7MaxMiniBandwidth) 设置<p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+ * @method integer getMiniBandwidthStandard() 获取<p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+ * @method void setMiniBandwidthStandard(integer $MiniBandwidthStandard) 设置<p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
  * @method MajorEventsProPkg getMajorEventsProPkg() 获取<p>重保增强包</p>
  * @method void setMajorEventsProPkg(MajorEventsProPkg $MajorEventsProPkg) 设置<p>重保增强包</p>
  * @method integer getBasicFlag() 获取<p>1是基础2025版本；0不是</p>
@@ -114,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkConfig(NetworkConfig $NetworkConfig) 设置<p>实例的网络配置</p>
  * @method RCEPkg getRCEPkg() 获取<p>RCE设备安全信息包</p>
  * @method void setRCEPkg(RCEPkg $RCEPkg) 设置<p>RCE设备安全信息包</p>
+ * @method RCEExtendPkg getRCEExtendPkg() 获取<p>RCE QPS扩展包</p>
+ * @method void setRCEExtendPkg(RCEExtendPkg $RCEExtendPkg) 设置<p>RCE QPS扩展包</p>
  * @method integer getExceedPolicy() 获取<p>超量策略。0：超量沙箱<br>1：超量限流</p>
  * @method void setExceedPolicy(integer $ExceedPolicy) 设置<p>超量策略。0：超量沙箱<br>1：超量限流</p>
  * @method LLMPkg getLLMPkg() 获取<p>大模型安全信息包</p>
@@ -158,7 +164,7 @@ class InstanceInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var integer <p>付费模式</p>
+     * @var integer 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
      */
     public $PayMode;
 
@@ -273,12 +279,12 @@ class InstanceInfo extends AbstractModel
     public $QpsStandard;
 
     /**
-     * @var integer <p>购买的带宽规格</p>
+     * @var integer 购买的带宽规格上限，单位：Mbps
      */
     public $BandwidthStandard;
 
     /**
-     * @var integer <p>实例状态</p>
+     * @var integer 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
      */
     public $Status;
 
@@ -308,7 +314,7 @@ class InstanceInfo extends AbstractModel
     public $ApiPkg;
 
     /**
-     * @var MiniPkg <p>小程序安全加速包</p>
+     * @var MiniPkg <p>小程序安全防护包</p>
      */
     public $MiniPkg;
 
@@ -338,7 +344,7 @@ class InstanceInfo extends AbstractModel
     public $BillingItem;
 
     /**
-     * @var integer <p>实例延期释放标识</p>
+     * @var integer 实例延期释放标识，0表示不延期，1表示延期释放
      */
     public $FreeDelayFlag;
 
@@ -351,6 +357,16 @@ class InstanceInfo extends AbstractModel
      * @var integer <p>最近3天最大带宽</p>
      */
     public $Last3MaxBandwidth;
+
+    /**
+     * @var integer <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     */
+    public $Last7MaxMiniBandwidth;
+
+    /**
+     * @var integer <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
+     */
+    public $MiniBandwidthStandard;
 
     /**
      * @var MajorEventsProPkg <p>重保增强包</p>
@@ -371,6 +387,11 @@ class InstanceInfo extends AbstractModel
      * @var RCEPkg <p>RCE设备安全信息包</p>
      */
     public $RCEPkg;
+
+    /**
+     * @var RCEExtendPkg <p>RCE QPS扩展包</p>
+     */
+    public $RCEExtendPkg;
 
     /**
      * @var integer <p>超量策略。0：超量沙箱<br>1：超量限流</p>
@@ -427,7 +448,7 @@ class InstanceInfo extends AbstractModel
      * @param string $InstanceName <p>实例名称</p>
      * @param string $ResourceIds <p>实例对应资源ID，计费使用</p>
      * @param string $Region <p>实例所属地域</p>
-     * @param integer $PayMode <p>付费模式</p>
+     * @param integer $PayMode 付费模式，0表示后付费（按量计费），1表示预付费（包年包月）
      * @param integer $RenewFlag <p>自动续费标识。<br>0：关闭<br>1：开启</p>
      * @param integer $Mode <p>弹性计费开关。<br>0：关闭<br>1：开启</p>
      * @param integer $Level <p>实例套餐版本。<br>101：小微版<br>102：超轻版<br>2：高级版<br>3：企业版<br>4：旗舰版<br>6：独享版</p>
@@ -450,26 +471,29 @@ class InstanceInfo extends AbstractModel
      * @param integer $MaxBandwidth <p>带宽峰值，单位为B/s(字节每秒)</p>
      * @param integer $APISecurity <p>api安全是否购买</p>
      * @param integer $QpsStandard <p>购买的qps规格</p>
-     * @param integer $BandwidthStandard <p>购买的带宽规格</p>
-     * @param integer $Status <p>实例状态</p>
+     * @param integer $BandwidthStandard 购买的带宽规格上限，单位：Mbps
+     * @param integer $Status 实例状态，0表示正常，1表示正常使用，2表示隔离期，3表示已销毁
      * @param integer $SandboxQps <p>实例沙箱qps值</p>
      * @param integer $IsAPISecurityTrial <p>是否api 安全试用</p>
      * @param MajorEventsPkg $MajorEventsPkg <p>重保包</p>
      * @param HybridPkg $HybridPkg <p>混合云子节点包</p>
      * @param ApiPkg $ApiPkg <p>API安全资源包</p>
-     * @param MiniPkg $MiniPkg <p>小程序安全加速包</p>
+     * @param MiniPkg $MiniPkg <p>小程序安全防护包</p>
      * @param integer $MiniQpsStandard <p>小程序qps规格</p>
      * @param integer $MiniMaxQPS <p>小程序qps峰值</p>
      * @param string $LastQpsExceedTime <p>最近一次超量时间</p>
      * @param MiniExtendPkg $MiniExtendPkg <p>小程序安全接入ID数量扩张包</p>
      * @param string $BillingItem <p>计费项</p>
-     * @param integer $FreeDelayFlag <p>实例延期释放标识</p>
+     * @param integer $FreeDelayFlag 实例延期释放标识，0表示不延期，1表示延期释放
      * @param integer $Last3MaxQPS <p>最近3天最大qps</p>
      * @param integer $Last3MaxBandwidth <p>最近3天最大带宽</p>
+     * @param integer $Last7MaxMiniBandwidth <p>过去7天小程序流量最大带宽，单位Byte/s，仅开启小程序安全时有值。转换为Mbps请使用 *8/1000/1000（十进制），不要使用MaxBandwidth所用的*8/1024/1024（二进制），否则会有约4.63%的偏差</p>
+     * @param integer $MiniBandwidthStandard <p>小程序带宽上限，单位Mbps，仅开启小程序安全时有值</p>
      * @param MajorEventsProPkg $MajorEventsProPkg <p>重保增强包</p>
      * @param integer $BasicFlag <p>1是基础2025版本；0不是</p>
      * @param NetworkConfig $NetworkConfig <p>实例的网络配置</p>
      * @param RCEPkg $RCEPkg <p>RCE设备安全信息包</p>
+     * @param RCEExtendPkg $RCEExtendPkg <p>RCE QPS扩展包</p>
      * @param integer $ExceedPolicy <p>超量策略。0：超量沙箱<br>1：超量限流</p>
      * @param LLMPkg $LLMPkg <p>大模型安全信息包</p>
      * @param string $ElasticResourceId <p>弹性资源Id</p>
@@ -676,6 +700,14 @@ class InstanceInfo extends AbstractModel
             $this->Last3MaxBandwidth = $param["Last3MaxBandwidth"];
         }
 
+        if (array_key_exists("Last7MaxMiniBandwidth",$param) and $param["Last7MaxMiniBandwidth"] !== null) {
+            $this->Last7MaxMiniBandwidth = $param["Last7MaxMiniBandwidth"];
+        }
+
+        if (array_key_exists("MiniBandwidthStandard",$param) and $param["MiniBandwidthStandard"] !== null) {
+            $this->MiniBandwidthStandard = $param["MiniBandwidthStandard"];
+        }
+
         if (array_key_exists("MajorEventsProPkg",$param) and $param["MajorEventsProPkg"] !== null) {
             $this->MajorEventsProPkg = new MajorEventsProPkg();
             $this->MajorEventsProPkg->deserialize($param["MajorEventsProPkg"]);
@@ -693,6 +725,11 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("RCEPkg",$param) and $param["RCEPkg"] !== null) {
             $this->RCEPkg = new RCEPkg();
             $this->RCEPkg->deserialize($param["RCEPkg"]);
+        }
+
+        if (array_key_exists("RCEExtendPkg",$param) and $param["RCEExtendPkg"] !== null) {
+            $this->RCEExtendPkg = new RCEExtendPkg();
+            $this->RCEExtendPkg->deserialize($param["RCEExtendPkg"]);
         }
 
         if (array_key_exists("ExceedPolicy",$param) and $param["ExceedPolicy"] !== null) {

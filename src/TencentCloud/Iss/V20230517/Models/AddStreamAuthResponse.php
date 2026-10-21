@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddStreamAuth返回参数结构体
  *
- * @method AddStreamAuthData getData() 获取设置推拉流鉴权返回数据
- * @method void setData(AddStreamAuthData $Data) 设置设置推拉流鉴权返回数据
+ * @method AddStreamAuthData getData() 获取<p>设置推拉流鉴权返回数据</p>
+ * @method void setData(AddStreamAuthData $Data) 设置<p>设置推拉流鉴权返回数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddStreamAuthResponse extends AbstractModel
 {
     /**
-     * @var AddStreamAuthData 设置推拉流鉴权返回数据
+     * @var AddStreamAuthData <p>设置推拉流鉴权返回数据</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class AddStreamAuthResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AddStreamAuthData $Data 设置推拉流鉴权返回数据
+     * @param AddStreamAuthData $Data <p>设置推拉流鉴权返回数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

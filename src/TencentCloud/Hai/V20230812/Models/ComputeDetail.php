@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrepaidEnable(boolean $PrepaidEnable) 设置<p>该套餐是否支持包年包月</p>
  * @method boolean getPostpaidEnable() 获取<p>该套餐是否支持按量计费</p>
  * @method void setPostpaidEnable(boolean $PostpaidEnable) 设置<p>该套餐是否支持按量计费</p>
+ * @method array getSupportedChargeTypes() 获取<p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+ * @method void setSupportedChargeTypes(array $SupportedChargeTypes) 设置<p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
  */
 class ComputeDetail extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ComputeDetail extends AbstractModel
     public $PostpaidEnable;
 
     /**
+     * @var array <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
+     */
+    public $SupportedChargeTypes;
+
+    /**
      * @param string $BundleType <p>算力套餐ID</p>
      * @param integer $Count <p>节点数量</p>
      * @param string $GPUCount <p>显卡数量</p>
@@ -96,6 +103,7 @@ class ComputeDetail extends AbstractModel
      * @param string $Memory <p>内存</p>
      * @param boolean $PrepaidEnable <p>该套餐是否支持包年包月</p>
      * @param boolean $PostpaidEnable <p>该套餐是否支持按量计费</p>
+     * @param array $SupportedChargeTypes <p>该算力套餐支持的计费模式列表：POSTPAID_BY_HOUR（按量）、PREPAID（包年包月）、SPOT（竞价）</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ComputeDetail extends AbstractModel
 
         if (array_key_exists("PostpaidEnable",$param) and $param["PostpaidEnable"] !== null) {
             $this->PostpaidEnable = $param["PostpaidEnable"];
+        }
+
+        if (array_key_exists("SupportedChargeTypes",$param) and $param["SupportedChargeTypes"] !== null) {
+            $this->SupportedChargeTypes = $param["SupportedChargeTypes"];
         }
     }
 }

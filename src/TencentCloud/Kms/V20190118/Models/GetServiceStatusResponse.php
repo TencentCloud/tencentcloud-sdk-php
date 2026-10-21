@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceZone(integer $ResourceZone) 设置<p>资源的地域信息</p>
  * @method integer getResourceRegion() 获取<p>资源的地域可用区信息</p>
  * @method void setResourceRegion(integer $ResourceRegion) 设置<p>资源的地域可用区信息</p>
+ * @method integer getMultiAccountLimit() 获取<p>多账号开通额度</p><p>单位：个数</p>
+ * @method void setMultiAccountLimit(integer $MultiAccountLimit) 设置<p>多账号开通额度</p><p>单位：个数</p>
+ * @method integer getMultiAccountUsedCount() 获取<p>多账号启用个数</p><p>单位：个数</p>
+ * @method void setMultiAccountUsedCount(integer $MultiAccountUsedCount) 设置<p>多账号启用个数</p><p>单位：个数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +191,16 @@ class GetServiceStatusResponse extends AbstractModel
     public $ResourceRegion;
 
     /**
+     * @var integer <p>多账号开通额度</p><p>单位：个数</p>
+     */
+    public $MultiAccountLimit;
+
+    /**
+     * @var integer <p>多账号启用个数</p><p>单位：个数</p>
+     */
+    public $MultiAccountUsedCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +229,8 @@ class GetServiceStatusResponse extends AbstractModel
      * @param array $RegionsQps <p>地域下的QPS</p>
      * @param integer $ResourceZone <p>资源的地域信息</p>
      * @param integer $ResourceRegion <p>资源的地域可用区信息</p>
+     * @param integer $MultiAccountLimit <p>多账号开通额度</p><p>单位：个数</p>
+     * @param integer $MultiAccountUsedCount <p>多账号启用个数</p><p>单位：个数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -335,6 +351,14 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("ResourceRegion",$param) and $param["ResourceRegion"] !== null) {
             $this->ResourceRegion = $param["ResourceRegion"];
+        }
+
+        if (array_key_exists("MultiAccountLimit",$param) and $param["MultiAccountLimit"] !== null) {
+            $this->MultiAccountLimit = $param["MultiAccountLimit"];
+        }
+
+        if (array_key_exists("MultiAccountUsedCount",$param) and $param["MultiAccountUsedCount"] !== null) {
+            $this->MultiAccountUsedCount = $param["MultiAccountUsedCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

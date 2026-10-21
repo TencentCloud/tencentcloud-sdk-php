@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAirflowDagSource(AirflowDagSourceInput $AirflowDagSource) 设置<p>airflow目录源</p>
  * @method AirflowGitCredentialInput getAirflowGitCredential() 获取<p>airflow源凭证</p>
  * @method void setAirflowGitCredential(AirflowGitCredentialInput $AirflowGitCredential) 设置<p>airflow源凭证</p>
+ * @method array getSgIds() 获取<p>多安全组绑定</p>
+ * @method void setSgIds(array $SgIds) 设置<p>多安全组绑定</p>
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -213,6 +215,11 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $AirflowGitCredential;
 
     /**
+     * @var array <p>多安全组绑定</p>
+     */
+    public $SgIds;
+
+    /**
      * @param string $InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      * @param string $ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      * @param array $Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
@@ -240,6 +247,7 @@ class CreateCloudInstanceRequest extends AbstractModel
      * @param string $LogStoreID <p>日志存储服务实例id</p>
      * @param AirflowDagSourceInput $AirflowDagSource <p>airflow目录源</p>
      * @param AirflowGitCredentialInput $AirflowGitCredential <p>airflow源凭证</p>
+     * @param array $SgIds <p>多安全组绑定</p>
      */
     function __construct()
     {
@@ -382,6 +390,10 @@ class CreateCloudInstanceRequest extends AbstractModel
         if (array_key_exists("AirflowGitCredential",$param) and $param["AirflowGitCredential"] !== null) {
             $this->AirflowGitCredential = new AirflowGitCredentialInput();
             $this->AirflowGitCredential->deserialize($param["AirflowGitCredential"]);
+        }
+
+        if (array_key_exists("SgIds",$param) and $param["SgIds"] !== null) {
+            $this->SgIds = $param["SgIds"];
         }
     }
 }

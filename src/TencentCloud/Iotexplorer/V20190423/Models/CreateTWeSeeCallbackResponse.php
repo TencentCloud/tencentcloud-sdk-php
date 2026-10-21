@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTWeSeeCallback返回参数结构体
  *
- * @method string getCallbackId() 获取回调目标 ID
- * @method void setCallbackId(string $CallbackId) 设置回调目标 ID
+ * @method string getCallbackId() 获取<p>回调目标 ID</p>
+ * @method void setCallbackId(string $CallbackId) 设置<p>回调目标 ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTWeSeeCallbackResponse extends AbstractModel
 {
     /**
-     * @var string 回调目标 ID
+     * @var string <p>回调目标 ID</p>
      */
     public $CallbackId;
 
@@ -38,7 +38,7 @@ class CreateTWeSeeCallbackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CallbackId 回调目标 ID
+     * @param string $CallbackId <p>回调目标 ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

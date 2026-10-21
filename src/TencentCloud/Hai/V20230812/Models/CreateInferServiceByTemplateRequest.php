@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置<p>服务名称</p>
  * @method integer getReplicas() 获取<p>副本数</p>
  * @method void setReplicas(integer $Replicas) 设置<p>副本数</p>
- * @method string getServiceChargeType() 获取<p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
- * @method void setServiceChargeType(string $ServiceChargeType) 设置<p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+ * @method string getServiceChargeType() 获取<p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+ * @method void setServiceChargeType(string $ServiceChargeType) 设置<p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
  * @method HyperParam getHyperParam() 获取<p>描述了服务的超参数配置</p>
  * @method void setHyperParam(HyperParam $HyperParam) 设置<p>描述了服务的超参数配置</p>
  * @method NetworkSetting getNetworkSetting() 获取<p>网络设置</p>
@@ -55,7 +55,7 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
     public $Replicas;
 
     /**
-     * @var string <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * @var string <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public $ServiceChargeType;
 
@@ -83,7 +83,7 @@ class CreateInferServiceByTemplateRequest extends AbstractModel
      * @param string $TemplateId <p>模版ID</p>
      * @param string $ServiceName <p>服务名称</p>
      * @param integer $Replicas <p>副本数</p>
-     * @param string $ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * @param string $ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      * @param HyperParam $HyperParam <p>描述了服务的超参数配置</p>
      * @param NetworkSetting $NetworkSetting <p>网络设置</p>
      * @param string $SecurityType <p>推理服务安全类型</p><p>枚举值：</p><ul><li>STANDARD： 标准推理服务</li><li>CONFIDENTIAL： 可信推理服务</li></ul>

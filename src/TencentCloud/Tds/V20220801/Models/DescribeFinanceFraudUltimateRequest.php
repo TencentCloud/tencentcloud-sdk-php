@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElapsedTime(integer $ElapsedTime) 设置<p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
  * @method string getWeChatOpenId() 获取<p>微信的OpenId</p>
  * @method void setWeChatOpenId(string $WeChatOpenId) 设置<p>微信的OpenId</p>
- * @method string getPhoneNumber() 获取<p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
- * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+ * @method string getPhoneNumber() 获取<p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
+ * @method void setPhoneNumber(string $PhoneNumber) 设置<p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
  * @method string getBizClientIp() 获取<p>业务客户端IP</p>
  * @method void setBizClientIp(string $BizClientIp) 设置<p>业务客户端IP</p>
  * @method string getQQOpenId() 获取<p>QQ的OpenId</p>
@@ -74,7 +74,7 @@ class DescribeFinanceFraudUltimateRequest extends AbstractModel
     public $WeChatOpenId;
 
     /**
-     * @var string <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * @var string <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
      */
     public $PhoneNumber;
 
@@ -100,7 +100,7 @@ class DescribeFinanceFraudUltimateRequest extends AbstractModel
      * @param integer $EventTime <p>事件时间戳（毫秒）</p>
      * @param integer $ElapsedTime <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
      * @param string $WeChatOpenId <p>微信的OpenId</p>
-     * @param string $PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * @param string $PhoneNumber <p>手机号码（注：不需要带国家代码 例如：15xxxxxxxxx）。可以传入原文、MD5或SHA256</p>
      * @param string $BizClientIp <p>业务客户端IP</p>
      * @param string $QQOpenId <p>QQ的OpenId</p>
      * @param DataAuthorizationInfo $DataAuthorization <p>数据授权信息</p>

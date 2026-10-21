@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyGroupId(string $ProxyGroupId) 设置<p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
  * @method string getConsistencyType() 获取<p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
  * @method void setConsistencyType(string $ConsistencyType) 设置<p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
- * @method string getConsistencyTimeOut() 获取<p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
- * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) 设置<p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+ * @method string getConsistencyTimeOut() 获取<p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+ * @method void setConsistencyTimeOut(string $ConsistencyTimeOut) 设置<p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
  * @method string getWeightMode() 获取<p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
  * @method void setWeightMode(string $WeightMode) 设置<p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
  * @method array getInstanceWeights() 获取<p>实例只读权重。</p>
@@ -77,7 +77,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
     public $ConsistencyType;
 
     /**
-     * @var string <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * @var string <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      */
     public $ConsistencyTimeOut;
 
@@ -160,7 +160,7 @@ class ModifyProxyRwSplitRequest extends AbstractModel
      * @param string $ClusterId <p>集群ID，例如cynosdbmysql-asd123</p>
      * @param string $ProxyGroupId <p>数据库代理组ID，例如cynosdbmysql-proxy-qwe123</p>
      * @param string $ConsistencyType <p>一致性类型；“eventual&quot;-最终一致性, &quot;session&quot;-会话一致性, &quot;global&quot;-全局一致性</p>
-     * @param string $ConsistencyTimeOut <p>一致性超时时间。<br>取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
+     * @param string $ConsistencyTimeOut <p>一致性超时时间。取值范围：0~1000000（毫秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待。</p>
      * @param string $WeightMode <p>读写权重分配模式；系统自动分配：&quot;system&quot;， 自定义：&quot;custom&quot;</p>
      * @param array $InstanceWeights <p>实例只读权重。</p>
      * @param string $FailOver <p>是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值：&quot;yes&quot; , &quot;no&quot;</p>

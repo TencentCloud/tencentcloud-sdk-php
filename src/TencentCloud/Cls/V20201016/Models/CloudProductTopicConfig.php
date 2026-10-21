@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomKmsInfo(CustomKmsInfo $CustomKmsInfo) 设置<p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）<br>当参数 Encryption为 1 时有效。</p>
  * @method string getTopicId() 获取<p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
  * @method void setTopicId(string $TopicId) 设置<p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+ * @method TopicExtendInfo getExtends() 获取<p>主题扩展信息</p>
+ * @method void setExtends(TopicExtendInfo $Extends) 设置<p>主题扩展信息</p>
  */
 class CloudProductTopicConfig extends AbstractModel
 {
@@ -115,6 +117,11 @@ class CloudProductTopicConfig extends AbstractModel
     public $TopicId;
 
     /**
+     * @var TopicExtendInfo <p>主题扩展信息</p>
+     */
+    public $Extends;
+
+    /**
      * @param integer $Encryption <p>加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。</p><p>枚举值：</p><ul><li>0： 不加密</li><li>1： kms-cls 云产品密钥加密</li></ul><p>默认值：0</p>
      * @param integer $PartitionCount <p>主题分区个数。默认创建1个，最大支持创建10个分区。</p>
      * @param boolean $AutoSplit <p>是否开启自动分裂，默认值为true</p>
@@ -128,6 +135,7 @@ class CloudProductTopicConfig extends AbstractModel
      * @param boolean $IsWebTracking <p>免鉴权开关。 false：关闭； true：开启。默认为false。 开启后将支持指定操作匿名访问该日志主题。</p>
      * @param CustomKmsInfo $CustomKmsInfo <p>用户自定义 KMS 密钥信息；为空则使用默认密钥（别名 KMS-CLS）<br>当参数 Encryption为 1 时有效。</p>
      * @param string $TopicId <p>主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。</p><ul><li>用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符</li><li>尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。</li><li>如果指定该字段，需保证全地域唯一</li></ul>
+     * @param TopicExtendInfo $Extends <p>主题扩展信息</p>
      */
     function __construct()
     {
@@ -193,6 +201,11 @@ class CloudProductTopicConfig extends AbstractModel
 
         if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
             $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
+            $this->Extends = new TopicExtendInfo();
+            $this->Extends->deserialize($param["Extends"]);
         }
     }
 }

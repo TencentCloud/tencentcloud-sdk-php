@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTWeSeeCallback请求参数结构体
  *
- * @method string getType() 获取回调类型。可选值：\n- `http` HTTP 回调
- * @method void setType(string $Type) 设置回调类型。可选值：\n- `http` HTTP 回调
- * @method string getCallbackUrl() 获取回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口
- * @method string getCallbackToken() 获取回调签名 Token。最大长度 128
- * @method void setCallbackToken(string $CallbackToken) 设置回调签名 Token。最大长度 128
+ * @method string getType() 获取<p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+ * @method void setType(string $Type) 设置<p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+ * @method string getCallbackUrl() 获取<p>回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口</p>
+ * @method string getCallbackToken() 获取<p>回调签名 Token。最大长度 128</p>
+ * @method void setCallbackToken(string $CallbackToken) 设置<p>回调签名 Token。最大长度 128</p>
+ * @method SeeCallbackCKafkaConfig getCallbackCKafka() 获取<p>回调 CKafka 配置</p>
+ * @method void setCallbackCKafka(SeeCallbackCKafkaConfig $CallbackCKafka) 设置<p>回调 CKafka 配置</p>
+ * @method string getProductId() 获取<p>要创建回调目标的产品 ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>要创建回调目标的产品 ID</p>
  */
 class CreateTWeSeeCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 回调类型。可选值：\n- `http` HTTP 回调
+     * @var string <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
      */
     public $Type;
 
     /**
-     * @var string 回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口
+     * @var string <p>回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口</p>
      */
     public $CallbackUrl;
 
     /**
-     * @var string 回调签名 Token。最大长度 128
+     * @var string <p>回调签名 Token。最大长度 128</p>
      */
     public $CallbackToken;
 
     /**
-     * @param string $Type 回调类型。可选值：\n- `http` HTTP 回调
-     * @param string $CallbackUrl 回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口
-     * @param string $CallbackToken 回调签名 Token。最大长度 128
+     * @var SeeCallbackCKafkaConfig <p>回调 CKafka 配置</p>
+     */
+    public $CallbackCKafka;
+
+    /**
+     * @var string <p>要创建回调目标的产品 ID</p>
+     */
+    public $ProductId;
+
+    /**
+     * @param string $Type <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+     * @param string $CallbackUrl <p>回调 URL。要求 http 或 https 协议，仅支持 80 或 443 端口</p>
+     * @param string $CallbackToken <p>回调签名 Token。最大长度 128</p>
+     * @param SeeCallbackCKafkaConfig $CallbackCKafka <p>回调 CKafka 配置</p>
+     * @param string $ProductId <p>要创建回调目标的产品 ID</p>
      */
     function __construct()
     {
@@ -72,6 +88,15 @@ class CreateTWeSeeCallbackRequest extends AbstractModel
 
         if (array_key_exists("CallbackToken",$param) and $param["CallbackToken"] !== null) {
             $this->CallbackToken = $param["CallbackToken"];
+        }
+
+        if (array_key_exists("CallbackCKafka",$param) and $param["CallbackCKafka"] !== null) {
+            $this->CallbackCKafka = new SeeCallbackCKafkaConfig();
+            $this->CallbackCKafka->deserialize($param["CallbackCKafka"]);
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

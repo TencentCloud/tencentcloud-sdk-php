@@ -87,7 +87,7 @@ BGP带宽包必须传带宽包id
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\CreateTargetGroupResponse CreateTargetGroup(Models\CreateTargetGroupRequest $req) 创建目标组。该功能正在内测中，如需使用，请通过[工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20LB&step=1)。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题，默认开启全文索引和键值索引。如果不存在CLB专有日志集，则创建失败。
- * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。
+ * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 在指定模型路由实例下创建一个用户组。用户组是介于模型路由实例与 Key 之间的一层可选分组，可为组内 Key 统一配置模型白名单，并通过关联 Budget 统一管理额度。创建为异步操作，接口会同步返回用户组ID，可凭返回的 RequestId 调用 DescribeAsyncJobs 查询创建进度。支持建组时绑定 Prompt：传入 PromptId 与 PromptVersion 后，组内 Key 的请求将按该版本 Prompt 的 Content 与 RewriteStrategy 注入或改写 system 内容，并受该版本 MaxTokens 约束；不传则默认不绑定 Prompt，建组后可通过 ModifyUserGroupPrompt 绑定、更换版本或解绑。仅传入 PromptId 或 PromptVersion 其一时返回 InvalidParameter；PromptId 不存在时返回 ResourceNotFound.Prompt；PromptVersion 不存在于该 Prompt 的历史版本中时返回 ResourceNotFound.PromptVersion。
  * @method Models\DeleteBudgetsResponse DeleteBudgets(Models\DeleteBudgetsRequest $req) 删除Budget对象。Budget存在任何关联资源时不允许删除，需要先调用DisassociateBudget解除关联。
  * @method Models\DeleteIntentRouterResponse DeleteIntentRouter(Models\DeleteIntentRouterRequest $req) 删除模型路由实例下的一个意图路由（Intent Router）。
  * @method Models\DeleteKeysResponse DeleteKeys(Models\DeleteKeysRequest $req) 批量删除 API Key。

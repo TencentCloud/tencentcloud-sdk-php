@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeSee 回调目标信息
  *
- * @method string getCallbackId() 获取回调目标 ID
- * @method void setCallbackId(string $CallbackId) 设置回调目标 ID
- * @method string getCallbackToken() 获取回调签名 token
- * @method void setCallbackToken(string $CallbackToken) 设置回调签名 token
- * @method string getCallbackUrl() 获取回调 URL
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL
- * @method integer getCreateTime() 获取创建时间（秒级时间戳）
- * @method void setCreateTime(integer $CreateTime) 设置创建时间（秒级时间戳）
- * @method string getType() 获取回调类型
- * @method void setType(string $Type) 设置回调类型
- * @method integer getUpdateTime() 获取更新时间（秒级时间戳）
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间（秒级时间戳）
+ * @method string getCallbackId() 获取<p>回调目标 ID</p>
+ * @method void setCallbackId(string $CallbackId) 设置<p>回调目标 ID</p>
+ * @method string getType() 获取<p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+ * @method void setType(string $Type) 设置<p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+ * @method string getCallbackUrl() 获取<p>回调 URL</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调 URL</p>
+ * @method string getCallbackToken() 获取<p>回调签名 token</p>
+ * @method void setCallbackToken(string $CallbackToken) 设置<p>回调签名 token</p>
+ * @method SeeCallbackCKafkaConfig getCallbackCKafka() 获取<p>回调 CKafka 配置</p>
+ * @method void setCallbackCKafka(SeeCallbackCKafkaConfig $CallbackCKafka) 设置<p>回调 CKafka 配置</p>
+ * @method integer getCreateTime() 获取<p>创建时间（秒级时间戳）</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间（秒级时间戳）</p>
+ * @method integer getUpdateTime() 获取<p>更新时间（秒级时间戳）</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间（秒级时间戳）</p>
  */
 class SeeCallbackInfo extends AbstractModel
 {
     /**
-     * @var string 回调目标 ID
+     * @var string <p>回调目标 ID</p>
      */
     public $CallbackId;
 
     /**
-     * @var string 回调签名 token
-     */
-    public $CallbackToken;
-
-    /**
-     * @var string 回调 URL
-     */
-    public $CallbackUrl;
-
-    /**
-     * @var integer 创建时间（秒级时间戳）
-     */
-    public $CreateTime;
-
-    /**
-     * @var string 回调类型
+     * @var string <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer 更新时间（秒级时间戳）
+     * @var string <p>回调 URL</p>
+     */
+    public $CallbackUrl;
+
+    /**
+     * @var string <p>回调签名 token</p>
+     */
+    public $CallbackToken;
+
+    /**
+     * @var SeeCallbackCKafkaConfig <p>回调 CKafka 配置</p>
+     */
+    public $CallbackCKafka;
+
+    /**
+     * @var integer <p>创建时间（秒级时间戳）</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer <p>更新时间（秒级时间戳）</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $CallbackId 回调目标 ID
-     * @param string $CallbackToken 回调签名 token
-     * @param string $CallbackUrl 回调 URL
-     * @param integer $CreateTime 创建时间（秒级时间戳）
-     * @param string $Type 回调类型
-     * @param integer $UpdateTime 更新时间（秒级时间戳）
+     * @param string $CallbackId <p>回调目标 ID</p>
+     * @param string $Type <p>回调类型</p><p>枚举值：</p><ul><li>none： 不回调</li><li>http： HTTP 回调</li><li>ckafka： 投递 CKafka Topic</li></ul>
+     * @param string $CallbackUrl <p>回调 URL</p>
+     * @param string $CallbackToken <p>回调签名 token</p>
+     * @param SeeCallbackCKafkaConfig $CallbackCKafka <p>回调 CKafka 配置</p>
+     * @param integer $CreateTime <p>创建时间（秒级时间戳）</p>
+     * @param integer $UpdateTime <p>更新时间（秒级时间戳）</p>
      */
     function __construct()
     {
@@ -90,20 +98,25 @@ class SeeCallbackInfo extends AbstractModel
             $this->CallbackId = $param["CallbackId"];
         }
 
-        if (array_key_exists("CallbackToken",$param) and $param["CallbackToken"] !== null) {
-            $this->CallbackToken = $param["CallbackToken"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists("CallbackToken",$param) and $param["CallbackToken"] !== null) {
+            $this->CallbackToken = $param["CallbackToken"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("CallbackCKafka",$param) and $param["CallbackCKafka"] !== null) {
+            $this->CallbackCKafka = new SeeCallbackCKafkaConfig();
+            $this->CallbackCKafka->deserialize($param["CallbackCKafka"]);
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {

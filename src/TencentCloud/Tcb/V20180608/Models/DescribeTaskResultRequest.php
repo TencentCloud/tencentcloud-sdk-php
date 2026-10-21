@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskResult请求参数结构体
  *
- * @method string getEnvId() 获取<p>云开发环境ID</p>
- * @method void setEnvId(string $EnvId) 设置<p>云开发环境ID</p>
+ * @method string getEnvId() 获取<p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
+ * @method void setEnvId(string $EnvId) 设置<p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
  * @method string getTaskId() 获取<p>任务ID</p>
  * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var string <p>云开发环境ID</p>
+     * @var string <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
      */
     public $EnvId;
 
@@ -38,7 +38,7 @@ class DescribeTaskResultRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @param string $EnvId <p>云开发环境ID</p>
+     * @param string $EnvId <p>云开发环境 ID。查询 PGDump 任务时，所有状态均须提供且与任务环境一致，用于验证调用方环境归属。环境隔离或销毁后，仍可在归档保留期内查询历史任务及下载文件。</p>
      * @param string $TaskId <p>任务ID</p>
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceName() 获取服务名称
  * @method void setServiceName(string $ServiceName) 设置服务名称
- * @method string getServiceChargeType() 获取收费类型
- * @method void setServiceChargeType(string $ServiceChargeType) 设置收费类型
+ * @method string getServiceChargeType() 获取<p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+ * @method void setServiceChargeType(string $ServiceChargeType) 设置<p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
  */
 class ServiceMetaData extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ServiceMetaData extends AbstractModel
     public $ServiceName;
 
     /**
-     * @var string 收费类型
+     * @var string <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     public $ServiceChargeType;
 
     /**
      * @param string $ServiceName 服务名称
-     * @param string $ServiceChargeType 收费类型
+     * @param string $ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
      */
     function __construct()
     {

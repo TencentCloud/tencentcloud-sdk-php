@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 设置推拉流鉴权返回数据结构
  *
- * @method string getId() 获取鉴权配置ID（uuid）
- * @method void setId(string $Id) 设置鉴权配置ID（uuid）
- * @method integer getPullState() 获取是否开播放鉴权（1:开启,0:关闭）
- * @method void setPullState(integer $PullState) 设置是否开播放鉴权（1:开启,0:关闭）
- * @method string getPullSecret() 获取播放密钥（仅支持字母数字，长度0-10位）
- * @method void setPullSecret(string $PullSecret) 设置播放密钥（仅支持字母数字，长度0-10位）
- * @method integer getPullExpired() 获取播放过期时间（单位：分钟）
- * @method void setPullExpired(integer $PullExpired) 设置播放过期时间（单位：分钟）
- * @method integer getPushState() 获取是否开启推流鉴权（1:开启,0:关闭）
- * @method void setPushState(integer $PushState) 设置是否开启推流鉴权（1:开启,0:关闭）
- * @method string getPushSecret() 获取推流密钥（仅支持字母数字，长度0-10位）
- * @method void setPushSecret(string $PushSecret) 设置推流密钥（仅支持字母数字，长度0-10位）
- * @method integer getPushExpired() 获取推流过期时间（单位：分钟）
- * @method void setPushExpired(integer $PushExpired) 设置推流过期时间（单位：分钟）
- * @method integer getAppId() 获取用户ID
- * @method void setAppId(integer $AppId) 设置用户ID
+ * @method string getId() 获取<p>鉴权配置ID（uuid）</p>
+ * @method void setId(string $Id) 设置<p>鉴权配置ID（uuid）</p>
+ * @method integer getPullState() 获取<p>是否开播放鉴权（1:开启,0:关闭）</p>
+ * @method void setPullState(integer $PullState) 设置<p>是否开播放鉴权（1:开启,0:关闭）</p>
+ * @method string getPullSecret() 获取<p>播放密钥（仅支持字母数字，长度0-10位）</p>
+ * @method void setPullSecret(string $PullSecret) 设置<p>播放密钥（仅支持字母数字，长度0-10位）</p>
+ * @method integer getPullExpired() 获取<p>播放过期时间（单位：分钟）</p>
+ * @method void setPullExpired(integer $PullExpired) 设置<p>播放过期时间（单位：分钟）</p>
+ * @method integer getPushState() 获取<p>是否开启推流鉴权（1:开启,0:关闭）</p>
+ * @method void setPushState(integer $PushState) 设置<p>是否开启推流鉴权（1:开启,0:关闭）</p>
+ * @method string getPushSecret() 获取<p>推流密钥（仅支持字母数字，长度0-10位）</p>
+ * @method void setPushSecret(string $PushSecret) 设置<p>推流密钥（仅支持字母数字，长度0-10位）</p>
+ * @method integer getPushExpired() 获取<p>推流过期时间（单位：分钟）</p>
+ * @method void setPushExpired(integer $PushExpired) 设置<p>推流过期时间（单位：分钟）</p>
+ * @method integer getAppId() 获取<p>用户ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户ID</p>
+ * @method array getExcludePushDomainIds() 获取<p>不生效推流鉴权的域名 ID 列表</p>
+ * @method void setExcludePushDomainIds(array $ExcludePushDomainIds) 设置<p>不生效推流鉴权的域名 ID 列表</p>
  */
 class AddStreamAuthData extends AbstractModel
 {
     /**
-     * @var string 鉴权配置ID（uuid）
+     * @var string <p>鉴权配置ID（uuid）</p>
      */
     public $Id;
 
     /**
-     * @var integer 是否开播放鉴权（1:开启,0:关闭）
+     * @var integer <p>是否开播放鉴权（1:开启,0:关闭）</p>
      */
     public $PullState;
 
     /**
-     * @var string 播放密钥（仅支持字母数字，长度0-10位）
+     * @var string <p>播放密钥（仅支持字母数字，长度0-10位）</p>
      */
     public $PullSecret;
 
     /**
-     * @var integer 播放过期时间（单位：分钟）
+     * @var integer <p>播放过期时间（单位：分钟）</p>
      */
     public $PullExpired;
 
     /**
-     * @var integer 是否开启推流鉴权（1:开启,0:关闭）
+     * @var integer <p>是否开启推流鉴权（1:开启,0:关闭）</p>
      */
     public $PushState;
 
     /**
-     * @var string 推流密钥（仅支持字母数字，长度0-10位）
+     * @var string <p>推流密钥（仅支持字母数字，长度0-10位）</p>
      */
     public $PushSecret;
 
     /**
-     * @var integer 推流过期时间（单位：分钟）
+     * @var integer <p>推流过期时间（单位：分钟）</p>
      */
     public $PushExpired;
 
     /**
-     * @var integer 用户ID
+     * @var integer <p>用户ID</p>
      */
     public $AppId;
 
     /**
-     * @param string $Id 鉴权配置ID（uuid）
-     * @param integer $PullState 是否开播放鉴权（1:开启,0:关闭）
-     * @param string $PullSecret 播放密钥（仅支持字母数字，长度0-10位）
-     * @param integer $PullExpired 播放过期时间（单位：分钟）
-     * @param integer $PushState 是否开启推流鉴权（1:开启,0:关闭）
-     * @param string $PushSecret 推流密钥（仅支持字母数字，长度0-10位）
-     * @param integer $PushExpired 推流过期时间（单位：分钟）
-     * @param integer $AppId 用户ID
+     * @var array <p>不生效推流鉴权的域名 ID 列表</p>
+     */
+    public $ExcludePushDomainIds;
+
+    /**
+     * @param string $Id <p>鉴权配置ID（uuid）</p>
+     * @param integer $PullState <p>是否开播放鉴权（1:开启,0:关闭）</p>
+     * @param string $PullSecret <p>播放密钥（仅支持字母数字，长度0-10位）</p>
+     * @param integer $PullExpired <p>播放过期时间（单位：分钟）</p>
+     * @param integer $PushState <p>是否开启推流鉴权（1:开启,0:关闭）</p>
+     * @param string $PushSecret <p>推流密钥（仅支持字母数字，长度0-10位）</p>
+     * @param integer $PushExpired <p>推流过期时间（单位：分钟）</p>
+     * @param integer $AppId <p>用户ID</p>
+     * @param array $ExcludePushDomainIds <p>不生效推流鉴权的域名 ID 列表</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class AddStreamAuthData extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("ExcludePushDomainIds",$param) and $param["ExcludePushDomainIds"] !== null) {
+            $this->ExcludePushDomainIds = $param["ExcludePushDomainIds"];
         }
     }
 }

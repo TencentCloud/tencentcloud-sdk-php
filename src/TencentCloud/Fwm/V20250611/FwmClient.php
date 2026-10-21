@@ -24,6 +24,7 @@ use TencentCloud\Fwm\V20250611\Models as Models;
 
 /**
  * @method Models\CancelIgnorePolicyRiskResponse CancelIgnorePolicyRisk(Models\CancelIgnorePolicyRiskRequest $req) 取消忽略策略风险
+ * @method Models\CreateAccountGroupResponse CreateAccountGroup(Models\CreateAccountGroupRequest $req) 创建账户组
  * @method Models\CreateAnalyzePolicyTaskResponse CreateAnalyzePolicyTask(Models\CreateAnalyzePolicyTaskRequest $req) 创建策略风险分析任务
  * @method Models\CreateEdgeAclRuleResponse CreateEdgeAclRule(Models\CreateEdgeAclRuleRequest $req) 向已有的互联网边界ACL规则组中添加规则。需要先创建规则组，然后通过此接口添加规则。
  * @method Models\CreateEdgeAclRuleGroupResponse CreateEdgeAclRuleGroup(Models\CreateEdgeAclRuleGroupRequest $req) 创建互联网边界ACL规则组，支持同时创建多条规则。Product 必须为 cfw_edge_acl。规则支持 IP、域名、参数模板、实例、标签等多种源/目标类型。
@@ -35,12 +36,14 @@ use TencentCloud\Fwm\V20250611\Models as Models;
  * @method Models\CreateStrategyResponse CreateStrategy(Models\CreateStrategyRequest $req) 创建策略
  * @method Models\CreateVpcAclRuleResponse CreateVpcAclRule(Models\CreateVpcAclRuleRequest $req) 在已有规则组中添加VPC ACL规则
  * @method Models\CreateVpcAclRuleGroupResponse CreateVpcAclRuleGroup(Models\CreateVpcAclRuleGroupRequest $req) 创建VPC ACL规则组（VPC间防火墙规则组管理）
+ * @method Models\DeleteAccountGroupResponse DeleteAccountGroup(Models\DeleteAccountGroupRequest $req) 删除账户组，账户组下有成员时不可删除
  * @method Models\DeleteEdgeAclRuleResponse DeleteEdgeAclRule(Models\DeleteEdgeAclRuleRequest $req) 批量删除互联网边界ACL规则。支持一次删除多条规则。
  * @method Models\DeleteNatAclRuleResponse DeleteNatAclRule(Models\DeleteNatAclRuleRequest $req) 删除NAT ACL规则
  * @method Models\DeleteRuleGroupResponse DeleteRuleGroup(Models\DeleteRuleGroupRequest $req) 删除规则组
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则（规则组管理）
  * @method Models\DeleteStrategyResponse DeleteStrategy(Models\DeleteStrategyRequest $req) 删除策略
  * @method Models\DeleteVpcAclRuleResponse DeleteVpcAclRule(Models\DeleteVpcAclRuleRequest $req) 删除VPC ACL规则
+ * @method Models\DescribeAccountGroupsResponse DescribeAccountGroups(Models\DescribeAccountGroupsRequest $req) 获取账户组列表，支持分页和关键词搜索
  * @method Models\DescribeEdgeAclRulesResponse DescribeEdgeAclRules(Models\DescribeEdgeAclRulesRequest $req) 查询指定规则组下的互联网边界ACL规则列表。支持分页和多种过滤条件。
  * @method Models\DescribeNatAclRulesResponse DescribeNatAclRules(Models\DescribeNatAclRulesRequest $req) 查询NAT ACL规则列表
  * @method Models\DescribeOrganMembersResponse DescribeOrganMembers(Models\DescribeOrganMembersRequest $req) 查询集团下所有纳管成员账号列表，支持分页、排序和多条件筛选，仅管理员可调用
@@ -59,8 +62,12 @@ use TencentCloud\Fwm\V20250611\Models as Models;
  * @method Models\DescribeVpcAclRulesResponse DescribeVpcAclRules(Models\DescribeVpcAclRulesRequest $req) 查询VPC ACL规则列表
  * @method Models\DispatchStrategyResponse DispatchStrategy(Models\DispatchStrategyRequest $req) 下发策略
  * @method Models\IgnorePolicyRiskResponse IgnorePolicyRisk(Models\IgnorePolicyRiskRequest $req) 忽略策略问题
+ * @method Models\ModifyAccountGroupResponse ModifyAccountGroup(Models\ModifyAccountGroupRequest $req) 修改账户组名称
+ * @method Models\ModifyCfwManagedResponse ModifyCfwManaged(Models\ModifyCfwManagedRequest $req) 设置成员账号的云防火墙纳管状态
+ * @method Models\ModifyCfwShareRoleResponse ModifyCfwShareRole(Models\ModifyCfwShareRoleRequest $req) 设置集团成员的云防火墙共享角色（sharer/user/none）。共享者全集团唯一；共享者→使用者禁止直接变更，需先将角色改为 none；设为使用者时必须指定共享者 SharerAppId。仅管理员可操作。
  * @method Models\ModifyEdgeAclRuleResponse ModifyEdgeAclRule(Models\ModifyEdgeAclRuleRequest $req) 修改互联网边界ACL规则。Rule 参数中必须包含 RuleId 用于指定要修改的规则。
  * @method Models\ModifyEdgeAclRuleSequenceResponse ModifyEdgeAclRuleSequence(Models\ModifyEdgeAclRuleSequenceRequest $req) 批量调整互联网边界ACL规则的执行顺序。Sequences 参数必须包含所有受影响的规则序号映射关系。
+ * @method Models\ModifyMemberGroupResponse ModifyMemberGroup(Models\ModifyMemberGroupRequest $req) 设置成员所属账户组，GroupId为空字符串表示移出账户组
  * @method Models\ModifyNatAclRuleResponse ModifyNatAclRule(Models\ModifyNatAclRuleRequest $req) 修改NAT ACL规则
  * @method Models\ModifyNatAclRuleSequenceResponse ModifyNatAclRuleSequence(Models\ModifyNatAclRuleSequenceRequest $req) 调整NAT ACL规则优先级顺序
  * @method Models\ModifyRuleGroupResponse ModifyRuleGroup(Models\ModifyRuleGroupRequest $req) 修改规则组信息（规则组管理）

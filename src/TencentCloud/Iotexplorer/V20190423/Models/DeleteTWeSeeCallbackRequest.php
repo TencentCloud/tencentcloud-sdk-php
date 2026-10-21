@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTWeSeeCallback请求参数结构体
  *
- * @method string getCallbackId() 获取回调目标 ID，格式为 `callback-` + 8 位小写字母数字
- * @method void setCallbackId(string $CallbackId) 设置回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+ * @method string getCallbackId() 获取<p>回调目标 ID</p>
+ * @method void setCallbackId(string $CallbackId) 设置<p>回调目标 ID</p>
  */
 class DeleteTWeSeeCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+     * @var string <p>回调目标 ID</p>
      */
     public $CallbackId;
 
     /**
-     * @param string $CallbackId 回调目标 ID，格式为 `callback-` + 8 位小写字母数字
+     * @param string $CallbackId <p>回调目标 ID</p>
      */
     function __construct()
     {

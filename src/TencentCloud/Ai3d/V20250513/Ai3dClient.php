@@ -28,7 +28,9 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\DescribeHunyuanTo3DMotionJobResponse DescribeHunyuanTo3DMotionJob(Models\DescribeHunyuanTo3DMotionJobRequest $req) 查询组件生成任务。
  * @method Models\DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJob(Models\DescribeHunyuanTo3DUVJobRequest $req) 查询组件拆分任务。
- * @method Models\DescribeProfileTo3DJobResponse DescribeProfileTo3DJob(Models\DescribeProfileTo3DJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\DescribeProfileTo3DJobResponse DescribeProfileTo3DJob(Models\DescribeProfileTo3DJobRequest $req) 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+
+混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\DescribeReduceFaceJobResponse DescribeReduceFaceJob(Models\DescribeReduceFaceJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
@@ -49,7 +51,9 @@ use TencentCloud\Ai3d\V20250513\Models as Models;
  * @method Models\SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(Models\SubmitHunyuanTo3DRapidJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJob(Models\SubmitHunyuanTo3DUVJobRequest $req) 输入模型后，可根据模型纹理进行UV展开，输出对应UV贴图。
- * @method Models\SubmitProfileTo3DJobResponse SubmitProfileTo3DJob(Models\SubmitProfileTo3DJobRequest $req) 混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+ * @method Models\SubmitProfileTo3DJobResponse SubmitProfileTo3DJob(Models\SubmitProfileTo3DJobRequest $req) 混元旧模型即将下线，对应模型云侧绑定的接口需下线处理，目前无客户调用，且产品侧已经通知客户。
+
+混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
  * @method Models\SubmitReduceFaceJobResponse SubmitReduceFaceJob(Models\SubmitReduceFaceJobRequest $req) 混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
 默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。

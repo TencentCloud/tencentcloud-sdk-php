@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsMigrated() 获取<p>是否是迁移的节点</p><p>默认值：false</p>
+ * @method void setIsMigrated(boolean $IsMigrated) 设置<p>是否是迁移的节点</p><p>默认值：false</p>
+ * @method string getResourceId() 获取<p>资源 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源 ID</p>
  */
 class NativeNodeInfo extends AbstractModel
 {
@@ -273,6 +277,16 @@ class NativeNodeInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean <p>是否是迁移的节点</p><p>默认值：false</p>
+     */
+    public $IsMigrated;
+
+    /**
+     * @var string <p>资源 ID</p>
+     */
+    public $ResourceId;
+
+    /**
      * @param string $MachineName <p>节点名称</p>
      * @param string $MachineState <p>Machine 状态</p>
      * @param string $Zone <p>Machine 所在可用区</p>
@@ -316,6 +330,8 @@ class NativeNodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags <p>原生节点云标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsMigrated <p>是否是迁移的节点</p><p>默认值：false</p>
+     * @param string $ResourceId <p>资源 ID</p>
      */
     function __construct()
     {
@@ -461,6 +477,14 @@ class NativeNodeInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsMigrated",$param) and $param["IsMigrated"] !== null) {
+            $this->IsMigrated = $param["IsMigrated"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

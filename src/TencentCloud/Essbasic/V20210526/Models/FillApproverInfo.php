@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置<p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
  * @method string getFlowId() 获取<p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
  * @method void setFlowId(string $FlowId) 设置<p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
+ * @method string getPinCode() 获取<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+ * @method void setPinCode(string $PinCode) 设置<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
  */
 class FillApproverInfo extends AbstractModel
 {
@@ -96,6 +98,11 @@ class FillApproverInfo extends AbstractModel
     public $FlowId;
 
     /**
+     * @var string <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public $PinCode;
+
+    /**
      * @param string $RecipientId <p>签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。</p>
      * @param string $OpenId <p>指定企业经办签署人OpenId</p><p>注: <code>签署人OpenId未实名时，需要传入签署人姓名以及手机号码。</code></p>
      * @param string $ApproverName <p>签署人姓名</p>
@@ -106,6 +113,7 @@ class FillApproverInfo extends AbstractModel
      * @param string $ApproverIdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD 中国大陆居民身份证</li><li>HONGKONG_AND_MACAO 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>注:补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</p>
      * @param string $ApproverIdCardNumber <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul><p>注：<code>补充个人签署方时，若该用户已在电子签完成实名则可通过指定姓名和证件类型、证件号码完成补充。</code></p>
      * @param string $FlowId <p>合同流程ID</p><ul><li>补充合同组子合同动态签署人时必传。</li><li>补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明</li></ul>
+     * @param string $PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class FillApproverInfo extends AbstractModel
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("PinCode",$param) and $param["PinCode"] !== null) {
+            $this->PinCode = $param["PinCode"];
         }
     }
 }

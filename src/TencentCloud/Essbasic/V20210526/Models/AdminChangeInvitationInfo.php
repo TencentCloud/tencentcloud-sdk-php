@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewAdminIdCardType(string $NewAdminIdCardType) 设置<p>组织机构要变更的超管证件类型支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>跟超管变更的操作人保持一致。</p><p>枚举值：</p><ul><li>ID_CARD： 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO： 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN： 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
  * @method string getNewAdminIdCardNumber() 获取<p>组织机构新超管证件号。 跟超管变更的操作人保持一致。</p>
  * @method void setNewAdminIdCardNumber(string $NewAdminIdCardNumber) 设置<p>组织机构新超管证件号。 跟超管变更的操作人保持一致。</p>
- * @method array getAuthFiles() 获取<p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
- * @method void setAuthFiles(array $AuthFiles) 设置<p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+ * @method array getAuthFiles() 获取<p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
+ * @method void setAuthFiles(array $AuthFiles) 设置<p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
  */
 class AdminChangeInvitationInfo extends AbstractModel
 {
@@ -75,7 +75,7 @@ class AdminChangeInvitationInfo extends AbstractModel
     public $NewAdminIdCardNumber;
 
     /**
-     * @var array <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+     * @var array <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
      */
     public $AuthFiles;
 
@@ -87,7 +87,7 @@ class AdminChangeInvitationInfo extends AbstractModel
      * @param string $NewAdminMobile <p>组织机构要变更的超管手机号。 跟超管变更的操作人保持一致。</p>
      * @param string $NewAdminIdCardType <p>组织机构要变更的超管证件类型支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul><p>跟超管变更的操作人保持一致。</p><p>枚举值：</p><ul><li>ID_CARD： 中国大陆居民身份证 (默认值)</li><li>HONGKONG_AND_MACAO： 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN： 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
      * @param string $NewAdminIdCardNumber <p>组织机构新超管证件号。 跟超管变更的操作人保持一致。</p>
-     * @param array $AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p>
+     * @param array $AuthFiles <p>授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。</p><p> p.s. 如果上传授权书 ，需遵循以下条件 1. 超管的信息（超管姓名，超管手机号）必须为必填参数。</p><p>入参限制：在<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchAdminChangeInvitationsUrl">批量变更超管接口</a>，超管授权书为必填参数</p>
      */
     function __construct()
     {

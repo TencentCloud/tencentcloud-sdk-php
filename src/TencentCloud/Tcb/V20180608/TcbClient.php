@@ -97,6 +97,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateStaticStoreResponse CreateStaticStore(Models\CreateStaticStoreRequest $req) 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建tcb用户
+ * @method Models\CreateUserKeyResponse CreateUserKey(Models\CreateUserKeyRequest $req) 用户创建集成
  * @method Models\DeleteAIModelResponse DeleteAIModel(Models\DeleteAIModelRequest $req) 删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
 
 注意：
@@ -121,6 +122,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
 
 接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
+ * @method Models\DeleteUserKeyResponse DeleteUserKey(Models\DeleteUserKeyRequest $req) 用户删除集成
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除tcb用户
  * @method Models\DescribeAIModelsResponse DescribeAIModels(Models\DescribeAIModelsRequest $req) 查询指定云开发环境下已配置的 AI 模型分组列表。返回结果包含该环境下所有类型的模型分组（自定义类型 custom、内置类型 builtin），以及各分组下的模型列表、服务地址、启用状态等配置信息。
 
@@ -250,7 +252,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DownloadFunctionResponse DownloadFunction(Models\DownloadFunctionRequest $req) 获取云函数地址并下载zip包
  * @method Models\ExecutePGSqlResponse ExecutePGSql(Models\ExecutePGSqlRequest $req) 在Postgres数据库上执行SQL
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 获取云函数详情
+ * @method Models\GetOneUserKeyResponse GetOneUserKey(Models\GetOneUserKeyRequest $req) 用户获取集成详情
  * @method Models\GetProvidersResponse GetProviders(Models\GetProvidersRequest $req) 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
+ * @method Models\GetUserKeyListResponse GetUserKeyList(Models\GetUserKeyListRequest $req) 用户获取集成列表
  * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) 该接口根据传入的查询参数返回相关函数信息。
  * @method Models\ListPGUserMigrationsResponse ListPGUserMigrations(Models\ListPGUserMigrationsRequest $req) 本接口（ListPGUserMigrations）用于查询目标环境已应用的用户 migration 列表。
  * @method Models\ListTablesResponse ListTables(Models\ListTablesRequest $req) 本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
@@ -326,6 +330,7 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) 更新云函数代码
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) 该接口根据传入参数更新函数配置。
  * @method Models\UpdateTableResponse UpdateTable(Models\UpdateTableRequest $req) 本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引。
+ * @method Models\UpdateUserKeyResponse UpdateUserKey(Models\UpdateUserKeyRequest $req) 用户更新集成信息
  * @method Models\UpgradePGInstanceToDedicatedResponse UpgradePGInstanceToDedicated(Models\UpgradePGInstanceToDedicatedRequest $req) 本接口（UpgradePGInstanceToDedicated）用于共享PG升级独享PG。
  * @method Models\VerifyHTTPServiceRouteResponse VerifyHTTPServiceRoute(Models\VerifyHTTPServiceRouteRequest $req) 覆盖的校验项包括：
 1. Ownership：域名所有权（TXT/CNAME 记录）；

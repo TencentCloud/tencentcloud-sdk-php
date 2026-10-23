@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMigrateRateLimit请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method void setJobId(string $JobId) 设置迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- * @method integer getDumpThread() 获取迁移任务全量导出线程数、有效值为 1-16
- * @method void setDumpThread(integer $DumpThread) 设置迁移任务全量导出线程数、有效值为 1-16
- * @method integer getDumpRps() 获取迁移全量导出的 Rps 限制、需要大于 0
- * @method void setDumpRps(integer $DumpRps) 设置迁移全量导出的 Rps 限制、需要大于 0
- * @method integer getLoadThread() 获取迁移任务全量导入线程数、有效值为 1-16
- * @method void setLoadThread(integer $LoadThread) 设置迁移任务全量导入线程数、有效值为 1-16
- * @method integer getSinkerThread() 获取迁移任务增量导入线程数、有效值为 1-128
- * @method void setSinkerThread(integer $SinkerThread) 设置迁移任务增量导入线程数、有效值为 1-128
- * @method integer getLoadRps() 获取全量导入Rps限制
- * @method void setLoadRps(integer $LoadRps) 设置全量导入Rps限制
+ * @method string getJobId() 获取<p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method integer getDumpThread() 获取<p>迁移任务全量导出线程数、有效值为 1-16</p>
+ * @method void setDumpThread(integer $DumpThread) 设置<p>迁移任务全量导出线程数、有效值为 1-16</p>
+ * @method integer getDumpRps() 获取<p>迁移全量导出的 Rps 限制、需要大于 0</p>
+ * @method void setDumpRps(integer $DumpRps) 设置<p>迁移全量导出的 Rps 限制、需要大于 0</p>
+ * @method integer getLoadThread() 获取<p>迁移任务全量导入线程数、有效值为 1-16</p>
+ * @method void setLoadThread(integer $LoadThread) 设置<p>迁移任务全量导入线程数、有效值为 1-16</p>
+ * @method integer getSinkerThread() 获取<p>迁移任务增量导入线程数、有效值为 1-128</p>
+ * @method void setSinkerThread(integer $SinkerThread) 设置<p>迁移任务增量导入线程数、有效值为 1-128</p>
+ * @method integer getLoadRps() 获取<p>全量导入Rps限制</p>
+ * @method void setLoadRps(integer $LoadRps) 设置<p>全量导入Rps限制</p>
  */
 class ModifyMigrateRateLimitRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @var string <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @var integer 迁移任务全量导出线程数、有效值为 1-16
+     * @var integer <p>迁移任务全量导出线程数、有效值为 1-16</p>
      */
     public $DumpThread;
 
     /**
-     * @var integer 迁移全量导出的 Rps 限制、需要大于 0
+     * @var integer <p>迁移全量导出的 Rps 限制、需要大于 0</p>
      */
     public $DumpRps;
 
     /**
-     * @var integer 迁移任务全量导入线程数、有效值为 1-16
+     * @var integer <p>迁移任务全量导入线程数、有效值为 1-16</p>
      */
     public $LoadThread;
 
     /**
-     * @var integer 迁移任务增量导入线程数、有效值为 1-128
+     * @var integer <p>迁移任务增量导入线程数、有效值为 1-128</p>
      */
     public $SinkerThread;
 
     /**
-     * @var integer 全量导入Rps限制
+     * @var integer <p>全量导入Rps限制</p>
      */
     public $LoadRps;
 
     /**
-     * @param string $JobId 迁移任务 Id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-     * @param integer $DumpThread 迁移任务全量导出线程数、有效值为 1-16
-     * @param integer $DumpRps 迁移全量导出的 Rps 限制、需要大于 0
-     * @param integer $LoadThread 迁移任务全量导入线程数、有效值为 1-16
-     * @param integer $SinkerThread 迁移任务增量导入线程数、有效值为 1-128
-     * @param integer $LoadRps 全量导入Rps限制
+     * @param string $JobId <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param integer $DumpThread <p>迁移任务全量导出线程数、有效值为 1-16</p>
+     * @param integer $DumpRps <p>迁移全量导出的 Rps 限制、需要大于 0</p>
+     * @param integer $LoadThread <p>迁移任务全量导入线程数、有效值为 1-16</p>
+     * @param integer $SinkerThread <p>迁移任务增量导入线程数、有效值为 1-128</p>
+     * @param integer $LoadRps <p>全量导入Rps限制</p>
      */
     function __construct()
     {

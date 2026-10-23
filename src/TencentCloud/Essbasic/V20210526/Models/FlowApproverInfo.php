@@ -48,8 +48,8 @@ RecipientId参数获取：
  * @method void setOpenId(string $OpenId) 设置<p>第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成</p><p>当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程</p><p>注：<br>如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）</p>
  * @method string getOrganizationOpenId() 获取<p>同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符</p>
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置<p>同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符</p>
- * @method string getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
- * @method void setApproverType(string $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+ * @method string getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
+ * @method void setApproverType(string $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
  * @method string getRecipientId() 获取<p>签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；</p>
  * @method void setRecipientId(string $RecipientId) 设置<p>签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；</p>
  * @method integer getDeadline() 获取<p>签署人的签署截止时间，格式为Unix标准时间戳（秒）</p><p>注: <code>若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同</code></p>
@@ -90,6 +90,8 @@ RecipientId参数获取：
  * @method void setSignEndpoints(array $SignEndpoints) 设置<p>进入签署流程的限制，目前支持以下选项：</p><ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  * @method string getApproverEmail() 获取<p>用户指定的邮箱地址</p>
  * @method void setApproverEmail(string $ApproverEmail) 设置<p>用户指定的邮箱地址</p>
+ * @method string getPinCode() 获取<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+ * @method void setPinCode(string $PinCode) 设置<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -134,7 +136,7 @@ class FlowApproverInfo extends AbstractModel
     public $OrganizationOpenId;
 
     /**
-     * @var string <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+     * @var string <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      */
     public $ApproverType;
 
@@ -240,6 +242,11 @@ class FlowApproverInfo extends AbstractModel
     public $ApproverEmail;
 
     /**
+     * @var string <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public $PinCode;
+
+    /**
      * @param string $Name <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
      * @param string $IdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
      * @param string $IdCardNumber <p>签署方经办人的证件号码，应符合以下规则</p><ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li><li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li><li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
@@ -248,7 +255,7 @@ class FlowApproverInfo extends AbstractModel
      * @param boolean $NotChannelOrganization <p>指定签署人非第三方平台子客企业下员工还是SaaS平台企业，在ApproverType为ORGANIZATION时指定。</p><ul><li>false: 默认值，第三方平台子客企业下员工</li><li>true: SaaS平台企业下的员工</li></ul>
      * @param string $OpenId <p>第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成</p><p>当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程</p><p>注：<br>如果传进来的<font color="red">OpenId已经实名并且加入企业， 则忽略Name，IdCardType，IdCardNumber，Mobile这四个入参</font>（会用此OpenId实名的身份证和登录的手机号覆盖）</p>
      * @param string $OrganizationOpenId <p>同应用下第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样，签署方为非发起方企业场景下必传，最大长度64个字符</p>
-     * @param string $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:<ul><li> <strong>PERSON</strong> :个人/自然人</li><li> <strong>PERSON_AUTO_SIGN</strong> :个人/自然人“授权签”，适用于个人“授权签”场景</li><li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li><li> <strong>ENTERPRISESERVER</strong> :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code><code>2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：</code><ul><li>条件1：ApproverType 设置为ENTERPRISESERVER</li><li>条件2：子客之间完成授权</li><li>条件3：联系对接的客户经理沟通如何使用</li></ul></p>
+     * @param string $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><ul>    <li> **PERSON** :个人/自然人</li>    <li> **PERSON_AUTO_SIGN** :个人/自然人“授权签”，适用于个人“授权签”场景</li>    <li> **ORGANIZATION** :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>    <li> **ENTERPRISESERVER** :企业/企业员工“授权签”（他方企业“授权签”或文件发起时的本方企业“授权签”）</li>    <li> **ORGANIZATION_PIN_CODE_SIGN** :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>    <li> **OTHER_ORGANIZATION_PIN_CODE_SIGN** :他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></li>    <li> **PERSON_PIN_CODE_SIGN** :个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></li></ul>注:  <code>1. 个人“授权签”场景(PERSON_AUTO_SIGN)为白名单功能, 使用前请联系对接的客户经理沟通。</code>`2. 若要实现他方企业（同一应用下）“授权签”，需要满足3个条件：`    <ul><li>条件1：ApproverType 设置为ENTERPRISESERVER    </li><li>条件2：子客之间完成授权    </li><li>条件3：联系对接的客户经理沟通如何使用</li></ul>
      * @param string $RecipientId <p>签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；</p>
      * @param integer $Deadline <p>签署人的签署截止时间，格式为Unix标准时间戳（秒）</p><p>注: <code>若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同</code></p>
      * @param string $CallbackUrl <p>签署完回调url，最大长度1000个字符</p>
@@ -269,6 +276,7 @@ class FlowApproverInfo extends AbstractModel
      * @param Intention $Intention <p><b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。</p><p>您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。</p><p>注意：</p><ol><li>视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。</li><li>使用视频认证时，<b>生成H5签署链接的时候必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。</li><li>签署完成后，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelDescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。</li></ol>
      * @param array $SignEndpoints <p>进入签署流程的限制，目前支持以下选项：</p><ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
      * @param string $ApproverEmail <p>用户指定的邮箱地址</p>
+     * @param string $PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
      */
     function __construct()
     {
@@ -414,6 +422,10 @@ class FlowApproverInfo extends AbstractModel
 
         if (array_key_exists("ApproverEmail",$param) and $param["ApproverEmail"] !== null) {
             $this->ApproverEmail = $param["ApproverEmail"];
+        }
+
+        if (array_key_exists("PinCode",$param) and $param["PinCode"] !== null) {
+            $this->PinCode = $param["PinCode"];
         }
     }
 }

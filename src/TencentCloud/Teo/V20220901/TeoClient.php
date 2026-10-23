@@ -215,6 +215,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeLoadBalancerListResponse DescribeLoadBalancerList(Models\DescribeLoadBalancerListRequest $req) 查询负载均衡实例列表。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
  * @method Models\DescribeLogAnalysisDetailResponse DescribeLogAnalysisDetail(Models\DescribeLogAnalysisDetailRequest $req) 本接口用以查询日志分析日志详情，数据来自站点下实时日志推送任务目的地为 "log-analysis" 的任务推送的日志数据。
  * @method Models\DescribeLogAnalysisDownloadTasksResponse DescribeLogAnalysisDownloadTasks(Models\DescribeLogAnalysisDownloadTasksRequest $req) 本接口用以查询日志分析日志下载任务列表。注意：只保留最近三天的下载任务记录。
+ * @method Models\DescribeLogAnalysisStatisticsResponse DescribeLogAnalysisStatistics(Models\DescribeLogAnalysisStatisticsRequest $req) 本接口用于日志分析统计结果查询。用户在检索语句后追加 SQL 聚合语句（[检索条件] | [SQL语句]），后端执行聚合并返回列式统计结果（列定义 + 数据行）。
  * @method Models\DescribeMultiPathGatewayResponse DescribeMultiPathGateway(Models\DescribeMultiPathGatewayRequest $req) 通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
  * @method Models\DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLine(Models\DescribeMultiPathGatewayLineRequest $req) 通过本接口查询接入多通道安全加速网关的线路。包括直连、EdgeOne 四层代理线路、自定义线路。
  * @method Models\DescribeMultiPathGatewayOriginACLResponse DescribeMultiPathGatewayOriginACL(Models\DescribeMultiPathGatewayOriginACLRequest $req) 本接口用于查询多通道安全加速网关实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。若 MultiPathGatewayNextOriginACL 字段有返回值，则需要将最新的回源 IP 网段同步到源站防火墙配置中。

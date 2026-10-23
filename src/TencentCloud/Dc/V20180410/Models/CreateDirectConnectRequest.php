@@ -20,218 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDirectConnect请求参数结构体
  *
- * @method string getDirectConnectName() 获取物理专线的名称。
- * @method void setDirectConnectName(string $DirectConnectName) 设置物理专线的名称。
- * @method string getAccessPointId() 获取物理专线所在的接入点。
-您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
- * @method void setAccessPointId(string $AccessPointId) 设置物理专线所在的接入点。
-您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
- * @method string getLineOperator() 获取提供接入物理专线的运营商。
-ChinaTelecom：中国电信； 
-ChinaMobile：中国移动；
-ChinaUnicom：中国联通；
- In-houseWiring：楼内线；
-ChinaOther：中国其他；
- InternationalOperator：境外其他。
- * @method void setLineOperator(string $LineOperator) 设置提供接入物理专线的运营商。
-ChinaTelecom：中国电信； 
-ChinaMobile：中国移动；
-ChinaUnicom：中国联通；
- In-houseWiring：楼内线；
-ChinaOther：中国其他；
- InternationalOperator：境外其他。
- * @method string getPortType() 获取物理专线接入端口类型，取值：
-100Base-T：百兆电口；
-1000Base-T（默认值）：千兆电口；
-1000Base-LX：千兆单模光口（10千米）；
-10GBase-T：万兆电口；
-10GBase-LR（默认值）：万兆单模光口（10千米）。
- * @method void setPortType(string $PortType) 设置物理专线接入端口类型，取值：
-100Base-T：百兆电口；
-1000Base-T（默认值）：千兆电口；
-1000Base-LX：千兆单模光口（10千米）；
-10GBase-T：万兆电口；
-10GBase-LR（默认值）：万兆单模光口（10千米）。
- * @method string getCircuitCode() 获取运营商或者服务商为物理专线提供的电路编码。
- * @method void setCircuitCode(string $CircuitCode) 设置运营商或者服务商为物理专线提供的电路编码。
- * @method string getLocation() 获取本地数据中心的地理位置。
- * @method void setLocation(string $Location) 设置本地数据中心的地理位置。
- * @method integer getBandwidth() 获取物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
- * @method void setBandwidth(integer $Bandwidth) 设置物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
- * @method string getRedundantDirectConnectId() 获取冗余物理专线的ID。
- * @method void setRedundantDirectConnectId(string $RedundantDirectConnectId) 设置冗余物理专线的ID。
- * @method integer getVlan() 获取物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
- * @method void setVlan(integer $Vlan) 设置物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
- * @method string getTencentAddress() 获取物理专线调试腾讯侧互联 IP。默认自动分配。
- * @method void setTencentAddress(string $TencentAddress) 设置物理专线调试腾讯侧互联 IP。默认自动分配。
- * @method string getCustomerAddress() 获取物理专线调试用户侧互联 IP。默认自动分配。
- * @method void setCustomerAddress(string $CustomerAddress) 设置物理专线调试用户侧互联 IP。默认自动分配。
- * @method string getCustomerName() 获取物理专线申请者姓名。默认从账户体系获取。
- * @method void setCustomerName(string $CustomerName) 设置物理专线申请者姓名。默认从账户体系获取。
- * @method string getCustomerContactMail() 获取物理专线申请者联系邮箱。默认从账户体系获取。
- * @method void setCustomerContactMail(string $CustomerContactMail) 设置物理专线申请者联系邮箱。默认从账户体系获取。
- * @method string getCustomerContactNumber() 获取物理专线申请者联系号码。默认从账户体系获取。
- * @method void setCustomerContactNumber(string $CustomerContactNumber) 设置物理专线申请者联系号码。默认从账户体系获取。
- * @method string getFaultReportContactPerson() 获取报障联系人。
- * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
- * @method string getFaultReportContactNumber() 获取报障联系电话。
- * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
- * @method string getFaultReportContactEmail() 获取报障联系邮箱。
- * @method void setFaultReportContactEmail(string $FaultReportContactEmail) 设置报障联系邮箱。
- * @method boolean getSignLaw() 获取物理专线申请者是否签署了用户使用协议。默认已签署。
- * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者是否签署了用户使用协议。默认已签署。
- * @method array getTags() 获取标签键值对
- * @method void setTags(array $Tags) 设置标签键值对
- * @method boolean getIsMacSec() 获取是否MACsec需求
- * @method void setIsMacSec(boolean $IsMacSec) 设置是否MACsec需求
+ * @method string getDirectConnectName() 获取<p>物理专线的名称。</p>
+ * @method void setDirectConnectName(string $DirectConnectName) 设置<p>物理专线的名称。</p>
+ * @method string getAccessPointId() 获取<p>物理专线所在的接入点。<br>您可以通过调用<a href="https://cloud.tencent.com/document/product/216/34827">DescribeAccessPoints</a>接口获取接入点ID。</p>
+ * @method void setAccessPointId(string $AccessPointId) 设置<p>物理专线所在的接入点。<br>您可以通过调用<a href="https://cloud.tencent.com/document/product/216/34827">DescribeAccessPoints</a>接口获取接入点ID。</p>
+ * @method string getLineOperator() 获取<p>提供接入物理专线的运营商。<br>ChinaTelecom：中国电信；<br>ChinaMobile：中国移动；<br>ChinaUnicom：中国联通；<br> In-houseWiring：楼内线；<br>ChinaOther：中国其他；<br> InternationalOperator：境外其他。</p>
+ * @method void setLineOperator(string $LineOperator) 设置<p>提供接入物理专线的运营商。<br>ChinaTelecom：中国电信；<br>ChinaMobile：中国移动；<br>ChinaUnicom：中国联通；<br> In-houseWiring：楼内线；<br>ChinaOther：中国其他；<br> InternationalOperator：境外其他。</p>
+ * @method string getPortType() 获取<p>物理专线接入端口类型，取值：<br>100Base-T：百兆电口；<br>1000Base-T（默认值）：千兆电口；<br>1000Base-LX：千兆单模光口（10千米）；<br>10GBase-T：万兆电口；<br>10GBase-LR（默认值）：万兆单模光口（10千米）。</p>
+ * @method void setPortType(string $PortType) 设置<p>物理专线接入端口类型，取值：<br>100Base-T：百兆电口；<br>1000Base-T（默认值）：千兆电口；<br>1000Base-LX：千兆单模光口（10千米）；<br>10GBase-T：万兆电口；<br>10GBase-LR（默认值）：万兆单模光口（10千米）。</p>
+ * @method string getCircuitCode() 获取<p>运营商或者服务商为物理专线提供的电路编码。</p>
+ * @method void setCircuitCode(string $CircuitCode) 设置<p>运营商或者服务商为物理专线提供的电路编码。</p>
+ * @method string getLocation() 获取<p>本地数据中心的地理位置。</p>
+ * @method void setLocation(string $Location) 设置<p>本地数据中心的地理位置。</p>
+ * @method integer getBandwidth() 获取<p>物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。</p>
+ * @method void setBandwidth(integer $Bandwidth) 设置<p>物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。</p>
+ * @method string getRedundantDirectConnectId() 获取<p>冗余物理专线的ID。</p>
+ * @method void setRedundantDirectConnectId(string $RedundantDirectConnectId) 设置<p>冗余物理专线的ID。</p>
+ * @method integer getVlan() 获取<p>物理专线调试VLAN。默认开启VLAN，自动分配VLAN。</p>
+ * @method void setVlan(integer $Vlan) 设置<p>物理专线调试VLAN。默认开启VLAN，自动分配VLAN。</p>
+ * @method string getTencentAddress() 获取<p>物理专线调试腾讯侧互联 IP。默认自动分配。</p>
+ * @method void setTencentAddress(string $TencentAddress) 设置<p>物理专线调试腾讯侧互联 IP。默认自动分配。</p>
+ * @method string getCustomerAddress() 获取<p>物理专线调试用户侧互联 IP。默认自动分配。</p>
+ * @method void setCustomerAddress(string $CustomerAddress) 设置<p>物理专线调试用户侧互联 IP。默认自动分配。</p>
+ * @method string getCustomerName() 获取<p>物理专线申请者姓名。默认从账户体系获取。</p>
+ * @method void setCustomerName(string $CustomerName) 设置<p>物理专线申请者姓名。默认从账户体系获取。</p>
+ * @method string getCustomerContactMail() 获取<p>物理专线申请者联系邮箱。默认从账户体系获取。</p>
+ * @method void setCustomerContactMail(string $CustomerContactMail) 设置<p>物理专线申请者联系邮箱。默认从账户体系获取。</p>
+ * @method string getCustomerContactNumber() 获取<p>物理专线申请者联系号码。默认从账户体系获取。</p>
+ * @method void setCustomerContactNumber(string $CustomerContactNumber) 设置<p>物理专线申请者联系号码。默认从账户体系获取。</p>
+ * @method string getFaultReportContactPerson() 获取<p>报障联系人。</p>
+ * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置<p>报障联系人。</p>
+ * @method string getFaultReportContactNumber() 获取<p>报障联系电话。</p>
+ * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置<p>报障联系电话。</p>
+ * @method string getFaultReportContactEmail() 获取<p>报障联系邮箱。</p>
+ * @method void setFaultReportContactEmail(string $FaultReportContactEmail) 设置<p>报障联系邮箱。</p>
+ * @method boolean getSignLaw() 获取<p>物理专线申请者是否签署了用户使用协议。默认已签署。</p>
+ * @method void setSignLaw(boolean $SignLaw) 设置<p>物理专线申请者是否签署了用户使用协议。默认已签署。</p>
+ * @method array getTags() 获取<p>标签键值对</p>
+ * @method void setTags(array $Tags) 设置<p>标签键值对</p>
+ * @method boolean getIsMacSec() 获取<p>是否MACsec需求</p>
+ * @method void setIsMacSec(boolean $IsMacSec) 设置<p>是否MACsec需求</p>
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
     /**
-     * @var string 物理专线的名称。
+     * @var string <p>物理专线的名称。</p>
      */
     public $DirectConnectName;
 
     /**
-     * @var string 物理专线所在的接入点。
-您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
+     * @var string <p>物理专线所在的接入点。<br>您可以通过调用<a href="https://cloud.tencent.com/document/product/216/34827">DescribeAccessPoints</a>接口获取接入点ID。</p>
      */
     public $AccessPointId;
 
     /**
-     * @var string 提供接入物理专线的运营商。
-ChinaTelecom：中国电信； 
-ChinaMobile：中国移动；
-ChinaUnicom：中国联通；
- In-houseWiring：楼内线；
-ChinaOther：中国其他；
- InternationalOperator：境外其他。
+     * @var string <p>提供接入物理专线的运营商。<br>ChinaTelecom：中国电信；<br>ChinaMobile：中国移动；<br>ChinaUnicom：中国联通；<br> In-houseWiring：楼内线；<br>ChinaOther：中国其他；<br> InternationalOperator：境外其他。</p>
      */
     public $LineOperator;
 
     /**
-     * @var string 物理专线接入端口类型，取值：
-100Base-T：百兆电口；
-1000Base-T（默认值）：千兆电口；
-1000Base-LX：千兆单模光口（10千米）；
-10GBase-T：万兆电口；
-10GBase-LR（默认值）：万兆单模光口（10千米）。
+     * @var string <p>物理专线接入端口类型，取值：<br>100Base-T：百兆电口；<br>1000Base-T（默认值）：千兆电口；<br>1000Base-LX：千兆单模光口（10千米）；<br>10GBase-T：万兆电口；<br>10GBase-LR（默认值）：万兆单模光口（10千米）。</p>
      */
     public $PortType;
 
     /**
-     * @var string 运营商或者服务商为物理专线提供的电路编码。
+     * @var string <p>运营商或者服务商为物理专线提供的电路编码。</p>
      */
     public $CircuitCode;
 
     /**
-     * @var string 本地数据中心的地理位置。
+     * @var string <p>本地数据中心的地理位置。</p>
      */
     public $Location;
 
     /**
-     * @var integer 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
+     * @var integer <p>物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。</p>
      */
     public $Bandwidth;
 
     /**
-     * @var string 冗余物理专线的ID。
+     * @var string <p>冗余物理专线的ID。</p>
      */
     public $RedundantDirectConnectId;
 
     /**
-     * @var integer 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
+     * @var integer <p>物理专线调试VLAN。默认开启VLAN，自动分配VLAN。</p>
      */
     public $Vlan;
 
     /**
-     * @var string 物理专线调试腾讯侧互联 IP。默认自动分配。
+     * @var string <p>物理专线调试腾讯侧互联 IP。默认自动分配。</p>
      */
     public $TencentAddress;
 
     /**
-     * @var string 物理专线调试用户侧互联 IP。默认自动分配。
+     * @var string <p>物理专线调试用户侧互联 IP。默认自动分配。</p>
      */
     public $CustomerAddress;
 
     /**
-     * @var string 物理专线申请者姓名。默认从账户体系获取。
+     * @var string <p>物理专线申请者姓名。默认从账户体系获取。</p>
      */
     public $CustomerName;
 
     /**
-     * @var string 物理专线申请者联系邮箱。默认从账户体系获取。
+     * @var string <p>物理专线申请者联系邮箱。默认从账户体系获取。</p>
      */
     public $CustomerContactMail;
 
     /**
-     * @var string 物理专线申请者联系号码。默认从账户体系获取。
+     * @var string <p>物理专线申请者联系号码。默认从账户体系获取。</p>
      */
     public $CustomerContactNumber;
 
     /**
-     * @var string 报障联系人。
+     * @var string <p>报障联系人。</p>
      */
     public $FaultReportContactPerson;
 
     /**
-     * @var string 报障联系电话。
+     * @var string <p>报障联系电话。</p>
      */
     public $FaultReportContactNumber;
 
     /**
-     * @var string 报障联系邮箱。
+     * @var string <p>报障联系邮箱。</p>
      */
     public $FaultReportContactEmail;
 
     /**
-     * @var boolean 物理专线申请者是否签署了用户使用协议。默认已签署。
+     * @var boolean <p>物理专线申请者是否签署了用户使用协议。默认已签署。</p>
      */
     public $SignLaw;
 
     /**
-     * @var array 标签键值对
+     * @var array <p>标签键值对</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否MACsec需求
+     * @var boolean <p>是否MACsec需求</p>
      */
     public $IsMacSec;
 
     /**
-     * @param string $DirectConnectName 物理专线的名称。
-     * @param string $AccessPointId 物理专线所在的接入点。
-您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
-     * @param string $LineOperator 提供接入物理专线的运营商。
-ChinaTelecom：中国电信； 
-ChinaMobile：中国移动；
-ChinaUnicom：中国联通；
- In-houseWiring：楼内线；
-ChinaOther：中国其他；
- InternationalOperator：境外其他。
-     * @param string $PortType 物理专线接入端口类型，取值：
-100Base-T：百兆电口；
-1000Base-T（默认值）：千兆电口；
-1000Base-LX：千兆单模光口（10千米）；
-10GBase-T：万兆电口；
-10GBase-LR（默认值）：万兆单模光口（10千米）。
-     * @param string $CircuitCode 运营商或者服务商为物理专线提供的电路编码。
-     * @param string $Location 本地数据中心的地理位置。
-     * @param integer $Bandwidth 物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。
-     * @param string $RedundantDirectConnectId 冗余物理专线的ID。
-     * @param integer $Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-     * @param string $TencentAddress 物理专线调试腾讯侧互联 IP。默认自动分配。
-     * @param string $CustomerAddress 物理专线调试用户侧互联 IP。默认自动分配。
-     * @param string $CustomerName 物理专线申请者姓名。默认从账户体系获取。
-     * @param string $CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
-     * @param string $CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
-     * @param string $FaultReportContactPerson 报障联系人。
-     * @param string $FaultReportContactNumber 报障联系电话。
-     * @param string $FaultReportContactEmail 报障联系邮箱。
-     * @param boolean $SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
-     * @param array $Tags 标签键值对
-     * @param boolean $IsMacSec 是否MACsec需求
+     * @param string $DirectConnectName <p>物理专线的名称。</p>
+     * @param string $AccessPointId <p>物理专线所在的接入点。<br>您可以通过调用<a href="https://cloud.tencent.com/document/product/216/34827">DescribeAccessPoints</a>接口获取接入点ID。</p>
+     * @param string $LineOperator <p>提供接入物理专线的运营商。<br>ChinaTelecom：中国电信；<br>ChinaMobile：中国移动；<br>ChinaUnicom：中国联通；<br> In-houseWiring：楼内线；<br>ChinaOther：中国其他；<br> InternationalOperator：境外其他。</p>
+     * @param string $PortType <p>物理专线接入端口类型，取值：<br>100Base-T：百兆电口；<br>1000Base-T（默认值）：千兆电口；<br>1000Base-LX：千兆单模光口（10千米）；<br>10GBase-T：万兆电口；<br>10GBase-LR（默认值）：万兆单模光口（10千米）。</p>
+     * @param string $CircuitCode <p>运营商或者服务商为物理专线提供的电路编码。</p>
+     * @param string $Location <p>本地数据中心的地理位置。</p>
+     * @param integer $Bandwidth <p>物理专线接入接口带宽，单位为Mbps，默认值为1000，取值范围为 [2, 10240]。</p>
+     * @param string $RedundantDirectConnectId <p>冗余物理专线的ID。</p>
+     * @param integer $Vlan <p>物理专线调试VLAN。默认开启VLAN，自动分配VLAN。</p>
+     * @param string $TencentAddress <p>物理专线调试腾讯侧互联 IP。默认自动分配。</p>
+     * @param string $CustomerAddress <p>物理专线调试用户侧互联 IP。默认自动分配。</p>
+     * @param string $CustomerName <p>物理专线申请者姓名。默认从账户体系获取。</p>
+     * @param string $CustomerContactMail <p>物理专线申请者联系邮箱。默认从账户体系获取。</p>
+     * @param string $CustomerContactNumber <p>物理专线申请者联系号码。默认从账户体系获取。</p>
+     * @param string $FaultReportContactPerson <p>报障联系人。</p>
+     * @param string $FaultReportContactNumber <p>报障联系电话。</p>
+     * @param string $FaultReportContactEmail <p>报障联系邮箱。</p>
+     * @param boolean $SignLaw <p>物理专线申请者是否签署了用户使用协议。默认已签署。</p>
+     * @param array $Tags <p>标签键值对</p>
+     * @param boolean $IsMacSec <p>是否MACsec需求</p>
      */
     function __construct()
     {

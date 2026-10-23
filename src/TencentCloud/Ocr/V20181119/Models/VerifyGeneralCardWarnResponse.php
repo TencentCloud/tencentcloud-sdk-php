@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextWatermark(GeneralCardWarnInfo $TextWatermark) 设置<p>文字水印提示</p>
  * @method string getWatermarkContent() 获取<p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
  * @method void setWatermarkContent(string $WatermarkContent) 设置<p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
+ * @method ReasoningResult getReasoningResult() 获取<p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+ * @method void setReasoningResult(ReasoningResult $ReasoningResult) 设置<p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+ * @method string getIsKeyFieldTamper() 获取<p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+ * @method void setIsKeyFieldTamper(string $IsKeyFieldTamper) 设置<p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -124,6 +128,16 @@ class VerifyGeneralCardWarnResponse extends AbstractModel
     public $WatermarkContent;
 
     /**
+     * @var ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     */
+    public $ReasoningResult;
+
+    /**
+     * @var string <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
+     */
+    public $IsKeyFieldTamper;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -143,6 +157,8 @@ class VerifyGeneralCardWarnResponse extends AbstractModel
      * @param GeneralCardWarnInfo $Electron <p>电子证照提示（目前仅支持电子身份证、电子营业执照识别）</p>
      * @param GeneralCardWarnInfo $TextWatermark <p>文字水印提示</p>
      * @param string $WatermarkContent <p>水印内容，当未检测到文字水印时不返回，返回多组水印时以 | 分隔。</p>
+     * @param ReasoningResult $ReasoningResult <p>VLM 推理结果。仅当请求中传入 ReasoningPrompt 时返回，否则不返回此字段。</p>
+     * @param string $IsKeyFieldTamper <p>是否关键字段被篡改（用于排除卡证背景等非字段区域篡改），目前支持的卡证类型：行驶证、驾驶证。<br>枚举值：<br>是<br>否<br>暂不支持</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -225,6 +241,15 @@ class VerifyGeneralCardWarnResponse extends AbstractModel
 
         if (array_key_exists("WatermarkContent",$param) and $param["WatermarkContent"] !== null) {
             $this->WatermarkContent = $param["WatermarkContent"];
+        }
+
+        if (array_key_exists("ReasoningResult",$param) and $param["ReasoningResult"] !== null) {
+            $this->ReasoningResult = new ReasoningResult();
+            $this->ReasoningResult->deserialize($param["ReasoningResult"]);
+        }
+
+        if (array_key_exists("IsKeyFieldTamper",$param) and $param["IsKeyFieldTamper"] !== null) {
+            $this->IsKeyFieldTamper = $param["IsKeyFieldTamper"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

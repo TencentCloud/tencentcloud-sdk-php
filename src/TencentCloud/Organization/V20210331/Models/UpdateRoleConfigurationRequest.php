@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateRoleConfiguration请求参数结构体
  *
- * @method string getZoneId() 获取空间 ID
- * @method void setZoneId(string $ZoneId) 设置空间 ID
- * @method string getRoleConfigurationId() 获取权限配置 ID
- * @method void setRoleConfigurationId(string $RoleConfigurationId) 设置权限配置 ID
- * @method string getNewDescription() 获取新的权限配置描述。  长度：最大 1024 个字符。
- * @method void setNewDescription(string $NewDescription) 设置新的权限配置描述。  长度：最大 1024 个字符。
- * @method integer getNewSessionDuration() 获取新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
- * @method void setNewSessionDuration(integer $NewSessionDuration) 设置新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
- * @method string getNewRelayState() 获取新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
- * @method void setNewRelayState(string $NewRelayState) 设置新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+ * @method string getZoneId() 获取<p>空间 ID</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>空间 ID</p>
+ * @method string getRoleConfigurationId() 获取<p>权限配置 ID</p>
+ * @method void setRoleConfigurationId(string $RoleConfigurationId) 设置<p>权限配置 ID</p>
+ * @method string getNewDescription() 获取<p>新的权限配置描述。  长度：最大 1024 个字符。</p>
+ * @method void setNewDescription(string $NewDescription) 设置<p>新的权限配置描述。  长度：最大 1024 个字符。</p>
+ * @method integer getNewSessionDuration() 获取<p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
+ * @method void setNewSessionDuration(integer $NewSessionDuration) 设置<p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
+ * @method string getNewRelayState() 获取<p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
+ * @method void setNewRelayState(string $NewRelayState) 设置<p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
+ * @method boolean getIsApply() 获取<p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+ * @method void setIsApply(boolean $IsApply) 设置<p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
  */
 class UpdateRoleConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string 空间 ID
+     * @var string <p>空间 ID</p>
      */
     public $ZoneId;
 
     /**
-     * @var string 权限配置 ID
+     * @var string <p>权限配置 ID</p>
      */
     public $RoleConfigurationId;
 
     /**
-     * @var string 新的权限配置描述。  长度：最大 1024 个字符。
+     * @var string <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
      */
     public $NewDescription;
 
     /**
-     * @var integer 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * @var integer <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
      */
     public $NewSessionDuration;
 
     /**
-     * @var string 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * @var string <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
      */
     public $NewRelayState;
 
     /**
-     * @param string $ZoneId 空间 ID
-     * @param string $RoleConfigurationId 权限配置 ID
-     * @param string $NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
-     * @param integer $NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
-     * @param string $NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * @var boolean <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
+     */
+    public $IsApply;
+
+    /**
+     * @param string $ZoneId <p>空间 ID</p>
+     * @param string $RoleConfigurationId <p>权限配置 ID</p>
+     * @param string $NewDescription <p>新的权限配置描述。  长度：最大 1024 个字符。</p>
+     * @param integer $NewSessionDuration <p>新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。</p>
+     * @param string $NewRelayState <p>新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。</p>
+     * @param boolean $IsApply <p>true=保存并应用（立即下发）；false/缺省=仅保存</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdateRoleConfigurationRequest extends AbstractModel
 
         if (array_key_exists("NewRelayState",$param) and $param["NewRelayState"] !== null) {
             $this->NewRelayState = $param["NewRelayState"];
+        }
+
+        if (array_key_exists("IsApply",$param) and $param["IsApply"] !== null) {
+            $this->IsApply = $param["IsApply"];
         }
     }
 }

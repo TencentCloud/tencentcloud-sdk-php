@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCoresCount(integer $TotalCoresCount) 设置<p>总核数</p>
  * @method integer getDefendCoresCount() 获取<p>已防护核数</p>
  * @method void setDefendCoresCount(integer $DefendCoresCount) 设置<p>已防护核数</p>
- * @method integer getAuditLogSwitchStatus() 获取<p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
- * @method void setAuditLogSwitchStatus(integer $AuditLogSwitchStatus) 设置<p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+ * @method integer getAuditLogSwitchStatus() 获取<p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
+ * @method void setAuditLogSwitchStatus(integer $AuditLogSwitchStatus) 设置<p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
  * @method string getDefendStatus() 获取<p>防护状态<br>已防护: Defended</p>
  * @method void setDefendStatus(string $DefendStatus) 设置<p>防护状态<br>已防护: Defended</p>
  * @method string getRunStatus() 获取<p>集群状态</p>
@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionNameEn(string $RegionNameEn) 设置<p>地域英文名</p>
  * @method integer getUnboundUltimateNodeCount() 获取<p>未绑定旗舰版的节点数量</p>
  * @method void setUnboundUltimateNodeCount(integer $UnboundUltimateNodeCount) 设置<p>未绑定旗舰版的节点数量</p>
+ * @method array getTagItems() 获取<p>资产标签列表</p>
+ * @method void setTagItems(array $TagItems) 设置<p>资产标签列表</p>
+ * @method AssetTagModifyAssetItem getTagModifyInfo() 获取<p>标签修改信息</p>
+ * @method void setTagModifyInfo(AssetTagModifyAssetItem $TagModifyInfo) 设置<p>标签修改信息</p>
  */
 class ClusterListItem extends AbstractModel
 {
@@ -202,7 +206,7 @@ class ClusterListItem extends AbstractModel
     public $DefendCoresCount;
 
     /**
-     * @var integer <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+     * @var integer <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
      */
     public $AuditLogSwitchStatus;
 
@@ -309,6 +313,16 @@ class ClusterListItem extends AbstractModel
     public $UnboundUltimateNodeCount;
 
     /**
+     * @var array <p>资产标签列表</p>
+     */
+    public $TagItems;
+
+    /**
+     * @var AssetTagModifyAssetItem <p>标签修改信息</p>
+     */
+    public $TagModifyInfo;
+
+    /**
      * @param integer $AppID <p>appid</p>
      * @param string $AssetId <p>资产id</p>
      * @param string $ClusterId <p>集群id</p>
@@ -327,7 +341,7 @@ class ClusterListItem extends AbstractModel
      * @param integer $UninstallNodeCount <p>未安装节点总数</p>
      * @param integer $TotalCoresCount <p>总核数</p>
      * @param integer $DefendCoresCount <p>已防护核数</p>
-     * @param integer $AuditLogSwitchStatus <p>审计日志开关<br>(0:关闭 1:开启 2:开启失败 3:关闭失败)</p>
+     * @param integer $AuditLogSwitchStatus <p>审计日志状态<br>0：已关闭<br>1：已开启<br>2：开启失败（失败原因见 AuditLogFailedInfo）<br>3：关闭失败（失败原因见 AuditLogFailedInfo）<br>4：开启中<br>5：关闭中<br>6：不支持（当前集群类型不支持读取审计状态，如边缘集群）<br>7：未知（集群未接入或接入异常，无法判断审计状态）</p><p>枚举值：</p><ul><li>0： 已关闭</li><li>1： 已开启</li><li>2： 开启失败</li><li>3： 关闭失败</li><li>4： 开启中</li><li>5： 关闭中</li><li>6： 不支持</li><li>7： 未知</li></ul>
      * @param string $DefendStatus <p>防护状态<br>已防护: Defended</p>
      * @param string $RunStatus <p>集群状态</p>
      * @param string $Region <p>地域</p>
@@ -348,6 +362,8 @@ class ClusterListItem extends AbstractModel
      * @param string $RegionName <p>地域中文名</p>
      * @param string $RegionNameEn <p>地域英文名</p>
      * @param integer $UnboundUltimateNodeCount <p>未绑定旗舰版的节点数量</p>
+     * @param array $TagItems <p>资产标签列表</p>
+     * @param AssetTagModifyAssetItem $TagModifyInfo <p>标签修改信息</p>
      */
     function __construct()
     {
@@ -521,6 +537,20 @@ class ClusterListItem extends AbstractModel
 
         if (array_key_exists("UnboundUltimateNodeCount",$param) and $param["UnboundUltimateNodeCount"] !== null) {
             $this->UnboundUltimateNodeCount = $param["UnboundUltimateNodeCount"];
+        }
+
+        if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {
+            $this->TagItems = [];
+            foreach ($param["TagItems"] as $key => $value){
+                $obj = new MiniTagItem();
+                $obj->deserialize($value);
+                array_push($this->TagItems, $obj);
+            }
+        }
+
+        if (array_key_exists("TagModifyInfo",$param) and $param["TagModifyInfo"] !== null) {
+            $this->TagModifyInfo = new AssetTagModifyAssetItem();
+            $this->TagModifyInfo->deserialize($param["TagModifyInfo"]);
         }
     }
 }

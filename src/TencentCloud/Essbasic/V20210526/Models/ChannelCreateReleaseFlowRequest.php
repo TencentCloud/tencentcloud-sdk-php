@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置<p>合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。<br>如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。</p>
  * @method string getUserData() 获取<p>调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。</p><p>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。</p><p>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
  * @method void setUserData(string $UserData) 设置<p>调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。</p><p>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。</p><p>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
+ * @method string getFlowName() 获取<p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+ * @method void setFlowName(string $FlowName) 设置<p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
  */
 class ChannelCreateReleaseFlowRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var string <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
+     */
+    public $FlowName;
+
+    /**
      * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      * @param string $NeedRelievedFlowId <p>待解除的签署流程编号(即原签署流程的编号)。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看流程编号在控制台上的位置</a></p>
      * @param RelieveInfo $ReliveInfo <p>解除协议内容, 包括解除理由等信息。</p>
@@ -99,6 +106,7 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
      * @param UserInfo $Operator <p>暂未开放</p>
      * @param integer $Deadline <p>合同流程的签署截止时间，格式为Unix标准时间戳(秒)，如果未设置签署截止时间，则默认为合同流程创建后的7天时截止。<br>如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。</p>
      * @param string $UserData <p>调用方自定义的个性化字段，该字段的值可以是字符串JSON或其他字符串形式，客户可以根据自身需求自定义数据格式并在需要时进行解析。该字段的信息将以Base64编码的形式传输，支持的最大数据大小为20480长度。</p><p>在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。</p><p>回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。</p>
+     * @param string $FlowName <p>合同名称 </p><p>入参限制：如果替换解除协议的签署人中有本企业PIN 码签署人类型，则此字段必填</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ChannelCreateReleaseFlowRequest extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
+            $this->FlowName = $param["FlowName"];
         }
     }
 }

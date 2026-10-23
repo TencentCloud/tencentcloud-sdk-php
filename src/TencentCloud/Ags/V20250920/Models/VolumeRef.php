@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 对 Volume 的引用，其中 Name 或 Id 之一必须不为空
  *
- * @method string getVolumeName() 获取Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+ * @method string getVolumeName() 获取<p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeName(string $VolumeName) 设置Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+ * @method void setVolumeName(string $VolumeName) 设置<p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVolumeId() 获取稳定 Volume ID，格式 vol-xxxxxxxx
+ * @method string getVolumeId() 获取<p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeId(string $VolumeId) 设置稳定 Volume ID，格式 vol-xxxxxxxx
+ * @method void setVolumeId(string $VolumeId) 设置<p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VolumeRef extends AbstractModel
 {
     /**
-     * @var string Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * @var string <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeName;
 
     /**
-     * @var string 稳定 Volume ID，格式 vol-xxxxxxxx
+     * @var string <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeId;
 
     /**
-     * @param string $VolumeName Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId
+     * @param string $VolumeName <p>Volume 名称；服务端在当前认证 AppId 下解析为稳定 VolumeId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VolumeId 稳定 Volume ID，格式 vol-xxxxxxxx
+     * @param string $VolumeId <p>稳定 Volume ID，格式 vol-xxxxxxxx</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getApproverNumber() 获取<p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p>
  * @method void setApproverNumber(integer $ApproverNumber) 设置<p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p>
- * @method string getApproverType() 获取<p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
- * @method void setApproverType(string $ApproverType) 设置<p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+ * @method string getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
+ * @method void setApproverType(string $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
  * @method string getReleasedApproverRecipientId() 获取<p><font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置</p>
  * @method void setReleasedApproverRecipientId(string $ReleasedApproverRecipientId) 设置<p><font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置</p>
  * @method string getName() 获取<p>签署人姓名，最大长度50个字。</p>
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverSignRole(string $ApproverSignRole) 设置<p>参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫<code>甲方</code>,第二个叫<code>乙方</code>,  第三个叫<code>丙方</code>，以此类推。<br>如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。</p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png" alt="image"></p>
  * @method string getApproverSignSealId() 获取<p>印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署</p>
  * @method void setApproverSignSealId(string $ApproverSignSealId) 设置<p>印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署</p>
+ * @method string getPinCode() 获取<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+ * @method void setPinCode(string $PinCode) 设置<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -65,7 +67,7 @@ class ReleasedApprover extends AbstractModel
     public $ApproverNumber;
 
     /**
-     * @var string <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+     * @var string <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
      */
     public $ApproverType;
 
@@ -125,8 +127,13 @@ class ReleasedApprover extends AbstractModel
     public $ApproverSignSealId;
 
     /**
+     * @var string <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public $PinCode;
+
+    /**
      * @param integer $ApproverNumber <p>签署人在原合同签署人列表中的顺序序号(从0开始，按顺序依次递增)。<br>可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人列表。</p>
-     * @param string $ApproverType <p>指定签署人类型，目前支持<ul><li> <strong>ORGANIZATION</strong>：企业(默认值)</li><li> <strong>ENTERPRISESERVER</strong>：企业“授权签”</li></ul></p>
+     * @param string $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:  <ul>          <li> <strong>ORGANIZATION</strong> :企业/企业员工（企业签署方或模板发起时的企业“授权签”）</li>         <li> <strong>ENTERPRISESERVER</strong> :本方企业“授权签”</li> <li> <strong>ORGANIZATION_PIN_CODE_SIGN</strong> :本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code></li>          </ul></p>
      * @param string $ReleasedApproverRecipientId <p><font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置</p>
      * @param string $Name <p>签署人姓名，最大长度50个字。</p>
      * @param string $IdCardType <p>签署方经办人的证件类型，支持以下类型</p><ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li><li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li><li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
@@ -138,6 +145,7 @@ class ReleasedApprover extends AbstractModel
      * @param string $ApproverSignComponentType <p>签署控件类型，支持自定义企业签署方的签署控件类型</p><ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li><li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      * @param string $ApproverSignRole <p>参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫<code>甲方</code>,第二个叫<code>乙方</code>,  第三个叫<code>丙方</code>，以此类推。<br>如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。</p><p><img src="https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png" alt="image"></p>
      * @param string $ApproverSignSealId <p>印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署</p>
+     * @param string $PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>本方企业员工PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
      */
     function __construct()
     {
@@ -202,6 +210,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("ApproverSignSealId",$param) and $param["ApproverSignSealId"] !== null) {
             $this->ApproverSignSealId = $param["ApproverSignSealId"];
+        }
+
+        if (array_key_exists("PinCode",$param) and $param["PinCode"] !== null) {
+            $this->PinCode = $param["PinCode"];
         }
     }
 }

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIPv6AddressesAttributes请求参数结构体
  *
- * @method array getIPv6AddressIds() 获取弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
- * @method void setIPv6AddressIds(array $IPv6AddressIds) 设置弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
- * @method string getIPv6AddressName() 获取弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
- * @method void setIPv6AddressName(string $IPv6AddressName) 设置弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+ * @method array getIPv6AddressIds() 获取<p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
+ * @method void setIPv6AddressIds(array $IPv6AddressIds) 设置<p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
+ * @method string getIPv6AddressName() 获取<p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
+ * @method void setIPv6AddressName(string $IPv6AddressName) 设置<p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
+ * @method boolean getEipVisibleOnEni() 获取<p>是否开启弹性公网IPv6地址网卡可见</p>
+ * @method void setEipVisibleOnEni(boolean $EipVisibleOnEni) 设置<p>是否开启弹性公网IPv6地址网卡可见</p>
  */
 class ModifyIPv6AddressesAttributesRequest extends AbstractModel
 {
     /**
-     * @var array 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
+     * @var array <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
      */
     public $IPv6AddressIds;
 
     /**
-     * @var string 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+     * @var string <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
      */
     public $IPv6AddressName;
 
     /**
-     * @param array $IPv6AddressIds 弹性公网IPv6唯一ID列表。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressIds。
-     * @param string $IPv6AddressName 弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符"-"和下划线"_"，不能包含空格。
+     * @var boolean <p>是否开启弹性公网IPv6地址网卡可见</p>
+     */
+    public $EipVisibleOnEni;
+
+    /**
+     * @param array $IPv6AddressIds <p>弹性公网IPv6唯一ID列表。可以使用<a href="https://cloud.tencent.com/document/api/215/113677">DescribeIPv6Addresses</a>接口获取IPv6AddressIds。</p>
+     * @param string $IPv6AddressName <p>弹性公网IPv6地址名称，长度上限为128个字符，允许使用大小写字母、汉字、数字、连字符&quot;-&quot;和下划线&quot;_&quot;，不能包含空格。</p>
+     * @param boolean $EipVisibleOnEni <p>是否开启弹性公网IPv6地址网卡可见</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyIPv6AddressesAttributesRequest extends AbstractModel
 
         if (array_key_exists("IPv6AddressName",$param) and $param["IPv6AddressName"] !== null) {
             $this->IPv6AddressName = $param["IPv6AddressName"];
+        }
+
+        if (array_key_exists("EipVisibleOnEni",$param) and $param["EipVisibleOnEni"] !== null) {
+            $this->EipVisibleOnEni = $param["EipVisibleOnEni"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置<p>待修改的模型的名称（原始模型名称）</p>
  * @method array getInputModalities() 获取<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
  * @method void setInputModalities(array $InputModalities) 设置<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+ * @method string getNewModelName() 获取<p>新的上游模型名称</p>
+ * @method void setNewModelName(string $NewModelName) 设置<p>新的上游模型名称</p>
+ * @method string getNewModelAlias() 获取<p>新的对外模型名称</p>
+ * @method void setNewModelAlias(string $NewModelAlias) 设置<p>新的对外模型名称</p>
  */
 class ModifyServiceProviderModelAttributesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ModifyServiceProviderModelAttributesRequest extends AbstractModel
     public $InputModalities;
 
     /**
+     * @var string <p>新的上游模型名称</p>
+     */
+    public $NewModelName;
+
+    /**
+     * @var string <p>新的对外模型名称</p>
+     */
+    public $NewModelAlias;
+
+    /**
      * @param string $ServiceProviderId <p>BYOK 实例 ID</p>
      * @param string $ModelName <p>待修改的模型的名称（原始模型名称）</p>
      * @param array $InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @param string $NewModelName <p>新的上游模型名称</p>
+     * @param string $NewModelAlias <p>新的对外模型名称</p>
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyServiceProviderModelAttributesRequest extends AbstractModel
 
         if (array_key_exists("InputModalities",$param) and $param["InputModalities"] !== null) {
             $this->InputModalities = $param["InputModalities"];
+        }
+
+        if (array_key_exists("NewModelName",$param) and $param["NewModelName"] !== null) {
+            $this->NewModelName = $param["NewModelName"];
+        }
+
+        if (array_key_exists("NewModelAlias",$param) and $param["NewModelAlias"] !== null) {
+            $this->NewModelAlias = $param["NewModelAlias"];
         }
     }
 }

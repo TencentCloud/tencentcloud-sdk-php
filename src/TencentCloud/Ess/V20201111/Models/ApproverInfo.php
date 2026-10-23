@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同参与者信息。
  *
- * @method integer getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p><strong>0</strong>：企业</p><p><strong>1</strong>：个人</p><p><strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
- * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p><strong>0</strong>：企业</p><p><strong>1</strong>：个人</p><p><strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+ * @method integer getApproverType() 获取<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: </p><p><strong>0</strong>：企业</p><p> <strong>1</strong>：个人</p><p> <strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p> <strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code> </p><p><strong>8</strong>：本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code> </p><p><strong>9</strong>：他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></p><p> <strong>10</strong>: 个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+ * @method void setApproverType(integer $ApproverType) 设置<p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: </p><p><strong>0</strong>：企业</p><p> <strong>1</strong>：个人</p><p> <strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p> <strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code> </p><p><strong>8</strong>：本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code> </p><p><strong>9</strong>：他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></p><p> <strong>10</strong>: 个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
  * @method string getApproverName() 获取<p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
  * @method void setApproverName(string $ApproverName) 设置<p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
  * @method string getApproverMobile() 获取<p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此合同签署方。</p>
@@ -74,11 +74,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotSaveContact(boolean $NotSaveContact) 设置<p>是否不保存联系人<br>默认 false 保存联系人  true 不保存联系人</p><p>设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。<br>联系人查看可登录<a href="https://test.qian.tencent.cn/console/">电子签控制台</a> 进行查看。<br>如下图位置：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png" alt=""></p>
  * @method string getApproverEmail() 获取<p>客户指定的邮箱信息</p>
  * @method void setApproverEmail(string $ApproverEmail) 设置<p>客户指定的邮箱信息</p>
+ * @method string getPinCode() 获取<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+ * @method void setPinCode(string $PinCode) 设置<h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
  */
 class ApproverInfo extends AbstractModel
 {
     /**
-     * @var integer <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p><strong>0</strong>：企业</p><p><strong>1</strong>：个人</p><p><strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * @var integer <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: </p><p><strong>0</strong>：企业</p><p> <strong>1</strong>：个人</p><p> <strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p> <strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code> </p><p><strong>8</strong>：本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code> </p><p><strong>9</strong>：他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></p><p> <strong>10</strong>: 个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      */
     public $ApproverType;
 
@@ -213,7 +215,12 @@ class ApproverInfo extends AbstractModel
     public $ApproverEmail;
 
     /**
-     * @param integer $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:</p><p><strong>0</strong>：企业</p><p><strong>1</strong>：个人</p><p><strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p><strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
+     * @var string <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public $PinCode;
+
+    /**
+     * @param integer $ApproverType <p>在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下: </p><p><strong>0</strong>：企业</p><p> <strong>1</strong>：个人</p><p> <strong>3</strong>：企业“授权签”注：<code>类型为3（企业“授权签”）时，此接口会默认完成该签署方的签署。“授权签”仅进行盖章操作，不能“授权签”名。</code></p><p> <strong>7</strong>: 个人“授权签”，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code> </p><p><strong>8</strong>：本方企业 PIN 码授权，注：<code>使用前需先完成员工PIN码授权</code> </p><p><strong>9</strong>：他方企业 PIN 码授权，注：<code>使用前需先完成合作方企业PIN码授权</code></p><p> <strong>10</strong>: 个人 PIN 码授权，适用于个人“授权签”场景。注: <code>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</code></p>
      * @param string $ApproverName <p>签署方经办人的姓名。<br>经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。</p>
      * @param string $ApproverMobile <p>签署方经办人手机号码， 支持中国大陆手机号11位数字(无需加+86前缀或其他字符)。<br>请确认手机号所有方为此合同签署方。</p>
      * @param string $OrganizationName <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。<br>如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。</p>
@@ -240,6 +247,7 @@ class ApproverInfo extends AbstractModel
      * @param RegisterInfo $RegisterInfo <p>快速注册相关信息</p>
      * @param boolean $NotSaveContact <p>是否不保存联系人<br>默认 false 保存联系人  true 不保存联系人</p><p>设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。<br>联系人查看可登录<a href="https://test.qian.tencent.cn/console/">电子签控制台</a> 进行查看。<br>如下图位置：<br><img src="https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png" alt=""></p>
      * @param string $ApproverEmail <p>客户指定的邮箱信息</p>
+     * @param string $PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
      */
     function __construct()
     {
@@ -377,6 +385,10 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("ApproverEmail",$param) and $param["ApproverEmail"] !== null) {
             $this->ApproverEmail = $param["ApproverEmail"];
+        }
+
+        if (array_key_exists("PinCode",$param) and $param["PinCode"] !== null) {
+            $this->PinCode = $param["PinCode"];
         }
     }
 }

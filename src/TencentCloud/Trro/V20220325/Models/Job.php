@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，Unix 时间戳（秒）</p>
  * @method string getFinishTime() 获取<p>完成时间，Unix 时间戳（秒），未完成为 0</p>
  * @method void setFinishTime(string $FinishTime) 设置<p>完成时间，Unix 时间戳（秒），未完成为 0</p>
+ * @method string getTaskStatusCount() 获取<p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+ * @method void setTaskStatusCount(string $TaskStatusCount) 设置<p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
  */
 class Job extends AbstractModel
 {
@@ -87,6 +89,11 @@ class Job extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var string <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+     */
+    public $TaskStatusCount;
+
+    /**
      * @param string $JobId <p>任务 ID</p>
      * @param integer $JobType <p>任务类型：1 单视频，2 批量</p><p>枚举值：</p><ul><li>1： 单视频</li><li>2： 批量</li></ul>
      * @param integer $AnnotationType <p>标注模式：3 精标注</p><p>枚举值：</p><ul><li>3： 精标注</li></ul>
@@ -96,6 +103,7 @@ class Job extends AbstractModel
      * @param integer $TotalNumber <p>处理项总数</p>
      * @param string $CreateTime <p>创建时间，Unix 时间戳（秒）</p>
      * @param string $FinishTime <p>完成时间，Unix 时间戳（秒），未完成为 0</p>
+     * @param string $TaskStatusCount <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class Job extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("TaskStatusCount",$param) and $param["TaskStatusCount"] !== null) {
+            $this->TaskStatusCount = $param["TaskStatusCount"];
         }
     }
 }

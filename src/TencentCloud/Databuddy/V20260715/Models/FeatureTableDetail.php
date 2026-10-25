@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * catalog特征表详情
  *
- * @method array getPrimaryKeys() 获取特征表主键字段列表
- * @method void setPrimaryKeys(array $PrimaryKeys) 设置特征表主键字段列表
- * @method string getTimestampField() 获取特征表时间戳字段名称
- * @method void setTimestampField(string $TimestampField) 设置特征表时间戳字段名称
- * @method string getSourceTableName() 获取在线特征表对应的来源表名称（离线表）
- * @method void setSourceTableName(string $SourceTableName) 设置在线特征表对应的来源表名称（离线表）
- * @method string getWorkflowId() 获取在线特征表关联的工作流ID
- * @method void setWorkflowId(string $WorkflowId) 设置在线特征表关联的工作流ID
- * @method string getOnlineTableName() 获取离线特征表对应生成的在线特征表名称
- * @method void setOnlineTableName(string $OnlineTableName) 设置离线特征表对应生成的在线特征表名称
+ * @method array getPrimaryKeys() 获取<p>特征表主键字段列表</p>
+ * @method void setPrimaryKeys(array $PrimaryKeys) 设置<p>特征表主键字段列表</p>
+ * @method string getTimestampField() 获取<p>特征表时间戳字段名称</p>
+ * @method void setTimestampField(string $TimestampField) 设置<p>特征表时间戳字段名称</p>
+ * @method string getSourceTableName() 获取<p>在线特征表对应的来源表名称（离线表）</p>
+ * @method void setSourceTableName(string $SourceTableName) 设置<p>在线特征表对应的来源表名称（离线表）</p>
+ * @method string getWorkflowId() 获取<p>在线特征表关联的工作流ID</p>
+ * @method void setWorkflowId(string $WorkflowId) 设置<p>在线特征表关联的工作流ID</p>
+ * @method string getOnlineTableName() 获取<p>离线特征表对应生成的在线特征表名称</p>
+ * @method void setOnlineTableName(string $OnlineTableName) 设置<p>离线特征表对应生成的在线特征表名称</p>
+ * @method string getOnlineTableType() 获取<p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+ * @method void setOnlineTableType(string $OnlineTableType) 设置<p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+ * @method string getConnectionId() 获取<p>离线特征表对应生成的在线特征表ConnectionId</p>
+ * @method void setConnectionId(string $ConnectionId) 设置<p>离线特征表对应生成的在线特征表ConnectionId</p>
  */
 class FeatureTableDetail extends AbstractModel
 {
     /**
-     * @var array 特征表主键字段列表
+     * @var array <p>特征表主键字段列表</p>
      */
     public $PrimaryKeys;
 
     /**
-     * @var string 特征表时间戳字段名称
+     * @var string <p>特征表时间戳字段名称</p>
      */
     public $TimestampField;
 
     /**
-     * @var string 在线特征表对应的来源表名称（离线表）
+     * @var string <p>在线特征表对应的来源表名称（离线表）</p>
      */
     public $SourceTableName;
 
     /**
-     * @var string 在线特征表关联的工作流ID
+     * @var string <p>在线特征表关联的工作流ID</p>
      */
     public $WorkflowId;
 
     /**
-     * @var string 离线特征表对应生成的在线特征表名称
+     * @var string <p>离线特征表对应生成的在线特征表名称</p>
      */
     public $OnlineTableName;
 
     /**
-     * @param array $PrimaryKeys 特征表主键字段列表
-     * @param string $TimestampField 特征表时间戳字段名称
-     * @param string $SourceTableName 在线特征表对应的来源表名称（离线表）
-     * @param string $WorkflowId 在线特征表关联的工作流ID
-     * @param string $OnlineTableName 离线特征表对应生成的在线特征表名称
+     * @var string <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+     */
+    public $OnlineTableType;
+
+    /**
+     * @var string <p>离线特征表对应生成的在线特征表ConnectionId</p>
+     */
+    public $ConnectionId;
+
+    /**
+     * @param array $PrimaryKeys <p>特征表主键字段列表</p>
+     * @param string $TimestampField <p>特征表时间戳字段名称</p>
+     * @param string $SourceTableName <p>在线特征表对应的来源表名称（离线表）</p>
+     * @param string $WorkflowId <p>在线特征表关联的工作流ID</p>
+     * @param string $OnlineTableName <p>离线特征表对应生成的在线特征表名称</p>
+     * @param string $OnlineTableType <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+     * @param string $ConnectionId <p>离线特征表对应生成的在线特征表ConnectionId</p>
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class FeatureTableDetail extends AbstractModel
 
         if (array_key_exists("OnlineTableName",$param) and $param["OnlineTableName"] !== null) {
             $this->OnlineTableName = $param["OnlineTableName"];
+        }
+
+        if (array_key_exists("OnlineTableType",$param) and $param["OnlineTableType"] !== null) {
+            $this->OnlineTableType = $param["OnlineTableType"];
+        }
+
+        if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
+            $this->ConnectionId = $param["ConnectionId"];
         }
     }
 }

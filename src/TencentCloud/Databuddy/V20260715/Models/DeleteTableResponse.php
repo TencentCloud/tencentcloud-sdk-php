@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTable返回参数结构体
  *
- * @method DeleteTableRsp getData() 获取操作结果
+ * @method DeleteTableRsp getData() 获取<p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(DeleteTableRsp $Data) 设置操作结果
+ * @method void setData(DeleteTableRsp $Data) 设置<p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteTableResponse extends AbstractModel
 {
     /**
-     * @var DeleteTableRsp 操作结果
+     * @var DeleteTableRsp <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -41,7 +41,7 @@ class DeleteTableResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DeleteTableRsp $Data 操作结果
+     * @param DeleteTableRsp $Data <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

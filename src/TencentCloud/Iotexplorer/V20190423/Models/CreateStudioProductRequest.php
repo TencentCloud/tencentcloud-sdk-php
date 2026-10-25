@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStudioProduct请求参数结构体
  *
- * @method string getProductName() 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
- * @method void setProductName(string $ProductName) 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
- * @method integer getCategoryId() 获取产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
- * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
- * @method integer getProductType() 获取产品类型 填写 ( 0 普通产品 ， 5 网关产品)
- * @method void setProductType(integer $ProductType) 设置产品类型 填写 ( 0 普通产品 ， 5 网关产品)
- * @method string getEncryptionType() 获取加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
- * @method string getNetType() 获取连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
- * @method void setNetType(string $NetType) 设置连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
- * @method integer getDataProtocol() 获取数据协议 (1 使用物模型 2 为自定义)
- * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型 2 为自定义)
- * @method string getProductDesc() 获取产品描述
- * @method void setProductDesc(string $ProductDesc) 设置产品描述
- * @method string getProjectId() 获取产品的项目ID
- * @method void setProjectId(string $ProjectId) 设置产品的项目ID
- * @method string getRate() 获取平均传输速率
- * @method void setRate(string $Rate) 设置平均传输速率
- * @method string getPeriod() 获取期限
- * @method void setPeriod(string $Period) 设置期限
+ * @method string getProductName() 获取<p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
+ * @method void setProductName(string $ProductName) 设置<p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
+ * @method integer getCategoryId() 获取<p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
+ * @method void setCategoryId(integer $CategoryId) 设置<p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
+ * @method integer getProductType() 获取<p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
+ * @method void setProductType(integer $ProductType) 设置<p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
+ * @method string getEncryptionType() 获取<p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
+ * @method void setEncryptionType(string $EncryptionType) 设置<p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
+ * @method string getNetType() 获取<p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+ * @method void setNetType(string $NetType) 设置<p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+ * @method integer getDataProtocol() 获取<p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
+ * @method void setDataProtocol(integer $DataProtocol) 设置<p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
+ * @method string getProductDesc() 获取<p>产品描述</p>
+ * @method void setProductDesc(string $ProductDesc) 设置<p>产品描述</p>
+ * @method string getProjectId() 获取<p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
+ * @method string getRate() 获取<p>平均传输速率</p>
+ * @method void setRate(string $Rate) 设置<p>平均传输速率</p>
+ * @method string getPeriod() 获取<p>期限</p>
+ * @method void setPeriod(string $Period) 设置<p>期限</p>
+ * @method string getPrivateCAName() 获取<p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+ * @method void setPrivateCAName(string $PrivateCAName) 设置<p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
  */
 class CreateStudioProductRequest extends AbstractModel
 {
     /**
-     * @var string 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * @var string <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
      */
     public $ProductName;
 
     /**
-     * @var integer 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * @var integer <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
      */
     public $CategoryId;
 
     /**
-     * @var integer 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+     * @var integer <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
      */
     public $ProductType;
 
     /**
-     * @var string 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @var string <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
      */
     public $EncryptionType;
 
     /**
-     * @var string 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * @var string <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
      */
     public $NetType;
 
     /**
-     * @var integer 数据协议 (1 使用物模型 2 为自定义)
+     * @var integer <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
      */
     public $DataProtocol;
 
     /**
-     * @var string 产品描述
+     * @var string <p>产品描述</p>
      */
     public $ProductDesc;
 
     /**
-     * @var string 产品的项目ID
+     * @var string <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 平均传输速率
+     * @var string <p>平均传输速率</p>
      */
     public $Rate;
 
     /**
-     * @var string 期限
+     * @var string <p>期限</p>
      */
     public $Period;
 
     /**
-     * @param string $ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
-     * @param integer $CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
-     * @param integer $ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
-     * @param string $EncryptionType 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
-     * @param string $NetType 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
-     * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义)
-     * @param string $ProductDesc 产品描述
-     * @param string $ProjectId 产品的项目ID
-     * @param string $Rate 平均传输速率
-     * @param string $Period 期限
+     * @var string <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+     */
+    public $PrivateCAName;
+
+    /**
+     * @param string $ProductName <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
+     * @param integer $CategoryId <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
+     * @param integer $ProductType <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
+     * @param string $EncryptionType <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
+     * @param string $NetType <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+     * @param integer $DataProtocol <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
+     * @param string $ProductDesc <p>产品描述</p>
+     * @param string $ProjectId <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
+     * @param string $Rate <p>平均传输速率</p>
+     * @param string $Period <p>期限</p>
+     * @param string $PrivateCAName <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateStudioProductRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("PrivateCAName",$param) and $param["PrivateCAName"] !== null) {
+            $this->PrivateCAName = $param["PrivateCAName"];
         }
     }
 }

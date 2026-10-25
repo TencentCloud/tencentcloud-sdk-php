@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMode() 获取<p>标注处理模式，预留字段</p>
  * @method void setMode(string $Mode) 设置<p>标注处理模式，预留字段</p>
+ * @method string getEdition() 获取<p>标注档位</p>
+ * @method void setEdition(string $Edition) 设置<p>标注档位</p>
+ * @method string getExtraParams() 获取<p>通用扩展参数，json格式字符串</p>
+ * @method void setExtraParams(string $ExtraParams) 设置<p>通用扩展参数，json格式字符串</p>
  */
 class ProcessParams extends AbstractModel
 {
@@ -31,7 +35,19 @@ class ProcessParams extends AbstractModel
     public $Mode;
 
     /**
+     * @var string <p>标注档位</p>
+     */
+    public $Edition;
+
+    /**
+     * @var string <p>通用扩展参数，json格式字符串</p>
+     */
+    public $ExtraParams;
+
+    /**
      * @param string $Mode <p>标注处理模式，预留字段</p>
+     * @param string $Edition <p>标注档位</p>
+     * @param string $ExtraParams <p>通用扩展参数，json格式字符串</p>
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class ProcessParams extends AbstractModel
         }
         if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
             $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
+            $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("ExtraParams",$param) and $param["ExtraParams"] !== null) {
+            $this->ExtraParams = $param["ExtraParams"];
         }
     }
 }

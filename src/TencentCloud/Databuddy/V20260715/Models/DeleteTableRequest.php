@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTable请求参数结构体
  *
- * @method string getCatalogName() 获取数据目录名
- * @method void setCatalogName(string $CatalogName) 设置数据目录名
- * @method string getSchemaName() 获取数据库名
- * @method void setSchemaName(string $SchemaName) 设置数据库名
- * @method string getTableName() 获取表名
- * @method void setTableName(string $TableName) 设置表名
- * @method string getWorkspaceId() 获取调用时所在workspace唯一id
- * @method void setWorkspaceId(string $WorkspaceId) 设置调用时所在workspace唯一id
- * @method string getConnectionId() 获取数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
- * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
- * @method string getCatalogSource() 获取数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
- * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+ * @method string getCatalogName() 获取<p>数据目录名</p>
+ * @method void setCatalogName(string $CatalogName) 设置<p>数据目录名</p>
+ * @method string getSchemaName() 获取<p>数据库名</p>
+ * @method void setSchemaName(string $SchemaName) 设置<p>数据库名</p>
+ * @method string getTableName() 获取<p>表名</p>
+ * @method void setTableName(string $TableName) 设置<p>表名</p>
+ * @method string getWorkspaceId() 获取<p>调用时所在workspace唯一id</p>
+ * @method void setWorkspaceId(string $WorkspaceId) 设置<p>调用时所在workspace唯一id</p>
+ * @method string getConnectionId() 获取<p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
+ * @method void setConnectionId(string $ConnectionId) 设置<p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
+ * @method string getCatalogSource() 获取<p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
+ * @method void setCatalogSource(string $CatalogSource) 设置<p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
  */
 class DeleteTableRequest extends AbstractModel
 {
     /**
-     * @var string 数据目录名
+     * @var string <p>数据目录名</p>
      */
     public $CatalogName;
 
     /**
-     * @var string 数据库名
+     * @var string <p>数据库名</p>
      */
     public $SchemaName;
 
     /**
-     * @var string 表名
+     * @var string <p>表名</p>
      */
     public $TableName;
 
     /**
-     * @var string 调用时所在workspace唯一id
+     * @var string <p>调用时所在workspace唯一id</p>
      */
     public $WorkspaceId;
 
     /**
-     * @var string 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+     * @var string <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
      */
     public $ConnectionId;
 
     /**
-     * @var string 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * @var string <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     public $CatalogSource;
 
     /**
-     * @param string $CatalogName 数据目录名
-     * @param string $SchemaName 数据库名
-     * @param string $TableName 表名
-     * @param string $WorkspaceId 调用时所在workspace唯一id
-     * @param string $ConnectionId 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
-     * @param string $CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * @param string $CatalogName <p>数据目录名</p>
+     * @param string $SchemaName <p>数据库名</p>
+     * @param string $TableName <p>表名</p>
+     * @param string $WorkspaceId <p>调用时所在workspace唯一id</p>
+     * @param string $ConnectionId <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持删除表，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
+     * @param string $CatalogSource <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     function __construct()
     {

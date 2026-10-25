@@ -20,30 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 场景化 AIGC 生图配置。
  *
- * @method string getType() 获取AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
- * @method void setType(string $Type) 设置AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
- * @method ProductShowcaseConfig getProductShowcaseConfig() 获取产品展示参数
- * @method void setProductShowcaseConfig(ProductShowcaseConfig $ProductShowcaseConfig) 设置产品展示参数
+ * @method string getType() 获取<p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
+ * @method void setType(string $Type) 设置<p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
+ * @method ProductShowcaseConfig getProductShowcaseConfig() 获取<p>产品展示参数配置。</p>
+ * @method void setProductShowcaseConfig(ProductShowcaseConfig $ProductShowcaseConfig) 设置<p>产品展示参数配置。</p>
+ * @method CharacterSceneConfig getCharacterSceneConfig() 获取<p>角色场景参数配置。</p>
+ * @method void setCharacterSceneConfig(CharacterSceneConfig $CharacterSceneConfig) 设置<p>角色场景参数配置。</p>
  */
 class AigcVideoSceneInfo extends AbstractModel
 {
     /**
-     * @var string AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
+     * @var string <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
      */
     public $Type;
 
     /**
-     * @var ProductShowcaseConfig 产品展示参数
+     * @var ProductShowcaseConfig <p>产品展示参数配置。</p>
      */
     public $ProductShowcaseConfig;
 
     /**
-     * @param string $Type AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
-     * @param ProductShowcaseConfig $ProductShowcaseConfig 产品展示参数
+     * @var CharacterSceneConfig <p>角色场景参数配置。</p>
+     */
+    public $CharacterSceneConfig;
+
+    /**
+     * @param string $Type <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
+     * @param ProductShowcaseConfig $ProductShowcaseConfig <p>产品展示参数配置。</p>
+     * @param CharacterSceneConfig $CharacterSceneConfig <p>角色场景参数配置。</p>
      */
     function __construct()
     {
@@ -65,6 +69,11 @@ class AigcVideoSceneInfo extends AbstractModel
         if (array_key_exists("ProductShowcaseConfig",$param) and $param["ProductShowcaseConfig"] !== null) {
             $this->ProductShowcaseConfig = new ProductShowcaseConfig();
             $this->ProductShowcaseConfig->deserialize($param["ProductShowcaseConfig"]);
+        }
+
+        if (array_key_exists("CharacterSceneConfig",$param) and $param["CharacterSceneConfig"] !== null) {
+            $this->CharacterSceneConfig = new CharacterSceneConfig();
+            $this->CharacterSceneConfig->deserialize($param["CharacterSceneConfig"]);
         }
     }
 }

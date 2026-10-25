@@ -18,7 +18,7 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PostgreSQL 产品空间对象项。字段语义与 MySQL 不同：使用 pg_relation_size / pg_total_relation_size 等 PG 特有指标。库级查询时不包含 TableSchema/TableName 字段；表级查询时包含全部字段。
+ * PostgreSQL 产品空间对象项（单表明细）。字段语义与 MySQL 不同：使用 pg_relation_size / pg_total_relation_size 等 PG 特有指标。
  *
  * @method string getTableCatalog() 获取<p>数据库名（PostgreSQL 顶层 catalog）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -31,6 +31,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTableName() 获取<p>表名（Level=TABLE 时返回）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置<p>表名（Level=TABLE 时返回）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTableStatus() 获取<p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableStatus(integer $TableStatus) 设置<p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRelationSize() 获取<p>表本身大小（MB），对应 pg_relation_size。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +82,12 @@ class PostgresSpaceObjectItem extends AbstractModel
     public $TableName;
 
     /**
+     * @var integer <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableStatus;
+
+    /**
      * @var float <p>表本身大小（MB），对应 pg_relation_size。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,6 +130,8 @@ class PostgresSpaceObjectItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName <p>表名（Level=TABLE 时返回）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TableStatus <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RelationSize <p>表本身大小（MB），对应 pg_relation_size。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TableSize <p>表数据大小（MB），含 TOAST 但不含索引，对应 pg_table_size。</p>
@@ -156,6 +168,10 @@ class PostgresSpaceObjectItem extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("TableStatus",$param) and $param["TableStatus"] !== null) {
+            $this->TableStatus = $param["TableStatus"];
         }
 
         if (array_key_exists("RelationSize",$param) and $param["RelationSize"] !== null) {

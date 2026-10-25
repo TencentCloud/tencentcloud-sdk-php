@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBinlogDownloadUrl请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getBinlogId() 获取Binlog文件ID
- * @method void setBinlogId(integer $BinlogId) 设置Binlog文件ID
- * @method BackupLimitRestriction getDownloadRestriction() 获取备份下载来源限制条件
- * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) 设置备份下载来源限制条件
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getBinlogId() 获取<p>Binlog文件ID</p>
+ * @method void setBinlogId(integer $BinlogId) 设置<p>Binlog文件ID</p>
+ * @method BackupLimitRestriction getDownloadRestriction() 获取<p>备份下载来源限制条件</p>
+ * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) 设置<p>备份下载来源限制条件</p>
  */
 class DescribeBinlogDownloadUrlRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer Binlog文件ID
+     * @var integer <p>Binlog文件ID</p>
      */
     public $BinlogId;
 
     /**
-     * @var BackupLimitRestriction 备份下载来源限制条件
+     * @var BackupLimitRestriction <p>备份下载来源限制条件</p>
      */
     public $DownloadRestriction;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $BinlogId Binlog文件ID
-     * @param BackupLimitRestriction $DownloadRestriction 备份下载来源限制条件
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $BinlogId <p>Binlog文件ID</p>
+     * @param BackupLimitRestriction $DownloadRestriction <p>备份下载来源限制条件</p>
      */
     function __construct()
     {

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIpComparisonSymbol() 获取In: 指定的ip可以下载； NotIn: 指定的ip不可以下载
  * @method void setIpComparisonSymbol(string $IpComparisonSymbol) 设置In: 指定的ip可以下载； NotIn: 指定的ip不可以下载
  * @method array getLimitVpcs() 获取限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitVpcs(array $LimitVpcs) 设置限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLimitIps() 获取限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitIps(array $LimitIps) 设置限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupLimitRestriction extends AbstractModel
 {
@@ -54,13 +50,11 @@ class BackupLimitRestriction extends AbstractModel
 
     /**
      * @var array 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitVpcs;
 
     /**
      * @var array 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitIps;
 
@@ -69,9 +63,7 @@ class BackupLimitRestriction extends AbstractModel
      * @param string $VpcComparisonSymbol 该参数仅支持 In， 表示 LimitVpc 指定的vpc可以下载。默认为In
      * @param string $IpComparisonSymbol In: 指定的ip可以下载； NotIn: 指定的ip不可以下载
      * @param array $LimitVpcs 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LimitIps 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

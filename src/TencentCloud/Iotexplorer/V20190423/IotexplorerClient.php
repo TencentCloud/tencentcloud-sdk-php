@@ -98,6 +98,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateOtaModuleResponse CreateOtaModule(Models\CreateOtaModuleRequest $req) 本接口（CreateOtaModule）用于新建OTA模块
  * @method Models\CreatePositionFenceResponse CreatePositionFence(Models\CreatePositionFenceRequest $req) 创建围栏。
  * @method Models\CreatePositionSpaceResponse CreatePositionSpace(Models\CreatePositionSpaceRequest $req) 创建位置空间。
+ * @method Models\CreatePrivateCAResponse CreatePrivateCA(Models\CreatePrivateCARequest $req) 创建私有CA证书
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
@@ -124,6 +125,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteOtaModuleResponse DeleteOtaModule(Models\DeleteOtaModuleRequest $req) 本接口（DeleteOtaModule）用于删除OTA模块
  * @method Models\DeletePositionFenceResponse DeletePositionFence(Models\DeletePositionFenceRequest $req) 删除围栏。
  * @method Models\DeletePositionSpaceResponse DeletePositionSpace(Models\DeletePositionSpaceRequest $req) 删除位置空间。
+ * @method Models\DeletePrivateCAResponse DeletePrivateCA(Models\DeletePrivateCARequest $req) 删除私有CA证书
+ * @method Models\DeleteProductPrivateCAResponse DeleteProductPrivateCA(Models\DeleteProductPrivateCARequest $req) 删除产品绑定的CA证书
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTWeSeeCallbackResponse DeleteTWeSeeCallback(Models\DeleteTWeSeeCallbackRequest $req) 删除 TWeSee 回调目标
@@ -185,6 +188,10 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribePackageConsumeTaskResponse DescribePackageConsumeTask(Models\DescribePackageConsumeTaskRequest $req) 查询套餐消耗记录详情
  * @method Models\DescribePackageConsumeTasksResponse DescribePackageConsumeTasks(Models\DescribePackageConsumeTasksRequest $req) 查询套餐消耗记录列表
  * @method Models\DescribePositionFenceListResponse DescribePositionFenceList(Models\DescribePositionFenceListRequest $req) 获取围栏列表
+ * @method Models\DescribePrivateCAResponse DescribePrivateCA(Models\DescribePrivateCARequest $req) 查询私有化CA信息
+ * @method Models\DescribePrivateCABindedProductsResponse DescribePrivateCABindedProducts(Models\DescribePrivateCABindedProductsRequest $req) 查询私有CA绑定的产品列表
+ * @method Models\DescribePrivateCAsResponse DescribePrivateCAs(Models\DescribePrivateCAsRequest $req) 查询私有CA证书列表
+ * @method Models\DescribeProductCAResponse DescribeProductCA(Models\DescribeProductCARequest $req) 查询产品绑定的CA证书
  * @method Models\DescribeProductCloudStorageAIServiceResponse DescribeProductCloudStorageAIService(Models\DescribeProductCloudStorageAIServiceRequest $req) 查询指定产品的云存 AI 服务开通状态
  * @method Models\DescribeProductDynamicRegisterResponse DescribeProductDynamicRegister(Models\DescribeProductDynamicRegisterRequest $req) 获取产品动态注册详情
  * @method Models\DescribeProjectResponse DescribeProject(Models\DescribeProjectRequest $req) 查询项目详情
@@ -335,6 +342,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求
  * @method Models\UpdateOtaModuleResponse UpdateOtaModule(Models\UpdateOtaModuleRequest $req) 本接口（UpdateOtaModule）用于修改OTA模块
  * @method Models\UpdateOtaTaskStatusResponse UpdateOtaTaskStatus(Models\UpdateOtaTaskStatusRequest $req) 本接口（UpdateOtaTask）当固件升级大任务处于没有在全部成功的状态时，可修改为取消状态，取消部分或全部设备的升级;或其它允许的可修改的状态。
+ * @method Models\UpdatePrivateCAResponse UpdatePrivateCA(Models\UpdatePrivateCARequest $req) 更新私有CA证书
+ * @method Models\UpdateProductPrivateCAResponse UpdateProductPrivateCA(Models\UpdateProductPrivateCARequest $req) 更新产品的私有CA
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于创建设备固件版本信息，在平台用于固件版本升级、固件资源下发等。
  */
 

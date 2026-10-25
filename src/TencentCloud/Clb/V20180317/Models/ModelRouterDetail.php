@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDecisionsConfig(DecisionsConfig $DecisionsConfig) 设置<p>决策模型设置</p>
  * @method ImageConfig getImageConfig() 获取<p>Images 生图配置</p>
  * @method void setImageConfig(ImageConfig $ImageConfig) 设置<p>Images 生图配置</p>
+ * @method RedirectConfig getRedirectConfig() 获取<p>实例重定向配置</p>
+ * @method void setRedirectConfig(RedirectConfig $RedirectConfig) 设置<p>实例重定向配置</p>
  */
 class ModelRouterDetail extends AbstractModel
 {
@@ -259,6 +261,11 @@ class ModelRouterDetail extends AbstractModel
     public $ImageConfig;
 
     /**
+     * @var RedirectConfig <p>实例重定向配置</p>
+     */
+    public $RedirectConfig;
+
+    /**
      * @param string $BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BudgetName <p>模型路由实例关联的Budget名称。</p><p>未关联Budget时返回空字符串。</p>
@@ -296,6 +303,7 @@ class ModelRouterDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DecisionsConfig $DecisionsConfig <p>决策模型设置</p>
      * @param ImageConfig $ImageConfig <p>Images 生图配置</p>
+     * @param RedirectConfig $RedirectConfig <p>实例重定向配置</p>
      */
     function __construct()
     {
@@ -456,6 +464,11 @@ class ModelRouterDetail extends AbstractModel
         if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
             $this->ImageConfig = new ImageConfig();
             $this->ImageConfig->deserialize($param["ImageConfig"]);
+        }
+
+        if (array_key_exists("RedirectConfig",$param) and $param["RedirectConfig"] !== null) {
+            $this->RedirectConfig = new RedirectConfig();
+            $this->RedirectConfig->deserialize($param["RedirectConfig"]);
         }
     }
 }

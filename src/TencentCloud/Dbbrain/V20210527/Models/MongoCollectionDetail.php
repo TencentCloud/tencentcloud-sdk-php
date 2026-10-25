@@ -20,153 +20,153 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MongoDB 集合级空间使用明细，包含集合的存储、索引、碎片等各维度指标。
  *
- * @method string getCollStats() 获取<p>集合命名空间，格式为 db.collection。</p>
+ * @method string getCollStats() 获取集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCollStats(string $CollStats) 设置<p>集合命名空间，格式为 db.collection。</p>
+ * @method void setCollStats(string $CollStats) 设置集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCollectionSize() 获取<p>集合逻辑大小（字节，未压缩）。</p>
+ * @method integer getCollectionSize() 获取集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCollectionSize(integer $CollectionSize) 设置<p>集合逻辑大小（字节，未压缩）。</p>
+ * @method void setCollectionSize(integer $CollectionSize) 设置集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDataFree() 获取<p>集合已分配但未使用的空间（字节）。</p>
+ * @method integer getDataFree() 获取集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataFree(integer $DataFree) 设置<p>集合已分配但未使用的空间（字节）。</p>
+ * @method void setDataFree(integer $DataFree) 设置集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSpaceRatio() 获取<p>空间利用率（百分比字符串）。</p>
+ * @method string getSpaceRatio() 获取空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpaceRatio(string $SpaceRatio) 设置<p>空间利用率（百分比字符串）。</p>
+ * @method void setSpaceRatio(string $SpaceRatio) 设置空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFragRatio() 获取<p>碎片率（百分比字符串）。</p>
+ * @method string getFragRatio() 获取碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFragRatio(string $FragRatio) 设置<p>碎片率（百分比字符串）。</p>
+ * @method void setFragRatio(string $FragRatio) 设置碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSize() 获取<p>集合数据大小（字节）。</p>
+ * @method integer getSize() 获取集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSize(integer $Size) 设置<p>集合数据大小（字节）。</p>
+ * @method void setSize(integer $Size) 设置集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalIndexSize() 获取<p>所有索引占用大小（字节）。</p>
+ * @method integer getTotalIndexSize() 获取所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalIndexSize(integer $TotalIndexSize) 设置<p>所有索引占用大小（字节）。</p>
+ * @method void setTotalIndexSize(integer $TotalIndexSize) 设置所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAvgObjSize() 获取<p>平均文档大小（字节）。</p>
+ * @method integer getAvgObjSize() 获取平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvgObjSize(integer $AvgObjSize) 设置<p>平均文档大小（字节）。</p>
+ * @method void setAvgObjSize(integer $AvgObjSize) 设置平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStorageSize() 获取<p>集合实际占用存储大小（字节，压缩后）。</p>
+ * @method integer getStorageSize() 获取集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStorageSize(integer $StorageSize) 设置<p>集合实际占用存储大小（字节，压缩后）。</p>
+ * @method void setStorageSize(integer $StorageSize) 设置集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCount() 获取<p>文档数量。</p>
+ * @method integer getCount() 获取文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCount(integer $Count) 设置<p>文档数量。</p>
+ * @method void setCount(integer $Count) 设置文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompressionRatio() 获取<p>压缩率（百分比字符串）。</p>
+ * @method string getCompressionRatio() 获取压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompressionRatio(string $CompressionRatio) 设置<p>压缩率（百分比字符串）。</p>
+ * @method void setCompressionRatio(string $CompressionRatio) 设置压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFileReuseBytes() 获取<p>可复用文件空间（字节）。</p>
+ * @method integer getFileReuseBytes() 获取可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileReuseBytes(integer $FileReuseBytes) 设置<p>可复用文件空间（字节）。</p>
+ * @method void setFileReuseBytes(integer $FileReuseBytes) 设置可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MongoCollectionDetail extends AbstractModel
 {
     /**
-     * @var string <p>集合命名空间，格式为 db.collection。</p>
+     * @var string 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CollStats;
 
     /**
-     * @var integer <p>集合逻辑大小（字节，未压缩）。</p>
+     * @var integer 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CollectionSize;
 
     /**
-     * @var integer <p>集合已分配但未使用的空间（字节）。</p>
+     * @var integer 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataFree;
 
     /**
-     * @var string <p>空间利用率（百分比字符串）。</p>
+     * @var string 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceRatio;
 
     /**
-     * @var string <p>碎片率（百分比字符串）。</p>
+     * @var string 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FragRatio;
 
     /**
-     * @var integer <p>集合数据大小（字节）。</p>
+     * @var integer 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
-     * @var integer <p>所有索引占用大小（字节）。</p>
+     * @var integer 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalIndexSize;
 
     /**
-     * @var integer <p>平均文档大小（字节）。</p>
+     * @var integer 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvgObjSize;
 
     /**
-     * @var integer <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * @var integer 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageSize;
 
     /**
-     * @var integer <p>文档数量。</p>
+     * @var integer 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
-     * @var string <p>压缩率（百分比字符串）。</p>
+     * @var string 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompressionRatio;
 
     /**
-     * @var integer <p>可复用文件空间（字节）。</p>
+     * @var integer 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileReuseBytes;
 
     /**
-     * @param string $CollStats <p>集合命名空间，格式为 db.collection。</p>
+     * @param string $CollStats 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CollectionSize <p>集合逻辑大小（字节，未压缩）。</p>
+     * @param integer $CollectionSize 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DataFree <p>集合已分配但未使用的空间（字节）。</p>
+     * @param integer $DataFree 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SpaceRatio <p>空间利用率（百分比字符串）。</p>
+     * @param string $SpaceRatio 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FragRatio <p>碎片率（百分比字符串）。</p>
+     * @param string $FragRatio 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Size <p>集合数据大小（字节）。</p>
+     * @param integer $Size 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalIndexSize <p>所有索引占用大小（字节）。</p>
+     * @param integer $TotalIndexSize 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AvgObjSize <p>平均文档大小（字节）。</p>
+     * @param integer $AvgObjSize 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StorageSize <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * @param integer $StorageSize 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Count <p>文档数量。</p>
+     * @param integer $Count 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompressionRatio <p>压缩率（百分比字符串）。</p>
+     * @param string $CompressionRatio 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FileReuseBytes <p>可复用文件空间（字节）。</p>
+     * @param integer $FileReuseBytes 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

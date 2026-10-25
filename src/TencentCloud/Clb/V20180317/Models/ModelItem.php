@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModelId() 获取<p>模型唯一标识, 用于实际访问</p>
  * @method void setModelId(string $ModelId) 设置<p>模型唯一标识, 用于实际访问</p>
- * @method array getInputModalities() 获取<p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul><p>默认值：text</p>
- * @method void setInputModalities(array $InputModalities) 设置<p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul><p>默认值：text</p>
+ * @method array getInputModalities() 获取<p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul><p>默认值：text</p>
+ * @method void setInputModalities(array $InputModalities) 设置<p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul><p>默认值：text</p>
  * @method string getModelAlias() 获取<p>模型别名, 可以用于实际访问</p>
  * @method void setModelAlias(string $ModelAlias) 设置<p>模型别名, 可以用于实际访问</p>
  */
@@ -35,7 +35,7 @@ class ModelItem extends AbstractModel
     public $ModelId;
 
     /**
-     * @var array <p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul><p>默认值：text</p>
+     * @var array <p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul><p>默认值：text</p>
      */
     public $InputModalities;
 
@@ -46,7 +46,7 @@ class ModelItem extends AbstractModel
 
     /**
      * @param string $ModelId <p>模型唯一标识, 用于实际访问</p>
-     * @param array $InputModalities <p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul><p>默认值：text</p>
+     * @param array $InputModalities <p>该模型当前支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul><p>默认值：text</p>
      * @param string $ModelAlias <p>模型别名, 可以用于实际访问</p>
      */
     function __construct()

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloneDBInstanceSpec返回参数结构体
  *
- * @method string getMinSpecCode() 获取可购买的最小规格码。
- * @method void setMinSpecCode(string $MinSpecCode) 设置可购买的最小规格码。
- * @method integer getMinStorage() 获取可购买的最小磁盘容量，单位GB。
- * @method void setMinStorage(integer $MinStorage) 设置可购买的最小磁盘容量，单位GB。
+ * @method string getMinSpecCode() 获取<p>可购买的最小规格码。</p>
+ * @method void setMinSpecCode(string $MinSpecCode) 设置<p>可购买的最小规格码。</p>
+ * @method integer getMinStorage() 获取<p>可购买的最小磁盘容量，单位GB。</p>
+ * @method void setMinStorage(integer $MinStorage) 设置<p>可购买的最小磁盘容量，单位GB。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloneDBInstanceSpecResponse extends AbstractModel
 {
     /**
-     * @var string 可购买的最小规格码。
+     * @var string <p>可购买的最小规格码。</p>
      */
     public $MinSpecCode;
 
     /**
-     * @var integer 可购买的最小磁盘容量，单位GB。
+     * @var integer <p>可购买的最小磁盘容量，单位GB。</p>
      */
     public $MinStorage;
 
@@ -45,8 +45,8 @@ class DescribeCloneDBInstanceSpecResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MinSpecCode 可购买的最小规格码。
-     * @param integer $MinStorage 可购买的最小磁盘容量，单位GB。
+     * @param string $MinSpecCode <p>可购买的最小规格码。</p>
+     * @param integer $MinStorage <p>可购买的最小磁盘容量，单位GB。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

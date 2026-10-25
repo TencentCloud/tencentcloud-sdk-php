@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getData() 获取<p>base64 url编码的文件内容</p>
  * @method void setData(string $Data) 设置<p>base64 url编码的文件内容</p>
- * @method string getType() 获取<p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
- * @method void setType(string $Type) 设置<p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+ * @method string getType() 获取<p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
+ * @method void setType(string $Type) 设置<p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
  */
 class MultiModalityAttachments extends AbstractModel
 {
@@ -33,13 +33,13 @@ class MultiModalityAttachments extends AbstractModel
     public $Data;
 
     /**
-     * @var string <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+     * @var string <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
      */
     public $Type;
 
     /**
      * @param string $Data <p>base64 url编码的文件内容</p>
-     * @param string $Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+     * @param string $Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
      */
     function __construct()
     {

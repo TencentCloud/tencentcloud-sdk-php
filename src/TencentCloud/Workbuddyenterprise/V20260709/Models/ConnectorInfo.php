@@ -20,146 +20,158 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 连接器详情（主表 + 最新版本展开）。
  *
- * @method string getConnectorId() 获取连接器 ID
- * @method void setConnectorId(string $ConnectorId) 设置连接器 ID
- * @method string getConnectorSlug() 获取连接器短标识（终身不变，跨版本稳定）
- * @method void setConnectorSlug(string $ConnectorSlug) 设置连接器短标识（终身不变，跨版本稳定）
- * @method string getConnectorKey() 获取版本级连接器密钥
- * @method void setConnectorKey(string $ConnectorKey) 设置版本级连接器密钥
- * @method string getName() 获取连接器名称
- * @method void setName(string $Name) 设置连接器名称
- * @method string getDescription() 获取连接器描述
- * @method void setDescription(string $Description) 设置连接器描述
- * @method string getAvatarUrl() 获取头像 URL
- * @method void setAvatarUrl(string $AvatarUrl) 设置头像 URL
- * @method string getSource() 获取连接器来源：ENTERPRISE_AGENT / ASSISTANT
- * @method void setSource(string $Source) 设置连接器来源：ENTERPRISE_AGENT / ASSISTANT
- * @method string getEnterpriseId() 获取归属企业 ID
- * @method void setEnterpriseId(string $EnterpriseId) 设置归属企业 ID
- * @method string getType() 获取连接器类型：MCP_SERVER / A2A / API_SERVICE
- * @method void setType(string $Type) 设置连接器类型：MCP_SERVER / A2A / API_SERVICE
- * @method string getServiceUrl() 获取上游服务地址
- * @method void setServiceUrl(string $ServiceUrl) 设置上游服务地址
- * @method array getAuthModes() 获取授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
- * @method void setAuthModes(array $AuthModes) 设置授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
- * @method integer getLatestVersionNo() 获取最新版本号
- * @method void setLatestVersionNo(integer $LatestVersionNo) 设置最新版本号
- * @method string getStatus() 获取连接器状态：ACTIVE / DISABLED
- * @method void setStatus(string $Status) 设置连接器状态：ACTIVE / DISABLED
- * @method string getCreatorId() 获取创建人 ID
- * @method void setCreatorId(string $CreatorId) 设置创建人 ID
- * @method string getCreatedTime() 获取创建时间（ISO8601，UTC）
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间（ISO8601，UTC）
- * @method string getModifiedTime() 获取最后修改时间（ISO8601，UTC）
- * @method void setModifiedTime(string $ModifiedTime) 设置最后修改时间（ISO8601，UTC）
- * @method string getVpcConfigId() 获取VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
- * @method void setVpcConfigId(string $VpcConfigId) 设置VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+ * @method string getConnectorId() 获取<p>连接器 ID</p>
+ * @method void setConnectorId(string $ConnectorId) 设置<p>连接器 ID</p>
+ * @method string getConnectorSlug() 获取<p>连接器短标识（终身不变，跨版本稳定）</p>
+ * @method void setConnectorSlug(string $ConnectorSlug) 设置<p>连接器短标识（终身不变，跨版本稳定）</p>
+ * @method string getConnectorKey() 获取<p>版本级连接器密钥</p>
+ * @method void setConnectorKey(string $ConnectorKey) 设置<p>版本级连接器密钥</p>
+ * @method string getName() 获取<p>连接器名称</p>
+ * @method void setName(string $Name) 设置<p>连接器名称</p>
+ * @method string getDescription() 获取<p>连接器描述</p>
+ * @method void setDescription(string $Description) 设置<p>连接器描述</p>
+ * @method string getAvatarUrl() 获取<p>头像 URL</p>
+ * @method void setAvatarUrl(string $AvatarUrl) 设置<p>头像 URL</p>
+ * @method string getSource() 获取<p>连接器来源：ENTERPRISE_AGENT / ASSISTANT</p>
+ * @method void setSource(string $Source) 设置<p>连接器来源：ENTERPRISE_AGENT / ASSISTANT</p>
+ * @method string getEnterpriseId() 获取<p>归属企业 ID</p>
+ * @method void setEnterpriseId(string $EnterpriseId) 设置<p>归属企业 ID</p>
+ * @method string getType() 获取<p>连接器类型：MCP_SERVER / A2A / API_SERVICE</p>
+ * @method void setType(string $Type) 设置<p>连接器类型：MCP_SERVER / A2A / API_SERVICE</p>
+ * @method string getServiceUrl() 获取<p>上游服务地址</p>
+ * @method void setServiceUrl(string $ServiceUrl) 设置<p>上游服务地址</p>
+ * @method array getAuthModes() 获取<p>授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY / DYNAMIC_API_KEY。DYNAMIC_API_KEY 表示按每轮请求提供的动态字段，通过 HeaderMappings 注入出站 HTTP Header。</p>
+ * @method void setAuthModes(array $AuthModes) 设置<p>授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY / DYNAMIC_API_KEY。DYNAMIC_API_KEY 表示按每轮请求提供的动态字段，通过 HeaderMappings 注入出站 HTTP Header。</p>
+ * @method integer getLatestVersionNo() 获取<p>最新版本号</p>
+ * @method void setLatestVersionNo(integer $LatestVersionNo) 设置<p>最新版本号</p>
+ * @method string getStatus() 获取<p>连接器状态：ACTIVE / DISABLED</p>
+ * @method void setStatus(string $Status) 设置<p>连接器状态：ACTIVE / DISABLED</p>
+ * @method string getCreatorId() 获取<p>创建人 ID</p>
+ * @method void setCreatorId(string $CreatorId) 设置<p>创建人 ID</p>
+ * @method string getCreatedTime() 获取<p>创建时间（ISO8601，UTC）</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间（ISO8601，UTC）</p>
+ * @method string getModifiedTime() 获取<p>最后修改时间（ISO8601，UTC）</p>
+ * @method void setModifiedTime(string $ModifiedTime) 设置<p>最后修改时间（ISO8601，UTC）</p>
+ * @method string getVpcConfigId() 获取<p>VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。</p>
+ * @method void setVpcConfigId(string $VpcConfigId) 设置<p>VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。</p>
+ * @method string getDisplayName() 获取<p>展示名：console 老连接器目录（DescribeConsoleConnectorList）下发，取 registry data.display_name，老数据缺失时回落 Name；云上目录无独立展示名，省略不返回。Name 是存储名/选型回写键（含 scope 前缀），不承担展示职责。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayName(string $DisplayName) 设置<p>展示名：console 老连接器目录（DescribeConsoleConnectorList）下发，取 registry data.display_name，老数据缺失时回落 Name；云上目录无独立展示名，省略不返回。Name 是存储名/选型回写键（含 scope 前缀），不承担展示职责。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConnectorInfo extends AbstractModel
 {
     /**
-     * @var string 连接器 ID
+     * @var string <p>连接器 ID</p>
      */
     public $ConnectorId;
 
     /**
-     * @var string 连接器短标识（终身不变，跨版本稳定）
+     * @var string <p>连接器短标识（终身不变，跨版本稳定）</p>
      */
     public $ConnectorSlug;
 
     /**
-     * @var string 版本级连接器密钥
+     * @var string <p>版本级连接器密钥</p>
      */
     public $ConnectorKey;
 
     /**
-     * @var string 连接器名称
+     * @var string <p>连接器名称</p>
      */
     public $Name;
 
     /**
-     * @var string 连接器描述
+     * @var string <p>连接器描述</p>
      */
     public $Description;
 
     /**
-     * @var string 头像 URL
+     * @var string <p>头像 URL</p>
      */
     public $AvatarUrl;
 
     /**
-     * @var string 连接器来源：ENTERPRISE_AGENT / ASSISTANT
+     * @var string <p>连接器来源：ENTERPRISE_AGENT / ASSISTANT</p>
      */
     public $Source;
 
     /**
-     * @var string 归属企业 ID
+     * @var string <p>归属企业 ID</p>
      */
     public $EnterpriseId;
 
     /**
-     * @var string 连接器类型：MCP_SERVER / A2A / API_SERVICE
+     * @var string <p>连接器类型：MCP_SERVER / A2A / API_SERVICE</p>
      */
     public $Type;
 
     /**
-     * @var string 上游服务地址
+     * @var string <p>上游服务地址</p>
      */
     public $ServiceUrl;
 
     /**
-     * @var array 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
+     * @var array <p>授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY / DYNAMIC_API_KEY。DYNAMIC_API_KEY 表示按每轮请求提供的动态字段，通过 HeaderMappings 注入出站 HTTP Header。</p>
      */
     public $AuthModes;
 
     /**
-     * @var integer 最新版本号
+     * @var integer <p>最新版本号</p>
      */
     public $LatestVersionNo;
 
     /**
-     * @var string 连接器状态：ACTIVE / DISABLED
+     * @var string <p>连接器状态：ACTIVE / DISABLED</p>
      */
     public $Status;
 
     /**
-     * @var string 创建人 ID
+     * @var string <p>创建人 ID</p>
      */
     public $CreatorId;
 
     /**
-     * @var string 创建时间（ISO8601，UTC）
+     * @var string <p>创建时间（ISO8601，UTC）</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 最后修改时间（ISO8601，UTC）
+     * @var string <p>最后修改时间（ISO8601，UTC）</p>
      */
     public $ModifiedTime;
 
     /**
-     * @var string VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     * @var string <p>VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。</p>
      */
     public $VpcConfigId;
 
     /**
-     * @param string $ConnectorId 连接器 ID
-     * @param string $ConnectorSlug 连接器短标识（终身不变，跨版本稳定）
-     * @param string $ConnectorKey 版本级连接器密钥
-     * @param string $Name 连接器名称
-     * @param string $Description 连接器描述
-     * @param string $AvatarUrl 头像 URL
-     * @param string $Source 连接器来源：ENTERPRISE_AGENT / ASSISTANT
-     * @param string $EnterpriseId 归属企业 ID
-     * @param string $Type 连接器类型：MCP_SERVER / A2A / API_SERVICE
-     * @param string $ServiceUrl 上游服务地址
-     * @param array $AuthModes 授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY
-     * @param integer $LatestVersionNo 最新版本号
-     * @param string $Status 连接器状态：ACTIVE / DISABLED
-     * @param string $CreatorId 创建人 ID
-     * @param string $CreatedTime 创建时间（ISO8601，UTC）
-     * @param string $ModifiedTime 最后修改时间（ISO8601，UTC）
-     * @param string $VpcConfigId VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。
+     * @var string <p>展示名：console 老连接器目录（DescribeConsoleConnectorList）下发，取 registry data.display_name，老数据缺失时回落 Name；云上目录无独立展示名，省略不返回。Name 是存储名/选型回写键（含 scope 前缀），不承担展示职责。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayName;
+
+    /**
+     * @param string $ConnectorId <p>连接器 ID</p>
+     * @param string $ConnectorSlug <p>连接器短标识（终身不变，跨版本稳定）</p>
+     * @param string $ConnectorKey <p>版本级连接器密钥</p>
+     * @param string $Name <p>连接器名称</p>
+     * @param string $Description <p>连接器描述</p>
+     * @param string $AvatarUrl <p>头像 URL</p>
+     * @param string $Source <p>连接器来源：ENTERPRISE_AGENT / ASSISTANT</p>
+     * @param string $EnterpriseId <p>归属企业 ID</p>
+     * @param string $Type <p>连接器类型：MCP_SERVER / A2A / API_SERVICE</p>
+     * @param string $ServiceUrl <p>上游服务地址</p>
+     * @param array $AuthModes <p>授权方式列表：NONE / ONEID / OAUTH2_IDP / API_KEY / DYNAMIC_API_KEY。DYNAMIC_API_KEY 表示按每轮请求提供的动态字段，通过 HeaderMappings 注入出站 HTTP Header。</p>
+     * @param integer $LatestVersionNo <p>最新版本号</p>
+     * @param string $Status <p>连接器状态：ACTIVE / DISABLED</p>
+     * @param string $CreatorId <p>创建人 ID</p>
+     * @param string $CreatedTime <p>创建时间（ISO8601，UTC）</p>
+     * @param string $ModifiedTime <p>最后修改时间（ISO8601，UTC）</p>
+     * @param string $VpcConfigId <p>VPC 网络配置 ID。为空表示该连接器通过公网访问 ServiceUrl。仅绑定 VPC 网络配置时本字段有值。</p>
+     * @param string $DisplayName <p>展示名：console 老连接器目录（DescribeConsoleConnectorList）下发，取 registry data.display_name，老数据缺失时回落 Name；云上目录无独立展示名，省略不返回。Name 是存储名/选型回写键（含 scope 前缀），不承担展示职责。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -240,6 +252,10 @@ class ConnectorInfo extends AbstractModel
 
         if (array_key_exists("VpcConfigId",$param) and $param["VpcConfigId"] !== null) {
             $this->VpcConfigId = $param["VpcConfigId"];
+        }
+
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
         }
     }
 }

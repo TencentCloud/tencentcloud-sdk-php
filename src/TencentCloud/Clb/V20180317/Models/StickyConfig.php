@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnabled() 获取<p>是否开启粘连路由</p>
  * @method void setEnabled(boolean $Enabled) 设置<p>是否开启粘连路由</p>
- * @method integer getTimeoutSeconds() 获取<p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
- * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置<p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+ * @method integer getTimeoutSeconds() 获取<p>会话粘性的超时时间（秒），取值范围 180–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[180, 21600]</p><p>单位：秒</p><p>默认值：1800</p>
+ * @method void setTimeoutSeconds(integer $TimeoutSeconds) 设置<p>会话粘性的超时时间（秒），取值范围 180–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[180, 21600]</p><p>单位：秒</p><p>默认值：1800</p>
  */
 class StickyConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class StickyConfig extends AbstractModel
     public $Enabled;
 
     /**
-     * @var integer <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+     * @var integer <p>会话粘性的超时时间（秒），取值范围 180–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[180, 21600]</p><p>单位：秒</p><p>默认值：1800</p>
      */
     public $TimeoutSeconds;
 
     /**
      * @param boolean $Enabled <p>是否开启粘连路由</p>
-     * @param integer $TimeoutSeconds <p>会话粘性的超时时间（秒），取值范围 1–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：1800</p>
+     * @param integer $TimeoutSeconds <p>会话粘性的超时时间（秒），取值范围 180–86400。创建时默认为 1800；修改时若不设置该字段，则保留原有值。</p><p>取值范围：[180, 21600]</p><p>单位：秒</p><p>默认值：1800</p>
      */
     function __construct()
     {

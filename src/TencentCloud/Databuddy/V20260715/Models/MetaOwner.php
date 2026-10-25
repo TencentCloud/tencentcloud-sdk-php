@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerName(string $OwnerName) 设置所有者名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCatalogSource() 获取数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetaOwner extends AbstractModel
 {
@@ -64,6 +68,12 @@ class MetaOwner extends AbstractModel
     public $OwnerName;
 
     /**
+     * @var string 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogSource;
+
+    /**
      * @param string $FullName 元数据名称（全名）:catalog.schema.table
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerType 所有者类型:User
@@ -71,6 +81,8 @@ class MetaOwner extends AbstractModel
      * @param string $Owner 所有者:唯一标识(uin)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerName 所有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CatalogSource 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class MetaOwner extends AbstractModel
 
         if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
             $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("CatalogSource",$param) and $param["CatalogSource"] !== null) {
+            $this->CatalogSource = $param["CatalogSource"];
         }
     }
 }

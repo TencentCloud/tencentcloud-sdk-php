@@ -20,190 +20,274 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 产品详情
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
- * @method string getProductName() 获取产品名称
- * @method void setProductName(string $ProductName) 设置产品名称
- * @method integer getCategoryId() 获取产品分组模板ID
- * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID
- * @method string getEncryptionType() 获取加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
- * @method void setEncryptionType(string $EncryptionType) 设置加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
- * @method string getNetType() 获取连接类型。如：
-wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
- * @method void setNetType(string $NetType) 设置连接类型。如：
-wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
- * @method integer getDataProtocol() 获取数据协议 (1 使用物模型 2 为自定义类型)
- * @method void setDataProtocol(integer $DataProtocol) 设置数据协议 (1 使用物模型 2 为自定义类型)
- * @method string getProductDesc() 获取产品描述
- * @method void setProductDesc(string $ProductDesc) 设置产品描述
- * @method string getDevStatus() 获取状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
- * @method void setDevStatus(string $DevStatus) 设置状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
- * @method integer getUpdateTime() 获取更新时间
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
- * @method string getRegion() 获取区域
- * @method void setRegion(string $Region) 设置区域
- * @method integer getProductType() 获取产品类型。如： 0 普通产品 ， 5 网关产品
- * @method void setProductType(integer $ProductType) 设置产品类型。如： 0 普通产品 ， 5 网关产品
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method integer getModuleId() 获取产品ModuleId
- * @method void setModuleId(integer $ModuleId) 设置产品ModuleId
- * @method string getEnableProductScript() 获取是否使用脚本进行二进制转json功能 可以取值 true / false
- * @method void setEnableProductScript(string $EnableProductScript) 设置是否使用脚本进行二进制转json功能 可以取值 true / false
- * @method integer getCreateUserId() 获取创建人 UinId
- * @method void setCreateUserId(integer $CreateUserId) 设置创建人 UinId
- * @method string getCreatorNickName() 获取创建者昵称
- * @method void setCreatorNickName(string $CreatorNickName) 设置创建者昵称
- * @method integer getBindStrategy() 获取绑定策略（1：强踢；2：非强踢；0：表示无意义）
- * @method void setBindStrategy(integer $BindStrategy) 设置绑定策略（1：强踢；2：非强踢；0：表示无意义）
- * @method integer getDeviceCount() 获取设备数量
- * @method void setDeviceCount(integer $DeviceCount) 设置设备数量
- * @method string getRate() 获取平均传输速率
- * @method void setRate(string $Rate) 设置平均传输速率
- * @method string getPeriod() 获取有效期
- * @method void setPeriod(string $Period) 设置有效期
- * @method integer getIsInterconnection() 获取互联互通标识
- * @method void setIsInterconnection(integer $IsInterconnection) 设置互联互通标识
+ * @method string getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(string $ProductId) 设置<p>产品ID</p>
+ * @method string getProductName() 获取<p>产品名称</p>
+ * @method void setProductName(string $ProductName) 设置<p>产品名称</p>
+ * @method integer getCategoryId() 获取<p>产品分组模板ID</p>
+ * @method void setCategoryId(integer $CategoryId) 设置<p>产品分组模板ID</p>
+ * @method string getEncryptionType() 获取<p>加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式</p>
+ * @method void setEncryptionType(string $EncryptionType) 设置<p>加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式</p>
+ * @method string getNetType() 获取<p>连接类型。如：<br>wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+ * @method void setNetType(string $NetType) 设置<p>连接类型。如：<br>wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+ * @method integer getDataProtocol() 获取<p>数据协议 (1 使用物模型 2 为自定义类型)</p>
+ * @method void setDataProtocol(integer $DataProtocol) 设置<p>数据协议 (1 使用物模型 2 为自定义类型)</p>
+ * @method string getProductDesc() 获取<p>产品描述</p>
+ * @method void setProductDesc(string $ProductDesc) 设置<p>产品描述</p>
+ * @method string getDevStatus() 获取<p>状态 如：all 全部, dev 开发中, audit 审核中 released 已发布</p>
+ * @method void setDevStatus(string $DevStatus) 设置<p>状态 如：all 全部, dev 开发中, audit 审核中 released 已发布</p>
+ * @method integer getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
+ * @method string getRegion() 获取<p>区域</p>
+ * @method void setRegion(string $Region) 设置<p>区域</p>
+ * @method integer getProductType() 获取<p>产品类型。如： 0 普通产品 ， 5 网关产品</p>
+ * @method void setProductType(integer $ProductType) 设置<p>产品类型。如： 0 普通产品 ， 5 网关产品</p>
+ * @method string getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID</p>
+ * @method integer getModuleId() 获取<p>产品ModuleId</p>
+ * @method void setModuleId(integer $ModuleId) 设置<p>产品ModuleId</p>
+ * @method string getEnableProductScript() 获取<p>是否使用脚本进行二进制转json功能 可以取值 true / false</p>
+ * @method void setEnableProductScript(string $EnableProductScript) 设置<p>是否使用脚本进行二进制转json功能 可以取值 true / false</p>
+ * @method integer getCreateUserId() 获取<p>创建人 UinId</p>
+ * @method void setCreateUserId(integer $CreateUserId) 设置<p>创建人 UinId</p>
+ * @method string getCreatorNickName() 获取<p>创建者昵称</p>
+ * @method void setCreatorNickName(string $CreatorNickName) 设置<p>创建者昵称</p>
+ * @method integer getBindStrategy() 获取<p>绑定策略（1：强踢；2：非强踢；0：表示无意义）</p>
+ * @method void setBindStrategy(integer $BindStrategy) 设置<p>绑定策略（1：强踢；2：非强踢；0：表示无意义）</p>
+ * @method integer getDeviceCount() 获取<p>设备数量</p>
+ * @method void setDeviceCount(integer $DeviceCount) 设置<p>设备数量</p>
+ * @method string getRate() 获取<p>平均传输速率</p>
+ * @method void setRate(string $Rate) 设置<p>平均传输速率</p>
+ * @method string getPeriod() 获取<p>有效期</p>
+ * @method void setPeriod(string $Period) 设置<p>有效期</p>
+ * @method integer getIsInterconnection() 获取<p>互联互通标识</p>
+ * @method void setIsInterconnection(integer $IsInterconnection) 设置<p>互联互通标识</p>
+ * @method string getUin() 获取<p>UIN</p>
+ * @method void setUin(string $Uin) 设置<p>UIN</p>
+ * @method integer getAppId() 获取<p>AppID</p>
+ * @method void setAppId(integer $AppId) 设置<p>AppID</p>
+ * @method string getPrivateCAName() 获取<p>绑定的第三方CA名称；空 = 腾讯云CA证书</p>
+ * @method void setPrivateCAName(string $PrivateCAName) 设置<p>绑定的第三方CA名称；空 = 腾讯云CA证书</p>
+ * @method boolean getIsPrivateCA() 获取<p>true = 第三方CA</p>
+ * @method void setIsPrivateCA(boolean $IsPrivateCA) 设置<p>true = 第三方CA</p>
+ * @method string getCertName() 获取<p>CA 证书名称</p>
+ * @method void setCertName(string $CertName) 设置<p>CA 证书名称</p>
+ * @method string getCertSN() 获取<p>证书序列号</p>
+ * @method void setCertSN(string $CertSN) 设置<p>证书序列号</p>
+ * @method string getIssuerName() 获取<p>颁发者</p>
+ * @method void setIssuerName(string $IssuerName) 设置<p>颁发者</p>
+ * @method string getSubject() 获取<p>证书主题</p>
+ * @method void setSubject(string $Subject) 设置<p>证书主题</p>
+ * @method integer getEffectiveTime() 获取<p>生效时间（Unix 秒）</p><p>单位：秒</p>
+ * @method void setEffectiveTime(integer $EffectiveTime) 设置<p>生效时间（Unix 秒）</p><p>单位：秒</p>
+ * @method integer getExpireTime() 获取<p>过期时间（Unix 秒）</p><p>单位：秒</p>
+ * @method void setExpireTime(integer $ExpireTime) 设置<p>过期时间（Unix 秒）</p><p>单位：秒</p>
+ * @method string getCertText() 获取<p>CA 证书 PEM 全文</p>
+ * @method void setCertText(string $CertText) 设置<p>CA 证书 PEM 全文</p>
  */
 class ProductEntry extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var string 产品名称
+     * @var string <p>产品名称</p>
      */
     public $ProductName;
 
     /**
-     * @var integer 产品分组模板ID
+     * @var integer <p>产品分组模板ID</p>
      */
     public $CategoryId;
 
     /**
-     * @var string 加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @var string <p>加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式</p>
      */
     public $EncryptionType;
 
     /**
-     * @var string 连接类型。如：
-wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * @var string <p>连接类型。如：<br>wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
      */
     public $NetType;
 
     /**
-     * @var integer 数据协议 (1 使用物模型 2 为自定义类型)
+     * @var integer <p>数据协议 (1 使用物模型 2 为自定义类型)</p>
      */
     public $DataProtocol;
 
     /**
-     * @var string 产品描述
+     * @var string <p>产品描述</p>
      */
     public $ProductDesc;
 
     /**
-     * @var string 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
+     * @var string <p>状态 如：all 全部, dev 开发中, audit 审核中 released 已发布</p>
      */
     public $DevStatus;
 
     /**
-     * @var integer 创建时间
+     * @var integer <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间
+     * @var integer <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 区域
+     * @var string <p>区域</p>
      */
     public $Region;
 
     /**
-     * @var integer 产品类型。如： 0 普通产品 ， 5 网关产品
+     * @var integer <p>产品类型。如： 0 普通产品 ， 5 网关产品</p>
      */
     public $ProductType;
 
     /**
-     * @var string 项目ID
+     * @var string <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 产品ModuleId
+     * @var integer <p>产品ModuleId</p>
      */
     public $ModuleId;
 
     /**
-     * @var string 是否使用脚本进行二进制转json功能 可以取值 true / false
+     * @var string <p>是否使用脚本进行二进制转json功能 可以取值 true / false</p>
      */
     public $EnableProductScript;
 
     /**
-     * @var integer 创建人 UinId
+     * @var integer <p>创建人 UinId</p>
      */
     public $CreateUserId;
 
     /**
-     * @var string 创建者昵称
+     * @var string <p>创建者昵称</p>
      */
     public $CreatorNickName;
 
     /**
-     * @var integer 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+     * @var integer <p>绑定策略（1：强踢；2：非强踢；0：表示无意义）</p>
      */
     public $BindStrategy;
 
     /**
-     * @var integer 设备数量
+     * @var integer <p>设备数量</p>
      */
     public $DeviceCount;
 
     /**
-     * @var string 平均传输速率
+     * @var string <p>平均传输速率</p>
      */
     public $Rate;
 
     /**
-     * @var string 有效期
+     * @var string <p>有效期</p>
      */
     public $Period;
 
     /**
-     * @var integer 互联互通标识
+     * @var integer <p>互联互通标识</p>
      */
     public $IsInterconnection;
 
     /**
-     * @param string $ProductId 产品ID
-     * @param string $ProductName 产品名称
-     * @param integer $CategoryId 产品分组模板ID
-     * @param string $EncryptionType 加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
-     * @param string $NetType 连接类型。如：
-wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
-     * @param integer $DataProtocol 数据协议 (1 使用物模型 2 为自定义类型)
-     * @param string $ProductDesc 产品描述
-     * @param string $DevStatus 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
-     * @param integer $CreateTime 创建时间
-     * @param integer $UpdateTime 更新时间
-     * @param string $Region 区域
-     * @param integer $ProductType 产品类型。如： 0 普通产品 ， 5 网关产品
-     * @param string $ProjectId 项目ID
-     * @param integer $ModuleId 产品ModuleId
-     * @param string $EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
-     * @param integer $CreateUserId 创建人 UinId
-     * @param string $CreatorNickName 创建者昵称
-     * @param integer $BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-     * @param integer $DeviceCount 设备数量
-     * @param string $Rate 平均传输速率
-     * @param string $Period 有效期
-     * @param integer $IsInterconnection 互联互通标识
+     * @var string <p>UIN</p>
+     */
+    public $Uin;
+
+    /**
+     * @var integer <p>AppID</p>
+     */
+    public $AppId;
+
+    /**
+     * @var string <p>绑定的第三方CA名称；空 = 腾讯云CA证书</p>
+     */
+    public $PrivateCAName;
+
+    /**
+     * @var boolean <p>true = 第三方CA</p>
+     */
+    public $IsPrivateCA;
+
+    /**
+     * @var string <p>CA 证书名称</p>
+     */
+    public $CertName;
+
+    /**
+     * @var string <p>证书序列号</p>
+     */
+    public $CertSN;
+
+    /**
+     * @var string <p>颁发者</p>
+     */
+    public $IssuerName;
+
+    /**
+     * @var string <p>证书主题</p>
+     */
+    public $Subject;
+
+    /**
+     * @var integer <p>生效时间（Unix 秒）</p><p>单位：秒</p>
+     */
+    public $EffectiveTime;
+
+    /**
+     * @var integer <p>过期时间（Unix 秒）</p><p>单位：秒</p>
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string <p>CA 证书 PEM 全文</p>
+     */
+    public $CertText;
+
+    /**
+     * @param string $ProductId <p>产品ID</p>
+     * @param string $ProductName <p>产品名称</p>
+     * @param integer $CategoryId <p>产品分组模板ID</p>
+     * @param string $EncryptionType <p>加密类型。1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式</p>
+     * @param string $NetType <p>连接类型。如：<br>wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+     * @param integer $DataProtocol <p>数据协议 (1 使用物模型 2 为自定义类型)</p>
+     * @param string $ProductDesc <p>产品描述</p>
+     * @param string $DevStatus <p>状态 如：all 全部, dev 开发中, audit 审核中 released 已发布</p>
+     * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $UpdateTime <p>更新时间</p>
+     * @param string $Region <p>区域</p>
+     * @param integer $ProductType <p>产品类型。如： 0 普通产品 ， 5 网关产品</p>
+     * @param string $ProjectId <p>项目ID</p>
+     * @param integer $ModuleId <p>产品ModuleId</p>
+     * @param string $EnableProductScript <p>是否使用脚本进行二进制转json功能 可以取值 true / false</p>
+     * @param integer $CreateUserId <p>创建人 UinId</p>
+     * @param string $CreatorNickName <p>创建者昵称</p>
+     * @param integer $BindStrategy <p>绑定策略（1：强踢；2：非强踢；0：表示无意义）</p>
+     * @param integer $DeviceCount <p>设备数量</p>
+     * @param string $Rate <p>平均传输速率</p>
+     * @param string $Period <p>有效期</p>
+     * @param integer $IsInterconnection <p>互联互通标识</p>
+     * @param string $Uin <p>UIN</p>
+     * @param integer $AppId <p>AppID</p>
+     * @param string $PrivateCAName <p>绑定的第三方CA名称；空 = 腾讯云CA证书</p>
+     * @param boolean $IsPrivateCA <p>true = 第三方CA</p>
+     * @param string $CertName <p>CA 证书名称</p>
+     * @param string $CertSN <p>证书序列号</p>
+     * @param string $IssuerName <p>颁发者</p>
+     * @param string $Subject <p>证书主题</p>
+     * @param integer $EffectiveTime <p>生效时间（Unix 秒）</p><p>单位：秒</p>
+     * @param integer $ExpireTime <p>过期时间（Unix 秒）</p><p>单位：秒</p>
+     * @param string $CertText <p>CA 证书 PEM 全文</p>
      */
     function __construct()
     {
@@ -304,6 +388,50 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
         if (array_key_exists("IsInterconnection",$param) and $param["IsInterconnection"] !== null) {
             $this->IsInterconnection = $param["IsInterconnection"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("PrivateCAName",$param) and $param["PrivateCAName"] !== null) {
+            $this->PrivateCAName = $param["PrivateCAName"];
+        }
+
+        if (array_key_exists("IsPrivateCA",$param) and $param["IsPrivateCA"] !== null) {
+            $this->IsPrivateCA = $param["IsPrivateCA"];
+        }
+
+        if (array_key_exists("CertName",$param) and $param["CertName"] !== null) {
+            $this->CertName = $param["CertName"];
+        }
+
+        if (array_key_exists("CertSN",$param) and $param["CertSN"] !== null) {
+            $this->CertSN = $param["CertSN"];
+        }
+
+        if (array_key_exists("IssuerName",$param) and $param["IssuerName"] !== null) {
+            $this->IssuerName = $param["IssuerName"];
+        }
+
+        if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
+            $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("EffectiveTime",$param) and $param["EffectiveTime"] !== null) {
+            $this->EffectiveTime = $param["EffectiveTime"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("CertText",$param) and $param["CertText"] !== null) {
+            $this->CertText = $param["CertText"];
         }
     }
 }

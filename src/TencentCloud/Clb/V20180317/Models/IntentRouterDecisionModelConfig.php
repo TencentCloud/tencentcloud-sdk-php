@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnabled() 获取<p>是否开启使用决策模型</p>
  * @method void setEnabled(boolean $Enabled) 设置<p>是否开启使用决策模型</p>
+ * @method string getModelName() 获取<p>选定的分类决策模型名，不传递表示随机选用。</p>
+ * @method void setModelName(string $ModelName) 设置<p>选定的分类决策模型名，不传递表示随机选用。</p>
  */
 class IntentRouterDecisionModelConfig extends AbstractModel
 {
@@ -31,7 +33,13 @@ class IntentRouterDecisionModelConfig extends AbstractModel
     public $Enabled;
 
     /**
+     * @var string <p>选定的分类决策模型名，不传递表示随机选用。</p>
+     */
+    public $ModelName;
+
+    /**
      * @param boolean $Enabled <p>是否开启使用决策模型</p>
+     * @param string $ModelName <p>选定的分类决策模型名，不传递表示随机选用。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class IntentRouterDecisionModelConfig extends AbstractModel
         }
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

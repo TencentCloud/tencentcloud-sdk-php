@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelName(string $ModelName) 设置<p>模型标识显示名称（优先使用 model_alias，否则使用 model_name）</p>
  * @method array getServiceProviders() 获取<p>关联的服务商列表</p>
  * @method void setServiceProviders(array $ServiceProviders) 设置<p>关联的服务商列表</p>
- * @method array getInputModalitiesUnion() 获取<p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
- * @method void setInputModalitiesUnion(array $InputModalitiesUnion) 设置<p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+ * @method array getInputModalitiesUnion() 获取<p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
+ * @method void setInputModalitiesUnion(array $InputModalitiesUnion) 设置<p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
  */
 class ModelNameAggregatedItem extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModelNameAggregatedItem extends AbstractModel
     public $ServiceProviders;
 
     /**
-     * @var array <p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @var array <p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     public $InputModalitiesUnion;
 
     /**
      * @param string $ModelName <p>模型标识显示名称（优先使用 model_alias，否则使用 model_name）</p>
      * @param array $ServiceProviders <p>关联的服务商列表</p>
-     * @param array $InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @param array $InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表。</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     function __construct()
     {

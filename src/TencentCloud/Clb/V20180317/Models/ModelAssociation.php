@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型关联信息
  *
- * @method array getInputModalitiesUnion() 获取<p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
- * @method void setInputModalitiesUnion(array $InputModalitiesUnion) 设置<p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+ * @method array getInputModalitiesUnion() 获取<p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
+ * @method void setInputModalitiesUnion(array $InputModalitiesUnion) 设置<p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
  * @method string getModelName() 获取<p>模型名称</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
  * @method array getServiceProviders() 获取<p>BYOK列表</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModelAssociation extends AbstractModel
 {
     /**
-     * @var array <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @var array <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     public $InputModalitiesUnion;
 
@@ -59,7 +59,7 @@ class ModelAssociation extends AbstractModel
     public $Capability;
 
     /**
-     * @param array $InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @param array $InputModalitiesUnion <p>该模型最大可支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      * @param string $ModelName <p>模型名称</p>
      * @param array $ServiceProviders <p>BYOK列表</p>
      * @param string $Type <p>模型类型</p>

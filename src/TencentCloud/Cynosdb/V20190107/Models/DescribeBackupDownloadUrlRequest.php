@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadUrl请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getBackupId() 获取备份ID
- * @method void setBackupId(integer $BackupId) 设置备份ID
- * @method BackupLimitRestriction getDownloadRestriction() 获取备份下载来源限制条件
- * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) 设置备份下载来源限制条件
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getBackupId() 获取<p>备份ID</p>
+ * @method void setBackupId(integer $BackupId) 设置<p>备份ID</p>
+ * @method BackupLimitRestriction getDownloadRestriction() 获取<p>备份下载来源限制条件</p>
+ * @method void setDownloadRestriction(BackupLimitRestriction $DownloadRestriction) 设置<p>备份下载来源限制条件</p>
  */
 class DescribeBackupDownloadUrlRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 备份ID
+     * @var integer <p>备份ID</p>
      */
     public $BackupId;
 
     /**
-     * @var BackupLimitRestriction 备份下载来源限制条件
+     * @var BackupLimitRestriction <p>备份下载来源限制条件</p>
      */
     public $DownloadRestriction;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $BackupId 备份ID
-     * @param BackupLimitRestriction $DownloadRestriction 备份下载来源限制条件
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $BackupId <p>备份ID</p>
+     * @param BackupLimitRestriction $DownloadRestriction <p>备份下载来源限制条件</p>
      */
     function __construct()
     {

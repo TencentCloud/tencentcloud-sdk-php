@@ -18,7 +18,7 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MySQL 系列产品空间对象项。库级查询时不包含 TableName/Engine 字段；表级查询时包含全部字段。
+ * MySQL 系列产品空间对象项（单表明细）。
  *
  * @method string getTableSchema() 获取<p>数据库名。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -31,6 +31,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEngine() 获取<p>存储引擎（Level=TABLE时返回）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngine(string $Engine) 设置<p>存储引擎（Level=TABLE时返回）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTableStatus() 获取<p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableStatus(integer $TableStatus) 设置<p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTableRows() 获取<p>行数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,6 +86,12 @@ class MysqlSpaceObjectItem extends AbstractModel
     public $Engine;
 
     /**
+     * @var integer <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableStatus;
+
+    /**
      * @var integer <p>行数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -130,6 +140,8 @@ class MysqlSpaceObjectItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Engine <p>存储引擎（Level=TABLE时返回）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TableStatus <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableRows <p>行数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalLength <p>总使用空间（MB）。</p>
@@ -168,6 +180,10 @@ class MysqlSpaceObjectItem extends AbstractModel
 
         if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
             $this->Engine = $param["Engine"];
+        }
+
+        if (array_key_exists("TableStatus",$param) and $param["TableStatus"] !== null) {
+            $this->TableStatus = $param["TableStatus"];
         }
 
         if (array_key_exists("TableRows",$param) and $param["TableRows"] !== null) {

@@ -18,83 +18,83 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MongoDB 产品表级（集合级）空间对象项，描述单个集合的空间使用统计信息。
+ * MongoDB 产品集合级空间对象项，包含顶层标识字段与嵌套 Collection 明细。
  *
- * @method integer getAppId() 获取<p>应用 Id（AppId）。</p>
+ * @method integer getAppId() 获取应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置<p>应用 Id（AppId）。</p>
+ * @method void setAppId(integer $AppId) 设置应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取<p>实例 Id。</p>
+ * @method string getInstanceId() 获取实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置<p>实例 Id。</p>
+ * @method void setInstanceId(string $InstanceId) 设置实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDb() 获取<p>数据库名。</p>
+ * @method string getDb() 获取数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDb(string $Db) 设置<p>数据库名。</p>
+ * @method void setDb(string $Db) 设置数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimestamp() 获取<p>数据采集时间戳（毫秒）。</p>
+ * @method integer getTimestamp() 获取数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimestamp(integer $Timestamp) 设置<p>数据采集时间戳（毫秒）。</p>
+ * @method void setTimestamp(integer $Timestamp) 设置数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSizeOnDisk() 获取<p>磁盘占用大小（字节）。</p>
+ * @method integer getSizeOnDisk() 获取磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSizeOnDisk(integer $SizeOnDisk) 设置<p>磁盘占用大小（字节）。</p>
+ * @method void setSizeOnDisk(integer $SizeOnDisk) 设置磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MongoCollectionDetail getCollection() 获取<p>集合级空间使用明细。</p>
+ * @method MongoCollectionDetail getCollection() 获取集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCollection(MongoCollectionDetail $Collection) 设置<p>集合级空间使用明细。</p>
+ * @method void setCollection(MongoCollectionDetail $Collection) 设置集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MongoDBTableSpaceItem extends AbstractModel
 {
     /**
-     * @var integer <p>应用 Id（AppId）。</p>
+     * @var integer 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var string <p>实例 Id。</p>
+     * @var string 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string <p>数据库名。</p>
+     * @var string 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Db;
 
     /**
-     * @var integer <p>数据采集时间戳（毫秒）。</p>
+     * @var integer 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
-     * @var integer <p>磁盘占用大小（字节）。</p>
+     * @var integer 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SizeOnDisk;
 
     /**
-     * @var MongoCollectionDetail <p>集合级空间使用明细。</p>
+     * @var MongoCollectionDetail 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Collection;
 
     /**
-     * @param integer $AppId <p>应用 Id（AppId）。</p>
+     * @param integer $AppId 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId <p>实例 Id。</p>
+     * @param string $InstanceId 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Db <p>数据库名。</p>
+     * @param string $Db 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Timestamp <p>数据采集时间戳（毫秒）。</p>
+     * @param integer $Timestamp 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SizeOnDisk <p>磁盘占用大小（字节）。</p>
+     * @param integer $SizeOnDisk 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MongoCollectionDetail $Collection <p>集合级空间使用明细。</p>
+     * @param MongoCollectionDetail $Collection 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

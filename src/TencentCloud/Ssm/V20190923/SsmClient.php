@@ -26,6 +26,7 @@ use TencentCloud\Ssm\V20190923\Models as Models;
  * @method Models\CreateProductSecretResponse CreateProductSecret(Models\CreateProductSecretRequest $req) 创建云产品凭据
  * @method Models\CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecret(Models\CreateSSHKeyPairSecretRequest $req) 创建用于托管SSH密钥对的凭据
  * @method Models\CreateSecretResponse CreateSecret(Models\CreateSecretRequest $req) 创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
+ * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) 开通 ssm 服务接口
  * @method Models\DeleteSecretResponse DeleteSecret(Models\DeleteSecretRequest $req) 删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
  * @method Models\DeleteSecretVersionResponse DeleteSecretVersion(Models\DeleteSecretVersionRequest $req) 该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
 本接口仅适用于用户自定义凭据，本接口不能对云产品凭据进行操作。

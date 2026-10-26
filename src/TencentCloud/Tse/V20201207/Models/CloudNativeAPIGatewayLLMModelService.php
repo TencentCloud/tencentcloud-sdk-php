@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置<p>是否开启健康检查</p>
  * @method AIGWLLMHealthCheckSetting getHealthCheck() 获取<p>健康检查配置</p>
  * @method void setHealthCheck(AIGWLLMHealthCheckSetting $HealthCheck) 设置<p>健康检查配置</p>
+ * @method AIGWLengthLimitConfig getLengthLimitConfig() 获取<p>内容长度限制配置</p>
+ * @method void setLengthLimitConfig(AIGWLengthLimitConfig $LengthLimitConfig) 设置<p>内容长度限制配置</p>
+ * @method AIGWSmartBalanceConfig getSmartBalance() 获取<p>智能负载均衡配置。</p>
+ * @method void setSmartBalance(AIGWSmartBalanceConfig $SmartBalance) 设置<p>智能负载均衡配置。</p>
  */
 class CloudNativeAPIGatewayLLMModelService extends AbstractModel
 {
@@ -325,6 +329,16 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
     public $HealthCheck;
 
     /**
+     * @var AIGWLengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public $LengthLimitConfig;
+
+    /**
+     * @var AIGWSmartBalanceConfig <p>智能负载均衡配置。</p>
+     */
+    public $SmartBalance;
+
+    /**
      * @param string $Id <p>模型服务 ID。</p>
      * @param string $Name <p>模型服务名称。</p>
      * @param string $CreateTime <p>创建时间。</p>
@@ -368,6 +382,8 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
      * @param string $Status <p>健康状态</p><p>枚举值：</p><ul><li>Error： 异常</li></ul>
      * @param boolean $EnableHealthCheck <p>是否开启健康检查</p>
      * @param AIGWLLMHealthCheckSetting $HealthCheck <p>健康检查配置</p>
+     * @param AIGWLengthLimitConfig $LengthLimitConfig <p>内容长度限制配置</p>
+     * @param AIGWSmartBalanceConfig $SmartBalance <p>智能负载均衡配置。</p>
      */
     function __construct()
     {
@@ -567,6 +583,16 @@ class CloudNativeAPIGatewayLLMModelService extends AbstractModel
         if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
             $this->HealthCheck = new AIGWLLMHealthCheckSetting();
             $this->HealthCheck->deserialize($param["HealthCheck"]);
+        }
+
+        if (array_key_exists("LengthLimitConfig",$param) and $param["LengthLimitConfig"] !== null) {
+            $this->LengthLimitConfig = new AIGWLengthLimitConfig();
+            $this->LengthLimitConfig->deserialize($param["LengthLimitConfig"]);
+        }
+
+        if (array_key_exists("SmartBalance",$param) and $param["SmartBalance"] !== null) {
+            $this->SmartBalance = new AIGWSmartBalanceConfig();
+            $this->SmartBalance->deserialize($param["SmartBalance"]);
         }
     }
 }

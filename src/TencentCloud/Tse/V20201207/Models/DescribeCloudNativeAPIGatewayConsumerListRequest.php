@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
  * @method string getResourceId() 获取<p>资源ID</p>
  * @method void setResourceId(string $ResourceId) 设置<p>资源ID</p>
+ * @method string getOrigin() 获取<p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+ * @method void setOrigin(string $Origin) 设置<p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+ * @method string getStatus() 获取<p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+ * @method void setStatus(string $Status) 设置<p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+ * @method string getSyncSourceId() 获取<p>仅查询指定同步源产生的消费者。</p>
+ * @method void setSyncSourceId(string $SyncSourceId) 设置<p>仅查询指定同步源产生的消费者。</p>
+ * @method boolean getWithoutSyncSource() 获取<p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+ * @method void setWithoutSyncSource(boolean $WithoutSyncSource) 设置<p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
  */
 class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
 {
@@ -59,11 +67,35 @@ class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+     */
+    public $Origin;
+
+    /**
+     * @var string <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+     */
+    public $Status;
+
+    /**
+     * @var string <p>仅查询指定同步源产生的消费者。</p>
+     */
+    public $SyncSourceId;
+
+    /**
+     * @var boolean <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+     */
+    public $WithoutSyncSource;
+
+    /**
      * @param string $GatewayId <p>网关实例id</p>
      * @param integer $Limit <p>页显示条数，最大20</p>
      * @param integer $Offset <p>起始位置</p>
      * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelAPI： 模型API</li><li>MCPServer： MCP服务</li></ul>
      * @param string $ResourceId <p>资源ID</p>
+     * @param string $Origin <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+     * @param string $Status <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+     * @param string $SyncSourceId <p>仅查询指定同步源产生的消费者。</p>
+     * @param boolean $WithoutSyncSource <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+            $this->Origin = $param["Origin"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SyncSourceId",$param) and $param["SyncSourceId"] !== null) {
+            $this->SyncSourceId = $param["SyncSourceId"];
+        }
+
+        if (array_key_exists("WithoutSyncSource",$param) and $param["WithoutSyncSource"] !== null) {
+            $this->WithoutSyncSource = $param["WithoutSyncSource"];
         }
     }
 }

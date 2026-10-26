@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
  * @method string getConsumerGroupId() 获取消费者组ID
  * @method void setConsumerGroupId(string $ConsumerGroupId) 设置消费者组ID
+ * @method string getOperationSource() 获取<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
  */
 class DeleteCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
     public $ConsumerGroupId;
 
     /**
+     * @var string <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param string $GatewayId 网关实例id
      * @param string $ConsumerGroupId 消费者组ID
+     * @param string $OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("ConsumerGroupId",$param) and $param["ConsumerGroupId"] !== null) {
             $this->ConsumerGroupId = $param["ConsumerGroupId"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

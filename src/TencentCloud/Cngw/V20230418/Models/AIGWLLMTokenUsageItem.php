@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerId(string $ConsumerId) 设置<p>消费者Id</p>
  * @method string getConsumerName() 获取<p>消费者名称</p>
  * @method void setConsumerName(string $ConsumerName) 设置<p>消费者名称</p>
- * @method array getConsumerGroups() 获取<p>消费者组信息列表</p>
- * @method void setConsumerGroups(array $ConsumerGroups) 设置<p>消费者组信息列表</p>
+ * @method array getConsumerGroups() 获取<p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
+ * @method void setConsumerGroups(array $ConsumerGroups) 设置<p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
  * @method string getModelServiceId() 获取<p>模型服务Id</p>
  * @method void setModelServiceId(string $ModelServiceId) 设置<p>模型服务Id</p>
  * @method string getModelServiceName() 获取<p>模型服务名称</p>
@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCost(string $Cost) 设置<p>花费成本</p>
  * @method string getCurrency() 获取<p>成本货币单位</p><p>枚举值：</p><ul><li>CNY： 人民币</li></ul><p>当前仅支持CNY</p>
  * @method void setCurrency(string $Currency) 设置<p>成本货币单位</p><p>枚举值：</p><ul><li>CNY： 人民币</li></ul><p>当前仅支持CNY</p>
+ * @method array getDimensionList() 获取<p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDimensionList(array $DimensionList) 设置<p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AIGWLLMTokenUsageItem extends AbstractModel
 {
@@ -58,7 +62,7 @@ class AIGWLLMTokenUsageItem extends AbstractModel
     public $ConsumerName;
 
     /**
-     * @var array <p>消费者组信息列表</p>
+     * @var array <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
      */
     public $ConsumerGroups;
 
@@ -108,9 +112,15 @@ class AIGWLLMTokenUsageItem extends AbstractModel
     public $Currency;
 
     /**
+     * @var array <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DimensionList;
+
+    /**
      * @param string $ConsumerId <p>消费者Id</p>
      * @param string $ConsumerName <p>消费者名称</p>
-     * @param array $ConsumerGroups <p>消费者组信息列表</p>
+     * @param array $ConsumerGroups <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
      * @param string $ModelServiceId <p>模型服务Id</p>
      * @param string $ModelServiceName <p>模型服务名称</p>
      * @param integer $InputTokens <p>输入Token数（包含缓存命中Token数）</p>
@@ -120,6 +130,8 @@ class AIGWLLMTokenUsageItem extends AbstractModel
      * @param integer $RequestCount <p>请求总数</p>
      * @param string $Cost <p>花费成本</p>
      * @param string $Currency <p>成本货币单位</p><p>枚举值：</p><ul><li>CNY： 人民币</li></ul><p>当前仅支持CNY</p>
+     * @param array $DimensionList <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -185,6 +197,15 @@ class AIGWLLMTokenUsageItem extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("DimensionList",$param) and $param["DimensionList"] !== null) {
+            $this->DimensionList = [];
+            foreach ($param["DimensionList"] as $key => $value){
+                $obj = new AIGWLLMResourceDimension();
+                $obj->deserialize($value);
+                array_push($this->DimensionList, $obj);
+            }
         }
     }
 }

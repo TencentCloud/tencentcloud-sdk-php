@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayLLMModelAPIs请求参数结构体
  *
- * @method string getGatewayId() 获取网关 id。
- * @method void setGatewayId(string $GatewayId) 设置网关 id。
+ * @method string getGatewayId() 获取<p>网关 id。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关 id。</p>
  * @method integer getLimit() 获取<p>每页条数，范围 [1, 1000]，默认 10。</p>
  * @method void setLimit(integer $Limit) 设置<p>每页条数，范围 [1, 1000]，默认 10。</p>
  * @method integer getOffset() 获取<p>起始位置，从 0 开始。</p>
@@ -36,11 +36,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseToBind(boolean $UseToBind) 设置<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
  * @method string getConsumerId() 获取<p>消费者 ID（以 consumer- 开头）。</p>
  * @method void setConsumerId(string $ConsumerId) 设置<p>消费者 ID（以 consumer- 开头）。</p>
+ * @method string getSecretKeyId() 获取<p>密钥ID</p>
+ * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥ID</p>
  */
 class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 {
     /**
-     * @var string 网关 id。
+     * @var string <p>网关 id。</p>
      */
     public $GatewayId;
 
@@ -80,7 +82,12 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
     public $ConsumerId;
 
     /**
-     * @param string $GatewayId 网关 id。
+     * @var string <p>密钥ID</p>
+     */
+    public $SecretKeyId;
+
+    /**
+     * @param string $GatewayId <p>网关 id。</p>
      * @param integer $Limit <p>每页条数，范围 [1, 1000]，默认 10。</p>
      * @param integer $Offset <p>起始位置，从 0 开始。</p>
      * @param array $Filters <p>过滤条件。当前未启用具体字段。</p>
@@ -88,6 +95,7 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
      * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      * @param boolean $UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
      * @param string $ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
+     * @param string $SecretKeyId <p>密钥ID</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 
         if (array_key_exists("ConsumerId",$param) and $param["ConsumerId"] !== null) {
             $this->ConsumerId = $param["ConsumerId"];
+        }
+
+        if (array_key_exists("SecretKeyId",$param) and $param["SecretKeyId"] !== null) {
+            $this->SecretKeyId = $param["SecretKeyId"];
         }
     }
 }

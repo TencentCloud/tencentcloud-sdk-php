@@ -20,154 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveSnapshotTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method integer getCosAppId() 获取Cos 应用 ID。
- * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
- * @method string getCosBucket() 获取Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
- * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
- * @method string getCosRegion() 获取Cos地区。
- * @method void setCosRegion(string $CosRegion) 设置Cos地区。
- * @method string getDescription() 获取描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
- * @method void setDescription(string $Description) 设置描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
- * @method integer getSnapshotInterval() 获取截图间隔，单位s，默认10s。
-范围： 2s ~ 300s。
- * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图间隔，单位s，默认10s。
-范围： 2s ~ 300s。
- * @method integer getWidth() 获取截图宽度。默认：0（原始宽）。
-范围：0-3000 。
- * @method void setWidth(integer $Width) 设置截图宽度。默认：0（原始宽）。
-范围：0-3000 。
- * @method integer getHeight() 获取截图高度。默认：0（原始高）。
-范围：0-2000 。
- * @method void setHeight(integer $Height) 设置截图高度。默认：0（原始高）。
-范围：0-2000 。
- * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
- * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
- * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
-如不传，实际按默认值
-/{Year}-{Month}-{Day}
-生效
- * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
-如不传，实际按默认值
-/{Year}-{Month}-{Day}
-生效
- * @method string getCosFileName() 获取Cos 文件名称。
-如不传，实际按默认值
-{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
-生效
- * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
-如不传，实际按默认值
-{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
-生效
+ * @method string getTemplateName() 获取<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method integer getCosAppId() 获取<p>Cos 应用 ID。</p>
+ * @method void setCosAppId(integer $CosAppId) 设置<p>Cos 应用 ID。</p>
+ * @method string getCosBucket() 获取<p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。</p>
+ * @method void setCosBucket(string $CosBucket) 设置<p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。</p>
+ * @method string getCosRegion() 获取<p>Cos地区。</p>
+ * @method void setCosRegion(string $CosRegion) 设置<p>Cos地区。</p>
+ * @method string getDescription() 获取<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method integer getSnapshotInterval() 获取<p>截图间隔，单位s，默认10s。<br>范围： 2s ~ 300s。</p>
+ * @method void setSnapshotInterval(integer $SnapshotInterval) 设置<p>截图间隔，单位s，默认10s。<br>范围： 2s ~ 300s。</p>
+ * @method integer getWidth() 获取<p>截图宽度。默认：0（原始宽）。<br>范围：0-3000 。</p>
+ * @method void setWidth(integer $Width) 设置<p>截图宽度。默认：0（原始宽）。<br>范围：0-3000 。</p>
+ * @method integer getHeight() 获取<p>截图高度。默认：0（原始高）。<br>范围：0-2000 。</p>
+ * @method void setHeight(integer $Height) 设置<p>截图高度。默认：0（原始高）。<br>范围：0-2000 。</p>
+ * @method integer getPornFlag() 获取<p>是否开启鉴黄，0：不开启，1：开启。默认：0。</p>
+ * @method void setPornFlag(integer $PornFlag) 设置<p>是否开启鉴黄，0：不开启，1：开启。默认：0。</p>
+ * @method string getCosPrefix() 获取<p>Cos Bucket文件夹前缀。<br>如不传，实际按默认值<br>/{Year}-{Month}-{Day}<br>生效</p>
+ * @method void setCosPrefix(string $CosPrefix) 设置<p>Cos Bucket文件夹前缀。<br>如不传，实际按默认值<br>/{Year}-{Month}-{Day}<br>生效</p>
+ * @method string getCosFileName() 获取<p>Cos 文件名称。<br>如不传，实际按默认值<br>{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}<br>生效</p>
+ * @method void setCosFileName(string $CosFileName) 设置<p>Cos 文件名称。<br>如不传，实际按默认值<br>{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}<br>生效</p>
  */
 class CreateLiveSnapshotTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $TemplateName;
 
     /**
-     * @var integer Cos 应用 ID。
+     * @var integer <p>Cos 应用 ID。</p>
      */
     public $CosAppId;
 
     /**
-     * @var string Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
+     * @var string <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。</p>
      */
     public $CosBucket;
 
     /**
-     * @var string Cos地区。
+     * @var string <p>Cos地区。</p>
      */
     public $CosRegion;
 
     /**
-     * @var string 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $Description;
 
     /**
-     * @var integer 截图间隔，单位s，默认10s。
-范围： 2s ~ 300s。
+     * @var integer <p>截图间隔，单位s，默认10s。<br>范围： 2s ~ 300s。</p>
      */
     public $SnapshotInterval;
 
     /**
-     * @var integer 截图宽度。默认：0（原始宽）。
-范围：0-3000 。
+     * @var integer <p>截图宽度。默认：0（原始宽）。<br>范围：0-3000 。</p>
      */
     public $Width;
 
     /**
-     * @var integer 截图高度。默认：0（原始高）。
-范围：0-2000 。
+     * @var integer <p>截图高度。默认：0（原始高）。<br>范围：0-2000 。</p>
      */
     public $Height;
 
     /**
-     * @var integer 是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * @var integer <p>是否开启鉴黄，0：不开启，1：开启。默认：0。</p>
      */
     public $PornFlag;
 
     /**
-     * @var string Cos Bucket文件夹前缀。
-如不传，实际按默认值
-/{Year}-{Month}-{Day}
-生效
+     * @var string <p>Cos Bucket文件夹前缀。<br>如不传，实际按默认值<br>/{Year}-{Month}-{Day}<br>生效</p>
      */
     public $CosPrefix;
 
     /**
-     * @var string Cos 文件名称。
-如不传，实际按默认值
-{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
-生效
+     * @var string <p>Cos 文件名称。<br>如不传，实际按默认值<br>{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}<br>生效</p>
      */
     public $CosFileName;
 
     /**
-     * @param string $TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
-     * @param integer $CosAppId Cos 应用 ID。
-     * @param string $CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     * @param string $CosRegion Cos地区。
-     * @param string $Description 描述信息。
-长度上限：1024字节。
-仅支持中文、英文、数字、_、-。
-     * @param integer $SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 2s ~ 300s。
-     * @param integer $Width 截图宽度。默认：0（原始宽）。
-范围：0-3000 。
-     * @param integer $Height 截图高度。默认：0（原始高）。
-范围：0-2000 。
-     * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
-     * @param string $CosPrefix Cos Bucket文件夹前缀。
-如不传，实际按默认值
-/{Year}-{Month}-{Day}
-生效
-     * @param string $CosFileName Cos 文件名称。
-如不传，实际按默认值
-{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}
-生效
+     * @param string $TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param integer $CosAppId <p>Cos 应用 ID。</p>
+     * @param string $CosBucket <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。</p>
+     * @param string $CosRegion <p>Cos地区。</p>
+     * @param string $Description <p>描述信息。<br>长度上限：1024字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param integer $SnapshotInterval <p>截图间隔，单位s，默认10s。<br>范围： 2s ~ 300s。</p>
+     * @param integer $Width <p>截图宽度。默认：0（原始宽）。<br>范围：0-3000 。</p>
+     * @param integer $Height <p>截图高度。默认：0（原始高）。<br>范围：0-2000 。</p>
+     * @param integer $PornFlag <p>是否开启鉴黄，0：不开启，1：开启。默认：0。</p>
+     * @param string $CosPrefix <p>Cos Bucket文件夹前缀。<br>如不传，实际按默认值<br>/{Year}-{Month}-{Day}<br>生效</p>
+     * @param string $CosFileName <p>Cos 文件名称。<br>如不传，实际按默认值<br>{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}<br>生效</p>
      */
     function __construct()
     {

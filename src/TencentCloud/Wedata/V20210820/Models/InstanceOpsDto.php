@@ -320,6 +320,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerSource() 获取<p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerSource(string $TriggerSource) 设置<p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpTaskId() 获取<p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpTaskId(string $ParentSpTaskId) 设置<p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpInstanceName() 获取<p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpInstanceName(string $ParentSpInstanceName) 设置<p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentSpInstanceDataTime() 获取<p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentSpInstanceDataTime(string $ParentSpInstanceDataTime) 设置<p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -782,6 +798,30 @@ class InstanceOpsDto extends AbstractModel
     public $Privilege;
 
     /**
+     * @var string <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerSource;
+
+    /**
+     * @var string <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentSpTaskId;
+
+    /**
+     * @var string <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentSpInstanceName;
+
+    /**
+     * @var string <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentSpInstanceDataTime;
+
+    /**
      * @param string $TaskId <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName <p>任务名称</p>
@@ -931,6 +971,14 @@ class InstanceOpsDto extends AbstractModel
      * @param TaskTypeOpsDto $ProxyTaskType <p>代理任务类型（仅 嵌套场景使用，非 嵌套 场景为 null）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSIONS： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerSource <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpTaskId <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpInstanceName <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentSpInstanceDataTime <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1271,6 +1319,22 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("TriggerSource",$param) and $param["TriggerSource"] !== null) {
+            $this->TriggerSource = $param["TriggerSource"];
+        }
+
+        if (array_key_exists("ParentSpTaskId",$param) and $param["ParentSpTaskId"] !== null) {
+            $this->ParentSpTaskId = $param["ParentSpTaskId"];
+        }
+
+        if (array_key_exists("ParentSpInstanceName",$param) and $param["ParentSpInstanceName"] !== null) {
+            $this->ParentSpInstanceName = $param["ParentSpInstanceName"];
+        }
+
+        if (array_key_exists("ParentSpInstanceDataTime",$param) and $param["ParentSpInstanceDataTime"] !== null) {
+            $this->ParentSpInstanceDataTime = $param["ParentSpInstanceDataTime"];
         }
     }
 }

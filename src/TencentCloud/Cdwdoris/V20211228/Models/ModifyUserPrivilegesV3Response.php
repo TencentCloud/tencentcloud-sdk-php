@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserPrivilegesV3返回参数结构体
  *
- * @method string getErrorMsg() 获取错误信息，为空就是没有错误
- * @method void setErrorMsg(string $ErrorMsg) 设置错误信息，为空就是没有错误
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method string getErrorMsg() 获取<p>错误信息，为空就是没有错误</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>错误信息，为空就是没有错误</p>
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
+ * @method SkippedPrivilegeItem getSkippedItems() 获取<p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+ * @method void setSkippedItems(SkippedPrivilegeItem $SkippedItems) 设置<p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyUserPrivilegesV3Response extends AbstractModel
 {
     /**
-     * @var string 错误信息，为空就是没有错误
+     * @var string <p>错误信息，为空就是没有错误</p>
      */
     public $ErrorMsg;
 
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $InstanceId;
+
+    /**
+     * @var SkippedPrivilegeItem <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+     */
+    public $SkippedItems;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class ModifyUserPrivilegesV3Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrorMsg 错误信息，为空就是没有错误
-     * @param string $InstanceId 集群id
+     * @param string $ErrorMsg <p>错误信息，为空就是没有错误</p>
+     * @param string $InstanceId <p>集群id</p>
+     * @param SkippedPrivilegeItem $SkippedItems <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,11 @@ class ModifyUserPrivilegesV3Response extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("SkippedItems",$param) and $param["SkippedItems"] !== null) {
+            $this->SkippedItems = new SkippedPrivilegeItem();
+            $this->SkippedItems->deserialize($param["SkippedItems"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -70,6 +70,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerGroupModelScopes(array $ConsumerGroupModelScopes) 设置<p>消费者组模型范围</p>
  * @method AIGWConsumerModelScope getConsumerInheritModelScope() 获取<p>消费者继承的模型范围</p>
  * @method void setConsumerInheritModelScope(AIGWConsumerModelScope $ConsumerInheritModelScope) 设置<p>消费者继承的模型范围</p>
+ * @method array getConsumerDirectModelScopes() 获取<p>消费者模型范围</p>
+ * @method void setConsumerDirectModelScopes(array $ConsumerDirectModelScopes) 设置<p>消费者模型范围</p>
+ * @method array getSecretKeyModelScopes() 获取<p>消费者密钥模型范围</p>
+ * @method void setSecretKeyModelScopes(array $SecretKeyModelScopes) 设置<p>消费者密钥模型范围</p>
+ * @method AIGWPriorityScheduleConfig getPriorityScheduleConfig() 获取<p>请求优先级配置</p>
+ * @method void setPriorityScheduleConfig(AIGWPriorityScheduleConfig $PriorityScheduleConfig) 设置<p>请求优先级配置</p>
+ * @method boolean getPlaygroundAvailable() 获取<p>模型API是否支持Playground调试</p>
+ * @method void setPlaygroundAvailable(boolean $PlaygroundAvailable) 设置<p>模型API是否支持Playground调试</p>
+ * @method AIGWModelNameRoute getModelNameRoute() 获取<p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+ * @method void setModelNameRoute(AIGWModelNameRoute $ModelNameRoute) 设置<p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+ * @method string getStandardModelName() 获取<p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
  */
 class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
 {
@@ -199,6 +211,36 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $ConsumerInheritModelScope;
 
     /**
+     * @var array <p>消费者模型范围</p>
+     */
+    public $ConsumerDirectModelScopes;
+
+    /**
+     * @var array <p>消费者密钥模型范围</p>
+     */
+    public $SecretKeyModelScopes;
+
+    /**
+     * @var AIGWPriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public $PriorityScheduleConfig;
+
+    /**
+     * @var boolean <p>模型API是否支持Playground调试</p>
+     */
+    public $PlaygroundAvailable;
+
+    /**
+     * @var AIGWModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     */
+    public $ModelNameRoute;
+
+    /**
+     * @var string <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param string $Id <p>模型 API ID。</p>
      * @param string $CreateTime <p>创建时间</p>
      * @param string $ModifyTime <p>修改时间</p>
@@ -224,6 +266,12 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
      * @param array $ConsumerGroupModelScopes <p>消费者组模型范围</p>
      * @param AIGWConsumerModelScope $ConsumerInheritModelScope <p>消费者继承的模型范围</p>
+     * @param array $ConsumerDirectModelScopes <p>消费者模型范围</p>
+     * @param array $SecretKeyModelScopes <p>消费者密钥模型范围</p>
+     * @param AIGWPriorityScheduleConfig $PriorityScheduleConfig <p>请求优先级配置</p>
+     * @param boolean $PlaygroundAvailable <p>模型API是否支持Playground调试</p>
+     * @param AIGWModelNameRoute $ModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     * @param string $StandardModelName <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
      */
     function __construct()
     {
@@ -360,6 +408,42 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
         if (array_key_exists("ConsumerInheritModelScope",$param) and $param["ConsumerInheritModelScope"] !== null) {
             $this->ConsumerInheritModelScope = new AIGWConsumerModelScope();
             $this->ConsumerInheritModelScope->deserialize($param["ConsumerInheritModelScope"]);
+        }
+
+        if (array_key_exists("ConsumerDirectModelScopes",$param) and $param["ConsumerDirectModelScopes"] !== null) {
+            $this->ConsumerDirectModelScopes = [];
+            foreach ($param["ConsumerDirectModelScopes"] as $key => $value){
+                $obj = new AIGWAuthModelScopeItem();
+                $obj->deserialize($value);
+                array_push($this->ConsumerDirectModelScopes, $obj);
+            }
+        }
+
+        if (array_key_exists("SecretKeyModelScopes",$param) and $param["SecretKeyModelScopes"] !== null) {
+            $this->SecretKeyModelScopes = [];
+            foreach ($param["SecretKeyModelScopes"] as $key => $value){
+                $obj = new AIGWAuthModelScopeItem();
+                $obj->deserialize($value);
+                array_push($this->SecretKeyModelScopes, $obj);
+            }
+        }
+
+        if (array_key_exists("PriorityScheduleConfig",$param) and $param["PriorityScheduleConfig"] !== null) {
+            $this->PriorityScheduleConfig = new AIGWPriorityScheduleConfig();
+            $this->PriorityScheduleConfig->deserialize($param["PriorityScheduleConfig"]);
+        }
+
+        if (array_key_exists("PlaygroundAvailable",$param) and $param["PlaygroundAvailable"] !== null) {
+            $this->PlaygroundAvailable = $param["PlaygroundAvailable"];
+        }
+
+        if (array_key_exists("ModelNameRoute",$param) and $param["ModelNameRoute"] !== null) {
+            $this->ModelNameRoute = new AIGWModelNameRoute();
+            $this->ModelNameRoute->deserialize($param["ModelNameRoute"]);
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

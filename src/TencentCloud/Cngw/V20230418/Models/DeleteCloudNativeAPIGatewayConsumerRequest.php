@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取网关实例id
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
- * @method string getConsumerId() 获取消费者ID
- * @method void setConsumerId(string $ConsumerId) 设置消费者ID
+ * @method string getConsumerId() 获取消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
+ * @method void setConsumerId(string $ConsumerId) 设置消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
+ * @method string getOperationSource() 获取<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
  */
 class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var string 消费者ID
+     * @var string 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
      */
     public $ConsumerId;
 
     /**
+     * @var string <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public $OperationSource;
+
+    /**
      * @param string $GatewayId 网关实例id
-     * @param string $ConsumerId 消费者ID
+     * @param string $ConsumerId 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
+     * @param string $OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 
         if (array_key_exists("ConsumerId",$param) and $param["ConsumerId"] !== null) {
             $this->ConsumerId = $param["ConsumerId"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
         }
     }
 }

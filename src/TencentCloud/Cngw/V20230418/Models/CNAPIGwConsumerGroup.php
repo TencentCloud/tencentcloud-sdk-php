@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
  * @method string getSyncedVersion() 获取<p>同步版本</p>
  * @method void setSyncedVersion(string $SyncedVersion) 设置<p>同步版本</p>
+ * @method string getExternalId() 获取<p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+ * @method void setExternalId(string $ExternalId) 设置<p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
  */
 class CNAPIGwConsumerGroup extends AbstractModel
 {
@@ -97,6 +99,11 @@ class CNAPIGwConsumerGroup extends AbstractModel
     public $SyncedVersion;
 
     /**
+     * @var string <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+     */
+    public $ExternalId;
+
+    /**
      * @param string $ConsumerGroupId <p>分组id</p>
      * @param string $Name <p>名字</p>
      * @param string $Status <p>状态Disable/Enable</p>
@@ -108,6 +115,7 @@ class CNAPIGwConsumerGroup extends AbstractModel
      * @param string $SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li><li>Succes： 成功</li></ul>
      * @param string $SourceType <p>资源类型</p><p>枚举值：</p><ul><li>Public： 公共</li><li>Private： 私有</li><li>SourceDeleted： 资源已删除</li></ul>
      * @param string $SyncedVersion <p>同步版本</p>
+     * @param string $ExternalId <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class CNAPIGwConsumerGroup extends AbstractModel
 
         if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
             $this->SyncedVersion = $param["SyncedVersion"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
         }
     }
 }

@@ -20,50 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayCanaryRules请求参数结构体
  *
- * @method string getGatewayId() 获取网关ID
- * @method void setGatewayId(string $GatewayId) 设置网关ID
- * @method string getServiceId() 获取服务 ID
- * @method void setServiceId(string $ServiceId) 设置服务 ID
- * @method string getRuleType() 获取灰度规则类别 Standard｜Lane
- * @method void setRuleType(string $RuleType) 设置灰度规则类别 Standard｜Lane
- * @method integer getLimit() 获取列表数量
- * @method void setLimit(integer $Limit) 设置列表数量
- * @method integer getOffset() 获取列表offset
- * @method void setOffset(integer $Offset) 设置列表offset
+ * @method string getGatewayId() 获取<p>网关ID</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>网关ID</p>
+ * @method string getServiceId() 获取<p>服务 ID</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>服务 ID</p>
+ * @method string getRuleType() 获取<p>灰度规则类别 Standard｜Lane</p>
+ * @method void setRuleType(string $RuleType) 设置<p>灰度规则类别 Standard｜Lane</p>
+ * @method integer getLimit() 获取<p>列表数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>列表数量</p>
+ * @method integer getOffset() 获取<p>列表offset</p>
+ * @method void setOffset(integer $Offset) 设置<p>列表offset</p>
+ * @method string getOrderField() 获取<p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+ * @method void setOrderField(string $OrderField) 设置<p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+ * @method string getOrderType() 获取<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+ * @method void setOrderType(string $OrderType) 设置<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+ * @method array getFilters() 获取<p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
  */
 class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel
 {
     /**
-     * @var string 网关ID
+     * @var string <p>网关ID</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 服务 ID
+     * @var string <p>服务 ID</p>
      */
     public $ServiceId;
 
     /**
-     * @var string 灰度规则类别 Standard｜Lane
+     * @var string <p>灰度规则类别 Standard｜Lane</p>
      */
     public $RuleType;
 
     /**
-     * @var integer 列表数量
+     * @var integer <p>列表数量</p>
      */
     public $Limit;
 
     /**
-     * @var integer 列表offset
+     * @var integer <p>列表offset</p>
      */
     public $Offset;
 
     /**
-     * @param string $GatewayId 网关ID
-     * @param string $ServiceId 服务 ID
-     * @param string $RuleType 灰度规则类别 Standard｜Lane
-     * @param integer $Limit 列表数量
-     * @param integer $Offset 列表offset
+     * @var string <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+     */
+    public $OrderField;
+
+    /**
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public $OrderType;
+
+    /**
+     * @var array <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $GatewayId <p>网关ID</p>
+     * @param string $ServiceId <p>服务 ID</p>
+     * @param string $RuleType <p>灰度规则类别 Standard｜Lane</p>
+     * @param integer $Limit <p>列表数量</p>
+     * @param integer $Offset <p>列表offset</p>
+     * @param string $OrderField <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+     * @param string $OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     * @param array $Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
      */
     function __construct()
     {
@@ -96,6 +120,23 @@ class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new ListFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

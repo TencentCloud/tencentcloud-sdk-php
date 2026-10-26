@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建资源通用结果
  *
- * @method boolean getSuccess() 获取是否成功
- * @method void setSuccess(boolean $Success) 设置是否成功
  * @method string getID() 获取对应的id 值
  * @method void setID(string $ID) 设置对应的id 值
+ * @method boolean getSuccess() 获取是否成功
+ * @method void setSuccess(boolean $Success) 设置是否成功
  */
 class CNAPIGwCreateCommonResult extends AbstractModel
 {
-    /**
-     * @var boolean 是否成功
-     */
-    public $Success;
-
     /**
      * @var string 对应的id 值
      */
     public $ID;
 
     /**
-     * @param boolean $Success 是否成功
+     * @var boolean 是否成功
+     */
+    public $Success;
+
+    /**
      * @param string $ID 对应的id 值
+     * @param boolean $Success 是否成功
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CNAPIGwCreateCommonResult extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Success",$param) and $param["Success"] !== null) {
-            $this->Success = $param["Success"];
-        }
-
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("Success",$param) and $param["Success"] !== null) {
+            $this->Success = $param["Success"];
         }
     }
 }

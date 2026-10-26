@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Token用量统计结果
  *
- * @method array getDataList() 获取<p>Token用量明细返回结果列表</p>
- * @method void setDataList(array $DataList) 设置<p>Token用量明细返回结果列表</p>
- * @method integer getTotalCount() 获取<p>结果总数</p>
- * @method void setTotalCount(integer $TotalCount) 设置<p>结果总数</p>
+ * @method array getDataList() 获取<p>网关版本不低于 3.9.8 且 Dimension=ConsumerGroup 时，未指定节点筛选则列出 Kong CP 当前目录的全部真实节点，包含同步、自定义、禁用及保留中的软删节点，排除合成展示节点。按当前名称、节点 UUID 升序，先分页节点再查询历史指标；无调用节点仍返回，Token 与请求数补零。节点指标包含历史下属，同一请求可计入多个组行，不能逐行相加作为网关总量。</p>
+ * @method void setDataList(array $DataList) 设置<p>网关版本不低于 3.9.8 且 Dimension=ConsumerGroup 时，未指定节点筛选则列出 Kong CP 当前目录的全部真实节点，包含同步、自定义、禁用及保留中的软删节点，排除合成展示节点。按当前名称、节点 UUID 升序，先分页节点再查询历史指标；无调用节点仍返回，Token 与请求数补零。节点指标包含历史下属，同一请求可计入多个组行，不能逐行相加作为网关总量。</p>
+ * @method integer getTotalCount() 获取<p>筛选后的结果总数。新版 ConsumerGroup 查询为候选节点总数，包含无调用节点，不受 Limit / Offset 影响。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>筛选后的结果总数。新版 ConsumerGroup 查询为候选节点总数，包含无调用节点，不受 Limit / Offset 影响。</p>
+ * @method boolean getOrgAttributionIncomplete() 获取<p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrgAttributionIncomplete(boolean $OrgAttributionIncomplete) 设置<p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AIGWLLMTokenUsageListResult extends AbstractModel
 {
     /**
-     * @var array <p>Token用量明细返回结果列表</p>
+     * @var array <p>网关版本不低于 3.9.8 且 Dimension=ConsumerGroup 时，未指定节点筛选则列出 Kong CP 当前目录的全部真实节点，包含同步、自定义、禁用及保留中的软删节点，排除合成展示节点。按当前名称、节点 UUID 升序，先分页节点再查询历史指标；无调用节点仍返回，Token 与请求数补零。节点指标包含历史下属，同一请求可计入多个组行，不能逐行相加作为网关总量。</p>
      */
     public $DataList;
 
     /**
-     * @var integer <p>结果总数</p>
+     * @var integer <p>筛选后的结果总数。新版 ConsumerGroup 查询为候选节点总数，包含无调用节点，不受 Limit / Offset 影响。</p>
      */
     public $TotalCount;
 
     /**
-     * @param array $DataList <p>Token用量明细返回结果列表</p>
-     * @param integer $TotalCount <p>结果总数</p>
+     * @var boolean <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrgAttributionIncomplete;
+
+    /**
+     * @param array $DataList <p>网关版本不低于 3.9.8 且 Dimension=ConsumerGroup 时，未指定节点筛选则列出 Kong CP 当前目录的全部真实节点，包含同步、自定义、禁用及保留中的软删节点，排除合成展示节点。按当前名称、节点 UUID 升序，先分页节点再查询历史指标；无调用节点仍返回，Token 与请求数补零。节点指标包含历史下属，同一请求可计入多个组行，不能逐行相加作为网关总量。</p>
+     * @param integer $TotalCount <p>筛选后的结果总数。新版 ConsumerGroup 查询为候选节点总数，包含无调用节点，不受 Limit / Offset 影响。</p>
+     * @param boolean $OrgAttributionIncomplete <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -65,6 +77,10 @@ class AIGWLLMTokenUsageListResult extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("OrgAttributionIncomplete",$param) and $param["OrgAttributionIncomplete"] !== null) {
+            $this->OrgAttributionIncomplete = $param["OrgAttributionIncomplete"];
         }
     }
 }

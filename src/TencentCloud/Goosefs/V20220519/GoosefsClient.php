@@ -46,6 +46,7 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\DescribeClusterRoleTokenResponse DescribeClusterRoleToken(Models\DescribeClusterRoleTokenRequest $req) 查询GooseFS集群角色凭证
  * @method Models\DescribeCustomerClusterResponse DescribeCustomerCluster(Models\DescribeCustomerClusterRequest $req) 查询客户端集群
  * @method Models\DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(Models\DescribeDataRepositoryTaskStatusRequest $req) 获取数据流通任务实时状态，用作客户端控制
+ * @method Models\DescribeDataRepositoryTasksResponse DescribeDataRepositoryTasks(Models\DescribeDataRepositoryTasksRequest $req) 列出所有的数据流通任务
  * @method Models\DescribeFileSystemBucketsResponse DescribeFileSystemBuckets(Models\DescribeFileSystemBucketsRequest $req) 罗列文件系统关联的Bucket映射
  * @method Models\DescribeFileSystemsResponse DescribeFileSystems(Models\DescribeFileSystemsRequest $req) 列出所有的文件系统
  * @method Models\DescribeFilesetGeneralConfigResponse DescribeFilesetGeneralConfig(Models\DescribeFilesetGeneralConfigRequest $req) 查询Fileset通用配置

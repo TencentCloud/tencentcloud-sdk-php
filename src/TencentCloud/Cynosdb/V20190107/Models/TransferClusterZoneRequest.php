@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TransferClusterZone请求参数结构体
  *
- * @method string getClusterId() 获取源集群Id
- * @method void setClusterId(string $ClusterId) 设置源集群Id
- * @method string getDstZone() 获取目标可用区
- * @method void setDstZone(string $DstZone) 设置目标可用区
- * @method integer getMaxLag() 获取跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
- * @method void setMaxLag(integer $MaxLag) 设置跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
- * @method string getTransferType() 获取Immediate:立即执行，InMaintain:时间窗口执行
- * @method void setTransferType(string $TransferType) 设置Immediate:立即执行，InMaintain:时间窗口执行
- * @method string getDstSlaveZone() 获取多可用区备区
- * @method void setDstSlaveZone(string $DstSlaveZone) 设置多可用区备区
- * @method array getProxyZones() 获取proxy迁移的目标可用区信息
- * @method void setProxyZones(array $ProxyZones) 设置proxy迁移的目标可用区信息
+ * @method string getClusterId() 获取<p>源集群Id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>源集群Id</p>
+ * @method string getDstZone() 获取<p>目标可用区</p>
+ * @method void setDstZone(string $DstZone) 设置<p>目标可用区</p>
+ * @method integer getMaxLag() 获取<p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
+ * @method void setMaxLag(integer $MaxLag) 设置<p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
+ * @method string getTransferType() 获取<p>Immediate:立即执行，InMaintain:时间窗口执行</p>
+ * @method void setTransferType(string $TransferType) 设置<p>Immediate:立即执行，InMaintain:时间窗口执行</p>
+ * @method string getDstSlaveZone() 获取<p>多可用区备区</p>
+ * @method void setDstSlaveZone(string $DstSlaveZone) 设置<p>多可用区备区</p>
+ * @method array getProxyZones() 获取<p>proxy迁移的目标可用区信息</p>
+ * @method void setProxyZones(array $ProxyZones) 设置<p>proxy迁移的目标可用区信息</p>
  */
 class TransferClusterZoneRequest extends AbstractModel
 {
     /**
-     * @var string 源集群Id
+     * @var string <p>源集群Id</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 目标可用区
+     * @var string <p>目标可用区</p>
      */
     public $DstZone;
 
     /**
-     * @var integer 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
+     * @var integer <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
      */
     public $MaxLag;
 
     /**
-     * @var string Immediate:立即执行，InMaintain:时间窗口执行
+     * @var string <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
      */
     public $TransferType;
 
     /**
-     * @var string 多可用区备区
+     * @var string <p>多可用区备区</p>
      */
     public $DstSlaveZone;
 
     /**
-     * @var array proxy迁移的目标可用区信息
+     * @var array <p>proxy迁移的目标可用区信息</p>
      */
     public $ProxyZones;
 
     /**
-     * @param string $ClusterId 源集群Id
-     * @param string $DstZone 目标可用区
-     * @param integer $MaxLag 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
-     * @param string $TransferType Immediate:立即执行，InMaintain:时间窗口执行
-     * @param string $DstSlaveZone 多可用区备区
-     * @param array $ProxyZones proxy迁移的目标可用区信息
+     * @param string $ClusterId <p>源集群Id</p>
+     * @param string $DstZone <p>目标可用区</p>
+     * @param integer $MaxLag <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
+     * @param string $TransferType <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
+     * @param string $DstSlaveZone <p>多可用区备区</p>
+     * @param array $ProxyZones <p>proxy迁移的目标可用区信息</p>
      */
     function __construct()
     {

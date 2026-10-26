@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置<p>实例 ID</p>
  * @method string getSecretKeyId() 获取<p>密钥id</p>
  * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥id</p>
+ * @method boolean getIncludeCreationInfo() 获取<p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+ * @method void setIncludeCreationInfo(boolean $IncludeCreationInfo) 设置<p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
  */
 class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     public $SecretKeyId;
 
     /**
+     * @var boolean <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public $IncludeCreationInfo;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $SecretKeyId <p>密钥id</p>
+     * @param boolean $IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
 
         if (array_key_exists("SecretKeyId",$param) and $param["SecretKeyId"] !== null) {
             $this->SecretKeyId = $param["SecretKeyId"];
+        }
+
+        if (array_key_exists("IncludeCreationInfo",$param) and $param["IncludeCreationInfo"] !== null) {
+            $this->IncludeCreationInfo = $param["IncludeCreationInfo"];
         }
     }
 }

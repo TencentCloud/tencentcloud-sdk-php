@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
  * @method AIGWLogConfig getLogConfig() 获取<p>日志采集配置</p>
  * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志采集配置</p>
+ * @method AIGWMCPServerParamRewriteConfig getParamRewriteConfig() 获取<p>服务级参数改写规则</p>
+ * @method void setParamRewriteConfig(AIGWMCPServerParamRewriteConfig $ParamRewriteConfig) 设置<p>服务级参数改写规则</p>
  */
 class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
     public $LogConfig;
 
     /**
+     * @var AIGWMCPServerParamRewriteConfig <p>服务级参数改写规则</p>
+     */
+    public $ParamRewriteConfig;
+
+    /**
      * @param string $GatewayId <p>实例 ID</p>
      * @param string $Name <p>名字</p>
      * @param string $DisplayName <p>展示名字</p>
@@ -144,6 +151,7 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
      * @param AIGWHealthCheckSetting $HealthCheck <p>健康检查配置</p>
      * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
      * @param AIGWLogConfig $LogConfig <p>日志采集配置</p>
+     * @param AIGWMCPServerParamRewriteConfig $ParamRewriteConfig <p>服务级参数改写规则</p>
      */
     function __construct()
     {
@@ -220,6 +228,11 @@ class CreateCloudNativeAPIGatewayMCPServerRequest extends AbstractModel
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
             $this->LogConfig = new AIGWLogConfig();
             $this->LogConfig->deserialize($param["LogConfig"]);
+        }
+
+        if (array_key_exists("ParamRewriteConfig",$param) and $param["ParamRewriteConfig"] !== null) {
+            $this->ParamRewriteConfig = new AIGWMCPServerParamRewriteConfig();
+            $this->ParamRewriteConfig->deserialize($param["ParamRewriteConfig"]);
         }
     }
 }

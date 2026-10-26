@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserPrivilegesV3请求参数结构体
  *
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method UpdateUserPrivileges getUserPrivileges() 获取用户权限
- * @method void setUserPrivileges(UpdateUserPrivileges $UserPrivileges) 设置用户权限
- * @method string getWhiteHost() 获取用户链接来自的 IP	
- * @method void setWhiteHost(string $WhiteHost) 设置用户链接来自的 IP	
- * @method integer getUpdateType() 获取更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
- * @method void setUpdateType(integer $UpdateType) 设置更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
- * @method array getUpdateComputeGroups() 获取需绑定计算组列表
- * @method void setUpdateComputeGroups(array $UpdateComputeGroups) 设置需绑定计算组列表
- * @method string getDefaultComputeGroup() 获取默认计算组
- * @method void setDefaultComputeGroup(string $DefaultComputeGroup) 设置默认计算组
- * @method integer getComputeGroupType() 获取0: 灵活场景 1: 固定场景
- * @method void setComputeGroupType(integer $ComputeGroupType) 设置0: 灵活场景 1: 固定场景
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method UpdateUserPrivileges getUserPrivileges() 获取<p>用户权限</p>
+ * @method void setUserPrivileges(UpdateUserPrivileges $UserPrivileges) 设置<p>用户权限</p>
+ * @method string getWhiteHost() 获取<p>用户链接来自的 IP</p>
+ * @method void setWhiteHost(string $WhiteHost) 设置<p>用户链接来自的 IP</p>
+ * @method integer getUpdateType() 获取<p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
+ * @method void setUpdateType(integer $UpdateType) 设置<p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
+ * @method array getUpdateComputeGroups() 获取<p>需绑定计算组列表</p>
+ * @method void setUpdateComputeGroups(array $UpdateComputeGroups) 设置<p>需绑定计算组列表</p>
+ * @method string getDefaultComputeGroup() 获取<p>默认计算组</p>
+ * @method void setDefaultComputeGroup(string $DefaultComputeGroup) 设置<p>默认计算组</p>
+ * @method integer getComputeGroupType() 获取<p>0: 灵活场景 1: 固定场景</p>
+ * @method void setComputeGroupType(integer $ComputeGroupType) 设置<p>0: 灵活场景 1: 固定场景</p>
+ * @method UpdateUserPrivileges getGrantPrivileges() 获取<p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+ * @method void setGrantPrivileges(UpdateUserPrivileges $GrantPrivileges) 设置<p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+ * @method UpdateUserPrivileges getRevokePrivileges() 获取<p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+ * @method void setRevokePrivileges(UpdateUserPrivileges $RevokePrivileges) 设置<p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
  */
 class ModifyUserPrivilegesV3Request extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var UpdateUserPrivileges 用户权限
+     * @var UpdateUserPrivileges <p>用户权限</p>
      */
     public $UserPrivileges;
 
     /**
-     * @var string 用户链接来自的 IP	
+     * @var string <p>用户链接来自的 IP</p>
      */
     public $WhiteHost;
 
     /**
-     * @var integer 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+     * @var integer <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
      */
     public $UpdateType;
 
     /**
-     * @var array 需绑定计算组列表
+     * @var array <p>需绑定计算组列表</p>
      */
     public $UpdateComputeGroups;
 
     /**
-     * @var string 默认计算组
+     * @var string <p>默认计算组</p>
      */
     public $DefaultComputeGroup;
 
     /**
-     * @var integer 0: 灵活场景 1: 固定场景
+     * @var integer <p>0: 灵活场景 1: 固定场景</p>
      */
     public $ComputeGroupType;
 
     /**
-     * @param string $InstanceId 集群id
-     * @param string $UserName 用户名
-     * @param UpdateUserPrivileges $UserPrivileges 用户权限
-     * @param string $WhiteHost 用户链接来自的 IP	
-     * @param integer $UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
-     * @param array $UpdateComputeGroups 需绑定计算组列表
-     * @param string $DefaultComputeGroup 默认计算组
-     * @param integer $ComputeGroupType 0: 灵活场景 1: 固定场景
+     * @var UpdateUserPrivileges <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public $GrantPrivileges;
+
+    /**
+     * @var UpdateUserPrivileges <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public $RevokePrivileges;
+
+    /**
+     * @param string $InstanceId <p>集群id</p>
+     * @param string $UserName <p>用户名</p>
+     * @param UpdateUserPrivileges $UserPrivileges <p>用户权限</p>
+     * @param string $WhiteHost <p>用户链接来自的 IP</p>
+     * @param integer $UpdateType <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
+     * @param array $UpdateComputeGroups <p>需绑定计算组列表</p>
+     * @param string $DefaultComputeGroup <p>默认计算组</p>
+     * @param integer $ComputeGroupType <p>0: 灵活场景 1: 固定场景</p>
+     * @param UpdateUserPrivileges $GrantPrivileges <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+     * @param UpdateUserPrivileges $RevokePrivileges <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
      */
     function __construct()
     {
@@ -133,6 +149,16 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
 
         if (array_key_exists("ComputeGroupType",$param) and $param["ComputeGroupType"] !== null) {
             $this->ComputeGroupType = $param["ComputeGroupType"];
+        }
+
+        if (array_key_exists("GrantPrivileges",$param) and $param["GrantPrivileges"] !== null) {
+            $this->GrantPrivileges = new UpdateUserPrivileges();
+            $this->GrantPrivileges->deserialize($param["GrantPrivileges"]);
+        }
+
+        if (array_key_exists("RevokePrivileges",$param) and $param["RevokePrivileges"] !== null) {
+            $this->RevokePrivileges = new UpdateUserPrivileges();
+            $this->RevokePrivileges->deserialize($param["RevokePrivileges"]);
         }
     }
 }

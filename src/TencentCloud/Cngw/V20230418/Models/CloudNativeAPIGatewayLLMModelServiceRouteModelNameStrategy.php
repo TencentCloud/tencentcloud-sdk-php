@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchModelName(string $MatchModelName) 设置<p>匹配模型服务</p>
  * @method string getRewriteModelName() 获取<p>重写模型</p>
  * @method void setRewriteModelName(string $RewriteModelName) 设置<p>重写模型</p>
+ * @method string getStandardModelName() 获取<p>当前模型名称匹配路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>当前模型名称匹配路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy extends Abstrac
     public $RewriteModelName;
 
     /**
+     * @var string <p>当前模型名称匹配路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param string $ModelServiceId <p>模型服务id</p>
      * @param string $MatchModelName <p>匹配模型服务</p>
      * @param string $RewriteModelName <p>重写模型</p>
+     * @param string $StandardModelName <p>当前模型名称匹配路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy extends Abstrac
 
         if (array_key_exists("RewriteModelName",$param) and $param["RewriteModelName"] !== null) {
             $this->RewriteModelName = $param["RewriteModelName"];
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

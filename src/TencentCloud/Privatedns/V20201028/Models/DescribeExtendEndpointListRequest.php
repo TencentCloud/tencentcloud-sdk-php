@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExtendEndpointList请求参数结构体
  *
- * @method integer getOffset() 获取分页偏移量，从0开始
- * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始
- * @method integer getLimit() 获取分页限制数目， 最大100，默认20
- * @method void setLimit(integer $Limit) 设置分页限制数目， 最大100，默认20
- * @method array getFilters() 获取过滤参数，支持EndpointName,EndpointId
- * @method void setFilters(array $Filters) 设置过滤参数，支持EndpointName,EndpointId
+ * @method integer getOffset() 获取<p>分页偏移量，从0开始</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，从0开始</p>
+ * @method integer getLimit() 获取<p>分页限制数目， 最大100，默认20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页限制数目， 最大100，默认20</p>
+ * @method array getFilters() 获取<p>过滤参数，支持EndpointName,EndpointId</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤参数，支持EndpointName,EndpointId</p>
  */
 class DescribeExtendEndpointListRequest extends AbstractModel
 {
     /**
-     * @var integer 分页偏移量，从0开始
+     * @var integer <p>分页偏移量，从0开始</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页限制数目， 最大100，默认20
+     * @var integer <p>分页限制数目， 最大100，默认20</p>
      */
     public $Limit;
 
     /**
-     * @var array 过滤参数，支持EndpointName,EndpointId
+     * @var array <p>过滤参数，支持EndpointName,EndpointId</p>
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 分页偏移量，从0开始
-     * @param integer $Limit 分页限制数目， 最大100，默认20
-     * @param array $Filters 过滤参数，支持EndpointName,EndpointId
+     * @param integer $Offset <p>分页偏移量，从0开始</p>
+     * @param integer $Limit <p>分页限制数目， 最大100，默认20</p>
+     * @param array $Filters <p>过滤参数，支持EndpointName,EndpointId</p>
      */
     function __construct()
     {

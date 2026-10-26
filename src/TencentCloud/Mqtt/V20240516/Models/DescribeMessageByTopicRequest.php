@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMessageByTopic请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getTopic() 获取home/room
- * @method void setTopic(string $Topic) 设置home/room
- * @method integer getStartTime() 获取开始时间，毫秒级时间戳 。
- * @method void setStartTime(integer $StartTime) 设置开始时间，毫秒级时间戳 。
- * @method integer getMaxNumber() 获取查询消息条数，最大1024，默认100.
- * @method void setMaxNumber(integer $MaxNumber) 设置查询消息条数，最大1024，默认100.
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getTopic() 获取<p>home/room</p>
+ * @method void setTopic(string $Topic) 设置<p>home/room</p>
+ * @method integer getStartTime() 获取<p>开始时间，毫秒级时间戳 。</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间，毫秒级时间戳 。</p>
+ * @method integer getMaxNumber() 获取<p>查询消息条数，最大1024，默认100.</p>
+ * @method void setMaxNumber(integer $MaxNumber) 设置<p>查询消息条数，最大1024，默认100.</p>
+ * @method string getFilterExpression() 获取<p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+ * @method void setFilterExpression(string $FilterExpression) 设置<p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
  */
 class DescribeMessageByTopicRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string home/room
+     * @var string <p>home/room</p>
      */
     public $Topic;
 
     /**
-     * @var integer 开始时间，毫秒级时间戳 。
+     * @var integer <p>开始时间，毫秒级时间戳 。</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 查询消息条数，最大1024，默认100.
+     * @var integer <p>查询消息条数，最大1024，默认100.</p>
      */
     public $MaxNumber;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $Topic home/room
-     * @param integer $StartTime 开始时间，毫秒级时间戳 。
-     * @param integer $MaxNumber 查询消息条数，最大1024，默认100.
+     * @var string <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+     */
+    public $FilterExpression;
+
+    /**
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $Topic <p>home/room</p>
+     * @param integer $StartTime <p>开始时间，毫秒级时间戳 。</p>
+     * @param integer $MaxNumber <p>查询消息条数，最大1024，默认100.</p>
+     * @param string $FilterExpression <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeMessageByTopicRequest extends AbstractModel
 
         if (array_key_exists("MaxNumber",$param) and $param["MaxNumber"] !== null) {
             $this->MaxNumber = $param["MaxNumber"];
+        }
+
+        if (array_key_exists("FilterExpression",$param) and $param["FilterExpression"] !== null) {
+            $this->FilterExpression = $param["FilterExpression"];
         }
     }
 }

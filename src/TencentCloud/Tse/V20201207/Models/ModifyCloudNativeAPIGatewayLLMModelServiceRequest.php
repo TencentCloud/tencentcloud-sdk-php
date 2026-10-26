@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomProviderName(string $CustomProviderName) 设置<p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
  * @method AIGWLoadBalanceConfig getLoadBalanceConfig() 获取<p>负载均衡配置</p>
  * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置</p>
+ * @method AIGWLengthLimitConfig getLengthLimitConfig() 获取<p>内容长度限制配置</p>
+ * @method void setLengthLimitConfig(AIGWLengthLimitConfig $LengthLimitConfig) 设置<p>内容长度限制配置</p>
+ * @method AIGWSmartBalanceConfig getSmartBalance() 获取<p>智能负载均衡配置</p>
+ * @method void setSmartBalance(AIGWSmartBalanceConfig $SmartBalance) 设置<p>智能负载均衡配置</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -234,6 +238,16 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $LoadBalanceConfig;
 
     /**
+     * @var AIGWLengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public $LengthLimitConfig;
+
+    /**
+     * @var AIGWSmartBalanceConfig <p>智能负载均衡配置</p>
+     */
+    public $SmartBalance;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -264,6 +278,8 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $ExternalInstanceId <p>外部服务来源ID</p>
      * @param string $CustomProviderName <p>自定义供应商名称</p><p>仅当Provider值为&quot;custom&quot;时允许填写</p>
      * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置</p>
+     * @param AIGWLengthLimitConfig $LengthLimitConfig <p>内容长度限制配置</p>
+     * @param AIGWSmartBalanceConfig $SmartBalance <p>智能负载均衡配置</p>
      */
     function __construct()
     {
@@ -410,6 +426,16 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
         if (array_key_exists("LoadBalanceConfig",$param) and $param["LoadBalanceConfig"] !== null) {
             $this->LoadBalanceConfig = new AIGWLoadBalanceConfig();
             $this->LoadBalanceConfig->deserialize($param["LoadBalanceConfig"]);
+        }
+
+        if (array_key_exists("LengthLimitConfig",$param) and $param["LengthLimitConfig"] !== null) {
+            $this->LengthLimitConfig = new AIGWLengthLimitConfig();
+            $this->LengthLimitConfig->deserialize($param["LengthLimitConfig"]);
+        }
+
+        if (array_key_exists("SmartBalance",$param) and $param["SmartBalance"] !== null) {
+            $this->SmartBalance = new AIGWSmartBalanceConfig();
+            $this->SmartBalance->deserialize($param["SmartBalance"]);
         }
     }
 }

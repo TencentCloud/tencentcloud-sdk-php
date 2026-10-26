@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntentRouteConfig(AIGWIntentRoute $IntentRouteConfig) 设置<p>意图识别</p>
  * @method AIGWLatencyPriorityConfig getLatencyPriorityConfig() 获取<p>延迟路由</p>
  * @method void setLatencyPriorityConfig(AIGWLatencyPriorityConfig $LatencyPriorityConfig) 设置<p>延迟路由</p>
- * @method AIGWCacheAwareRouteConfig getCacheAwareRouteConfig() 获取<p>缓存感知路由配置（前缀缓存）</p>
- * @method void setCacheAwareRouteConfig(AIGWCacheAwareRouteConfig $CacheAwareRouteConfig) 设置<p>缓存感知路由配置（前缀缓存）</p>
- * @method AIGWTokenLengthRoute getTokenLengthRouteConfig() 获取<p>token 长度路由</p>
- * @method void setTokenLengthRouteConfig(AIGWTokenLengthRoute $TokenLengthRouteConfig) 设置<p>token 长度路由</p>
+ * @method AIGWCacheAwareRouteConfig getCacheAwareRouteConfig() 获取<p>前缀缓存感知路由</p>
+ * @method void setCacheAwareRouteConfig(AIGWCacheAwareRouteConfig $CacheAwareRouteConfig) 设置<p>前缀缓存感知路由</p>
+ * @method AIGWTokenLengthRoute getTokenLengthRouteConfig() 获取<p>按请求 Token 长度选择模型服务的路由配置。</p>
+ * @method void setTokenLengthRouteConfig(AIGWTokenLengthRoute $TokenLengthRouteConfig) 设置<p>按请求 Token 长度选择模型服务的路由配置。</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
 {
@@ -63,12 +63,12 @@ class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
     public $LatencyPriorityConfig;
 
     /**
-     * @var AIGWCacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     * @var AIGWCacheAwareRouteConfig <p>前缀缓存感知路由</p>
      */
     public $CacheAwareRouteConfig;
 
     /**
-     * @var AIGWTokenLengthRoute <p>token 长度路由</p>
+     * @var AIGWTokenLengthRoute <p>按请求 Token 长度选择模型服务的路由配置。</p>
      */
     public $TokenLengthRouteConfig;
 
@@ -78,8 +78,8 @@ class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel
      * @param array $ModelNameConfig <p>模型名称路由配置，最多10个</p>
      * @param AIGWIntentRoute $IntentRouteConfig <p>意图识别</p>
      * @param AIGWLatencyPriorityConfig $LatencyPriorityConfig <p>延迟路由</p>
-     * @param AIGWCacheAwareRouteConfig $CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
-     * @param AIGWTokenLengthRoute $TokenLengthRouteConfig <p>token 长度路由</p>
+     * @param AIGWCacheAwareRouteConfig $CacheAwareRouteConfig <p>前缀缓存感知路由</p>
+     * @param AIGWTokenLengthRoute $TokenLengthRouteConfig <p>按请求 Token 长度选择模型服务的路由配置。</p>
      */
     function __construct()
     {

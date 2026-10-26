@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdateUserKey返回参数结构体
+ * DescribeDataRepositoryTasks返回参数结构体
  *
- * @method integer getUpdateResult() 获取<p>更新记录条数</p>
- * @method void setUpdateResult(integer $UpdateResult) 设置<p>更新记录条数</p>
+ * @method array getDataRepositoryTaskList() 获取数据流通任务列表
+ * @method void setDataRepositoryTaskList(array $DataRepositoryTaskList) 设置数据流通任务列表
+ * @method integer getTotalCount() 获取任务总数
+ * @method void setTotalCount(integer $TotalCount) 设置任务总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class UpdateUserKeyResponse extends AbstractModel
+class DescribeDataRepositoryTasksResponse extends AbstractModel
 {
     /**
-     * @var integer <p>更新记录条数</p>
+     * @var array 数据流通任务列表
      */
-    public $UpdateResult;
+    public $DataRepositoryTaskList;
+
+    /**
+     * @var integer 任务总数
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class UpdateUserKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $UpdateResult <p>更新记录条数</p>
+     * @param array $DataRepositoryTaskList 数据流通任务列表
+     * @param integer $TotalCount 任务总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class UpdateUserKeyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpdateResult",$param) and $param["UpdateResult"] !== null) {
-            $this->UpdateResult = $param["UpdateResult"];
+        if (array_key_exists("DataRepositoryTaskList",$param) and $param["DataRepositoryTaskList"] !== null) {
+            $this->DataRepositoryTaskList = [];
+            foreach ($param["DataRepositoryTaskList"] as $key => $value){
+                $obj = new DataRepositoryTaskAttribute();
+                $obj->deserialize($value);
+                array_push($this->DataRepositoryTaskList, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

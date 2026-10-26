@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelServiceName(string $ModelServiceName) 设置<p>模型服务名称</p>
  * @method CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() 获取<p>模型服务路由策略（是指如何路由到模型服务）</p>
  * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>模型服务路由策略（是指如何路由到模型服务）</p>
- * @method array getMatchHeaders() 获取<p>无</p>
- * @method void setMatchHeaders(array $MatchHeaders) 设置<p>无</p>
+ * @method array getMatchHeaders() 获取<p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
+ * @method void setMatchHeaders(array $MatchHeaders) 设置<p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
  * @method boolean getEnableCrossServiceFallback() 获取<p>是否开启跨服务fallback</p>
  * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>是否开启跨服务fallback</p>
  * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务fallback配置详情</p>
@@ -62,14 +62,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogDesensitizeConfig(AIGWLogDesensitizeConfig $LogDesensitizeConfig) 设置<p>日志脱敏规则</p>
  * @method AIGWForwardDesensitizeConfig getForwardDesensitizeConfig() 获取<p>转发脱敏规则</p>
  * @method void setForwardDesensitizeConfig(AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig) 设置<p>转发脱敏规则</p>
- * @method AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() 获取<p>Rerank场景最大文档数限制配置</p>
- * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>Rerank场景最大文档数限制配置</p>
+ * @method AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() 获取<p>rerank documents 上限</p>
+ * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>rerank documents 上限</p>
  * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
  * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
- * @method array getConsumerGroupModelScopes() 获取<p>消费者组的授权模型范围</p>
- * @method void setConsumerGroupModelScopes(array $ConsumerGroupModelScopes) 设置<p>消费者组的授权模型范围</p>
- * @method AIGWConsumerModelScope getConsumerInheritModelScope() 获取<p>继承自消费者组的授权模型范围</p>
- * @method void setConsumerInheritModelScope(AIGWConsumerModelScope $ConsumerInheritModelScope) 设置<p>继承自消费者组的授权模型范围</p>
+ * @method array getConsumerGroupModelScopes() 获取<p>消费者组模型范围</p>
+ * @method void setConsumerGroupModelScopes(array $ConsumerGroupModelScopes) 设置<p>消费者组模型范围</p>
+ * @method AIGWConsumerModelScope getConsumerInheritModelScope() 获取<p>消费者继承的模型范围</p>
+ * @method void setConsumerInheritModelScope(AIGWConsumerModelScope $ConsumerInheritModelScope) 设置<p>消费者继承的模型范围</p>
+ * @method array getSecretKeyModelScopes() 获取<p>消费者密钥模型范围</p>
+ * @method void setSecretKeyModelScopes(array $SecretKeyModelScopes) 设置<p>消费者密钥模型范围</p>
+ * @method boolean getPlaygroundAvailable() 获取<p>模型API是否支持Playground调试</p>
+ * @method void setPlaygroundAvailable(boolean $PlaygroundAvailable) 设置<p>模型API是否支持Playground调试</p>
+ * @method AIGWPriorityScheduleConfig getPriorityScheduleConfig() 获取<p>请求优先级配置</p>
+ * @method void setPriorityScheduleConfig(AIGWPriorityScheduleConfig $PriorityScheduleConfig) 设置<p>请求优先级配置</p>
+ * @method array getConsumerDirectModelScopes() 获取<p>消费者模型范围</p>
+ * @method void setConsumerDirectModelScopes(array $ConsumerDirectModelScopes) 设置<p>消费者模型范围</p>
+ * @method AIGWModelNameRoute getModelNameRoute() 获取<p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+ * @method void setModelNameRoute(AIGWModelNameRoute $ModelNameRoute) 设置<p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+ * @method string getStandardModelName() 获取<p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
  */
 class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
 {
@@ -139,7 +151,7 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $ModelServiceRoute;
 
     /**
-     * @var array <p>无</p>
+     * @var array <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public $MatchHeaders;
 
@@ -179,7 +191,7 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $ForwardDesensitizeConfig;
 
     /**
-     * @var AIGWRerankMaxDocumentsConfig <p>Rerank场景最大文档数限制配置</p>
+     * @var AIGWRerankMaxDocumentsConfig <p>rerank documents 上限</p>
      */
     public $MaxDocumentsConfig;
 
@@ -189,14 +201,44 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
     public $SensitiveWordRoute;
 
     /**
-     * @var array <p>消费者组的授权模型范围</p>
+     * @var array <p>消费者组模型范围</p>
      */
     public $ConsumerGroupModelScopes;
 
     /**
-     * @var AIGWConsumerModelScope <p>继承自消费者组的授权模型范围</p>
+     * @var AIGWConsumerModelScope <p>消费者继承的模型范围</p>
      */
     public $ConsumerInheritModelScope;
+
+    /**
+     * @var array <p>消费者密钥模型范围</p>
+     */
+    public $SecretKeyModelScopes;
+
+    /**
+     * @var boolean <p>模型API是否支持Playground调试</p>
+     */
+    public $PlaygroundAvailable;
+
+    /**
+     * @var AIGWPriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public $PriorityScheduleConfig;
+
+    /**
+     * @var array <p>消费者模型范围</p>
+     */
+    public $ConsumerDirectModelScopes;
+
+    /**
+     * @var AIGWModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     */
+    public $ModelNameRoute;
+
+    /**
+     * @var string <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+     */
+    public $StandardModelName;
 
     /**
      * @param string $Id <p>模型 API ID。</p>
@@ -212,7 +254,7 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param string $ModelServiceId <p>模型服务Id</p>
      * @param string $ModelServiceName <p>模型服务名称</p>
      * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
-     * @param array $MatchHeaders <p>无</p>
+     * @param array $MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      * @param boolean $EnableCrossServiceFallback <p>是否开启跨服务fallback</p>
      * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务fallback配置详情</p>
      * @param boolean $DescribeCloudNativeAPIGatewayLLMModelAPI <p>是否展示模型API</p>
@@ -220,10 +262,16 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
      * @param AIGWLogConfig $LogConfig <p>日志显示相关开关</p>
      * @param AIGWLogDesensitizeConfig $LogDesensitizeConfig <p>日志脱敏规则</p>
      * @param AIGWForwardDesensitizeConfig $ForwardDesensitizeConfig <p>转发脱敏规则</p>
-     * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>Rerank场景最大文档数限制配置</p>
+     * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>rerank documents 上限</p>
      * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
-     * @param array $ConsumerGroupModelScopes <p>消费者组的授权模型范围</p>
-     * @param AIGWConsumerModelScope $ConsumerInheritModelScope <p>继承自消费者组的授权模型范围</p>
+     * @param array $ConsumerGroupModelScopes <p>消费者组模型范围</p>
+     * @param AIGWConsumerModelScope $ConsumerInheritModelScope <p>消费者继承的模型范围</p>
+     * @param array $SecretKeyModelScopes <p>消费者密钥模型范围</p>
+     * @param boolean $PlaygroundAvailable <p>模型API是否支持Playground调试</p>
+     * @param AIGWPriorityScheduleConfig $PriorityScheduleConfig <p>请求优先级配置</p>
+     * @param array $ConsumerDirectModelScopes <p>消费者模型范围</p>
+     * @param AIGWModelNameRoute $ModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     * @param string $StandardModelName <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
      */
     function __construct()
     {
@@ -360,6 +408,42 @@ class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel
         if (array_key_exists("ConsumerInheritModelScope",$param) and $param["ConsumerInheritModelScope"] !== null) {
             $this->ConsumerInheritModelScope = new AIGWConsumerModelScope();
             $this->ConsumerInheritModelScope->deserialize($param["ConsumerInheritModelScope"]);
+        }
+
+        if (array_key_exists("SecretKeyModelScopes",$param) and $param["SecretKeyModelScopes"] !== null) {
+            $this->SecretKeyModelScopes = [];
+            foreach ($param["SecretKeyModelScopes"] as $key => $value){
+                $obj = new AIGWAuthModelScopeItem();
+                $obj->deserialize($value);
+                array_push($this->SecretKeyModelScopes, $obj);
+            }
+        }
+
+        if (array_key_exists("PlaygroundAvailable",$param) and $param["PlaygroundAvailable"] !== null) {
+            $this->PlaygroundAvailable = $param["PlaygroundAvailable"];
+        }
+
+        if (array_key_exists("PriorityScheduleConfig",$param) and $param["PriorityScheduleConfig"] !== null) {
+            $this->PriorityScheduleConfig = new AIGWPriorityScheduleConfig();
+            $this->PriorityScheduleConfig->deserialize($param["PriorityScheduleConfig"]);
+        }
+
+        if (array_key_exists("ConsumerDirectModelScopes",$param) and $param["ConsumerDirectModelScopes"] !== null) {
+            $this->ConsumerDirectModelScopes = [];
+            foreach ($param["ConsumerDirectModelScopes"] as $key => $value){
+                $obj = new AIGWAuthModelScopeItem();
+                $obj->deserialize($value);
+                array_push($this->ConsumerDirectModelScopes, $obj);
+            }
+        }
+
+        if (array_key_exists("ModelNameRoute",$param) and $param["ModelNameRoute"] !== null) {
+            $this->ModelNameRoute = new AIGWModelNameRoute();
+            $this->ModelNameRoute->deserialize($param["ModelNameRoute"]);
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmLevel(string $AlarmLevel) 设置<p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul>
  * @method string getSource() 获取<p>配额规则来源</p><p>枚举值：</p><ul><li>Manual： 手动配置</li><li>Default： 默认配额</li></ul>
  * @method void setSource(string $Source) 设置<p>配额规则来源</p><p>枚举值：</p><ul><li>Manual： 手动配置</li><li>Default： 默认配额</li></ul>
- * @method string getExceedAction() 获取<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
- * @method void setExceedAction(string $ExceedAction) 设置<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+ * @method string getExceedAction() 获取<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
+ * @method void setExceedAction(string $ExceedAction) 设置<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
  * @method string getCreateTime() 获取<p>创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
@@ -56,6 +56,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCacheHitStat() 获取<p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
  * @method void setCacheHitStat(string $CacheHitStat) 设置<p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
+ * @method boolean getSetExceedPercentage() 获取<p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+ * @method void setSetExceedPercentage(boolean $SetExceedPercentage) 设置<p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+ * @method integer getExceedPercentage() 获取<p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+ * @method void setExceedPercentage(integer $ExceedPercentage) 设置<p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+ * @method float getUsedExact() 获取<p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedExact(float $UsedExact) 设置<p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConsumerGroupPath() 获取<p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+ * @method void setConsumerGroupPath(string $ConsumerGroupPath) 设置<p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+ * @method boolean getConsumerGroupActive() 获取<p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+ * @method void setConsumerGroupActive(boolean $ConsumerGroupActive) 设置<p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+ * @method array getSubResources() 获取<p>配额规则中，某资源对象的指定子资源配额信息。如资源对象“模型服务”的“指定模型服务”的配额信息。</p>
+ * @method void setSubResources(array $SubResources) 设置<p>配额规则中，某资源对象的指定子资源配额信息。如资源对象“模型服务”的“指定模型服务”的配额信息。</p>
  */
 class AIGWQuotaDetail extends AbstractModel
 {
@@ -120,7 +134,7 @@ class AIGWQuotaDetail extends AbstractModel
     public $Source;
 
     /**
-     * @var string <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+     * @var string <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
      */
     public $ExceedAction;
 
@@ -142,6 +156,37 @@ class AIGWQuotaDetail extends AbstractModel
     public $CacheHitStat;
 
     /**
+     * @var boolean <p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+     */
+    public $SetExceedPercentage;
+
+    /**
+     * @var integer <p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+     */
+    public $ExceedPercentage;
+
+    /**
+     * @var float <p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedExact;
+
+    /**
+     * @var string <p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+     */
+    public $ConsumerGroupPath;
+
+    /**
+     * @var boolean <p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+     */
+    public $ConsumerGroupActive;
+
+    /**
+     * @var array <p>配额规则中，某资源对象的指定子资源配额信息。如资源对象“模型服务”的“指定模型服务”的配额信息。</p>
+     */
+    public $SubResources;
+
+    /**
      * @param string $Id <p>id</p>
      * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>Consumer： 消费者</li></ul>
      * @param string $ResourceId <p>资源id</p>
@@ -154,12 +199,19 @@ class AIGWQuotaDetail extends AbstractModel
      * @param float $UsageRate <p>使用率</p>
      * @param string $AlarmLevel <p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul>
      * @param string $Source <p>配额规则来源</p><p>枚举值：</p><ul><li>Manual： 手动配置</li><li>Default： 默认配额</li></ul>
-     * @param string $ExceedAction <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+     * @param string $ExceedAction <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
      * @param string $CreateTime <p>创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime <p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CacheHitStat <p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
+     * @param boolean $SetExceedPercentage <p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+     * @param integer $ExceedPercentage <p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+     * @param float $UsedExact <p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConsumerGroupPath <p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+     * @param boolean $ConsumerGroupActive <p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+     * @param array $SubResources <p>配额规则中，某资源对象的指定子资源配额信息。如资源对象“模型服务”的“指定模型服务”的配额信息。</p>
      */
     function __construct()
     {
@@ -236,6 +288,35 @@ class AIGWQuotaDetail extends AbstractModel
 
         if (array_key_exists("CacheHitStat",$param) and $param["CacheHitStat"] !== null) {
             $this->CacheHitStat = $param["CacheHitStat"];
+        }
+
+        if (array_key_exists("SetExceedPercentage",$param) and $param["SetExceedPercentage"] !== null) {
+            $this->SetExceedPercentage = $param["SetExceedPercentage"];
+        }
+
+        if (array_key_exists("ExceedPercentage",$param) and $param["ExceedPercentage"] !== null) {
+            $this->ExceedPercentage = $param["ExceedPercentage"];
+        }
+
+        if (array_key_exists("UsedExact",$param) and $param["UsedExact"] !== null) {
+            $this->UsedExact = $param["UsedExact"];
+        }
+
+        if (array_key_exists("ConsumerGroupPath",$param) and $param["ConsumerGroupPath"] !== null) {
+            $this->ConsumerGroupPath = $param["ConsumerGroupPath"];
+        }
+
+        if (array_key_exists("ConsumerGroupActive",$param) and $param["ConsumerGroupActive"] !== null) {
+            $this->ConsumerGroupActive = $param["ConsumerGroupActive"];
+        }
+
+        if (array_key_exists("SubResources",$param) and $param["SubResources"] !== null) {
+            $this->SubResources = [];
+            foreach ($param["SubResources"] as $key => $value){
+                $obj = new AIGWQuotaSubItem();
+                $obj->deserialize($value);
+                array_push($this->SubResources, $obj);
+            }
         }
     }
 }

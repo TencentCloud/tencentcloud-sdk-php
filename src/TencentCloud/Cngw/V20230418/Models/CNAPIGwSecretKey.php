@@ -86,6 +86,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBoundModelSecretKeys(array $BoundModelSecretKeys) 设置<p>该消费者密钥绑定的模型密钥列表</p>
  * @method array getBoundConsumerSecretKeys() 获取<p>绑定了该模型密钥的消费者密钥列表</p>
  * @method void setBoundConsumerSecretKeys(array $BoundConsumerSecretKeys) 设置<p>绑定了该模型密钥的消费者密钥列表</p>
+ * @method string getCredentialGenerateType() 获取<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+ * @method void setCredentialGenerateType(string $CredentialGenerateType) 设置<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+ * @method string getCreationSource() 获取<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+ * @method void setCreationSource(string $CreationSource) 设置<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+ * @method string getBatchId() 获取<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+ * @method void setBatchId(string $BatchId) 设置<p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
  */
 class CNAPIGwSecretKey extends AbstractModel
 {
@@ -239,6 +245,21 @@ class CNAPIGwSecretKey extends AbstractModel
     public $BoundConsumerSecretKeys;
 
     /**
+     * @var string <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+     */
+    public $CredentialGenerateType;
+
+    /**
+     * @var string <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+     */
+    public $CreationSource;
+
+    /**
+     * @var string <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+     */
+    public $BatchId;
+
+    /**
      * @param integer $BindCount <p>绑定数</p>
      * @param boolean $CanBind <p>是否可以绑定</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -272,6 +293,9 @@ class CNAPIGwSecretKey extends AbstractModel
      * @param AIGWQueryParamCredentialConfig $QueryParamCredentialConfig <p>自定义Query参数凭证配置</p>
      * @param array $BoundModelSecretKeys <p>该消费者密钥绑定的模型密钥列表</p>
      * @param array $BoundConsumerSecretKeys <p>绑定了该模型密钥的消费者密钥列表</p>
+     * @param string $CredentialGenerateType <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+     * @param string $CreationSource <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+     * @param string $BatchId <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
      */
     function __construct()
     {
@@ -419,6 +443,18 @@ class CNAPIGwSecretKey extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BoundConsumerSecretKeys, $obj);
             }
+        }
+
+        if (array_key_exists("CredentialGenerateType",$param) and $param["CredentialGenerateType"] !== null) {
+            $this->CredentialGenerateType = $param["CredentialGenerateType"];
+        }
+
+        if (array_key_exists("CreationSource",$param) and $param["CreationSource"] !== null) {
+            $this->CreationSource = $param["CreationSource"];
+        }
+
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

@@ -32,8 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCost(string $TotalCost) 设置<p>查询时间范围内总成本</p>
  * @method string getCurrency() 获取<p>成本货币单位</p>
  * @method void setCurrency(string $Currency) 设置<p>成本货币单位</p>
- * @method array getTopConsumers() 获取<p>查询时间范围内成本最高的消费者</p>
- * @method void setTopConsumers(array $TopConsumers) 设置<p>查询时间范围内成本最高的消费者</p>
+ * @method array getTopConsumers() 获取<p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
+ * @method void setTopConsumers(array $TopConsumers) 设置<p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
+ * @method integer getTotalTokens() 获取<p>查询时间范围内原始 total_tokens 累计</p>
+ * @method void setTotalTokens(integer $TotalTokens) 设置<p>查询时间范围内原始 total_tokens 累计</p>
+ * @method boolean getOrgAttributionIncomplete() 获取<p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrgAttributionIncomplete(boolean $OrgAttributionIncomplete) 设置<p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AIGWLLMTokenUsageStatisticsResult extends AbstractModel
 {
@@ -68,9 +74,20 @@ class AIGWLLMTokenUsageStatisticsResult extends AbstractModel
     public $Currency;
 
     /**
-     * @var array <p>查询时间范围内成本最高的消费者</p>
+     * @var array <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
      */
     public $TopConsumers;
+
+    /**
+     * @var integer <p>查询时间范围内原始 total_tokens 累计</p>
+     */
+    public $TotalTokens;
+
+    /**
+     * @var boolean <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrgAttributionIncomplete;
 
     /**
      * @param integer $TotalRequestCount <p>查询时间范围内请求总数</p>
@@ -79,7 +96,10 @@ class AIGWLLMTokenUsageStatisticsResult extends AbstractModel
      * @param integer $TotalCachedReadInputTokens <p>查询时间范围内总命中缓存输入Token数</p>
      * @param string $TotalCost <p>查询时间范围内总成本</p>
      * @param string $Currency <p>成本货币单位</p>
-     * @param array $TopConsumers <p>查询时间范围内成本最高的消费者</p>
+     * @param array $TopConsumers <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
+     * @param integer $TotalTokens <p>查询时间范围内原始 total_tokens 累计</p>
+     * @param boolean $OrgAttributionIncomplete <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +145,14 @@ class AIGWLLMTokenUsageStatisticsResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TopConsumers, $obj);
             }
+        }
+
+        if (array_key_exists("TotalTokens",$param) and $param["TotalTokens"] !== null) {
+            $this->TotalTokens = $param["TotalTokens"];
+        }
+
+        if (array_key_exists("OrgAttributionIncomplete",$param) and $param["OrgAttributionIncomplete"] !== null) {
+            $this->OrgAttributionIncomplete = $param["OrgAttributionIncomplete"];
         }
     }
 }

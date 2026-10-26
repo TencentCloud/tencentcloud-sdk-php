@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientId(string $ClientId) 设置<p>OAuth2 client_id</p>
  * @method string getClientSecret() 获取<p>OAuth2 client_secret</p>
  * @method void setClientSecret(string $ClientSecret) 设置<p>OAuth2 client_secret</p>
+ * @method string getRedirectURIs() 获取<p>OAuth2 授权回调地址</p>
+ * @method void setRedirectURIs(string $RedirectURIs) 设置<p>OAuth2 授权回调地址</p>
  */
 class AIGWOAuthCredentialConfig extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AIGWOAuthCredentialConfig extends AbstractModel
     public $ClientSecret;
 
     /**
+     * @var string <p>OAuth2 授权回调地址</p>
+     */
+    public $RedirectURIs;
+
+    /**
      * @param string $ClientId <p>OAuth2 client_id</p>
      * @param string $ClientSecret <p>OAuth2 client_secret</p>
+     * @param string $RedirectURIs <p>OAuth2 授权回调地址</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AIGWOAuthCredentialConfig extends AbstractModel
 
         if (array_key_exists("ClientSecret",$param) and $param["ClientSecret"] !== null) {
             $this->ClientSecret = $param["ClientSecret"];
+        }
+
+        if (array_key_exists("RedirectURIs",$param) and $param["RedirectURIs"] !== null) {
+            $this->RedirectURIs = $param["RedirectURIs"];
         }
     }
 }

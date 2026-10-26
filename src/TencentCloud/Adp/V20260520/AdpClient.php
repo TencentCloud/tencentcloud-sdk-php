@@ -145,8 +145,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\PauseAppTriggerResponse PauseAppTrigger(Models\PauseAppTriggerRequest $req) PauseAppTrigger
  * @method Models\ReadMCPResourceResponse ReadMCPResource(Models\ReadMCPResourceRequest $req) 读取 MCP UI 资源（HTML），供前端 iframe 加载 MCP App 界面
  * @method Models\ReleaseSkillResponse ReleaseSkill(Models\ReleaseSkillRequest $req) 上架skill
- * @method Models\ResetConversationResponse ResetConversation(Models\ResetConversationRequest $req) 重置会话
-注意：当前Claw模式应用会话不支持重置
+ * @method Models\ResetConversationResponse ResetConversation(Models\ResetConversationRequest $req) 该接口用于重置会话上下文。会话上下文重置后，对话处理中不会携带重置前的历史对话内容
  * @method Models\ResumeAppTriggerResponse ResumeAppTrigger(Models\ResumeAppTriggerRequest $req) ResumeAppTrigger
  * @method Models\ResumeWorkflowRunResponse ResumeWorkflowRun(Models\ResumeWorkflowRunRequest $req) 继续运行等待输入的工作流异步运行实例
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 重试发布(发布暂停之后再次重新发布)

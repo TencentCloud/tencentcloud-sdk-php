@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMessageDetails请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getMessageId() 获取消息ID
- * @method void setMessageId(string $MessageId) 设置消息ID
- * @method string getSubscription() 获取订阅表达式
- * @method void setSubscription(string $Subscription) 设置订阅表达式
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getMessageId() 获取<p>消息ID</p>
+ * @method void setMessageId(string $MessageId) 设置<p>消息ID</p>
+ * @method string getSubscription() 获取<p>订阅表达式</p>
+ * @method void setSubscription(string $Subscription) 设置<p>订阅表达式</p>
  */
 class DescribeMessageDetailsRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 消息ID
+     * @var string <p>消息ID</p>
      */
     public $MessageId;
 
     /**
-     * @var string 订阅表达式
+     * @var string <p>订阅表达式</p>
      */
     public $Subscription;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $MessageId 消息ID
-     * @param string $Subscription 订阅表达式
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $MessageId <p>消息ID</p>
+     * @param string $Subscription <p>订阅表达式</p>
      */
     function __construct()
     {

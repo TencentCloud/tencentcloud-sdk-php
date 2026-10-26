@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI网关 Basic Auth 凭证物料配置
  *
- * @method string getUsername() 获取<p>用户名</p>
- * @method void setUsername(string $Username) 设置<p>用户名</p>
  * @method string getPassword() 获取<p>密码</p>
  * @method void setPassword(string $Password) 设置<p>密码</p>
+ * @method string getUsername() 获取<p>用户名</p>
+ * @method void setUsername(string $Username) 设置<p>用户名</p>
  */
 class AIGWBasicCredentialConfig extends AbstractModel
 {
-    /**
-     * @var string <p>用户名</p>
-     */
-    public $Username;
-
     /**
      * @var string <p>密码</p>
      */
     public $Password;
 
     /**
-     * @param string $Username <p>用户名</p>
+     * @var string <p>用户名</p>
+     */
+    public $Username;
+
+    /**
      * @param string $Password <p>密码</p>
+     * @param string $Username <p>用户名</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AIGWBasicCredentialConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
-            $this->Username = $param["Username"];
-        }
-
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
         }
     }
 }

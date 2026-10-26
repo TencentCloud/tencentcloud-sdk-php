@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelServiceId(string $ModelServiceId) 设置<p>模型服务id</p>
  * @method integer getWeight() 获取<p>权重值</p>
  * @method void setWeight(integer $Weight) 设置<p>权重值</p>
+ * @method string getStandardModelName() 获取<p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends Abstract
     public $Weight;
 
     /**
+     * @var string <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param string $ModelServiceId <p>模型服务id</p>
      * @param integer $Weight <p>权重值</p>
+     * @param string $StandardModelName <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends Abstract
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

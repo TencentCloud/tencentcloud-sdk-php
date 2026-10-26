@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>Rerank场景最大文档数高级配置</p>
  * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
  * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
+ * @method AIGWPriorityScheduleConfig getPriorityScheduleConfig() 获取<p>请求优先级调度配置</p>
+ * @method void setPriorityScheduleConfig(AIGWPriorityScheduleConfig $PriorityScheduleConfig) 设置<p>请求优先级调度配置</p>
+ * @method AIGWModelNameRoute getModelNameRoute() 获取<p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+ * @method void setModelNameRoute(AIGWModelNameRoute $ModelNameRoute) 设置<p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+ * @method string getStandardModelName() 获取<p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
@@ -136,6 +142,21 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $SensitiveWordRoute;
 
     /**
+     * @var AIGWPriorityScheduleConfig <p>请求优先级调度配置</p>
+     */
+    public $PriorityScheduleConfig;
+
+    /**
+     * @var AIGWModelNameRoute <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+     */
+    public $ModelNameRoute;
+
+    /**
+     * @var string <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $Name <p>模型 API 名称，最长 60 字符。同一网关下唯一。</p>
      * @param string $SceneType <p>业务场景。</p><p>枚举值：</p><ul><li>Chat：聊天</li><li>Image：图像（需要网关版本 ≥ 3.9.3）</li></ul>
@@ -152,6 +173,9 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
      * @param AIGWLogConfig $LogConfig <p>日志输出配置（请求/响应 payload 落 LLM Log）。需要网关版本 ≥ 3.9.4。</p>
      * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>Rerank场景最大文档数高级配置</p>
      * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
+     * @param AIGWPriorityScheduleConfig $PriorityScheduleConfig <p>请求优先级调度配置</p>
+     * @param AIGWModelNameRoute $ModelNameRoute <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+     * @param string $StandardModelName <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -244,6 +268,20 @@ class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (array_key_exists("SensitiveWordRoute",$param) and $param["SensitiveWordRoute"] !== null) {
             $this->SensitiveWordRoute = new AIGWSensitiveWordRoute();
             $this->SensitiveWordRoute->deserialize($param["SensitiveWordRoute"]);
+        }
+
+        if (array_key_exists("PriorityScheduleConfig",$param) and $param["PriorityScheduleConfig"] !== null) {
+            $this->PriorityScheduleConfig = new AIGWPriorityScheduleConfig();
+            $this->PriorityScheduleConfig->deserialize($param["PriorityScheduleConfig"]);
+        }
+
+        if (array_key_exists("ModelNameRoute",$param) and $param["ModelNameRoute"] !== null) {
+            $this->ModelNameRoute = new AIGWModelNameRoute();
+            $this->ModelNameRoute->deserialize($param["ModelNameRoute"]);
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute) 设置<p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
  * @method array getMatchHeaders() 获取<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
  * @method void setMatchHeaders(array $MatchHeaders) 设置<p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+ * @method AIGWModelNameRoute getModelNameRoute() 获取<p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+ * @method void setModelNameRoute(AIGWModelNameRoute $ModelNameRoute) 设置<p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
  * @method boolean getEnableCrossServiceFallback() 获取<p>是否启用跨服务 Fallback。</p>
  * @method void setEnableCrossServiceFallback(boolean $EnableCrossServiceFallback) 设置<p>是否启用跨服务 Fallback。</p>
  * @method AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() 获取<p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
@@ -48,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig) 设置<p>AI 网关Rerank场景最大文档数限制配置</p>
  * @method AIGWSensitiveWordRoute getSensitiveWordRoute() 获取<p>敏感词路由配置</p>
  * @method void setSensitiveWordRoute(AIGWSensitiveWordRoute $SensitiveWordRoute) 设置<p>敏感词路由配置</p>
+ * @method AIGWPriorityScheduleConfig getPriorityScheduleConfig() 获取<p>请求优先级配置</p>
+ * @method void setPriorityScheduleConfig(AIGWPriorityScheduleConfig $PriorityScheduleConfig) 设置<p>请求优先级配置</p>
+ * @method string getStandardModelName() 获取<p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
 {
@@ -92,6 +98,11 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $MatchHeaders;
 
     /**
+     * @var AIGWModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     */
+    public $ModelNameRoute;
+
+    /**
      * @var boolean <p>是否启用跨服务 Fallback。</p>
      */
     public $EnableCrossServiceFallback;
@@ -122,6 +133,16 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     public $SensitiveWordRoute;
 
     /**
+     * @var AIGWPriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public $PriorityScheduleConfig;
+
+    /**
+     * @var string <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelAPIId <p>模型 API ID，全局唯一标识。</p>
      * @param string $Name <p>模型 API 名称，最长 60 字符。</p>
@@ -130,12 +151,15 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
      * @param array $ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
      * @param CloudNativeAPIGatewayLLMModelServiceRoute $ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      * @param array $MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * @param AIGWModelNameRoute $ModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
      * @param boolean $EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      * @param AIGWCrossServiceFallbackConfig $CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      * @param AIGWTagFilter $TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
      * @param AIGWLogConfig $LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
      * @param AIGWRerankMaxDocumentsConfig $MaxDocumentsConfig <p>AI 网关Rerank场景最大文档数限制配置</p>
      * @param AIGWSensitiveWordRoute $SensitiveWordRoute <p>敏感词路由配置</p>
+     * @param AIGWPriorityScheduleConfig $PriorityScheduleConfig <p>请求优先级配置</p>
+     * @param string $StandardModelName <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -188,6 +212,11 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("ModelNameRoute",$param) and $param["ModelNameRoute"] !== null) {
+            $this->ModelNameRoute = new AIGWModelNameRoute();
+            $this->ModelNameRoute->deserialize($param["ModelNameRoute"]);
+        }
+
         if (array_key_exists("EnableCrossServiceFallback",$param) and $param["EnableCrossServiceFallback"] !== null) {
             $this->EnableCrossServiceFallback = $param["EnableCrossServiceFallback"];
         }
@@ -215,6 +244,15 @@ class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (array_key_exists("SensitiveWordRoute",$param) and $param["SensitiveWordRoute"] !== null) {
             $this->SensitiveWordRoute = new AIGWSensitiveWordRoute();
             $this->SensitiveWordRoute->deserialize($param["SensitiveWordRoute"]);
+        }
+
+        if (array_key_exists("PriorityScheduleConfig",$param) and $param["PriorityScheduleConfig"] !== null) {
+            $this->PriorityScheduleConfig = new AIGWPriorityScheduleConfig();
+            $this->PriorityScheduleConfig->deserialize($param["PriorityScheduleConfig"]);
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() 获取<p>任务 ID</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Succeeded： 成功</li><li>Failed： 失败</li></ul>
  * @method void setStatus(string $Status) 设置<p>任务 ID</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Succeeded： 成功</li><li>Failed： 失败</li></ul>
+ * @method array getResourceStatusSet() 获取<p>任务所操作的每个资源的执行结果</p>
+ * @method void setResourceStatusSet(array $ResourceStatusSet) 设置<p>任务所操作的每个资源的执行结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeDBCustomTaskStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var array <p>任务所操作的每个资源的执行结果</p>
+     */
+    public $ResourceStatusSet;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $Status <p>任务 ID</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Succeeded： 成功</li><li>Failed： 失败</li></ul>
+     * @param array $ResourceStatusSet <p>任务所操作的每个资源的执行结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,15 @@ class DescribeDBCustomTaskStatusResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ResourceStatusSet",$param) and $param["ResourceStatusSet"] !== null) {
+            $this->ResourceStatusSet = [];
+            foreach ($param["ResourceStatusSet"] as $key => $value){
+                $obj = new TaskResourceStatus();
+                $obj->deserialize($value);
+                array_push($this->ResourceStatusSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

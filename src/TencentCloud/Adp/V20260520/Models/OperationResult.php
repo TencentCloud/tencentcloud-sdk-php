@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通用操作结果项
  *
- * @method string getId() 获取<p>资源 ID</p>
- * @method void setId(string $Id) 设置<p>资源 ID</p>
- * @method string getReason() 获取<p>失败原因（succeeded=false 时填充）</p>
- * @method void setReason(string $Reason) 设置<p>失败原因（succeeded=false 时填充）</p>
- * @method boolean getSucceeded() 获取<p>是否成功</p>
- * @method void setSucceeded(boolean $Succeeded) 设置<p>是否成功</p>
+ * @method string getId() 获取资源 ID
+ * @method void setId(string $Id) 设置资源 ID
+ * @method string getReason() 获取失败原因（succeeded=false 时填充）
+ * @method void setReason(string $Reason) 设置失败原因（succeeded=false 时填充）
+ * @method boolean getSucceeded() 获取是否成功
+ * @method void setSucceeded(boolean $Succeeded) 设置是否成功
  */
 class OperationResult extends AbstractModel
 {
     /**
-     * @var string <p>资源 ID</p>
+     * @var string 资源 ID
      */
     public $Id;
 
     /**
-     * @var string <p>失败原因（succeeded=false 时填充）</p>
+     * @var string 失败原因（succeeded=false 时填充）
      */
     public $Reason;
 
     /**
-     * @var boolean <p>是否成功</p>
+     * @var boolean 是否成功
      */
     public $Succeeded;
 
     /**
-     * @param string $Id <p>资源 ID</p>
-     * @param string $Reason <p>失败原因（succeeded=false 时填充）</p>
-     * @param boolean $Succeeded <p>是否成功</p>
+     * @param string $Id 资源 ID
+     * @param string $Reason 失败原因（succeeded=false 时填充）
+     * @param boolean $Succeeded 是否成功
      */
     function __construct()
     {

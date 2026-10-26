@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(string $Priority) 设置<p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
  * @method string getDescription() 获取<p>消费者描述。最长 200 字符。</p>
  * @method void setDescription(string $Description) 设置<p>消费者描述。最长 200 字符。</p>
+ * @method string getSecretBindType() 获取<p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+ * @method void setSecretBindType(string $SecretBindType) 设置<p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+ * @method AutoSecretKey getAutoSecretKey() 获取<p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+ * @method void setAutoSecretKey(AutoSecretKey $AutoSecretKey) 设置<p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+ * @method string getOperationSource() 获取<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method string getStatus() 获取<p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+ * @method void setStatus(string $Status) 设置<p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
  */
 class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 {
@@ -52,10 +60,34 @@ class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+     */
+    public $SecretBindType;
+
+    /**
+     * @var AutoSecretKey <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+     */
+    public $AutoSecretKey;
+
+    /**
+     * @var string <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public $OperationSource;
+
+    /**
+     * @var string <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+     */
+    public $Status;
+
+    /**
      * @param string $GatewayId <p>网关实例id</p>
      * @param string $Name <p>消费者名称，最长 60 字符。同一网关下唯一。</p>
      * @param string $Priority <p>消费者优先级，默认medium</p><p>枚举值：</p><ul><li>Low： 低优先级</li><li>Medium： 中优先级</li><li>High： 高优先级</li></ul>
      * @param string $Description <p>消费者描述。最长 200 字符。</p>
+     * @param string $SecretBindType <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+     * @param AutoSecretKey $AutoSecretKey <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+     * @param string $OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param string $Status <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
      */
     function __construct()
     {
@@ -84,6 +116,23 @@ class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SecretBindType",$param) and $param["SecretBindType"] !== null) {
+            $this->SecretBindType = $param["SecretBindType"];
+        }
+
+        if (array_key_exists("AutoSecretKey",$param) and $param["AutoSecretKey"] !== null) {
+            $this->AutoSecretKey = new AutoSecretKey();
+            $this->AutoSecretKey->deserialize($param["AutoSecretKey"]);
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置<p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li></ul>
  * @method integer getDiskSize() 获取<p>磁盘大小</p><p>单位：GiB</p>
  * @method void setDiskSize(integer $DiskSize) 设置<p>磁盘大小</p><p>单位：GiB</p>
+ * @method string getDiskId() 获取<p>磁盘ID</p>
+ * @method void setDiskId(string $DiskId) 设置<p>磁盘ID</p>
  */
 class SystemDisk extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SystemDisk extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var string <p>磁盘ID</p>
+     */
+    public $DiskId;
+
+    /**
      * @param string $DiskType <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li></ul>
      * @param integer $DiskSize <p>磁盘大小</p><p>单位：GiB</p>
+     * @param string $DiskId <p>磁盘ID</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SystemDisk extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

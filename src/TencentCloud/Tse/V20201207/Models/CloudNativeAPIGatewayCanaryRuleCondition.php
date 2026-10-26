@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) 设置目标参数值
  * @method string getDelimiter() 获取分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
  * @method void setDelimiter(string $Delimiter) 设置分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
- * @method string getGlobalConfigId() 获取全局配置 Id
- * @method void setGlobalConfigId(string $GlobalConfigId) 设置全局配置 Id
- * @method string getGlobalConfigName() 获取全局配置名称
- * @method void setGlobalConfigName(string $GlobalConfigName) 设置全局配置名称
+ * @method string getGlobalConfigId() 获取网关全局配置 Id
+ * @method void setGlobalConfigId(string $GlobalConfigId) 设置网关全局配置 Id
+ * @method string getGlobalConfigName() 获取网关全局配置名称
+ * @method void setGlobalConfigName(string $GlobalConfigName) 设置网关全局配置名称
  */
 class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel
 {
@@ -63,12 +63,12 @@ class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel
     public $Delimiter;
 
     /**
-     * @var string 全局配置 Id
+     * @var string 网关全局配置 Id
      */
     public $GlobalConfigId;
 
     /**
-     * @var string 全局配置名称
+     * @var string 网关全局配置名称
      */
     public $GlobalConfigName;
 
@@ -78,8 +78,8 @@ class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel
      * @param string $Operator 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
      * @param string $Value 目标参数值
      * @param string $Delimiter 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-     * @param string $GlobalConfigId 全局配置 Id
-     * @param string $GlobalConfigName 全局配置名称
+     * @param string $GlobalConfigId 网关全局配置 Id
+     * @param string $GlobalConfigName 网关全局配置名称
      */
     function __construct()
     {

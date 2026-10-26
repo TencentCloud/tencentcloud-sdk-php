@@ -44,6 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
  * @method string getSyncedVersion() 获取<p>同步版本</p>
  * @method void setSyncedVersion(string $SyncedVersion) 设置<p>同步版本</p>
+ * @method string getDisplayName() 获取<p>消费者展示名称；目录同步对象可与登录名不同。</p>
+ * @method void setDisplayName(string $DisplayName) 设置<p>消费者展示名称；目录同步对象可与登录名不同。</p>
+ * @method string getUserName() 获取<p>消费者登录名称。</p>
+ * @method void setUserName(string $UserName) 设置<p>消费者登录名称。</p>
+ * @method string getStatus() 获取<p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+ * @method void setStatus(string $Status) 设置<p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+ * @method string getOrigin() 获取<p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+ * @method void setOrigin(string $Origin) 设置<p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+ * @method string getSyncSourceId() 获取<p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+ * @method void setSyncSourceId(string $SyncSourceId) 设置<p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+ * @method string getExternalId() 获取<p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+ * @method void setExternalId(string $ExternalId) 设置<p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
  */
 class CNAPIGwConsumer extends AbstractModel
 {
@@ -100,6 +112,36 @@ class CNAPIGwConsumer extends AbstractModel
     public $SyncedVersion;
 
     /**
+     * @var string <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+     */
+    public $DisplayName;
+
+    /**
+     * @var string <p>消费者登录名称。</p>
+     */
+    public $UserName;
+
+    /**
+     * @var string <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+     */
+    public $Status;
+
+    /**
+     * @var string <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+     */
+    public $Origin;
+
+    /**
+     * @var string <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+     */
+    public $SyncSourceId;
+
+    /**
+     * @var string <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+     */
+    public $ExternalId;
+
+    /**
      * @param string $ConsumerId <p>消费者 ID。</p>
      * @param string $Name <p>名字</p>
      * @param string $CreateTime <p>创建时间</p>
@@ -112,6 +154,12 @@ class CNAPIGwConsumer extends AbstractModel
      * @param string $SyncStatus <p>同步状态</p><p>枚举值：</p><ul><li>Fail： 失败</li></ul>
      * @param string $SourceType <p>资源类型</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li><li>Consumer： 消费者</li><li>SecretKey： 密钥</li></ul>
      * @param string $SyncedVersion <p>同步版本</p>
+     * @param string $DisplayName <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+     * @param string $UserName <p>消费者登录名称。</p>
+     * @param string $Status <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+     * @param string $Origin <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+     * @param string $SyncSourceId <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+     * @param string $ExternalId <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
      */
     function __construct()
     {
@@ -169,6 +217,30 @@ class CNAPIGwConsumer extends AbstractModel
 
         if (array_key_exists("SyncedVersion",$param) and $param["SyncedVersion"] !== null) {
             $this->SyncedVersion = $param["SyncedVersion"];
+        }
+
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+            $this->Origin = $param["Origin"];
+        }
+
+        if (array_key_exists("SyncSourceId",$param) and $param["SyncSourceId"] !== null) {
+            $this->SyncSourceId = $param["SyncSourceId"];
+        }
+
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
         }
     }
 }

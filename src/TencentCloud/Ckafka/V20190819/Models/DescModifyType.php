@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 变配类型查询出参
  *
- * @method integer getModifyType() 获取变配类型
- * @method void setModifyType(integer $ModifyType) 设置变配类型
- * @method boolean getMigrateFlag() 获取是否迁移标志
- * @method void setMigrateFlag(boolean $MigrateFlag) 设置是否迁移标志
+ * @method integer getModifyType() 获取<p>变配类型</p>
+ * @method void setModifyType(integer $ModifyType) 设置<p>变配类型</p>
+ * @method boolean getMigrateFlag() 获取<p>是否迁移标志</p>
+ * @method void setMigrateFlag(boolean $MigrateFlag) 设置<p>是否迁移标志</p>
  */
 class DescModifyType extends AbstractModel
 {
     /**
-     * @var integer 变配类型
+     * @var integer <p>变配类型</p>
      */
     public $ModifyType;
 
     /**
-     * @var boolean 是否迁移标志
+     * @var boolean <p>是否迁移标志</p>
      */
     public $MigrateFlag;
 
     /**
-     * @param integer $ModifyType 变配类型
-     * @param boolean $MigrateFlag 是否迁移标志
+     * @param integer $ModifyType <p>变配类型</p>
+     * @param boolean $MigrateFlag <p>是否迁移标志</p>
      */
     function __construct()
     {

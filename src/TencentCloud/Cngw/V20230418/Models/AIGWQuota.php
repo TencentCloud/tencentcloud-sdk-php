@@ -42,10 +42,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置<p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method string getSource() 获取<p>配额类型，手动配额还是默认配额</p>
  * @method void setSource(string $Source) 设置<p>配额类型，手动配额还是默认配额</p>
- * @method string getExceedAction() 获取<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
- * @method void setExceedAction(string $ExceedAction) 设置<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+ * @method string getExceedAction() 获取<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
+ * @method void setExceedAction(string $ExceedAction) 设置<p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
  * @method string getCacheHitStat() 获取<p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
  * @method void setCacheHitStat(string $CacheHitStat) 设置<p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
+ * @method integer getExceedPercentage() 获取<p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+ * @method void setExceedPercentage(integer $ExceedPercentage) 设置<p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+ * @method boolean getSetExceedPercentage() 获取<p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+ * @method void setSetExceedPercentage(boolean $SetExceedPercentage) 设置<p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+ * @method string getScope() 获取<p>Consumer粒度某资源对象的配额范围，支持：全部模型服务（all）、指定模型服务（specified）</p><p>枚举值：</p><ul><li>All： 全部</li><li>Specified： 指定</li></ul><p>默认值：All</p>
+ * @method void setScope(string $Scope) 设置<p>Consumer粒度某资源对象的配额范围，支持：全部模型服务（all）、指定模型服务（specified）</p><p>枚举值：</p><ul><li>All： 全部</li><li>Specified： 指定</li></ul><p>默认值：All</p>
+ * @method string getSubResourceType() 获取<p>Consumer粒度配额的资源类型，如“模型服务”</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li></ul><p>默认值：ModelService</p>
+ * @method void setSubResourceType(string $SubResourceType) 设置<p>Consumer粒度配额的资源类型，如“模型服务”</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li></ul><p>默认值：ModelService</p>
+ * @method integer getSubResourceCount() 获取<p>Consumer粒度配额若支持指定子资源配额，则该项为子资源配额个数</p>
+ * @method void setSubResourceCount(integer $SubResourceCount) 设置<p>Consumer粒度配额若支持指定子资源配额，则该项为子资源配额个数</p>
+ * @method string getConsumerGroupPath() 获取<p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+ * @method void setConsumerGroupPath(string $ConsumerGroupPath) 设置<p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+ * @method boolean getConsumerGroupActive() 获取<p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+ * @method void setConsumerGroupActive(boolean $ConsumerGroupActive) 设置<p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+ * @method integer getUsed() 获取<p>兼容用量字段。Cost 为向下取整的整数元；TotalToken 单位为 token；RequestCount 单位为次。精确显示优先使用 UsedExact。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method void setUsed(integer $Used) 设置<p>兼容用量字段。Cost 为向下取整的整数元；TotalToken 单位为 token；RequestCount 单位为次。精确显示优先使用 UsedExact。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method float getUsedExact() 获取<p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedExact(float $UsedExact) 设置<p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getUsageRate() 获取<p>使用率</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method void setUsageRate(float $UsageRate) 设置<p>使用率</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method string getAlarmLevel() 获取<p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method void setAlarmLevel(string $AlarmLevel) 设置<p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+ * @method integer getSecretKeyCount() 获取<p>关联消费者密钥数量。ConsumerGroup 规则固定为 0。</p>
+ * @method void setSecretKeyCount(integer $SecretKeyCount) 设置<p>关联消费者密钥数量。ConsumerGroup 规则固定为 0。</p>
  */
 class AIGWQuota extends AbstractModel
 {
@@ -105,7 +131,7 @@ class AIGWQuota extends AbstractModel
     public $Source;
 
     /**
-     * @var string <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+     * @var string <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
      */
     public $ExceedAction;
 
@@ -113,6 +139,67 @@ class AIGWQuota extends AbstractModel
      * @var string <p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
      */
     public $CacheHitStat;
+
+    /**
+     * @var integer <p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+     */
+    public $ExceedPercentage;
+
+    /**
+     * @var boolean <p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+     */
+    public $SetExceedPercentage;
+
+    /**
+     * @var string <p>Consumer粒度某资源对象的配额范围，支持：全部模型服务（all）、指定模型服务（specified）</p><p>枚举值：</p><ul><li>All： 全部</li><li>Specified： 指定</li></ul><p>默认值：All</p>
+     */
+    public $Scope;
+
+    /**
+     * @var string <p>Consumer粒度配额的资源类型，如“模型服务”</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li></ul><p>默认值：ModelService</p>
+     */
+    public $SubResourceType;
+
+    /**
+     * @var integer <p>Consumer粒度配额若支持指定子资源配额，则该项为子资源配额个数</p>
+     */
+    public $SubResourceCount;
+
+    /**
+     * @var string <p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+     */
+    public $ConsumerGroupPath;
+
+    /**
+     * @var boolean <p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+     */
+    public $ConsumerGroupActive;
+
+    /**
+     * @var integer <p>兼容用量字段。Cost 为向下取整的整数元；TotalToken 单位为 token；RequestCount 单位为次。精确显示优先使用 UsedExact。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     */
+    public $Used;
+
+    /**
+     * @var float <p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedExact;
+
+    /**
+     * @var float <p>使用率</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     */
+    public $UsageRate;
+
+    /**
+     * @var string <p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     */
+    public $AlarmLevel;
+
+    /**
+     * @var integer <p>关联消费者密钥数量。ConsumerGroup 规则固定为 0。</p>
+     */
+    public $SecretKeyCount;
 
     /**
      * @param string $Id <p>Id</p>
@@ -126,8 +213,21 @@ class AIGWQuota extends AbstractModel
      * @param string $CreateTime <p>创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param string $ModifyTime <p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param string $Source <p>配额类型，手动配额还是默认配额</p>
-     * @param string $ExceedAction <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝请求</li><li>AllowOverage： 允许超支</li></ul>
+     * @param string $ExceedAction <p>配额超限行为</p><p>枚举值：</p><ul><li>Reject： 拒绝消费者请求</li><li>AllowOverage： 允许超限</li></ul>
      * @param string $CacheHitStat <p>缓存是否计入限额</p><p>枚举值：</p><ul><li>Full： 全量计入</li><li>Exclude： 不计入网关缓存命中部分</li></ul>
+     * @param integer $ExceedPercentage <p>超限百分比</p><p>默认值：0</p><p>Consumer 的超量百分比，指定模型服务配额默认为 0；ConsumerGroup 固定为 0。</p><p>举例：20，超出设置额度的20%，可用额度为（1+20%）*QuotaLimit。当SetExceedPercentage=true时，条件必选。</p>
+     * @param boolean $SetExceedPercentage <p>是否设置超限百分比</p><p>仅 Consumer 的 AllowOverage 场景可用，指定模型服务的配额必须为 false；ConsumerGroup 必须为 false。</p><p>枚举值：</p><ul><li>true： 设置超限百分比</li><li>false： 不设置超限百分比，即不设上限</li></ul><p>默认值：false</p><p>当ExceedAction=AllowOverage时，条件必选。</p>
+     * @param string $Scope <p>Consumer粒度某资源对象的配额范围，支持：全部模型服务（all）、指定模型服务（specified）</p><p>枚举值：</p><ul><li>All： 全部</li><li>Specified： 指定</li></ul><p>默认值：All</p>
+     * @param string $SubResourceType <p>Consumer粒度配额的资源类型，如“模型服务”</p><p>枚举值：</p><ul><li>ModelService： 模型服务</li></ul><p>默认值：ModelService</p>
+     * @param integer $SubResourceCount <p>Consumer粒度配额若支持指定子资源配额，则该项为子资源配额个数</p>
+     * @param string $ConsumerGroupPath <p>消费者组完整层级路径。仅 ResourceType=ConsumerGroup 返回，未知时为空字符串；Consumer 行省略。</p>
+     * @param boolean $ConsumerGroupActive <p>消费者组是否有效。仅 ResourceType=ConsumerGroup 返回；组不存在或非 active 时为 false。与配额规则 Enabled 区分，字段省略与 false 含义不同。</p>
+     * @param integer $Used <p>兼容用量字段。Cost 为向下取整的整数元；TotalToken 单位为 token；RequestCount 单位为次。精确显示优先使用 UsedExact。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     * @param float $UsedExact <p>精确使用量。Cost 单位为元，保留 1e-7 元精度；TotalToken 单位为 token；RequestCount 单位为次。旧版插件不提供精确值时省略，调用方可回退使用 Used；该值已换算为业务单位，不要再除以 ValueScale。</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $UsageRate <p>使用率</p> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     * @param string $AlarmLevel <p>预警级别</p><p>枚举值：</p><ul><li>Normal： 正常</li><li>Warning： 预警</li><li>NearLimit： 临近超限</li><li>Exceeded： 超限</li></ul> 仅支持用量查询的实际规则返回；旧 Consumer 网关和 DefaultPolicy 模板可省略。
+     * @param integer $SecretKeyCount <p>关联消费者密钥数量。ConsumerGroup 规则固定为 0。</p>
      */
     function __construct()
     {
@@ -192,6 +292,54 @@ class AIGWQuota extends AbstractModel
 
         if (array_key_exists("CacheHitStat",$param) and $param["CacheHitStat"] !== null) {
             $this->CacheHitStat = $param["CacheHitStat"];
+        }
+
+        if (array_key_exists("ExceedPercentage",$param) and $param["ExceedPercentage"] !== null) {
+            $this->ExceedPercentage = $param["ExceedPercentage"];
+        }
+
+        if (array_key_exists("SetExceedPercentage",$param) and $param["SetExceedPercentage"] !== null) {
+            $this->SetExceedPercentage = $param["SetExceedPercentage"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
+        if (array_key_exists("SubResourceType",$param) and $param["SubResourceType"] !== null) {
+            $this->SubResourceType = $param["SubResourceType"];
+        }
+
+        if (array_key_exists("SubResourceCount",$param) and $param["SubResourceCount"] !== null) {
+            $this->SubResourceCount = $param["SubResourceCount"];
+        }
+
+        if (array_key_exists("ConsumerGroupPath",$param) and $param["ConsumerGroupPath"] !== null) {
+            $this->ConsumerGroupPath = $param["ConsumerGroupPath"];
+        }
+
+        if (array_key_exists("ConsumerGroupActive",$param) and $param["ConsumerGroupActive"] !== null) {
+            $this->ConsumerGroupActive = $param["ConsumerGroupActive"];
+        }
+
+        if (array_key_exists("Used",$param) and $param["Used"] !== null) {
+            $this->Used = $param["Used"];
+        }
+
+        if (array_key_exists("UsedExact",$param) and $param["UsedExact"] !== null) {
+            $this->UsedExact = $param["UsedExact"];
+        }
+
+        if (array_key_exists("UsageRate",$param) and $param["UsageRate"] !== null) {
+            $this->UsageRate = $param["UsageRate"];
+        }
+
+        if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
+            $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("SecretKeyCount",$param) and $param["SecretKeyCount"] !== null) {
+            $this->SecretKeyCount = $param["SecretKeyCount"];
         }
     }
 }

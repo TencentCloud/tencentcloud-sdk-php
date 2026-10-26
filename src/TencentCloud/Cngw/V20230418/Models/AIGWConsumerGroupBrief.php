@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>消费者组名称</p>
  * @method string getConsumerGroupId() 获取<p>消费者组Id</p>
  * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组Id</p>
+ * @method string getConsumerGroupPath() 获取<p>消费者组（组织节点）的当前展示路径，可选。TokenUsageList 在网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐，用于展示当前直接所属组的位置；多父节点使用确定性路径。更早版本、无可用路径或未补齐此元数据的接口可省略；前端缺省时回退 Name。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumerGroupPath(string $ConsumerGroupPath) 设置<p>消费者组（组织节点）的当前展示路径，可选。TokenUsageList 在网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐，用于展示当前直接所属组的位置；多父节点使用确定性路径。更早版本、无可用路径或未补齐此元数据的接口可省略；前端缺省时回退 Name。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AIGWConsumerGroupBrief extends AbstractModel
 {
@@ -38,8 +42,16 @@ class AIGWConsumerGroupBrief extends AbstractModel
     public $ConsumerGroupId;
 
     /**
+     * @var string <p>消费者组（组织节点）的当前展示路径，可选。TokenUsageList 在网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐，用于展示当前直接所属组的位置；多父节点使用确定性路径。更早版本、无可用路径或未补齐此元数据的接口可省略；前端缺省时回退 Name。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumerGroupPath;
+
+    /**
      * @param string $Name <p>消费者组名称</p>
      * @param string $ConsumerGroupId <p>消费者组Id</p>
+     * @param string $ConsumerGroupPath <p>消费者组（组织节点）的当前展示路径，可选。TokenUsageList 在网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐，用于展示当前直接所属组的位置；多父节点使用确定性路径。更早版本、无可用路径或未补齐此元数据的接口可省略；前端缺省时回退 Name。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class AIGWConsumerGroupBrief extends AbstractModel
 
         if (array_key_exists("ConsumerGroupId",$param) and $param["ConsumerGroupId"] !== null) {
             $this->ConsumerGroupId = $param["ConsumerGroupId"];
+        }
+
+        if (array_key_exists("ConsumerGroupPath",$param) and $param["ConsumerGroupPath"] !== null) {
+            $this->ConsumerGroupPath = $param["ConsumerGroupPath"];
         }
     }
 }

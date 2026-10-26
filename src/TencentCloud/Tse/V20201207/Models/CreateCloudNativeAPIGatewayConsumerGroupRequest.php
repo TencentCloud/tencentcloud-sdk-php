@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
  * @method string getDescription() 获取<p>消费者组描述。最长 200 字符。</p>
  * @method void setDescription(string $Description) 设置<p>消费者组描述。最长 200 字符。</p>
+ * @method string getOperationSource() 获取<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method void setOperationSource(string $OperationSource) 设置<p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+ * @method array getParentConsumerGroupIds() 获取<p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+ * @method void setParentConsumerGroupIds(array $ParentConsumerGroupIds) 设置<p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
  */
 class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public $OperationSource;
+
+    /**
+     * @var array <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+     */
+    public $ParentConsumerGroupIds;
+
+    /**
      * @param string $GatewayId 网关实例id
      * @param string $Name <p>消费者组名称，最长 60 字符。同一网关下唯一。</p>
      * @param string $Status <p>启用状态。</p><p>枚举值：</p><ul><li>Enable：启用</li><li>Disable：禁用</li></ul>
      * @param string $Description <p>消费者组描述。最长 200 字符。</p>
+     * @param string $OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param array $ParentConsumerGroupIds <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("OperationSource",$param) and $param["OperationSource"] !== null) {
+            $this->OperationSource = $param["OperationSource"];
+        }
+
+        if (array_key_exists("ParentConsumerGroupIds",$param) and $param["ParentConsumerGroupIds"] !== null) {
+            $this->ParentConsumerGroupIds = $param["ParentConsumerGroupIds"];
         }
     }
 }

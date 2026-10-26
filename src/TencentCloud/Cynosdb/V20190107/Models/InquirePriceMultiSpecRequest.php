@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceMultiSpec请求参数结构体
  *
- * @method string getZone() 获取可用区,每个地域提供最佳实践
- * @method void setZone(string $Zone) 设置可用区,每个地域提供最佳实践
- * @method string getInstancePayMode() 获取实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
- * @method void setInstancePayMode(string $InstancePayMode) 设置实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
- * @method string getStoragePayMode() 获取存储购买类型，可选值为：PREPAID, POSTPAID
- * @method void setStoragePayMode(string $StoragePayMode) 设置存储购买类型，可选值为：PREPAID, POSTPAID
- * @method array getGoodsSpecs() 获取商品规格
- * @method void setGoodsSpecs(array $GoodsSpecs) 设置商品规格
+ * @method string getZone() 获取<p>可用区,每个地域提供最佳实践</p>
+ * @method void setZone(string $Zone) 设置<p>可用区,每个地域提供最佳实践</p>
+ * @method string getInstancePayMode() 获取<p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
+ * @method void setInstancePayMode(string $InstancePayMode) 设置<p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
+ * @method string getStoragePayMode() 获取<p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
+ * @method void setStoragePayMode(string $StoragePayMode) 设置<p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
+ * @method array getGoodsSpecs() 获取<p>商品规格</p>
+ * @method void setGoodsSpecs(array $GoodsSpecs) 设置<p>商品规格</p>
  */
 class InquirePriceMultiSpecRequest extends AbstractModel
 {
     /**
-     * @var string 可用区,每个地域提供最佳实践
+     * @var string <p>可用区,每个地域提供最佳实践</p>
      */
     public $Zone;
 
     /**
-     * @var string 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+     * @var string <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
      */
     public $InstancePayMode;
 
     /**
-     * @var string 存储购买类型，可选值为：PREPAID, POSTPAID
+     * @var string <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
      */
     public $StoragePayMode;
 
     /**
-     * @var array 商品规格
+     * @var array <p>商品规格</p>
      */
     public $GoodsSpecs;
 
     /**
-     * @param string $Zone 可用区,每个地域提供最佳实践
-     * @param string $InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
-     * @param string $StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
-     * @param array $GoodsSpecs 商品规格
+     * @param string $Zone <p>可用区,每个地域提供最佳实践</p>
+     * @param string $InstancePayMode <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
+     * @param string $StoragePayMode <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
+     * @param array $GoodsSpecs <p>商品规格</p>
      */
     function __construct()
     {

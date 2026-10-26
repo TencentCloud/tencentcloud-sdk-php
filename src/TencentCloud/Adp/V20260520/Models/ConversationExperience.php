@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(integer $Method) 设置<p>输出方式。枚举值: 1:流式, 2:非流式</p>
  * @method integer getRecommendPromptMode() 获取<p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
  * @method void setRecommendPromptMode(integer $RecommendPromptMode) 设置<p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
+ * @method boolean getEnableNewMessageInterrupt() 获取<p>新消息中断正在进行的消息</p>
+ * @method void setEnableNewMessageInterrupt(boolean $EnableNewMessageInterrupt) 设置<p>新消息中断正在进行的消息</p>
  */
 class ConversationExperience extends AbstractModel
 {
@@ -96,6 +98,11 @@ class ConversationExperience extends AbstractModel
     public $RecommendPromptMode;
 
     /**
+     * @var boolean <p>新消息中断正在进行的消息</p>
+     */
+    public $EnableNewMessageInterrupt;
+
+    /**
      * @param AICallConfig $AiCall <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackgroundImage $BackgroundImage <p>背景图片配置</p>
@@ -108,6 +115,7 @@ class ConversationExperience extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Method <p>输出方式。枚举值: 1:流式, 2:非流式</p>
      * @param integer $RecommendPromptMode <p>推荐问生成prompt模式。枚举值: 1:仅结合知识库输出推荐问的prompt</p>
+     * @param boolean $EnableNewMessageInterrupt <p>新消息中断正在进行的消息</p>
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class ConversationExperience extends AbstractModel
 
         if (array_key_exists("RecommendPromptMode",$param) and $param["RecommendPromptMode"] !== null) {
             $this->RecommendPromptMode = $param["RecommendPromptMode"];
+        }
+
+        if (array_key_exists("EnableNewMessageInterrupt",$param) and $param["EnableNewMessageInterrupt"] !== null) {
+            $this->EnableNewMessageInterrupt = $param["EnableNewMessageInterrupt"];
         }
     }
 }

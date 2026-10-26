@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatencyMetric(string $LatencyMetric) 设置<p>延迟指标</p><p>枚举值：</p><ul><li>LLMLatency： LLM 延迟</li><li>NetworkLatency： 网络延迟</li></ul>
  * @method string getRouteMode() 获取<p>路由策略</p><p>枚举值：</p><ul><li>FastMode： 快速模式</li><li>BalanceMode： 均衡模式</li></ul>
  * @method void setRouteMode(string $RouteMode) 设置<p>路由策略</p><p>枚举值：</p><ul><li>FastMode： 快速模式</li><li>BalanceMode： 均衡模式</li></ul>
+ * @method integer getProbeIntervalMs() 获取<p>网络延迟探测间隔</p><p>单位：毫秒</p>
+ * @method void setProbeIntervalMs(integer $ProbeIntervalMs) 设置<p>网络延迟探测间隔</p><p>单位：毫秒</p>
+ * @method integer getProbeTimeoutMs() 获取<p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+ * @method void setProbeTimeoutMs(integer $ProbeTimeoutMs) 设置<p>网络延迟探测超时时间</p><p>单位：毫秒</p>
  */
 class AIGWLatencyPriorityConfig extends AbstractModel
 {
@@ -45,9 +49,21 @@ class AIGWLatencyPriorityConfig extends AbstractModel
     public $RouteMode;
 
     /**
+     * @var integer <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+     */
+    public $ProbeIntervalMs;
+
+    /**
+     * @var integer <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+     */
+    public $ProbeTimeoutMs;
+
+    /**
      * @param array $Rules <p>路由规则列表</p>
      * @param string $LatencyMetric <p>延迟指标</p><p>枚举值：</p><ul><li>LLMLatency： LLM 延迟</li><li>NetworkLatency： 网络延迟</li></ul>
      * @param string $RouteMode <p>路由策略</p><p>枚举值：</p><ul><li>FastMode： 快速模式</li><li>BalanceMode： 均衡模式</li></ul>
+     * @param integer $ProbeIntervalMs <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+     * @param integer $ProbeTimeoutMs <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class AIGWLatencyPriorityConfig extends AbstractModel
 
         if (array_key_exists("RouteMode",$param) and $param["RouteMode"] !== null) {
             $this->RouteMode = $param["RouteMode"];
+        }
+
+        if (array_key_exists("ProbeIntervalMs",$param) and $param["ProbeIntervalMs"] !== null) {
+            $this->ProbeIntervalMs = $param["ProbeIntervalMs"];
+        }
+
+        if (array_key_exists("ProbeTimeoutMs",$param) and $param["ProbeTimeoutMs"] !== null) {
+            $this->ProbeTimeoutMs = $param["ProbeTimeoutMs"];
         }
     }
 }

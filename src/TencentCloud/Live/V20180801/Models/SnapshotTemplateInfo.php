@@ -20,122 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 截图模板信息。
  *
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
- * @method string getTemplateName() 获取模板名称。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
- * @method integer getSnapshotInterval() 获取截图时间间隔，5-300秒。
- * @method void setSnapshotInterval(integer $SnapshotInterval) 设置截图时间间隔，5-300秒。
- * @method integer getWidth() 获取截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
- * @method void setWidth(integer $Width) 设置截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
- * @method integer getHeight() 获取截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
- * @method void setHeight(integer $Height) 设置截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
- * @method integer getPornFlag() 获取是否开启鉴黄，0：不开启，1：开启。
- * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，0：不开启，1：开启。
- * @method integer getCosAppId() 获取Cos 应用 ID。
- * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
- * @method string getCosBucket() 获取Cos Bucket名称。
- * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
- * @method string getCosRegion() 获取Cos 地域。
- * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
- * @method string getDescription() 获取模板描述。
- * @method void setDescription(string $Description) 设置模板描述。
- * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
+ * @method integer getTemplateId() 获取<p>模板 ID。</p>
+ * @method void setTemplateId(integer $TemplateId) 设置<p>模板 ID。</p>
+ * @method string getTemplateName() 获取<p>模板名称。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称。</p>
+ * @method integer getSnapshotInterval() 获取<p>截图时间间隔，5-300秒。</p>
+ * @method void setSnapshotInterval(integer $SnapshotInterval) 设置<p>截图时间间隔，5-300秒。</p>
+ * @method integer getWidth() 获取<p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
+ * @method void setWidth(integer $Width) 设置<p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
+ * @method integer getHeight() 获取<p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
+ * @method void setHeight(integer $Height) 设置<p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
+ * @method integer getPornFlag() 获取<p>是否开启鉴黄，0：不开启，1：开启。</p>
+ * @method void setPornFlag(integer $PornFlag) 设置<p>是否开启鉴黄，0：不开启，1：开启。</p>
+ * @method integer getCosAppId() 获取<p>Cos 应用 ID。</p>
+ * @method void setCosAppId(integer $CosAppId) 设置<p>Cos 应用 ID。</p>
+ * @method string getCosBucket() 获取<p>Cos Bucket名称。</p>
+ * @method void setCosBucket(string $CosBucket) 设置<p>Cos Bucket名称。</p>
+ * @method string getCosRegion() 获取<p>Cos 地域。</p>
+ * @method void setCosRegion(string $CosRegion) 设置<p>Cos 地域。</p>
+ * @method string getDescription() 获取<p>模板描述。</p>
+ * @method void setDescription(string $Description) 设置<p>模板描述。</p>
+ * @method string getCosPrefix() 获取<p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
+ * @method void setCosPrefix(string $CosPrefix) 设置<p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCosFileName() 获取Cos 文件名称。
+ * @method string getCosFileName() 获取<p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosFileName(string $CosFileName) 设置Cos 文件名称。
+ * @method void setCosFileName(string $CosFileName) 设置<p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCosSecretId() 获取<p>第三方存储时账号的SecretId</p>
+ * @method void setCosSecretId(string $CosSecretId) 设置<p>第三方存储时账号的SecretId</p>
+ * @method string getCosSecretKey() 获取<p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+ * @method void setCosSecretKey(string $CosSecretKey) 设置<p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
  */
 class SnapshotTemplateInfo extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer <p>模板 ID。</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称。
+     * @var string <p>模板名称。</p>
      */
     public $TemplateName;
 
     /**
-     * @var integer 截图时间间隔，5-300秒。
+     * @var integer <p>截图时间间隔，5-300秒。</p>
      */
     public $SnapshotInterval;
 
     /**
-     * @var integer 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
+     * @var integer <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
      */
     public $Width;
 
     /**
-     * @var integer 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
+     * @var integer <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
      */
     public $Height;
 
     /**
-     * @var integer 是否开启鉴黄，0：不开启，1：开启。
+     * @var integer <p>是否开启鉴黄，0：不开启，1：开启。</p>
      */
     public $PornFlag;
 
     /**
-     * @var integer Cos 应用 ID。
+     * @var integer <p>Cos 应用 ID。</p>
      */
     public $CosAppId;
 
     /**
-     * @var string Cos Bucket名称。
+     * @var string <p>Cos Bucket名称。</p>
      */
     public $CosBucket;
 
     /**
-     * @var string Cos 地域。
+     * @var string <p>Cos 地域。</p>
      */
     public $CosRegion;
 
     /**
-     * @var string 模板描述。
+     * @var string <p>模板描述。</p>
      */
     public $Description;
 
     /**
-     * @var string Cos Bucket文件夹前缀。
+     * @var string <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPrefix;
 
     /**
-     * @var string Cos 文件名称。
+     * @var string <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosFileName;
 
     /**
-     * @param integer $TemplateId 模板 ID。
-     * @param string $TemplateName 模板名称。
-     * @param integer $SnapshotInterval 截图时间间隔，5-300秒。
-     * @param integer $Width 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
-     * @param integer $Height 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
-     * @param integer $PornFlag 是否开启鉴黄，0：不开启，1：开启。
-     * @param integer $CosAppId Cos 应用 ID。
-     * @param string $CosBucket Cos Bucket名称。
-     * @param string $CosRegion Cos 地域。
-     * @param string $Description 模板描述。
-     * @param string $CosPrefix Cos Bucket文件夹前缀。
+     * @var string <p>第三方存储时账号的SecretId</p>
+     */
+    public $CosSecretId;
+
+    /**
+     * @var string <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+     */
+    public $CosSecretKey;
+
+    /**
+     * @param integer $TemplateId <p>模板 ID。</p>
+     * @param string $TemplateName <p>模板名称。</p>
+     * @param integer $SnapshotInterval <p>截图时间间隔，5-300秒。</p>
+     * @param integer $Width <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
+     * @param integer $Height <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
+     * @param integer $PornFlag <p>是否开启鉴黄，0：不开启，1：开启。</p>
+     * @param integer $CosAppId <p>Cos 应用 ID。</p>
+     * @param string $CosBucket <p>Cos Bucket名称。</p>
+     * @param string $CosRegion <p>Cos 地域。</p>
+     * @param string $Description <p>模板描述。</p>
+     * @param string $CosPrefix <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CosFileName Cos 文件名称。
+     * @param string $CosFileName <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CosSecretId <p>第三方存储时账号的SecretId</p>
+     * @param string $CosSecretKey <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
      */
     function __construct()
     {
@@ -196,6 +204,14 @@ class SnapshotTemplateInfo extends AbstractModel
 
         if (array_key_exists("CosFileName",$param) and $param["CosFileName"] !== null) {
             $this->CosFileName = $param["CosFileName"];
+        }
+
+        if (array_key_exists("CosSecretId",$param) and $param["CosSecretId"] !== null) {
+            $this->CosSecretId = $param["CosSecretId"];
+        }
+
+        if (array_key_exists("CosSecretKey",$param) and $param["CosSecretKey"] !== null) {
+            $this->CosSecretKey = $param["CosSecretKey"];
         }
     }
 }

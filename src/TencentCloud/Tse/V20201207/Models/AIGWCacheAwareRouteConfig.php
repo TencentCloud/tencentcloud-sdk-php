@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 缓存感知路由
  *
- * @method array getCandidates() 获取<p>前缀缓存感知路由模型服务候选列表</p>
- * @method void setCandidates(array $Candidates) 设置<p>前缀缓存感知路由模型服务候选列表</p>
+ * @method array getCandidates() 获取<p>前缀缓存感知路由模型服务列表</p>
+ * @method void setCandidates(array $Candidates) 设置<p>前缀缓存感知路由模型服务列表</p>
  */
 class AIGWCacheAwareRouteConfig extends AbstractModel
 {
     /**
-     * @var array <p>前缀缓存感知路由模型服务候选列表</p>
+     * @var array <p>前缀缓存感知路由模型服务列表</p>
      */
     public $Candidates;
 
     /**
-     * @param array $Candidates <p>前缀缓存感知路由模型服务候选列表</p>
+     * @param array $Candidates <p>前缀缓存感知路由模型服务列表</p>
      */
     function __construct()
     {

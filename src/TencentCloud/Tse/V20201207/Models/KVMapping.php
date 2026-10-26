@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 键值对
  *
- * @method string getKey() 获取key
- * @method void setKey(string $Key) 设置key
- * @method string getValue() 获取value
- * @method void setValue(string $Value) 设置value
+ * @method string getKey() 获取键值映射的键
+ * @method void setKey(string $Key) 设置键值映射的键
+ * @method string getValue() 获取键值映射的值
+ * @method void setValue(string $Value) 设置键值映射的值
  */
 class KVMapping extends AbstractModel
 {
     /**
-     * @var string key
+     * @var string 键值映射的键
      */
     public $Key;
 
     /**
-     * @var string value
+     * @var string 键值映射的值
      */
     public $Value;
 
     /**
-     * @param string $Key key
-     * @param string $Value value
+     * @param string $Key 键值映射的键
+     * @param string $Value 键值映射的值
      */
     function __construct()
     {

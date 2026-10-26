@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeightedConfig(array $WeightedConfig) 设置<p>权重路由配置</p>
  * @method array getModelNameConfig() 获取<p>路由名称路由配置</p>
  * @method void setModelNameConfig(array $ModelNameConfig) 设置<p>路由名称路由配置</p>
+ * @method string getStandardModelName() 获取<p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class AIGWSensitiveWordRoute extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AIGWSensitiveWordRoute extends AbstractModel
     public $ModelNameConfig;
 
     /**
+     * @var string <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
      * @param boolean $Enabled <p>是否开启</p>
      * @param array $ModelServiceRefs <p>模型API ID列表</p>
      * @param array $ModelServiceNames <p>查询接口会返回模型API的Name列表</p>
      * @param array $SelectedTypes <p>路由方式</p><p>枚举值：</p><ul><li>Weighted： 权重路由</li><li>ModelName： 按模型名称路由</li></ul>
      * @param array $WeightedConfig <p>权重路由配置</p>
      * @param array $ModelNameConfig <p>路由名称路由配置</p>
+     * @param string $StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class AIGWSensitiveWordRoute extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ModelNameConfig, $obj);
             }
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

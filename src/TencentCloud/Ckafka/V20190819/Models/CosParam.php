@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjectKeyPrefix(string $ObjectKeyPrefix) 设置<p>转储的对象目录前缀</p>
  * @method string getDirectoryTimeFormat() 获取<p>根据strptime 时间格式化的分区格式</p>
  * @method void setDirectoryTimeFormat(string $DirectoryTimeFormat) 设置<p>根据strptime 时间格式化的分区格式</p>
+ * @method string getTimezone() 获取<p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+ * @method void setTimezone(string $Timezone) 设置<p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+ * @method string getSourceDataFormat() 获取<p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+ * @method void setSourceDataFormat(string $SourceDataFormat) 设置<p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
  */
 class CosParam extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CosParam extends AbstractModel
     public $DirectoryTimeFormat;
 
     /**
+     * @var string <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+     */
+    public $Timezone;
+
+    /**
+     * @var string <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+     */
+    public $SourceDataFormat;
+
+    /**
      * @param string $BucketName <p>cos 存储桶名称</p>
      * @param string $Region <p>地域代码</p>
      * @param string $ObjectKey <p>对象名称</p>
@@ -88,6 +102,8 @@ class CosParam extends AbstractModel
      * @param string $FormatOutputType <p>消息汇聚后的文件格式（支持csv, json）</p>
      * @param string $ObjectKeyPrefix <p>转储的对象目录前缀</p>
      * @param string $DirectoryTimeFormat <p>根据strptime 时间格式化的分区格式</p>
+     * @param string $Timezone <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+     * @param string $SourceDataFormat <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CosParam extends AbstractModel
 
         if (array_key_exists("DirectoryTimeFormat",$param) and $param["DirectoryTimeFormat"] !== null) {
             $this->DirectoryTimeFormat = $param["DirectoryTimeFormat"];
+        }
+
+        if (array_key_exists("Timezone",$param) and $param["Timezone"] !== null) {
+            $this->Timezone = $param["Timezone"];
+        }
+
+        if (array_key_exists("SourceDataFormat",$param) and $param["SourceDataFormat"] !== null) {
+            $this->SourceDataFormat = $param["SourceDataFormat"];
         }
     }
 }

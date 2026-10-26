@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomProviderName(string $CustomProviderName) 设置<p>自定义供应商名称</p>
  * @method AIGWLoadBalanceConfig getLoadBalanceConfig() 获取<p>负载均衡配置</p>
  * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置</p>
+ * @method AIGWSmartBalanceConfig getSmartBalance() 获取<p>智能负载均衡配置</p>
+ * @method void setSmartBalance(AIGWSmartBalanceConfig $SmartBalance) 设置<p>智能负载均衡配置</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -234,6 +236,11 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $LoadBalanceConfig;
 
     /**
+     * @var AIGWSmartBalanceConfig <p>智能负载均衡配置</p>
+     */
+    public $SmartBalance;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -264,6 +271,7 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $Protocol <p>协议类型，如 OpenAI、Custom。</p>
      * @param string $CustomProviderName <p>自定义供应商名称</p>
      * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置</p>
+     * @param AIGWSmartBalanceConfig $SmartBalance <p>智能负载均衡配置</p>
      */
     function __construct()
     {
@@ -410,6 +418,11 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
         if (array_key_exists("LoadBalanceConfig",$param) and $param["LoadBalanceConfig"] !== null) {
             $this->LoadBalanceConfig = new AIGWLoadBalanceConfig();
             $this->LoadBalanceConfig->deserialize($param["LoadBalanceConfig"]);
+        }
+
+        if (array_key_exists("SmartBalance",$param) and $param["SmartBalance"] !== null) {
+            $this->SmartBalance = new AIGWSmartBalanceConfig();
+            $this->SmartBalance->deserialize($param["SmartBalance"]);
         }
     }
 }

@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreserveHost(boolean $PreserveHost) 设置<p>是否开启保留原Host功能</p>
  * @method AIGWLogConfig getLogConfig() 获取<p>日志采集配置</p>
  * @method void setLogConfig(AIGWLogConfig $LogConfig) 设置<p>日志采集配置</p>
+ * @method AIGWMCPServerParamRewriteConfig getParamRewriteConfig() 获取<p>服务级参数重写规则</p>
+ * @method void setParamRewriteConfig(AIGWMCPServerParamRewriteConfig $ParamRewriteConfig) 设置<p>服务级参数重写规则</p>
+ * @method AIGWGatewayVerifyConfig getGatewayVerifyConfig() 获取<p>网关验签配置</p>
+ * @method void setGatewayVerifyConfig(AIGWGatewayVerifyConfig $GatewayVerifyConfig) 设置<p>网关验签配置</p>
  */
 class AIGWMCPServer extends AbstractModel
 {
@@ -187,6 +191,16 @@ class AIGWMCPServer extends AbstractModel
     public $LogConfig;
 
     /**
+     * @var AIGWMCPServerParamRewriteConfig <p>服务级参数重写规则</p>
+     */
+    public $ParamRewriteConfig;
+
+    /**
+     * @var AIGWGatewayVerifyConfig <p>网关验签配置</p>
+     */
+    public $GatewayVerifyConfig;
+
+    /**
      * @param string $ServerId <p>MCP Server ID</p>
      * @param string $Name <p>MCP Server名称</p>
      * @param string $ServerType <p>MCP Server类型，取值：MCP/Rest2MCP</p>
@@ -212,6 +226,8 @@ class AIGWMCPServer extends AbstractModel
      * @param string $MarketStatus <p>MCP 市场发布状态</p><p>枚举值：</p><ul><li>None： 未发布</li><li>Published： 已发布</li></ul>
      * @param boolean $PreserveHost <p>是否开启保留原Host功能</p>
      * @param AIGWLogConfig $LogConfig <p>日志采集配置</p>
+     * @param AIGWMCPServerParamRewriteConfig $ParamRewriteConfig <p>服务级参数重写规则</p>
+     * @param AIGWGatewayVerifyConfig $GatewayVerifyConfig <p>网关验签配置</p>
      */
     function __construct()
     {
@@ -316,6 +332,16 @@ class AIGWMCPServer extends AbstractModel
         if (array_key_exists("LogConfig",$param) and $param["LogConfig"] !== null) {
             $this->LogConfig = new AIGWLogConfig();
             $this->LogConfig->deserialize($param["LogConfig"]);
+        }
+
+        if (array_key_exists("ParamRewriteConfig",$param) and $param["ParamRewriteConfig"] !== null) {
+            $this->ParamRewriteConfig = new AIGWMCPServerParamRewriteConfig();
+            $this->ParamRewriteConfig->deserialize($param["ParamRewriteConfig"]);
+        }
+
+        if (array_key_exists("GatewayVerifyConfig",$param) and $param["GatewayVerifyConfig"] !== null) {
+            $this->GatewayVerifyConfig = new AIGWGatewayVerifyConfig();
+            $this->GatewayVerifyConfig->deserialize($param["GatewayVerifyConfig"]);
         }
     }
 }

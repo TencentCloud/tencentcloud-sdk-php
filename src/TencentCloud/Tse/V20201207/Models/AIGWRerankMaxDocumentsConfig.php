@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 网关Rerank场景最大文档数限制配置
  *
- * @method boolean getEnableMaxDocuments() 获取<p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
- * @method void setEnableMaxDocuments(boolean $EnableMaxDocuments) 设置<p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
- * @method integer getMaxDocumentValue() 获取<p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
- * @method void setMaxDocumentValue(integer $MaxDocumentValue) 设置<p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+ * @method boolean getEnableMaxDocuments() 获取<p>启用最大文档数限制</p>
+ * @method void setEnableMaxDocuments(boolean $EnableMaxDocuments) 设置<p>启用最大文档数限制</p>
+ * @method integer getMaxDocumentValue() 获取<p>Rerank场景最大文档数限制</p>
+ * @method void setMaxDocumentValue(integer $MaxDocumentValue) 设置<p>Rerank场景最大文档数限制</p>
  */
 class AIGWRerankMaxDocumentsConfig extends AbstractModel
 {
     /**
-     * @var boolean <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
+     * @var boolean <p>启用最大文档数限制</p>
      */
     public $EnableMaxDocuments;
 
     /**
-     * @var integer <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+     * @var integer <p>Rerank场景最大文档数限制</p>
      */
     public $MaxDocumentValue;
 
     /**
-     * @param boolean $EnableMaxDocuments <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
-     * @param integer $MaxDocumentValue <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+     * @param boolean $EnableMaxDocuments <p>启用最大文档数限制</p>
+     * @param integer $MaxDocumentValue <p>Rerank场景最大文档数限制</p>
      */
     function __construct()
     {

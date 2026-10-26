@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 删除云原生API网关响应结果。
  *
- * @method string getGatewayId() 获取云原生网关ID。
- * @method void setGatewayId(string $GatewayId) 设置云原生网关ID。
- * @method string getStatus() 获取云原生网关状态。
- * @method void setStatus(string $Status) 设置云原生网关状态。
+ * @method string getGatewayId() 获取<p>云原生网关ID。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>云原生网关ID。</p>
+ * @method string getStatus() 获取<p>云原生网关状态。</p>
+ * @method void setStatus(string $Status) 设置<p>云原生网关状态。</p>
+ * @method string getTaskId() 获取<p>任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>任务ID</p>
  */
 class DeleteCloudNativeAPIGatewayResult extends AbstractModel
 {
     /**
-     * @var string 云原生网关ID。
+     * @var string <p>云原生网关ID。</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 云原生网关状态。
+     * @var string <p>云原生网关状态。</p>
      */
     public $Status;
 
     /**
-     * @param string $GatewayId 云原生网关ID。
-     * @param string $Status 云原生网关状态。
+     * @var string <p>任务ID</p>
+     */
+    public $TaskId;
+
+    /**
+     * @param string $GatewayId <p>云原生网关ID。</p>
+     * @param string $Status <p>云原生网关状态。</p>
+     * @param string $TaskId <p>任务ID</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

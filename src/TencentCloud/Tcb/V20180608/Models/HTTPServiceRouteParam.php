@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPath() 获取<p>路径</p>
  * @method void setPath(string $Path) 设置<p>路径</p>
- * @method string getUpstreamResourceType() 获取<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
- * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
- * @method string getUpstreamResourceName() 获取<p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
- * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+ * @method string getUpstreamResourceType() 获取<p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
+ * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
+ * @method string getUpstreamResourceName() 获取<p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+ * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+ * @method string getUpstreamResourceVersion() 获取<p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+ * @method void setUpstreamResourceVersion(string $UpstreamResourceVersion) 设置<p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
  * @method HTTPServicePathRewrite getPathRewrite() 获取<p>路径重写</p>
  * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置<p>路径重写</p>
  * @method boolean getEnableSafeDomain() 获取<p>是否开启安全域名。默认开启</p>
@@ -49,14 +51,19 @@ class HTTPServiceRouteParam extends AbstractModel
     public $Path;
 
     /**
-     * @var string <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+     * @var string <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
      */
     public $UpstreamResourceType;
 
     /**
-     * @var string <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * @var string <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
      */
     public $UpstreamResourceName;
+
+    /**
+     * @var string <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+     */
+    public $UpstreamResourceVersion;
 
     /**
      * @var HTTPServicePathRewrite <p>路径重写</p>
@@ -95,8 +102,9 @@ class HTTPServiceRouteParam extends AbstractModel
 
     /**
      * @param string $Path <p>路径</p>
-     * @param string $UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
-     * @param string $UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * @param string $UpstreamResourceType <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
+     * @param string $UpstreamResourceName <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * @param string $UpstreamResourceVersion <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
      * @param HTTPServicePathRewrite $PathRewrite <p>路径重写</p>
      * @param boolean $EnableSafeDomain <p>是否开启安全域名。默认开启</p>
      * @param boolean $EnableAuth <p>是否开启身份认证。默认关闭</p>
@@ -128,6 +136,10 @@ class HTTPServiceRouteParam extends AbstractModel
 
         if (array_key_exists("UpstreamResourceName",$param) and $param["UpstreamResourceName"] !== null) {
             $this->UpstreamResourceName = $param["UpstreamResourceName"];
+        }
+
+        if (array_key_exists("UpstreamResourceVersion",$param) and $param["UpstreamResourceVersion"] !== null) {
+            $this->UpstreamResourceVersion = $param["UpstreamResourceVersion"];
         }
 
         if (array_key_exists("PathRewrite",$param) and $param["PathRewrite"] !== null) {

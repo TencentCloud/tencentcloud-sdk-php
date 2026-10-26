@@ -20,33 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI GW Sensitive Word Route
  *
- * @method boolean getEnabled() 获取<p>是否开启敏感词路由</p>
- * @method void setEnabled(boolean $Enabled) 设置<p>是否开启敏感词路由</p>
- * @method array getModelServiceRefs() 获取<p>目标模型服务列表</p>
- * @method void setModelServiceRefs(array $ModelServiceRefs) 设置<p>目标模型服务列表</p>
- * @method array getModelServiceNames() 获取<p>目标模型服务名，查询的时候会填充</p>
- * @method void setModelServiceNames(array $ModelServiceNames) 设置<p>目标模型服务名，查询的时候会填充</p>
+ * @method boolean getEnabled() 获取<p>是否开启</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>是否开启</p>
+ * @method array getModelServiceRefs() 获取<p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
+ * @method void setModelServiceRefs(array $ModelServiceRefs) 设置<p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
+ * @method array getModelServiceNames() 获取<p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
+ * @method void setModelServiceNames(array $ModelServiceNames) 设置<p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
  * @method array getSelectedTypes() 获取<p>路由方法</p><p>枚举值：</p><ul><li>Weighted： 权重路由</li><li>ModelName： 按模型名称路由</li></ul>
  * @method void setSelectedTypes(array $SelectedTypes) 设置<p>路由方法</p><p>枚举值：</p><ul><li>Weighted： 权重路由</li><li>ModelName： 按模型名称路由</li></ul>
  * @method array getWeightedConfig() 获取<p>权重路由配置</p>
  * @method void setWeightedConfig(array $WeightedConfig) 设置<p>权重路由配置</p>
- * @method array getModelNameConfig() 获取<p>模型名称路由权重</p>
- * @method void setModelNameConfig(array $ModelNameConfig) 设置<p>模型名称路由权重</p>
+ * @method array getModelNameConfig() 获取<p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
+ * @method void setModelNameConfig(array $ModelNameConfig) 设置<p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
+ * @method string getStandardModelName() 获取<p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setStandardModelName(string $StandardModelName) 设置<p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class AIGWSensitiveWordRoute extends AbstractModel
 {
     /**
-     * @var boolean <p>是否开启敏感词路由</p>
+     * @var boolean <p>是否开启</p>
      */
     public $Enabled;
 
     /**
-     * @var array <p>目标模型服务列表</p>
+     * @var array <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
      */
     public $ModelServiceRefs;
 
     /**
-     * @var array <p>目标模型服务名，查询的时候会填充</p>
+     * @var array <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
      */
     public $ModelServiceNames;
 
@@ -61,17 +63,23 @@ class AIGWSensitiveWordRoute extends AbstractModel
     public $WeightedConfig;
 
     /**
-     * @var array <p>模型名称路由权重</p>
+     * @var array <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
      */
     public $ModelNameConfig;
 
     /**
-     * @param boolean $Enabled <p>是否开启敏感词路由</p>
-     * @param array $ModelServiceRefs <p>目标模型服务列表</p>
-     * @param array $ModelServiceNames <p>目标模型服务名，查询的时候会填充</p>
+     * @var string <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $StandardModelName;
+
+    /**
+     * @param boolean $Enabled <p>是否开启</p>
+     * @param array $ModelServiceRefs <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
+     * @param array $ModelServiceNames <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
      * @param array $SelectedTypes <p>路由方法</p><p>枚举值：</p><ul><li>Weighted： 权重路由</li><li>ModelName： 按模型名称路由</li></ul>
      * @param array $WeightedConfig <p>权重路由配置</p>
-     * @param array $ModelNameConfig <p>模型名称路由权重</p>
+     * @param array $ModelNameConfig <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
+     * @param string $StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class AIGWSensitiveWordRoute extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ModelNameConfig, $obj);
             }
+        }
+
+        if (array_key_exists("StandardModelName",$param) and $param["StandardModelName"] !== null) {
+            $this->StandardModelName = $param["StandardModelName"];
         }
     }
 }

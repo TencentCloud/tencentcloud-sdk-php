@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerGroupId(string $ConsumerGroupId) 设置<p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
  * @method boolean getUseToBind() 获取<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
  * @method void setUseToBind(boolean $UseToBind) 设置<p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
- * @method string getConsumerId() 获取<p>消费者ID</p>
- * @method void setConsumerId(string $ConsumerId) 设置<p>消费者ID</p>
+ * @method string getConsumerId() 获取<p>消费者 ID（以 consumer- 开头）。</p>
+ * @method void setConsumerId(string $ConsumerId) 设置<p>消费者 ID（以 consumer- 开头）。</p>
+ * @method string getSecretKeyId() 获取<p>密钥ID</p>
+ * @method void setSecretKeyId(string $SecretKeyId) 设置<p>密钥ID</p>
  */
 class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 {
@@ -75,9 +77,14 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
     public $UseToBind;
 
     /**
-     * @var string <p>消费者ID</p>
+     * @var string <p>消费者 ID（以 consumer- 开头）。</p>
      */
     public $ConsumerId;
+
+    /**
+     * @var string <p>密钥ID</p>
+     */
+    public $SecretKeyId;
 
     /**
      * @param string $GatewayId <p>网关 id。</p>
@@ -87,7 +94,8 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
      * @param string $Keyword <p>模糊匹配模型 API 名称。</p>
      * @param string $ConsumerGroupId <p>消费者组 ID（以 cg- 开头），与 UseToBind 搭配使用。</p>
      * @param boolean $UseToBind <p>是否用于绑定场景。true 时仅返回可被绑定到指定消费者组的模型 API。</p>
-     * @param string $ConsumerId <p>消费者ID</p>
+     * @param string $ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
+     * @param string $SecretKeyId <p>密钥ID</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractModel
 
         if (array_key_exists("ConsumerId",$param) and $param["ConsumerId"] !== null) {
             $this->ConsumerId = $param["ConsumerId"];
+        }
+
+        if (array_key_exists("SecretKeyId",$param) and $param["SecretKeyId"] !== null) {
+            $this->SecretKeyId = $param["SecretKeyId"];
         }
     }
 }

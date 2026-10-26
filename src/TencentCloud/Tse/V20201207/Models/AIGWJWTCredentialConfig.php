@@ -20,31 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI网关 JWT 凭证物料配置
  *
- * @method string getKey() 获取<p>JWT 消费者标识，iss claim</p>
- * @method void setKey(string $Key) 设置<p>JWT 消费者标识，iss claim</p>
  * @method string getAlgorithm() 获取<p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p>
  * @method void setAlgorithm(string $Algorithm) 设置<p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p>
- * @method string getSecret() 获取<p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
- * @method void setSecret(string $Secret) 设置<p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+ * @method string getKey() 获取<p>JWT 消费者标识，iss claim</p>
+ * @method void setKey(string $Key) 设置<p>JWT 消费者标识，iss claim</p>
  * @method string getRSAPublicKey() 获取<p>RS/ES PEM 格式公钥，仅 Algorithm 为 RS256/RS384/RS512/ES256/ES384/ES512 时必填；HS* 时留空</p>
  * @method void setRSAPublicKey(string $RSAPublicKey) 设置<p>RS/ES PEM 格式公钥，仅 Algorithm 为 RS256/RS384/RS512/ES256/ES384/ES512 时必填；HS* 时留空</p>
+ * @method string getSecret() 获取<p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+ * @method void setSecret(string $Secret) 设置<p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
  */
 class AIGWJWTCredentialConfig extends AbstractModel
 {
-    /**
-     * @var string <p>JWT 消费者标识，iss claim</p>
-     */
-    public $Key;
-
     /**
      * @var string <p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p>
      */
     public $Algorithm;
 
     /**
-     * @var string <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     * @var string <p>JWT 消费者标识，iss claim</p>
      */
-    public $Secret;
+    public $Key;
 
     /**
      * @var string <p>RS/ES PEM 格式公钥，仅 Algorithm 为 RS256/RS384/RS512/ES256/ES384/ES512 时必填；HS* 时留空</p>
@@ -52,10 +47,15 @@ class AIGWJWTCredentialConfig extends AbstractModel
     public $RSAPublicKey;
 
     /**
-     * @param string $Key <p>JWT 消费者标识，iss claim</p>
+     * @var string <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     */
+    public $Secret;
+
+    /**
      * @param string $Algorithm <p>签名算法，取值：HS256 HS384 HS512 RS256 RS384 RS512 ES256 ES384 ES512</p>
-     * @param string $Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
+     * @param string $Key <p>JWT 消费者标识，iss claim</p>
      * @param string $RSAPublicKey <p>RS/ES PEM 格式公钥，仅 Algorithm 为 RS256/RS384/RS512/ES256/ES384/ES512 时必填；HS* 时留空</p>
+     * @param string $Secret <p>HS 对称密钥，仅 Algorithm 为 HS256/HS384/HS512 时必填；RS/ES* 时留空</p>
      */
     function __construct()
     {
@@ -70,20 +70,20 @@ class AIGWJWTCredentialConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
         if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
             $this->Algorithm = $param["Algorithm"];
         }
 
-        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
-            $this->Secret = $param["Secret"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
         if (array_key_exists("RSAPublicKey",$param) and $param["RSAPublicKey"] !== null) {
             $this->RSAPublicKey = $param["RSAPublicKey"];
+        }
+
+        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
+            $this->Secret = $param["Secret"];
         }
     }
 }

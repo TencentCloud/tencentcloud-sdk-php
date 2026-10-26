@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFlowId() 获取<p>异步FlowId</p>
  * @method void setFlowId(integer $FlowId) 设置<p>异步FlowId</p>
+ * @method array getBigDealIds() 获取<p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBigDealIds(array $BigDealIds) 设置<p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDealNames() 获取<p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealNames(array $DealNames) 设置<p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTranId() 获取<p>交易ID</p>
+ * @method void setTranId(string $TranId) 设置<p>交易ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +43,34 @@ class AddClusterSlaveZoneResponse extends AbstractModel
     public $FlowId;
 
     /**
+     * @var array <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BigDealIds;
+
+    /**
+     * @var array <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealNames;
+
+    /**
+     * @var string <p>交易ID</p>
+     */
+    public $TranId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $FlowId <p>异步FlowId</p>
+     * @param array $BigDealIds <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DealNames <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TranId <p>交易ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +88,18 @@ class AddClusterSlaveZoneResponse extends AbstractModel
         }
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
+            $this->BigDealIds = $param["BigDealIds"];
+        }
+
+        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
+            $this->DealNames = $param["DealNames"];
+        }
+
+        if (array_key_exists("TranId",$param) and $param["TranId"] !== null) {
+            $this->TranId = $param["TranId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -101,7 +101,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayIPRestrictionResponse DescribeCloudNativeAPIGatewayIPRestriction(Models\DescribeCloudNativeAPIGatewayIPRestrictionRequest $req) 查询云原生网关访问控制
  * @method Models\DescribeCloudNativeAPIGatewayInfoByIpResponse DescribeCloudNativeAPIGatewayInfoByIp(Models\DescribeCloudNativeAPIGatewayInfoByIpRequest $req) 根据公网IP查询云原生网关实例信息
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIResponse DescribeCloudNativeAPIGatewayLLMModelAPI(Models\DescribeCloudNativeAPIGatewayLLMModelAPIRequest $req) 查询单个 LLM 模型 API 详情。
- * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIs(Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest $req) 查询 LLM 模型 API 列表。
+ * @method Models\DescribeCloudNativeAPIGatewayLLMModelAPIsResponse DescribeCloudNativeAPIGatewayLLMModelAPIs(Models\DescribeCloudNativeAPIGatewayLLMModelAPIsRequest $req) 查询指定网关实例下的所有 LLM 模型 API 列表。支持按名称关键词模糊搜索、按过滤器筛选，以及分页查询。用于绑定场景时，可通过 ConsumerGroupId 和 UseToBind 参数筛选可绑定的模型 API。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelServiceResponse DescribeCloudNativeAPIGatewayLLMModelService(Models\DescribeCloudNativeAPIGatewayLLMModelServiceRequest $req) 查询单个 LLM 模型服务详情。
  * @method Models\DescribeCloudNativeAPIGatewayLLMModelServicesResponse DescribeCloudNativeAPIGatewayLLMModelServices(Models\DescribeCloudNativeAPIGatewayLLMModelServicesRequest $req) 查询 LLM 模型服务列表。
  * @method Models\DescribeCloudNativeAPIGatewayNodesResponse DescribeCloudNativeAPIGatewayNodes(Models\DescribeCloudNativeAPIGatewayNodesRequest $req) 获取云原生网关节点列表

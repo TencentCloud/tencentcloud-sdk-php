@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置<p>路径</p>
  * @method HTTPServicePathRewrite getPathRewrite() 获取<p>路径重写规则</p>
  * @method void setPathRewrite(HTTPServicePathRewrite $PathRewrite) 设置<p>路径重写规则</p>
- * @method string getUpstreamResourceType() 获取<p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
- * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
- * @method string getUpstreamResourceName() 获取<p>上游服务名</p>
- * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游服务名</p>
+ * @method string getUpstreamResourceType() 获取<p>上游资源类型</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： WEB云函数</li><li>STORAGE： 云存储</li></ul>
+ * @method void setUpstreamResourceType(string $UpstreamResourceType) 设置<p>上游资源类型</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： WEB云函数</li><li>STORAGE： 云存储</li></ul>
+ * @method string getUpstreamResourceName() 获取<p>上游资源名</p>
+ * @method void setUpstreamResourceName(string $UpstreamResourceName) 设置<p>上游资源名</p>
+ * @method string getUpstreamResourceVersion() 获取<p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+ * @method void setUpstreamResourceVersion(string $UpstreamResourceVersion) 设置<p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
  * @method boolean getEnableSafeDomain() 获取<p>是否开启安全域名</p>
  * @method void setEnableSafeDomain(boolean $EnableSafeDomain) 设置<p>是否开启安全域名</p>
  * @method boolean getEnableAuth() 获取<p>是否开启身份认证</p>
@@ -58,14 +60,19 @@ class HTTPServiceRoute extends AbstractModel
     public $PathRewrite;
 
     /**
-     * @var string <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
+     * @var string <p>上游资源类型</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： WEB云函数</li><li>STORAGE： 云存储</li></ul>
      */
     public $UpstreamResourceType;
 
     /**
-     * @var string <p>上游服务名</p>
+     * @var string <p>上游资源名</p>
      */
     public $UpstreamResourceName;
+
+    /**
+     * @var string <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+     */
+    public $UpstreamResourceVersion;
 
     /**
      * @var boolean <p>是否开启安全域名</p>
@@ -110,8 +117,9 @@ class HTTPServiceRoute extends AbstractModel
     /**
      * @param string $Path <p>路径</p>
      * @param HTTPServicePathRewrite $PathRewrite <p>路径重写规则</p>
-     * @param string $UpstreamResourceType <p>上游服务类型。SCF: 云函数，CBR: 云托管，STATIC_STORE: 静态托管，WEB_SCF: WEB云函数，LH: Lighthouse</p>
-     * @param string $UpstreamResourceName <p>上游服务名</p>
+     * @param string $UpstreamResourceType <p>上游资源类型</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： WEB云函数</li><li>STORAGE： 云存储</li></ul>
+     * @param string $UpstreamResourceName <p>上游资源名</p>
+     * @param string $UpstreamResourceVersion <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
      * @param boolean $EnableSafeDomain <p>是否开启安全域名</p>
      * @param boolean $EnableAuth <p>是否开启身份认证</p>
      * @param boolean $EnablePathTransmission <p>是否开启路径透传</p>
@@ -149,6 +157,10 @@ class HTTPServiceRoute extends AbstractModel
 
         if (array_key_exists("UpstreamResourceName",$param) and $param["UpstreamResourceName"] !== null) {
             $this->UpstreamResourceName = $param["UpstreamResourceName"];
+        }
+
+        if (array_key_exists("UpstreamResourceVersion",$param) and $param["UpstreamResourceVersion"] !== null) {
+            $this->UpstreamResourceVersion = $param["UpstreamResourceVersion"];
         }
 
         if (array_key_exists("EnableSafeDomain",$param) and $param["EnableSafeDomain"] !== null) {

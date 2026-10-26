@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncTo(array $SyncTo) 设置<p>配置同步给哪些账号appid</p>
  * @method array getTagIds() 获取<p>标签ID</p>
  * @method void setTagIds(array $TagIds) 设置<p>标签ID</p>
+ * @method boolean getPreferCloudSource() 获取<p>优先使用腾讯云软件源</p>
+ * @method void setPreferCloudSource(boolean $PreferCloudSource) 设置<p>优先使用腾讯云软件源</p>
  */
 class ModifyVulScanPeriodicRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class ModifyVulScanPeriodicRequest extends AbstractModel
     public $TagIds;
 
     /**
+     * @var boolean <p>优先使用腾讯云软件源</p>
+     */
+    public $PreferCloudSource;
+
+    /**
      * @param integer $Status <p>周期扫描开关（0-关闭, 1-开启）</p>
      * @param array $VulCategory <p>漏洞类型</p><p>枚举值：</p><ul><li>LINUX： Linux软件漏洞</li><li>WINDOWS： Windows系统补丁</li><li>WEB_CMS： Web-CMS漏洞</li><li>APPLICATION： 应用漏洞</li><li>EMERGENCY： 应急漏洞</li></ul>
      * @param array $Level <p>漏洞等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
@@ -152,6 +159,7 @@ class ModifyVulScanPeriodicRequest extends AbstractModel
      * @param integer $EnableSync <p>管理员账号是否开启了自动同步配置开关 0-关闭，1-开启</p>
      * @param array $SyncTo <p>配置同步给哪些账号appid</p>
      * @param array $TagIds <p>标签ID</p>
+     * @param boolean $PreferCloudSource <p>优先使用腾讯云软件源</p>
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class ModifyVulScanPeriodicRequest extends AbstractModel
 
         if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
             $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("PreferCloudSource",$param) and $param["PreferCloudSource"] !== null) {
+            $this->PreferCloudSource = $param["PreferCloudSource"];
         }
     }
 }

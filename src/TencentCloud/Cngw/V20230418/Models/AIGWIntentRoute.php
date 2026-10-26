@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultModelServiceId(string $DefaultModelServiceId) 设置<p>默认服务id</p>
  * @method array getRules() 获取<p>规则</p>
  * @method void setRules(array $Rules) 设置<p>规则</p>
+ * @method string getDefaultStandardModelName() 获取<p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setDefaultStandardModelName(string $DefaultStandardModelName) 设置<p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method string getIntentStandardModelName() 获取<p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+ * @method void setIntentStandardModelName(string $IntentStandardModelName) 设置<p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
  */
 class AIGWIntentRoute extends AbstractModel
 {
@@ -52,10 +56,22 @@ class AIGWIntentRoute extends AbstractModel
     public $Rules;
 
     /**
+     * @var string <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $DefaultStandardModelName;
+
+    /**
+     * @var string <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public $IntentStandardModelName;
+
+    /**
      * @param string $IntentModelServiceId <p>意图识别模型id</p>
      * @param float $ConfidenceThreshold <p>置信度</p>
      * @param string $DefaultModelServiceId <p>默认服务id</p>
      * @param array $Rules <p>规则</p>
+     * @param string $DefaultStandardModelName <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param string $IntentStandardModelName <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class AIGWIntentRoute extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("DefaultStandardModelName",$param) and $param["DefaultStandardModelName"] !== null) {
+            $this->DefaultStandardModelName = $param["DefaultStandardModelName"];
+        }
+
+        if (array_key_exists("IntentStandardModelName",$param) and $param["IntentStandardModelName"] !== null) {
+            $this->IntentStandardModelName = $param["IntentStandardModelName"];
         }
     }
 }

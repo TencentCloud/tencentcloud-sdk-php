@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudNativeAPIGatewayCanaryRules返回参数结构体
  *
- * @method CloudAPIGatewayCanaryRuleList getResult() 获取灰度规则列表
- * @method void setResult(CloudAPIGatewayCanaryRuleList $Result) 设置灰度规则列表
+ * @method CloudAPIGatewayCanaryRuleList getResult() 获取<p>灰度规则列表</p>
+ * @method void setResult(CloudAPIGatewayCanaryRuleList $Result) 设置<p>灰度规则列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudNativeAPIGatewayCanaryRulesResponse extends AbstractModel
 {
     /**
-     * @var CloudAPIGatewayCanaryRuleList 灰度规则列表
+     * @var CloudAPIGatewayCanaryRuleList <p>灰度规则列表</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCloudNativeAPIGatewayCanaryRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CloudAPIGatewayCanaryRuleList $Result 灰度规则列表
+     * @param CloudAPIGatewayCanaryRuleList $Result <p>灰度规则列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Aigc 转绘、替换等任务参数
  *
- * @method string getStyle() 获取<p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
- * @method void setStyle(string $Style) 设置<p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+ * @method string getStyle() 获取<p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
+ * @method void setStyle(string $Style) 设置<p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
  */
 class VideoRedrawTaskInfo extends AbstractModel
 {
     /**
-     * @var string <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+     * @var string <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
      */
     public $Style;
 
     /**
-     * @param string $Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+     * @param string $Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
      */
     function __construct()
     {

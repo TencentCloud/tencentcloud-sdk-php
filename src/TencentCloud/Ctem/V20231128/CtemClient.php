@@ -25,6 +25,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
 /**
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 添加APP资产
  * @method Models\CreateAssetResponse CreateAsset(Models\CreateAssetRequest $req) 添加主机资产
+ * @method Models\CreateCheckResponse CreateCheck(Models\CreateCheckRequest $req) 检查修复状况
  * @method Models\CreateCustomerResponse CreateCustomer(Models\CreateCustomerRequest $req) 创建企业
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加主域名数据
  * @method Models\CreateEnterpriseResponse CreateEnterprise(Models\CreateEnterpriseRequest $req) 添加企业架构资产
@@ -32,6 +33,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\CreateJobRecordResponse CreateJobRecord(Models\CreateJobRecordRequest $req) 启动测绘
  * @method Models\CreateManageResponse CreateManage(Models\CreateManageRequest $req) 添加后台数据
  * @method Models\CreatePortResponse CreatePort(Models\CreatePortRequest $req) 添加端口服务资产
+ * @method Models\CreateScanResponse CreateScan(Models\CreateScanRequest $req) 扫描巡检
  * @method Models\CreateSeedsResponse CreateSeeds(Models\CreateSeedsRequest $req) 创建种子
  * @method Models\CreateSubDomainResponse CreateSubDomain(Models\CreateSubDomainRequest $req) 添加子域名数据
  * @method Models\CreateSuspiciousAssetResponse CreateSuspiciousAsset(Models\CreateSuspiciousAssetRequest $req) 添加影子资产
@@ -52,6 +54,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeApiSecsResponse DescribeApiSecs(Models\DescribeApiSecsRequest $req) 查看API安全数据
  * @method Models\DescribeAppsResponse DescribeApps(Models\DescribeAppsRequest $req) 查看移动端资产
  * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 查看主机资产
+ * @method Models\DescribeBannerAssetDataResponse DescribeBannerAssetData(Models\DescribeBannerAssetDataRequest $req) 相关资产
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查看目录爆破数据
  * @method Models\DescribeCustomersResponse DescribeCustomers(Models\DescribeCustomersRequest $req) 查看企业列表
  * @method Models\DescribeDarkWebsResponse DescribeDarkWebs(Models\DescribeDarkWebsRequest $req) 查看暗网数据
@@ -63,6 +66,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeFakeWechatOfficialsResponse DescribeFakeWechatOfficials(Models\DescribeFakeWechatOfficialsRequest $req) 查询仿冒公众号
  * @method Models\DescribeGithubsResponse DescribeGithubs(Models\DescribeGithubsRequest $req) 查看Github泄露数据
  * @method Models\DescribeHttpsResponse DescribeHttps(Models\DescribeHttpsRequest $req) 查看http数据
+ * @method Models\DescribeIntelligencesResponse DescribeIntelligences(Models\DescribeIntelligencesRequest $req) 查询情报列表
  * @method Models\DescribeJobRecordDetailsResponse DescribeJobRecordDetails(Models\DescribeJobRecordDetailsRequest $req) 查看链路详情
  * @method Models\DescribeJobRecordsResponse DescribeJobRecords(Models\DescribeJobRecordsRequest $req) 查看任务运行记录列表
  * @method Models\DescribeLeakageCodesResponse DescribeLeakageCodes(Models\DescribeLeakageCodesRequest $req) 获取代码泄露数据
@@ -70,6 +74,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeLeakageEmailsResponse DescribeLeakageEmails(Models\DescribeLeakageEmailsRequest $req) 获取邮箱泄露数据
  * @method Models\DescribeManagesResponse DescribeManages(Models\DescribeManagesRequest $req) 查看后台管理数据
  * @method Models\DescribeNetDisksResponse DescribeNetDisks(Models\DescribeNetDisksRequest $req) 查看网盘泄露数据
+ * @method Models\DescribePocAssetDataResponse DescribePocAssetData(Models\DescribePocAssetDataRequest $req) 实际受影响资产
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 查看端口数据
  * @method Models\DescribeSeedsResponse DescribeSeeds(Models\DescribeSeedsRequest $req) 查看种子列表
  * @method Models\DescribeSensitiveInfosResponse DescribeSensitiveInfos(Models\DescribeSensitiveInfosRequest $req) 查看敏感信息泄露数据

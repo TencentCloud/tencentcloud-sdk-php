@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置<p>环境ID</p>
  * @method string getServiceName() 获取<p>服务名</p>
  * @method void setServiceName(string $ServiceName) 设置<p>服务名</p>
- * @method string getDeployType() 获取<p>部署类型</p>
- * @method void setDeployType(string $DeployType) 设置<p>部署类型</p>
+ * @method string getDeployType() 获取<p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
+ * @method void setDeployType(string $DeployType) 设置<p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
  * @method string getBuildType() 获取<p>构建类型</p>
  * @method void setBuildType(string $BuildType) 设置<p>构建类型</p>
  * @method StaticConfig getStaticConfig() 获取<p>静态应用创建配置信息</p>
@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreDeployCommand(string $PreDeployCommand) 设置<p>前置执行命令</p>
  * @method string getPostDeployCommand() 获取<p>后置执行命令</p>
  * @method void setPostDeployCommand(string $PostDeployCommand) 设置<p>后置执行命令</p>
+ * @method BuildRunner getRunner() 获取<p>流水线运行配置</p>
+ * @method void setRunner(BuildRunner $Runner) 设置<p>流水线运行配置</p>
  */
 class CreateCloudAppRequest extends AbstractModel
 {
@@ -72,7 +74,7 @@ class CreateCloudAppRequest extends AbstractModel
     public $ServiceName;
 
     /**
-     * @var string <p>部署类型</p>
+     * @var string <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
      */
     public $DeployType;
 
@@ -157,9 +159,14 @@ class CreateCloudAppRequest extends AbstractModel
     public $PostDeployCommand;
 
     /**
+     * @var BuildRunner <p>流水线运行配置</p>
+     */
+    public $Runner;
+
+    /**
      * @param string $EnvId <p>环境ID</p>
      * @param string $ServiceName <p>服务名</p>
-     * @param string $DeployType <p>部署类型</p>
+     * @param string $DeployType <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
      * @param string $BuildType <p>构建类型</p>
      * @param StaticConfig $StaticConfig <p>静态应用创建配置信息</p>
      * @param BuildSource $Source <p>源码定义</p>
@@ -176,6 +183,7 @@ class CreateCloudAppRequest extends AbstractModel
      * @param string $ClientToken <p>发布 Token 校验</p>
      * @param string $PreDeployCommand <p>前置执行命令</p>
      * @param string $PostDeployCommand <p>后置执行命令</p>
+     * @param BuildRunner $Runner <p>流水线运行配置</p>
      */
     function __construct()
     {
@@ -293,6 +301,11 @@ class CreateCloudAppRequest extends AbstractModel
 
         if (array_key_exists("PostDeployCommand",$param) and $param["PostDeployCommand"] !== null) {
             $this->PostDeployCommand = $param["PostDeployCommand"];
+        }
+
+        if (array_key_exists("Runner",$param) and $param["Runner"] !== null) {
+            $this->Runner = new BuildRunner();
+            $this->Runner->deserialize($param["Runner"]);
         }
     }
 }

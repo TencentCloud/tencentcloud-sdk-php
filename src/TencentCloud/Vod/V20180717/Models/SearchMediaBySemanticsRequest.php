@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
  * @method void setSubAppId(integer $SubAppId) 设置<p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
- * @method string getText() 获取<p>需要进行搜索的内容</p>
- * @method void setText(string $Text) 设置<p>需要进行搜索的内容</p>
- * @method string getKnowledgeBaseId() 获取<p>知识库ID，留空时将使用默认知识库</p>
- * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置<p>知识库ID，留空时将使用默认知识库</p>
+ * @method string getText() 获取<p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+ * @method void setText(string $Text) 设置<p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+ * @method string getFileId() 获取<p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+ * @method void setFileId(string $FileId) 设置<p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+ * @method string getUrl() 获取<p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+ * @method void setUrl(string $Url) 设置<p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+ * @method string getKnowledgeBaseId() 获取<p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
+ * @method void setKnowledgeBaseId(string $KnowledgeBaseId) 设置<p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
  * @method integer getLimit() 获取<p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
  * @method void setLimit(integer $Limit) 设置<p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
  * @method array getCategories() 获取<p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
@@ -45,12 +49,22 @@ class SearchMediaBySemanticsRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string <p>需要进行搜索的内容</p>
+     * @var string <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
      */
     public $Text;
 
     /**
-     * @var string <p>知识库ID，留空时将使用默认知识库</p>
+     * @var string <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public $FileId;
+
+    /**
+     * @var string <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public $Url;
+
+    /**
+     * @var string <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
      */
     public $KnowledgeBaseId;
 
@@ -81,8 +95,10 @@ class SearchMediaBySemanticsRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     * @param string $Text <p>需要进行搜索的内容</p>
-     * @param string $KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库</p>
+     * @param string $Text <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     * @param string $FileId <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     * @param string $Url <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+     * @param string $KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
      * @param integer $Limit <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
      * @param array $Categories <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
      * @param array $Tags <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
@@ -108,6 +124,14 @@ class SearchMediaBySemanticsRequest extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("KnowledgeBaseId",$param) and $param["KnowledgeBaseId"] !== null) {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCounts(ExpertCounts $Counts) 设置<p>全局计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxBindings() 获取<p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+ * @method void setMaxBindings(integer $MaxBindings) 设置<p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +52,11 @@ class DescribeExpertListResponse extends AbstractModel
     public $Counts;
 
     /**
+     * @var integer <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+     */
+    public $MaxBindings;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +66,7 @@ class DescribeExpertListResponse extends AbstractModel
      * @param array $ExpertSet <p>专家列表</p>
      * @param ExpertCounts $Counts <p>全局计数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxBindings <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -90,6 +98,10 @@ class DescribeExpertListResponse extends AbstractModel
         if (array_key_exists("Counts",$param) and $param["Counts"] !== null) {
             $this->Counts = new ExpertCounts();
             $this->Counts->deserialize($param["Counts"]);
+        }
+
+        if (array_key_exists("MaxBindings",$param) and $param["MaxBindings"] !== null) {
+            $this->MaxBindings = $param["MaxBindings"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

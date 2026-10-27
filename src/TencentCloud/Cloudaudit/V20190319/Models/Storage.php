@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageAppId(string $StorageAppId) 设置<p>被指定存储用户appid</p>
  * @method integer getCompress() 获取<p>是否压缩。<br>1:压缩  2:不压缩</p>
  * @method void setCompress(integer $Compress) 设置<p>是否压缩。<br>1:压缩  2:不压缩</p>
+ * @method string getCkafkaRoute() 获取<p>CKAFKA路由信息</p>
+ * @method void setCkafkaRoute(string $CkafkaRoute) 设置<p>CKAFKA路由信息</p>
  */
 class Storage extends AbstractModel
 {
@@ -73,6 +75,11 @@ class Storage extends AbstractModel
     public $Compress;
 
     /**
+     * @var string <p>CKAFKA路由信息</p>
+     */
+    public $CkafkaRoute;
+
+    /**
      * @param string $StorageType <p>存储类型（目前支持 cos、cls、ckafka）</p>
      * @param string $StorageRegion <p>存储所在地域</p>
      * @param string $StorageName <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
@@ -80,6 +87,7 @@ class Storage extends AbstractModel
      * @param string $StorageAccountId <p>被指定存储用户ID</p>
      * @param string $StorageAppId <p>被指定存储用户appid</p>
      * @param integer $Compress <p>是否压缩。<br>1:压缩  2:不压缩</p>
+     * @param string $CkafkaRoute <p>CKAFKA路由信息</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class Storage extends AbstractModel
 
         if (array_key_exists("Compress",$param) and $param["Compress"] !== null) {
             $this->Compress = $param["Compress"];
+        }
+
+        if (array_key_exists("CkafkaRoute",$param) and $param["CkafkaRoute"] !== null) {
+            $this->CkafkaRoute = $param["CkafkaRoute"];
         }
     }
 }

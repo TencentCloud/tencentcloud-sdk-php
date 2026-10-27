@@ -20,23 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 业务资源分页返回对象
  *
- * @method array getItems() 获取业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Paging getPage() 获取分页公共对象
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(Paging $Page) 设置分页公共对象
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getItems() 获取业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItems(array $Items) 设置业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeBusinessResourcePageRsp extends AbstractModel
 {
-    /**
-     * @var array 业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Items;
-
     /**
      * @var Paging 分页公共对象
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,9 +38,15 @@ class DescribeBusinessResourcePageRsp extends AbstractModel
     public $Page;
 
     /**
-     * @param array $Items 业务资源列表数据对象集合
+     * @var array 业务资源列表数据对象集合
 注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Items;
+
+    /**
      * @param Paging $Page 分页公共对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Items 业务资源列表数据对象集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,6 +62,11 @@ class DescribeBusinessResourcePageRsp extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = new Paging();
+            $this->Page->deserialize($param["Page"]);
+        }
+
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = [];
             foreach ($param["Items"] as $key => $value){
@@ -69,11 +74,6 @@ class DescribeBusinessResourcePageRsp extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
-        }
-
-        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
-            $this->Page = new Paging();
-            $this->Page->deserialize($param["Page"]);
         }
     }
 }

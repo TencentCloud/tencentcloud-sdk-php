@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsr(LLMComprehendAsrForUpdate $Asr) 设置<p>文本转录解析配置</p>
  * @method LLMComprehendFaceRecognitionForUpdate getFaceRecognition() 获取<p>人脸识别配置</p>
  * @method void setFaceRecognition(LLMComprehendFaceRecognitionForUpdate $FaceRecognition) 设置<p>人脸识别配置</p>
+ * @method LLMComprehendDNA getDNA() 获取<p>DNA解析配置</p>
+ * @method void setDNA(LLMComprehendDNA $DNA) 设置<p>DNA解析配置</p>
  */
 class ModifyLLMComprehendTemplateRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyLLMComprehendTemplateRequest extends AbstractModel
     public $FaceRecognition;
 
     /**
+     * @var LLMComprehendDNA <p>DNA解析配置</p>
+     */
+    public $DNA;
+
+    /**
      * @param integer $Definition <p>大模型理解模板的唯一标识</p>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $Name <p>大模型解析模板名称，长度限制：64 个字符。</p>
@@ -88,6 +95,7 @@ class ModifyLLMComprehendTemplateRequest extends AbstractModel
      * @param LLMComprehendSummaryForUpdate $Summary <p>分段摘要解析配置</p>
      * @param LLMComprehendAsrForUpdate $Asr <p>文本转录解析配置</p>
      * @param LLMComprehendFaceRecognitionForUpdate $FaceRecognition <p>人脸识别配置</p>
+     * @param LLMComprehendDNA $DNA <p>DNA解析配置</p>
      */
     function __construct()
     {
@@ -135,6 +143,11 @@ class ModifyLLMComprehendTemplateRequest extends AbstractModel
         if (array_key_exists("FaceRecognition",$param) and $param["FaceRecognition"] !== null) {
             $this->FaceRecognition = new LLMComprehendFaceRecognitionForUpdate();
             $this->FaceRecognition->deserialize($param["FaceRecognition"]);
+        }
+
+        if (array_key_exists("DNA",$param) and $param["DNA"] !== null) {
+            $this->DNA = new LLMComprehendDNA();
+            $this->DNA->deserialize($param["DNA"]);
         }
     }
 }

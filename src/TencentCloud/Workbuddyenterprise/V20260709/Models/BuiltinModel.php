@@ -46,6 +46,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportsImages(boolean $SupportsImages) 设置是否支持视觉（图片输入）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSupportsThinking() 获取模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportsThinking(boolean $SupportsThinking) 设置模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getThinkingLevels() 获取可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThinkingLevels(array $ThinkingLevels) 设置可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultThinkingLevel() 获取模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultThinkingLevel(string $DefaultThinkingLevel) 设置模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCanDisableThinking() 获取是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCanDisableThinking(boolean $CanDisableThinking) 设置是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescriptionZh() 获取模型中文描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescriptionZh(string $DescriptionZh) 设置模型中文描述
@@ -119,6 +135,30 @@ class BuiltinModel extends AbstractModel
     public $SupportsImages;
 
     /**
+     * @var boolean 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportsThinking;
+
+    /**
+     * @var array 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ThinkingLevels;
+
+    /**
+     * @var string 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultThinkingLevel;
+
+    /**
+     * @var boolean 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CanDisableThinking;
+
+    /**
      * @var string 模型中文描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -174,6 +214,14 @@ class BuiltinModel extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportsImages 是否支持视觉（图片输入）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SupportsThinking 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ThinkingLevels 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultThinkingLevel 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CanDisableThinking 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DescriptionZh 模型中文描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DescriptionEn 模型英文描述
@@ -228,6 +276,22 @@ class BuiltinModel extends AbstractModel
 
         if (array_key_exists("SupportsImages",$param) and $param["SupportsImages"] !== null) {
             $this->SupportsImages = $param["SupportsImages"];
+        }
+
+        if (array_key_exists("SupportsThinking",$param) and $param["SupportsThinking"] !== null) {
+            $this->SupportsThinking = $param["SupportsThinking"];
+        }
+
+        if (array_key_exists("ThinkingLevels",$param) and $param["ThinkingLevels"] !== null) {
+            $this->ThinkingLevels = $param["ThinkingLevels"];
+        }
+
+        if (array_key_exists("DefaultThinkingLevel",$param) and $param["DefaultThinkingLevel"] !== null) {
+            $this->DefaultThinkingLevel = $param["DefaultThinkingLevel"];
+        }
+
+        if (array_key_exists("CanDisableThinking",$param) and $param["CanDisableThinking"] !== null) {
+            $this->CanDisableThinking = $param["CanDisableThinking"];
         }
 
         if (array_key_exists("DescriptionZh",$param) and $param["DescriptionZh"] !== null) {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>返回数量，默认 100，最大 100</p>
  * @method array getFilters() 获取<p>过滤条件数组，多个 Filter 之间为 AND 关系，同一 Filter 内多个 Values 为 OR 关系</p>
  * @method void setFilters(array $Filters) 设置<p>过滤条件数组，多个 Filter 之间为 AND 关系，同一 Filter 内多个 Values 为 OR 关系</p>
+ * @method string getSubAgentId() 获取
+ * @method void setSubAgentId(string $SubAgentId) 设置
  */
 class DescribeMessageEventListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeMessageEventListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 
+     */
+    public $SubAgentId;
+
+    /**
      * @param string $SessionId <p>Session ID</p>
      * @param string $AgentId <p>Agent ID</p>
      * @param integer $Offset <p>偏移量</p>
      * @param integer $Limit <p>返回数量，默认 100，最大 100</p>
      * @param array $Filters <p>过滤条件数组，多个 Filter 之间为 AND 关系，同一 Filter 内多个 Values 为 OR 关系</p>
+     * @param string $SubAgentId 
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeMessageEventListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("SubAgentId",$param) and $param["SubAgentId"] !== null) {
+            $this->SubAgentId = $param["SubAgentId"];
         }
     }
 }

@@ -25,7 +25,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
 /**
  * @method Models\BindBusinessResourceConnectorGroupResponse BindBusinessResourceConnectorGroup(Models\BindBusinessResourceConnectorGroupRequest $req) saas版本，创建/修改业务资源后，调用绑定连接器接口,私有化调用path为：capi/GatewayResource/BindBusinessResourceConnectorGroup
  * @method Models\BindVirtualAccountsResponse BindVirtualAccounts(Models\BindVirtualAccountsRequest $req) 关联账户到虚拟组上，支持批量，私有化调用path为：capi/Assets/BindVirtualAccount，从7.x版本开始支持
- * @method Models\CreateBusinessResourceResponse CreateBusinessResource(Models\CreateBusinessResourceRequest $req) 创建业务资源，会对一些必填参数进行校验和参数合法性校验，创建业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。创建时也会做校验，但没有返回对应的异常信息，私有化调用path为：capi/GatewayResource/CreateBusinessResource
+ * @method Models\CreateBusinessResourceResponse CreateBusinessResource(Models\CreateBusinessResourceRequest $req) 创建业务资源
  * @method Models\CreateCompanyDirectoryConfigResponse CreateCompanyDirectoryConfig(Models\CreateCompanyDirectoryConfigRequest $req) 创建企业目录配置
  * @method Models\CreateDLPFileDetectTaskResponse CreateDLPFileDetectTask(Models\CreateDLPFileDetectTaskRequest $req) 创建文件鉴定任务，私有化调用path为：capi/DlpOpenApi/CreateDLPFileDetectTask
  * @method Models\CreateDLPFileDetectionTaskResponse CreateDLPFileDetectionTask(Models\CreateDLPFileDetectionTaskRequest $req) 提交送检任务
@@ -42,7 +42,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftList(Models\DescribeAggrSoftCategorySoftListRequest $req) 聚合的分类软件列表
  * @method Models\DescribeAggrSoftDetailResponse DescribeAggrSoftDetail(Models\DescribeAggrSoftDetailRequest $req) 聚合的软件详情
  * @method Models\DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(Models\DescribeAggrSoftDeviceListRequest $req) 聚合软件的已安装终端列表
- * @method Models\DescribeBusinessResourcesResponse DescribeBusinessResources(Models\DescribeBusinessResourcesRequest $req) 获取业务资源列表,支持分页，如果分页信息不传递会有默认分页，支持排序，不传排序字段，按业务资源创建时间排序,私有化调用path为：capi/GatewayResource/DescribeBusinessResources
+ * @method Models\DescribeBusinessResourcesResponse DescribeBusinessResources(Models\DescribeBusinessResourcesRequest $req) 获取业务资源列表
  * @method Models\DescribeCompanyDirectoryConfigResponse DescribeCompanyDirectoryConfig(Models\DescribeCompanyDirectoryConfigRequest $req) 获取企业目录配置
  * @method Models\DescribeDLPEdgeNodeGroupsResponse DescribeDLPEdgeNodeGroups(Models\DescribeDLPEdgeNodeGroupsRequest $req) 查询边缘节点分组，私有化调用path为：capi/Connectors/DescribeDLPEdgeNodeGroups
  * @method Models\DescribeDLPEdgeNodesResponse DescribeDLPEdgeNodes(Models\DescribeDLPEdgeNodesRequest $req) 查询边缘节点列表，私有化调用path为：capi/DlpOpenApi/DescribeDLPEdgeNodes
@@ -76,7 +76,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\GrantResourcesByAccountGroupsResponse GrantResourcesByAccountGroups(Models\GrantResourcesByAccountGroupsRequest $req) 添加资源授权到账号组
  * @method Models\GrantResourcesByAccountsResponse GrantResourcesByAccounts(Models\GrantResourcesByAccountsRequest $req) 添加资源授权到账号组
  * @method Models\GrantResourcesByVirtualGroupsResponse GrantResourcesByVirtualGroups(Models\GrantResourcesByVirtualGroupsRequest $req) 添加资源授权到账号组
- * @method Models\ModifyBusinessResourceResponse ModifyBusinessResource(Models\ModifyBusinessResourceRequest $req) 修改业务资源，会对一些必填参数进行校验和参数合法性校验，修改业务资源时，先调用下校验相同业务资源接口，看资源是不是有冲突。修改时也会做校验，但没有返回对应的异常信息,私有化调用path为：capi/GatewayResource/ModifyBusinessResource
+ * @method Models\ModifyBusinessResourceResponse ModifyBusinessResource(Models\ModifyBusinessResourceRequest $req) 修改业务资源
  * @method Models\ModifyCompanyDirectoryConfigResponse ModifyCompanyDirectoryConfig(Models\ModifyCompanyDirectoryConfigRequest $req) 编辑企业目录配置
  * @method Models\ModifyDeliveryServerResponse ModifyDeliveryServer(Models\ModifyDeliveryServerRequest $req) 创建或编辑日志转发服务器，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryServer
  * @method Models\ModifyDeliveryStrategyResponse ModifyDeliveryStrategy(Models\ModifyDeliveryStrategyRequest $req) 创建或编辑日志转发策略，私有化调用path为：capi/LogCenter/DeliveryLog/ModifyDeliveryStrategy

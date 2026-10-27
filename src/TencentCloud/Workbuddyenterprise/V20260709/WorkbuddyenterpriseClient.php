@@ -35,7 +35,7 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\DescribeAgentSessionListResponse DescribeAgentSessionList(Models\DescribeAgentSessionListRequest $req) 分页查询企业下所有会话（跨 Agent）：支持按 SessionId / Status / AgentId / UserId 过滤，按创建 / 更新时间排序，返回会话摘要列表。
  * @method Models\DescribeAgentVersionResponse DescribeAgentVersion(Models\DescribeAgentVersionRequest $req) 查询单个版本的详细信息，包括 Manifest、Model、状态等。
  * @method Models\DescribeAgentVersionListResponse DescribeAgentVersionList(Models\DescribeAgentVersionListRequest $req) 查询指定 Agent 下的版本列表，支持分页和版本类型过滤。
- * @method Models\DescribeBuiltinModelListResponse DescribeBuiltinModelList(Models\DescribeBuiltinModelListRequest $req) 查询当前企业的内置模型列表，支持分页与过滤。内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。
+ * @method Models\DescribeBuiltinModelListResponse DescribeBuiltinModelList(Models\DescribeBuiltinModelListRequest $req) 查询当前企业的内置模型列表，支持分页与过滤，内置模型由平台预置，企业可按需启用/停用。过滤字段支持：ModelId（模型ID，模糊）、Name（模型名称，模糊）、Vendor（供应商，模糊）、Status（状态，精确：enabled/disabled）。出参中的 SupportsThinking、ThinkingLevels、DefaultThinkingLevel、CanDisableThinking 描述模型的思考能力，用于配置 Agent 版本 Manifest 中的 thinking。
  * @method Models\DescribeConnectorListResponse DescribeConnectorList(Models\DescribeConnectorListRequest $req) 查询指定企业下的连接器列表（PageNumber/PageSize 分页，支持名称模糊与状态、来源过滤）。
  * @method Models\DescribeExpertListResponse DescribeExpertList(Models\DescribeExpertListRequest $req) 分页查询 Expert 列表，支持关键词、分类、发布状态过滤。
  * @method Models\DescribeExternalAgentResponse DescribeExternalAgent(Models\DescribeExternalAgentRequest $req) 查询某 managed agent 绑定的单个外部 agent 详情

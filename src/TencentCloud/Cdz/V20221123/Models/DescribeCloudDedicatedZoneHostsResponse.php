@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudDedicatedZoneHosts返回参数结构体
  *
- * @method array getCloudDedicatedZoneHostsInfoSet() 获取返回Host和Host上部署的实例信息之间的关系
- * @method void setCloudDedicatedZoneHostsInfoSet(array $CloudDedicatedZoneHostsInfoSet) 设置返回Host和Host上部署的实例信息之间的关系
+ * @method array getCloudDedicatedZoneHostsInfoSet() 获取<p>返回Host和Host上部署的实例信息之间的关系</p>
+ * @method void setCloudDedicatedZoneHostsInfoSet(array $CloudDedicatedZoneHostsInfoSet) 设置<p>返回Host和Host上部署的实例信息之间的关系</p>
+ * @method integer getTotalCount() 获取<p>母机总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>母机总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel
 {
     /**
-     * @var array 返回Host和Host上部署的实例信息之间的关系
+     * @var array <p>返回Host和Host上部署的实例信息之间的关系</p>
      */
     public $CloudDedicatedZoneHostsInfoSet;
+
+    /**
+     * @var integer <p>母机总数</p>
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CloudDedicatedZoneHostsInfoSet 返回Host和Host上部署的实例信息之间的关系
+     * @param array $CloudDedicatedZoneHostsInfoSet <p>返回Host和Host上部署的实例信息之间的关系</p>
+     * @param integer $TotalCount <p>母机总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CloudDedicatedZoneHostsInfoSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

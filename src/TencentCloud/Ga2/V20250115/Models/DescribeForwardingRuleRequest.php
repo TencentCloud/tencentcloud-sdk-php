@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForwardingPolicyId(string $ForwardingPolicyId) 设置<p>七层转发规则ID。</p>
  * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
- * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
- * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为200。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为200。</p>
  * @method array getFilters() 获取<p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
  * @method void setFilters(array $Filters) 设置<p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
  */
@@ -56,7 +56,7 @@ class DescribeForwardingRuleRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer <p>返回数量，默认为20，最大值为100。</p>
+     * @var integer <p>返回数量，默认为20，最大值为200。</p>
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeForwardingRuleRequest extends AbstractModel
      * @param string $ListenerId <p>监听器ID。</p>
      * @param string $ForwardingPolicyId <p>七层转发规则ID。</p>
      * @param integer $Offset <p>偏移量，默认为0。</p>
-     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为200。</p>
      * @param array $Filters <p>过滤条件。<li>forwarding-rule-id - String -（过滤条件）规则ID。</li></p>
      */
     function __construct()

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminInfo(AccountBriefInfo $AdminInfo) 设置<p>配置信息来自哪个账号，为空表示自己设置</p>
  * @method array getTagIds() 获取<p>标签id</p>
  * @method void setTagIds(array $TagIds) 设置<p>标签id</p>
+ * @method boolean getPreferCloudSource() 获取<p>优先使用腾讯云软件源</p>
+ * @method void setPreferCloudSource(boolean $PreferCloudSource) 设置<p>优先使用腾讯云软件源</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +133,11 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
     public $TagIds;
 
     /**
+     * @var boolean <p>优先使用腾讯云软件源</p>
+     */
+    public $PreferCloudSource;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
      * @param integer $EnableSync <p>管理员账号是否开启了自动同步配置开关 0-关闭，1-开启</p>
      * @param AccountBriefInfo $AdminInfo <p>配置信息来自哪个账号，为空表示自己设置</p>
      * @param array $TagIds <p>标签id</p>
+     * @param boolean $PreferCloudSource <p>优先使用腾讯云软件源</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -225,6 +233,10 @@ class DescribeVulScanPeriodicResponse extends AbstractModel
 
         if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
             $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("PreferCloudSource",$param) and $param["PreferCloudSource"] !== null) {
+            $this->PreferCloudSource = $param["PreferCloudSource"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

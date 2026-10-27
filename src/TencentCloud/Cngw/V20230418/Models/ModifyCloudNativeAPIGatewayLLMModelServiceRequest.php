@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalanceConfig(AIGWLoadBalanceConfig $LoadBalanceConfig) 设置<p>负载均衡配置</p>
  * @method AIGWSmartBalanceConfig getSmartBalance() 获取<p>智能负载均衡配置</p>
  * @method void setSmartBalance(AIGWSmartBalanceConfig $SmartBalance) 设置<p>智能负载均衡配置</p>
+ * @method AIGWLengthLimitConfig getLengthLimitConfig() 获取<p>内容长度限制配置</p>
+ * @method void setLengthLimitConfig(AIGWLengthLimitConfig $LengthLimitConfig) 设置<p>内容长度限制配置</p>
  */
 class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
     public $SmartBalance;
 
     /**
+     * @var AIGWLengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public $LengthLimitConfig;
+
+    /**
      * @param string $GatewayId <p>网关 id。</p>
      * @param string $ModelServiceId <p>模型服务 ID，全局唯一标识。</p>
      * @param string $Name <p>修改服务名称，长度2-50字符，支持中英文、数字、下划线。</p>
@@ -272,6 +279,7 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
      * @param string $CustomProviderName <p>自定义供应商名称</p>
      * @param AIGWLoadBalanceConfig $LoadBalanceConfig <p>负载均衡配置</p>
      * @param AIGWSmartBalanceConfig $SmartBalance <p>智能负载均衡配置</p>
+     * @param AIGWLengthLimitConfig $LengthLimitConfig <p>内容长度限制配置</p>
      */
     function __construct()
     {
@@ -423,6 +431,11 @@ class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractModel
         if (array_key_exists("SmartBalance",$param) and $param["SmartBalance"] !== null) {
             $this->SmartBalance = new AIGWSmartBalanceConfig();
             $this->SmartBalance->deserialize($param["SmartBalance"]);
+        }
+
+        if (array_key_exists("LengthLimitConfig",$param) and $param["LengthLimitConfig"] !== null) {
+            $this->LengthLimitConfig = new AIGWLengthLimitConfig();
+            $this->LengthLimitConfig->deserialize($param["LengthLimitConfig"]);
         }
     }
 }

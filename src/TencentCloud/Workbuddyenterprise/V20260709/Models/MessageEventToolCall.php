@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartedAt(string $StartedAt) 设置<p>调用开始时间（RFC3339 格式）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpertId() 获取本次调用对应的业务专家 ID。
+ * @method void setExpertId(string $ExpertId) 设置本次调用对应的业务专家 ID。
+ * @method string getExpertName() 获取本次调用对应的专家名称。
+ * @method void setExpertName(string $ExpertName) 设置本次调用对应的专家名称。
+ * @method string getExpertVersion() 获取执行时解析到的专家资源版本。
+ * @method void setExpertVersion(string $ExpertVersion) 设置执行时解析到的专家资源版本。
+ * @method string getSubAgentId() 获取CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+ * @method void setSubAgentId(string $SubAgentId) 设置CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+ * @method string getSubAgentName() 获取CBC 子代理定义名称。
+ * @method void setSubAgentName(string $SubAgentName) 设置CBC 子代理定义名称。
+ * @method string getParentToolCallId() 获取父会话中触发本次子代理执行的工具调用 ID。
+ * @method void setParentToolCallId(string $ParentToolCallId) 设置父会话中触发本次子代理执行的工具调用 ID。
  */
 class MessageEventToolCall extends AbstractModel
 {
@@ -104,6 +116,36 @@ class MessageEventToolCall extends AbstractModel
     public $StartedAt;
 
     /**
+     * @var string 本次调用对应的业务专家 ID。
+     */
+    public $ExpertId;
+
+    /**
+     * @var string 本次调用对应的专家名称。
+     */
+    public $ExpertName;
+
+    /**
+     * @var string 执行时解析到的专家资源版本。
+     */
+    public $ExpertVersion;
+
+    /**
+     * @var string CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+     */
+    public $SubAgentId;
+
+    /**
+     * @var string CBC 子代理定义名称。
+     */
+    public $SubAgentName;
+
+    /**
+     * @var string 父会话中触发本次子代理执行的工具调用 ID。
+     */
+    public $ParentToolCallId;
+
+    /**
      * @param string $ToolCallId <p>调用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ToolName <p>工具名</p>
@@ -120,6 +162,12 @@ class MessageEventToolCall extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartedAt <p>调用开始时间（RFC3339 格式）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpertId 本次调用对应的业务专家 ID。
+     * @param string $ExpertName 本次调用对应的专家名称。
+     * @param string $ExpertVersion 执行时解析到的专家资源版本。
+     * @param string $SubAgentId CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+     * @param string $SubAgentName CBC 子代理定义名称。
+     * @param string $ParentToolCallId 父会话中触发本次子代理执行的工具调用 ID。
      */
     function __construct()
     {
@@ -164,6 +212,30 @@ class MessageEventToolCall extends AbstractModel
 
         if (array_key_exists("StartedAt",$param) and $param["StartedAt"] !== null) {
             $this->StartedAt = $param["StartedAt"];
+        }
+
+        if (array_key_exists("ExpertId",$param) and $param["ExpertId"] !== null) {
+            $this->ExpertId = $param["ExpertId"];
+        }
+
+        if (array_key_exists("ExpertName",$param) and $param["ExpertName"] !== null) {
+            $this->ExpertName = $param["ExpertName"];
+        }
+
+        if (array_key_exists("ExpertVersion",$param) and $param["ExpertVersion"] !== null) {
+            $this->ExpertVersion = $param["ExpertVersion"];
+        }
+
+        if (array_key_exists("SubAgentId",$param) and $param["SubAgentId"] !== null) {
+            $this->SubAgentId = $param["SubAgentId"];
+        }
+
+        if (array_key_exists("SubAgentName",$param) and $param["SubAgentName"] !== null) {
+            $this->SubAgentName = $param["SubAgentName"];
+        }
+
+        if (array_key_exists("ParentToolCallId",$param) and $param["ParentToolCallId"] !== null) {
+            $this->ParentToolCallId = $param["ParentToolCallId"];
         }
     }
 }

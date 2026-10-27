@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBusinessResource返回参数结构体
  *
- * @method CreateBusinessResourceData getData() 获取创建业务资源响应的数据
+ * @method CreateBusinessResourceData getData() 获取<p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(CreateBusinessResourceData $Data) 设置创建业务资源响应的数据
+ * @method void setData(CreateBusinessResourceData $Data) 设置<p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateBusinessResourceResponse extends AbstractModel
 {
     /**
-     * @var CreateBusinessResourceData 创建业务资源响应的数据
+     * @var CreateBusinessResourceData <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -41,7 +41,7 @@ class CreateBusinessResourceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CreateBusinessResourceData $Data 创建业务资源响应的数据
+     * @param CreateBusinessResourceData $Data <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

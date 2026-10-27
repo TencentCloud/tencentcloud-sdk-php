@@ -20,394 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method integer getLimit() 获取每页输出实例的数量，参数默认值20，最大值为1000。
- * @method void setLimit(integer $Limit) 设置每页输出实例的数量，参数默认值20，最大值为1000。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-
-
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-
-
- * @method string getOrderBy() 获取实例列表排序依据，枚举值如下所示：
-- projectId：依据项目ID排序。
-- createtime：依据实例创建时间排序。
-- instancename：依据实例名称排序。
-- type：依据实例类型排序。
-- curDeadline：依据实例到期时间排序。
- * @method void setOrderBy(string $OrderBy) 设置实例列表排序依据，枚举值如下所示：
-- projectId：依据项目ID排序。
-- createtime：依据实例创建时间排序。
-- instancename：依据实例名称排序。
-- type：依据实例类型排序。
-- curDeadline：依据实例到期时间排序。
- * @method integer getOrderType() 获取实例排序方式，默认为倒序排序。
-- 1：倒序。
-- 0：顺序。
- * @method void setOrderType(integer $OrderType) 设置实例排序方式，默认为倒序排序。
-- 1：倒序。
-- 0：顺序。
- * @method array getVpcIds() 获取私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
- * @method void setVpcIds(array $VpcIds) 设置私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
- * @method array getSubnetIds() 获取私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
- * @method void setSubnetIds(array $SubnetIds) 设置私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
- * @method string getSearchKey() 获取设置模糊查询关键字段，仅实例名称支持模糊查询。
- * @method void setSearchKey(string $SearchKey) 设置设置模糊查询关键字段，仅实例名称支持模糊查询。
- * @method array getProjectIds() 获取项目 ID 组成的数组。
- * @method void setProjectIds(array $ProjectIds) 设置项目 ID 组成的数组。
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method array getUniqVpcIds() 获取私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
- * @method void setUniqVpcIds(array $UniqVpcIds) 设置私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
- * @method array getUniqSubnetIds() 获取私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
- * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
- * @method array getRegionIds() 获取地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
- * @method void setRegionIds(array $RegionIds) 设置地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
- * @method array getStatus() 获取实例状态。
-- 0：待初始化。
-- 1：流程中。
-- 2：运行中。
-- -2：已隔离。
-- -3：待删除。
- * @method void setStatus(array $Status) 设置实例状态。
-- 0：待初始化。
-- 1：流程中。
-- 2：运行中。
-- -2：已隔离。
-- -3：待删除。
- * @method integer getTypeVersion() 获取实例架构版本。
-- 1：单机版。
-- 2：主从版。
-- 3：集群版。
- * @method void setTypeVersion(integer $TypeVersion) 设置实例架构版本。
-- 1：单机版。
-- 2：主从版。
-- 3：集群版。
- * @method string getEngineName() 获取存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
- * @method void setEngineName(string $EngineName) 设置存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
- * @method array getAutoRenew() 获取续费模式。
-- 0：手动续费。
-- 1：自动续费。
-- 2：到期不再续费。
- * @method void setAutoRenew(array $AutoRenew) 设置续费模式。
-- 0：手动续费。
-- 1：自动续费。
-- 2：到期不再续费。
- * @method string getBillingMode() 获取计费模式。
-- postpaid：按量计费。
-- prepaid：包年包月。
- * @method void setBillingMode(string $BillingMode) 设置计费模式。
-- postpaid：按量计费。
-- prepaid：包年包月。
- * @method integer getType() 获取实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
- * @method void setType(integer $Type) 设置实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
- * @method array getSearchKeys() 获取该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
-
-- 数组中每一个元素取并集进行匹配查询。
-- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
- * @method void setSearchKeys(array $SearchKeys) 设置该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
-
-- 数组中每一个元素取并集进行匹配查询。
-- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
- * @method array getTypeList() 获取内部参数，用户可忽略。
- * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略。
- * @method string getMonitorVersion() 获取内部参数，用户可忽略。
- * @method void setMonitorVersion(string $MonitorVersion) 设置内部参数，用户可忽略。
- * @method array getInstanceTags() 获取根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
- * @method void setInstanceTags(array $InstanceTags) 设置根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
- * @method array getTagKeys() 获取根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
- * @method void setTagKeys(array $TagKeys) 设置根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
- * @method array getProductVersions() 获取实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
-- local：本地盘版。
-- cdc：独享集群版。
- * @method void setProductVersions(array $ProductVersions) 设置实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
-- local：本地盘版。
-- cdc：独享集群版。
- * @method array getInstanceIds() 获取批量查询指定的实例 ID，返回结果已 Limit 限制为主。
- * @method void setInstanceIds(array $InstanceIds) 设置批量查询指定的实例 ID，返回结果已 Limit 限制为主。
- * @method string getAzMode() 获取可用区模式。
-- singleaz：单可用区。
-- multiaz：多可用区。
- * @method void setAzMode(string $AzMode) 设置可用区模式。
-- singleaz：单可用区。
-- multiaz：多可用区。
+ * @method integer getLimit() 获取<p>每页输出实例的数量，参数默认值20，最大值为1000。</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页输出实例的数量，参数默认值20，最大值为1000。</p>
+ * @method integer getOffset() 获取<p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+ * @method string getInstanceId() 获取<p>指定实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>指定实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+ * @method string getOrderBy() 获取<p>实例列表排序依据，枚举值如下所示：</p><ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
+ * @method void setOrderBy(string $OrderBy) 设置<p>实例列表排序依据，枚举值如下所示：</p><ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
+ * @method integer getOrderType() 获取<p>实例排序方式，默认为倒序排序。</p><ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+ * @method void setOrderType(integer $OrderType) 设置<p>实例排序方式，默认为倒序排序。</p><ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+ * @method array getVpcIds() 获取<p>私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。</p>
+ * @method void setVpcIds(array $VpcIds) 设置<p>私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。</p>
+ * @method array getSubnetIds() 获取<p>私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。</p>
+ * @method void setSubnetIds(array $SubnetIds) 设置<p>私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。</p>
+ * @method string getSearchKey() 获取<p>设置模糊查询关键字段，仅实例名称支持模糊查询。</p>
+ * @method void setSearchKey(string $SearchKey) 设置<p>设置模糊查询关键字段，仅实例名称支持模糊查询。</p>
+ * @method array getProjectIds() 获取<p>项目 ID 组成的数组。</p>
+ * @method void setProjectIds(array $ProjectIds) 设置<p>项目 ID 组成的数组。</p>
+ * @method string getInstanceName() 获取<p>实例名称。</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称。</p>
+ * @method array getUniqVpcIds() 获取<p>私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。</p>
+ * @method void setUniqVpcIds(array $UniqVpcIds) 设置<p>私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。</p>
+ * @method array getUniqSubnetIds() 获取<p>私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。</p>
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置<p>私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。</p>
+ * @method array getRegionIds() 获取<p>地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。</p>
+ * @method void setRegionIds(array $RegionIds) 设置<p>地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。</p>
+ * @method array getStatus() 获取<p>实例状态。</p><ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+ * @method void setStatus(array $Status) 设置<p>实例状态。</p><ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+ * @method integer getTypeVersion() 获取<p>实例架构版本。</p><ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+ * @method void setTypeVersion(integer $TypeVersion) 设置<p>实例架构版本。</p><ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+ * @method string getEngineName() 获取<p>存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。</p>
+ * @method void setEngineName(string $EngineName) 设置<p>存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。</p>
+ * @method array getAutoRenew() 获取<p>续费模式。</p><ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+ * @method void setAutoRenew(array $AutoRenew) 设置<p>续费模式。</p><ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+ * @method string getBillingMode() 获取<p>计费模式。</p><ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+ * @method void setBillingMode(string $BillingMode) 设置<p>计费模式。</p><ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+ * @method integer getType() 获取<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 内存版（单机）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200:Memcached 1.6 内存版（集群架构）。</li></ul>
+ * @method void setType(integer $Type) 设置<p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 内存版（单机）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200:Memcached 1.6 内存版（集群架构）。</li></ul>
+ * @method array getSearchKeys() 获取<p>该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。</p><ul><li>数组中每一个元素取并集进行匹配查询。</li><li><strong>InstanceId</strong> 与 <strong>SearchKeys</strong> 同时配置，则取二者交集进行匹配查询。</li></ul>
+ * @method void setSearchKeys(array $SearchKeys) 设置<p>该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。</p><ul><li>数组中每一个元素取并集进行匹配查询。</li><li><strong>InstanceId</strong> 与 <strong>SearchKeys</strong> 同时配置，则取二者交集进行匹配查询。</li></ul>
+ * @method array getTypeList() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setTypeList(array $TypeList) 设置<p>内部参数，用户可忽略。</p>
+ * @method string getMonitorVersion() 获取<p>内部参数，用户可忽略。</p>
+ * @method void setMonitorVersion(string $MonitorVersion) 设置<p>内部参数，用户可忽略。</p>
+ * @method array getInstanceTags() 获取<p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
+ * @method void setInstanceTags(array $InstanceTags) 设置<p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
+ * @method array getTagKeys() 获取<p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+ * @method void setTagKeys(array $TagKeys) 设置<p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+ * @method array getProductVersions() 获取<p>实例的部署类型。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。</p><p>枚举值：</p><ul><li>local： 通用 I 型。</li><li>localv2： 通用 II 型。</li><li>cdc： 独享集群型。</li></ul>
+ * @method void setProductVersions(array $ProductVersions) 设置<p>实例的部署类型。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。</p><p>枚举值：</p><ul><li>local： 通用 I 型。</li><li>localv2： 通用 II 型。</li><li>cdc： 独享集群型。</li></ul>
+ * @method array getInstanceIds() 获取<p>批量查询指定的实例 ID，返回结果已 Limit 限制为主。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>批量查询指定的实例 ID，返回结果已 Limit 限制为主。</p>
+ * @method string getAzMode() 获取<p>可用区模式。</p><ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
+ * @method void setAzMode(string $AzMode) 设置<p>可用区模式。</p><ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页输出实例的数量，参数默认值20，最大值为1000。
+     * @var integer <p>每页输出实例的数量，参数默认值20，最大值为1000。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @var integer <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
      */
     public $Offset;
 
     /**
-     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-
-
+     * @var string <p>指定实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例列表排序依据，枚举值如下所示：
-- projectId：依据项目ID排序。
-- createtime：依据实例创建时间排序。
-- instancename：依据实例名称排序。
-- type：依据实例类型排序。
-- curDeadline：依据实例到期时间排序。
+     * @var string <p>实例列表排序依据，枚举值如下所示：</p><ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
      */
     public $OrderBy;
 
     /**
-     * @var integer 实例排序方式，默认为倒序排序。
-- 1：倒序。
-- 0：顺序。
+     * @var integer <p>实例排序方式，默认为倒序排序。</p><ul><li>1：倒序。</li><li>0：顺序。</li></ul>
      */
     public $OrderType;
 
     /**
-     * @var array 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
+     * @var array <p>私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。</p>
      */
     public $VpcIds;
 
     /**
-     * @var array 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
+     * @var array <p>私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。</p>
      */
     public $SubnetIds;
 
     /**
-     * @var string 设置模糊查询关键字段，仅实例名称支持模糊查询。
+     * @var string <p>设置模糊查询关键字段，仅实例名称支持模糊查询。</p>
      */
     public $SearchKey;
 
     /**
-     * @var array 项目 ID 组成的数组。
+     * @var array <p>项目 ID 组成的数组。</p>
      */
     public $ProjectIds;
 
     /**
-     * @var string 实例名称。
+     * @var string <p>实例名称。</p>
      */
     public $InstanceName;
 
     /**
-     * @var array 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
+     * @var array <p>私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。</p>
      */
     public $UniqVpcIds;
 
     /**
-     * @var array 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
+     * @var array <p>私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。</p>
      */
     public $UniqSubnetIds;
 
     /**
-     * @var array 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
+     * @var array <p>地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。</p>
      */
     public $RegionIds;
 
     /**
-     * @var array 实例状态。
-- 0：待初始化。
-- 1：流程中。
-- 2：运行中。
-- -2：已隔离。
-- -3：待删除。
+     * @var array <p>实例状态。</p><ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 实例架构版本。
-- 1：单机版。
-- 2：主从版。
-- 3：集群版。
+     * @var integer <p>实例架构版本。</p><ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
      */
     public $TypeVersion;
 
     /**
-     * @var string 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
+     * @var string <p>存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。</p>
      */
     public $EngineName;
 
     /**
-     * @var array 续费模式。
-- 0：手动续费。
-- 1：自动续费。
-- 2：到期不再续费。
+     * @var array <p>续费模式。</p><ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
      */
     public $AutoRenew;
 
     /**
-     * @var string 计费模式。
-- postpaid：按量计费。
-- prepaid：包年包月。
+     * @var string <p>计费模式。</p><ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
      */
     public $BillingMode;
 
     /**
-     * @var integer 实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
+     * @var integer <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 内存版（单机）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200:Memcached 1.6 内存版（集群架构）。</li></ul>
      */
     public $Type;
 
     /**
-     * @var array 该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
-
-- 数组中每一个元素取并集进行匹配查询。
-- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
+     * @var array <p>该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。</p><ul><li>数组中每一个元素取并集进行匹配查询。</li><li><strong>InstanceId</strong> 与 <strong>SearchKeys</strong> 同时配置，则取二者交集进行匹配查询。</li></ul>
      */
     public $SearchKeys;
 
     /**
-     * @var array 内部参数，用户可忽略。
+     * @var array <p>内部参数，用户可忽略。</p>
      */
     public $TypeList;
 
     /**
-     * @var string 内部参数，用户可忽略。
+     * @var string <p>内部参数，用户可忽略。</p>
      */
     public $MonitorVersion;
 
     /**
-     * @var array 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @var array <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
      */
     public $InstanceTags;
 
     /**
-     * @var array 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * @var array <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
      */
     public $TagKeys;
 
     /**
-     * @var array 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
-- local：本地盘版。
-- cdc：独享集群版。
+     * @var array <p>实例的部署类型。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。</p><p>枚举值：</p><ul><li>local： 通用 I 型。</li><li>localv2： 通用 II 型。</li><li>cdc： 独享集群型。</li></ul>
      */
     public $ProductVersions;
 
     /**
-     * @var array 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
+     * @var array <p>批量查询指定的实例 ID，返回结果已 Limit 限制为主。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var string 可用区模式。
-- singleaz：单可用区。
-- multiaz：多可用区。
+     * @var string <p>可用区模式。</p><ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
      */
     public $AzMode;
 
     /**
-     * @param integer $Limit 每页输出实例的数量，参数默认值20，最大值为1000。
-     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
-     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
-
-
-     * @param string $OrderBy 实例列表排序依据，枚举值如下所示：
-- projectId：依据项目ID排序。
-- createtime：依据实例创建时间排序。
-- instancename：依据实例名称排序。
-- type：依据实例类型排序。
-- curDeadline：依据实例到期时间排序。
-     * @param integer $OrderType 实例排序方式，默认为倒序排序。
-- 1：倒序。
-- 0：顺序。
-     * @param array $VpcIds 私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。
-     * @param array $SubnetIds 私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。
-     * @param string $SearchKey 设置模糊查询关键字段，仅实例名称支持模糊查询。
-     * @param array $ProjectIds 项目 ID 组成的数组。
-     * @param string $InstanceName 实例名称。
-     * @param array $UniqVpcIds 私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。
-     * @param array $UniqSubnetIds 私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。
-     * @param array $RegionIds 地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。
-     * @param array $Status 实例状态。
-- 0：待初始化。
-- 1：流程中。
-- 2：运行中。
-- -2：已隔离。
-- -3：待删除。
-     * @param integer $TypeVersion 实例架构版本。
-- 1：单机版。
-- 2：主从版。
-- 3：集群版。
-     * @param string $EngineName 存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。
-     * @param array $AutoRenew 续费模式。
-- 0：手动续费。
-- 1：自动续费。
-- 2：到期不再续费。
-     * @param string $BillingMode 计费模式。
-- postpaid：按量计费。
-- prepaid：包年包月。
-     * @param integer $Type 实例类型。
-- 2：Redis 2.8 内存版（标准架构）。
-- 3：CKV 3.2 内存版（标准架构）。
-- 4：CKV 3.2 内存版（集群架构）。
-- 5：Redis 2.8 内存版（单机）。
-- 6：Redis 4.0 内存版（标准架构）。
-- 7：Redis 4.0 内存版（集群架构）。
-- 8：Redis 5.0 内存版（标准架构）。
-- 9：Redis 5.0 内存版（集群架构）。
-- 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。
-- 17：Redis 7.0 内存版（标准架构）。
-- 18：Redis 7.0 内存版（集群架构）。
-- 200:Memcached 1.6 内存版（集群架构）。
-     * @param array $SearchKeys 该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
-
-- 数组中每一个元素取并集进行匹配查询。
-- **InstanceId** 与 **SearchKeys** 同时配置，则取二者交集进行匹配查询。
-     * @param array $TypeList 内部参数，用户可忽略。
-     * @param string $MonitorVersion 内部参数，用户可忽略。
-     * @param array $InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
-     * @param array $TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
-     * @param array $ProductVersions 实例的产品版本。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。
-- local：本地盘版。
-- cdc：独享集群版。
-     * @param array $InstanceIds 批量查询指定的实例 ID，返回结果已 Limit 限制为主。
-     * @param string $AzMode 可用区模式。
-- singleaz：单可用区。
-- multiaz：多可用区。
+     * @param integer $Limit <p>每页输出实例的数量，参数默认值20，最大值为1000。</p>
+     * @param integer $Offset <p>分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。</p>
+     * @param string $InstanceId <p>指定实例 ID。例如：crs-xjhsdj****。请登录<a href="https://console.cloud.tencent.com/redis">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param string $OrderBy <p>实例列表排序依据，枚举值如下所示：</p><ul><li>projectId：依据项目ID排序。</li><li>createtime：依据实例创建时间排序。</li><li>instancename：依据实例名称排序。</li><li>type：依据实例类型排序。</li><li>curDeadline：依据实例到期时间排序。</li></ul>
+     * @param integer $OrderType <p>实例排序方式，默认为倒序排序。</p><ul><li>1：倒序。</li><li>0：顺序。</li></ul>
+     * @param array $VpcIds <p>私有网络 ID 数组。如果不配置该参数或设置数组为空则默认选择基础网络。例如47525。该参数暂时保留，可忽略。请根据 UniqVpcIds 参数格式设置私有网络ID数组。</p>
+     * @param array $SubnetIds <p>私有网络所属子网 ID 数组，例如：56854。该参数暂时保留，可忽略。请根据 UniqSubnetIds 参数格式设置私有网络子网 ID 数组。</p>
+     * @param string $SearchKey <p>设置模糊查询关键字段，仅实例名称支持模糊查询。</p>
+     * @param array $ProjectIds <p>项目 ID 组成的数组。</p>
+     * @param string $InstanceName <p>实例名称。</p>
+     * @param array $UniqVpcIds <p>私有网络 ID 数组。如果不配置该参数或者设置数组为空则默认选择基础网络，如：vpc-sad23jfdfk。</p>
+     * @param array $UniqSubnetIds <p>私有网络所属子网 ID 数组，如：subnet-fdj24n34j2。</p>
+     * @param array $RegionIds <p>地域 ID 数组，该参数已经弃用，可通过公共参数Region查询对应地域。</p>
+     * @param array $Status <p>实例状态。</p><ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @param integer $TypeVersion <p>实例架构版本。</p><ul><li>1：单机版。</li><li>2：主从版。</li><li>3：集群版。</li></ul>
+     * @param string $EngineName <p>存储引擎信息。可设置为Redis-2.8、Redis-4.0、Redis-5.0、Redis-6.0 或者 CKV。</p>
+     * @param array $AutoRenew <p>续费模式。</p><ul><li>0：手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+     * @param string $BillingMode <p>计费模式。</p><ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
+     * @param integer $Type <p>实例类型。</p><ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 内存版（单机）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200:Memcached 1.6 内存版（集群架构）。</li></ul>
+     * @param array $SearchKeys <p>该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。</p><ul><li>数组中每一个元素取并集进行匹配查询。</li><li><strong>InstanceId</strong> 与 <strong>SearchKeys</strong> 同时配置，则取二者交集进行匹配查询。</li></ul>
+     * @param array $TypeList <p>内部参数，用户可忽略。</p>
+     * @param string $MonitorVersion <p>内部参数，用户可忽略。</p>
+     * @param array $InstanceTags <p>根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。</p>
+     * @param array $TagKeys <p>根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。</p>
+     * @param array $ProductVersions <p>实例的部署类型。如果该参数不配置或者数组设置为空值，则默认不依据此参数过滤实例。</p><p>枚举值：</p><ul><li>local： 通用 I 型。</li><li>localv2： 通用 II 型。</li><li>cdc： 独享集群型。</li></ul>
+     * @param array $InstanceIds <p>批量查询指定的实例 ID，返回结果已 Limit 限制为主。</p>
+     * @param string $AzMode <p>可用区模式。</p><ul><li>singleaz：单可用区。</li><li>multiaz：多可用区。</li></ul>
      */
     function __construct()
     {

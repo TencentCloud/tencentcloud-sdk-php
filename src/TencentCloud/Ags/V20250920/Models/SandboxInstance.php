@@ -18,7 +18,7 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 沙箱实例结构体
+ * 沙箱实例结构体信息
  *
  * @method string getInstanceId() 获取<p>沙箱实例唯一标识符</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例唯一标识符</p>

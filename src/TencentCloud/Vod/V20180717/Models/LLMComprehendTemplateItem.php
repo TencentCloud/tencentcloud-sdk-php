@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsr(LLMComprehendAsr $Asr) 设置<p>文本转录解析配置</p>
  * @method LLMComprehendFaceRecognition getFaceRecognition() 获取<p>人脸识别解析配置</p>
  * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) 设置<p>人脸识别解析配置</p>
+ * @method LLMComprehendDNA getDNA() 获取<p>DNA解析配置</p>
+ * @method void setDNA(LLMComprehendDNA $DNA) 设置<p>DNA解析配置</p>
  * @method string getCreateTime() 获取<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
  * @method void setCreateTime(string $CreateTime) 设置<p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
  * @method string getUpdateTime() 获取<p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
@@ -84,6 +86,11 @@ class LLMComprehendTemplateItem extends AbstractModel
     public $FaceRecognition;
 
     /**
+     * @var LLMComprehendDNA <p>DNA解析配置</p>
+     */
+    public $DNA;
+
+    /**
      * @var string <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public $CreateTime;
@@ -102,6 +109,7 @@ class LLMComprehendTemplateItem extends AbstractModel
      * @param LLMComprehendSummary $Summary <p>分段摘要解析配置</p>
      * @param LLMComprehendAsr $Asr <p>文本转录解析配置</p>
      * @param LLMComprehendFaceRecognition $FaceRecognition <p>人脸识别解析配置</p>
+     * @param LLMComprehendDNA $DNA <p>DNA解析配置</p>
      * @param string $CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      * @param string $UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
@@ -151,6 +159,11 @@ class LLMComprehendTemplateItem extends AbstractModel
         if (array_key_exists("FaceRecognition",$param) and $param["FaceRecognition"] !== null) {
             $this->FaceRecognition = new LLMComprehendFaceRecognition();
             $this->FaceRecognition->deserialize($param["FaceRecognition"]);
+        }
+
+        if (array_key_exists("DNA",$param) and $param["DNA"] !== null) {
+            $this->DNA = new LLMComprehendDNA();
+            $this->DNA->deserialize($param["DNA"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

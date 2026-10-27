@@ -160,6 +160,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoDubbingAsyncTask(VideoDubbingAsyncTask $VideoDubbingAsyncTask) 设置<p>视频翻译配音，仅当 TaskType 为VideoDubbingAsync，该字段有值。</p>
  * @method VideoDepthEstimationTask getVideoDepthEstimationTask() 获取<p>视频深度估算任务，仅当 TaskType 为VideoDepthEstimation，该字段有值。</p>
  * @method void setVideoDepthEstimationTask(VideoDepthEstimationTask $VideoDepthEstimationTask) 设置<p>视频深度估算任务，仅当 TaskType 为VideoDepthEstimation，该字段有值。</p>
+ * @method DNATask getDNATask() 获取<p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+ * @method void setDNATask(DNATask $DNATask) 设置<p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+ * @method SearchMediaBySemanticsAsync getSearchMediaBySemanticsAsync() 获取<p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+ * @method void setSearchMediaBySemanticsAsync(SearchMediaBySemanticsAsync $SearchMediaBySemanticsAsync) 设置<p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -428,6 +432,16 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $VideoDepthEstimationTask;
 
     /**
+     * @var DNATask <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+     */
+    public $DNATask;
+
+    /**
+     * @var SearchMediaBySemanticsAsync <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+     */
+    public $SearchMediaBySemanticsAsync;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -503,6 +517,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param TextToSpeechAsyncTask $TextToSpeechAsyncTask <p>语音合成，仅当 TaskType 为 TextToSpeechAsync，该字段有值。</p>
      * @param VideoDubbingAsyncTask $VideoDubbingAsyncTask <p>视频翻译配音，仅当 TaskType 为VideoDubbingAsync，该字段有值。</p>
      * @param VideoDepthEstimationTask $VideoDepthEstimationTask <p>视频深度估算任务，仅当 TaskType 为VideoDepthEstimation，该字段有值。</p>
+     * @param DNATask $DNATask <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+     * @param SearchMediaBySemanticsAsync $SearchMediaBySemanticsAsync <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -751,6 +767,16 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("VideoDepthEstimationTask",$param) and $param["VideoDepthEstimationTask"] !== null) {
             $this->VideoDepthEstimationTask = new VideoDepthEstimationTask();
             $this->VideoDepthEstimationTask->deserialize($param["VideoDepthEstimationTask"]);
+        }
+
+        if (array_key_exists("DNATask",$param) and $param["DNATask"] !== null) {
+            $this->DNATask = new DNATask();
+            $this->DNATask->deserialize($param["DNATask"]);
+        }
+
+        if (array_key_exists("SearchMediaBySemanticsAsync",$param) and $param["SearchMediaBySemanticsAsync"] !== null) {
+            $this->SearchMediaBySemanticsAsync = new SearchMediaBySemanticsAsync();
+            $this->SearchMediaBySemanticsAsync->deserialize($param["SearchMediaBySemanticsAsync"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -594,6 +594,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 - （不推荐：应使用 CreateTime 替代）指定单个起始创建时间 StartTime 进行搜索。
 - （不推荐：应使用 CreateTime 替代）指定单个结尾创建时间 EndTime 进行搜索。
  * @method Models\SearchMediaBySemanticsResponse SearchMediaBySemantics(Models\SearchMediaBySemanticsRequest $req) 使用自然语言对媒体进行语义搜索。
+仅支持文搜视频、文搜图、图搜图，图搜视频请使用SearchMediaBySemanticsAsync.
  * @method Models\SetCLSPushTargetResponse SetCLSPushTarget(Models\SetCLSPushTargetRequest $req) 为点播域名设置投递 CLS 的目标。
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) 设置 DRM 密钥提供商信息。
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) 设置点播域名 HTTPS 证书。

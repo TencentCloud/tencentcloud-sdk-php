@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>知识库名称。</p>
  * @method string getDescription() 获取<p>知识库描述。</p>
  * @method void setDescription(string $Description) 设置<p>知识库描述。</p>
+ * @method string getIndexType() 获取<p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+ * @method void setIndexType(string $IndexType) 设置<p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+ * @method string getMediaType() 获取<p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+ * @method void setMediaType(string $MediaType) 设置<p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
  * @method string getStatus() 获取<p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
  * @method void setStatus(string $Status) 设置<p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
  * @method string getCreateTime() 获取<p>知识库创建时间。</p>
@@ -49,6 +53,16 @@ class KnowledgeBaseInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+     */
+    public $IndexType;
+
+    /**
+     * @var string <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+     */
+    public $MediaType;
+
+    /**
      * @var string <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
      */
     public $Status;
@@ -62,6 +76,8 @@ class KnowledgeBaseInfo extends AbstractModel
      * @param string $KnowledgeBaseId <p>知识库ID。</p>
      * @param string $Name <p>知识库名称。</p>
      * @param string $Description <p>知识库描述。</p>
+     * @param string $IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+     * @param string $MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
      * @param string $Status <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
      * @param string $CreateTime <p>知识库创建时间。</p>
      */
@@ -88,6 +104,14 @@ class KnowledgeBaseInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IndexType",$param) and $param["IndexType"] !== null) {
+            $this->IndexType = $param["IndexType"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

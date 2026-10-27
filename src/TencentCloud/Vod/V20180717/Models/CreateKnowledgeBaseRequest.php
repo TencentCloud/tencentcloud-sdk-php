@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>知识库名称。长度限制：1-64个字符。</p>
  * @method string getDescription() 获取<p>知识库描述。长度限制：最多256个字符。</p>
  * @method void setDescription(string $Description) 设置<p>知识库描述。长度限制：最多256个字符。</p>
+ * @method string getIndexType() 获取<p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+ * @method void setIndexType(string $IndexType) 设置<p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+ * @method string getMediaType() 获取<p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+ * @method void setMediaType(string $MediaType) 设置<p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
  */
 class CreateKnowledgeBaseRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateKnowledgeBaseRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+     */
+    public $IndexType;
+
+    /**
+     * @var string <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+     */
+    public $MediaType;
+
+    /**
      * @param integer $SubAppId <p>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
      * @param string $Name <p>知识库名称。长度限制：1-64个字符。</p>
      * @param string $Description <p>知识库描述。长度限制：最多256个字符。</p>
+     * @param string $IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+     * @param string $MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class CreateKnowledgeBaseRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IndexType",$param) and $param["IndexType"] !== null) {
+            $this->IndexType = $param["IndexType"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
     }
 }

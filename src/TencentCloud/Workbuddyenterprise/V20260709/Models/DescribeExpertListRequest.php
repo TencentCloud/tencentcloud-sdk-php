@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSource() 获取<p>专家来源，必填：BUILTIN（内置）/ CUSTOM（自建）</p>
  * @method void setSource(string $Source) 设置<p>专家来源，必填：BUILTIN（内置）/ CUSTOM（自建）</p>
- * @method array getFilters() 获取<p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
- * @method void setFilters(array $Filters) 设置<p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+ * @method array getFilters() 获取<p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
+ * @method void setFilters(array $Filters) 设置<p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
  * @method integer getOffset() 获取<p>偏移量，从 0 开始，默认 0（按 ID 批量查询时忽略）</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量，从 0 开始，默认 0（按 ID 批量查询时忽略）</p>
  * @method integer getLimit() 获取<p>每页数量，默认 20，最大 200（按 ID 批量查询时忽略）</p>
@@ -37,7 +37,7 @@ class DescribeExpertListRequest extends AbstractModel
     public $Source;
 
     /**
-     * @var array <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+     * @var array <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
      */
     public $Filters;
 
@@ -53,7 +53,7 @@ class DescribeExpertListRequest extends AbstractModel
 
     /**
      * @param string $Source <p>专家来源，必填：BUILTIN（内置）/ CUSTOM（自建）</p>
-     * @param array $Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+     * @param array $Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
      * @param integer $Offset <p>偏移量，从 0 开始，默认 0（按 ID 批量查询时忽略）</p>
      * @param integer $Limit <p>每页数量，默认 20，最大 200（按 ID 批量查询时忽略）</p>
      */

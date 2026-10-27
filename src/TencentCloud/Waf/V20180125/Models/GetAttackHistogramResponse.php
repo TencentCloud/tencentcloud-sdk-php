@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAttackHistogram返回参数结构体
  *
- * @method array getData() 获取统计详情
- * @method void setData(array $Data) 设置统计详情
- * @method integer getPeriod() 获取时间段大小
- * @method void setPeriod(integer $Period) 设置时间段大小
- * @method integer getTotalCount() 获取统计的条目数
- * @method void setTotalCount(integer $TotalCount) 设置统计的条目数
+ * @method array getData() 获取<p>统计详情</p>
+ * @method void setData(array $Data) 设置<p>统计详情</p>
+ * @method integer getPeriod() 获取<p>时间段大小</p><p>单位：秒</p>
+ * @method void setPeriod(integer $Period) 设置<p>时间段大小</p><p>单位：秒</p>
+ * @method integer getTotalCount() 获取<p>统计的条目数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>统计的条目数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetAttackHistogramResponse extends AbstractModel
 {
     /**
-     * @var array 统计详情
+     * @var array <p>统计详情</p>
      */
     public $Data;
 
     /**
-     * @var integer 时间段大小
+     * @var integer <p>时间段大小</p><p>单位：秒</p>
      */
     public $Period;
 
     /**
-     * @var integer 统计的条目数
+     * @var integer <p>统计的条目数</p>
      */
     public $TotalCount;
 
@@ -52,9 +52,9 @@ class GetAttackHistogramResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 统计详情
-     * @param integer $Period 时间段大小
-     * @param integer $TotalCount 统计的条目数
+     * @param array $Data <p>统计详情</p>
+     * @param integer $Period <p>时间段大小</p><p>单位：秒</p>
+     * @param integer $TotalCount <p>统计的条目数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

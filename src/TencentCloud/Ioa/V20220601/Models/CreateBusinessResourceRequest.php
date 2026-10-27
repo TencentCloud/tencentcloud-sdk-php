@@ -20,74 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBusinessResource请求参数结构体
  *
- * @method integer getAreaId() 获取业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)
- * @method void setAreaId(integer $AreaId) 设置业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)
- * @method integer getProtocol() 获取业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)
- * @method void setProtocol(integer $Protocol) 设置业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)
- * @method string getServiceName() 获取业务资源名称，同一个资源模块下面不可重复
- * @method void setServiceName(string $ServiceName) 设置业务资源名称，同一个资源模块下面不可重复
- * @method string getServiceType() 获取业务资源类型:ip,domain,ip_section，对应ip、域名、ip段
- * @method void setServiceType(string $ServiceType) 设置业务资源类型:ip,domain,ip_section，对应ip、域名、ip段
- * @method string getServicePort() 获取业务资源端口 all,1-65535
- * @method void setServicePort(string $ServicePort) 设置业务资源端口 all,1-65535
- * @method integer getLevels() 获取业务资源优先级 1-65535(只支持32位)
- * @method void setLevels(integer $Levels) 设置业务资源优先级 1-65535(只支持32位)
- * @method string getServiceAddress() 获取业务资源地址(ip、域名、ip段)
- * @method void setServiceAddress(string $ServiceAddress) 设置业务资源地址(ip、域名、ip段)
- * @method integer getDirectConn() 获取是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)
- * @method void setDirectConn(integer $DirectConn) 设置是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)
+ * @method integer getAreaId() 获取<p>业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)</p>
+ * @method void setAreaId(integer $AreaId) 设置<p>业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)</p>
+ * @method integer getProtocol() 获取<p>业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)</p>
+ * @method void setProtocol(integer $Protocol) 设置<p>业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)</p>
+ * @method string getServiceName() 获取<p>业务资源名称，同一个资源模块下面不可重复</p>
+ * @method void setServiceName(string $ServiceName) 设置<p>业务资源名称，同一个资源模块下面不可重复</p>
+ * @method string getServiceType() 获取<p>业务资源类型:ip,domain,ip_section，对应ip、域名、ip段</p>
+ * @method void setServiceType(string $ServiceType) 设置<p>业务资源类型:ip,domain,ip_section，对应ip、域名、ip段</p>
+ * @method string getServicePort() 获取<p>业务资源端口 all,1-65535</p>
+ * @method void setServicePort(string $ServicePort) 设置<p>业务资源端口 all,1-65535</p>
+ * @method integer getLevels() 获取<p>业务资源优先级 1-65535(只支持32位)</p>
+ * @method void setLevels(integer $Levels) 设置<p>业务资源优先级 1-65535(只支持32位)</p>
+ * @method string getServiceAddress() 获取<p>业务资源地址(ip、域名、ip段)</p>
+ * @method void setServiceAddress(string $ServiceAddress) 设置<p>业务资源地址(ip、域名、ip段)</p>
+ * @method integer getDirectConn() 获取<p>是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)</p>
+ * @method void setDirectConn(integer $DirectConn) 设置<p>是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)</p>
+ * @method integer getConnectivityCheckSwitch() 获取<p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+ * @method void setConnectivityCheckSwitch(integer $ConnectivityCheckSwitch) 设置<p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+ * @method integer getConnectivityCheckInterval() 获取<p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+ * @method void setConnectivityCheckInterval(integer $ConnectivityCheckInterval) 设置<p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+ * @method string getConnectivityCheckIntervalUnit() 获取<p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+ * @method void setConnectivityCheckIntervalUnit(string $ConnectivityCheckIntervalUnit) 设置<p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+ * @method integer getServiceNetwork() 获取<p>资源网络类型：1-内网资源 2-外网资源，默认1</p>
+ * @method void setServiceNetwork(integer $ServiceNetwork) 设置<p>资源网络类型：1-内网资源 2-外网资源，默认1</p>
+ * @method integer getWireGuardTunnel() 获取<p>是否启用L3网络：1-不启用 2-启用，默认1</p>
+ * @method void setWireGuardTunnel(integer $WireGuardTunnel) 设置<p>是否启用L3网络：1-不启用 2-启用，默认1</p>
+ * @method string getDescription() 获取<p>资源描述</p>
+ * @method void setDescription(string $Description) 设置<p>资源描述</p>
+ * @method integer getURLAuditState() 获取<p>URL审计开关：0-关闭 1-开启，默认0</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setURLAuditState(integer $URLAuditState) 设置<p>URL审计开关：0-关闭 1-开启，默认0</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method string getURLAuditId() 获取<p>URL审计证书ID列表，多个用分号分隔</p>
+ * @method void setURLAuditId(string $URLAuditId) 设置<p>URL审计证书ID列表，多个用分号分隔</p>
+ * @method string getURLPath() 获取<p>URL审计路径，多个用分号分隔</p>
+ * @method void setURLPath(string $URLPath) 设置<p>URL审计路径，多个用分号分隔</p>
+ * @method string getSSLCertId() 获取<p>证书Id</p>
+ * @method void setSSLCertId(string $SSLCertId) 设置<p>证书Id</p>
  */
 class CreateBusinessResourceRequest extends AbstractModel
 {
     /**
-     * @var integer 业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)
+     * @var integer <p>业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)</p>
      */
     public $AreaId;
 
     /**
-     * @var integer 业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)
+     * @var integer <p>业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)</p>
      */
     public $Protocol;
 
     /**
-     * @var string 业务资源名称，同一个资源模块下面不可重复
+     * @var string <p>业务资源名称，同一个资源模块下面不可重复</p>
      */
     public $ServiceName;
 
     /**
-     * @var string 业务资源类型:ip,domain,ip_section，对应ip、域名、ip段
+     * @var string <p>业务资源类型:ip,domain,ip_section，对应ip、域名、ip段</p>
      */
     public $ServiceType;
 
     /**
-     * @var string 业务资源端口 all,1-65535
+     * @var string <p>业务资源端口 all,1-65535</p>
      */
     public $ServicePort;
 
     /**
-     * @var integer 业务资源优先级 1-65535(只支持32位)
+     * @var integer <p>业务资源优先级 1-65535(只支持32位)</p>
      */
     public $Levels;
 
     /**
-     * @var string 业务资源地址(ip、域名、ip段)
+     * @var string <p>业务资源地址(ip、域名、ip段)</p>
      */
     public $ServiceAddress;
 
     /**
-     * @var integer 是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)
+     * @var integer <p>是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)</p>
      */
     public $DirectConn;
 
     /**
-     * @param integer $AreaId 业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)
-     * @param integer $Protocol 业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)
-     * @param string $ServiceName 业务资源名称，同一个资源模块下面不可重复
-     * @param string $ServiceType 业务资源类型:ip,domain,ip_section，对应ip、域名、ip段
-     * @param string $ServicePort 业务资源端口 all,1-65535
-     * @param integer $Levels 业务资源优先级 1-65535(只支持32位)
-     * @param string $ServiceAddress 业务资源地址(ip、域名、ip段)
-     * @param integer $DirectConn 是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)
+     * @var integer <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     */
+    public $ConnectivityCheckSwitch;
+
+    /**
+     * @var integer <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     */
+    public $ConnectivityCheckInterval;
+
+    /**
+     * @var string <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     */
+    public $ConnectivityCheckIntervalUnit;
+
+    /**
+     * @var integer <p>资源网络类型：1-内网资源 2-外网资源，默认1</p>
+     */
+    public $ServiceNetwork;
+
+    /**
+     * @var integer <p>是否启用L3网络：1-不启用 2-启用，默认1</p>
+     */
+    public $WireGuardTunnel;
+
+    /**
+     * @var string <p>资源描述</p>
+     */
+    public $Description;
+
+    /**
+     * @var integer <p>URL审计开关：0-关闭 1-开启，默认0</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $URLAuditState;
+
+    /**
+     * @var string <p>URL审计证书ID列表，多个用分号分隔</p>
+     */
+    public $URLAuditId;
+
+    /**
+     * @var string <p>URL审计路径，多个用分号分隔</p>
+     */
+    public $URLPath;
+
+    /**
+     * @var string <p>证书Id</p>
+     */
+    public $SSLCertId;
+
+    /**
+     * @param integer $AreaId <p>业务资源所在的模块id，没有资源模块先创建资源模块(只支持32位)</p>
+     * @param integer $Protocol <p>业务资源协议类型, 1:UDP, 2:TCP, 3:所有协议(只支持32位)</p>
+     * @param string $ServiceName <p>业务资源名称，同一个资源模块下面不可重复</p>
+     * @param string $ServiceType <p>业务资源类型:ip,domain,ip_section，对应ip、域名、ip段</p>
+     * @param string $ServicePort <p>业务资源端口 all,1-65535</p>
+     * @param integer $Levels <p>业务资源优先级 1-65535(只支持32位)</p>
+     * @param string $ServiceAddress <p>业务资源地址(ip、域名、ip段)</p>
+     * @param integer $DirectConn <p>是否走代理,该参数不传，默认为0, 2：内外网直连，1：内网直连， 0：不启用代理配置(只支持32位)</p>
+     * @param integer $ConnectivityCheckSwitch <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+     * @param integer $ConnectivityCheckInterval <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+     * @param string $ConnectivityCheckIntervalUnit <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+     * @param integer $ServiceNetwork <p>资源网络类型：1-内网资源 2-外网资源，默认1</p>
+     * @param integer $WireGuardTunnel <p>是否启用L3网络：1-不启用 2-启用，默认1</p>
+     * @param string $Description <p>资源描述</p>
+     * @param integer $URLAuditState <p>URL审计开关：0-关闭 1-开启，默认0</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param string $URLAuditId <p>URL审计证书ID列表，多个用分号分隔</p>
+     * @param string $URLPath <p>URL审计路径，多个用分号分隔</p>
+     * @param string $SSLCertId <p>证书Id</p>
      */
     function __construct()
     {
@@ -132,6 +212,46 @@ class CreateBusinessResourceRequest extends AbstractModel
 
         if (array_key_exists("DirectConn",$param) and $param["DirectConn"] !== null) {
             $this->DirectConn = $param["DirectConn"];
+        }
+
+        if (array_key_exists("ConnectivityCheckSwitch",$param) and $param["ConnectivityCheckSwitch"] !== null) {
+            $this->ConnectivityCheckSwitch = $param["ConnectivityCheckSwitch"];
+        }
+
+        if (array_key_exists("ConnectivityCheckInterval",$param) and $param["ConnectivityCheckInterval"] !== null) {
+            $this->ConnectivityCheckInterval = $param["ConnectivityCheckInterval"];
+        }
+
+        if (array_key_exists("ConnectivityCheckIntervalUnit",$param) and $param["ConnectivityCheckIntervalUnit"] !== null) {
+            $this->ConnectivityCheckIntervalUnit = $param["ConnectivityCheckIntervalUnit"];
+        }
+
+        if (array_key_exists("ServiceNetwork",$param) and $param["ServiceNetwork"] !== null) {
+            $this->ServiceNetwork = $param["ServiceNetwork"];
+        }
+
+        if (array_key_exists("WireGuardTunnel",$param) and $param["WireGuardTunnel"] !== null) {
+            $this->WireGuardTunnel = $param["WireGuardTunnel"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("URLAuditState",$param) and $param["URLAuditState"] !== null) {
+            $this->URLAuditState = $param["URLAuditState"];
+        }
+
+        if (array_key_exists("URLAuditId",$param) and $param["URLAuditId"] !== null) {
+            $this->URLAuditId = $param["URLAuditId"];
+        }
+
+        if (array_key_exists("URLPath",$param) and $param["URLPath"] !== null) {
+            $this->URLPath = $param["URLPath"];
+        }
+
+        if (array_key_exists("SSLCertId",$param) and $param["SSLCertId"] !== null) {
+            $this->SSLCertId = $param["SSLCertId"];
         }
     }
 }

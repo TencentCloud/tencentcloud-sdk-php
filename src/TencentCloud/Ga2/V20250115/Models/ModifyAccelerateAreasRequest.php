@@ -61,7 +61,7 @@ class ModifyAccelerateAreasRequest extends AbstractModel
         if (array_key_exists("AcceleratorAreas",$param) and $param["AcceleratorAreas"] !== null) {
             $this->AcceleratorAreas = [];
             foreach ($param["AcceleratorAreas"] as $key => $value){
-                $obj = new AcceleratorAreas();
+                $obj = new ModifyAccelerateAreasInfo();
                 $obj->deserialize($value);
                 array_push($this->AcceleratorAreas, $obj);
             }

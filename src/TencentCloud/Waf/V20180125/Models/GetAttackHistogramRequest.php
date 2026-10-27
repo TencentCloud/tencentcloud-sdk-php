@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAttackHistogram请求参数结构体
  *
- * @method string getDomain() 获取查询的域名，所有域名使用all
- * @method void setDomain(string $Domain) 设置查询的域名，所有域名使用all
- * @method string getStartTime() 获取查询起始时间
- * @method void setStartTime(string $StartTime) 设置查询起始时间
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
- * @method string getQueryString() 获取Lucene语法
- * @method void setQueryString(string $QueryString) 设置Lucene语法
+ * @method string getDomain() 获取<p>查询的域名，所有域名使用all</p>
+ * @method void setDomain(string $Domain) 设置<p>查询的域名，所有域名使用all</p>
+ * @method string getStartTime() 获取<p>查询起始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询起始时间</p>
+ * @method string getEndTime() 获取<p>查询结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询结束时间</p>
+ * @method string getQueryString() 获取<p>Lucene语法</p>
+ * @method void setQueryString(string $QueryString) 设置<p>Lucene语法</p>
  */
 class GetAttackHistogramRequest extends AbstractModel
 {
     /**
-     * @var string 查询的域名，所有域名使用all
+     * @var string <p>查询的域名，所有域名使用all</p>
      */
     public $Domain;
 
     /**
-     * @var string 查询起始时间
+     * @var string <p>查询起始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间
+     * @var string <p>查询结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string Lucene语法
+     * @var string <p>Lucene语法</p>
      */
     public $QueryString;
 
     /**
-     * @param string $Domain 查询的域名，所有域名使用all
-     * @param string $StartTime 查询起始时间
-     * @param string $EndTime 查询结束时间
-     * @param string $QueryString Lucene语法
+     * @param string $Domain <p>查询的域名，所有域名使用all</p>
+     * @param string $StartTime <p>查询起始时间</p>
+     * @param string $EndTime <p>查询结束时间</p>
+     * @param string $QueryString <p>Lucene语法</p>
      */
     function __construct()
     {

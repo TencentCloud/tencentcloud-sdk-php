@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>沙箱实例ID</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>沙箱实例ID</p>
- * @method string getTimeout() 获取<p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
- * @method void setTimeout(string $Timeout) 设置<p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
- * @method array getMetadata() 获取<p>沙箱实例元数据</p>
- * @method void setMetadata(array $Metadata) 设置<p>沙箱实例元数据</p>
+ * @method string getTimeout() 获取手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
+ * @method void setTimeout(string $Timeout) 设置手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
+ * @method array getMetadata() 获取实例元数据。
+ * @method void setMetadata(array $Metadata) 设置实例元数据。
  */
 class UpdateSandboxInstanceRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UpdateSandboxInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+     * @var string 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
      */
     public $Timeout;
 
     /**
-     * @var array <p>沙箱实例元数据</p>
+     * @var array 实例元数据。
      */
     public $Metadata;
 
     /**
      * @param string $InstanceId <p>沙箱实例ID</p>
-     * @param string $Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
-     * @param array $Metadata <p>沙箱实例元数据</p>
+     * @param string $Timeout 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
+     * @param array $Metadata 实例元数据。
      */
     function __construct()
     {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudDedicatedZoneHosts请求参数结构体
  *
- * @method string getCloudDedicatedZoneID() 获取专属可用区ID 
- * @method void setCloudDedicatedZoneID(string $CloudDedicatedZoneID) 设置专属可用区ID 
- * @method array getHostUuids() 获取一个或多个Host面的CVM实例信息。最大支持查询100台Host。
- * @method void setHostUuids(array $HostUuids) 设置一个或多个Host面的CVM实例信息。最大支持查询100台Host。
- * @method array getInstanceIds() 获取查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
- * @method void setInstanceIds(array $InstanceIds) 设置查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
- * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+ * @method string getCloudDedicatedZoneID() 获取<p>专属可用区ID</p>
+ * @method void setCloudDedicatedZoneID(string $CloudDedicatedZoneID) 设置<p>专属可用区ID</p>
+ * @method array getHostUuids() 获取<p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
+ * @method void setHostUuids(array $HostUuids) 设置<p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
+ * @method array getInstanceIds() 获取<p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
  */
 class DescribeCloudDedicatedZoneHostsRequest extends AbstractModel
 {
     /**
-     * @var string 专属可用区ID 
+     * @var string <p>专属可用区ID</p>
      */
     public $CloudDedicatedZoneID;
 
     /**
-     * @var array 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
+     * @var array <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
      */
     public $HostUuids;
 
     /**
-     * @var array 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
+     * @var array <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
      */
     public $InstanceIds;
 
     /**
-     * @var integer 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * @var integer <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * @var integer <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public $Limit;
 
     /**
-     * @param string $CloudDedicatedZoneID 专属可用区ID 
-     * @param array $HostUuids 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
-     * @param array $InstanceIds 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
-     * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
-     * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * @param string $CloudDedicatedZoneID <p>专属可用区ID</p>
+     * @param array $HostUuids <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
+     * @param array $InstanceIds <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
+     * @param integer $Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     function __construct()
     {

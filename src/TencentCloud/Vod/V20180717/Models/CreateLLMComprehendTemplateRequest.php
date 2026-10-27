@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsr(LLMComprehendAsr $Asr) 设置<p>文本转录解析配置</p>
  * @method LLMComprehendFaceRecognition getFaceRecognition() 获取<p>人脸识别配置</p>
  * @method void setFaceRecognition(LLMComprehendFaceRecognition $FaceRecognition) 设置<p>人脸识别配置</p>
+ * @method LLMComprehendDNA getDNA() 获取<p>DNA解析配置</p>
+ * @method void setDNA(LLMComprehendDNA $DNA) 设置<p>DNA解析配置</p>
  */
 class CreateLLMComprehendTemplateRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
     public $FaceRecognition;
 
     /**
+     * @var LLMComprehendDNA <p>DNA解析配置</p>
+     */
+    public $DNA;
+
+    /**
      * @param string $Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $Name <p>大模型解析模板名称，长度限制：64 个字符。</p>
@@ -80,6 +87,7 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
      * @param LLMComprehendSummary $Summary <p>分段摘要解析配置<br>注意：当前版本必须要打开分段摘要，才可以正常进行解析</p>
      * @param LLMComprehendAsr $Asr <p>文本转录解析配置</p>
      * @param LLMComprehendFaceRecognition $FaceRecognition <p>人脸识别配置</p>
+     * @param LLMComprehendDNA $DNA <p>DNA解析配置</p>
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class CreateLLMComprehendTemplateRequest extends AbstractModel
         if (array_key_exists("FaceRecognition",$param) and $param["FaceRecognition"] !== null) {
             $this->FaceRecognition = new LLMComprehendFaceRecognition();
             $this->FaceRecognition->deserialize($param["FaceRecognition"]);
+        }
+
+        if (array_key_exists("DNA",$param) and $param["DNA"] !== null) {
+            $this->DNA = new LLMComprehendDNA();
+            $this->DNA->deserialize($param["DNA"]);
         }
     }
 }

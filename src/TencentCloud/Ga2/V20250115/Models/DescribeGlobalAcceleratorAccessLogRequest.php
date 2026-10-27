@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置<p>查询过滤参数。{ &quot;Name&quot;: &quot;listener-id&quot;, &quot;Values&quot;: [&quot;监听器唯一Id&quot;] },{ &quot;Name&quot;: &quot;endpoint-group-id&quot;, &quot;Values&quot;: [&quot;终端节点组唯一Id&quot;] },{ &quot;Name&quot;: &quot;access_log_id&quot;, &quot;Values&quot;: [&quot;日志唯一Id&quot;] }</p>
  * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
- * @method integer getLimit() 获取<p>返回数量。</p><p>取值范围：[0, 200]</p>
- * @method void setLimit(integer $Limit) 设置<p>返回数量。</p><p>取值范围：[0, 200]</p>
+ * @method integer getLimit() 获取<p>返回数量。</p><p>取值范围：[1, 200]</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量。</p><p>取值范围：[1, 200]</p>
  */
 class DescribeGlobalAcceleratorAccessLogRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeGlobalAcceleratorAccessLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer <p>返回数量。</p><p>取值范围：[0, 200]</p>
+     * @var integer <p>返回数量。</p><p>取值范围：[1, 200]</p>
      */
     public $Limit;
 
@@ -55,7 +55,7 @@ class DescribeGlobalAcceleratorAccessLogRequest extends AbstractModel
      * @param string $GlobalAcceleratorId <p>ga实例唯一Id</p>
      * @param array $Filters <p>查询过滤参数。{ &quot;Name&quot;: &quot;listener-id&quot;, &quot;Values&quot;: [&quot;监听器唯一Id&quot;] },{ &quot;Name&quot;: &quot;endpoint-group-id&quot;, &quot;Values&quot;: [&quot;终端节点组唯一Id&quot;] },{ &quot;Name&quot;: &quot;access_log_id&quot;, &quot;Values&quot;: [&quot;日志唯一Id&quot;] }</p>
      * @param integer $Offset <p>偏移量，默认为0。</p>
-     * @param integer $Limit <p>返回数量。</p><p>取值范围：[0, 200]</p>
+     * @param integer $Limit <p>返回数量。</p><p>取值范围：[1, 200]</p>
      */
     function __construct()
     {

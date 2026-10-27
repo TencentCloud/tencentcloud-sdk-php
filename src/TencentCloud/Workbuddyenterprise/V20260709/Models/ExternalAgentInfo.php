@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setA2AVersion(string $A2AVersion) 设置外部 agent card 声明的版本号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLatestVersionName() 获取子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestVersionName(string $LatestVersionName) 设置子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getA2ASkillSet() 获取A2A card skills 集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setA2ASkillSet(array $A2ASkillSet) 设置A2A card skills 集合
@@ -108,6 +112,12 @@ class ExternalAgentInfo extends AbstractModel
     public $A2AVersion;
 
     /**
+     * @var string 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestVersionName;
+
+    /**
      * @var array A2A card skills 集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,6 +139,8 @@ class ExternalAgentInfo extends AbstractModel
      * @param string $IconUrl 头像地址（取自 provider card 的 iconUrl）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $A2AVersion 外部 agent card 声明的版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestVersionName 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $A2ASkillSet A2A card skills 集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,6 +188,10 @@ class ExternalAgentInfo extends AbstractModel
 
         if (array_key_exists("A2AVersion",$param) and $param["A2AVersion"] !== null) {
             $this->A2AVersion = $param["A2AVersion"];
+        }
+
+        if (array_key_exists("LatestVersionName",$param) and $param["LatestVersionName"] !== null) {
+            $this->LatestVersionName = $param["LatestVersionName"];
         }
 
         if (array_key_exists("A2ASkillSet",$param) and $param["A2ASkillSet"] !== null) {

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmotionCategory(string $EmotionCategory) 设置<p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
  * @method integer getEmotionIntensity() 获取<p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
  * @method void setEmotionIntensity(integer $EmotionIntensity) 设置<p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
+ * @method boolean getEnableLatex() 获取<p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+ * @method void setEnableLatex(boolean $EnableLatex) 设置<p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class TextToVoiceRequest extends AbstractModel
     public $EmotionIntensity;
 
     /**
+     * @var boolean <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+     */
+    public $EnableLatex;
+
+    /**
      * @param string $Text <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      * @param string $SessionId <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p>
      * @param float $Volume <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
@@ -144,6 +151,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $SegmentRate <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p>
      * @param string $EmotionCategory <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
      * @param integer $EmotionIntensity <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
+     * @param boolean $EnableLatex <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("EmotionIntensity",$param) and $param["EmotionIntensity"] !== null) {
             $this->EmotionIntensity = $param["EmotionIntensity"];
+        }
+
+        if (array_key_exists("EnableLatex",$param) and $param["EnableLatex"] !== null) {
+            $this->EnableLatex = $param["EnableLatex"];
         }
     }
 }

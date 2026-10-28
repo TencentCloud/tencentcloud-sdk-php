@@ -29,6 +29,7 @@ use TencentCloud\Cfg\V20210820\Models as Models;
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
  * @method Models\DescribeActionFieldConfigListResponse DescribeActionFieldConfigList(Models\DescribeActionFieldConfigListRequest $req) 根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。
  * @method Models\DescribeActionLibraryListResponse DescribeActionLibraryList(Models\DescribeActionLibraryListRequest $req) 获取混沌演练平台的动作库列表
+ * @method Models\DescribeInstanceAgentListResponse DescribeInstanceAgentList(Models\DescribeInstanceAgentListRequest $req) 查询探针列表，换为OTeam探针版本
  * @method Models\DescribeObjectTypeListResponse DescribeObjectTypeList(Models\DescribeObjectTypeListRequest $req) 查询对象类型列表
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 查询任务
  * @method Models\DescribeTaskExecuteLogsResponse DescribeTaskExecuteLogs(Models\DescribeTaskExecuteLogsRequest $req) 获取演练过程中的所有日志
@@ -38,8 +39,10 @@ use TencentCloud\Cfg\V20210820\Models as Models;
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 查询经验库列表
  * @method Models\ExecuteTaskResponse ExecuteTask(Models\ExecuteTaskRequest $req) 执行任务
  * @method Models\ExecuteTaskInstanceResponse ExecuteTaskInstance(Models\ExecuteTaskInstanceRequest $req) 触发混沌演练任务的动作，对于实例进行演练操作
+ * @method Models\InstallAgentOpenApiResponse InstallAgentOpenApi(Models\InstallAgentOpenApiRequest $req) 安装探针接口
  * @method Models\ModifyTaskRunStatusResponse ModifyTaskRunStatus(Models\ModifyTaskRunStatusRequest $req) 修改任务运行状态
  * @method Models\TriggerPolicyResponse TriggerPolicy(Models\TriggerPolicyRequest $req) 用于触发混沌演练护栏（类型为触发和恢复2种）
+ * @method Models\UninstallAgentOpenApiResponse UninstallAgentOpenApi(Models\UninstallAgentOpenApiRequest $req) 卸载探针
  */
 
 class CfgClient extends AbstractClient

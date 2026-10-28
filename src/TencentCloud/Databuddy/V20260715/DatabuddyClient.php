@@ -142,6 +142,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
  * @method Models\RemoveWorkspaceGroupsResponse RemoveWorkspaceGroups(Models\RemoveWorkspaceGroupsRequest $req) 移除工作空间用户组
+ * @method Models\RemoveWorkspaceUsersResponse RemoveWorkspaceUsers(Models\RemoveWorkspaceUsersRequest $req) <p>批量移除工作空间用户（单次最多10个；单个 UIN 失败不影响其他 UIN 移除，成败以 SuccessUins/FailItems 为准）</p>
  * @method Models\RerunWorkflowRunResponse RerunWorkflowRun(Models\RerunWorkflowRunRequest $req) 重跑工作流
  * @method Models\RunWorkflowResponse RunWorkflow(Models\RunWorkflowRequest $req) 运行工作流
  * @method Models\SearchAssetResponse SearchAsset(Models\SearchAssetRequest $req) 资产统一搜索
@@ -206,8 +207,15 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\UpdateWorkflowResponse UpdateWorkflow(Models\UpdateWorkflowRequest $req) 更新工作流
  * @method Models\UpdateWorkspaceResponse UpdateWorkspace(Models\UpdateWorkspaceRequest $req) 修改工作空间，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\UpdateWorkspaceGroupsRolesResponse UpdateWorkspaceGroupsRoles(Models\UpdateWorkspaceGroupsRolesRequest $req) 更新工作空间用户组角色
+ * @method Models\UpdateWorkspaceGroupsTagsResponse UpdateWorkspaceGroupsTags(Models\UpdateWorkspaceGroupsTagsRequest $req) 修改工作空间用户组标签
  * @method Models\UpdateWorkspaceRoleResponse UpdateWorkspaceRole(Models\UpdateWorkspaceRoleRequest $req) 更新工作空间角色
  * @method Models\UpdateWorkspaceUsersRolesResponse UpdateWorkspaceUsersRoles(Models\UpdateWorkspaceUsersRolesRequest $req) 修改工作空间用户角色
+ * @method Models\UpdateWorkspaceUsersTagsResponse UpdateWorkspaceUsersTags(Models\UpdateWorkspaceUsersTagsRequest $req) 修改工作空间用户标签
+本接口为整体覆盖式修改：每次调用以请求中的 Tags 为准，替换指定用户的全部直绑标签，而非增量追加。
+1、传入 Tags（含 TagId/TagValueId）：替换为该批标签
+2、不传 Tags 或传入空数组（"Tags": []）：将清除 UserUins 中所有用户的全部直绑标签，且操作不可逆，请谨慎调用
+3、多个用户将共享同一批 Tags；仅修改单个用户时，UserUins 请只传该用户
+4、仅清除用户直绑（Source=1）的标签，用户从用户组继承的标签（Source=2）不受影响
  */
 
 class DatabuddyClient extends AbstractClient

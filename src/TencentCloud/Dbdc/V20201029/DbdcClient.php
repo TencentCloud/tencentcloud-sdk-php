@@ -62,10 +62,17 @@ use TencentCloud\Dbdc\V20201029\Models as Models;
  * @method Models\ModifyDBCustomNodeAttributesResponse ModifyDBCustomNodeAttributes(Models\ModifyDBCustomNodeAttributesRequest $req) 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
  * @method Models\ModifyDBCustomNodeSecurityGroupsResponse ModifyDBCustomNodeSecurityGroups(Models\ModifyDBCustomNodeSecurityGroupsRequest $req) 该接口（ModifyDBCustomNodeSecurityGroups）用于修改 DB Custom 节点安全组。
  * @method Models\ModifyDBCustomNodeTagsResponse ModifyDBCustomNodeTags(Models\ModifyDBCustomNodeTagsRequest $req) 该接口（ModifyDBCustomNodeTags）用于修改 DB Custom 节点绑定的标签。
+ * @method Models\ModifyDBCustomNodeTypeResponse ModifyDBCustomNodeType(Models\ModifyDBCustomNodeTypeRequest $req) 该接口（ModifyDBCustomNodeType）用于修改 DB Custom 节点配置。
+修改节点配置过程中会重启节点。
  * @method Models\ModifyDBCustomNodesDisasterRecoverGroupResponse ModifyDBCustomNodesDisasterRecoverGroup(Models\ModifyDBCustomNodesDisasterRecoverGroupRequest $req) 该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
  * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口用于修改集群名称
+ * @method Models\RebootDBCustomNodesResponse RebootDBCustomNodes(Models\RebootDBCustomNodesRequest $req) 该接口（RebootDBCustomNodes）用于重启 DB Custom 节点。
  * @method Models\RemoveNodesFromDBCustomClusterResponse RemoveNodesFromDBCustomCluster(Models\RemoveNodesFromDBCustomClusterRequest $req) 该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。
  * @method Models\RenewDBCustomNodeResponse RenewDBCustomNode(Models\RenewDBCustomNodeRequest $req) 该接口（RenewDBCustomNode）用于给 DB Custom 节点续费，或者给已经隔离的实例解除隔离。
+ * @method Models\ResetDBCustomNodeResponse ResetDBCustomNode(Models\ResetDBCustomNodeRequest $req) 该接口（ResetDBCustomNode）用于重装 DB Custom 节点的操作系统。
+ * @method Models\ResizeDBCustomNodeDiskResponse ResizeDBCustomNodeDisk(Models\ResizeDBCustomNodeDiskRequest $req) 该接口（ResizeDBCustomNodeDisk）用于调整 DB Custom 节点磁盘容量。
+ * @method Models\StartDBCustomNodesResponse StartDBCustomNodes(Models\StartDBCustomNodesRequest $req) 该接口（StartDBCustomNodes）用于开机 DB Custom 节点。
+ * @method Models\StopDBCustomNodesResponse StopDBCustomNodes(Models\StopDBCustomNodesRequest $req) 该接口（StopDBCustomNodes）用于关机 DB Custom 节点。
  */
 
 class DbdcClient extends AbstractClient

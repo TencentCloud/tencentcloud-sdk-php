@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 空间信息
  *
- * @method string getSpaceId() 获取空间id
- * @method void setSpaceId(string $SpaceId) 设置空间id
- * @method string getName() 获取空间名称
- * @method void setName(string $Name) 设置空间名称
- * @method string getDescription() 获取空间描述
- * @method void setDescription(string $Description) 设置空间描述
- * @method array getPermissionIdList() 获取空间权限
- * @method void setPermissionIdList(array $PermissionIdList) 设置空间权限
+ * @method string getSpaceId() 获取<p>空间id</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间id</p>
+ * @method string getName() 获取<p>空间名称</p>
+ * @method void setName(string $Name) 设置<p>空间名称</p>
+ * @method string getDescription() 获取<p>空间描述</p>
+ * @method void setDescription(string $Description) 设置<p>空间描述</p>
+ * @method array getPermissionIdList() 获取<p>空间权限</p>
+ * @method void setPermissionIdList(array $PermissionIdList) 设置<p>空间权限</p>
+ * @method string getCreateTime() 获取<p>创建时间</p><p>参数格式：秒时间戳</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p><p>参数格式：秒时间戳</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p><p>参数格式：秒时间戳</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p><p>参数格式：秒时间戳</p>
  */
 class Space extends AbstractModel
 {
     /**
-     * @var string 空间id
+     * @var string <p>空间id</p>
      */
     public $SpaceId;
 
     /**
-     * @var string 空间名称
+     * @var string <p>空间名称</p>
      */
     public $Name;
 
     /**
-     * @var string 空间描述
+     * @var string <p>空间描述</p>
      */
     public $Description;
 
     /**
-     * @var array 空间权限
+     * @var array <p>空间权限</p>
      */
     public $PermissionIdList;
 
     /**
-     * @param string $SpaceId 空间id
-     * @param string $Name 空间名称
-     * @param string $Description 空间描述
-     * @param array $PermissionIdList 空间权限
+     * @var string <p>创建时间</p><p>参数格式：秒时间戳</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var string <p>更新时间</p><p>参数格式：秒时间戳</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $SpaceId <p>空间id</p>
+     * @param string $Name <p>空间名称</p>
+     * @param string $Description <p>空间描述</p>
+     * @param array $PermissionIdList <p>空间权限</p>
+     * @param string $CreateTime <p>创建时间</p><p>参数格式：秒时间戳</p>
+     * @param string $UpdateTime <p>更新时间</p><p>参数格式：秒时间戳</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class Space extends AbstractModel
 
         if (array_key_exists("PermissionIdList",$param) and $param["PermissionIdList"] !== null) {
             $this->PermissionIdList = $param["PermissionIdList"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

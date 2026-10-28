@@ -20,15 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIntelligences请求参数结构体
  *
+ * @method integer getCustomerId() 获取<p>企业ID</p>
+ * @method void setCustomerId(integer $CustomerId) 设置<p>企业ID</p>
  * @method array getFilters() 获取查询数组
  * @method void setFilters(array $Filters) 设置查询数组
  * @method integer getLimit() 获取分页大小
  * @method void setLimit(integer $Limit) 设置分页大小
  * @method integer getOffset() 获取分页偏移
  * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method boolean getIsActual() 获取<p>是否筛选有效情报</p>
+ * @method void setIsActual(boolean $IsActual) 设置<p>是否筛选有效情报</p>
  */
 class DescribeIntelligencesRequest extends AbstractModel
 {
+    /**
+     * @var integer <p>企业ID</p>
+     */
+    public $CustomerId;
+
     /**
      * @var array 查询数组
      */
@@ -45,9 +54,16 @@ class DescribeIntelligencesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var boolean <p>是否筛选有效情报</p>
+     */
+    public $IsActual;
+
+    /**
+     * @param integer $CustomerId <p>企业ID</p>
      * @param array $Filters 查询数组
      * @param integer $Limit 分页大小
      * @param integer $Offset 分页偏移
+     * @param boolean $IsActual <p>是否筛选有效情报</p>
      */
     function __construct()
     {
@@ -62,6 +78,10 @@ class DescribeIntelligencesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CustomerId",$param) and $param["CustomerId"] !== null) {
+            $this->CustomerId = $param["CustomerId"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -77,6 +97,10 @@ class DescribeIntelligencesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("IsActual",$param) and $param["IsActual"] !== null) {
+            $this->IsActual = $param["IsActual"];
         }
     }
 }

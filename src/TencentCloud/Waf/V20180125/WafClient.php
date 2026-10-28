@@ -68,6 +68,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) Waf IP黑白名单最新版本删除接口
  * @method Models\DeleteLLMContentRuleResponse DeleteLLMContentRule(Models\DeleteLLMContentRuleRequest $req) 删除大模型内容防护规则
  * @method Models\DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrary(Models\DeleteLLMKeywordLibraryRequest $req) 删除词库列表
+ * @method Models\DeleteLLMSdkAccessResponse DeleteLLMSdkAccess(Models\DeleteLLMSdkAccessRequest $req) llmwaf-sdk删除接入配置接口
  * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) 解除门神规则的状态锁
  * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) 删除用户规则引擎白名单
  * @method Models\DeleteProtectGroupResponse DeleteProtectGroup(Models\DeleteProtectGroupRequest $req) 删除防护对象组

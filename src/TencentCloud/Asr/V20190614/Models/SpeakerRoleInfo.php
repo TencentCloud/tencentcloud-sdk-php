@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 说话人注册角色声纹信息
  *
- * @method string getRoleAudioUrl() 获取音频url地址，建议不超过30秒，最大45秒
- * @method void setRoleAudioUrl(string $RoleAudioUrl) 设置音频url地址，建议不超过30秒，最大45秒
- * @method string getRoleName() 获取不超过30字节
- * @method void setRoleName(string $RoleName) 设置不超过30字节
+ * @method string getRoleAudioUrl() 获取<p>音频url地址，建议不超过30秒，最大45秒</p>
+ * @method void setRoleAudioUrl(string $RoleAudioUrl) 设置<p>音频url地址，建议不超过30秒，最大45秒</p>
+ * @method string getRoleName() 获取<p>不超过30字节</p>
+ * @method void setRoleName(string $RoleName) 设置<p>不超过30字节</p>
+ * @method string getVoicePrintId() 获取<p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+ * @method void setVoicePrintId(string $VoicePrintId) 设置<p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+ * @method string getSpeakerNick() 获取<p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+ * @method void setSpeakerNick(string $SpeakerNick) 设置<p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
  */
 class SpeakerRoleInfo extends AbstractModel
 {
     /**
-     * @var string 音频url地址，建议不超过30秒，最大45秒
+     * @var string <p>音频url地址，建议不超过30秒，最大45秒</p>
      */
     public $RoleAudioUrl;
 
     /**
-     * @var string 不超过30字节
+     * @var string <p>不超过30字节</p>
      */
     public $RoleName;
 
     /**
-     * @param string $RoleAudioUrl 音频url地址，建议不超过30秒，最大45秒
-     * @param string $RoleName 不超过30字节
+     * @var string <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+     */
+    public $VoicePrintId;
+
+    /**
+     * @var string <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+     */
+    public $SpeakerNick;
+
+    /**
+     * @param string $RoleAudioUrl <p>音频url地址，建议不超过30秒，最大45秒</p>
+     * @param string $RoleName <p>不超过30字节</p>
+     * @param string $VoicePrintId <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+     * @param string $SpeakerNick <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class SpeakerRoleInfo extends AbstractModel
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("VoicePrintId",$param) and $param["VoicePrintId"] !== null) {
+            $this->VoicePrintId = $param["VoicePrintId"];
+        }
+
+        if (array_key_exists("SpeakerNick",$param) and $param["SpeakerNick"] !== null) {
+            $this->SpeakerNick = $param["SpeakerNick"];
         }
     }
 }

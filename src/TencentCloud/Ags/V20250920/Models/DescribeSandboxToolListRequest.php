@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
+ * @method void setFilters(array $Filters) 设置过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
  */
 class DescribeSandboxToolListRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeSandboxToolListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeSandboxToolListRequest extends AbstractModel
      * @param array $ToolIds 沙箱工具ID列表，指定要查询的工具。如果为空则查询所有工具。最大支持100个ID
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
      */
     function __construct()
     {

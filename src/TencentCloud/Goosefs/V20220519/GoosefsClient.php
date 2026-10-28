@@ -36,11 +36,13 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\CreateFilesetResponse CreateFileset(Models\CreateFilesetRequest $req) 创建Fileset
  * @method Models\CreateLoadTaskResponse CreateLoadTask(Models\CreateLoadTaskRequest $req) GooseFS 预热相关接口，用于下发，列出，查询，修改预热任务。用于元数据预热、数据预热场景。 注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
  * @method Models\CreatePolicyRuleResponse CreatePolicyRule(Models\CreatePolicyRuleRequest $req) 创建数据洞察任务
+ * @method Models\CreateUserQuotaResponse CreateUserQuota(Models\CreateUserQuotaRequest $req) 创建用户配额
  * @method Models\DeleteCrossVpcSubnetSupportForClientNodeResponse DeleteCrossVpcSubnetSupportForClientNode(Models\DeleteCrossVpcSubnetSupportForClientNodeRequest $req) 为客户端节点删除跨vpc子网访问能力
  * @method Models\DeleteCustomerClusterResponse DeleteCustomerCluster(Models\DeleteCustomerClusterRequest $req) 删除客户端集群
  * @method Models\DeleteFileSystemResponse DeleteFileSystem(Models\DeleteFileSystemRequest $req) 删除文件系统
  * @method Models\DeleteFilesetResponse DeleteFileset(Models\DeleteFilesetRequest $req) 删除Fileset
  * @method Models\DeletePolicyRuleResponse DeletePolicyRule(Models\DeletePolicyRuleRequest $req) 删除扫描规则
+ * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 删除用户配额
  * @method Models\DescribeClientNodesResponse DescribeClientNodes(Models\DescribeClientNodesRequest $req) 列出集群中所有的客户端节点
  * @method Models\DescribeClusterClientTokenResponse DescribeClusterClientToken(Models\DescribeClusterClientTokenRequest $req) 查询GooseFS集群客户端凭证
  * @method Models\DescribeClusterRoleTokenResponse DescribeClusterRoleToken(Models\DescribeClusterRoleTokenRequest $req) 查询GooseFS集群角色凭证
@@ -54,6 +56,7 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\DescribeLoadTaskResponse DescribeLoadTask(Models\DescribeLoadTaskRequest $req) 查询单个预热任务执行情况。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
  * @method Models\DescribePolicyRuleResponse DescribePolicyRule(Models\DescribePolicyRuleRequest $req) 列出所有的扫描规则
  * @method Models\DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecord(Models\DescribePolicyRuleExecuteRecordRequest $req) 列出指定扫描规则的执行记录
+ * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询用户配额
  * @method Models\DetachFileSystemBucketResponse DetachFileSystemBucket(Models\DetachFileSystemBucketRequest $req) 解绑文件系统与Bucket的映射
  * @method Models\DisablePolicyRuleResponse DisablePolicyRule(Models\DisablePolicyRuleRequest $req) 禁用扫描任务
  * @method Models\EnablePolicyRuleResponse EnablePolicyRule(Models\EnablePolicyRuleRequest $req) 启用扫描任务
@@ -68,6 +71,7 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\UpdateFilesetResponse UpdateFileset(Models\UpdateFilesetRequest $req) 修改FIleset
  * @method Models\UpdateFilesetGeneralConfigResponse UpdateFilesetGeneralConfig(Models\UpdateFilesetGeneralConfigRequest $req) 修改Fileset通用配置
  * @method Models\UpdateLoadTaskPriorityResponse UpdateLoadTaskPriority(Models\UpdateLoadTaskPriorityRequest $req) 变更已有 GooseFS 预热任务配置，仅任务状态为 waiting 时可调用该接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+ * @method Models\UpdateUserQuotaResponse UpdateUserQuota(Models\UpdateUserQuotaRequest $req) 修改用户配额
  */
 
 class GoosefsClient extends AbstractClient

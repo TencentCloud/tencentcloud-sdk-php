@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContractDiffTaskWebUrl返回参数结构体
  *
- * @method string getWebUrl() 获取合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
- * @method void setWebUrl(string $WebUrl) 设置合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+ * @method string getWebUrl() 获取<p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
+ * @method void setWebUrl(string $WebUrl) 设置<p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeContractDiffTaskWebUrlResponse extends AbstractModel
 {
     /**
-     * @var string 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+     * @var string <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
      */
     public $WebUrl;
 
@@ -41,8 +38,7 @@ class DescribeContractDiffTaskWebUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $WebUrl 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+     * @param string $WebUrl <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

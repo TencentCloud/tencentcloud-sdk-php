@@ -111,8 +111,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateTWeSeeServiceResponse CreateTWeSeeService(Models\CreateTWeSeeServiceRequest $req) 开通 TWeSee 后付费服务
  * @method Models\CreateTWeSeeSubscriptionResponse CreateTWeSeeSubscription(Models\CreateTWeSeeSubscriptionRequest $req) 开通 TWeSee 预付费订阅
  * @method Models\CreateTWeTalkAgentResponse CreateTWeTalkAgent(Models\CreateTWeTalkAgentRequest $req) 新增TWeTalk智能体。
- * @method Models\CreateTWeTalkProductConfigResponse CreateTWeTalkProductConfig(Models\CreateTWeTalkProductConfigRequest $req) 用于配置TWeTalk服务连接产品配置信息。
- * @method Models\CreateTWeTalkProductConfigV2Response CreateTWeTalkProductConfigV2(Models\CreateTWeTalkProductConfigV2Request $req) 用于配置TWeTalk服务连接产品配置信息。
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 创建规则
  * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件
@@ -134,7 +132,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteTWeSeePersonResponse DeleteTWeSeePerson(Models\DeleteTWeSeePersonRequest $req) 删除指定 TWeSee 人员，可选择同时删除其关联人脸。
  * @method Models\DeleteTWeSeeTasksByConditionResponse DeleteTWeSeeTasksByCondition(Models\DeleteTWeSeeTasksByConditionRequest $req) 按条件删除指定设备和算法类目下的 TWeSee 任务及其关联数据。
  * @method Models\DeleteTWeTalkAgentResponse DeleteTWeTalkAgent(Models\DeleteTWeTalkAgentRequest $req) 用于删除TWeTalk智能体
- * @method Models\DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(Models\DeleteTWeTalkProductConfigV2Request $req) 用于删除配置TWeTalk服务连接产品配置信息。
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则。
  * @method Models\DescribeAISearchTaskAsyncResponse DescribeAISearchTaskAsync(Models\DescribeAISearchTaskAsyncRequest $req) 获取视频语义异步搜索任务详情
@@ -211,8 +208,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeTWeTalkAgentResponse DescribeTWeTalkAgent(Models\DescribeTWeTalkAgentRequest $req) 用户查询TWeTalk智能体详情
  * @method Models\DescribeTWeTalkAgentBindingResponse DescribeTWeTalkAgentBinding(Models\DescribeTWeTalkAgentBindingRequest $req) 查询智能体绑定关系
  * @method Models\DescribeTWeTalkAgentListResponse DescribeTWeTalkAgentList(Models\DescribeTWeTalkAgentListRequest $req) 分页查询智能体列表
- * @method Models\DescribeTWeTalkProductConfigResponse DescribeTWeTalkProductConfig(Models\DescribeTWeTalkProductConfigRequest $req) 用于获取TWeTalk服务连接产品配置信息。
- * @method Models\DescribeTWeTalkProductConfigV2Response DescribeTWeTalkProductConfigV2(Models\DescribeTWeTalkProductConfigV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\DescribeTopicPolicyResponse DescribeTopicPolicy(Models\DescribeTopicPolicyRequest $req) 本接口（DescribeTopicPolicy）用于查看Topic详细信息
  * @method Models\DescribeTopicRuleResponse DescribeTopicRule(Models\DescribeTopicRuleRequest $req) 获取规则信息
  * @method Models\DescribeUnbindedDevicesResponse DescribeUnbindedDevices(Models\DescribeUnbindedDevicesRequest $req) 获取未绑定的设备列表
@@ -243,8 +238,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(Models\GetTWeCallActiveStatusRequest $req) 查询激活状态
  * @method Models\GetTWeTalkActiveRecordListResponse GetTWeTalkActiveRecordList(Models\GetTWeTalkActiveRecordListRequest $req) TWeTalk消耗账单明细。
  * @method Models\GetTWeTalkActiveStatusResponse GetTWeTalkActiveStatus(Models\GetTWeTalkActiveStatusRequest $req) 查询TWeTalk设备激活状态。
- * @method Models\GetTWeTalkProductConfigListResponse GetTWeTalkProductConfigList(Models\GetTWeTalkProductConfigListRequest $req) 用于获取TWeTalk服务连接产品配置信息列表。
- * @method Models\GetTWeTalkProductConfigListV2Response GetTWeTalkProductConfigListV2(Models\GetTWeTalkProductConfigListV2Request $req) 用于查询TWeTalk服务连接产品配置信息。
  * @method Models\GetTopicRuleListResponse GetTopicRuleList(Models\GetTopicRuleListRequest $req) 获取规则列表
  * @method Models\GetVodCloudStorageEventListResponse GetVodCloudStorageEventList(Models\GetVodCloudStorageEventListRequest $req) 获取云存事件列表
  * @method Models\GetVodCloudStorageVideoListResponse GetVodCloudStorageVideoList(Models\GetVodCloudStorageVideoListRequest $req) 获取云存时间轴视频列表
@@ -289,8 +282,6 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyTWeSeeSubscriptionResponse ModifyTWeSeeSubscription(Models\ModifyTWeSeeSubscriptionRequest $req) 修改 TWeSee 预付费订阅
  * @method Models\ModifyTWeSeeSubscriptionRenewFlagResponse ModifyTWeSeeSubscriptionRenewFlag(Models\ModifyTWeSeeSubscriptionRenewFlagRequest $req) 修改 TWeSee 预付费订阅续费标识
  * @method Models\ModifyTWeTalkAgentResponse ModifyTWeTalkAgent(Models\ModifyTWeTalkAgentRequest $req) 修改TWeTalk智能体
- * @method Models\ModifyTWeTalkProductConfigResponse ModifyTWeTalkProductConfig(Models\ModifyTWeTalkProductConfigRequest $req) 用于修改TWeTalk服务连接产品配置信息。
- * @method Models\ModifyTWeTalkProductConfigV2Response ModifyTWeTalkProductConfigV2(Models\ModifyTWeTalkProductConfigV2Request $req) 用于修改配置TWeTalk服务连接产品配置信息。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
  * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
  * @method Models\OperateTWeSeeDirectUploadObjectResponse OperateTWeSeeDirectUploadObject(Models\OperateTWeSeeDirectUploadObjectRequest $req) 查询、删除或列举 TWeSee 直传对象

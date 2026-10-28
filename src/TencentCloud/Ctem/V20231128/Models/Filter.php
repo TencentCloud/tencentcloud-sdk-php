@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 支持按照各字段过滤
  *
  * @method string getName() 获取要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var string 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param string $Name 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

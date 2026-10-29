@@ -248,6 +248,8 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyPlatformEnvResponse DestroyPlatformEnv(Models\DestroyPlatformEnvRequest $req) 用户可以调用本接口，删除平台版套餐下的指定平台版环境。
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\DownloadFunctionResponse DownloadFunction(Models\DownloadFunctionRequest $req) 获取云函数地址并下载zip包
+ * @method Models\EnablePGDocumentExtResponse EnablePGDocumentExt(Models\EnablePGDocumentExtRequest $req) 当前环境下开启 Postgresql 数据库文档插件能力，开启后会在指定  EnvId 的 PostgreSQL 实例下自动生成  pgdoc schema 以提供文档能力，不会额外产生费用，可以云开发控制或云 API 开启使用。
+当前支持地域已环境开通时所在地域为准。
  * @method Models\ExecutePGSqlResponse ExecutePGSql(Models\ExecutePGSqlRequest $req) 在Postgres数据库上执行SQL
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 获取云函数详情
  * @method Models\GetProvidersResponse GetProviders(Models\GetProvidersRequest $req) 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioDuration(float $AudioDuration) 设置音频时长(秒)。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLlmResults() 获取大模型后处理结果
+ * @method void setLlmResults(array $LlmResults) 设置大模型后处理结果
  */
 class TaskStatus extends AbstractModel
 {
@@ -79,6 +81,11 @@ class TaskStatus extends AbstractModel
     public $AudioDuration;
 
     /**
+     * @var array 大模型后处理结果
+     */
+    public $LlmResults;
+
+    /**
      * @param integer $TaskId 任务标识。注意：TaskId数据类型为uint64。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
@@ -88,6 +95,7 @@ class TaskStatus extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $AudioDuration 音频时长(秒)。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LlmResults 大模型后处理结果
      */
     function __construct()
     {
@@ -133,6 +141,15 @@ class TaskStatus extends AbstractModel
 
         if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
             $this->AudioDuration = $param["AudioDuration"];
+        }
+
+        if (array_key_exists("LlmResults",$param) and $param["LlmResults"] !== null) {
+            $this->LlmResults = [];
+            foreach ($param["LlmResults"] as $key => $value){
+                $obj = new LlmResult();
+                $obj->deserialize($value);
+                array_push($this->LlmResults, $obj);
+            }
         }
     }
 }

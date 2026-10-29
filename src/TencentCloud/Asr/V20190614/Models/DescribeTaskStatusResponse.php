@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskStatus返回参数结构体
  *
- * @method TaskStatus getData() 获取录音文件识别的请求返回结果。
- * @method void setData(TaskStatus $Data) 设置录音文件识别的请求返回结果。
+ * @method TaskStatus getData() 获取<p>录音文件识别的请求返回结果。</p>
+ * @method void setData(TaskStatus $Data) 设置<p>录音文件识别的请求返回结果。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTaskStatusResponse extends AbstractModel
 {
     /**
-     * @var TaskStatus 录音文件识别的请求返回结果。
+     * @var TaskStatus <p>录音文件识别的请求返回结果。</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TaskStatus $Data 录音文件识别的请求返回结果。
+     * @param TaskStatus $Data <p>录音文件识别的请求返回结果。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

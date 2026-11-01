@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEthnicity(string $Ethnicity) 设置<p>外观特征。caucasian/asian/latino/african/middle_eastern</p>
  * @method string getBodyType() 获取<p>体型。slim / standard / athletic / chubby</p>
  * @method void setBodyType(string $BodyType) 设置<p>体型。slim / standard / athletic / chubby</p>
+ * @method array getImages() 获取<p>人物图片</p>
+ * @method void setImages(array $Images) 设置<p>人物图片</p>
  */
 class CloneViralPersona extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CloneViralPersona extends AbstractModel
     public $BodyType;
 
     /**
+     * @var array <p>人物图片</p>
+     */
+    public $Images;
+
+    /**
      * @param string $Gender <p>模特性别。male/female/any</p>
      * @param string $Age <p>年龄段。teenager/youth/middle_aged/senior</p>
      * @param string $Ethnicity <p>外观特征。caucasian/asian/latino/african/middle_eastern</p>
      * @param string $BodyType <p>体型。slim / standard / athletic / chubby</p>
+     * @param array $Images <p>人物图片</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CloneViralPersona extends AbstractModel
 
         if (array_key_exists("BodyType",$param) and $param["BodyType"] !== null) {
             $this->BodyType = $param["BodyType"];
+        }
+
+        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
+            $this->Images = $param["Images"];
         }
     }
 }

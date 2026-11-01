@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) 设置<p>分辨率。支持720p（默认）/1080p/2k/4k</p>
  * @method string getModelTier() 获取<p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
  * @method void setModelTier(string $ModelTier) 设置<p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+ * @method boolean getDepthWithAudio() 获取<p>深度估计结果是否含音频， 默认不含</p>
+ * @method void setDepthWithAudio(boolean $DepthWithAudio) 设置<p>深度估计结果是否含音频， 默认不含</p>
  */
 class CloneViralAIGC extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CloneViralAIGC extends AbstractModel
     public $ModelTier;
 
     /**
+     * @var boolean <p>深度估计结果是否含音频， 默认不含</p>
+     */
+    public $DepthWithAudio;
+
+    /**
      * @param integer $Duration <p>视频时长</p><p>取值范围：[4, 15]</p>
      * @param string $AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
      * @param string $Resolution <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
      * @param string $ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+     * @param boolean $DepthWithAudio <p>深度估计结果是否含音频， 默认不含</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CloneViralAIGC extends AbstractModel
 
         if (array_key_exists("ModelTier",$param) and $param["ModelTier"] !== null) {
             $this->ModelTier = $param["ModelTier"];
+        }
+
+        if (array_key_exists("DepthWithAudio",$param) and $param["DepthWithAudio"] !== null) {
+            $this->DepthWithAudio = $param["DepthWithAudio"];
         }
     }
 }

@@ -40,6 +40,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\CreateQAGenerationTaskResponse CreateQAGenerationTask(Models\CreateQAGenerationTaskRequest $req) 创建 QA 生成任务
  * @method Models\CreateQAListResponse CreateQAList(Models\CreateQAListRequest $req) 批量创建 QA
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 新增发布任务
+ * @method Models\CreateSSETokenResponse CreateSSEToken(Models\CreateSSETokenRequest $req) 创建 SSE Token
  * @method Models\CreateSimilarQuestionResponse CreateSimilarQuestion(Models\CreateSimilarQuestionRequest $req) 创建相似问生成任务
  * @method Models\CreateSkillResponse CreateSkill(Models\CreateSkillRequest $req) 创建skill
  * @method Models\CreateSkillShareResponse CreateSkillShare(Models\CreateSkillShareRequest $req) 提交自定义Skill至企业级共享审批（两段式：提交→审批→回调创建共享任务）

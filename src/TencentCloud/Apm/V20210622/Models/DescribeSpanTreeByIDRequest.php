@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterViewTagKeyList(array $FilterViewTagKeyList) 设置<p>过滤视图的Tag列表</p>
  * @method boolean getEnableResourceLink() 获取<p>是否开启云资源关联</p>
  * @method void setEnableResourceLink(boolean $EnableResourceLink) 设置<p>是否开启云资源关联</p>
+ * @method array getFilterTagKeys() 获取<p>字符串数组，tagstag里面的key</p>
+ * @method void setFilterTagKeys(array $FilterTagKeys) 设置<p>字符串数组，tagstag里面的key</p>
  */
 class DescribeSpanTreeByIDRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeSpanTreeByIDRequest extends AbstractModel
     public $EnableResourceLink;
 
     /**
+     * @var array <p>字符串数组，tagstag里面的key</p>
+     */
+    public $FilterTagKeys;
+
+    /**
      * @param string $InstanceId <p>业务系统 ID</p>
      * @param array $Filters <p>TraceID</p>
      * @param integer $StartTime <p>Span查询开始时间戳（单位:秒）</p>
@@ -96,6 +103,7 @@ class DescribeSpanTreeByIDRequest extends AbstractModel
      * @param string $FocusSpanId <p>关注的SpanId</p>
      * @param array $FilterViewTagKeyList <p>过滤视图的Tag列表</p>
      * @param boolean $EnableResourceLink <p>是否开启云资源关联</p>
+     * @param array $FilterTagKeys <p>字符串数组，tagstag里面的key</p>
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class DescribeSpanTreeByIDRequest extends AbstractModel
 
         if (array_key_exists("EnableResourceLink",$param) and $param["EnableResourceLink"] !== null) {
             $this->EnableResourceLink = $param["EnableResourceLink"];
+        }
+
+        if (array_key_exists("FilterTagKeys",$param) and $param["FilterTagKeys"] !== null) {
+            $this->FilterTagKeys = $param["FilterTagKeys"];
         }
     }
 }

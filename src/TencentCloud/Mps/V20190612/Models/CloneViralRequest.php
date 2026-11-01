@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoUrl() 获取<p>爆款视频Url</p>
  * @method void setVideoUrl(string $VideoUrl) 设置<p>爆款视频Url</p>
+ * @method string getMode() 获取<p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+ * @method void setMode(string $Mode) 设置<p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
  * @method CloneViralProduct getProduct() 获取<p>产品信息。除深度提取外，其他模式必填</p>
  * @method void setProduct(CloneViralProduct $Product) 设置<p>产品信息。除深度提取外，其他模式必填</p>
  * @method CloneViralAIGC getAIGCParam() 获取<p>AIGC生视频相关参数</p>
@@ -32,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersona(CloneViralPersona $Persona) 设置<p>模特形象</p>
  * @method CloneViralOutputOption getOutput() 获取<p>输出相关参数</p>
  * @method void setOutput(CloneViralOutputOption $Output) 设置<p>输出相关参数</p>
+ * @method CloneViralReference getReference() 获取<p>其他参考素材（如背景、服装）</p>
+ * @method void setReference(CloneViralReference $Reference) 设置<p>其他参考素材（如背景、服装）</p>
  */
 class CloneViralRequest extends AbstractModel
 {
@@ -39,6 +43,11 @@ class CloneViralRequest extends AbstractModel
      * @var string <p>爆款视频Url</p>
      */
     public $VideoUrl;
+
+    /**
+     * @var string <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+     */
+    public $Mode;
 
     /**
      * @var CloneViralProduct <p>产品信息。除深度提取外，其他模式必填</p>
@@ -66,12 +75,19 @@ class CloneViralRequest extends AbstractModel
     public $Output;
 
     /**
+     * @var CloneViralReference <p>其他参考素材（如背景、服装）</p>
+     */
+    public $Reference;
+
+    /**
      * @param string $VideoUrl <p>爆款视频Url</p>
+     * @param string $Mode <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
      * @param CloneViralProduct $Product <p>产品信息。除深度提取外，其他模式必填</p>
      * @param CloneViralAIGC $AIGCParam <p>AIGC生视频相关参数</p>
      * @param CloneViralContent $ContentParam <p>内容/风格相关参数</p>
      * @param CloneViralPersona $Persona <p>模特形象</p>
      * @param CloneViralOutputOption $Output <p>输出相关参数</p>
+     * @param CloneViralReference $Reference <p>其他参考素材（如背景、服装）</p>
      */
     function __construct()
     {
@@ -88,6 +104,10 @@ class CloneViralRequest extends AbstractModel
         }
         if (array_key_exists("VideoUrl",$param) and $param["VideoUrl"] !== null) {
             $this->VideoUrl = $param["VideoUrl"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
@@ -113,6 +133,11 @@ class CloneViralRequest extends AbstractModel
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new CloneViralOutputOption();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Reference",$param) and $param["Reference"] !== null) {
+            $this->Reference = new CloneViralReference();
+            $this->Reference->deserialize($param["Reference"]);
         }
     }
 }

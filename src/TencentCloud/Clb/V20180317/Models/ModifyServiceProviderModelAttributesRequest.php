@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK 实例 ID</p>
  * @method string getModelName() 获取<p>待修改的模型的名称（原始模型名称）</p>
  * @method void setModelName(string $ModelName) 设置<p>待修改的模型的名称（原始模型名称）</p>
- * @method array getInputModalities() 获取<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
- * @method void setInputModalities(array $InputModalities) 设置<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+ * @method array getInputModalities() 获取<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
+ * @method void setInputModalities(array $InputModalities) 设置<p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
  * @method string getNewModelName() 获取<p>新的上游模型名称</p>
  * @method void setNewModelName(string $NewModelName) 设置<p>新的上游模型名称</p>
  * @method string getNewModelAlias() 获取<p>新的对外模型名称</p>
  * @method void setNewModelAlias(string $NewModelAlias) 设置<p>新的对外模型名称</p>
+ * @method UpstreamRolloutOperation getUpstreamRollout() 获取<p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+ * @method void setUpstreamRollout(UpstreamRolloutOperation $UpstreamRollout) 设置<p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
  */
 class ModifyServiceProviderModelAttributesRequest extends AbstractModel
 {
@@ -44,7 +46,7 @@ class ModifyServiceProviderModelAttributesRequest extends AbstractModel
     public $ModelName;
 
     /**
-     * @var array <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @var array <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     public $InputModalities;
 
@@ -59,11 +61,17 @@ class ModifyServiceProviderModelAttributesRequest extends AbstractModel
     public $NewModelAlias;
 
     /**
+     * @var UpstreamRolloutOperation <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+     */
+    public $UpstreamRollout;
+
+    /**
      * @param string $ServiceProviderId <p>BYOK 实例 ID</p>
      * @param string $ModelName <p>待修改的模型的名称（原始模型名称）</p>
-     * @param array $InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * @param array $InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      * @param string $NewModelName <p>新的上游模型名称</p>
      * @param string $NewModelAlias <p>新的对外模型名称</p>
+     * @param UpstreamRolloutOperation $UpstreamRollout <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
      */
     function __construct()
     {
@@ -96,6 +104,11 @@ class ModifyServiceProviderModelAttributesRequest extends AbstractModel
 
         if (array_key_exists("NewModelAlias",$param) and $param["NewModelAlias"] !== null) {
             $this->NewModelAlias = $param["NewModelAlias"];
+        }
+
+        if (array_key_exists("UpstreamRollout",$param) and $param["UpstreamRollout"] !== null) {
+            $this->UpstreamRollout = new UpstreamRolloutOperation();
+            $this->UpstreamRollout->deserialize($param["UpstreamRollout"]);
         }
     }
 }

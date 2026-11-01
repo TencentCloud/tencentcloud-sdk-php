@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputTokensAbove(integer $InputTokensAbove) 设置<p>仅 chat；单位 K Token（1K=1000 Token）；非负整数，最大 2147483647；非空数组首条必须为 0，数组内严格递增、无重复；输入总 Token 严格超过阈值×1000，取满足条件的最大阈值，整单选价</p>
  * @method string getResolution() 获取<p>video 仅 480p／720p／768p／1024p／1080p／2k／4k，统一小写；只校验全局枚举，不校验模型支持子集；列表内不重复</p>
  * @method void setResolution(string $Resolution) 设置<p>video 仅 480p／720p／768p／1024p／1080p／2k／4k，统一小写；只校验全局枚举，不校验模型支持子集；列表内不重复</p>
+ * @method boolean getHasInputVideo() 获取<p>是否有视频输入</p>
+ * @method void setHasInputVideo(boolean $HasInputVideo) 设置<p>是否有视频输入</p>
  */
 class CoefficientTierCondition extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CoefficientTierCondition extends AbstractModel
     public $Resolution;
 
     /**
+     * @var boolean <p>是否有视频输入</p>
+     */
+    public $HasInputVideo;
+
+    /**
      * @param integer $InputTokensAbove <p>仅 chat；单位 K Token（1K=1000 Token）；非负整数，最大 2147483647；非空数组首条必须为 0，数组内严格递增、无重复；输入总 Token 严格超过阈值×1000，取满足条件的最大阈值，整单选价</p>
      * @param string $Resolution <p>video 仅 480p／720p／768p／1024p／1080p／2k／4k，统一小写；只校验全局枚举，不校验模型支持子集；列表内不重复</p>
+     * @param boolean $HasInputVideo <p>是否有视频输入</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CoefficientTierCondition extends AbstractModel
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("HasInputVideo",$param) and $param["HasInputVideo"] !== null) {
+            $this->HasInputVideo = $param["HasInputVideo"];
         }
     }
 }

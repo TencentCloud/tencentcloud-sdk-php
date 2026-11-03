@@ -31,6 +31,7 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\CreateScheduledTaskResponse CreateScheduledTask(Models\CreateScheduledTaskRequest $req) 创建自动化任务。AgentConfig 由上游传入，managed-agent 仅做协议透传。
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除指定的 Agent 及其所有版本。删除后不可恢复。
  * @method Models\DeleteScheduledTaskResponse DeleteScheduledTask(Models\DeleteScheduledTaskRequest $req) 删除指定的自动化任务。删除后不可恢复。
+ * @method Models\DeleteSessionArtifactListResponse DeleteSessionArtifactList(Models\DeleteSessionArtifactListRequest $req) 删除指定的物料，删除后不可恢复。
  * @method Models\DescribeAgentResponse DescribeAgent(Models\DescribeAgentRequest $req) 查询单个 Agent 的详细信息，包括基础配置和路由配置。
  * @method Models\DescribeAgentListResponse DescribeAgentList(Models\DescribeAgentListRequest $req) 查询当前企业的 Agent 列表，支持分页、过滤和排序。
  * @method Models\DescribeAgentSessionResponse DescribeAgentSession(Models\DescribeAgentSessionRequest $req) 查询单个 Agent 会话详情：返回会话基础信息（会话名称 / Agent / 版本 / 状态 / 来源 / 发起人）与可用的聊天接入点列表（EndpointSet）。数据面鉴权走 DescribeUserAccessToken 的用户级访问令牌。
@@ -47,6 +48,8 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\DescribeScheduledTaskListResponse DescribeScheduledTaskList(Models\DescribeScheduledTaskListRequest $req) 分页查询自动化任务列表，支持按任务名称、状态、Agent 过滤。
  * @method Models\DescribeScheduledTaskLogResponse DescribeScheduledTaskLog(Models\DescribeScheduledTaskLogRequest $req) 查询单条自动化任务执行日志的详细信息。
  * @method Models\DescribeScheduledTaskLogListResponse DescribeScheduledTaskLogList(Models\DescribeScheduledTaskLogListRequest $req) 分页查询自动化任务执行日志列表，支持状态和时间范围过滤，可选返回聚合统计。
+ * @method Models\DescribeSessionArtifactDownloadUrlResponse DescribeSessionArtifactDownloadUrl(Models\DescribeSessionArtifactDownloadUrlRequest $req) 获取会话物料下载链接。
+ * @method Models\DescribeSessionArtifactListResponse DescribeSessionArtifactList(Models\DescribeSessionArtifactListRequest $req) 分页查询会话物料列表。
  * @method Models\DescribeSkillListResponse DescribeSkillList(Models\DescribeSkillListRequest $req) 分页查询 Skill 列表，支持关键词、分类、发布状态过滤。
  * @method Models\DescribeUserAccessTokenResponse DescribeUserAccessToken(Models\DescribeUserAccessTokenRequest $req) 根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
  * @method Models\MigrateAgentSessionResponse MigrateAgentSession(Models\MigrateAgentSessionRequest $req) 将指定会话迁移到目标版本。SessionID / RuntimeID 保持不变，通过 AgentOS UpdateSession 在原沙箱上更新 manifest 到新版本；AgentId 必须与原 Session 一致（禁止跨 Agent 迁移）；ChatToken 复用旧值不轮转。

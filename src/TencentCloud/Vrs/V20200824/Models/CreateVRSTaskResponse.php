@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVRSTask返回参数结构体
  *
- * @method CreateVRSTaskRespData getData() 获取创建任务结果
- * @method void setData(CreateVRSTaskRespData $Data) 设置创建任务结果
+ * @method CreateVRSTaskRespData getData() 获取<p>创建任务结果</p>
+ * @method void setData(CreateVRSTaskRespData $Data) 设置<p>创建任务结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateVRSTaskResponse extends AbstractModel
 {
     /**
-     * @var CreateVRSTaskRespData 创建任务结果
+     * @var CreateVRSTaskRespData <p>创建任务结果</p>
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class CreateVRSTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CreateVRSTaskRespData $Data 创建任务结果
+     * @param CreateVRSTaskRespData $Data <p>创建任务结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

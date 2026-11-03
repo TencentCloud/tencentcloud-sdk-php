@@ -138,6 +138,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\ListWorkflowsResponse ListWorkflows(Models\ListWorkflowsRequest $req) 查询工作流列表
  * @method Models\ListWorkspaceGroupUsersResponse ListWorkspaceGroupUsers(Models\ListWorkspaceGroupUsersRequest $req) 查询工作空间用户组用户列表
  * @method Models\ListWorkspaceGroupsResponse ListWorkspaceGroups(Models\ListWorkspaceGroupsRequest $req) 查询工作空间用户组列表
+ * @method Models\ListWorkspaceRolesResponse ListWorkspaceRoles(Models\ListWorkspaceRolesRequest $req) 查询工作空间角色列表
  * @method Models\ListWorkspaceUsersResponse ListWorkspaceUsers(Models\ListWorkspaceUsersRequest $req) 查询工作空间用户列表
  * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
  * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>

@@ -18,7 +18,7 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通用的列表检索过滤选项
+ * 通用的列表检索过滤选项.
  *
  * @method string getName() 获取检索的键值
  * @method void setName(string $Name) 设置检索的键值

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>查询偏移</p>
  * @method integer getLimit() 获取<p>分页的页内记录数，默认为20，最大200</p>
  * @method void setLimit(integer $Limit) 设置<p>分页的页内记录数，默认为20，最大200</p>
+ * @method array getCategory() 获取<p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+ * @method void setCategory(array $Category) 设置<p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+ * @method array getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+ * @method void setStatus(array $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
  */
 class SearchTaskResultRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class SearchTaskResultRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+     */
+    public $Category;
+
+    /**
+     * @var array <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+     */
+    public $Status;
+
+    /**
      * @param string $StartTime <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
      * @param string $EndTime <p>搜索区间的结束时间。未指定时，默认取当前时间</p>
      * @param string $OperationId <p>运维任务ID</p>
@@ -96,6 +110,8 @@ class SearchTaskResultRequest extends AbstractModel
      * @param array $TaskType <p>任务类型<br>1 手工运维任务<br>2 定时任务<br>3 账号推送任务</p>
      * @param integer $Offset <p>查询偏移</p>
      * @param integer $Limit <p>分页的页内记录数，默认为20，最大200</p>
+     * @param array $Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+     * @param array $Status <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class SearchTaskResultRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

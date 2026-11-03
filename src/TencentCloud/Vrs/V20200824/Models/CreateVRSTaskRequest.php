@@ -20,150 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVRSTask请求参数结构体
  *
- * @method string getSessionId() 获取唯一请求 ID
- * @method void setSessionId(string $SessionId) 设置唯一请求 ID
- * @method string getVoiceName() 获取音色名称
- * @method void setVoiceName(string $VoiceName) 设置音色名称
- * @method integer getVoiceGender() 获取音色性别:
-
-1-male
-
-2-female
- * @method void setVoiceGender(integer $VoiceGender) 设置音色性别:
-
-1-male
-
-2-female
- * @method integer getVoiceLanguage() 获取语言类型：
-
-1-中文
- * @method void setVoiceLanguage(integer $VoiceLanguage) 设置语言类型：
-
-1-中文
- * @method array getAudioIdList() 获取音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
- * @method void setAudioIdList(array $AudioIdList) 设置音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
- * @method integer getSampleRate() 获取音频采样率：
-
-16000：16k
- * @method void setSampleRate(integer $SampleRate) 设置音频采样率：
-
-16000：16k
- * @method string getCodec() 获取音频格式，音频类型(wav,mp3,aac,m4a)
- * @method void setCodec(string $Codec) 设置音频格式，音频类型(wav,mp3,aac,m4a)
- * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）
-回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）
-回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
- * @method integer getModelType() 获取模型类型 1:在线 2:离线  默认为1
- * @method void setModelType(integer $ModelType) 设置模型类型 1:在线 2:离线  默认为1
- * @method integer getTaskType() 获取复刻类型。
-5 - 一句话声音复刻。
- * @method void setTaskType(integer $TaskType) 设置复刻类型。
-5 - 一句话声音复刻。
- * @method string getVPRAudioId() 获取校验音频ID。（仅基础版声音复刻使用）
- * @method void setVPRAudioId(string $VPRAudioId) 设置校验音频ID。（仅基础版声音复刻使用）
- * @method integer getEnableVoiceEnhance() 获取是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
-语音增强仅适用于一句话复刻场景
- * @method void setEnableVoiceEnhance(integer $EnableVoiceEnhance) 设置是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
-语音增强仅适用于一句话复刻场景
+ * @method string getSessionId() 获取<p>唯一请求 ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>唯一请求 ID</p>
+ * @method string getVoiceName() 获取<p>音色名称</p>
+ * @method void setVoiceName(string $VoiceName) 设置<p>音色名称</p>
+ * @method integer getVoiceGender() 获取<p>音色性别:</p><p>1-male</p><p>2-female</p>
+ * @method void setVoiceGender(integer $VoiceGender) 设置<p>音色性别:</p><p>1-male</p><p>2-female</p>
+ * @method integer getVoiceLanguage() 获取<p>语言类型：</p><p>1-中文</p>
+ * @method void setVoiceLanguage(integer $VoiceLanguage) 设置<p>语言类型：</p><p>1-中文</p>
+ * @method array getAudioIdList() 获取<p>音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）</p>
+ * @method void setAudioIdList(array $AudioIdList) 设置<p>音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）</p>
+ * @method integer getSampleRate() 获取<p>音频采样率：</p><p>16000：16k</p>
+ * @method void setSampleRate(integer $SampleRate) 设置<p>音频采样率：</p><p>16000：16k</p>
+ * @method string getCodec() 获取<p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+ * @method void setCodec(string $Codec) 设置<p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+ * @method string getCallbackUrl() 获取<p>回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）<br>回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{&quot;TaskId&quot;:&quot;xxxxxxxxxxxxxx&quot;,&quot;Status&quot;:2,&quot;StatusStr&quot;:&quot;success&quot;,&quot;VoiceType&quot;:xxxxx,&quot;ErrorMsg&quot;:&quot;&quot;}</p>
+ * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）<br>回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{&quot;TaskId&quot;:&quot;xxxxxxxxxxxxxx&quot;,&quot;Status&quot;:2,&quot;StatusStr&quot;:&quot;success&quot;,&quot;VoiceType&quot;:xxxxx,&quot;ErrorMsg&quot;:&quot;&quot;}</p>
+ * @method integer getModelType() 获取<p>模型类型 1:在线 2:离线  默认为1</p>
+ * @method void setModelType(integer $ModelType) 设置<p>模型类型 1:在线 2:离线  默认为1</p>
+ * @method integer getTaskType() 获取<p>复刻类型。<br>5 - 一句话声音复刻。</p>
+ * @method void setTaskType(integer $TaskType) 设置<p>复刻类型。<br>5 - 一句话声音复刻。</p>
+ * @method string getVPRAudioId() 获取<p>校验音频ID。（仅基础版声音复刻使用）</p>
+ * @method void setVPRAudioId(string $VPRAudioId) 设置<p>校验音频ID。（仅基础版声音复刻使用）</p>
+ * @method integer getEnableVoiceEnhance() 获取<p>是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭<br>语音增强仅适用于一句话复刻场景</p>
+ * @method void setEnableVoiceEnhance(integer $EnableVoiceEnhance) 设置<p>是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭<br>语音增强仅适用于一句话复刻场景</p>
+ * @method string getEngineType() 获取<p>模型引擎，可选值：</p><ul><li><p>WXZL（默认）</p></li><li><p>YTLX_V2（新版）</p></li></ul><p>示例：YTLX_V2</p>
+ * @method void setEngineType(string $EngineType) 设置<p>模型引擎，可选值：</p><ul><li><p>WXZL（默认）</p></li><li><p>YTLX_V2（新版）</p></li></ul><p>示例：YTLX_V2</p>
  */
 class CreateVRSTaskRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID
+     * @var string <p>唯一请求 ID</p>
      */
     public $SessionId;
 
     /**
-     * @var string 音色名称
+     * @var string <p>音色名称</p>
      */
     public $VoiceName;
 
     /**
-     * @var integer 音色性别:
-
-1-male
-
-2-female
+     * @var integer <p>音色性别:</p><p>1-male</p><p>2-female</p>
      */
     public $VoiceGender;
 
     /**
-     * @var integer 语言类型：
-
-1-中文
+     * @var integer <p>语言类型：</p><p>1-中文</p>
      */
     public $VoiceLanguage;
 
     /**
-     * @var array 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
+     * @var array <p>音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）</p>
      */
     public $AudioIdList;
 
     /**
-     * @var integer 音频采样率：
-
-16000：16k
+     * @var integer <p>音频采样率：</p><p>16000：16k</p>
      */
     public $SampleRate;
 
     /**
-     * @var string 音频格式，音频类型(wav,mp3,aac,m4a)
+     * @var string <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
      */
     public $Codec;
 
     /**
-     * @var string 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）
-回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
+     * @var string <p>回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）<br>回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{&quot;TaskId&quot;:&quot;xxxxxxxxxxxxxx&quot;,&quot;Status&quot;:2,&quot;StatusStr&quot;:&quot;success&quot;,&quot;VoiceType&quot;:xxxxx,&quot;ErrorMsg&quot;:&quot;&quot;}</p>
      */
     public $CallbackUrl;
 
     /**
-     * @var integer 模型类型 1:在线 2:离线  默认为1
+     * @var integer <p>模型类型 1:在线 2:离线  默认为1</p>
      */
     public $ModelType;
 
     /**
-     * @var integer 复刻类型。
-5 - 一句话声音复刻。
+     * @var integer <p>复刻类型。<br>5 - 一句话声音复刻。</p>
      */
     public $TaskType;
 
     /**
-     * @var string 校验音频ID。（仅基础版声音复刻使用）
+     * @var string <p>校验音频ID。（仅基础版声音复刻使用）</p>
      */
     public $VPRAudioId;
 
     /**
-     * @var integer 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
-语音增强仅适用于一句话复刻场景
+     * @var integer <p>是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭<br>语音增强仅适用于一句话复刻场景</p>
      */
     public $EnableVoiceEnhance;
 
     /**
-     * @param string $SessionId 唯一请求 ID
-     * @param string $VoiceName 音色名称
-     * @param integer $VoiceGender 音色性别:
+     * @var string <p>模型引擎，可选值：</p><ul><li><p>WXZL（默认）</p></li><li><p>YTLX_V2（新版）</p></li></ul><p>示例：YTLX_V2</p>
+     */
+    public $EngineType;
 
-1-male
-
-2-female
-     * @param integer $VoiceLanguage 语言类型：
-
-1-中文
-     * @param array $AudioIdList 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
-     * @param integer $SampleRate 音频采样率：
-
-16000：16k
-     * @param string $Codec 音频格式，音频类型(wav,mp3,aac,m4a)
-     * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）
-回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{"TaskId":"xxxxxxxxxxxxxx","Status":2,"StatusStr":"success","VoiceType":xxxxx,"ErrorMsg":""}
-     * @param integer $ModelType 模型类型 1:在线 2:离线  默认为1
-     * @param integer $TaskType 复刻类型。
-5 - 一句话声音复刻。
-     * @param string $VPRAudioId 校验音频ID。（仅基础版声音复刻使用）
-     * @param integer $EnableVoiceEnhance 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
-语音增强仅适用于一句话复刻场景
+    /**
+     * @param string $SessionId <p>唯一请求 ID</p>
+     * @param string $VoiceName <p>音色名称</p>
+     * @param integer $VoiceGender <p>音色性别:</p><p>1-male</p><p>2-female</p>
+     * @param integer $VoiceLanguage <p>语言类型：</p><p>1-中文</p>
+     * @param array $AudioIdList <p>音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）</p>
+     * @param integer $SampleRate <p>音频采样率：</p><p>16000：16k</p>
+     * @param string $Codec <p>音频格式，音频类型(wav,mp3,aac,m4a)</p>
+     * @param string $CallbackUrl <p>回调 URL，用户自行搭建的用于接收结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。（注意：回调方式暂不支持一句话版声音复刻）<br>回调采用POST请求方式，Content-Type为application/json，回调数据格式如下:{&quot;TaskId&quot;:&quot;xxxxxxxxxxxxxx&quot;,&quot;Status&quot;:2,&quot;StatusStr&quot;:&quot;success&quot;,&quot;VoiceType&quot;:xxxxx,&quot;ErrorMsg&quot;:&quot;&quot;}</p>
+     * @param integer $ModelType <p>模型类型 1:在线 2:离线  默认为1</p>
+     * @param integer $TaskType <p>复刻类型。<br>5 - 一句话声音复刻。</p>
+     * @param string $VPRAudioId <p>校验音频ID。（仅基础版声音复刻使用）</p>
+     * @param integer $EnableVoiceEnhance <p>是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭<br>语音增强仅适用于一句话复刻场景</p>
+     * @param string $EngineType <p>模型引擎，可选值：</p><ul><li><p>WXZL（默认）</p></li><li><p>YTLX_V2（新版）</p></li></ul><p>示例：YTLX_V2</p>
      */
     function __construct()
     {
@@ -224,6 +188,10 @@ class CreateVRSTaskRequest extends AbstractModel
 
         if (array_key_exists("EnableVoiceEnhance",$param) and $param["EnableVoiceEnhance"] !== null) {
             $this->EnableVoiceEnhance = $param["EnableVoiceEnhance"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

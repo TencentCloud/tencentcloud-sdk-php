@@ -292,6 +292,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\GetRayJobPodYamlResponse GetRayJobPodYaml(Models\GetRayJobPodYamlRequest $req) 获取Pod的YAML内容
  * @method Models\GetRayJobPodsResponse GetRayJobPods(Models\GetRayJobPodsRequest $req) 获取作业的Pod列表
  * @method Models\GetRayJobYamlResponse GetRayJobYaml(Models\GetRayJobYamlRequest $req) 获取RayJob的YAML内容
+ * @method Models\GetRayServeEventResponse GetRayServeEvent(Models\GetRayServeEventRequest $req) 通过 ResourceManager 调用 CLS SearchLog API 查询 RayServe 部署相关事件日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
  * @method Models\GetResourceConfigResponse GetResourceConfig(Models\GetResourceConfigRequest $req) 获取资源配置模板详情
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) 授权访问DLC Catalog
  * @method Models\ImportExternalClusterResponse ImportExternalCluster(Models\ImportExternalClusterRequest $req) 通过 ClusterType 区分两种导入模式：TKE（直接导入裸 TKE 集群，ClusterId 为 TKE 集群 ID）或 EMR（通过 EMR 集群导入，ClusterId 为 EMR 集群 ID，底层会关联查询对应的 TKE 集群 ID 一并落库）。两种模式均将 TKE 集群 ID 存入 tke_cluster 表。接口是异步的，返回的 WorkflowId 可用于轮询注册进度；ResourcePoolId / ResourcePoolCode 为资源池的唯一标识。
@@ -325,6 +326,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\ListRegionLbsResponse ListRegionLbs(Models\ListRegionLbsRequest $req) 列出用户在指定地域下的 CLB 负载均衡实例，返回实例 ID、名称与网络类型（OPEN/INTERNAL）。
  * @method Models\ListResourceConfigsResponse ListResourceConfigs(Models\ListResourceConfigsRequest $req) 列出所有资源配置模板
  * @method Models\ListServiceApiKeysResponse ListServiceApiKeys(Models\ListServiceApiKeysRequest $req) 列出指定推理服务绑定的 API Key
+ * @method Models\ListStoragesResponse ListStorages(Models\ListStoragesRequest $req) 根据集群ID列出所有Ray任务
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\ListTaskJobLogNameResponse ListTaskJobLogName(Models\ListTaskJobLogNameRequest $req) 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
  * @method Models\ListTkeCosBucketsResponse ListTkeCosBuckets(Models\ListTkeCosBucketsRequest $req) 获取tke纳管cos列表
@@ -374,6 +376,7 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
  * @method Models\StopLabResponse StopLab(Models\StopLabRequest $req) 停止实验室
  * @method Models\StopMlflowServerResponse StopMlflowServer(Models\StopMlflowServerRequest $req) 停止 MlFlow Server
  * @method Models\StopRayClusterResponse StopRayCluster(Models\StopRayClusterRequest $req) 停止集群
+ * @method Models\SubmitRayJobResponse SubmitRayJob(Models\SubmitRayJobRequest $req) 提交新的Ray任务到指定集群
  * @method Models\SubmitTrainingJobResponse SubmitTrainingJob(Models\SubmitTrainingJobRequest $req) 断点续训（克隆实例）
  * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制挂起或启动数据引擎
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) 切换主备集群

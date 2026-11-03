@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockIgnoreRuleNew请求参数结构体
  *
- * @method BanAndAllowRule getRule() 获取规则
- * @method void setRule(BanAndAllowRule $Rule) 设置规则
- * @method integer getRuleType() 获取RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
- * @method void setRuleType(integer $RuleType) 设置RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+ * @method BanAndAllowRule getRule() 获取<p>规则</p>
+ * @method void setRule(BanAndAllowRule $Rule) 设置<p>规则</p>
+ * @method integer getRuleType() 获取<p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+ * @method void setRuleType(integer $RuleType) 设置<p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+ * @method integer getCoverDuplicate() 获取<p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+ * @method void setCoverDuplicate(integer $CoverDuplicate) 设置<p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
  */
 class ModifyBlockIgnoreRuleNewRequest extends AbstractModel
 {
     /**
-     * @var BanAndAllowRule 规则
+     * @var BanAndAllowRule <p>规则</p>
      */
     public $Rule;
 
     /**
-     * @var integer RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * @var integer <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public $RuleType;
 
     /**
-     * @param BanAndAllowRule $Rule 规则
-     * @param integer $RuleType RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * @var integer <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+     */
+    public $CoverDuplicate;
+
+    /**
+     * @param BanAndAllowRule $Rule <p>规则</p>
+     * @param integer $RuleType <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * @param integer $CoverDuplicate <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class ModifyBlockIgnoreRuleNewRequest extends AbstractModel
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("CoverDuplicate",$param) and $param["CoverDuplicate"] !== null) {
+            $this->CoverDuplicate = $param["CoverDuplicate"];
         }
     }
 }

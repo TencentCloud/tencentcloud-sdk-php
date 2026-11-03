@@ -20,110 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组规则对象
  *
- * @method integer getPolicyIndex() 获取安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
- * @method void setPolicyIndex(integer $PolicyIndex) 设置安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
- * @method string getProtocol() 获取协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
- * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
- * @method string getPort() 获取端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
- * @method void setPort(string $Port) 设置端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
- * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
- * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
- * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者IP地址组ID。
- * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者IP地址组ID。
- * @method string getAction() 获取ACCEPT 或 DROP。
- * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
- * @method string getPolicyDescription() 获取安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
- * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
- * @method string getModifyTime() 获取安全组最近修改时间。
- * @method void setModifyTime(string $ModifyTime) 设置安全组最近修改时间。
- * @method integer getPriority() 获取安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
- * @method void setPriority(integer $Priority) 设置安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+ * @method integer getPolicyIndex() 获取<p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
+ * @method void setPolicyIndex(integer $PolicyIndex) 设置<p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
+ * @method string getProtocol() 获取<p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
+ * @method string getPort() 获取<p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
+ * @method void setPort(string $Port) 设置<p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
+ * @method ServiceTemplateSpecification getServiceTemplate() 获取<p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
+ * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置<p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
+ * @method string getCidrBlock() 获取<p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
+ * @method void setCidrBlock(string $CidrBlock) 设置<p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
+ * @method string getIpv6CidrBlock() 获取<p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置<p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
+ * @method string getSecurityGroupId() 获取<p>安全组实例ID，例如：sg-ohuuioma。</p>
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置<p>安全组实例ID，例如：sg-ohuuioma。</p>
+ * @method AddressTemplateSpecification getAddressTemplate() 获取<p>IP地址ID或者IP地址组ID。</p>
+ * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置<p>IP地址ID或者IP地址组ID。</p>
+ * @method string getAction() 获取<p>ACCEPT 或 DROP。</p>
+ * @method void setAction(string $Action) 设置<p>ACCEPT 或 DROP。</p>
+ * @method string getPolicyDescription() 获取<p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
+ * @method void setPolicyDescription(string $PolicyDescription) 设置<p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
+ * @method string getModifyTime() 获取<p>安全组最近修改时间。</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>安全组最近修改时间。</p>
+ * @method integer getPriority() 获取<p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
+ * @method void setPriority(integer $Priority) 设置<p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
  */
 class SecurityGroupPolicy extends AbstractModel
 {
     /**
-     * @var integer 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+     * @var integer <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public $PolicyIndex;
 
     /**
-     * @var string 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+     * @var string <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
      */
     public $Protocol;
 
     /**
-     * @var string 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
+     * @var string <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
      */
     public $Port;
 
     /**
-     * @var ServiceTemplateSpecification 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * @var ServiceTemplateSpecification <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
      */
     public $ServiceTemplate;
 
     /**
-     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+     * @var string <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
      */
     public $CidrBlock;
 
     /**
-     * @var string 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+     * @var string <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
      */
     public $Ipv6CidrBlock;
 
     /**
-     * @var string 安全组实例ID，例如：sg-ohuuioma。
+     * @var string <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public $SecurityGroupId;
 
     /**
-     * @var AddressTemplateSpecification IP地址ID或者IP地址组ID。
+     * @var AddressTemplateSpecification <p>IP地址ID或者IP地址组ID。</p>
      */
     public $AddressTemplate;
 
     /**
-     * @var string ACCEPT 或 DROP。
+     * @var string <p>ACCEPT 或 DROP。</p>
      */
     public $Action;
 
     /**
-     * @var string 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+     * @var string <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
      */
     public $PolicyDescription;
 
     /**
-     * @var string 安全组最近修改时间。
+     * @var string <p>安全组最近修改时间。</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     * @var integer <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public $Priority;
 
     /**
-     * @param integer $PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-     * @param string $Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-     * @param string $Port 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
-     * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-     * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者IP地址组ID。
-     * @param string $Action ACCEPT 或 DROP。
-     * @param string $PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-     * @param string $ModifyTime 安全组最近修改时间。
-     * @param integer $Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     * @param integer $PolicyIndex <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
+     * @param string $Protocol <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
+     * @param string $Port <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
+     * @param ServiceTemplateSpecification $ServiceTemplate <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
+     * @param string $CidrBlock <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
+     * @param string $Ipv6CidrBlock <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
+     * @param string $SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
+     * @param AddressTemplateSpecification $AddressTemplate <p>IP地址ID或者IP地址组ID。</p>
+     * @param string $Action <p>ACCEPT 或 DROP。</p>
+     * @param string $PolicyDescription <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
+     * @param string $ModifyTime <p>安全组最近修改时间。</p>
+     * @param integer $Priority <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
      */
     function __construct()
     {

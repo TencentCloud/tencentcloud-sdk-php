@@ -20,66 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询条件
  *
- * @method string getKey() 获取筛选条件的key。
- * @method void setKey(string $Key) 设置筛选条件的key。
- * @method string getOperator() 获取查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
- * @method void setOperator(string $Operator) 设置查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
- * @method array getValue() 获取筛选条件的值。
- * @method void setValue(array $Value) 设置筛选条件的值。
+ * @method string getKey() 获取<p>筛选条件的key。</p>
+ * @method void setKey(string $Key) 设置<p>筛选条件的key。</p>
+ * @method string getOperator() 获取<p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
+ * @method void setOperator(string $Operator) 设置<p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
+ * @method array getValue() 获取<p>筛选条件的值。</p>
+ * @method void setValue(array $Value) 设置<p>筛选条件的值。</p>
  */
 class QueryCondition extends AbstractModel
 {
     /**
-     * @var string 筛选条件的key。
+     * @var string <p>筛选条件的key。</p>
      */
     public $Key;
 
     /**
-     * @var string 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
+     * @var string <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
      */
     public $Operator;
 
     /**
-     * @var array 筛选条件的值。
+     * @var array <p>筛选条件的值。</p>
      */
     public $Value;
 
     /**
-     * @param string $Key 筛选条件的key。
-     * @param string $Operator 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
-     * @param array $Value 筛选条件的值。
+     * @param string $Key <p>筛选条件的key。</p>
+     * @param string $Operator <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
+     * @param array $Value <p>筛选条件的值。</p>
      */
     function __construct()
     {

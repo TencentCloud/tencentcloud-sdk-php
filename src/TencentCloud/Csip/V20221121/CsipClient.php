@@ -180,6 +180,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DeleteImageSensitiveWhitelistResponse DeleteImageSensitiveWhitelist(Models\DeleteImageSensitiveWhitelistRequest $req) 删除容器镜像敏感信息白名单
  * @method Models\DeleteImageVirusWhitelistResponse DeleteImageVirusWhitelist(Models\DeleteImageVirusWhitelistRequest $req) 删除镜像木马白名单
  * @method Models\DeleteImageVulWhitelistResponse DeleteImageVulWhitelist(Models\DeleteImageVulWhitelistRequest $req) 删除容器镜像漏洞白名单
+ * @method Models\DeleteLoginWhiteCustomEDRResponse DeleteLoginWhiteCustomEDR(Models\DeleteLoginWhiteCustomEDRRequest $req) 批量删除 CSC 异常登录自定义白名单（软删 status=2），支持跨页全选。Ids 与 SelectAll 二选一，均为空时返回 InvalidParameter；跨页全选总量超过 100000 条时整体拒绝。
+ * @method Models\DeleteLoginWhiteLearnEDRResponse DeleteLoginWhiteLearnEDR(Models\DeleteLoginWhiteLearnEDRRequest $req) 批量删除 CSC 异常登录自学习白名单规则组（整组软删 enable=0），传入组内任一行 ID 即可定位整组，支持跨页全选（上限 100000 个规则组）。删除后不会被自动重学，需重新开关自学习刷新学习锚点；本接口不回扫历史告警。
  * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 本接口用于删除异地登录白名单规则。
  * @method Models\DeleteMachineClearHistoryResponse DeleteMachineClearHistory(Models\DeleteMachineClearHistoryRequest $req) 删除机器清理记录
  * @method Models\DeleteRiskScanTaskResponse DeleteRiskScanTask(Models\DeleteRiskScanTaskRequest $req) 删除风险中心扫描任务
@@ -445,6 +447,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeEdrExportJobDownloadURLResponse DescribeEdrExportJobDownloadURL(Models\DescribeEdrExportJobDownloadURLRequest $req) 获取EDR导出下载链接
  * @method Models\DescribeEdrExportJobListResponse DescribeEdrExportJobList(Models\DescribeEdrExportJobListRequest $req) 导出EDR任务列表
  * @method Models\DescribeEdrLogCollectPathsResponse DescribeEdrLogCollectPaths(Models\DescribeEdrLogCollectPathsRequest $req) 查询采集路径配置
+ * @method Models\DescribeEdrMalwareFileResponse DescribeEdrMalwareFile(Models\DescribeEdrMalwareFileRequest $req) 按 EDR 告警标识定位恶意文件告警，返回其恶意样本的下载链接。仅 alert_sub_type=1（恶意文件）的告警允许下载，其它子类型按资源不存在处理。公有云返回 COS 预签名 URL（1 小时有效）；非公有云且导出开关打开时返回 base64 DataURL 并同时返回 FileName。跨账号场景由 TargetAppId 指定告警所属账号，会做归属校验（fail-close，无权限返回 InvalidParameter）。
  * @method Models\DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURL(Models\DescribeExportJobDownloadURLRequest $req) 导出任务结果下载URL
  * @method Models\DescribeExportJobManageListResponse DescribeExportJobManageList(Models\DescribeExportJobManageListRequest $req) 导出任务列表
  * @method Models\DescribeExposeAssetCategoryResponse DescribeExposeAssetCategory(Models\DescribeExposeAssetCategoryRequest $req) 云边界分析资产分类
@@ -504,7 +507,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(Models\DescribeLoginTypeGlobalConfRequest $req) 获取防卸载全局配置
  * @method Models\DescribeLoginTypeHostResponse DescribeLoginTypeHost(Models\DescribeLoginTypeHostRequest $req) 获取扫码登录主机列表
  * @method Models\DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedList(Models\DescribeLoginWhiteCombinedListRequest $req) 获取异地登录白名单合并后列表
+ * @method Models\DescribeLoginWhiteCustomListEDRResponse DescribeLoginWhiteCustomListEDR(Models\DescribeLoginWhiteCustomListEDRRequest $req) 查询 CSC 异常登录自定义白名单列表。多账号场景按 MemberId 解析出全部成员 AppId 后一次聚合查询。按 ModifyTime DESC 分页返回，出参切片字段恒为 [] 不会为 null。
  * @method Models\DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(Models\DescribeLoginWhiteHostListRequest $req) 查询合并后白名单机器列表
+ * @method Models\DescribeLoginWhiteLearnListEDRResponse DescribeLoginWhiteLearnListEDR(Models\DescribeLoginWhiteLearnListEDRRequest $req) 查询 CSC 异常登录自学习白名单列表（规则组）。规则组按 (AppId, 常用登录地) 聚合，Id 为组内最小行 ID；出参 SrcIp/UserName/StartTime/EndTime 恒为空。AutoLearnEnable 返回自学习开关状态，供前端空态展示判断是否跳转开启。
  * @method Models\DescribeMachineClearHistoryResponse DescribeMachineClearHistory(Models\DescribeMachineClearHistoryRequest $req) 查询机器清理历史记录
  * @method Models\DescribeMachineGeneralResponse DescribeMachineGeneral(Models\DescribeMachineGeneralRequest $req) 查询主机概览信息
  * @method Models\DescribeMachineLoginTypeResponse DescribeMachineLoginType(Models\DescribeMachineLoginTypeRequest $req) 获取主机登录方式
@@ -729,6 +734,8 @@ capi 层处理流程：
  * @method Models\ModifyImageSensitiveWhitelistResponse ModifyImageSensitiveWhitelist(Models\ModifyImageSensitiveWhitelistRequest $req) 修改容器镜像敏感信息白名单
  * @method Models\ModifyImageVirusWhitelistResponse ModifyImageVirusWhitelist(Models\ModifyImageVirusWhitelistRequest $req) 查询资产数据库信息
  * @method Models\ModifyImageVulWhitelistResponse ModifyImageVulWhitelist(Models\ModifyImageVulWhitelistRequest $req) 修改容器镜像漏洞白名单
+ * @method Models\ModifyLoginWhiteCustomEDRResponse ModifyLoginWhiteCustomEDR(Models\ModifyLoginWhiteCustomEDRRequest $req) 修改 CSC 异常登录自定义白名单，全量覆盖保存（未传字段视为清空）。本接口不触发历史告警回扫；查重时排除自身；规则不存在返回 ResourceNotFound。
+ * @method Models\ModifyLoginWhiteLearnEDRResponse ModifyLoginWhiteLearnEDR(Models\ModifyLoginWhiteLearnEDRRequest $req) 修改 CSC 异常登录自学习白名单规则组，按 (AppId, 常用登录地) 定位整组。约束：不支持新建、不支持按标签生效（TagIDs 必须为空）；仅支持 Scope=0 直接选择 与 Scope=1 全部资产+剔除；规则组行数超过 5000 时拒绝；单事务先插后删；编辑后最长一个缓存周期（默认 120s）内生效。本接口不回扫历史告警。
  * @method Models\ModifyLoginWhiteRecordResponse ModifyLoginWhiteRecord(Models\ModifyLoginWhiteRecordRequest $req) 更新合并后登录审计白名单信息（服务器列表数目应小于1000）
  * @method Models\ModifyMachineAutoClearConfigResponse ModifyMachineAutoClearConfig(Models\ModifyMachineAutoClearConfigRequest $req) 修改机器清理配置
  * @method Models\ModifyMachineRemarkResponse ModifyMachineRemark(Models\ModifyMachineRemarkRequest $req) 修改主机资产备注信息

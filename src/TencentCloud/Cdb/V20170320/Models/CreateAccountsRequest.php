@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>备注信息。最多支持输入255个字符。</p>
  * @method integer getMaxUserConnections() 获取<p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
  * @method void setMaxUserConnections(integer $MaxUserConnections) 设置<p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
+ * @method array getCreateAccounts() 获取<p>创建账号时的完整信息</p>
+ * @method void setCreateAccounts(array $CreateAccounts) 设置<p>创建账号时的完整信息</p>
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateAccountsRequest extends AbstractModel
     public $MaxUserConnections;
 
     /**
+     * @var array <p>创建账号时的完整信息</p>
+     */
+    public $CreateAccounts;
+
+    /**
      * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      * @param array $Accounts <p>云数据库账号。</p>
      * @param string $Password <p>新账户的密码。<br>说明：</p><ol><li>在8 ～ 64位字符数以内（推荐12位以上）。</li><li>至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&amp;=!@#$%^*().|。</li><li>不能包含非法字符。</li></ol>
      * @param string $Description <p>备注信息。最多支持输入255个字符。</p>
      * @param integer $MaxUserConnections <p>新账户最大可用连接数，默认值为10240，最大可设置值为10240。</p>
+     * @param array $CreateAccounts <p>创建账号时的完整信息</p>
      */
     function __construct()
     {
@@ -101,6 +109,15 @@ class CreateAccountsRequest extends AbstractModel
 
         if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
             $this->MaxUserConnections = $param["MaxUserConnections"];
+        }
+
+        if (array_key_exists("CreateAccounts",$param) and $param["CreateAccounts"] !== null) {
+            $this->CreateAccounts = [];
+            foreach ($param["CreateAccounts"] as $key => $value){
+                $obj = new CreateDBAccount();
+                $obj->deserialize($value);
+                array_push($this->CreateAccounts, $obj);
+            }
         }
     }
 }

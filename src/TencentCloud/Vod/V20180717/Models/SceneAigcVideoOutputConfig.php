@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatio(string $AspectRatio) 设置<p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
  * @method float getDuration() 获取<p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
  * @method void setDuration(float $Duration) 设置<p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
- * @method string getResolution() 获取<p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
- * @method void setResolution(string $Resolution) 设置<p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+ * @method string getResolution() 获取<p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480P、720P、1080P、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480P、720P；</li><li>当 Model 是 character_scene_fast 时，支持 720P。</li></ul>
+ * @method void setResolution(string $Resolution) 设置<p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480P、720P、1080P、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480P、720P；</li><li>当 Model 是 character_scene_fast 时，支持 720P。</li></ul>
  */
 class SceneAigcVideoOutputConfig extends AbstractModel
 {
@@ -68,7 +68,7 @@ class SceneAigcVideoOutputConfig extends AbstractModel
     public $Duration;
 
     /**
-     * @var string <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+     * @var string <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480P、720P、1080P、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480P、720P；</li><li>当 Model 是 character_scene_fast 时，支持 720P。</li></ul>
      */
     public $Resolution;
 
@@ -79,7 +79,7 @@ class SceneAigcVideoOutputConfig extends AbstractModel
      * @param string $ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      * @param string $AspectRatio <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
      * @param float $Duration <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
-     * @param string $Resolution <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+     * @param string $Resolution <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480P、720P、1080P、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480P、720P；</li><li>当 Model 是 character_scene_fast 时，支持 720P。</li></ul>
      */
     function __construct()
     {

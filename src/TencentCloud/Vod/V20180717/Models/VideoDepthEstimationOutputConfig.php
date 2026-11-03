@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置<p>输出媒资过期时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>，仅 StorageMode 为 Permanent 时生效。不传表示永不过期。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKeepAudio() 获取<p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+ * @method void setKeepAudio(string $KeepAudio) 设置<p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
  */
 class VideoDepthEstimationOutputConfig extends AbstractModel
 {
@@ -54,12 +56,18 @@ class VideoDepthEstimationOutputConfig extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+     */
+    public $KeepAudio;
+
+    /**
      * @param string $StorageMode <p>存储模式。可选值：Temporary（默认，产物临时存储 7 天，不返回 FileId）、Permanent（产物写入当前应用媒资库并返回 FileId）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MediaName <p>输出媒资名称，仅 StorageMode 为 Permanent 时生效，不传默认为 depthVideoGenFile。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime <p>输出媒资过期时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>，仅 StorageMode 为 Permanent 时生效。不传表示永不过期。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KeepAudio <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class VideoDepthEstimationOutputConfig extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("KeepAudio",$param) and $param["KeepAudio"] !== null) {
+            $this->KeepAudio = $param["KeepAudio"];
         }
     }
 }

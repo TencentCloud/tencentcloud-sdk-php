@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Web安全的托管规则
  *
- * @method string getEnabled() 获取托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
- * @method void setEnabled(string $Enabled) 设置托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
- * @method string getDetectionOnly() 获取评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
- * @method void setDetectionOnly(string $DetectionOnly) 设置评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
- * @method string getSemanticAnalysis() 获取托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
- * @method void setSemanticAnalysis(string $SemanticAnalysis) 设置托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
- * @method ManagedRuleAutoUpdate getAutoUpdate() 获取托管规则自动更新选项。
- * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) 设置托管规则自动更新选项。
- * @method array getManagedRuleGroups() 获取托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
- * @method void setManagedRuleGroups(array $ManagedRuleGroups) 设置托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
- * @method FrequentScanningProtection getFrequentScanningProtection() 获取高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
- * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) 设置高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+ * @method string getEnabled() 获取<p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
+ * @method void setEnabled(string $Enabled) 设置<p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
+ * @method string getDetectionOnly() 获取<p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
+ * @method void setDetectionOnly(string $DetectionOnly) 设置<p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
+ * @method string getSemanticAnalysis() 获取<p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
+ * @method void setSemanticAnalysis(string $SemanticAnalysis) 设置<p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
+ * @method SemanticAnalysisRules getSemanticAnalysisRules() 获取<p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+ * @method void setSemanticAnalysisRules(SemanticAnalysisRules $SemanticAnalysisRules) 设置<p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+ * @method ManagedRuleAutoUpdate getAutoUpdate() 获取<p>托管规则自动更新选项。</p>
+ * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) 设置<p>托管规则自动更新选项。</p>
+ * @method array getManagedRuleGroups() 获取<p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
+ * @method void setManagedRuleGroups(array $ManagedRuleGroups) 设置<p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
+ * @method FrequentScanningProtection getFrequentScanningProtection() 获取<p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
+ * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) 设置<p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
  */
 class ManagedRules extends AbstractModel
 {
     /**
-     * @var string 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
+     * @var string <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
      */
     public $Enabled;
 
     /**
-     * @var string 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
+     * @var string <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
      */
     public $DetectionOnly;
 
     /**
-     * @var string 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
+     * @var string <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
      */
     public $SemanticAnalysis;
 
     /**
-     * @var ManagedRuleAutoUpdate 托管规则自动更新选项。
+     * @var SemanticAnalysisRules <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+     */
+    public $SemanticAnalysisRules;
+
+    /**
+     * @var ManagedRuleAutoUpdate <p>托管规则自动更新选项。</p>
      */
     public $AutoUpdate;
 
     /**
-     * @var array 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+     * @var array <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
      */
     public $ManagedRuleGroups;
 
     /**
-     * @var FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     * @var FrequentScanningProtection <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
      */
     public $FrequentScanningProtection;
 
     /**
-     * @param string $Enabled 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
-     * @param string $DetectionOnly 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
-     * @param string $SemanticAnalysis 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
-     * @param ManagedRuleAutoUpdate $AutoUpdate 托管规则自动更新选项。
-     * @param array $ManagedRuleGroups 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
-     * @param FrequentScanningProtection $FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     * @param string $Enabled <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
+     * @param string $DetectionOnly <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
+     * @param string $SemanticAnalysis <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
+     * @param SemanticAnalysisRules $SemanticAnalysisRules <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+     * @param ManagedRuleAutoUpdate $AutoUpdate <p>托管规则自动更新选项。</p>
+     * @param array $ManagedRuleGroups <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
+     * @param FrequentScanningProtection $FrequentScanningProtection <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
      */
     function __construct()
     {
@@ -96,6 +104,11 @@ class ManagedRules extends AbstractModel
 
         if (array_key_exists("SemanticAnalysis",$param) and $param["SemanticAnalysis"] !== null) {
             $this->SemanticAnalysis = $param["SemanticAnalysis"];
+        }
+
+        if (array_key_exists("SemanticAnalysisRules",$param) and $param["SemanticAnalysisRules"] !== null) {
+            $this->SemanticAnalysisRules = new SemanticAnalysisRules();
+            $this->SemanticAnalysisRules->deserialize($param["SemanticAnalysisRules"]);
         }
 
         if (array_key_exists("AutoUpdate",$param) and $param["AutoUpdate"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOrderId() 获取订单参数。
  * @method void setOrderId(string $OrderId) 设置订单参数。
- * @method array getBackupPlanIds() 获取资源ID。
- * @method void setBackupPlanIds(array $BackupPlanIds) 设置资源ID。
+ * @method array getBackupPlanIds() 获取备份计划 ID 列表。单次最多返回 10 个。
+ * @method void setBackupPlanIds(array $BackupPlanIds) 设置备份计划 ID 列表。单次最多返回 10 个。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class CreateBackupPlanResponse extends AbstractModel
     public $OrderId;
 
     /**
-     * @var array 资源ID。
+     * @var array 备份计划 ID 列表。单次最多返回 10 个。
      */
     public $BackupPlanIds;
 
@@ -46,7 +46,7 @@ class CreateBackupPlanResponse extends AbstractModel
 
     /**
      * @param string $OrderId 订单参数。
-     * @param array $BackupPlanIds 资源ID。
+     * @param array $BackupPlanIds 备份计划 ID 列表。单次最多返回 10 个。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

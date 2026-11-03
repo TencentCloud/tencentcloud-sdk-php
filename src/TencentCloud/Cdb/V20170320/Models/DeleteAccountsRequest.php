@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
  * @method array getAccounts() 获取<p>云数据库账号。</p>
  * @method void setAccounts(array $Accounts) 设置<p>云数据库账号。</p>
+ * @method array getDeleteAccounts() 获取<p>待删除账号的完整信息。</p>
+ * @method void setDeleteAccounts(array $DeleteAccounts) 设置<p>待删除账号的完整信息。</p>
  */
 class DeleteAccountsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteAccountsRequest extends AbstractModel
     public $Accounts;
 
     /**
+     * @var array <p>待删除账号的完整信息。</p>
+     */
+    public $DeleteAccounts;
+
+    /**
      * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      * @param array $Accounts <p>云数据库账号。</p>
+     * @param array $DeleteAccounts <p>待删除账号的完整信息。</p>
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class DeleteAccountsRequest extends AbstractModel
                 $obj = new Account();
                 $obj->deserialize($value);
                 array_push($this->Accounts, $obj);
+            }
+        }
+
+        if (array_key_exists("DeleteAccounts",$param) and $param["DeleteAccounts"] !== null) {
+            $this->DeleteAccounts = [];
+            foreach ($param["DeleteAccounts"] as $key => $value){
+                $obj = new DeleteDBAccount();
+                $obj->deserialize($value);
+                array_push($this->DeleteAccounts, $obj);
             }
         }
     }

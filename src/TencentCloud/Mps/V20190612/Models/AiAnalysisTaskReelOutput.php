@@ -20,62 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI解说二创结果信息
  *
- * @method string getVideoPath() 获取解说视频路径。
- * @method void setVideoPath(string $VideoPath) 设置解说视频路径。
- * @method array getVideoPaths() 获取解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
- * @method void setVideoPaths(array $VideoPaths) 设置解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
- * @method string getScriptPath() 获取脚本文件路径
-
- * @method void setScriptPath(string $ScriptPath) 设置脚本文件路径
-
- * @method TaskOutputStorage getOutputStorage() 获取解说视频存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置解说视频存储位置。
+ * @method string getVideoPath() 获取<p>解说视频路径。</p>
+ * @method void setVideoPath(string $VideoPath) 设置<p>解说视频路径。</p>
+ * @method array getVideoPaths() 获取<p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
+ * @method void setVideoPaths(array $VideoPaths) 设置<p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
+ * @method string getScriptPath() 获取<p>脚本文件路径</p>
+ * @method void setScriptPath(string $ScriptPath) 设置<p>脚本文件路径</p>
+ * @method array getScriptPaths() 获取<p>多个脚本文件路径</p>
+ * @method void setScriptPaths(array $ScriptPaths) 设置<p>多个脚本文件路径</p>
+ * @method TaskOutputStorage getOutputStorage() 获取<p>解说视频存储位置。</p>
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置<p>解说视频存储位置。</p>
+ * @method string getOutputSubtitlePath() 获取<p>输出视频字幕文件</p>
+ * @method void setOutputSubtitlePath(string $OutputSubtitlePath) 设置<p>输出视频字幕文件</p>
+ * @method array getOutputSubtitlePaths() 获取<p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+ * @method void setOutputSubtitlePaths(array $OutputSubtitlePaths) 设置<p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
  */
 class AiAnalysisTaskReelOutput extends AbstractModel
 {
     /**
-     * @var string 解说视频路径。
+     * @var string <p>解说视频路径。</p>
      */
     public $VideoPath;
 
     /**
-     * @var array 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     * @var array <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
      */
     public $VideoPaths;
 
     /**
-     * @var string 脚本文件路径
-
+     * @var string <p>脚本文件路径</p>
      */
     public $ScriptPath;
 
     /**
-     * @var TaskOutputStorage 解说视频存储位置。
+     * @var array <p>多个脚本文件路径</p>
+     */
+    public $ScriptPaths;
+
+    /**
+     * @var TaskOutputStorage <p>解说视频存储位置。</p>
      */
     public $OutputStorage;
 
     /**
-     * @param string $VideoPath 解说视频路径。
-     * @param array $VideoPaths 解说视频路径列表。
+     * @var string <p>输出视频字幕文件</p>
+     */
+    public $OutputSubtitlePath;
 
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
-     * @param string $ScriptPath 脚本文件路径
+    /**
+     * @var array <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+     */
+    public $OutputSubtitlePaths;
 
-     * @param TaskOutputStorage $OutputStorage 解说视频存储位置。
+    /**
+     * @param string $VideoPath <p>解说视频路径。</p>
+     * @param array $VideoPaths <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
+     * @param string $ScriptPath <p>脚本文件路径</p>
+     * @param array $ScriptPaths <p>多个脚本文件路径</p>
+     * @param TaskOutputStorage $OutputStorage <p>解说视频存储位置。</p>
+     * @param string $OutputSubtitlePath <p>输出视频字幕文件</p>
+     * @param array $OutputSubtitlePaths <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
      */
     function __construct()
     {
@@ -102,9 +106,21 @@ class AiAnalysisTaskReelOutput extends AbstractModel
             $this->ScriptPath = $param["ScriptPath"];
         }
 
+        if (array_key_exists("ScriptPaths",$param) and $param["ScriptPaths"] !== null) {
+            $this->ScriptPaths = $param["ScriptPaths"];
+        }
+
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {
             $this->OutputStorage = new TaskOutputStorage();
             $this->OutputStorage->deserialize($param["OutputStorage"]);
+        }
+
+        if (array_key_exists("OutputSubtitlePath",$param) and $param["OutputSubtitlePath"] !== null) {
+            $this->OutputSubtitlePath = $param["OutputSubtitlePath"];
+        }
+
+        if (array_key_exists("OutputSubtitlePaths",$param) and $param["OutputSubtitlePaths"] !== null) {
+            $this->OutputSubtitlePaths = $param["OutputSubtitlePaths"];
         }
     }
 }

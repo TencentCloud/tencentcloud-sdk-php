@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedUsageDetails(boolean $NeedUsageDetails) 设置<p>是否需要每日用量明细</p>
  * @method string getPlatformId() 获取<p>平台版套餐id</p>
  * @method void setPlatformId(string $PlatformId) 设置<p>平台版套餐id</p>
+ * @method string getQueryLevel() 获取<p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+ * @method void setQueryLevel(string $QueryLevel) 设置<p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
  */
 class DescribePlatformCreditsUsageDetailRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribePlatformCreditsUsageDetailRequest extends AbstractModel
     public $PlatformId;
 
     /**
+     * @var string <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+     */
+    public $QueryLevel;
+
+    /**
      * @param array $Modules <p>模块列表</p><p>枚举值：</p><ul><li>FLEXDB： 文档数据库</li><li>TDSQL： MYSQL数据库</li><li>SCF： 云函数</li><li>AI： 大模型</li><li>EKS： 云托管</li><li>COS： 云存储</li><li>HOSTING： 静态托管</li><li>Auth： 用户权限</li><li>APIInvocation： API调用</li><li>HTTPInvocation： HTTP调用</li><li>VM： 主机</li><li>Workflow： 工作流</li><li>Other： 其他</li><li>PostgreSQL： PostgreSQL</li><li>Token： Token</li></ul>
      * @param string $StartDate <p>开始日期</p><p>参数格式：YYYY-MM-DD</p>
      * @param string $EndDate <p>结束日期</p><p>参数格式：YYYY-MM-DD</p>
      * @param boolean $NeedUsageDetails <p>是否需要每日用量明细</p>
      * @param string $PlatformId <p>平台版套餐id</p>
+     * @param string $QueryLevel <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribePlatformCreditsUsageDetailRequest extends AbstractModel
 
         if (array_key_exists("PlatformId",$param) and $param["PlatformId"] !== null) {
             $this->PlatformId = $param["PlatformId"];
+        }
+
+        if (array_key_exists("QueryLevel",$param) and $param["QueryLevel"] !== null) {
+            $this->QueryLevel = $param["QueryLevel"];
         }
     }
 }

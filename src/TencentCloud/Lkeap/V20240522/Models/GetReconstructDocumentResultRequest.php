@@ -20,22 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReconstructDocumentResult请求参数结构体
  *
- * @method string getTaskId() 获取说明：解析任务ID
-备注：仅支持单个任务ID
- * @method void setTaskId(string $TaskId) 设置说明：解析任务ID
-备注：仅支持单个任务ID
+ * @method string getTaskId() 获取<p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
  */
 class GetReconstructDocumentResultRequest extends AbstractModel
 {
     /**
-     * @var string 说明：解析任务ID
-备注：仅支持单个任务ID
+     * @var string <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 说明：解析任务ID
-备注：仅支持单个任务ID
+     * @param string $TaskId <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
      */
     function __construct()
     {

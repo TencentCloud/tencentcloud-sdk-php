@@ -37,6 +37,7 @@ use TencentCloud\Tcbr\V20220217\Models as Models;
  * @method Models\DescribeReleaseOrderResponse DescribeReleaseOrder(Models\DescribeReleaseOrderRequest $req) 查询发布单
  * @method Models\DescribeServerManageTaskResponse DescribeServerManageTask(Models\DescribeServerManageTaskRequest $req) 查询服务管理任务信息
  * @method Models\DescribeVersionDetailResponse DescribeVersionDetail(Models\DescribeVersionDetailRequest $req) 查询版本详情
+ * @method Models\InitializeCloudRunResourceResponse InitializeCloudRunResource(Models\InitializeCloudRunResourceRequest $req) 创建云托管环境，并开通资源。
  * @method Models\OperateServerManageResponse OperateServerManage(Models\OperateServerManageRequest $req) 操作发布单
  * @method Models\ReleaseGrayResponse ReleaseGray(Models\ReleaseGrayRequest $req) 灰度发布
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 查询日志信息

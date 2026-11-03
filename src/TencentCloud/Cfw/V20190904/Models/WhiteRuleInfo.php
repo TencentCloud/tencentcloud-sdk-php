@@ -20,114 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 白名单匹配条件；各字段的适用 RuleType 和取值要求见字段说明。
  *
- * @method string getDstIP() 获取访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。
- * @method void setDstIP(string $DstIP) 设置访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。
- * @method string getFileMd5() 获取文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。
- * @method void setFileMd5(string $FileMd5) 设置文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。
- * @method string getFileName() 获取文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
- * @method void setFileName(string $FileName) 设置文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
- * @method string getHostName() 获取HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。
- * @method void setHostName(string $HostName) 设置HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。
- * @method integer getId() 获取服务端内部字段。
- * @method void setId(integer $Id) 设置服务端内部字段。
- * @method string getIdsRuleId() 获取IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。
- * @method void setIdsRuleId(string $IdsRuleId) 设置IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。
- * @method string getIdsRuleName() 获取服务端保留字段。
- * @method void setIdsRuleName(string $IdsRuleName) 设置服务端保留字段。
- * @method string getIoc() 获取RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。
- * @method void setIoc(string $Ioc) 设置RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。
- * @method string getSrcIP() 获取访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。
- * @method void setSrcIP(string $SrcIP) 设置访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。
- * @method string getUrl() 获取HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
- * @method void setUrl(string $Url) 设置HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
- * @method string getUserAgent() 获取HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 <#cfw-splite#> 分隔。
- * @method void setUserAgent(string $UserAgent) 设置HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 <#cfw-splite#> 分隔。
- * @method string getWhiteId() 获取白名单策略唯一 ID。
- * @method void setWhiteId(string $WhiteId) 设置白名单策略唯一 ID。
- * @method string getXForwardedFor() 获取HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。
- * @method void setXForwardedFor(string $XForwardedFor) 设置HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。
+ * @method string getDstIP() 获取<p>访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。</p>
+ * @method void setDstIP(string $DstIP) 设置<p>访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。</p>
+ * @method string getFileMd5() 获取<p>文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。</p>
+ * @method void setFileMd5(string $FileMd5) 设置<p>文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。</p>
+ * @method string getFileName() 获取<p>文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+ * @method void setFileName(string $FileName) 设置<p>文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+ * @method string getHostName() 获取<p>HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。</p>
+ * @method void setHostName(string $HostName) 设置<p>HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。</p>
+ * @method integer getId() 获取<p>服务端内部字段。</p>
+ * @method void setId(integer $Id) 设置<p>服务端内部字段。</p>
+ * @method string getIdsRuleId() 获取<p>IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。</p>
+ * @method void setIdsRuleId(string $IdsRuleId) 设置<p>IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。</p>
+ * @method string getIdsRuleName() 获取<p>服务端保留字段。</p>
+ * @method void setIdsRuleName(string $IdsRuleName) 设置<p>服务端保留字段。</p>
+ * @method string getIoc() 获取<p>RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。</p>
+ * @method void setIoc(string $Ioc) 设置<p>RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。</p>
+ * @method string getSrcIP() 获取<p>访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。</p>
+ * @method void setSrcIP(string $SrcIP) 设置<p>访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。</p>
+ * @method string getUrl() 获取<p>HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+ * @method void setUrl(string $Url) 设置<p>HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+ * @method string getUserAgent() 获取<p>HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 &lt;#cfw-splite#&gt; 分隔。</p>
+ * @method void setUserAgent(string $UserAgent) 设置<p>HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 &lt;#cfw-splite#&gt; 分隔。</p>
+ * @method string getWhiteId() 获取<p>白名单策略唯一 ID。</p>
+ * @method void setWhiteId(string $WhiteId) 设置<p>白名单策略唯一 ID。</p>
+ * @method string getXForwardedFor() 获取<p>HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。</p>
+ * @method void setXForwardedFor(string $XForwardedFor) 设置<p>HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。</p>
+ * @method string getRiskEventType() 获取<p>风险事件类型</p>
+ * @method void setRiskEventType(string $RiskEventType) 设置<p>风险事件类型</p>
  */
 class WhiteRuleInfo extends AbstractModel
 {
     /**
-     * @var string 访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。
+     * @var string <p>访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。</p>
      */
     public $DstIP;
 
     /**
-     * @var string 文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。
+     * @var string <p>文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。</p>
      */
     public $FileMd5;
 
     /**
-     * @var string 文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
+     * @var string <p>文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
      */
     public $FileName;
 
     /**
-     * @var string HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。
+     * @var string <p>HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。</p>
      */
     public $HostName;
 
     /**
-     * @var integer 服务端内部字段。
+     * @var integer <p>服务端内部字段。</p>
      */
     public $Id;
 
     /**
-     * @var string IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。
+     * @var string <p>IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。</p>
      */
     public $IdsRuleId;
 
     /**
-     * @var string 服务端保留字段。
+     * @var string <p>服务端保留字段。</p>
      */
     public $IdsRuleName;
 
     /**
-     * @var string RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。
+     * @var string <p>RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。</p>
      */
     public $Ioc;
 
     /**
-     * @var string 访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。
+     * @var string <p>访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。</p>
      */
     public $SrcIP;
 
     /**
-     * @var string HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
+     * @var string <p>HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
      */
     public $Url;
 
     /**
-     * @var string HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 <#cfw-splite#> 分隔。
+     * @var string <p>HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 &lt;#cfw-splite#&gt; 分隔。</p>
      */
     public $UserAgent;
 
     /**
-     * @var string 白名单策略唯一 ID。
+     * @var string <p>白名单策略唯一 ID。</p>
      */
     public $WhiteId;
 
     /**
-     * @var string HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。
+     * @var string <p>HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。</p>
      */
     public $XForwardedFor;
 
     /**
-     * @param string $DstIP 访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。
-     * @param string $FileMd5 文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。
-     * @param string $FileName 文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
-     * @param string $HostName HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。
-     * @param integer $Id 服务端内部字段。
-     * @param string $IdsRuleId IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。
-     * @param string $IdsRuleName 服务端保留字段。
-     * @param string $Ioc RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。
-     * @param string $SrcIP 访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。
-     * @param string $Url HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。
-     * @param string $UserAgent HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 <#cfw-splite#> 分隔。
-     * @param string $WhiteId 白名单策略唯一 ID。
-     * @param string $XForwardedFor HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。
+     * @var string <p>风险事件类型</p>
+     */
+    public $RiskEventType;
+
+    /**
+     * @param string $DstIP <p>访问目的。RuleType=2：本字段与 SrcIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 SrcIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 SrcIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；FwType=16 时具体目的 IPv4 可带端口。RuleType=8：IP、CIDR、IP:端口或 CIDR:端口，可与 SrcIP 组合；RuleType=9：IP、CIDR 或带端口地址，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4 或 IPv4:端口。IPv6 带端口时使用 [IPv6]:端口；已选字段的多值用逗号分隔。</p>
+     * @param string $FileMd5 <p>文件 MD5，仅 RuleType=9。32 位十六进制；多值逗号分隔，最多 10 个。</p>
+     * @param string $FileName <p>文件名，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+     * @param string $HostName <p>HTTP Host，仅 RuleType=9；填写主机名或 IP，支持 ?、* 通配符并区分大小写；多值用逗号分隔。</p>
+     * @param integer $Id <p>服务端内部字段。</p>
+     * @param string $IdsRuleId <p>IPS 规则 ID，取自 DescribeIpsRuleListNew.Data[].RuleID。RuleType=6 必填；RuleType=9 可选，填写时同时填写 SrcIP 或 DstIP。</p>
+     * @param string $IdsRuleName <p>服务端保留字段。</p>
+     * @param string $Ioc <p>RuleType=3 填一个合法域名；RuleType=4 填情报 IP、CIDR 或域名。</p>
+     * @param string $SrcIP <p>访问源。RuleType=2：本字段与 DstIP 两个字段中恰好填写一个，值为精确 IP；RuleType=5：本字段与 DstIP 两个字段中恰好填写一个，值为资产 instance_id；RuleType=6：与 DstIP 至少一项为具体 IP，另一项可省略或使用同 IP 版本的 0.0.0.0/0、::/0，两项均为具体 IP 时使用相同 IP 版本；RuleType=8：IP 或 CIDR；RuleType=9：IP 或 CIDR，可与 NDR 专属条件组合；搭配 IdsRuleId 时使用 IPv4。源地址使用无端口格式；已选字段的多值用逗号分隔。</p>
+     * @param string $Url <p>HTTP URL，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；多值用逗号分隔，最多 10 个。</p>
+     * @param string $UserAgent <p>HTTP User-Agent，仅 RuleType=9；支持精确匹配及 ?、* 通配符，区分大小写；单值少于 255 个字符，最多 2 个，多值用 &lt;#cfw-splite#&gt; 分隔。</p>
+     * @param string $WhiteId <p>白名单策略唯一 ID。</p>
+     * @param string $XForwardedFor <p>HTTP X-Forwarded-For，仅 RuleType=9；精确 IP，多值逗号分隔，最多 50 个。</p>
+     * @param string $RiskEventType <p>风险事件类型</p>
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class WhiteRuleInfo extends AbstractModel
 
         if (array_key_exists("XForwardedFor",$param) and $param["XForwardedFor"] !== null) {
             $this->XForwardedFor = $param["XForwardedFor"];
+        }
+
+        if (array_key_exists("RiskEventType",$param) and $param["RiskEventType"] !== null) {
+            $this->RiskEventType = $param["RiskEventType"];
         }
     }
 }

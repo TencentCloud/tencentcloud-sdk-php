@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighLevelSensitiveCnt(integer $HighLevelSensitiveCnt) 设置<p>高危敏感信息数</p>
  * @method integer getCriticalLevelSensitiveCnt() 获取<p>严重敏感信息数</p>
  * @method void setCriticalLevelSensitiveCnt(integer $CriticalLevelSensitiveCnt) 设置<p>严重敏感信息数</p>
+ * @method integer getSecretFileCnt() 获取<p>敏感文件数</p>
+ * @method void setSecretFileCnt(integer $SecretFileCnt) 设置<p>敏感文件数</p>
+ * @method integer getBuildRiskCnt() 获取<p>构建风险数</p>
+ * @method void setBuildRiskCnt(integer $BuildRiskCnt) 设置<p>构建风险数</p>
  */
 class ImageAssetDetail extends AbstractModel
 {
@@ -269,6 +273,16 @@ class ImageAssetDetail extends AbstractModel
     public $CriticalLevelSensitiveCnt;
 
     /**
+     * @var integer <p>敏感文件数</p>
+     */
+    public $SecretFileCnt;
+
+    /**
+     * @var integer <p>构建风险数</p>
+     */
+    public $BuildRiskCnt;
+
+    /**
      * @param string $ImageDigest <p>镜像摘要</p>
      * @param string $ImageRepoAddress <p>仓库地址</p>
      * @param string $RegistryType <p>仓库类型</p>
@@ -304,6 +318,8 @@ class ImageAssetDetail extends AbstractModel
      * @param integer $MediumLevelSensitiveCnt <p>中危敏感信息数</p>
      * @param integer $HighLevelSensitiveCnt <p>高危敏感信息数</p>
      * @param integer $CriticalLevelSensitiveCnt <p>严重敏感信息数</p>
+     * @param integer $SecretFileCnt <p>敏感文件数</p>
+     * @param integer $BuildRiskCnt <p>构建风险数</p>
      */
     function __construct()
     {
@@ -456,6 +472,14 @@ class ImageAssetDetail extends AbstractModel
 
         if (array_key_exists("CriticalLevelSensitiveCnt",$param) and $param["CriticalLevelSensitiveCnt"] !== null) {
             $this->CriticalLevelSensitiveCnt = $param["CriticalLevelSensitiveCnt"];
+        }
+
+        if (array_key_exists("SecretFileCnt",$param) and $param["SecretFileCnt"] !== null) {
+            $this->SecretFileCnt = $param["SecretFileCnt"];
+        }
+
+        if (array_key_exists("BuildRiskCnt",$param) and $param["BuildRiskCnt"] !== null) {
+            $this->BuildRiskCnt = $param["BuildRiskCnt"];
         }
     }
 }

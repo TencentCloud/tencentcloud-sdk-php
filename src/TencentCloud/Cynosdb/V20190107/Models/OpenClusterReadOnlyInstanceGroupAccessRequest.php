@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenClusterReadOnlyInstanceGroupAccess请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getPort() 获取端口
- * @method void setPort(string $Port) 设置端口
- * @method array getSecurityGroupIds() 获取安全组ID 
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID 
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getPort() 获取<p>端口</p>
+ * @method void setPort(string $Port) 设置<p>端口</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组ID</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组ID</p>
  */
 class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 端口
+     * @var string <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var array 安全组ID 
+     * @var array <p>安全组ID</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $Port 端口
-     * @param array $SecurityGroupIds 安全组ID 
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $Port <p>端口</p>
+     * @param array $SecurityGroupIds <p>安全组ID</p>
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartupCommand() 获取<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
  * @method void setStartupCommand(string $StartupCommand) 设置<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
- * @method array getEnvironmentVariables() 获取<p>容器运行时的环境变量。最多支持 10 个变量。</p>
- * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置<p>容器运行时的环境变量。最多支持 10 个变量。</p>
+ * @method array getEnvironmentVariables() 获取<p>容器运行时的环境变量。最多支持 50 个变量。</p>
+ * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置<p>容器运行时的环境变量。最多支持 50 个变量。</p>
  */
 class InferenceContainerConfig extends AbstractModel
 {
@@ -50,7 +50,7 @@ class InferenceContainerConfig extends AbstractModel
     public $StartupCommand;
 
     /**
-     * @var array <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * @var array <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     public $EnvironmentVariables;
 
@@ -59,7 +59,7 @@ class InferenceContainerConfig extends AbstractModel
      * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartupCommand <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
-     * @param array $EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * @param array $EnvironmentVariables <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     function __construct()
     {

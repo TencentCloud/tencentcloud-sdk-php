@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagItems(array $TagItems) 设置<p>资产标签列表</p>
  * @method AssetTagModifyAssetItem getTagModifyInfo() 获取<p>标签修改信息</p>
  * @method void setTagModifyInfo(AssetTagModifyAssetItem $TagModifyInfo) 设置<p>标签修改信息</p>
+ * @method integer getNormalNodeCount() 获取<p>集群普通节点数</p>
+ * @method void setNormalNodeCount(integer $NormalNodeCount) 设置<p>集群普通节点数</p>
+ * @method string getAuditLogFailedInfo() 获取<p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+ * @method void setAuditLogFailedInfo(string $AuditLogFailedInfo) 设置<p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
  */
 class ClusterListItem extends AbstractModel
 {
@@ -323,6 +327,16 @@ class ClusterListItem extends AbstractModel
     public $TagModifyInfo;
 
     /**
+     * @var integer <p>集群普通节点数</p>
+     */
+    public $NormalNodeCount;
+
+    /**
+     * @var string <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+     */
+    public $AuditLogFailedInfo;
+
+    /**
      * @param integer $AppID <p>appid</p>
      * @param string $AssetId <p>资产id</p>
      * @param string $ClusterId <p>集群id</p>
@@ -364,6 +378,8 @@ class ClusterListItem extends AbstractModel
      * @param integer $UnboundUltimateNodeCount <p>未绑定旗舰版的节点数量</p>
      * @param array $TagItems <p>资产标签列表</p>
      * @param AssetTagModifyAssetItem $TagModifyInfo <p>标签修改信息</p>
+     * @param integer $NormalNodeCount <p>集群普通节点数</p>
+     * @param string $AuditLogFailedInfo <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
      */
     function __construct()
     {
@@ -551,6 +567,14 @@ class ClusterListItem extends AbstractModel
         if (array_key_exists("TagModifyInfo",$param) and $param["TagModifyInfo"] !== null) {
             $this->TagModifyInfo = new AssetTagModifyAssetItem();
             $this->TagModifyInfo->deserialize($param["TagModifyInfo"]);
+        }
+
+        if (array_key_exists("NormalNodeCount",$param) and $param["NormalNodeCount"] !== null) {
+            $this->NormalNodeCount = $param["NormalNodeCount"];
+        }
+
+        if (array_key_exists("AuditLogFailedInfo",$param) and $param["AuditLogFailedInfo"] !== null) {
+            $this->AuditLogFailedInfo = $param["AuditLogFailedInfo"];
         }
     }
 }

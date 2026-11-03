@@ -20,138 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询策略时策略列表参数
  *
- * @method string getStrategyId() 获取策略Id
- * @method void setStrategyId(string $StrategyId) 设置策略Id
- * @method string getGroupId() 获取规则组Id
- * @method void setGroupId(string $GroupId) 设置规则组Id
- * @method string getGroupName() 获取规则组名称
- * @method void setGroupName(string $GroupName) 设置规则组名称
- * @method integer getRuleCount() 获取规则数
- * @method void setRuleCount(integer $RuleCount) 设置规则数
- * @method integer getRuleStatus() 获取策略状态
- * @method void setRuleStatus(integer $RuleStatus) 设置策略状态
- * @method array getReceiveAccount() 获取下发账号
- * @method void setReceiveAccount(array $ReceiveAccount) 设置下发账号
- * @method integer getSequence() 获取优先级
- * @method void setSequence(integer $Sequence) 设置优先级
- * @method string getErrMsg() 获取下发失败原因
- * @method void setErrMsg(string $ErrMsg) 设置下发失败原因
- * @method string getErrorType() 获取下发失败原因类型
- * @method void setErrorType(string $ErrorType) 设置下发失败原因类型
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method string getCreateBy() 获取创建人
- * @method void setCreateBy(string $CreateBy) 设置创建人
- * @method string getUpdateBy() 获取更新人
- * @method void setUpdateBy(string $UpdateBy) 设置更新人
- * @method string getExecArea() 获取执行区域
- * @method void setExecArea(string $ExecArea) 设置执行区域
- * @method string getCreateName() 获取创建人名称
- * @method void setCreateName(string $CreateName) 设置创建人名称
- * @method string getUpdateName() 获取更新人名称
- * @method void setUpdateName(string $UpdateName) 设置更新人名称
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getStrategyId() 获取<p>策略Id</p>
+ * @method void setStrategyId(string $StrategyId) 设置<p>策略Id</p>
+ * @method string getGroupId() 获取<p>规则组Id</p>
+ * @method void setGroupId(string $GroupId) 设置<p>规则组Id</p>
+ * @method string getProduct() 获取<p>产品类型</p>
+ * @method void setProduct(string $Product) 设置<p>产品类型</p>
+ * @method string getGroupName() 获取<p>规则组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>规则组名称</p>
+ * @method integer getRuleCount() 获取<p>规则数</p>
+ * @method void setRuleCount(integer $RuleCount) 设置<p>规则数</p>
+ * @method integer getRuleStatus() 获取<p>策略状态</p>
+ * @method void setRuleStatus(integer $RuleStatus) 设置<p>策略状态</p>
+ * @method array getReceiveAccount() 获取<p>下发账号</p>
+ * @method void setReceiveAccount(array $ReceiveAccount) 设置<p>下发账号</p>
+ * @method integer getSequence() 获取<p>优先级</p>
+ * @method void setSequence(integer $Sequence) 设置<p>优先级</p>
+ * @method string getErrMsg() 获取<p>下发失败原因</p>
+ * @method void setErrMsg(string $ErrMsg) 设置<p>下发失败原因</p>
+ * @method string getErrorType() 获取<p>下发失败原因类型</p>
+ * @method void setErrorType(string $ErrorType) 设置<p>下发失败原因类型</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
+ * @method string getCreateBy() 获取<p>创建人</p>
+ * @method void setCreateBy(string $CreateBy) 设置<p>创建人</p>
+ * @method string getUpdateBy() 获取<p>更新人</p>
+ * @method void setUpdateBy(string $UpdateBy) 设置<p>更新人</p>
+ * @method string getExecArea() 获取<p>执行区域</p>
+ * @method void setExecArea(string $ExecArea) 设置<p>执行区域</p>
+ * @method string getCreateName() 获取<p>创建人名称</p>
+ * @method void setCreateName(string $CreateName) 设置<p>创建人名称</p>
+ * @method string getUpdateName() 获取<p>更新人名称</p>
+ * @method void setUpdateName(string $UpdateName) 设置<p>更新人名称</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  */
 class StrategyResp extends AbstractModel
 {
     /**
-     * @var string 策略Id
+     * @var string <p>策略Id</p>
      */
     public $StrategyId;
 
     /**
-     * @var string 规则组Id
+     * @var string <p>规则组Id</p>
      */
     public $GroupId;
 
     /**
-     * @var string 规则组名称
+     * @var string <p>产品类型</p>
+     */
+    public $Product;
+
+    /**
+     * @var string <p>规则组名称</p>
      */
     public $GroupName;
 
     /**
-     * @var integer 规则数
+     * @var integer <p>规则数</p>
      */
     public $RuleCount;
 
     /**
-     * @var integer 策略状态
+     * @var integer <p>策略状态</p>
      */
     public $RuleStatus;
 
     /**
-     * @var array 下发账号
+     * @var array <p>下发账号</p>
      */
     public $ReceiveAccount;
 
     /**
-     * @var integer 优先级
+     * @var integer <p>优先级</p>
      */
     public $Sequence;
 
     /**
-     * @var string 下发失败原因
+     * @var string <p>下发失败原因</p>
      */
     public $ErrMsg;
 
     /**
-     * @var string 下发失败原因类型
+     * @var string <p>下发失败原因类型</p>
      */
     public $ErrorType;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @var string 创建人
+     * @var string <p>创建人</p>
      */
     public $CreateBy;
 
     /**
-     * @var string 更新人
+     * @var string <p>更新人</p>
      */
     public $UpdateBy;
 
     /**
-     * @var string 执行区域
+     * @var string <p>执行区域</p>
      */
     public $ExecArea;
 
     /**
-     * @var string 创建人名称
+     * @var string <p>创建人名称</p>
      */
     public $CreateName;
 
     /**
-     * @var string 更新人名称
+     * @var string <p>更新人名称</p>
      */
     public $UpdateName;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $StrategyId 策略Id
-     * @param string $GroupId 规则组Id
-     * @param string $GroupName 规则组名称
-     * @param integer $RuleCount 规则数
-     * @param integer $RuleStatus 策略状态
-     * @param array $ReceiveAccount 下发账号
-     * @param integer $Sequence 优先级
-     * @param string $ErrMsg 下发失败原因
-     * @param string $ErrorType 下发失败原因类型
-     * @param string $UpdateTime 更新时间
-     * @param string $CreateBy 创建人
-     * @param string $UpdateBy 更新人
-     * @param string $ExecArea 执行区域
-     * @param string $CreateName 创建人名称
-     * @param string $UpdateName 更新人名称
-     * @param string $CreateTime 创建时间
+     * @param string $StrategyId <p>策略Id</p>
+     * @param string $GroupId <p>规则组Id</p>
+     * @param string $Product <p>产品类型</p>
+     * @param string $GroupName <p>规则组名称</p>
+     * @param integer $RuleCount <p>规则数</p>
+     * @param integer $RuleStatus <p>策略状态</p>
+     * @param array $ReceiveAccount <p>下发账号</p>
+     * @param integer $Sequence <p>优先级</p>
+     * @param string $ErrMsg <p>下发失败原因</p>
+     * @param string $ErrorType <p>下发失败原因类型</p>
+     * @param string $UpdateTime <p>更新时间</p>
+     * @param string $CreateBy <p>创建人</p>
+     * @param string $UpdateBy <p>更新人</p>
+     * @param string $ExecArea <p>执行区域</p>
+     * @param string $CreateName <p>创建人名称</p>
+     * @param string $UpdateName <p>更新人名称</p>
+     * @param string $CreateTime <p>创建时间</p>
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class StrategyResp extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeploymentConfigs(array $DeploymentConfigs) 设置<p>服务部署信息</p>
  * @method HyperParam getHyperParam() 获取<p>服务超参数配置</p>
  * @method void setHyperParam(HyperParam $HyperParam) 设置<p>服务超参数配置</p>
+ * @method array getRoleStatuses() 获取<p>角色状态</p>
+ * @method void setRoleStatuses(array $RoleStatuses) 设置<p>角色状态</p>
  * @method string getSecurityType() 获取<p>安全类型</p>
  * @method void setSecurityType(string $SecurityType) 设置<p>安全类型</p>
  * @method array getRoleComputeSet() 获取<p>角色算力配置列表</p>
@@ -110,6 +112,11 @@ class ServiceDetail extends AbstractModel
     public $HyperParam;
 
     /**
+     * @var array <p>角色状态</p>
+     */
+    public $RoleStatuses;
+
+    /**
      * @var string <p>安全类型</p>
      */
     public $SecurityType;
@@ -160,6 +167,7 @@ class ServiceDetail extends AbstractModel
      * @param string $ModelName <p>模型名称</p>
      * @param array $DeploymentConfigs <p>服务部署信息</p>
      * @param HyperParam $HyperParam <p>服务超参数配置</p>
+     * @param array $RoleStatuses <p>角色状态</p>
      * @param string $SecurityType <p>安全类型</p>
      * @param array $RoleComputeSet <p>角色算力配置列表</p>
      * @param integer $TargetReplicas <p>目标副本数</p>
@@ -231,6 +239,15 @@ class ServiceDetail extends AbstractModel
         if (array_key_exists("HyperParam",$param) and $param["HyperParam"] !== null) {
             $this->HyperParam = new HyperParam();
             $this->HyperParam->deserialize($param["HyperParam"]);
+        }
+
+        if (array_key_exists("RoleStatuses",$param) and $param["RoleStatuses"] !== null) {
+            $this->RoleStatuses = [];
+            foreach ($param["RoleStatuses"] as $key => $value){
+                $obj = new RoleStatusInfo();
+                $obj->deserialize($value);
+                array_push($this->RoleStatuses, $obj);
+            }
         }
 
         if (array_key_exists("SecurityType",$param) and $param["SecurityType"] !== null) {

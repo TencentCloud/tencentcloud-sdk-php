@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置<p>检测状态(0:待扫描,1:检测中,2:已完成,3:检测异常)</p>
  * @method integer getFailType() 获取<p>扫描失败类型(0:无失败, 1:检测超时, 2:文件格式解析失败, 3:检测失败)</p>
  * @method void setFailType(integer $FailType) 设置<p>扫描失败类型(0:无失败, 1:检测超时, 2:文件格式解析失败, 3:检测失败)</p>
+ * @method string getFailReason() 获取<p>扫描失败原因</p>
+ * @method void setFailReason(string $FailReason) 设置<p>扫描失败原因</p>
+ * @method string getFailSolution() 获取<p>扫描失败解决方案</p>
+ * @method void setFailSolution(string $FailSolution) 设置<p>扫描失败解决方案</p>
  */
 class IaCFile extends AbstractModel
 {
@@ -108,6 +112,16 @@ class IaCFile extends AbstractModel
     public $FailType;
 
     /**
+     * @var string <p>扫描失败原因</p>
+     */
+    public $FailReason;
+
+    /**
+     * @var string <p>扫描失败解决方案</p>
+     */
+    public $FailSolution;
+
+    /**
      * @param integer $Id <p>ID</p>
      * @param integer $AppId <p>appid</p>
      * @param string $FileId <p>文件ID</p>
@@ -120,6 +134,8 @@ class IaCFile extends AbstractModel
      * @param string $ScanTime <p>扫描时间</p>
      * @param integer $Status <p>检测状态(0:待扫描,1:检测中,2:已完成,3:检测异常)</p>
      * @param integer $FailType <p>扫描失败类型(0:无失败, 1:检测超时, 2:文件格式解析失败, 3:检测失败)</p>
+     * @param string $FailReason <p>扫描失败原因</p>
+     * @param string $FailSolution <p>扫描失败解决方案</p>
      */
     function __construct()
     {
@@ -185,6 +201,14 @@ class IaCFile extends AbstractModel
 
         if (array_key_exists("FailType",$param) and $param["FailType"] !== null) {
             $this->FailType = $param["FailType"];
+        }
+
+        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
+            $this->FailReason = $param["FailReason"];
+        }
+
+        if (array_key_exists("FailSolution",$param) and $param["FailSolution"] !== null) {
+            $this->FailSolution = $param["FailSolution"];
         }
     }
 }

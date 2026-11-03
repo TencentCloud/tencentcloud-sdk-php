@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述实例的网络连接信息。
  *
- * @method string getAddress() 获取DNS域名
- * @method void setAddress(string $Address) 设置DNS域名
- * @method string getIp() 获取IP地址
- * @method void setIp(string $Ip) 设置IP地址
- * @method integer getPort() 获取连接Port地址
- * @method void setPort(integer $Port) 设置连接Port地址
- * @method string getNetType() 获取网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
- * @method void setNetType(string $NetType) 设置网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
- * @method string getStatus() 获取网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
- * @method void setStatus(string $Status) 设置网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getProtocolType() 获取连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
- * @method void setProtocolType(string $ProtocolType) 设置连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+ * @method string getAddress() 获取<p>DNS域名</p>
+ * @method void setAddress(string $Address) 设置<p>DNS域名</p>
+ * @method string getIp() 获取<p>IP地址</p>
+ * @method void setIp(string $Ip) 设置<p>IP地址</p>
+ * @method integer getPort() 获取<p>连接Port地址</p>
+ * @method void setPort(integer $Port) 设置<p>连接Port地址</p>
+ * @method string getNetType() 获取<p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
+ * @method void setNetType(string $NetType) 设置<p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
+ * @method string getStatus() 获取<p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
+ * @method void setStatus(string $Status) 设置<p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
+ * @method string getVpcId() 获取<p>私有网络ID</p>
+ * @method void setVpcId(string $VpcId) 设置<p>私有网络ID</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getProtocolType() 获取<p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
+ * @method void setProtocolType(string $ProtocolType) 设置<p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
  */
 class DBInstanceNetInfo extends AbstractModel
 {
     /**
-     * @var string DNS域名
+     * @var string <p>DNS域名</p>
      */
     public $Address;
 
     /**
-     * @var string IP地址
+     * @var string <p>IP地址</p>
      */
     public $Ip;
 
     /**
-     * @var integer 连接Port地址
+     * @var integer <p>连接Port地址</p>
      */
     public $Port;
 
     /**
-     * @var string 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+     * @var string <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
      */
     public $NetType;
 
     /**
-     * @var string 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+     * @var string <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
      */
     public $Status;
 
     /**
-     * @var string 私有网络ID
+     * @var string <p>私有网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+     * @var string <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
      */
     public $ProtocolType;
 
     /**
-     * @param string $Address DNS域名
-     * @param string $Ip IP地址
-     * @param integer $Port 连接Port地址
-     * @param string $NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
-     * @param string $Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
-     * @param string $VpcId 私有网络ID
-     * @param string $SubnetId 子网ID
-     * @param string $ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+     * @param string $Address <p>DNS域名</p>
+     * @param string $Ip <p>IP地址</p>
+     * @param integer $Port <p>连接Port地址</p>
+     * @param string $NetType <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
+     * @param string $Status <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
+     * @param string $VpcId <p>私有网络ID</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $ProtocolType <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
      */
     function __construct()
     {

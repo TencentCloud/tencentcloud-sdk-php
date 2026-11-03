@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryID(integer $CategoryID) 设置<p>基线子分类 ID。</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method array getFilters() 获取<p>通用过滤条件。支持的 Name：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊搜索）、IP（IP地址，模糊搜索）、Tag（资产标签，模糊搜索）。</p>
- * @method void setFilters(array $Filters) 设置<p>通用过滤条件。支持的 Name：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊搜索）、IP（IP地址，模糊搜索）、Tag（资产标签，模糊搜索）。</p>
+ * @method array getFilters() 获取<p>通用过滤条件。支持的 Name：<br>ResultStatus（通过状态，Values: PASS/NOT_PASS）<br>AssetName（资产名称/ID，模糊搜索）<br>IP（IP地址，模糊搜索）<br>Tag（资产标签，模糊搜索）<br>ClusterCaMD5 (集群ca-md5,精确匹配)<br>ClusterId (集群Id,精确匹配)</p>
+ * @method void setFilters(array $Filters) 设置<p>通用过滤条件。支持的 Name：<br>ResultStatus（通过状态，Values: PASS/NOT_PASS）<br>AssetName（资产名称/ID，模糊搜索）<br>IP（IP地址，模糊搜索）<br>Tag（资产标签，模糊搜索）<br>ClusterCaMD5 (集群ca-md5,精确匹配)<br>ClusterId (集群Id,精确匹配)</p>
  * @method integer getLimit() 获取<p>分页查询每页数量，最大值 100；超过时服务端将自动回退为默认值 10。</p>
  * @method void setLimit(integer $Limit) 设置<p>分页查询每页数量，最大值 100；超过时服务端将自动回退为默认值 10。</p>
  * @method integer getOffset() 获取<p>分页查询起始偏移量，从 0 开始。</p>
@@ -76,7 +76,7 @@ class DescribeBaselineItemRiskListRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array <p>通用过滤条件。支持的 Name：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊搜索）、IP（IP地址，模糊搜索）、Tag（资产标签，模糊搜索）。</p>
+     * @var array <p>通用过滤条件。支持的 Name：<br>ResultStatus（通过状态，Values: PASS/NOT_PASS）<br>AssetName（资产名称/ID，模糊搜索）<br>IP（IP地址，模糊搜索）<br>Tag（资产标签，模糊搜索）<br>ClusterCaMD5 (集群ca-md5,精确匹配)<br>ClusterId (集群Id,精确匹配)</p>
      */
     public $Filters;
 
@@ -107,7 +107,7 @@ class DescribeBaselineItemRiskListRequest extends AbstractModel
      * @param array $CheckAssetType <p>检测资产类型列表，元素取值为 HOST 或 CLUSTER。</p>
      * @param integer $CategoryID <p>基线子分类 ID。</p>
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param array $Filters <p>通用过滤条件。支持的 Name：ResultStatus（通过状态，Values: PASS/NOT_PASS）、AssetName（资产名称/ID，模糊搜索）、IP（IP地址，模糊搜索）、Tag（资产标签，模糊搜索）。</p>
+     * @param array $Filters <p>通用过滤条件。支持的 Name：<br>ResultStatus（通过状态，Values: PASS/NOT_PASS）<br>AssetName（资产名称/ID，模糊搜索）<br>IP（IP地址，模糊搜索）<br>Tag（资产标签，模糊搜索）<br>ClusterCaMD5 (集群ca-md5,精确匹配)<br>ClusterId (集群Id,精确匹配)</p>
      * @param integer $Limit <p>分页查询每页数量，最大值 100；超过时服务端将自动回退为默认值 10。</p>
      * @param integer $Offset <p>分页查询起始偏移量，从 0 开始。</p>
      * @param string $Order <p>排序方向，取值 asc（升序）或 desc（降序），默认 desc。</p>

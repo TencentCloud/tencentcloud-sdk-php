@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganMembers请求参数结构体
  *
- * @method array getFilters() 获取搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
- * @method void setFilters(array $Filters) 设置搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
- * @method integer getLimit() 获取分页大小，默认 20
- * @method void setLimit(integer $Limit) 设置分页大小，默认 20
- * @method integer getOffset() 获取分页偏移量，默认 0
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认 0
- * @method string getBy() 获取排序字段，如 MemberCreateTime
- * @method void setBy(string $By) 设置排序字段，如 MemberCreateTime
- * @method string getOrder() 获取排序方式：asc 升序，desc 降序
- * @method void setOrder(string $Order) 设置排序方式：asc 升序，desc 降序
+ * @method array getFilters() 获取<p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
+ * @method void setFilters(array $Filters) 设置<p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
+ * @method integer getLimit() 获取<p>分页大小，默认 20</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页大小，默认 20</p>
+ * @method integer getOffset() 获取<p>分页偏移量，默认 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移量，默认 0</p>
+ * @method string getBy() 获取<p>排序字段，如 MemberCreateTime</p>
+ * @method void setBy(string $By) 设置<p>排序字段，如 MemberCreateTime</p>
+ * @method string getOrder() 获取<p>排序方式：asc 升序，desc 降序</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式：asc 升序，desc 降序</p>
  */
 class DescribeOrganMembersRequest extends AbstractModel
 {
     /**
-     * @var array 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
+     * @var array <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
      */
     public $Filters;
 
     /**
-     * @var integer 分页大小，默认 20
+     * @var integer <p>分页大小，默认 20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，默认 0
+     * @var integer <p>分页偏移量，默认 0</p>
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，如 MemberCreateTime
+     * @var string <p>排序字段，如 MemberCreateTime</p>
      */
     public $By;
 
     /**
-     * @var string 排序方式：asc 升序，desc 降序
+     * @var string <p>排序方式：asc 升序，desc 降序</p>
      */
     public $Order;
 
     /**
-     * @param array $Filters 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
-     * @param integer $Limit 分页大小，默认 20
-     * @param integer $Offset 分页偏移量，默认 0
-     * @param string $By 排序字段，如 MemberCreateTime
-     * @param string $Order 排序方式：asc 升序，desc 降序
+     * @param array $Filters <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
+     * @param integer $Limit <p>分页大小，默认 20</p>
+     * @param integer $Offset <p>分页偏移量，默认 0</p>
+     * @param string $By <p>排序字段，如 MemberCreateTime</p>
+     * @param string $Order <p>排序方式：asc 升序，desc 降序</p>
      */
     function __construct()
     {

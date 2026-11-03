@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分页查询存储位置列表响应
  *
- * @method array getLocations() 获取存储位置详情列表
- * @method void setLocations(array $Locations) 设置存储位置详情列表
+ * @method array getLocations() 获取存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
+ * @method void setLocations(array $Locations) 设置存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
  * @method integer getTotalCount() 获取结果总条数
  * @method void setTotalCount(integer $TotalCount) 设置结果总条数
  * @method string getSnapshotId() 获取快照ID
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID
+ * @method array getItems() 获取存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+ * @method void setItems(array $Items) 设置存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
  */
 class ListLocationsRsp extends AbstractModel
 {
     /**
-     * @var array 存储位置详情列表
+     * @var array 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
      */
     public $Locations;
 
@@ -45,9 +47,15 @@ class ListLocationsRsp extends AbstractModel
     public $SnapshotId;
 
     /**
-     * @param array $Locations 存储位置详情列表
+     * @var array 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+     */
+    public $Items;
+
+    /**
+     * @param array $Locations 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
      * @param integer $TotalCount 结果总条数
      * @param string $SnapshotId 快照ID
+     * @param array $Items 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
      */
     function __construct()
     {
@@ -77,6 +85,15 @@ class ListLocationsRsp extends AbstractModel
 
         if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
             $this->SnapshotId = $param["SnapshotId"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new ListLocationItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
     }
 }

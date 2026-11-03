@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesList返回参数结构体
  *
- * @method integer getTotalCnt() 获取符合条件的实例总数。
- * @method void setTotalCnt(integer $TotalCnt) 设置符合条件的实例总数。
- * @method array getInstancesList() 获取集群实例列表
- * @method void setInstancesList(array $InstancesList) 设置集群实例列表
+ * @method integer getTotalCnt() 获取<p>符合条件的实例总数。</p>
+ * @method void setTotalCnt(integer $TotalCnt) 设置<p>符合条件的实例总数。</p>
+ * @method array getInstancesList() 获取<p>集群实例列表</p>
+ * @method void setInstancesList(array $InstancesList) 设置<p>集群实例列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstancesListResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的实例总数。
+     * @var integer <p>符合条件的实例总数。</p>
      */
     public $TotalCnt;
 
     /**
-     * @var array 集群实例列表
+     * @var array <p>集群实例列表</p>
      */
     public $InstancesList;
 
@@ -45,8 +45,8 @@ class DescribeInstancesListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCnt 符合条件的实例总数。
-     * @param array $InstancesList 集群实例列表
+     * @param integer $TotalCnt <p>符合条件的实例总数。</p>
+     * @param array $InstancesList <p>集群实例列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

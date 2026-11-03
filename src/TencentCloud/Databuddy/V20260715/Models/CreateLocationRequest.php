@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLocation请求参数结构体
  *
-
+ * @method CosEventSubscription getFileEventSubscription() 获取COS 文件事件订阅配置，可选；不设置时不订阅（仅 COS 类型 Location 生效）。设置时先订阅 COS 桶事件投递到 CKafka 再创建 Location，创建失败自动回滚退订
+ * @method void setFileEventSubscription(CosEventSubscription $FileEventSubscription) 设置COS 文件事件订阅配置，可选；不设置时不订阅（仅 COS 类型 Location 生效）。设置时先订阅 COS 桶事件投递到 CKafka 再创建 Location，创建失败自动回滚退订
  */
 class CreateLocationRequest extends AbstractModel
 {
-
+    /**
+     * @var CosEventSubscription COS 文件事件订阅配置，可选；不设置时不订阅（仅 COS 类型 Location 生效）。设置时先订阅 COS 桶事件投递到 CKafka 再创建 Location，创建失败自动回滚退订
+     */
+    public $FileEventSubscription;
 
     /**
-
+     * @param CosEventSubscription $FileEventSubscription COS 文件事件订阅配置，可选；不设置时不订阅（仅 COS 类型 Location 生效）。设置时先订阅 COS 桶事件投递到 CKafka 再创建 Location，创建失败自动回滚退订
      */
     function __construct()
     {
@@ -42,6 +46,9 @@ class CreateLocationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("FileEventSubscription",$param) and $param["FileEventSubscription"] !== null) {
+            $this->FileEventSubscription = new CosEventSubscription();
+            $this->FileEventSubscription->deserialize($param["FileEventSubscription"]);
+        }
     }
 }

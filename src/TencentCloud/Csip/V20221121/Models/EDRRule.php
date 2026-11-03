@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>策略名称</p>
  * @method string getDescription() 获取<p>策略描述</p>
  * @method void setDescription(string $Description) 设置<p>策略描述</p>
- * @method string getContentType() 获取<p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
- * @method void setContentType(string $ContentType) 设置<p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+ * @method string getContentType() 获取<p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
+ * @method void setContentType(string $ContentType) 设置<p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
  * @method integer getAction() 获取<p>执行动作 / Action: 0-告警/Alert, 1-放行/Allow, 2-告警并拦截/Alert and Block</p>
  * @method void setAction(integer $Action) 设置<p>执行动作 / Action: 0-告警/Alert, 1-放行/Allow, 2-告警并拦截/Alert and Block</p>
  * @method integer getLevel() 获取<p>告警等级 / Alert Level: 0-无/None, 1-高危/High, 2-中危/Medium, 3-低危/Low, 4-提示/Reminder</p>
@@ -96,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagItems(array $TagItems) 设置<p>安全中心标签</p>
  * @method RuleContentFileOperation getFileOperationRules() 获取<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
  * @method void setFileOperationRules(RuleContentFileOperation $FileOperationRules) 设置<p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+ * @method RuleContentK8sAPI getK8sApiRule() 获取<p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+ * @method void setK8sApiRule(RuleContentK8sAPI $K8sApiRule) 设置<p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
  */
 class EDRRule extends AbstractModel
 {
@@ -120,7 +122,7 @@ class EDRRule extends AbstractModel
     public $Description;
 
     /**
-     * @var string <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * @var string <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      */
     public $ContentType;
 
@@ -290,11 +292,16 @@ class EDRRule extends AbstractModel
     public $FileOperationRules;
 
     /**
+     * @var RuleContentK8sAPI <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+     */
+    public $K8sApiRule;
+
+    /**
      * @param string $RuleID <p>策略ID</p>
      * @param integer $RuleType <p>策略类型，0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      * @param string $Name <p>策略名称</p>
      * @param string $Description <p>策略描述</p>
-     * @param string $ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * @param string $ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      * @param integer $Action <p>执行动作 / Action: 0-告警/Alert, 1-放行/Allow, 2-告警并拦截/Alert and Block</p>
      * @param integer $Level <p>告警等级 / Alert Level: 0-无/None, 1-高危/High, 2-中危/Medium, 3-低危/Low, 4-提示/Reminder</p>
      * @param integer $DetectMode <p>检测模式 / Detect Mode: 0-精准/Precise, 1-均衡/Balanced, 2-深度/Deep</p>
@@ -328,6 +335,7 @@ class EDRRule extends AbstractModel
      * @param array $ConditionMatches <p>容器条件匹配</p>
      * @param array $TagItems <p>安全中心标签</p>
      * @param RuleContentFileOperation $FileOperationRules <p>文件操作规则，ContentType=file_operation 时填充（文件路径正则 AND 动作多选或）</p>
+     * @param RuleContentK8sAPI $K8sApiRule <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
      */
     function __construct()
     {
@@ -505,6 +513,11 @@ class EDRRule extends AbstractModel
         if (array_key_exists("FileOperationRules",$param) and $param["FileOperationRules"] !== null) {
             $this->FileOperationRules = new RuleContentFileOperation();
             $this->FileOperationRules->deserialize($param["FileOperationRules"]);
+        }
+
+        if (array_key_exists("K8sApiRule",$param) and $param["K8sApiRule"] !== null) {
+            $this->K8sApiRule = new RuleContentK8sAPI();
+            $this->K8sApiRule->deserialize($param["K8sApiRule"]);
         }
     }
 }

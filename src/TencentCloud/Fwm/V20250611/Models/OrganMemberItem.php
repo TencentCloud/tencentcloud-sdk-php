@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCfwSharerAppId(string $CfwSharerAppId) 设置<p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCfwSharerMemberId() 获取<p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCfwSharerMemberId(string $CfwSharerMemberId) 设置<p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCfwInstanceId() 获取<p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCfwInstanceId(string $CfwInstanceId) 设置<p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
@@ -92,6 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSgManaged(integer $SgManaged) 设置<p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
  * @method integer getIsCfwPostPay() 获取<p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
  * @method void setIsCfwPostPay(integer $IsCfwPostPay) 设置<p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+ * @method integer getSgFreeClaimed() 获取<p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+ * @method void setSgFreeClaimed(integer $SgFreeClaimed) 设置<p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
  */
 class OrganMemberItem extends AbstractModel
 {
@@ -173,6 +179,12 @@ class OrganMemberItem extends AbstractModel
     public $CfwSharerAppId;
 
     /**
+     * @var string <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CfwSharerMemberId;
+
+    /**
      * @var string <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -216,6 +228,11 @@ class OrganMemberItem extends AbstractModel
     public $IsCfwPostPay;
 
     /**
+     * @var integer <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+     */
+    public $SgFreeClaimed;
+
+    /**
      * @param string $MemberId <p>成员 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId <p>成员账号 AppId</p>
@@ -241,6 +258,8 @@ class OrganMemberItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CfwSharerAppId <p>云防火墙共享者 AppId，成员角色为使用者时有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CfwSharerMemberId <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CfwInstanceId <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyAnalysisEnabled <p>策略分析权限：0-关闭，1-开启</p>
@@ -252,6 +271,7 @@ class OrganMemberItem extends AbstractModel
      * @param integer $CfwCapable <p>是否具备云防火墙使用能力</p>
      * @param integer $SgManaged <p>私有安全组纳管开关， 0:未纳管，1:已纳管</p>
      * @param integer $IsCfwPostPay <p>是否是后付费云防版本</p><p>枚举值：</p><ul><li>1： 后付费</li><li>0： 非后付费</li><li>-1： 未知</li></ul>
+     * @param integer $SgFreeClaimed <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
      */
     function __construct()
     {
@@ -319,6 +339,10 @@ class OrganMemberItem extends AbstractModel
             $this->CfwSharerAppId = $param["CfwSharerAppId"];
         }
 
+        if (array_key_exists("CfwSharerMemberId",$param) and $param["CfwSharerMemberId"] !== null) {
+            $this->CfwSharerMemberId = $param["CfwSharerMemberId"];
+        }
+
         if (array_key_exists("CfwInstanceId",$param) and $param["CfwInstanceId"] !== null) {
             $this->CfwInstanceId = $param["CfwInstanceId"];
         }
@@ -349,6 +373,10 @@ class OrganMemberItem extends AbstractModel
 
         if (array_key_exists("IsCfwPostPay",$param) and $param["IsCfwPostPay"] !== null) {
             $this->IsCfwPostPay = $param["IsCfwPostPay"];
+        }
+
+        if (array_key_exists("SgFreeClaimed",$param) and $param["SgFreeClaimed"] !== null) {
+            $this->SgFreeClaimed = $param["SgFreeClaimed"];
         }
     }
 }

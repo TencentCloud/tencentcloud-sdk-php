@@ -42,6 +42,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemainingQuota(integer $RemainingQuota) 设置<p>剩余配额</p>
  * @method integer getTrialQuota() 获取<p>试用配额</p>
  * @method void setTrialQuota(integer $TrialQuota) 设置<p>试用配额</p>
+ * @method integer getRiskImageCnt() 获取<p>有风险的镜像数</p>
+ * @method void setRiskImageCnt(integer $RiskImageCnt) 设置<p>有风险的镜像数</p>
+ * @method integer getCICDImageCnt() 获取<p>CICD镜像数</p>
+ * @method void setCICDImageCnt(integer $CICDImageCnt) 设置<p>CICD镜像数</p>
+ * @method integer getCICDImageScannedCnt() 获取<p>CICD已扫描镜数</p>
+ * @method void setCICDImageScannedCnt(integer $CICDImageScannedCnt) 设置<p>CICD已扫描镜数</p>
+ * @method integer getRiskCICDImageCnt() 获取<p>有风险的CICD镜像数</p>
+ * @method void setRiskCICDImageCnt(integer $RiskCICDImageCnt) 设置<p>有风险的CICD镜像数</p>
+ * @method integer getSecretFileCnt() 获取<p>敏感文件数</p>
+ * @method void setSecretFileCnt(integer $SecretFileCnt) 设置<p>敏感文件数</p>
+ * @method integer getBuildRiskCnt() 获取<p>构建风险数</p>
+ * @method void setBuildRiskCnt(integer $BuildRiskCnt) 设置<p>构建风险数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +115,36 @@ class DescribeImageRegistryAssetOverviewResponse extends AbstractModel
     public $TrialQuota;
 
     /**
+     * @var integer <p>有风险的镜像数</p>
+     */
+    public $RiskImageCnt;
+
+    /**
+     * @var integer <p>CICD镜像数</p>
+     */
+    public $CICDImageCnt;
+
+    /**
+     * @var integer <p>CICD已扫描镜数</p>
+     */
+    public $CICDImageScannedCnt;
+
+    /**
+     * @var integer <p>有风险的CICD镜像数</p>
+     */
+    public $RiskCICDImageCnt;
+
+    /**
+     * @var integer <p>敏感文件数</p>
+     */
+    public $SecretFileCnt;
+
+    /**
+     * @var integer <p>构建风险数</p>
+     */
+    public $BuildRiskCnt;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +161,12 @@ class DescribeImageRegistryAssetOverviewResponse extends AbstractModel
      * @param integer $UsedQuota <p>已使用配额</p>
      * @param integer $RemainingQuota <p>剩余配额</p>
      * @param integer $TrialQuota <p>试用配额</p>
+     * @param integer $RiskImageCnt <p>有风险的镜像数</p>
+     * @param integer $CICDImageCnt <p>CICD镜像数</p>
+     * @param integer $CICDImageScannedCnt <p>CICD已扫描镜数</p>
+     * @param integer $RiskCICDImageCnt <p>有风险的CICD镜像数</p>
+     * @param integer $SecretFileCnt <p>敏感文件数</p>
+     * @param integer $BuildRiskCnt <p>构建风险数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +224,30 @@ class DescribeImageRegistryAssetOverviewResponse extends AbstractModel
 
         if (array_key_exists("TrialQuota",$param) and $param["TrialQuota"] !== null) {
             $this->TrialQuota = $param["TrialQuota"];
+        }
+
+        if (array_key_exists("RiskImageCnt",$param) and $param["RiskImageCnt"] !== null) {
+            $this->RiskImageCnt = $param["RiskImageCnt"];
+        }
+
+        if (array_key_exists("CICDImageCnt",$param) and $param["CICDImageCnt"] !== null) {
+            $this->CICDImageCnt = $param["CICDImageCnt"];
+        }
+
+        if (array_key_exists("CICDImageScannedCnt",$param) and $param["CICDImageScannedCnt"] !== null) {
+            $this->CICDImageScannedCnt = $param["CICDImageScannedCnt"];
+        }
+
+        if (array_key_exists("RiskCICDImageCnt",$param) and $param["RiskCICDImageCnt"] !== null) {
+            $this->RiskCICDImageCnt = $param["RiskCICDImageCnt"];
+        }
+
+        if (array_key_exists("SecretFileCnt",$param) and $param["SecretFileCnt"] !== null) {
+            $this->SecretFileCnt = $param["SecretFileCnt"];
+        }
+
+        if (array_key_exists("BuildRiskCnt",$param) and $param["BuildRiskCnt"] !== null) {
+            $this->BuildRiskCnt = $param["BuildRiskCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

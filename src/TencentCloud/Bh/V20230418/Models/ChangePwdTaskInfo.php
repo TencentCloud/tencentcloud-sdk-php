@@ -20,194 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改密码任务信息
  *
- * @method integer getId() 获取id
- * @method void setId(integer $Id) 设置id
- * @method string getOperationId() 获取任务id
- * @method void setOperationId(string $OperationId) 设置任务id
- * @method string getTaskName() 获取任务名
- * @method void setTaskName(string $TaskName) 设置任务名
- * @method Department getDepartment() 获取所属部门信息
- * @method void setDepartment(Department $Department) 设置所属部门信息
- * @method integer getChangeMethod() 获取改密方式。1：使用执行账号。2：修改自身密码
- * @method void setChangeMethod(integer $ChangeMethod) 设置改密方式。1：使用执行账号。2：修改自身密码
- * @method string getRunAccount() 获取执行账号
- * @method void setRunAccount(string $RunAccount) 设置执行账号
- * @method integer getAuthGenerationStrategy() 获取密码生成策略
- * @method void setAuthGenerationStrategy(integer $AuthGenerationStrategy) 设置密码生成策略
- * @method integer getPasswordLength() 获取密码长度
- * @method void setPasswordLength(integer $PasswordLength) 设置密码长度
- * @method integer getSmallLetter() 获取包含小写字母
- * @method void setSmallLetter(integer $SmallLetter) 设置包含小写字母
- * @method integer getBigLetter() 获取包含大写字母
- * @method void setBigLetter(integer $BigLetter) 设置包含大写字母
- * @method integer getDigit() 获取包含数字
- * @method void setDigit(integer $Digit) 设置包含数字
- * @method string getSymbol() 获取包含的特殊字符，入参base64
- * @method void setSymbol(string $Symbol) 设置包含的特殊字符，入参base64
- * @method integer getCompleteNotify() 获取改密完成通知。0-通知，1-不通知
- * @method void setCompleteNotify(integer $CompleteNotify) 设置改密完成通知。0-通知，1-不通知
- * @method array getNotifyEmails() 获取通知人邮箱
- * @method void setNotifyEmails(array $NotifyEmails) 设置通知人邮箱
- * @method string getFilePassword() 获取加密附件密码
- * @method void setFilePassword(string $FilePassword) 设置加密附件密码
- * @method array getAccountSet() 获取需要改密的账户
- * @method void setAccountSet(array $AccountSet) 设置需要改密的账户
- * @method array getDeviceSet() 获取需要改密的主机
- * @method void setDeviceSet(array $DeviceSet) 设置需要改密的主机
- * @method integer getType() 获取任务类型：4手动，5自动
- * @method void setType(integer $Type) 设置任务类型：4手动，5自动
- * @method integer getPeriod() 获取周期
- * @method void setPeriod(integer $Period) 设置周期
- * @method string getFirstTime() 获取首次执行时间
- * @method void setFirstTime(string $FirstTime) 设置首次执行时间
- * @method string getNextTime() 获取下次执行时间
- * @method void setNextTime(string $NextTime) 设置下次执行时间
- * @method string getLastTime() 获取上次执行时间
- * @method void setLastTime(string $LastTime) 设置上次执行时间
- * @method integer getStatus() 获取改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
- * @method void setStatus(integer $Status) 设置改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+ * @method integer getId() 获取<p>id</p>
+ * @method void setId(integer $Id) 设置<p>id</p>
+ * @method string getOperationId() 获取<p>任务id</p>
+ * @method void setOperationId(string $OperationId) 设置<p>任务id</p>
+ * @method string getTaskName() 获取<p>任务名</p>
+ * @method void setTaskName(string $TaskName) 设置<p>任务名</p>
+ * @method Department getDepartment() 获取<p>所属部门信息</p>
+ * @method void setDepartment(Department $Department) 设置<p>所属部门信息</p>
+ * @method integer getChangeMethod() 获取<p>改密方式。1：使用执行账号。2：修改自身密码</p>
+ * @method void setChangeMethod(integer $ChangeMethod) 设置<p>改密方式。1：使用执行账号。2：修改自身密码</p>
+ * @method string getRunAccount() 获取<p>执行账号</p>
+ * @method void setRunAccount(string $RunAccount) 设置<p>执行账号</p>
+ * @method integer getAuthGenerationStrategy() 获取<p>密码生成策略</p>
+ * @method void setAuthGenerationStrategy(integer $AuthGenerationStrategy) 设置<p>密码生成策略</p>
+ * @method integer getPasswordLength() 获取<p>密码长度</p>
+ * @method void setPasswordLength(integer $PasswordLength) 设置<p>密码长度</p>
+ * @method integer getSmallLetter() 获取<p>包含小写字母</p>
+ * @method void setSmallLetter(integer $SmallLetter) 设置<p>包含小写字母</p>
+ * @method integer getBigLetter() 获取<p>包含大写字母</p>
+ * @method void setBigLetter(integer $BigLetter) 设置<p>包含大写字母</p>
+ * @method integer getDigit() 获取<p>包含数字</p>
+ * @method void setDigit(integer $Digit) 设置<p>包含数字</p>
+ * @method string getSymbol() 获取<p>包含的特殊字符，入参base64</p>
+ * @method void setSymbol(string $Symbol) 设置<p>包含的特殊字符，入参base64</p>
+ * @method integer getCompleteNotify() 获取<p>改密完成通知。0-通知，1-不通知</p>
+ * @method void setCompleteNotify(integer $CompleteNotify) 设置<p>改密完成通知。0-通知，1-不通知</p>
+ * @method array getNotifyEmails() 获取<p>通知人邮箱</p>
+ * @method void setNotifyEmails(array $NotifyEmails) 设置<p>通知人邮箱</p>
+ * @method string getFilePassword() 获取<p>加密附件密码</p>
+ * @method void setFilePassword(string $FilePassword) 设置<p>加密附件密码</p>
+ * @method array getAccountSet() 获取<p>需要改密的账户</p>
+ * @method void setAccountSet(array $AccountSet) 设置<p>需要改密的账户</p>
+ * @method array getDeviceSet() 获取<p>需要改密的主机</p>
+ * @method void setDeviceSet(array $DeviceSet) 设置<p>需要改密的主机</p>
+ * @method integer getType() 获取<p>任务类型：4手动，5自动</p>
+ * @method void setType(integer $Type) 设置<p>任务类型：4手动，5自动</p>
+ * @method integer getPeriod() 获取<p>周期</p>
+ * @method void setPeriod(integer $Period) 设置<p>周期</p>
+ * @method string getFirstTime() 获取<p>首次执行时间</p>
+ * @method void setFirstTime(string $FirstTime) 设置<p>首次执行时间</p>
+ * @method string getNextTime() 获取<p>下次执行时间</p>
+ * @method void setNextTime(string $NextTime) 设置<p>下次执行时间</p>
+ * @method string getLastTime() 获取<p>上次执行时间</p>
+ * @method void setLastTime(string $LastTime) 设置<p>上次执行时间</p>
+ * @method integer getStatus() 获取<p>改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时</p>
+ * @method void setStatus(integer $Status) 设置<p>改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时</p>
+ * @method integer getCategory() 获取<p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+ * @method void setCategory(integer $Category) 设置<p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+ * @method integer getProtocol() 获取<p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux 改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+ * @method void setProtocol(integer $Protocol) 设置<p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux 改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+ * @method integer getPort() 获取<p>改密协议端口号. Linux 改密协议类型端口号值为0</p><p>默认值：0</p>
+ * @method void setPort(integer $Port) 设置<p>改密协议端口号. Linux 改密协议类型端口号值为0</p><p>默认值：0</p>
  */
 class ChangePwdTaskInfo extends AbstractModel
 {
     /**
-     * @var integer id
+     * @var integer <p>id</p>
      */
     public $Id;
 
     /**
-     * @var string 任务id
+     * @var string <p>任务id</p>
      */
     public $OperationId;
 
     /**
-     * @var string 任务名
+     * @var string <p>任务名</p>
      */
     public $TaskName;
 
     /**
-     * @var Department 所属部门信息
+     * @var Department <p>所属部门信息</p>
      */
     public $Department;
 
     /**
-     * @var integer 改密方式。1：使用执行账号。2：修改自身密码
+     * @var integer <p>改密方式。1：使用执行账号。2：修改自身密码</p>
      */
     public $ChangeMethod;
 
     /**
-     * @var string 执行账号
+     * @var string <p>执行账号</p>
      */
     public $RunAccount;
 
     /**
-     * @var integer 密码生成策略
+     * @var integer <p>密码生成策略</p>
      */
     public $AuthGenerationStrategy;
 
     /**
-     * @var integer 密码长度
+     * @var integer <p>密码长度</p>
      */
     public $PasswordLength;
 
     /**
-     * @var integer 包含小写字母
+     * @var integer <p>包含小写字母</p>
      */
     public $SmallLetter;
 
     /**
-     * @var integer 包含大写字母
+     * @var integer <p>包含大写字母</p>
      */
     public $BigLetter;
 
     /**
-     * @var integer 包含数字
+     * @var integer <p>包含数字</p>
      */
     public $Digit;
 
     /**
-     * @var string 包含的特殊字符，入参base64
+     * @var string <p>包含的特殊字符，入参base64</p>
      */
     public $Symbol;
 
     /**
-     * @var integer 改密完成通知。0-通知，1-不通知
+     * @var integer <p>改密完成通知。0-通知，1-不通知</p>
      */
     public $CompleteNotify;
 
     /**
-     * @var array 通知人邮箱
+     * @var array <p>通知人邮箱</p>
      */
     public $NotifyEmails;
 
     /**
-     * @var string 加密附件密码
+     * @var string <p>加密附件密码</p>
      */
     public $FilePassword;
 
     /**
-     * @var array 需要改密的账户
+     * @var array <p>需要改密的账户</p>
      */
     public $AccountSet;
 
     /**
-     * @var array 需要改密的主机
+     * @var array <p>需要改密的主机</p>
      */
     public $DeviceSet;
 
     /**
-     * @var integer 任务类型：4手动，5自动
+     * @var integer <p>任务类型：4手动，5自动</p>
      */
     public $Type;
 
     /**
-     * @var integer 周期
+     * @var integer <p>周期</p>
      */
     public $Period;
 
     /**
-     * @var string 首次执行时间
+     * @var string <p>首次执行时间</p>
      */
     public $FirstTime;
 
     /**
-     * @var string 下次执行时间
+     * @var string <p>下次执行时间</p>
      */
     public $NextTime;
 
     /**
-     * @var string 上次执行时间
+     * @var string <p>上次执行时间</p>
      */
     public $LastTime;
 
     /**
-     * @var integer 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     * @var integer <p>改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时</p>
      */
     public $Status;
 
     /**
-     * @param integer $Id id
-     * @param string $OperationId 任务id
-     * @param string $TaskName 任务名
-     * @param Department $Department 所属部门信息
-     * @param integer $ChangeMethod 改密方式。1：使用执行账号。2：修改自身密码
-     * @param string $RunAccount 执行账号
-     * @param integer $AuthGenerationStrategy 密码生成策略
-     * @param integer $PasswordLength 密码长度
-     * @param integer $SmallLetter 包含小写字母
-     * @param integer $BigLetter 包含大写字母
-     * @param integer $Digit 包含数字
-     * @param string $Symbol 包含的特殊字符，入参base64
-     * @param integer $CompleteNotify 改密完成通知。0-通知，1-不通知
-     * @param array $NotifyEmails 通知人邮箱
-     * @param string $FilePassword 加密附件密码
-     * @param array $AccountSet 需要改密的账户
-     * @param array $DeviceSet 需要改密的主机
-     * @param integer $Type 任务类型：4手动，5自动
-     * @param integer $Period 周期
-     * @param string $FirstTime 首次执行时间
-     * @param string $NextTime 下次执行时间
-     * @param string $LastTime 上次执行时间
-     * @param integer $Status 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     * @var integer <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+     */
+    public $Category;
+
+    /**
+     * @var integer <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux 改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+     */
+    public $Protocol;
+
+    /**
+     * @var integer <p>改密协议端口号. Linux 改密协议类型端口号值为0</p><p>默认值：0</p>
+     */
+    public $Port;
+
+    /**
+     * @param integer $Id <p>id</p>
+     * @param string $OperationId <p>任务id</p>
+     * @param string $TaskName <p>任务名</p>
+     * @param Department $Department <p>所属部门信息</p>
+     * @param integer $ChangeMethod <p>改密方式。1：使用执行账号。2：修改自身密码</p>
+     * @param string $RunAccount <p>执行账号</p>
+     * @param integer $AuthGenerationStrategy <p>密码生成策略</p>
+     * @param integer $PasswordLength <p>密码长度</p>
+     * @param integer $SmallLetter <p>包含小写字母</p>
+     * @param integer $BigLetter <p>包含大写字母</p>
+     * @param integer $Digit <p>包含数字</p>
+     * @param string $Symbol <p>包含的特殊字符，入参base64</p>
+     * @param integer $CompleteNotify <p>改密完成通知。0-通知，1-不通知</p>
+     * @param array $NotifyEmails <p>通知人邮箱</p>
+     * @param string $FilePassword <p>加密附件密码</p>
+     * @param array $AccountSet <p>需要改密的账户</p>
+     * @param array $DeviceSet <p>需要改密的主机</p>
+     * @param integer $Type <p>任务类型：4手动，5自动</p>
+     * @param integer $Period <p>周期</p>
+     * @param string $FirstTime <p>首次执行时间</p>
+     * @param string $NextTime <p>下次执行时间</p>
+     * @param string $LastTime <p>上次执行时间</p>
+     * @param integer $Status <p>改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时</p>
+     * @param integer $Category <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+     * @param integer $Protocol <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux 改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+     * @param integer $Port <p>改密协议端口号. Linux 改密协议类型端口号值为0</p><p>默认值：0</p>
      */
     function __construct()
     {
@@ -318,6 +342,18 @@ class ChangePwdTaskInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

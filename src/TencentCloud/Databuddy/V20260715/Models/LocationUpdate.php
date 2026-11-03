@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 更新location的操作单元，通过 UpdateType 指定操作类型
  *
- * @method string getUpdateType() 获取更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
- * @method void setUpdateType(string $UpdateType) 设置更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+ * @method string getUpdateType() 获取更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
+ * @method void setUpdateType(string $UpdateType) 设置更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
  * @method string getNewComment() 获取新的备注，可选，UpdateType 为 modify_location_comment 时使用
  * @method void setNewComment(string $NewComment) 设置新的备注，可选，UpdateType 为 modify_location_comment 时使用
  * @method array getSetProperties() 获取新增/修改的属性键值对列表，可选，UpdateType 为 modify_location_properties 时使用
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class LocationUpdate extends AbstractModel
 {
     /**
-     * @var string 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+     * @var string 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
      */
     public $UpdateType;
 
@@ -59,7 +59,7 @@ class LocationUpdate extends AbstractModel
     public $NewName;
 
     /**
-     * @param string $UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+     * @param string $UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
      * @param string $NewComment 新的备注，可选，UpdateType 为 modify_location_comment 时使用
      * @param array $SetProperties 新增/修改的属性键值对列表，可选，UpdateType 为 modify_location_properties 时使用
      * @param array $RemoveProperties 要移除的属性key列表，可选，UpdateType 为 modify_location_properties 时使用

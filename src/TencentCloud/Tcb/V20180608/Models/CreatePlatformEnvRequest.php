@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePlatformEnv请求参数结构体
  *
- * @method string getAlias() 获取<p>环境别名</p>
- * @method void setAlias(string $Alias) 设置<p>环境别名</p>
+ * @method string getAlias() 获取<p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
+ * @method void setAlias(string $Alias) 设置<p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
  * @method string getPlatformId() 获取<p>套餐池标识</p>
  * @method void setPlatformId(string $PlatformId) 设置<p>套餐池标识</p>
  * @method string getReqKey() 获取<p>幂等键</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePlatformEnvRequest extends AbstractModel
 {
     /**
-     * @var string <p>环境别名</p>
+     * @var string <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
      */
     public $Alias;
 
@@ -45,7 +45,7 @@ class CreatePlatformEnvRequest extends AbstractModel
     public $ReqKey;
 
     /**
-     * @param string $Alias <p>环境别名</p>
+     * @param string $Alias <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
      * @param string $PlatformId <p>套餐池标识</p>
      * @param string $ReqKey <p>幂等键</p>
      */

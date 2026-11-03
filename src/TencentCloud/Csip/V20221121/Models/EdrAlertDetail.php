@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置<p>租户ID</p>
  * @method string getAlertId() 获取<p>告警唯一标识</p>
  * @method void setAlertId(string $AlertId) 设置<p>告警唯一标识</p>
- * @method string getAlertCategory() 获取<p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
- * @method void setAlertCategory(string $AlertCategory) 设置<p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+ * @method string getAlertCategory() 获取<p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
+ * @method void setAlertCategory(string $AlertCategory) 设置<p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
  * @method string getAlertSubType() 获取<p>告警子类型（英文枚举：MALWARE_FILE/MALWARE_PROCESS/RISK_LOGIN/BRUTE_FORCE/DNS/BASH/PRIV_ESCALATION/REVERSE_SHELL/NET_ATTACK/VUL_DEFENCE/MEMORY_SHELL_INJECT/MEMORY_SHELL_SCAN/MULTI_BEHAVIOR_ATTACK）</p>
  * @method void setAlertSubType(string $AlertSubType) 设置<p>告警子类型（英文枚举：MALWARE_FILE/MALWARE_PROCESS/RISK_LOGIN/BRUTE_FORCE/DNS/BASH/PRIV_ESCALATION/REVERSE_SHELL/NET_ATTACK/VUL_DEFENCE/MEMORY_SHELL_INJECT/MEMORY_SHELL_SCAN/MULTI_BEHAVIOR_ATTACK）</p>
  * @method string getRuleId() 获取<p>关联规则ID</p>
@@ -56,16 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(string $ImageId) 设置<p>容器镜像ID（保留字段，恒为空串）</p>
  * @method string getContainerId() 获取<p>容器ID（保留字段，恒为空串）</p>
  * @method void setContainerId(string $ContainerId) 设置<p>容器ID（保留字段，恒为空串）</p>
- * @method string getClusterId() 获取<p>集群ID（保留字段，恒为空串）</p>
- * @method void setClusterId(string $ClusterId) 设置<p>集群ID（保留字段，恒为空串）</p>
+ * @method string getClusterId() 获取<p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
  * @method string getFirstDetectTime() 获取<p>首次发现时间</p>
  * @method void setFirstDetectTime(string $FirstDetectTime) 设置<p>首次发现时间</p>
  * @method string getLatestDetectTime() 获取<p>最近发现时间</p>
  * @method void setLatestDetectTime(string $LatestDetectTime) 设置<p>最近发现时间</p>
  * @method string getRuleName() 获取<p>规则名称（规则富化）</p>
  * @method void setRuleName(string $RuleName) 设置<p>规则名称（规则富化）</p>
- * @method string getContentType() 获取<p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
- * @method void setContentType(string $ContentType) 设置<p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+ * @method string getContentType() 获取<p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
+ * @method void setContentType(string $ContentType) 设置<p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
  * @method string getInstanceName() 获取<p>实例名（资产富化）</p>
  * @method void setInstanceName(string $InstanceName) 设置<p>实例名（资产富化）</p>
  * @method string getPublicIp() 获取<p>公网IP（资产富化）</p>
@@ -155,7 +155,7 @@ class EdrAlertDetail extends AbstractModel
     public $AlertId;
 
     /**
-     * @var string <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+     * @var string <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
      */
     public $AlertCategory;
 
@@ -230,7 +230,7 @@ class EdrAlertDetail extends AbstractModel
     public $ContainerId;
 
     /**
-     * @var string <p>集群ID（保留字段，恒为空串）</p>
+     * @var string <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
      */
     public $ClusterId;
 
@@ -250,7 +250,7 @@ class EdrAlertDetail extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+     * @var string <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
      */
     public $ContentType;
 
@@ -433,7 +433,7 @@ class EdrAlertDetail extends AbstractModel
      * @param integer $Id <p>主键ID</p>
      * @param integer $AppId <p>租户ID</p>
      * @param string $AlertId <p>告警唯一标识</p>
-     * @param string $AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+     * @param string $AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
      * @param string $AlertSubType <p>告警子类型（英文枚举：MALWARE_FILE/MALWARE_PROCESS/RISK_LOGIN/BRUTE_FORCE/DNS/BASH/PRIV_ESCALATION/REVERSE_SHELL/NET_ATTACK/VUL_DEFENCE/MEMORY_SHELL_INJECT/MEMORY_SHELL_SCAN/MULTI_BEHAVIOR_ATTACK）</p>
      * @param string $RuleId <p>关联规则ID</p>
      * @param integer $RuleType <p>规则类型: 0-系统规则 1-用户自定义</p>
@@ -448,11 +448,11 @@ class EdrAlertDetail extends AbstractModel
      * @param string $AlertSource <p>告警来源（英文枚举：HOST/CONTAINER/K8S/CSIP）</p>
      * @param string $ImageId <p>容器镜像ID（保留字段，恒为空串）</p>
      * @param string $ContainerId <p>容器ID（保留字段，恒为空串）</p>
-     * @param string $ClusterId <p>集群ID（保留字段，恒为空串）</p>
+     * @param string $ClusterId <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
      * @param string $FirstDetectTime <p>首次发现时间</p>
      * @param string $LatestDetectTime <p>最近发现时间</p>
      * @param string $RuleName <p>规则名称（规则富化）</p>
-     * @param string $ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+     * @param string $ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
      * @param string $InstanceName <p>实例名（资产富化）</p>
      * @param string $PublicIp <p>公网IP（资产富化）</p>
      * @param string $PrivateIp <p>内网IP（资产富化）</p>

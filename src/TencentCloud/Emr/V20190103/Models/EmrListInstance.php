@@ -20,274 +20,298 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群列表返回示例
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getStatusDesc() 获取常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
- * @method void setStatusDesc(string $StatusDesc) 设置常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
- * @method string getClusterName() 获取集群名字
- * @method void setClusterName(string $ClusterName) 设置集群名字
- * @method integer getZoneId() 获取集群地域
- * @method void setZoneId(integer $ZoneId) 设置集群地域
- * @method integer getAppId() 获取用户APPID
- * @method void setAppId(integer $AppId) 设置用户APPID
- * @method string getAddTime() 获取创建时间
- * @method void setAddTime(string $AddTime) 设置创建时间
- * @method string getRunTime() 获取运行时间
- * @method void setRunTime(string $RunTime) 设置运行时间
- * @method string getMasterIp() 获取集群IP
- * @method void setMasterIp(string $MasterIp) 设置集群IP
- * @method string getEmrVersion() 获取集群版本
- * @method void setEmrVersion(string $EmrVersion) 设置集群版本
- * @method integer getChargeType() 获取集群计费类型
- * @method void setChargeType(integer $ChargeType) 设置集群计费类型
- * @method integer getId() 获取emr ID
- * @method void setId(integer $Id) 设置emr ID
- * @method integer getProductId() 获取产品ID
- * @method void setProductId(integer $ProductId) 设置产品ID
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getRegionId() 获取区域
- * @method void setRegionId(integer $RegionId) 设置区域
- * @method integer getSubnetId() 获取子网ID
- * @method void setSubnetId(integer $SubnetId) 设置子网ID
- * @method integer getVpcId() 获取网络ID
- * @method void setVpcId(integer $VpcId) 设置网络ID
- * @method string getZone() 获取地区
- * @method void setZone(string $Zone) 设置地区
- * @method integer getStatus() 获取状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
- * @method void setStatus(integer $Status) 设置状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
- * @method array getTags() 获取实例标签
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getStatusDesc() 获取<p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
+ * @method void setStatusDesc(string $StatusDesc) 设置<p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
+ * @method string getClusterName() 获取<p>集群名字</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名字</p>
+ * @method integer getZoneId() 获取<p>集群地域</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>集群地域</p>
+ * @method integer getAppId() 获取<p>用户APPID</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户APPID</p>
+ * @method string getAddTime() 获取<p>创建时间</p>
+ * @method void setAddTime(string $AddTime) 设置<p>创建时间</p>
+ * @method string getRunTime() 获取<p>运行时间</p>
+ * @method void setRunTime(string $RunTime) 设置<p>运行时间</p>
+ * @method string getMasterIp() 获取<p>集群IP</p>
+ * @method void setMasterIp(string $MasterIp) 设置<p>集群IP</p>
+ * @method string getEmrVersion() 获取<p>集群版本</p>
+ * @method void setEmrVersion(string $EmrVersion) 设置<p>集群版本</p>
+ * @method integer getChargeType() 获取<p>集群计费类型</p>
+ * @method void setChargeType(integer $ChargeType) 设置<p>集群计费类型</p>
+ * @method integer getId() 获取<p>emr ID</p>
+ * @method void setId(integer $Id) 设置<p>emr ID</p>
+ * @method integer getProductId() 获取<p>产品ID</p>
+ * @method void setProductId(integer $ProductId) 设置<p>产品ID</p>
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method integer getRegionId() 获取<p>区域</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>区域</p>
+ * @method integer getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(integer $SubnetId) 设置<p>子网ID</p>
+ * @method integer getVpcId() 获取<p>网络ID</p>
+ * @method void setVpcId(integer $VpcId) 设置<p>网络ID</p>
+ * @method string getZone() 获取<p>地区</p>
+ * @method void setZone(string $Zone) 设置<p>地区</p>
+ * @method integer getStatus() 获取<p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
+ * @method void setStatus(integer $Status) 设置<p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
+ * @method array getTags() 获取<p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置实例标签
+ * @method void setTags(array $Tags) 设置<p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlarmInfo() 获取告警信息
- * @method void setAlarmInfo(string $AlarmInfo) 设置告警信息
- * @method integer getIsWoodpeckerCluster() 获取是否是woodpecker集群
- * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置是否是woodpecker集群
- * @method string getVpcName() 获取Vpc中文
- * @method void setVpcName(string $VpcName) 设置Vpc中文
- * @method string getSubnetName() 获取子网中文
- * @method void setSubnetName(string $SubnetName) 设置子网中文
- * @method string getUniqVpcId() 获取字符串VpcId
- * @method void setUniqVpcId(string $UniqVpcId) 设置字符串VpcId
- * @method string getUniqSubnetId() 获取字符串子网
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置字符串子网
- * @method string getClusterClass() 获取集群类型
- * @method void setClusterClass(string $ClusterClass) 设置集群类型
- * @method boolean getIsMultiZoneCluster() 获取是否为跨AZ集群
- * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否为跨AZ集群
- * @method boolean getIsHandsCluster() 获取是否手戳集群
- * @method void setIsHandsCluster(boolean $IsHandsCluster) 设置是否手戳集群
- * @method array getOutSideSoftInfo() 获取体外客户端组件信息
+ * @method string getAlarmInfo() 获取<p>告警信息</p>
+ * @method void setAlarmInfo(string $AlarmInfo) 设置<p>告警信息</p>
+ * @method integer getIsWoodpeckerCluster() 获取<p>是否是woodpecker集群</p>
+ * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置<p>是否是woodpecker集群</p>
+ * @method string getVpcName() 获取<p>Vpc中文</p>
+ * @method void setVpcName(string $VpcName) 设置<p>Vpc中文</p>
+ * @method string getSubnetName() 获取<p>子网中文</p>
+ * @method void setSubnetName(string $SubnetName) 设置<p>子网中文</p>
+ * @method string getUniqVpcId() 获取<p>字符串VpcId</p>
+ * @method void setUniqVpcId(string $UniqVpcId) 设置<p>字符串VpcId</p>
+ * @method string getUniqSubnetId() 获取<p>字符串子网</p>
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置<p>字符串子网</p>
+ * @method string getClusterClass() 获取<p>集群类型</p>
+ * @method void setClusterClass(string $ClusterClass) 设置<p>集群类型</p>
+ * @method boolean getIsMultiZoneCluster() 获取<p>是否为跨AZ集群</p>
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置<p>是否为跨AZ集群</p>
+ * @method boolean getIsHandsCluster() 获取<p>是否手戳集群</p>
+ * @method void setIsHandsCluster(boolean $IsHandsCluster) 设置<p>是否手戳集群</p>
+ * @method array getOutSideSoftInfo() 获取<p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutSideSoftInfo(array $OutSideSoftInfo) 设置体外客户端组件信息
+ * @method void setOutSideSoftInfo(array $OutSideSoftInfo) 设置<p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsSupportOutsideCluster() 获取当前集群的应用场景是否支持体外客户端
- * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) 设置当前集群的应用场景是否支持体外客户端
- * @method boolean getIsDedicatedCluster() 获取是否专有集群场景集群
- * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) 设置是否专有集群场景集群
- * @method boolean getIsSupportClone() 获取集群支持克隆
- * @method void setIsSupportClone(boolean $IsSupportClone) 设置集群支持克隆
+ * @method boolean getIsSupportOutsideCluster() 获取<p>当前集群的应用场景是否支持体外客户端</p>
+ * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) 设置<p>当前集群的应用场景是否支持体外客户端</p>
+ * @method boolean getIsDedicatedCluster() 获取<p>是否专有集群场景集群</p>
+ * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) 设置<p>是否专有集群场景集群</p>
+ * @method boolean getIsSupportClone() 获取<p>集群支持克隆</p>
+ * @method void setIsSupportClone(boolean $IsSupportClone) 设置<p>集群支持克隆</p>
+ * @method array getSoft() 获取<p>集群包含的组件</p>
+ * @method void setSoft(array $Soft) 设置<p>集群包含的组件</p>
+ * @method boolean getIsTerminateProtection() 获取<p>是否开启了实例保护</p>
+ * @method void setIsTerminateProtection(boolean $IsTerminateProtection) 设置<p>是否开启了实例保护</p>
+ * @method McpPasswordInfo getMcpPasswordInfo() 获取<p>mcp密码信息</p>
+ * @method void setMcpPasswordInfo(McpPasswordInfo $McpPasswordInfo) 设置<p>mcp密码信息</p>
  */
 class EmrListInstance extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
+     * @var string <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
      */
     public $StatusDesc;
 
     /**
-     * @var string 集群名字
+     * @var string <p>集群名字</p>
      */
     public $ClusterName;
 
     /**
-     * @var integer 集群地域
+     * @var integer <p>集群地域</p>
      */
     public $ZoneId;
 
     /**
-     * @var integer 用户APPID
+     * @var integer <p>用户APPID</p>
      */
     public $AppId;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $AddTime;
 
     /**
-     * @var string 运行时间
+     * @var string <p>运行时间</p>
      */
     public $RunTime;
 
     /**
-     * @var string 集群IP
+     * @var string <p>集群IP</p>
      */
     public $MasterIp;
 
     /**
-     * @var string 集群版本
+     * @var string <p>集群版本</p>
      */
     public $EmrVersion;
 
     /**
-     * @var integer 集群计费类型
+     * @var integer <p>集群计费类型</p>
      */
     public $ChargeType;
 
     /**
-     * @var integer emr ID
+     * @var integer <p>emr ID</p>
      */
     public $Id;
 
     /**
-     * @var integer 产品ID
+     * @var integer <p>产品ID</p>
      */
     public $ProductId;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var integer 区域
+     * @var integer <p>区域</p>
      */
     public $RegionId;
 
     /**
-     * @var integer 子网ID
+     * @var integer <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var integer 网络ID
+     * @var integer <p>网络ID</p>
      */
     public $VpcId;
 
     /**
-     * @var string 地区
+     * @var string <p>地区</p>
      */
     public $Zone;
 
     /**
-     * @var integer 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
+     * @var integer <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
      */
     public $Status;
 
     /**
-     * @var array 实例标签
+     * @var array <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string 告警信息
+     * @var string <p>告警信息</p>
      */
     public $AlarmInfo;
 
     /**
-     * @var integer 是否是woodpecker集群
+     * @var integer <p>是否是woodpecker集群</p>
      */
     public $IsWoodpeckerCluster;
 
     /**
-     * @var string Vpc中文
+     * @var string <p>Vpc中文</p>
      */
     public $VpcName;
 
     /**
-     * @var string 子网中文
+     * @var string <p>子网中文</p>
      */
     public $SubnetName;
 
     /**
-     * @var string 字符串VpcId
+     * @var string <p>字符串VpcId</p>
      */
     public $UniqVpcId;
 
     /**
-     * @var string 字符串子网
+     * @var string <p>字符串子网</p>
      */
     public $UniqSubnetId;
 
     /**
-     * @var string 集群类型
+     * @var string <p>集群类型</p>
      */
     public $ClusterClass;
 
     /**
-     * @var boolean 是否为跨AZ集群
+     * @var boolean <p>是否为跨AZ集群</p>
      */
     public $IsMultiZoneCluster;
 
     /**
-     * @var boolean 是否手戳集群
+     * @var boolean <p>是否手戳集群</p>
      */
     public $IsHandsCluster;
 
     /**
-     * @var array 体外客户端组件信息
+     * @var array <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutSideSoftInfo;
 
     /**
-     * @var boolean 当前集群的应用场景是否支持体外客户端
+     * @var boolean <p>当前集群的应用场景是否支持体外客户端</p>
      */
     public $IsSupportOutsideCluster;
 
     /**
-     * @var boolean 是否专有集群场景集群
+     * @var boolean <p>是否专有集群场景集群</p>
      */
     public $IsDedicatedCluster;
 
     /**
-     * @var boolean 集群支持克隆
+     * @var boolean <p>集群支持克隆</p>
      */
     public $IsSupportClone;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-     * @param string $ClusterName 集群名字
-     * @param integer $ZoneId 集群地域
-     * @param integer $AppId 用户APPID
-     * @param string $AddTime 创建时间
-     * @param string $RunTime 运行时间
-     * @param string $MasterIp 集群IP
-     * @param string $EmrVersion 集群版本
-     * @param integer $ChargeType 集群计费类型
-     * @param integer $Id emr ID
-     * @param integer $ProductId 产品ID
-     * @param integer $ProjectId 项目ID
-     * @param integer $RegionId 区域
-     * @param integer $SubnetId 子网ID
-     * @param integer $VpcId 网络ID
-     * @param string $Zone 地区
-     * @param integer $Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-     * @param array $Tags 实例标签
+     * @var array <p>集群包含的组件</p>
+     */
+    public $Soft;
+
+    /**
+     * @var boolean <p>是否开启了实例保护</p>
+     */
+    public $IsTerminateProtection;
+
+    /**
+     * @var McpPasswordInfo <p>mcp密码信息</p>
+     */
+    public $McpPasswordInfo;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $StatusDesc <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
+     * @param string $ClusterName <p>集群名字</p>
+     * @param integer $ZoneId <p>集群地域</p>
+     * @param integer $AppId <p>用户APPID</p>
+     * @param string $AddTime <p>创建时间</p>
+     * @param string $RunTime <p>运行时间</p>
+     * @param string $MasterIp <p>集群IP</p>
+     * @param string $EmrVersion <p>集群版本</p>
+     * @param integer $ChargeType <p>集群计费类型</p>
+     * @param integer $Id <p>emr ID</p>
+     * @param integer $ProductId <p>产品ID</p>
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param integer $RegionId <p>区域</p>
+     * @param integer $SubnetId <p>子网ID</p>
+     * @param integer $VpcId <p>网络ID</p>
+     * @param string $Zone <p>地区</p>
+     * @param integer $Status <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
+     * @param array $Tags <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AlarmInfo 告警信息
-     * @param integer $IsWoodpeckerCluster 是否是woodpecker集群
-     * @param string $VpcName Vpc中文
-     * @param string $SubnetName 子网中文
-     * @param string $UniqVpcId 字符串VpcId
-     * @param string $UniqSubnetId 字符串子网
-     * @param string $ClusterClass 集群类型
-     * @param boolean $IsMultiZoneCluster 是否为跨AZ集群
-     * @param boolean $IsHandsCluster 是否手戳集群
-     * @param array $OutSideSoftInfo 体外客户端组件信息
+     * @param string $AlarmInfo <p>告警信息</p>
+     * @param integer $IsWoodpeckerCluster <p>是否是woodpecker集群</p>
+     * @param string $VpcName <p>Vpc中文</p>
+     * @param string $SubnetName <p>子网中文</p>
+     * @param string $UniqVpcId <p>字符串VpcId</p>
+     * @param string $UniqSubnetId <p>字符串子网</p>
+     * @param string $ClusterClass <p>集群类型</p>
+     * @param boolean $IsMultiZoneCluster <p>是否为跨AZ集群</p>
+     * @param boolean $IsHandsCluster <p>是否手戳集群</p>
+     * @param array $OutSideSoftInfo <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
-     * @param boolean $IsDedicatedCluster 是否专有集群场景集群
-     * @param boolean $IsSupportClone 集群支持克隆
+     * @param boolean $IsSupportOutsideCluster <p>当前集群的应用场景是否支持体外客户端</p>
+     * @param boolean $IsDedicatedCluster <p>是否专有集群场景集群</p>
+     * @param boolean $IsSupportClone <p>集群支持克隆</p>
+     * @param array $Soft <p>集群包含的组件</p>
+     * @param boolean $IsTerminateProtection <p>是否开启了实例保护</p>
+     * @param McpPasswordInfo $McpPasswordInfo <p>mcp密码信息</p>
      */
     function __construct()
     {
@@ -438,6 +462,19 @@ class EmrListInstance extends AbstractModel
 
         if (array_key_exists("IsSupportClone",$param) and $param["IsSupportClone"] !== null) {
             $this->IsSupportClone = $param["IsSupportClone"];
+        }
+
+        if (array_key_exists("Soft",$param) and $param["Soft"] !== null) {
+            $this->Soft = $param["Soft"];
+        }
+
+        if (array_key_exists("IsTerminateProtection",$param) and $param["IsTerminateProtection"] !== null) {
+            $this->IsTerminateProtection = $param["IsTerminateProtection"];
+        }
+
+        if (array_key_exists("McpPasswordInfo",$param) and $param["McpPasswordInfo"] !== null) {
+            $this->McpPasswordInfo = new McpPasswordInfo();
+            $this->McpPasswordInfo->deserialize($param["McpPasswordInfo"]);
         }
     }
 }

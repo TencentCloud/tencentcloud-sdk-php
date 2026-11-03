@@ -104,6 +104,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置<p>地域信息</p>
  * @method integer getScanTaskId() 获取<p>最近扫描任务Id</p>
  * @method void setScanTaskId(integer $ScanTaskId) 设置<p>最近扫描任务Id</p>
+ * @method string getCICDName() 获取<p>CICD名</p>
+ * @method void setCICDName(string $CICDName) 设置<p>CICD名</p>
+ * @method integer getCICDId() 获取<p>CICD Id</p>
+ * @method void setCICDId(integer $CICDId) 设置<p>CICD Id</p>
+ * @method integer getIsCICD() 获取<p>是否是CICD镜像</p>
+ * @method void setIsCICD(integer $IsCICD) 设置<p>是否是CICD镜像</p>
+ * @method integer getSecretFileCnt() 获取<p>敏感文件数</p>
+ * @method void setSecretFileCnt(integer $SecretFileCnt) 设置<p>敏感文件数</p>
+ * @method integer getBuildRiskCnt() 获取<p>构建风险数</p>
+ * @method void setBuildRiskCnt(integer $BuildRiskCnt) 设置<p>构建风险数</p>
+ * @method integer getHighLevelSecretFileCnt() 获取<p>高危敏感文件数</p>
+ * @method void setHighLevelSecretFileCnt(integer $HighLevelSecretFileCnt) 设置<p>高危敏感文件数</p>
+ * @method integer getCriticalLevelSecretFileCnt() 获取<p>严重敏感文件数</p>
+ * @method void setCriticalLevelSecretFileCnt(integer $CriticalLevelSecretFileCnt) 设置<p>严重敏感文件数</p>
+ * @method integer getHighLevelBuildRiskCnt() 获取<p>高危构建风险数</p>
+ * @method void setHighLevelBuildRiskCnt(integer $HighLevelBuildRiskCnt) 设置<p>高危构建风险数</p>
+ * @method integer getCriticalLevelBuildRiskCnt() 获取<p>严重构建风险数</p>
+ * @method void setCriticalLevelBuildRiskCnt(integer $CriticalLevelBuildRiskCnt) 设置<p>严重构建风险数</p>
  */
 class ImageAssetInfo extends AbstractModel
 {
@@ -318,6 +336,51 @@ class ImageAssetInfo extends AbstractModel
     public $ScanTaskId;
 
     /**
+     * @var string <p>CICD名</p>
+     */
+    public $CICDName;
+
+    /**
+     * @var integer <p>CICD Id</p>
+     */
+    public $CICDId;
+
+    /**
+     * @var integer <p>是否是CICD镜像</p>
+     */
+    public $IsCICD;
+
+    /**
+     * @var integer <p>敏感文件数</p>
+     */
+    public $SecretFileCnt;
+
+    /**
+     * @var integer <p>构建风险数</p>
+     */
+    public $BuildRiskCnt;
+
+    /**
+     * @var integer <p>高危敏感文件数</p>
+     */
+    public $HighLevelSecretFileCnt;
+
+    /**
+     * @var integer <p>严重敏感文件数</p>
+     */
+    public $CriticalLevelSecretFileCnt;
+
+    /**
+     * @var integer <p>高危构建风险数</p>
+     */
+    public $HighLevelBuildRiskCnt;
+
+    /**
+     * @var integer <p>严重构建风险数</p>
+     */
+    public $CriticalLevelBuildRiskCnt;
+
+    /**
      * @param string $ImageRepoAddress <p>镜像仓库地址</p>
      * @param string $ImageDigest <p>镜像摘要</p>
      * @param string $RegistryType <p>镜像仓库类型</p>
@@ -360,6 +423,15 @@ class ImageAssetInfo extends AbstractModel
      * @param string $ScanSolution <p>扫描失败解决方案</p>
      * @param RegionInfo $RegionInfo <p>地域信息</p>
      * @param integer $ScanTaskId <p>最近扫描任务Id</p>
+     * @param string $CICDName <p>CICD名</p>
+     * @param integer $CICDId <p>CICD Id</p>
+     * @param integer $IsCICD <p>是否是CICD镜像</p>
+     * @param integer $SecretFileCnt <p>敏感文件数</p>
+     * @param integer $BuildRiskCnt <p>构建风险数</p>
+     * @param integer $HighLevelSecretFileCnt <p>高危敏感文件数</p>
+     * @param integer $CriticalLevelSecretFileCnt <p>严重敏感文件数</p>
+     * @param integer $HighLevelBuildRiskCnt <p>高危构建风险数</p>
+     * @param integer $CriticalLevelBuildRiskCnt <p>严重构建风险数</p>
      */
     function __construct()
     {
@@ -541,6 +613,42 @@ class ImageAssetInfo extends AbstractModel
 
         if (array_key_exists("ScanTaskId",$param) and $param["ScanTaskId"] !== null) {
             $this->ScanTaskId = $param["ScanTaskId"];
+        }
+
+        if (array_key_exists("CICDName",$param) and $param["CICDName"] !== null) {
+            $this->CICDName = $param["CICDName"];
+        }
+
+        if (array_key_exists("CICDId",$param) and $param["CICDId"] !== null) {
+            $this->CICDId = $param["CICDId"];
+        }
+
+        if (array_key_exists("IsCICD",$param) and $param["IsCICD"] !== null) {
+            $this->IsCICD = $param["IsCICD"];
+        }
+
+        if (array_key_exists("SecretFileCnt",$param) and $param["SecretFileCnt"] !== null) {
+            $this->SecretFileCnt = $param["SecretFileCnt"];
+        }
+
+        if (array_key_exists("BuildRiskCnt",$param) and $param["BuildRiskCnt"] !== null) {
+            $this->BuildRiskCnt = $param["BuildRiskCnt"];
+        }
+
+        if (array_key_exists("HighLevelSecretFileCnt",$param) and $param["HighLevelSecretFileCnt"] !== null) {
+            $this->HighLevelSecretFileCnt = $param["HighLevelSecretFileCnt"];
+        }
+
+        if (array_key_exists("CriticalLevelSecretFileCnt",$param) and $param["CriticalLevelSecretFileCnt"] !== null) {
+            $this->CriticalLevelSecretFileCnt = $param["CriticalLevelSecretFileCnt"];
+        }
+
+        if (array_key_exists("HighLevelBuildRiskCnt",$param) and $param["HighLevelBuildRiskCnt"] !== null) {
+            $this->HighLevelBuildRiskCnt = $param["HighLevelBuildRiskCnt"];
+        }
+
+        if (array_key_exists("CriticalLevelBuildRiskCnt",$param) and $param["CriticalLevelBuildRiskCnt"] !== null) {
+            $this->CriticalLevelBuildRiskCnt = $param["CriticalLevelBuildRiskCnt"];
         }
     }
 }

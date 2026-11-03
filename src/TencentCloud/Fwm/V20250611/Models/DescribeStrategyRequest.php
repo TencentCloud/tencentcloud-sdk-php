@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStrategy请求参数结构体
  *
- * @method string getStrategyId() 获取策略Id
- * @method void setStrategyId(string $StrategyId) 设置策略Id
+ * @method string getStrategyId() 获取<p>策略Id</p>
+ * @method void setStrategyId(string $StrategyId) 设置<p>策略Id</p>
  */
 class DescribeStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 策略Id
+     * @var string <p>策略Id</p>
      */
     public $StrategyId;
 
     /**
-     * @param string $StrategyId 策略Id
+     * @param string $StrategyId <p>策略Id</p>
      */
     function __construct()
     {

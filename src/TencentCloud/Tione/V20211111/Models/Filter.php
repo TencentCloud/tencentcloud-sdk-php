@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤器
  *
- * @method string getName() 获取过滤字段名称
- * @method void setName(string $Name) 设置过滤字段名称
- * @method array getValues() 获取过滤字段取值
- * @method void setValues(array $Values) 设置过滤字段取值
- * @method boolean getNegative() 获取是否开启反向查询
- * @method void setNegative(boolean $Negative) 设置是否开启反向查询
- * @method boolean getFuzzy() 获取是否开启模糊匹配
- * @method void setFuzzy(boolean $Fuzzy) 设置是否开启模糊匹配
+ * @method string getName() 获取<p>过滤字段名称</p>
+ * @method void setName(string $Name) 设置<p>过滤字段名称</p>
+ * @method array getValues() 获取<p>过滤字段取值</p>
+ * @method void setValues(array $Values) 设置<p>过滤字段取值</p>
+ * @method boolean getNegative() 获取<p>是否开启反向查询</p>
+ * @method void setNegative(boolean $Negative) 设置<p>是否开启反向查询</p>
+ * @method boolean getFuzzy() 获取<p>是否开启模糊匹配</p>
+ * @method void setFuzzy(boolean $Fuzzy) 设置<p>是否开启模糊匹配</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 过滤字段名称
+     * @var string <p>过滤字段名称</p>
      */
     public $Name;
 
     /**
-     * @var array 过滤字段取值
+     * @var array <p>过滤字段取值</p>
      */
     public $Values;
 
     /**
-     * @var boolean 是否开启反向查询
+     * @var boolean <p>是否开启反向查询</p>
      */
     public $Negative;
 
     /**
-     * @var boolean 是否开启模糊匹配
+     * @var boolean <p>是否开启模糊匹配</p>
      */
     public $Fuzzy;
 
     /**
-     * @param string $Name 过滤字段名称
-     * @param array $Values 过滤字段取值
-     * @param boolean $Negative 是否开启反向查询
-     * @param boolean $Fuzzy 是否开启模糊匹配
+     * @param string $Name <p>过滤字段名称</p>
+     * @param array $Values <p>过滤字段取值</p>
+     * @param boolean $Negative <p>是否开启反向查询</p>
+     * @param boolean $Fuzzy <p>是否开启模糊匹配</p>
      */
     function __construct()
     {

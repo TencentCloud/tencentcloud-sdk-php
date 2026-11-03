@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDirectConnect请求参数结构体
  *
- * @method string getDirectConnectId() 获取物理专线的ID。
- * @method void setDirectConnectId(string $DirectConnectId) 设置物理专线的ID。
+ * @method string getDirectConnectId() 获取<p>物理专线的ID。</p>
+ * @method void setDirectConnectId(string $DirectConnectId) 设置<p>物理专线的ID。</p>
+ * @method string getPlannedRepealDate() 获取<p>预计裁撤时间</p>
+ * @method void setPlannedRepealDate(string $PlannedRepealDate) 设置<p>预计裁撤时间</p>
  */
 class DeleteDirectConnectRequest extends AbstractModel
 {
     /**
-     * @var string 物理专线的ID。
+     * @var string <p>物理专线的ID。</p>
      */
     public $DirectConnectId;
 
     /**
-     * @param string $DirectConnectId 物理专线的ID。
+     * @var string <p>预计裁撤时间</p>
+     */
+    public $PlannedRepealDate;
+
+    /**
+     * @param string $DirectConnectId <p>物理专线的ID。</p>
+     * @param string $PlannedRepealDate <p>预计裁撤时间</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteDirectConnectRequest extends AbstractModel
         }
         if (array_key_exists("DirectConnectId",$param) and $param["DirectConnectId"] !== null) {
             $this->DirectConnectId = $param["DirectConnectId"];
+        }
+
+        if (array_key_exists("PlannedRepealDate",$param) and $param["PlannedRepealDate"] !== null) {
+            $this->PlannedRepealDate = $param["PlannedRepealDate"];
         }
     }
 }

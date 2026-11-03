@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationNamePattern(string $LocationNamePattern) 设置<p>存储位置名匹配模式，支持SQL LIKE语法</p>
  * @method boolean getSnapshotBased() 获取<p>是否基于快照分页</p>
  * @method void setSnapshotBased(boolean $SnapshotBased) 设置<p>是否基于快照分页</p>
- * @method string getSnapshotId() 获取<p>快照ID</p>
- * @method void setSnapshotId(string $SnapshotId) 设置<p>快照ID</p>
+ * @method string getSnapshotId() 获取<p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
+ * @method void setSnapshotId(string $SnapshotId) 设置<p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
  * @method integer getPageNumber() 获取<p>页码，从1开始，可选，默认1</p>
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从1开始，可选，默认1</p>
  * @method integer getPageSize() 获取<p>每页大小，默认10，取值范围 1~500</p>
@@ -51,7 +51,7 @@ class ListLocationsRequest extends AbstractModel
     public $SnapshotBased;
 
     /**
-     * @var string <p>快照ID</p>
+     * @var string <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
      */
     public $SnapshotId;
 
@@ -69,7 +69,7 @@ class ListLocationsRequest extends AbstractModel
      * @param string $WorkspaceId <p>调用时所在workspace唯一id，必填</p>
      * @param string $LocationNamePattern <p>存储位置名匹配模式，支持SQL LIKE语法</p>
      * @param boolean $SnapshotBased <p>是否基于快照分页</p>
-     * @param string $SnapshotId <p>快照ID</p>
+     * @param string $SnapshotId <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
      * @param integer $PageNumber <p>页码，从1开始，可选，默认1</p>
      * @param integer $PageSize <p>每页大小，默认10，取值范围 1~500</p>
      */

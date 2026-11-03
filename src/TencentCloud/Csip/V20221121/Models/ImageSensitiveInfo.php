@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置<p>最近发现时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method integer getLayerIndex() 获取<p>镜像层序号</p>
  * @method void setLayerIndex(integer $LayerIndex) 设置<p>镜像层序号</p>
+ * @method integer getAffectedRegistryImageCount() 获取<p>影响仓库镜像数</p>
+ * @method void setAffectedRegistryImageCount(integer $AffectedRegistryImageCount) 设置<p>影响仓库镜像数</p>
+ * @method integer getAffectedCICDImageCount() 获取<p>影响CICD镜像数</p>
+ * @method void setAffectedCICDImageCount(integer $AffectedCICDImageCount) 设置<p>影响CICD镜像数</p>
  */
 class ImageSensitiveInfo extends AbstractModel
 {
@@ -129,6 +133,16 @@ class ImageSensitiveInfo extends AbstractModel
     public $LayerIndex;
 
     /**
+     * @var integer <p>影响仓库镜像数</p>
+     */
+    public $AffectedRegistryImageCount;
+
+    /**
+     * @var integer <p>影响CICD镜像数</p>
+     */
+    public $AffectedCICDImageCount;
+
+    /**
      * @param integer $Behavior <p>敏感信息行为类型</p><p>枚举值：</p><ul><li>1： 以root账号启动</li><li>2： 代码泄露</li><li>3： 凭据泄露</li></ul>
      * @param integer $Type <p>规则类型</p>
      * @param string $Level <p>风险级别</p><p>枚举值：</p><ul><li>1： 低风险</li><li>2： 中分线</li><li>3： 高风险</li><li>4： 严重风险</li></ul>
@@ -144,6 +158,8 @@ class ImageSensitiveInfo extends AbstractModel
      * @param string $FirstFoundTime <p>首次发现时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param string $LatestFoundTime <p>最近发现时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param integer $LayerIndex <p>镜像层序号</p>
+     * @param integer $AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     * @param integer $AffectedCICDImageCount <p>影响CICD镜像数</p>
      */
     function __construct()
     {
@@ -216,6 +232,14 @@ class ImageSensitiveInfo extends AbstractModel
 
         if (array_key_exists("LayerIndex",$param) and $param["LayerIndex"] !== null) {
             $this->LayerIndex = $param["LayerIndex"];
+        }
+
+        if (array_key_exists("AffectedRegistryImageCount",$param) and $param["AffectedRegistryImageCount"] !== null) {
+            $this->AffectedRegistryImageCount = $param["AffectedRegistryImageCount"];
+        }
+
+        if (array_key_exists("AffectedCICDImageCount",$param) and $param["AffectedCICDImageCount"] !== null) {
+            $this->AffectedCICDImageCount = $param["AffectedCICDImageCount"];
         }
     }
 }

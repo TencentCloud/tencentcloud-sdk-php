@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStrategies返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getStrategies() 获取策略列表
- * @method void setStrategies(array $Strategies) 设置策略列表
+ * @method integer getTotalCount() 获取<p>总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
+ * @method array getStrategies() 获取<p>策略列表</p>
+ * @method void setStrategies(array $Strategies) 设置<p>策略列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStrategiesResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 策略列表
+     * @var array <p>策略列表</p>
      */
     public $Strategies;
 
@@ -45,8 +45,8 @@ class DescribeStrategiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param array $Strategies 策略列表
+     * @param integer $TotalCount <p>总数</p>
+     * @param array $Strategies <p>策略列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

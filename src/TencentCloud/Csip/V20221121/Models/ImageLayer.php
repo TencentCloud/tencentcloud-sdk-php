@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSensitiveCnt(integer $SensitiveCnt) 设置<p>敏感信息数</p>
  * @method string getLayerCreateTime() 获取<p>镜像层创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method void setLayerCreateTime(string $LayerCreateTime) 设置<p>镜像层创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+ * @method integer getSecretFileCnt() 获取<p>敏感文件数</p>
+ * @method void setSecretFileCnt(integer $SecretFileCnt) 设置<p>敏感文件数</p>
+ * @method integer getBuildRiskCnt() 获取<p>构建风险数</p>
+ * @method void setBuildRiskCnt(integer $BuildRiskCnt) 设置<p>构建风险数</p>
  */
 class ImageLayer extends AbstractModel
 {
@@ -101,6 +105,16 @@ class ImageLayer extends AbstractModel
     public $LayerCreateTime;
 
     /**
+     * @var integer <p>敏感文件数</p>
+     */
+    public $SecretFileCnt;
+
+    /**
+     * @var integer <p>构建风险数</p>
+     */
+    public $BuildRiskCnt;
+
+    /**
      * @param integer $LayerIndex <p>镜像层序号</p>
      * @param string $LayerId <p>镜像层id</p>
      * @param string $LayerCmd <p>镜像层命令行</p>
@@ -112,6 +126,8 @@ class ImageLayer extends AbstractModel
      * @param integer $VirusCnt <p>木马数</p>
      * @param integer $SensitiveCnt <p>敏感信息数</p>
      * @param string $LayerCreateTime <p>镜像层创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param integer $SecretFileCnt <p>敏感文件数</p>
+     * @param integer $BuildRiskCnt <p>构建风险数</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class ImageLayer extends AbstractModel
 
         if (array_key_exists("LayerCreateTime",$param) and $param["LayerCreateTime"] !== null) {
             $this->LayerCreateTime = $param["LayerCreateTime"];
+        }
+
+        if (array_key_exists("SecretFileCnt",$param) and $param["SecretFileCnt"] !== null) {
+            $this->SecretFileCnt = $param["SecretFileCnt"];
+        }
+
+        if (array_key_exists("BuildRiskCnt",$param) and $param["BuildRiskCnt"] !== null) {
+            $this->BuildRiskCnt = $param["BuildRiskCnt"];
         }
     }
 }

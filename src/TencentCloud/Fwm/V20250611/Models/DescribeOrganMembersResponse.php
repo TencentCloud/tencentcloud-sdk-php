@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganMembers返回参数结构体
  *
- * @method integer getTotalCount() 获取集团成员总数
- * @method void setTotalCount(integer $TotalCount) 设置集团成员总数
- * @method array getMembers() 获取集团成员列表
- * @method void setMembers(array $Members) 设置集团成员列表
+ * @method integer getTotalCount() 获取<p>集团成员总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>集团成员总数</p>
+ * @method array getMembers() 获取<p>集团成员列表</p>
+ * @method void setMembers(array $Members) 设置<p>集团成员列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOrganMembersResponse extends AbstractModel
 {
     /**
-     * @var integer 集团成员总数
+     * @var integer <p>集团成员总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 集团成员列表
+     * @var array <p>集团成员列表</p>
      */
     public $Members;
 
@@ -45,8 +45,8 @@ class DescribeOrganMembersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 集团成员总数
-     * @param array $Members 集团成员列表
+     * @param integer $TotalCount <p>集团成员总数</p>
+     * @param array $Members <p>集团成员列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighRiskClusterCount(integer $HighRiskClusterCount) 设置<p>高危风险集群数量</p>
  * @method integer getUnboundUltimateNodeCount() 获取<p>未绑定旗舰版节点数量</p>
  * @method void setUnboundUltimateNodeCount(integer $UnboundUltimateNodeCount) 设置<p>未绑定旗舰版节点数量</p>
+ * @method integer getNormalNodeCount() 获取<p>普通节点总数</p>
+ * @method void setNormalNodeCount(integer $NormalNodeCount) 设置<p>普通节点总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -245,6 +247,11 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $UnboundUltimateNodeCount;
 
     /**
+     * @var integer <p>普通节点总数</p>
+     */
+    public $NormalNodeCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -279,6 +286,7 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $CriticalRiskClusterCount <p>严重风险集群数</p>
      * @param integer $HighRiskClusterCount <p>高危风险集群数量</p>
      * @param integer $UnboundUltimateNodeCount <p>未绑定旗舰版节点数量</p>
+     * @param integer $NormalNodeCount <p>普通节点总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -408,6 +416,10 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("UnboundUltimateNodeCount",$param) and $param["UnboundUltimateNodeCount"] !== null) {
             $this->UnboundUltimateNodeCount = $param["UnboundUltimateNodeCount"];
+        }
+
+        if (array_key_exists("NormalNodeCount",$param) and $param["NormalNodeCount"] !== null) {
+            $this->NormalNodeCount = $param["NormalNodeCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

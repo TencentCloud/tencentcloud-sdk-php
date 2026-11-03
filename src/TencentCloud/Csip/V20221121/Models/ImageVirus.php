@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>木马描述</p>
  * @method string getVirusType() 获取<p>木马类型</p>
  * @method void setVirusType(string $VirusType) 设置<p>木马类型</p>
+ * @method integer getAffectedImageCount() 获取<p>影响镜像数</p>
+ * @method void setAffectedImageCount(integer $AffectedImageCount) 设置<p>影响镜像数</p>
+ * @method integer getAffectedRegistryImageCount() 获取<p>影响仓库镜像数</p>
+ * @method void setAffectedRegistryImageCount(integer $AffectedRegistryImageCount) 设置<p>影响仓库镜像数</p>
+ * @method integer getAffectedCICDImageCount() 获取<p>影响CICD镜像数</p>
+ * @method void setAffectedCICDImageCount(integer $AffectedCICDImageCount) 设置<p>影响CICD镜像数</p>
  */
 class ImageVirus extends AbstractModel
 {
@@ -178,6 +184,21 @@ class ImageVirus extends AbstractModel
     public $VirusType;
 
     /**
+     * @var integer <p>影响镜像数</p>
+     */
+    public $AffectedImageCount;
+
+    /**
+     * @var integer <p>影响仓库镜像数</p>
+     */
+    public $AffectedRegistryImageCount;
+
+    /**
+     * @var integer <p>影响CICD镜像数</p>
+     */
+    public $AffectedCICDImageCount;
+
+    /**
      * @param string $Path <p>木马路径</p>
      * @param string $RiskLevel <p>风险级别</p>
      * @param string $Category <p>类别</p>
@@ -200,6 +221,9 @@ class ImageVirus extends AbstractModel
      * @param string $Suggestion <p>木马处置建议</p>
      * @param string $Description <p>木马描述</p>
      * @param string $VirusType <p>木马类型</p>
+     * @param integer $AffectedImageCount <p>影响镜像数</p>
+     * @param integer $AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     * @param integer $AffectedCICDImageCount <p>影响CICD镜像数</p>
      */
     function __construct()
     {
@@ -300,6 +324,18 @@ class ImageVirus extends AbstractModel
 
         if (array_key_exists("VirusType",$param) and $param["VirusType"] !== null) {
             $this->VirusType = $param["VirusType"];
+        }
+
+        if (array_key_exists("AffectedImageCount",$param) and $param["AffectedImageCount"] !== null) {
+            $this->AffectedImageCount = $param["AffectedImageCount"];
+        }
+
+        if (array_key_exists("AffectedRegistryImageCount",$param) and $param["AffectedRegistryImageCount"] !== null) {
+            $this->AffectedRegistryImageCount = $param["AffectedRegistryImageCount"];
+        }
+
+        if (array_key_exists("AffectedCICDImageCount",$param) and $param["AffectedCICDImageCount"] !== null) {
+            $this->AffectedCICDImageCount = $param["AffectedCICDImageCount"];
         }
     }
 }

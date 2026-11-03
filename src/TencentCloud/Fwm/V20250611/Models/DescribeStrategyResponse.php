@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStrategy返回参数结构体
  *
- * @method StrategyResp getStrategy() 获取策略详情
- * @method void setStrategy(StrategyResp $Strategy) 设置策略详情
+ * @method StrategyResp getStrategy() 获取<p>策略详情</p>
+ * @method void setStrategy(StrategyResp $Strategy) 设置<p>策略详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStrategyResponse extends AbstractModel
 {
     /**
-     * @var StrategyResp 策略详情
+     * @var StrategyResp <p>策略详情</p>
      */
     public $Strategy;
 
@@ -38,7 +38,7 @@ class DescribeStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param StrategyResp $Strategy 策略详情
+     * @param StrategyResp $Strategy <p>策略详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

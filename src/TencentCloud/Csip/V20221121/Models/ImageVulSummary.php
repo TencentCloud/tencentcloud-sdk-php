@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulInfo(ImageVulBaseInfo $VulInfo) 设置<p>漏洞信息</p>
  * @method integer getID() 获取<p>记录id</p>
  * @method void setID(integer $ID) 设置<p>记录id</p>
+ * @method integer getAffectedRegistryImageCount() 获取<p>影响仓库镜像数</p>
+ * @method void setAffectedRegistryImageCount(integer $AffectedRegistryImageCount) 设置<p>影响仓库镜像数</p>
+ * @method integer getAffectedCICDImageCount() 获取<p>影响CICD镜像数</p>
+ * @method void setAffectedCICDImageCount(integer $AffectedCICDImageCount) 设置<p>影响CICD镜像数</p>
  */
 class ImageVulSummary extends AbstractModel
 {
@@ -80,6 +84,16 @@ class ImageVulSummary extends AbstractModel
     public $ID;
 
     /**
+     * @var integer <p>影响仓库镜像数</p>
+     */
+    public $AffectedRegistryImageCount;
+
+    /**
+     * @var integer <p>影响CICD镜像数</p>
+     */
+    public $AffectedCICDImageCount;
+
+    /**
      * @param string $OwnerAccountName <p>所有者账号名</p>
      * @param string $OwnerUin <p>所有者账号uin</p>
      * @param integer $OwnerAppId <p>所有者账号appid</p>
@@ -88,6 +102,8 @@ class ImageVulSummary extends AbstractModel
      * @param integer $AffectImageCount <p>影响镜像数</p>
      * @param ImageVulBaseInfo $VulInfo <p>漏洞信息</p>
      * @param integer $ID <p>记录id</p>
+     * @param integer $AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     * @param integer $AffectedCICDImageCount <p>影响CICD镜像数</p>
      */
     function __construct()
     {
@@ -133,6 +149,14 @@ class ImageVulSummary extends AbstractModel
 
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("AffectedRegistryImageCount",$param) and $param["AffectedRegistryImageCount"] !== null) {
+            $this->AffectedRegistryImageCount = $param["AffectedRegistryImageCount"];
+        }
+
+        if (array_key_exists("AffectedCICDImageCount",$param) and $param["AffectedCICDImageCount"] !== null) {
+            $this->AffectedCICDImageCount = $param["AffectedCICDImageCount"];
         }
     }
 }

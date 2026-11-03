@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method LocationInfo getLocation() 获取存储位置详情
  * @method void setLocation(LocationInfo $Location) 设置存储位置详情
+ * @method CosEventSubscription getFileEventSubscription() 获取COS 文件事件订阅明细（未订阅时为空）
+ * @method void setFileEventSubscription(CosEventSubscription $FileEventSubscription) 设置COS 文件事件订阅明细（未订阅时为空）
  */
 class GetLocationRsp extends AbstractModel
 {
@@ -31,7 +33,13 @@ class GetLocationRsp extends AbstractModel
     public $Location;
 
     /**
+     * @var CosEventSubscription COS 文件事件订阅明细（未订阅时为空）
+     */
+    public $FileEventSubscription;
+
+    /**
      * @param LocationInfo $Location 存储位置详情
+     * @param CosEventSubscription $FileEventSubscription COS 文件事件订阅明细（未订阅时为空）
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class GetLocationRsp extends AbstractModel
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = new LocationInfo();
             $this->Location->deserialize($param["Location"]);
+        }
+
+        if (array_key_exists("FileEventSubscription",$param) and $param["FileEventSubscription"] !== null) {
+            $this->FileEventSubscription = new CosEventSubscription();
+            $this->FileEventSubscription->deserialize($param["FileEventSubscription"]);
         }
     }
 }

@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运维父任务执行结果
  *
- * @method string getId() 获取运维任务结果日志ID
- * @method void setId(string $Id) 设置运维任务结果日志ID
- * @method string getOperationId() 获取运维任务ID
- * @method void setOperationId(string $OperationId) 设置运维任务ID
- * @method string getName() 获取运维任务名称
- * @method void setName(string $Name) 设置运维任务名称
- * @method string getFromIp() 获取执行任务来源IP
- * @method void setFromIp(string $FromIp) 设置执行任务来源IP
- * @method string getUserName() 获取运维任务所属用户
- * @method void setUserName(string $UserName) 设置运维任务所属用户
- * @method string getRealName() 获取运维任务所属用户的姓名
- * @method void setRealName(string $RealName) 设置运维任务所属用户的姓名
- * @method integer getStatus() 获取运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
- * @method void setStatus(integer $Status) 设置运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
- * @method string getStartTime() 获取运维任务开始时间
- * @method void setStartTime(string $StartTime) 设置运维任务开始时间
- * @method string getEndTime() 获取运维任务结束时间
- * @method void setEndTime(string $EndTime) 设置运维任务结束时间
+ * @method string getId() 获取<p>运维任务结果日志ID</p>
+ * @method void setId(string $Id) 设置<p>运维任务结果日志ID</p>
+ * @method string getOperationId() 获取<p>运维任务ID</p>
+ * @method void setOperationId(string $OperationId) 设置<p>运维任务ID</p>
+ * @method string getName() 获取<p>运维任务名称</p>
+ * @method void setName(string $Name) 设置<p>运维任务名称</p>
+ * @method string getFromIp() 获取<p>执行任务来源IP</p>
+ * @method void setFromIp(string $FromIp) 设置<p>执行任务来源IP</p>
+ * @method string getUserName() 获取<p>运维任务所属用户</p>
+ * @method void setUserName(string $UserName) 设置<p>运维任务所属用户</p>
+ * @method string getRealName() 获取<p>运维任务所属用户的姓名</p>
+ * @method void setRealName(string $RealName) 设置<p>运维任务所属用户的姓名</p>
+ * @method integer getStatus() 获取<p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
+ * @method void setStatus(integer $Status) 设置<p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
+ * @method string getStartTime() 获取<p>运维任务开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>运维任务开始时间</p>
+ * @method string getEndTime() 获取<p>运维任务结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>运维任务结束时间</p>
+ * @method integer getCategory() 获取<p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+ * @method void setCategory(integer $Category) 设置<p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
  */
 class TaskResult extends AbstractModel
 {
     /**
-     * @var string 运维任务结果日志ID
+     * @var string <p>运维任务结果日志ID</p>
      */
     public $Id;
 
     /**
-     * @var string 运维任务ID
+     * @var string <p>运维任务ID</p>
      */
     public $OperationId;
 
     /**
-     * @var string 运维任务名称
+     * @var string <p>运维任务名称</p>
      */
     public $Name;
 
     /**
-     * @var string 执行任务来源IP
+     * @var string <p>执行任务来源IP</p>
      */
     public $FromIp;
 
     /**
-     * @var string 运维任务所属用户
+     * @var string <p>运维任务所属用户</p>
      */
     public $UserName;
 
     /**
-     * @var string 运维任务所属用户的姓名
+     * @var string <p>运维任务所属用户的姓名</p>
      */
     public $RealName;
 
     /**
-     * @var integer 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
+     * @var integer <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
      */
     public $Status;
 
     /**
-     * @var string 运维任务开始时间
+     * @var string <p>运维任务开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 运维任务结束时间
+     * @var string <p>运维任务结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @param string $Id 运维任务结果日志ID
-     * @param string $OperationId 运维任务ID
-     * @param string $Name 运维任务名称
-     * @param string $FromIp 执行任务来源IP
-     * @param string $UserName 运维任务所属用户
-     * @param string $RealName 运维任务所属用户的姓名
-     * @param integer $Status 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
-     * @param string $StartTime 运维任务开始时间
-     * @param string $EndTime 运维任务结束时间
+     * @var integer <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+     */
+    public $Category;
+
+    /**
+     * @param string $Id <p>运维任务结果日志ID</p>
+     * @param string $OperationId <p>运维任务ID</p>
+     * @param string $Name <p>运维任务名称</p>
+     * @param string $FromIp <p>执行任务来源IP</p>
+     * @param string $UserName <p>运维任务所属用户</p>
+     * @param string $RealName <p>运维任务所属用户的姓名</p>
+     * @param integer $Status <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
+     * @param string $StartTime <p>运维任务开始时间</p>
+     * @param string $EndTime <p>运维任务结束时间</p>
+     * @param integer $Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class TaskResult extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

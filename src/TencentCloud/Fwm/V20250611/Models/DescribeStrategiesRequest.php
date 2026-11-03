@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStrategies请求参数结构体
  *
- * @method string getProduct() 获取产品类型
- * @method void setProduct(string $Product) 设置产品类型
- * @method string getExecArea() 获取执行区域：pre是前区，post 是后区
- * @method void setExecArea(string $ExecArea) 设置执行区域：pre是前区，post 是后区
- * @method array getFilters() 获取筛选条件
- * @method void setFilters(array $Filters) 设置筛选条件
- * @method integer getLimit() 获取条数限制
- * @method void setLimit(integer $Limit) 设置条数限制
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method string getProduct() 获取<p>产品类型</p>
+ * @method void setProduct(string $Product) 设置<p>产品类型</p>
+ * @method string getExecArea() 获取<p>执行区域：pre是前区，post 是后区</p>
+ * @method void setExecArea(string $ExecArea) 设置<p>执行区域：pre是前区，post 是后区</p>
+ * @method array getFilters() 获取<p>筛选条件</p>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件</p>
+ * @method integer getLimit() 获取<p>条数限制</p>
+ * @method void setLimit(integer $Limit) 设置<p>条数限制</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
  */
 class DescribeStrategiesRequest extends AbstractModel
 {
     /**
-     * @var string 产品类型
+     * @var string <p>产品类型</p>
      */
     public $Product;
 
     /**
-     * @var string 执行区域：pre是前区，post 是后区
+     * @var string <p>执行区域：pre是前区，post 是后区</p>
      */
     public $ExecArea;
 
     /**
-     * @var array 筛选条件
+     * @var array <p>筛选条件</p>
      */
     public $Filters;
 
     /**
-     * @var integer 条数限制
+     * @var integer <p>条数限制</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @param string $Product 产品类型
-     * @param string $ExecArea 执行区域：pre是前区，post 是后区
-     * @param array $Filters 筛选条件
-     * @param integer $Limit 条数限制
-     * @param integer $Offset 偏移量
+     * @param string $Product <p>产品类型</p>
+     * @param string $ExecArea <p>执行区域：pre是前区，post 是后区</p>
+     * @param array $Filters <p>筛选条件</p>
+     * @param integer $Limit <p>条数限制</p>
+     * @param integer $Offset <p>偏移量</p>
      */
     function __construct()
     {

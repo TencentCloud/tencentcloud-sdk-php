@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterDatabases请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
- * @method integer getOffset() 获取分页偏移
- * @method void setOffset(integer $Offset) 设置分页偏移
- * @method integer getLimit() 获取分页限制数量
- * @method void setLimit(integer $Limit) 设置分页限制数量
+ * @method string getClusterId() 获取<p>集群id</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
+ * @method array getFuzzyDBNames() 获取<p>DB库名（支持模糊匹配）</p>
+ * @method void setFuzzyDBNames(array $FuzzyDBNames) 设置<p>DB库名（支持模糊匹配）</p>
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method integer getLimit() 获取<p>分页限制数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页限制数量</p>
  */
 class DescribeClusterDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer 分页偏移
+     * @var array <p>DB库名（支持模糊匹配）</p>
+     */
+    public $FuzzyDBNames;
+
+    /**
+     * @var integer <p>分页偏移</p>
      */
     public $Offset;
 
     /**
-     * @var integer 分页限制数量
+     * @var integer <p>分页限制数量</p>
      */
     public $Limit;
 
     /**
-     * @param string $ClusterId 集群id
-     * @param integer $Offset 分页偏移
-     * @param integer $Limit 分页限制数量
+     * @param string $ClusterId <p>集群id</p>
+     * @param array $FuzzyDBNames <p>DB库名（支持模糊匹配）</p>
+     * @param integer $Offset <p>分页偏移</p>
+     * @param integer $Limit <p>分页限制数量</p>
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class DescribeClusterDatabasesRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("FuzzyDBNames",$param) and $param["FuzzyDBNames"] !== null) {
+            $this->FuzzyDBNames = $param["FuzzyDBNames"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

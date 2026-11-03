@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTcrRepositoryConfig(InferenceTCRRepositoryConfig $TcrRepositoryConfig) 设置<p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
  * @method string getStartupCommand() 获取<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
  * @method void setStartupCommand(string $StartupCommand) 设置<p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
- * @method array getEnvironmentVariables() 获取<p>容器运行时的环境变量。最多支持 10 个变量。</p>
- * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置<p>容器运行时的环境变量。最多支持 10 个变量。</p>
+ * @method array getEnvironmentVariables() 获取<p>容器运行时的环境变量。最多支持 50 个变量。</p>
+ * @method void setEnvironmentVariables(array $EnvironmentVariables) 设置<p>容器运行时的环境变量。最多支持 50 个变量。</p>
  */
 class InferenceContainerConfigForModify extends AbstractModel
 {
@@ -47,7 +47,7 @@ class InferenceContainerConfigForModify extends AbstractModel
     public $StartupCommand;
 
     /**
-     * @var array <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * @var array <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     public $EnvironmentVariables;
 
@@ -55,7 +55,7 @@ class InferenceContainerConfigForModify extends AbstractModel
      * @param string $ImageType <p>镜像类型。取值有：<li>TCR：腾讯云容器镜像服务的镜像。</li></p>
      * @param InferenceTCRRepositoryConfig $TcrRepositoryConfig <p>TCR 镜像仓库信息。当 ImageType 为 TCR 时必填。</p>
      * @param string $StartupCommand <p>容器启动时执行的命令，未填写时默认使用镜像的 Entrypoint/CMD。最长支持 1024 字符。</p>
-     * @param array $EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * @param array $EnvironmentVariables <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     function __construct()
     {

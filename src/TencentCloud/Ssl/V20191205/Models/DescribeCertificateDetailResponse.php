@@ -148,6 +148,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseCrossSignRoot(boolean $UseCrossSignRoot) 设置<p>是否使用交叉根</p>
  * @method integer getHostingStatus() 获取<p>托管状态，0代表托管中，5代表资源替换中， 10代表托管完成， -1代表未托管</p>
  * @method void setHostingStatus(integer $HostingStatus) 设置<p>托管状态，0代表托管中，5代表资源替换中， 10代表托管完成， -1代表未托管</p>
+ * @method boolean getResubmitAble() 获取<p>是否可重新提交。</p>
+ * @method void setResubmitAble(boolean $ResubmitAble) 设置<p>是否可重新提交。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -402,6 +404,11 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $HostingStatus;
 
     /**
+     * @var boolean <p>是否可重新提交。</p>
+     */
+    public $ResubmitAble;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -471,6 +478,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
      * @param string $CertType <p>证书类型，DV（域名型）；OV（企业型）；EV（增强型）</p>
      * @param boolean $UseCrossSignRoot <p>是否使用交叉根</p>
      * @param integer $HostingStatus <p>托管状态，0代表托管中，5代表资源替换中， 10代表托管完成， -1代表未托管</p>
+     * @param boolean $ResubmitAble <p>是否可重新提交。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -687,6 +695,10 @@ class DescribeCertificateDetailResponse extends AbstractModel
 
         if (array_key_exists("HostingStatus",$param) and $param["HostingStatus"] !== null) {
             $this->HostingStatus = $param["HostingStatus"];
+        }
+
+        if (array_key_exists("ResubmitAble",$param) and $param["ResubmitAble"] !== null) {
+            $this->ResubmitAble = $param["ResubmitAble"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -1,0 +1,67 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Databuddy\V20260715\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 列表条目：存储位置与其 COS 文件事件订阅平铺（前端无需二次取值/匹配）
+ *
+ * @method LocationInfo getLocation() 获取存储位置详情
+ * @method void setLocation(LocationInfo $Location) 设置存储位置详情
+ * @method CosEventSubscription getFileEventSubscription() 获取COS 文件事件订阅明细（未订阅时为空，非空即已订阅）
+ * @method void setFileEventSubscription(CosEventSubscription $FileEventSubscription) 设置COS 文件事件订阅明细（未订阅时为空，非空即已订阅）
+ */
+class ListLocationItem extends AbstractModel
+{
+    /**
+     * @var LocationInfo 存储位置详情
+     */
+    public $Location;
+
+    /**
+     * @var CosEventSubscription COS 文件事件订阅明细（未订阅时为空，非空即已订阅）
+     */
+    public $FileEventSubscription;
+
+    /**
+     * @param LocationInfo $Location 存储位置详情
+     * @param CosEventSubscription $FileEventSubscription COS 文件事件订阅明细（未订阅时为空，非空即已订阅）
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = new LocationInfo();
+            $this->Location->deserialize($param["Location"]);
+        }
+
+        if (array_key_exists("FileEventSubscription",$param) and $param["FileEventSubscription"] !== null) {
+            $this->FileEventSubscription = new CosEventSubscription();
+            $this->FileEventSubscription->deserialize($param["FileEventSubscription"]);
+        }
+    }
+}

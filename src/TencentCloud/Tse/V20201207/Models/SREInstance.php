@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMutationEnabled(boolean $MutationEnabled) 设置<p>是否禁止变更</p>
  * @method boolean getMaxCapacityLimitEnabled() 获取<p>禁止限流</p>
  * @method void setMaxCapacityLimitEnabled(boolean $MaxCapacityLimitEnabled) 设置<p>禁止限流</p>
+ * @method array getMaintenanceWindow() 获取<p>维护窗口</p>
+ * @method void setMaintenanceWindow(array $MaintenanceWindow) 设置<p>维护窗口</p>
  */
 class SREInstance extends AbstractModel
 {
@@ -318,6 +320,11 @@ class SREInstance extends AbstractModel
     public $MaxCapacityLimitEnabled;
 
     /**
+     * @var array <p>维护窗口</p>
+     */
+    public $MaintenanceWindow;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param string $Name <p>名称</p>
      * @param string $Edition <p>版本号</p>
@@ -360,6 +367,7 @@ class SREInstance extends AbstractModel
      * @param boolean $IsMainRegion <p>是否为主地域</p>
      * @param boolean $MutationEnabled <p>是否禁止变更</p>
      * @param boolean $MaxCapacityLimitEnabled <p>禁止限流</p>
+     * @param array $MaintenanceWindow <p>维护窗口</p>
      */
     function __construct()
     {
@@ -571,6 +579,15 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("MaxCapacityLimitEnabled",$param) and $param["MaxCapacityLimitEnabled"] !== null) {
             $this->MaxCapacityLimitEnabled = $param["MaxCapacityLimitEnabled"];
+        }
+
+        if (array_key_exists("MaintenanceWindow",$param) and $param["MaintenanceWindow"] !== null) {
+            $this->MaintenanceWindow = [];
+            foreach ($param["MaintenanceWindow"] as $key => $value){
+                $obj = new MaintenanceWindow();
+                $obj->deserialize($value);
+                array_push($this->MaintenanceWindow, $obj);
+            }
         }
     }
 }

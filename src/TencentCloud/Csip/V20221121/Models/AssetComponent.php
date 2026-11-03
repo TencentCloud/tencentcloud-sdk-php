@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置<p>组件所属账号uin</p>
  * @method integer getAffectedImageCount() 获取<p>影响镜像数</p>
  * @method void setAffectedImageCount(integer $AffectedImageCount) 设置<p>影响镜像数</p>
+ * @method integer getAffectedRegistryImageCount() 获取<p>影响仓库镜像数</p>
+ * @method void setAffectedRegistryImageCount(integer $AffectedRegistryImageCount) 设置<p>影响仓库镜像数</p>
+ * @method integer getAffectedCICDImageCount() 获取<p>影响CICD镜像数</p>
+ * @method void setAffectedCICDImageCount(integer $AffectedCICDImageCount) 设置<p>影响CICD镜像数</p>
  */
 class AssetComponent extends AbstractModel
 {
@@ -94,6 +98,16 @@ class AssetComponent extends AbstractModel
     public $AffectedImageCount;
 
     /**
+     * @var integer <p>影响仓库镜像数</p>
+     */
+    public $AffectedRegistryImageCount;
+
+    /**
+     * @var integer <p>影响CICD镜像数</p>
+     */
+    public $AffectedCICDImageCount;
+
+    /**
      * @param string $Name <p>组件名</p>
      * @param string $Version <p>组件版本</p>
      * @param string $Type <p>组件类型</p>
@@ -104,6 +118,8 @@ class AssetComponent extends AbstractModel
      * @param integer $OwnerAppId <p>组件所属账号appid</p>
      * @param string $OwnerUin <p>组件所属账号uin</p>
      * @param integer $AffectedImageCount <p>影响镜像数</p>
+     * @param integer $AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     * @param integer $AffectedCICDImageCount <p>影响CICD镜像数</p>
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class AssetComponent extends AbstractModel
 
         if (array_key_exists("AffectedImageCount",$param) and $param["AffectedImageCount"] !== null) {
             $this->AffectedImageCount = $param["AffectedImageCount"];
+        }
+
+        if (array_key_exists("AffectedRegistryImageCount",$param) and $param["AffectedRegistryImageCount"] !== null) {
+            $this->AffectedRegistryImageCount = $param["AffectedRegistryImageCount"];
+        }
+
+        if (array_key_exists("AffectedCICDImageCount",$param) and $param["AffectedCICDImageCount"] !== null) {
+            $this->AffectedCICDImageCount = $param["AffectedCICDImageCount"];
         }
     }
 }

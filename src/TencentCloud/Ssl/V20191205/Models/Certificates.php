@@ -148,6 +148,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertServiceShareEnabled(boolean $CertServiceShareEnabled) 设置<p>是否开启订阅服务共享</p>
  * @method integer getCertServiceValidCertificateCount() 获取<p>当前订阅服务下已经签发未过期的证书数量</p>
  * @method void setCertServiceValidCertificateCount(integer $CertServiceValidCertificateCount) 设置<p>当前订阅服务下已经签发未过期的证书数量</p>
+ * @method boolean getResubmitAble() 获取<p>是否可重新提交。</p><p>默认值：false</p>
+ * @method void setResubmitAble(boolean $ResubmitAble) 设置<p>是否可重新提交。</p><p>默认值：false</p>
  */
 class Certificates extends AbstractModel
 {
@@ -468,6 +470,11 @@ class Certificates extends AbstractModel
     public $CertServiceValidCertificateCount;
 
     /**
+     * @var boolean <p>是否可重新提交。</p><p>默认值：false</p>
+     */
+    public $ResubmitAble;
+
+    /**
      * @param string $OwnerUin <p>用户 UIN。</p>
      * @param string $ProjectId <p>项目 ID。</p>
      * @param string $From <p>证书来源：<br>trustasia：亚洲诚信，<br>upload：用户上传。<br>wosign：沃通<br>sheca：上海CA</p>
@@ -532,6 +539,7 @@ class Certificates extends AbstractModel
      * @param string $CertServiceEndTime <p>订阅服务结束时间</p>
      * @param boolean $CertServiceShareEnabled <p>是否开启订阅服务共享</p>
      * @param integer $CertServiceValidCertificateCount <p>当前订阅服务下已经签发未过期的证书数量</p>
+     * @param boolean $ResubmitAble <p>是否可重新提交。</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -806,6 +814,10 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("CertServiceValidCertificateCount",$param) and $param["CertServiceValidCertificateCount"] !== null) {
             $this->CertServiceValidCertificateCount = $param["CertServiceValidCertificateCount"];
+        }
+
+        if (array_key_exists("ResubmitAble",$param) and $param["ResubmitAble"] !== null) {
+            $this->ResubmitAble = $param["ResubmitAble"];
         }
     }
 }

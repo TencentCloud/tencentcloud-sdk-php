@@ -20,70 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesList请求参数结构体
  *
- * @method string getDisplayStrategy() 获取集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
- * @method void setDisplayStrategy(string $DisplayStrategy) 设置集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
- * @method integer getOffset() 获取页编号，默认值为0，表示第一页。
- * @method void setOffset(integer $Offset) 设置页编号，默认值为0，表示第一页。
- * @method integer getLimit() 获取每页返回数量，默认值为100，最大值为100。
-如果limit和offset都为0，则查询全部记录；
- * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
-如果limit和offset都为0，则查询全部记录；
- * @method string getOrderField() 获取排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
- * @method void setOrderField(string $OrderField) 设置排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
- * @method integer getAsc() 获取按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
- * @method void setAsc(integer $Asc) 设置按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
- * @method array getFilters() 获取自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
- * @method void setFilters(array $Filters) 设置自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
- * @method integer getClusterType() 获取默认0为普通集群，2为tke集群
- * @method void setClusterType(integer $ClusterType) 设置默认0为普通集群，2为tke集群
+ * @method string getDisplayStrategy() 获取<p>集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li></p>
+ * @method void setDisplayStrategy(string $DisplayStrategy) 设置<p>集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li></p>
+ * @method integer getOffset() 获取<p>页编号，默认值为0，表示第一页。</p>
+ * @method void setOffset(integer $Offset) 设置<p>页编号，默认值为0，表示第一页。</p>
+ * @method integer getLimit() 获取<p>每页返回数量，默认值为100，最大值为100。<br>如果limit和offset都为0，则查询全部记录；</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页返回数量，默认值为100，最大值为100。<br>如果limit和offset都为0，则查询全部记录；</p>
+ * @method string getOrderField() 获取<p>排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li></p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li></p>
+ * @method integer getAsc() 获取<p>按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。</p>
+ * @method void setAsc(integer $Asc) 设置<p>按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。</p>
+ * @method array getFilters() 获取<p>自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{&quot;Name&quot;:&quot;ClusterId&quot;,&quot;Values&quot;:[&quot;emr-xxxxxxxx&quot;]}]</li><li>根据clusterName过滤实例：[{&quot;Name&quot;: &quot;ClusterName&quot;,&quot;Values&quot;: [&quot;cluster_name&quot;]}]</li><li>根据ClusterStatus过滤实例：[{&quot;Name&quot;: &quot;ClusterStatus&quot;,&quot;Values&quot;: [&quot;2&quot;]}]</li></p>
+ * @method void setFilters(array $Filters) 设置<p>自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{&quot;Name&quot;:&quot;ClusterId&quot;,&quot;Values&quot;:[&quot;emr-xxxxxxxx&quot;]}]</li><li>根据clusterName过滤实例：[{&quot;Name&quot;: &quot;ClusterName&quot;,&quot;Values&quot;: [&quot;cluster_name&quot;]}]</li><li>根据ClusterStatus过滤实例：[{&quot;Name&quot;: &quot;ClusterStatus&quot;,&quot;Values&quot;: [&quot;2&quot;]}]</li></p>
+ * @method integer getClusterType() 获取<p>默认0为普通集群，2为tke集群</p>
+ * @method void setClusterType(integer $ClusterType) 设置<p>默认0为普通集群，2为tke集群</p>
+ * @method boolean getNeedMcpPasswordInfo() 获取<p>是否返回需要密码信息</p>
+ * @method void setNeedMcpPasswordInfo(boolean $NeedMcpPasswordInfo) 设置<p>是否返回需要密码信息</p>
  */
 class DescribeInstancesListRequest extends AbstractModel
 {
     /**
-     * @var string 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
+     * @var string <p>集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li></p>
      */
     public $DisplayStrategy;
 
     /**
-     * @var integer 页编号，默认值为0，表示第一页。
+     * @var integer <p>页编号，默认值为0，表示第一页。</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页返回数量，默认值为100，最大值为100。
-如果limit和offset都为0，则查询全部记录；
+     * @var integer <p>每页返回数量，默认值为100，最大值为100。<br>如果limit和offset都为0，则查询全部记录；</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
+     * @var string <p>排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li></p>
      */
     public $OrderField;
 
     /**
-     * @var integer 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
+     * @var integer <p>按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。</p>
      */
     public $Asc;
 
     /**
-     * @var array 自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
+     * @var array <p>自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{&quot;Name&quot;:&quot;ClusterId&quot;,&quot;Values&quot;:[&quot;emr-xxxxxxxx&quot;]}]</li><li>根据clusterName过滤实例：[{&quot;Name&quot;: &quot;ClusterName&quot;,&quot;Values&quot;: [&quot;cluster_name&quot;]}]</li><li>根据ClusterStatus过滤实例：[{&quot;Name&quot;: &quot;ClusterStatus&quot;,&quot;Values&quot;: [&quot;2&quot;]}]</li></p>
      */
     public $Filters;
 
     /**
-     * @var integer 默认0为普通集群，2为tke集群
+     * @var integer <p>默认0为普通集群，2为tke集群</p>
      */
     public $ClusterType;
 
     /**
-     * @param string $DisplayStrategy 集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li>
-     * @param integer $Offset 页编号，默认值为0，表示第一页。
-     * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
-如果limit和offset都为0，则查询全部记录；
-     * @param string $OrderField 排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li>
-     * @param integer $Asc 按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。
-     * @param array $Filters 自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>根据clusterName过滤实例：[{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>根据ClusterStatus过滤实例：[{"Name": "ClusterStatus","Values": ["2"]}]</li>
-     * @param integer $ClusterType 默认0为普通集群，2为tke集群
+     * @var boolean <p>是否返回需要密码信息</p>
+     */
+    public $NeedMcpPasswordInfo;
+
+    /**
+     * @param string $DisplayStrategy <p>集群筛选策略。取值范围：<li>clusterList：表示查询除了已销毁集群之外的集群列表。</li><li>monitorManage：表示查询除了已销毁、创建中以及创建失败的集群之外的集群列表。</li><li>cloudHardwareManage/componentManage：目前这两个取值为预留取值，暂时和monitorManage表示同样的含义。</li></p>
+     * @param integer $Offset <p>页编号，默认值为0，表示第一页。</p>
+     * @param integer $Limit <p>每页返回数量，默认值为100，最大值为100。<br>如果limit和offset都为0，则查询全部记录；</p>
+     * @param string $OrderField <p>排序字段。取值范围：<li>clusterId：表示按照实例ID排序。</li><li>addTime：表示按照实例创建时间排序。</li><li>status：表示按照实例的状态码排序。</li></p>
+     * @param integer $Asc <p>按照OrderField升序或者降序进行排序。取值范围：<li>0：表示升序。</li><li>1：表示降序。</li>默认值为0。</p>
+     * @param array $Filters <p>自定义查询过滤器。示例：<li>根据ClusterId过滤实例：[{&quot;Name&quot;:&quot;ClusterId&quot;,&quot;Values&quot;:[&quot;emr-xxxxxxxx&quot;]}]</li><li>根据clusterName过滤实例：[{&quot;Name&quot;: &quot;ClusterName&quot;,&quot;Values&quot;: [&quot;cluster_name&quot;]}]</li><li>根据ClusterStatus过滤实例：[{&quot;Name&quot;: &quot;ClusterStatus&quot;,&quot;Values&quot;: [&quot;2&quot;]}]</li></p>
+     * @param integer $ClusterType <p>默认0为普通集群，2为tke集群</p>
+     * @param boolean $NeedMcpPasswordInfo <p>是否返回需要密码信息</p>
      */
     function __construct()
     {
@@ -129,6 +133,10 @@ class DescribeInstancesListRequest extends AbstractModel
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("NeedMcpPasswordInfo",$param) and $param["NeedMcpPasswordInfo"] !== null) {
+            $this->NeedMcpPasswordInfo = $param["NeedMcpPasswordInfo"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
  * @method string getName() 获取<p>木马白名单名</p>
  * @method void setName(string $Name) 设置<p>木马白名单名</p>
+ * @method string getMd5() 获取<p>白名单Md5</p>
+ * @method void setMd5(string $Md5) 设置<p>白名单Md5</p>
  */
 class ImageVirusWhitelist extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ImageVirusWhitelist extends AbstractModel
     public $Name;
 
     /**
+     * @var string <p>白名单Md5</p>
+     */
+    public $Md5;
+
+    /**
      * @param integer $RuleId <p>白名单id</p>
      * @param string $OwnerAccountName <p>白名单所属账号名</p>
      * @param string $OwnerUin <p>白名单所属账号uin</p>
@@ -104,6 +111,7 @@ class ImageVirusWhitelist extends AbstractModel
      * @param integer $Status <p>白名单状态</p><p>枚举值：</p><ul><li>0： 失效</li><li>1： 有效</li></ul>
      * @param string $UpdateTime <p>更新时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      * @param string $Name <p>木马白名单名</p>
+     * @param string $Md5 <p>白名单Md5</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ImageVirusWhitelist extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

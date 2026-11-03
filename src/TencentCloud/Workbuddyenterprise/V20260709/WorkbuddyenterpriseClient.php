@@ -28,7 +28,9 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\CreateAgentSessionResponse CreateAgentSession(Models\CreateAgentSessionRequest $req) 为指定 Agent 创建新的会话，返回会话 ID 和聊天凭证。
  * @method Models\CreateAgentVersionResponse CreateAgentVersion(Models\CreateAgentVersionRequest $req) 完全新建版本：外部准备完整 Manifest 后直接传入，不引用任何已有版本。
  * @method Models\CreateAgentVersionFromSourceResponse CreateAgentVersionFromSource(Models\CreateAgentVersionFromSourceRequest $req) 基于源版本创建新版本：Manifest / Model / Description 传入即整体覆盖，未传则沿用源版本。
+ * @method Models\CreateScheduledTaskResponse CreateScheduledTask(Models\CreateScheduledTaskRequest $req) 创建自动化任务。AgentConfig 由上游传入，managed-agent 仅做协议透传。
  * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除指定的 Agent 及其所有版本。删除后不可恢复。
+ * @method Models\DeleteScheduledTaskResponse DeleteScheduledTask(Models\DeleteScheduledTaskRequest $req) 删除指定的自动化任务。删除后不可恢复。
  * @method Models\DescribeAgentResponse DescribeAgent(Models\DescribeAgentRequest $req) 查询单个 Agent 的详细信息，包括基础配置和路由配置。
  * @method Models\DescribeAgentListResponse DescribeAgentList(Models\DescribeAgentListRequest $req) 查询当前企业的 Agent 列表，支持分页、过滤和排序。
  * @method Models\DescribeAgentSessionResponse DescribeAgentSession(Models\DescribeAgentSessionRequest $req) 查询单个 Agent 会话详情：返回会话基础信息（会话名称 / Agent / 版本 / 状态 / 来源 / 发起人）与可用的聊天接入点列表（EndpointSet）。数据面鉴权走 DescribeUserAccessToken 的用户级访问令牌。
@@ -41,6 +43,10 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\DescribeExternalAgentResponse DescribeExternalAgent(Models\DescribeExternalAgentRequest $req) 查询某 managed agent 绑定的单个外部 agent 详情
  * @method Models\DescribeExternalAgentListResponse DescribeExternalAgentList(Models\DescribeExternalAgentListRequest $req) 列某 managed agent 绑定的外部 agent 列表
  * @method Models\DescribeMessageEventListResponse DescribeMessageEventList(Models\DescribeMessageEventListRequest $req) 按 Session 分页查询消息事件
+ * @method Models\DescribeScheduledTaskResponse DescribeScheduledTask(Models\DescribeScheduledTaskRequest $req) 查询单个自动化任务的详细信息。
+ * @method Models\DescribeScheduledTaskListResponse DescribeScheduledTaskList(Models\DescribeScheduledTaskListRequest $req) 分页查询自动化任务列表，支持按任务名称、状态、Agent 过滤。
+ * @method Models\DescribeScheduledTaskLogResponse DescribeScheduledTaskLog(Models\DescribeScheduledTaskLogRequest $req) 查询单条自动化任务执行日志的详细信息。
+ * @method Models\DescribeScheduledTaskLogListResponse DescribeScheduledTaskLogList(Models\DescribeScheduledTaskLogListRequest $req) 分页查询自动化任务执行日志列表，支持状态和时间范围过滤，可选返回聚合统计。
  * @method Models\DescribeSkillListResponse DescribeSkillList(Models\DescribeSkillListRequest $req) 分页查询 Skill 列表，支持关键词、分类、发布状态过滤。
  * @method Models\DescribeUserAccessTokenResponse DescribeUserAccessToken(Models\DescribeUserAccessTokenRequest $req) 根据调用者的 Uin / SubAccountUin 调用 OneID 换取用户级 access_token。换取到的 token 是 OneID 用户身份的短期凭证，供调用方以用户身份访问 OneID 开平接口。默认开启 JIT，SubAccountUin 不存在时自动在目标企业下创建影子用户。
  * @method Models\MigrateAgentSessionResponse MigrateAgentSession(Models\MigrateAgentSessionRequest $req) 将指定会话迁移到目标版本。SessionID / RuntimeID 保持不变，通过 AgentOS UpdateSession 在原沙箱上更新 manifest 到新版本；AgentId 必须与原 Session 一致（禁止跨 Agent 迁移）；ChatToken 复用旧值不轮转。
@@ -48,6 +54,8 @@ use TencentCloud\Workbuddyenterprise\V20260709\Models as Models;
  * @method Models\ModifyAgentA2AConfigResponse ModifyAgentA2AConfig(Models\ModifyAgentA2AConfigRequest $req) 修改 Agent 的 A2A 配置。A2AEnabled 是 Agent 级唯一开关，与具体版本和流量分发策略无关。
  * @method Models\ModifyAgentRoutingResponse ModifyAgentRouting(Models\ModifyAgentRoutingRequest $req) 覆盖式写入 Agent 路由配置（版本权重）。所有 VersionId 必须属于同一 Agent 且未弃用；允许空数组（下线 Agent 对外流量）；非空时权重总和须等于 1。
  * @method Models\ModifyAgentVersionResponse ModifyAgentVersion(Models\ModifyAgentVersionRequest $req) 原地更新 default 或 test 版本的 Manifest / Model / Description / SandboxTemplateId / ConnectorSet（prod 版本冻结不可修改），五个可选字段至少提供一个。ConnectorSet 为全量覆盖语义：缺省表示不改动连接器绑定；空数组表示解绑全部连接器。
+ * @method Models\ModifyScheduledTaskResponse ModifyScheduledTask(Models\ModifyScheduledTaskRequest $req) 部分更新自动化任务配置（Patch 语义：仅传递需要更新的字段），支持启停状态切换。
+ * @method Models\TriggerScheduledTaskResponse TriggerScheduledTask(Models\TriggerScheduledTaskRequest $req) 手动触发一次自动化任务执行，返回执行日志 ID。
  * @method Models\UnbindExternalAgentResponse UnbindExternalAgent(Models\UnbindExternalAgentRequest $req) 解除外部 agent 与 managed agent 的绑定
  */
 

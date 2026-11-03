@@ -20,22 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPayConfig请求参数结构体
  *
- * @method HostAutoScaleConfig getHostConfig() 获取主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
- * @method void setHostConfig(HostAutoScaleConfig $HostConfig) 设置主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+ * @method HostAutoScaleConfig getHostConfig() 获取<p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
+ * @method void setHostConfig(HostAutoScaleConfig $HostConfig) 设置<p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
+ * @method ContainerAutoScaleConfig getContainerConfig() 获取<p>容器安全模块自动扩容配置，不传则不修改</p>
+ * @method void setContainerConfig(ContainerAutoScaleConfig $ContainerConfig) 设置<p>容器安全模块自动扩容配置，不传则不修改</p>
  */
 class ModifyPayConfigRequest extends AbstractModel
 {
     /**
-     * @var HostAutoScaleConfig 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+     * @var HostAutoScaleConfig <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
      */
     public $HostConfig;
 
     /**
-     * @param HostAutoScaleConfig $HostConfig 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+     * @var ContainerAutoScaleConfig <p>容器安全模块自动扩容配置，不传则不修改</p>
+     */
+    public $ContainerConfig;
+
+    /**
+     * @param HostAutoScaleConfig $HostConfig <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
+     * @param ContainerAutoScaleConfig $ContainerConfig <p>容器安全模块自动扩容配置，不传则不修改</p>
      */
     function __construct()
     {
@@ -53,6 +57,11 @@ class ModifyPayConfigRequest extends AbstractModel
         if (array_key_exists("HostConfig",$param) and $param["HostConfig"] !== null) {
             $this->HostConfig = new HostAutoScaleConfig();
             $this->HostConfig->deserialize($param["HostConfig"]);
+        }
+
+        if (array_key_exists("ContainerConfig",$param) and $param["ContainerConfig"] !== null) {
+            $this->ContainerConfig = new ContainerAutoScaleConfig();
+            $this->ContainerConfig->deserialize($param["ContainerConfig"]);
         }
     }
 }

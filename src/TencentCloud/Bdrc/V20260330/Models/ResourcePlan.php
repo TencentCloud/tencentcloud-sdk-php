@@ -20,58 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例Id与备份计划映射信息
  *
- * @method string getResourceId() 获取云服务器实例 ID
- * @method void setResourceId(string $ResourceId) 设置云服务器实例 ID
- * @method array getBackupPaths() 获取备份路径，[0,20]
- * @method void setBackupPaths(array $BackupPaths) 设置备份路径，[0,20]
- * @method array getIncludeFileTypes() 获取包含文件类型，[0,20]
- * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置包含文件类型，[0,20]
- * @method array getExcludePatterns() 获取排除路径，[0,20]
- * @method void setExcludePatterns(array $ExcludePatterns) 设置排除路径，[0,20]
- * @method boolean getExcludeSystemDirectories() 获取是否排除系统目录
- * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置是否排除系统目录
- * @method boolean getExecuteImmediately() 获取是否立即触发全量备份
- * @method void setExecuteImmediately(boolean $ExecuteImmediately) 设置是否立即触发全量备份
+ * @method string getResourceId() 获取<p>云服务器实例 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>云服务器实例 ID</p>
+ * @method array getBackupPaths() 获取<p>备份路径，[0,20]</p>
+ * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径，[0,20]</p>
+ * @method array getIncludeFileTypes() 获取<p>包含文件类型，[0,20]</p>
+ * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置<p>包含文件类型，[0,20]</p>
+ * @method array getExcludePatterns() 获取<p>排除路径，[0,20]</p>
+ * @method void setExcludePatterns(array $ExcludePatterns) 设置<p>排除路径，[0,20]</p>
+ * @method boolean getExcludeSystemDirectories() 获取<p>是否排除系统目录</p>
+ * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置<p>是否排除系统目录</p>
+ * @method boolean getExecuteImmediately() 获取<p>是否立即触发全量备份</p>
+ * @method void setExecuteImmediately(boolean $ExecuteImmediately) 设置<p>是否立即触发全量备份</p>
+ * @method boolean getEnableObjectAcl() 获取<p>cos备份是否备份ACL</p>
+ * @method void setEnableObjectAcl(boolean $EnableObjectAcl) 设置<p>cos备份是否备份ACL</p>
+ * @method boolean getEnableObjectTags() 获取<p>cos备份是否备份tag</p>
+ * @method void setEnableObjectTags(boolean $EnableObjectTags) 设置<p>cos备份是否备份tag</p>
  */
 class ResourcePlan extends AbstractModel
 {
     /**
-     * @var string 云服务器实例 ID
+     * @var string <p>云服务器实例 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var array 备份路径，[0,20]
+     * @var array <p>备份路径，[0,20]</p>
      */
     public $BackupPaths;
 
     /**
-     * @var array 包含文件类型，[0,20]
+     * @var array <p>包含文件类型，[0,20]</p>
      */
     public $IncludeFileTypes;
 
     /**
-     * @var array 排除路径，[0,20]
+     * @var array <p>排除路径，[0,20]</p>
      */
     public $ExcludePatterns;
 
     /**
-     * @var boolean 是否排除系统目录
+     * @var boolean <p>是否排除系统目录</p>
      */
     public $ExcludeSystemDirectories;
 
     /**
-     * @var boolean 是否立即触发全量备份
+     * @var boolean <p>是否立即触发全量备份</p>
      */
     public $ExecuteImmediately;
 
     /**
-     * @param string $ResourceId 云服务器实例 ID
-     * @param array $BackupPaths 备份路径，[0,20]
-     * @param array $IncludeFileTypes 包含文件类型，[0,20]
-     * @param array $ExcludePatterns 排除路径，[0,20]
-     * @param boolean $ExcludeSystemDirectories 是否排除系统目录
-     * @param boolean $ExecuteImmediately 是否立即触发全量备份
+     * @var boolean <p>cos备份是否备份ACL</p>
+     */
+    public $EnableObjectAcl;
+
+    /**
+     * @var boolean <p>cos备份是否备份tag</p>
+     */
+    public $EnableObjectTags;
+
+    /**
+     * @param string $ResourceId <p>云服务器实例 ID</p>
+     * @param array $BackupPaths <p>备份路径，[0,20]</p>
+     * @param array $IncludeFileTypes <p>包含文件类型，[0,20]</p>
+     * @param array $ExcludePatterns <p>排除路径，[0,20]</p>
+     * @param boolean $ExcludeSystemDirectories <p>是否排除系统目录</p>
+     * @param boolean $ExecuteImmediately <p>是否立即触发全量备份</p>
+     * @param boolean $EnableObjectAcl <p>cos备份是否备份ACL</p>
+     * @param boolean $EnableObjectTags <p>cos备份是否备份tag</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ResourcePlan extends AbstractModel
 
         if (array_key_exists("ExecuteImmediately",$param) and $param["ExecuteImmediately"] !== null) {
             $this->ExecuteImmediately = $param["ExecuteImmediately"];
+        }
+
+        if (array_key_exists("EnableObjectAcl",$param) and $param["EnableObjectAcl"] !== null) {
+            $this->EnableObjectAcl = $param["EnableObjectAcl"];
+        }
+
+        if (array_key_exists("EnableObjectTags",$param) and $param["EnableObjectTags"] !== null) {
+            $this->EnableObjectTags = $param["EnableObjectTags"];
         }
     }
 }

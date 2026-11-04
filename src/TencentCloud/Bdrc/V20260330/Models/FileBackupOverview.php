@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件备份概览数据
  *
- * @method integer getBackupCount() 获取整机备份点总数
- * @method void setBackupCount(integer $BackupCount) 设置整机备份点总数
- * @method integer getCreatingBackupCount() 获取创建中数量
- * @method void setCreatingBackupCount(integer $CreatingBackupCount) 设置创建中数量
- * @method integer getFailedBackupCount() 获取失败数量
- * @method void setFailedBackupCount(integer $FailedBackupCount) 设置失败数量
- * @method integer getSuccessBackupCount() 获取已完成数量
- * @method void setSuccessBackupCount(integer $SuccessBackupCount) 设置已完成数量
- * @method integer getRestoringBackupCount() 获取恢复中的总数量
- * @method void setRestoringBackupCount(integer $RestoringBackupCount) 设置恢复中的总数量
- * @method integer getBackupSizeMb() 获取整机备份总容量
- * @method void setBackupSizeMb(integer $BackupSizeMb) 设置整机备份总容量
- * @method integer getBackupResourceCount() 获取受保护 CVM 资源数
- * @method void setBackupResourceCount(integer $BackupResourceCount) 设置受保护 CVM 资源数
+ * @method integer getBackupCount() 获取<p>备份点总数</p>
+ * @method void setBackupCount(integer $BackupCount) 设置<p>备份点总数</p>
+ * @method integer getCreatingBackupCount() 获取<p>创建中数量</p>
+ * @method void setCreatingBackupCount(integer $CreatingBackupCount) 设置<p>创建中数量</p>
+ * @method integer getFailedBackupCount() 获取<p>失败数量</p>
+ * @method void setFailedBackupCount(integer $FailedBackupCount) 设置<p>失败数量</p>
+ * @method integer getSuccessBackupCount() 获取<p>已完成数量</p>
+ * @method void setSuccessBackupCount(integer $SuccessBackupCount) 设置<p>已完成数量</p>
+ * @method integer getRestoringBackupCount() 获取<p>恢复中的总数量</p>
+ * @method void setRestoringBackupCount(integer $RestoringBackupCount) 设置<p>恢复中的总数量</p>
+ * @method integer getBackupSizeMb() 获取<p>备份总容量</p>
+ * @method void setBackupSizeMb(integer $BackupSizeMb) 设置<p>备份总容量</p>
+ * @method integer getBackupResourceCount() 获取<p>受保护资源数</p>
+ * @method void setBackupResourceCount(integer $BackupResourceCount) 设置<p>受保护资源数</p>
  */
 class FileBackupOverview extends AbstractModel
 {
     /**
-     * @var integer 整机备份点总数
+     * @var integer <p>备份点总数</p>
      */
     public $BackupCount;
 
     /**
-     * @var integer 创建中数量
+     * @var integer <p>创建中数量</p>
      */
     public $CreatingBackupCount;
 
     /**
-     * @var integer 失败数量
+     * @var integer <p>失败数量</p>
      */
     public $FailedBackupCount;
 
     /**
-     * @var integer 已完成数量
+     * @var integer <p>已完成数量</p>
      */
     public $SuccessBackupCount;
 
     /**
-     * @var integer 恢复中的总数量
+     * @var integer <p>恢复中的总数量</p>
      */
     public $RestoringBackupCount;
 
     /**
-     * @var integer 整机备份总容量
+     * @var integer <p>备份总容量</p>
      */
     public $BackupSizeMb;
 
     /**
-     * @var integer 受保护 CVM 资源数
+     * @var integer <p>受保护资源数</p>
      */
     public $BackupResourceCount;
 
     /**
-     * @param integer $BackupCount 整机备份点总数
-     * @param integer $CreatingBackupCount 创建中数量
-     * @param integer $FailedBackupCount 失败数量
-     * @param integer $SuccessBackupCount 已完成数量
-     * @param integer $RestoringBackupCount 恢复中的总数量
-     * @param integer $BackupSizeMb 整机备份总容量
-     * @param integer $BackupResourceCount 受保护 CVM 资源数
+     * @param integer $BackupCount <p>备份点总数</p>
+     * @param integer $CreatingBackupCount <p>创建中数量</p>
+     * @param integer $FailedBackupCount <p>失败数量</p>
+     * @param integer $SuccessBackupCount <p>已完成数量</p>
+     * @param integer $RestoringBackupCount <p>恢复中的总数量</p>
+     * @param integer $BackupSizeMb <p>备份总容量</p>
+     * @param integer $BackupResourceCount <p>受保护资源数</p>
      */
     function __construct()
     {

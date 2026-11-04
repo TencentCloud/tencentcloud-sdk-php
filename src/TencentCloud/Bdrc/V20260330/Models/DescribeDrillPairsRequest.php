@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrillPairType(string $DrillPairType) 设置要查询演练对的类型。枚举值：DISK / INSTANCE / CFS。
  * @method array getDrillPairIds() 获取要查询演练对ID列表。
  * @method void setDrillPairIds(array $DrillPairIds) 设置要查询演练对ID列表。
- * @method array getFilters() 获取过滤条件，详见定期快照过滤条件表。
- * @method void setFilters(array $Filters) 设置过滤条件，详见定期快照过滤条件表。
+ * @method array getFilters() 获取过滤条件。
+ * @method void setFilters(array $Filters) 设置过滤条件。
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
@@ -48,7 +48,7 @@ class DescribeDrillPairsRequest extends AbstractModel
     public $DrillPairIds;
 
     /**
-     * @var array 过滤条件，详见定期快照过滤条件表。
+     * @var array 过滤条件。
      */
     public $Filters;
 
@@ -75,7 +75,7 @@ class DescribeDrillPairsRequest extends AbstractModel
     /**
      * @param string $DrillPairType 要查询演练对的类型。枚举值：DISK / INSTANCE / CFS。
      * @param array $DrillPairIds 要查询演练对ID列表。
-     * @param array $Filters 过滤条件，详见定期快照过滤条件表。
+     * @param array $Filters 过滤条件。
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
      * @param string $Order 输出结果按升序还是降序。枚举值：ASC / DESC。

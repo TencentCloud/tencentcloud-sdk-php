@@ -20,90 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例整型参数描述
  *
- * @method string getParamName() 获取参数名
- * @method void setParamName(string $ParamName) 设置参数名
- * @method string getValueType() 获取参数类型：integer
- * @method void setValueType(string $ValueType) 设置参数类型：integer
- * @method string getNeedRestart() 获取修改后是否需要重启：true，false
- * @method void setNeedRestart(string $NeedRestart) 设置修改后是否需要重启：true，false
- * @method string getDefaultValue() 获取参数默认值
- * @method void setDefaultValue(string $DefaultValue) 设置参数默认值
- * @method string getCurrentValue() 获取当前运行参数值
- * @method void setCurrentValue(string $CurrentValue) 设置当前运行参数值
- * @method string getTips() 获取参数说明
- * @method void setTips(string $Tips) 设置参数说明
- * @method string getMin() 获取参数最小值
- * @method void setMin(string $Min) 设置参数最小值
- * @method string getMax() 获取参数最大值
- * @method void setMax(string $Max) 设置参数最大值
- * @method integer getStatus() 获取参数状态, 1: 修改中， 2：修改完成
- * @method void setStatus(integer $Status) 设置参数状态, 1: 修改中， 2：修改完成
- * @method string getUnit() 获取参数单位
- * @method void setUnit(string $Unit) 设置参数单位
+ * @method string getParamName() 获取<p>参数名</p>
+ * @method void setParamName(string $ParamName) 设置<p>参数名</p>
+ * @method string getValueType() 获取<p>参数类型：integer</p>
+ * @method void setValueType(string $ValueType) 设置<p>参数类型：integer</p>
+ * @method string getNeedRestart() 获取<p>修改后是否需要重启：true，false</p>
+ * @method void setNeedRestart(string $NeedRestart) 设置<p>修改后是否需要重启：true，false</p>
+ * @method string getDefaultValue() 获取<p>参数默认值</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>参数默认值</p>
+ * @method string getCurrentValue() 获取<p>当前运行参数值</p>
+ * @method void setCurrentValue(string $CurrentValue) 设置<p>当前运行参数值</p>
+ * @method string getTips() 获取<p>参数说明</p>
+ * @method void setTips(string $Tips) 设置<p>参数说明</p>
+ * @method string getMin() 获取<p>参数最小值</p>
+ * @method void setMin(string $Min) 设置<p>参数最小值</p>
+ * @method string getMax() 获取<p>参数最大值</p>
+ * @method void setMax(string $Max) 设置<p>参数最大值</p>
+ * @method integer getStatus() 获取<p>参数状态, 1: 修改中， 2：修改完成</p>
+ * @method void setStatus(integer $Status) 设置<p>参数状态, 1: 修改中， 2：修改完成</p>
+ * @method string getUnit() 获取<p>参数单位</p>
+ * @method void setUnit(string $Unit) 设置<p>参数单位</p>
+ * @method string getParamType() 获取<p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis：  tendis支持的参数</li></ul>
+ * @method void setParamType(string $ParamType) 设置<p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis：  tendis支持的参数</li></ul>
+ * @method boolean getFeatureSupported() 获取<p>当前实例是否支持该特性</p>
+ * @method void setFeatureSupported(boolean $FeatureSupported) 设置<p>当前实例是否支持该特性</p>
+ * @method string getNewFeatureOnlineTime() 获取<p>新特性上线日期</p><p>参数格式：时间格式YYYY-MM-DD</p>
+ * @method void setNewFeatureOnlineTime(string $NewFeatureOnlineTime) 设置<p>新特性上线日期</p><p>参数格式：时间格式YYYY-MM-DD</p>
+ * @method string getPattern() 获取<p>正则校验规则</p>
+ * @method void setPattern(string $Pattern) 设置<p>正则校验规则</p>
+ * @method string getInputDescription() 获取<p>输入格式描述</p>
+ * @method void setInputDescription(string $InputDescription) 设置<p>输入格式描述</p>
  */
 class InstanceIntegerParam extends AbstractModel
 {
     /**
-     * @var string 参数名
+     * @var string <p>参数名</p>
      */
     public $ParamName;
 
     /**
-     * @var string 参数类型：integer
+     * @var string <p>参数类型：integer</p>
      */
     public $ValueType;
 
     /**
-     * @var string 修改后是否需要重启：true，false
+     * @var string <p>修改后是否需要重启：true，false</p>
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数默认值
+     * @var string <p>参数默认值</p>
      */
     public $DefaultValue;
 
     /**
-     * @var string 当前运行参数值
+     * @var string <p>当前运行参数值</p>
      */
     public $CurrentValue;
 
     /**
-     * @var string 参数说明
+     * @var string <p>参数说明</p>
      */
     public $Tips;
 
     /**
-     * @var string 参数最小值
+     * @var string <p>参数最小值</p>
      */
     public $Min;
 
     /**
-     * @var string 参数最大值
+     * @var string <p>参数最大值</p>
      */
     public $Max;
 
     /**
-     * @var integer 参数状态, 1: 修改中， 2：修改完成
+     * @var integer <p>参数状态, 1: 修改中， 2：修改完成</p>
      */
     public $Status;
 
     /**
-     * @var string 参数单位
+     * @var string <p>参数单位</p>
      */
     public $Unit;
 
     /**
-     * @param string $ParamName 参数名
-     * @param string $ValueType 参数类型：integer
-     * @param string $NeedRestart 修改后是否需要重启：true，false
-     * @param string $DefaultValue 参数默认值
-     * @param string $CurrentValue 当前运行参数值
-     * @param string $Tips 参数说明
-     * @param string $Min 参数最小值
-     * @param string $Max 参数最大值
-     * @param integer $Status 参数状态, 1: 修改中， 2：修改完成
-     * @param string $Unit 参数单位
+     * @var string <p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis：  tendis支持的参数</li></ul>
+     */
+    public $ParamType;
+
+    /**
+     * @var boolean <p>当前实例是否支持该特性</p>
+     */
+    public $FeatureSupported;
+
+    /**
+     * @var string <p>新特性上线日期</p><p>参数格式：时间格式YYYY-MM-DD</p>
+     */
+    public $NewFeatureOnlineTime;
+
+    /**
+     * @var string <p>正则校验规则</p>
+     */
+    public $Pattern;
+
+    /**
+     * @var string <p>输入格式描述</p>
+     */
+    public $InputDescription;
+
+    /**
+     * @param string $ParamName <p>参数名</p>
+     * @param string $ValueType <p>参数类型：integer</p>
+     * @param string $NeedRestart <p>修改后是否需要重启：true，false</p>
+     * @param string $DefaultValue <p>参数默认值</p>
+     * @param string $CurrentValue <p>当前运行参数值</p>
+     * @param string $Tips <p>参数说明</p>
+     * @param string $Min <p>参数最小值</p>
+     * @param string $Max <p>参数最大值</p>
+     * @param integer $Status <p>参数状态, 1: 修改中， 2：修改完成</p>
+     * @param string $Unit <p>参数单位</p>
+     * @param string $ParamType <p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis：  tendis支持的参数</li></ul>
+     * @param boolean $FeatureSupported <p>当前实例是否支持该特性</p>
+     * @param string $NewFeatureOnlineTime <p>新特性上线日期</p><p>参数格式：时间格式YYYY-MM-DD</p>
+     * @param string $Pattern <p>正则校验规则</p>
+     * @param string $InputDescription <p>输入格式描述</p>
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class InstanceIntegerParam extends AbstractModel
 
         if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
             $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
+            $this->ParamType = $param["ParamType"];
+        }
+
+        if (array_key_exists("FeatureSupported",$param) and $param["FeatureSupported"] !== null) {
+            $this->FeatureSupported = $param["FeatureSupported"];
+        }
+
+        if (array_key_exists("NewFeatureOnlineTime",$param) and $param["NewFeatureOnlineTime"] !== null) {
+            $this->NewFeatureOnlineTime = $param["NewFeatureOnlineTime"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("InputDescription",$param) and $param["InputDescription"] !== null) {
+            $this->InputDescription = $param["InputDescription"];
         }
     }
 }

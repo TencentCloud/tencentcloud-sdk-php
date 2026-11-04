@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
  * @method integer getAddressType() 获取<p>SSL地址类型。</p><p>枚举值：</p><ul><li>0： 不限。</li><li>1： 内网IPv4。</li><li>2： 内网IPv6。</li><li>3： 外网。</li><li>-1： 未指定。</li></ul><p>默认值：0</p>
  * @method void setAddressType(integer $AddressType) 设置<p>SSL地址类型。</p><p>枚举值：</p><ul><li>0： 不限。</li><li>1： 内网IPv4。</li><li>2： 内网IPv6。</li><li>3： 外网。</li><li>-1： 未指定。</li></ul><p>默认值：0</p>
+ * @method integer getCertSource() 获取<p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+ * @method void setCertSource(integer $CertSource) 设置<p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+ * @method integer getSwitchOption() 获取<p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+ * @method void setSwitchOption(integer $SwitchOption) 设置<p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+ * @method string getCertId() 获取<p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+ * @method void setCertId(string $CertId) 设置<p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+ * @method string getSSLMinVersion() 获取<p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+ * @method void setSSLMinVersion(string $SSLMinVersion) 设置<p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+ * @method string getEncryptionMode() 获取<p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+ * @method void setEncryptionMode(string $EncryptionMode) 设置<p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
  */
 class OpenSSLRequest extends AbstractModel
 {
@@ -38,8 +48,39 @@ class OpenSSLRequest extends AbstractModel
     public $AddressType;
 
     /**
+     * @var integer <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+     */
+    public $CertSource;
+
+    /**
+     * @var integer <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+     * @deprecated
+     */
+    public $SwitchOption;
+
+    /**
+     * @var string <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+     */
+    public $CertId;
+
+    /**
+     * @var string <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+     */
+    public $SSLMinVersion;
+
+    /**
+     * @var string <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+     */
+    public $EncryptionMode;
+
+    /**
      * @param string $InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      * @param integer $AddressType <p>SSL地址类型。</p><p>枚举值：</p><ul><li>0： 不限。</li><li>1： 内网IPv4。</li><li>2： 内网IPv6。</li><li>3： 外网。</li><li>-1： 未指定。</li></ul><p>默认值：0</p>
+     * @param integer $CertSource <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+     * @param integer $SwitchOption <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+     * @param string $CertId <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+     * @param string $SSLMinVersion <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+     * @param string $EncryptionMode <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
      */
     function __construct()
     {
@@ -60,6 +101,26 @@ class OpenSSLRequest extends AbstractModel
 
         if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
             $this->AddressType = $param["AddressType"];
+        }
+
+        if (array_key_exists("CertSource",$param) and $param["CertSource"] !== null) {
+            $this->CertSource = $param["CertSource"];
+        }
+
+        if (array_key_exists("SwitchOption",$param) and $param["SwitchOption"] !== null) {
+            $this->SwitchOption = $param["SwitchOption"];
+        }
+
+        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
+            $this->CertId = $param["CertId"];
+        }
+
+        if (array_key_exists("SSLMinVersion",$param) and $param["SSLMinVersion"] !== null) {
+            $this->SSLMinVersion = $param["SSLMinVersion"];
+        }
+
+        if (array_key_exists("EncryptionMode",$param) and $param["EncryptionMode"] !== null) {
+            $this->EncryptionMode = $param["EncryptionMode"];
         }
     }
 }

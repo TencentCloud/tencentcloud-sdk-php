@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteFileBackupPlans请求参数结构体
  *
- * @method array getPlanIds() 获取备份点 ID 列表
- * @method void setPlanIds(array $PlanIds) 设置备份点 ID 列表
+ * @method array getPlanIds() 获取<p>备份计划 ID 列表</p>
+ * @method void setPlanIds(array $PlanIds) 设置<p>备份计划 ID 列表</p>
  */
 class DeleteFileBackupPlansRequest extends AbstractModel
 {
     /**
-     * @var array 备份点 ID 列表
+     * @var array <p>备份计划 ID 列表</p>
      */
     public $PlanIds;
 
     /**
-     * @param array $PlanIds 备份点 ID 列表
+     * @param array $PlanIds <p>备份计划 ID 列表</p>
      */
     function __construct()
     {

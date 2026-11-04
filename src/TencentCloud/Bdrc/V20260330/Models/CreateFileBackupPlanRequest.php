@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupStorageId(string $BackupStorageId) 设置<p>备份库ID</p>
  * @method string getPlanName() 获取<p>计划名称</p>
  * @method void setPlanName(string $PlanName) 设置<p>计划名称</p>
- * @method array getResources() 获取<p>实例配置列表，[1,20]</p>
- * @method void setResources(array $Resources) 设置<p>实例配置列表，[1,20]</p>
+ * @method array getResources() 获取<p>实例配置列表，1~20 项，此参数必填。</p>
+ * @method void setResources(array $Resources) 设置<p>实例配置列表，1~20 项，此参数必填。</p>
  * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  */
@@ -49,7 +49,7 @@ class CreateFileBackupPlanRequest extends AbstractModel
     public $PlanName;
 
     /**
-     * @var array <p>实例配置列表，[1,20]</p>
+     * @var array <p>实例配置列表，1~20 项，此参数必填。</p>
      */
     public $Resources;
 
@@ -62,7 +62,7 @@ class CreateFileBackupPlanRequest extends AbstractModel
      * @param string $PolicyId <p>备份策略ID</p>
      * @param string $BackupStorageId <p>备份库ID</p>
      * @param string $PlanName <p>计划名称</p>
-     * @param array $Resources <p>实例配置列表，[1,20]</p>
+     * @param array $Resources <p>实例配置列表，1~20 项，此参数必填。</p>
      * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
      */
     function __construct()

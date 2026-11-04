@@ -20,102 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 受保护实例信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getAgentId() 获取客户端ID
- * @method void setAgentId(string $AgentId) 设置客户端ID
- * @method string getAgentVersion() 获取客户端版本
- * @method void setAgentVersion(string $AgentVersion) 设置客户端版本
- * @method string getAgentStatus() 获取客户端状态
- * @method void setAgentStatus(string $AgentStatus) 设置客户端状态
- * @method string getLastHeartbeatTime() 获取最后心跳时间
- * @method void setLastHeartbeatTime(string $LastHeartbeatTime) 设置最后心跳时间
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getExtraInfo() 获取最新备份点中记录的 CVM 基础信息
- * @method void setExtraInfo(string $ExtraInfo) 设置最新备份点中记录的 CVM 基础信息
- * @method integer getBackupCount() 获取该实例可用备份点数量
- * @method void setBackupCount(integer $BackupCount) 设置该实例可用备份点数量
- * @method string getInstanceName() 获取实例名称
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getAgentId() 获取<p>客户端ID</p>
+ * @method void setAgentId(string $AgentId) 设置<p>客户端ID</p>
+ * @method string getAgentVersion() 获取<p>客户端版本</p>
+ * @method void setAgentVersion(string $AgentVersion) 设置<p>客户端版本</p>
+ * @method string getAgentStatus() 获取<p>客户端状态</p>
+ * @method void setAgentStatus(string $AgentStatus) 设置<p>客户端状态</p>
+ * @method string getLastHeartbeatTime() 获取<p>最后心跳时间</p>
+ * @method void setLastHeartbeatTime(string $LastHeartbeatTime) 设置<p>最后心跳时间</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method string getExtraInfo() 获取<p>最新备份点中记录的 CVM 基础信息</p>
+ * @method void setExtraInfo(string $ExtraInfo) 设置<p>最新备份点中记录的 CVM 基础信息</p>
+ * @method integer getBackupCount() 获取<p>该实例可用备份点数量</p>
+ * @method void setBackupCount(integer $BackupCount) 设置<p>该实例可用备份点数量</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLatestBackupTime() 获取最近一次备份时间
- * @method void setLatestBackupTime(string $LatestBackupTime) 设置最近一次备份时间
- * @method string getOfflineReason() 获取离线原因
- * @method void setOfflineReason(string $OfflineReason) 设置离线原因
+ * @method string getLatestBackupTime() 获取<p>最近一次备份时间</p>
+ * @method void setLatestBackupTime(string $LatestBackupTime) 设置<p>最近一次备份时间</p>
+ * @method string getOfflineReason() 获取<p>离线原因</p>
+ * @method void setOfflineReason(string $OfflineReason) 设置<p>离线原因</p>
+ * @method integer getBackupSize() 获取<p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSize(integer $BackupSize) 设置<p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductType() 获取<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductType(string $ProductType) 设置<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectInstance extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 客户端ID
+     * @var string <p>客户端ID</p>
      */
     public $AgentId;
 
     /**
-     * @var string 客户端版本
+     * @var string <p>客户端版本</p>
      */
     public $AgentVersion;
 
     /**
-     * @var string 客户端状态
+     * @var string <p>客户端状态</p>
      */
     public $AgentStatus;
 
     /**
-     * @var string 最后心跳时间
+     * @var string <p>最后心跳时间</p>
      */
     public $LastHeartbeatTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 最新备份点中记录的 CVM 基础信息
+     * @var string <p>最新备份点中记录的 CVM 基础信息</p>
      */
     public $ExtraInfo;
 
     /**
-     * @var integer 该实例可用备份点数量
+     * @var integer <p>该实例可用备份点数量</p>
      */
     public $BackupCount;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
-     * @var string 最近一次备份时间
+     * @var string <p>最近一次备份时间</p>
      */
     public $LatestBackupTime;
 
     /**
-     * @var string 离线原因
+     * @var string <p>离线原因</p>
      */
     public $OfflineReason;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $AgentId 客户端ID
-     * @param string $AgentVersion 客户端版本
-     * @param string $AgentStatus 客户端状态
-     * @param string $LastHeartbeatTime 最后心跳时间
-     * @param string $CreatedTime 创建时间
-     * @param string $ExtraInfo 最新备份点中记录的 CVM 基础信息
-     * @param integer $BackupCount 该实例可用备份点数量
-     * @param string $InstanceName 实例名称
+     * @var integer <p>备份数据量，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LatestBackupTime 最近一次备份时间
-     * @param string $OfflineReason 离线原因
+     */
+    public $BackupSize;
+
+    /**
+     * @var string <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductType;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $AgentId <p>客户端ID</p>
+     * @param string $AgentVersion <p>客户端版本</p>
+     * @param string $AgentStatus <p>客户端状态</p>
+     * @param string $LastHeartbeatTime <p>最后心跳时间</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param string $ExtraInfo <p>最新备份点中记录的 CVM 基础信息</p>
+     * @param integer $BackupCount <p>该实例可用备份点数量</p>
+     * @param string $InstanceName <p>实例名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LatestBackupTime <p>最近一次备份时间</p>
+     * @param string $OfflineReason <p>离线原因</p>
+     * @param integer $BackupSize <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +196,14 @@ class ProtectInstance extends AbstractModel
 
         if (array_key_exists("OfflineReason",$param) and $param["OfflineReason"] !== null) {
             $this->OfflineReason = $param["OfflineReason"];
+        }
+
+        if (array_key_exists("BackupSize",$param) and $param["BackupSize"] !== null) {
+            $this->BackupSize = $param["BackupSize"];
+        }
+
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
         }
     }
 }

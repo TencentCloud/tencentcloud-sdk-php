@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取返回数量，默认20，最大500
  * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大500
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getOrderField() 获取排序字段。目前支持CREATE_TIME。
- * @method void setOrderField(string $OrderField) 设置排序字段。目前支持CREATE_TIME。
+ * @method string getOrder() 获取<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method string getOrderField() 获取<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
  */
 class DescribeBackupGroupsRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeBackupGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段。目前支持CREATE_TIME。
+     * @var string <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public $OrderField;
 
@@ -62,8 +62,8 @@ class DescribeBackupGroupsRequest extends AbstractModel
      * @param array $Filters 过滤条件。backup-group-id - Array of String - 是否必填：否 -（过滤条件）按备份组ID过滤 ;backup-group-state - Array of String - 是否必填：否 -（过滤条件）按备份组状态过滤。(NORMAL: 正常 | CREATING:创建中 | ROLLBACKING:回滚中) ;backup-group-name - Array of String - 是否必填：否 -（过滤条件）按备份组名称过滤 ;backup-id - Array of String - 是否必填：否 -（过滤条件）按备份组内的备份ID过滤
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 返回数量，默认20，最大500
-     * @param string $Order 排序方式
-     * @param string $OrderField 排序字段。目前支持CREATE_TIME。
+     * @param string $Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param string $OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     function __construct()
     {

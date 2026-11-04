@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSitePairId() 获取安全组映射所属的站点对ID。
  * @method void setSitePairId(string $SitePairId) 设置安全组映射所属的站点对ID。
- * @method array getFilters() 获取过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
- * @method void setFilters(array $Filters) 设置过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+ * @method array getFilters() 获取过滤条件。支持的Name：src-security-group-id、target-security-group-id
+ * @method void setFilters(array $Filters) 设置过滤条件。支持的Name：src-security-group-id、target-security-group-id
  * @method integer getOffset() 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节
  * @method integer getLimit() 获取返回数量，默认为20，最大值为500。关于Limit的更进一步介绍请参考 API 简介中的相关小节
@@ -41,7 +41,7 @@ class DescribeSecurityGroupMappingsRequest extends AbstractModel
     public $SitePairId;
 
     /**
-     * @var array 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+     * @var array 过滤条件。支持的Name：src-security-group-id、target-security-group-id
      */
     public $Filters;
 
@@ -67,7 +67,7 @@ class DescribeSecurityGroupMappingsRequest extends AbstractModel
 
     /**
      * @param string $SitePairId 安全组映射所属的站点对ID。
-     * @param array $Filters 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+     * @param array $Filters 过滤条件。支持的Name：src-security-group-id、target-security-group-id
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节
      * @param integer $Limit 返回数量，默认为20，最大值为500。关于Limit的更进一步介绍请参考 API 简介中的相关小节
      * @param string $Order 输出结果按升序还是降序，可选值：ASC、DESC

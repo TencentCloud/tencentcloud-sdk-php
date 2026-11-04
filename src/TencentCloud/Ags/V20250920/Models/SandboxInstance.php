@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setToolId(string $ToolId) 设置<p>所属沙箱工具 ID</p>
  * @method string getToolName() 获取<p>所属沙箱工具名称</p>
  * @method void setToolName(string $ToolName) 设置<p>所属沙箱工具名称</p>
- * @method string getStatus() 获取<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
- * @method void setStatus(string $Status) 设置<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+ * @method string getStatus() 获取<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
  * @method boolean getPersistent() 获取<p>是否常驻实例</p>
  * @method void setPersistent(boolean $Persistent) 设置<p>是否常驻实例</p>
  * @method integer getTimeoutSeconds() 获取<p>超时时间（秒），null 表示无超时设置</p>
@@ -71,7 +71,7 @@ class SandboxInstance extends AbstractModel
     public $ToolName;
 
     /**
-     * @var string <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * @var string <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
      */
     public $Status;
 
@@ -139,7 +139,7 @@ class SandboxInstance extends AbstractModel
      * @param string $InstanceId <p>沙箱实例唯一标识符</p>
      * @param string $ToolId <p>所属沙箱工具 ID</p>
      * @param string $ToolName <p>所属沙箱工具名称</p>
-     * @param string $Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * @param string $Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
      * @param boolean $Persistent <p>是否常驻实例</p>
      * @param integer $TimeoutSeconds <p>超时时间（秒），null 表示无超时设置</p>
      * @param string $ExpiresAt <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>

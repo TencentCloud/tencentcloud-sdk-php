@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupVaults请求参数结构体
  *
- * @method array getVaultIds() 获取备份库ID列表
- * @method void setVaultIds(array $VaultIds) 设置备份库ID列表
- * @method array getFilters() 获取过滤条件，支持instance-id和auto-backup-policy-id
- * @method void setFilters(array $Filters) 设置过滤条件，支持instance-id和auto-backup-policy-id
- * @method integer getOffset() 获取偏移量，默认0
- * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method integer getLimit() 获取返回数量，默认20，最大1000
- * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大1000
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getOrderField() 获取排序字段
- * @method void setOrderField(string $OrderField) 设置排序字段
+ * @method array getVaultIds() 获取<p>备份库ID列表</p>
+ * @method void setVaultIds(array $VaultIds) 设置<p>备份库ID列表</p>
+ * @method array getFilters() 获取<p>过滤条件，支持vault-id、vault-name、status</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，支持vault-id、vault-name、status</p>
+ * @method integer getOffset() 获取<p>偏移量，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20，最大100</p><p>取值范围：[1, 100]</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20，最大100</p><p>取值范围：[1, 100]</p>
+ * @method string getOrder() 获取<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method string getOrderField() 获取<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
  */
 class DescribeBackupVaultsRequest extends AbstractModel
 {
     /**
-     * @var array 备份库ID列表
+     * @var array <p>备份库ID列表</p>
      */
     public $VaultIds;
 
     /**
-     * @var array 过滤条件，支持instance-id和auto-backup-policy-id
+     * @var array <p>过滤条件，支持vault-id、vault-name、status</p>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认0
+     * @var integer <p>偏移量，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20，最大1000
+     * @var integer <p>返回数量，默认20，最大100</p><p>取值范围：[1, 100]</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public $OrderField;
 
     /**
-     * @param array $VaultIds 备份库ID列表
-     * @param array $Filters 过滤条件，支持instance-id和auto-backup-policy-id
-     * @param integer $Offset 偏移量，默认0
-     * @param integer $Limit 返回数量，默认20，最大1000
-     * @param string $Order 排序方式
-     * @param string $OrderField 排序字段
+     * @param array $VaultIds <p>备份库ID列表</p>
+     * @param array $Filters <p>过滤条件，支持vault-id、vault-name、status</p>
+     * @param integer $Offset <p>偏移量，默认0</p>
+     * @param integer $Limit <p>返回数量，默认20，最大100</p><p>取值范围：[1, 100]</p>
+     * @param string $Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param string $OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     function __construct()
     {

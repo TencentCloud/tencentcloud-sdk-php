@@ -22,16 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getExampleId() 获取<p>案例模板ID（startMode=EXAMPLE 时使用）</p>
  * @method void setExampleId(string $ExampleId) 设置<p>案例模板ID（startMode=EXAMPLE 时使用）</p>
+ * @method string getCodeArchiveUrl() 获取<p>代码包/工程归档地址</p>
+ * @method void setCodeArchiveUrl(string $CodeArchiveUrl) 设置<p>代码包/工程归档地址</p>
  * @method array getServices() 获取<p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
  * @method void setServices(array $Services) 设置<p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
  * @method string getLabImage() 获取<p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
  * @method void setLabImage(string $LabImage) 设置<p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
+ * @method string getLabImagePullPolicy() 获取<p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+ * @method void setLabImagePullPolicy(string $LabImagePullPolicy) 设置<p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
  * @method string getId() 获取<p>集群ID</p>
  * @method void setId(string $Id) 设置<p>集群ID</p>
  * @method string getType() 获取<p>资源类型：CLUSTER-普通集群；WORKSPACE-数据实验室（开发入口）</p>
  * @method void setType(string $Type) 设置<p>资源类型：CLUSTER-普通集群；WORKSPACE-数据实验室（开发入口）</p>
  * @method string getName() 获取<p>集群名称</p>
  * @method void setName(string $Name) 设置<p>集群名称</p>
+ * @method string getDescription() 获取<p>集群描述</p>
+ * @method void setDescription(string $Description) 设置<p>集群描述</p>
  * @method string getResourcePartitionId() 获取<p>所属资源分区ID</p>
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>所属资源分区ID</p>
  * @method string getResourcePartitionName() 获取<p>默认资源分区名称</p>
@@ -46,22 +52,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子用户UIN</p>
  * @method string getStatus() 获取<p>集群状态</p>
  * @method void setStatus(string $Status) 设置<p>集群状态</p>
+ * @method string getStatusMessage() 获取<p>状态详情/错误信息</p>
+ * @method void setStatusMessage(string $StatusMessage) 设置<p>状态详情/错误信息</p>
  * @method integer getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
+ * @method string getGroupName() 获取<p>所属集群组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>所属集群组名称</p>
+ * @method string getGroupId() 获取<p>计算组 ID</p>
+ * @method void setGroupId(string $GroupId) 设置<p>计算组 ID</p>
  * @method string getResourceConfig() 获取<p>资源配置(JSON)</p>
  * @method void setResourceConfig(string $ResourceConfig) 设置<p>资源配置(JSON)</p>
+ * @method string getResourceConfigId() 获取<p>资源配置ID</p>
+ * @method void setResourceConfigId(string $ResourceConfigId) 设置<p>资源配置ID</p>
  * @method string getImage() 获取<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
  * @method void setImage(string $Image) 设置<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
  * @method string getCatalog() 获取<p>存储卷和挂载卷配置(JSON)</p>
  * @method void setCatalog(string $Catalog) 设置<p>存储卷和挂载卷配置(JSON)</p>
  * @method string getHistoryUrl() 获取<p>Dashboard URL / 历史记录链接</p>
  * @method void setHistoryUrl(string $HistoryUrl) 设置<p>Dashboard URL / 历史记录链接</p>
+ * @method string getImagePullPolicy() 获取<p>镜像拉取策略</p>
+ * @method void setImagePullPolicy(string $ImagePullPolicy) 设置<p>镜像拉取策略</p>
  * @method string getAdvancedOptions() 获取<p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
  * @method integer getPriority() 获取<p>优先级（1-9，数字越大优先级越高）</p>
  * @method void setPriority(integer $Priority) 设置<p>优先级（1-9，数字越大优先级越高）</p>
  * @method integer getStartTime() 获取<p>启动时间（最近一次启动）</p>
  * @method void setStartTime(integer $StartTime) 设置<p>启动时间（最近一次启动）</p>
+ * @method integer getStopTime() 获取<p>停止时间（最近一次停止/休眠）</p>
+ * @method void setStopTime(integer $StopTime) 设置<p>停止时间（最近一次停止/休眠）</p>
+ * @method integer getDeleteTime() 获取<p>删除时间</p>
+ * @method void setDeleteTime(integer $DeleteTime) 设置<p>删除时间</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue）</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue）</p>
  * @method PersistentWorkDir getPersistentWorkDir() 获取<p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
@@ -70,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableToken(boolean $EnableToken) 设置<p>是否开启token认证</p>
  * @method string getToken() 获取<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
  * @method void setToken(string $Token) 设置<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+ * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置（JSON）</p>
+ * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置（JSON）</p>
  * @method string getLabImagePullType() 获取<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method void setLabImagePullType(string $LabImagePullType) 设置<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
@@ -89,6 +113,11 @@ class StopLabResponse extends AbstractModel
     public $ExampleId;
 
     /**
+     * @var string <p>代码包/工程归档地址</p>
+     */
+    public $CodeArchiveUrl;
+
+    /**
      * @var array <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
      */
     public $Services;
@@ -97,6 +126,11 @@ class StopLabResponse extends AbstractModel
      * @var string <p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
      */
     public $LabImage;
+
+    /**
+     * @var string <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+     */
+    public $LabImagePullPolicy;
 
     /**
      * @var string <p>集群ID</p>
@@ -112,6 +146,11 @@ class StopLabResponse extends AbstractModel
      * @var string <p>集群名称</p>
      */
     public $Name;
+
+    /**
+     * @var string <p>集群描述</p>
+     */
+    public $Description;
 
     /**
      * @var string <p>所属资源分区ID</p>
@@ -149,14 +188,39 @@ class StopLabResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>状态详情/错误信息</p>
+     */
+    public $StatusMessage;
+
+    /**
      * @var integer <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
+     * @var integer <p>更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string <p>所属集群组名称</p>
+     */
+    public $GroupName;
+
+    /**
+     * @var string <p>计算组 ID</p>
+     */
+    public $GroupId;
+
+    /**
      * @var string <p>资源配置(JSON)</p>
      */
     public $ResourceConfig;
+
+    /**
+     * @var string <p>资源配置ID</p>
+     */
+    public $ResourceConfigId;
 
     /**
      * @var string <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
@@ -174,6 +238,11 @@ class StopLabResponse extends AbstractModel
     public $HistoryUrl;
 
     /**
+     * @var string <p>镜像拉取策略</p>
+     */
+    public $ImagePullPolicy;
+
+    /**
      * @var string <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
      */
     public $AdvancedOptions;
@@ -187,6 +256,16 @@ class StopLabResponse extends AbstractModel
      * @var integer <p>启动时间（最近一次启动）</p>
      */
     public $StartTime;
+
+    /**
+     * @var integer <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public $StopTime;
+
+    /**
+     * @var integer <p>删除时间</p>
+     */
+    public $DeleteTime;
 
     /**
      * @var array <p>标签列表（TagKey-TagValue）</p>
@@ -207,6 +286,11 @@ class StopLabResponse extends AbstractModel
      * @var string <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
      */
     public $Token;
+
+    /**
+     * @var string <p>弹性伸缩配置（JSON）</p>
+     */
+    public $AutoscalerOptions;
 
     /**
      * @var string <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -235,11 +319,14 @@ class StopLabResponse extends AbstractModel
 
     /**
      * @param string $ExampleId <p>案例模板ID（startMode=EXAMPLE 时使用）</p>
+     * @param string $CodeArchiveUrl <p>代码包/工程归档地址</p>
      * @param array $Services <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
      * @param string $LabImage <p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
+     * @param string $LabImagePullPolicy <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
      * @param string $Id <p>集群ID</p>
      * @param string $Type <p>资源类型：CLUSTER-普通集群；WORKSPACE-数据实验室（开发入口）</p>
      * @param string $Name <p>集群名称</p>
+     * @param string $Description <p>集群描述</p>
      * @param string $ResourcePartitionId <p>所属资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>所属队列名称</p>
@@ -247,18 +334,27 @@ class StopLabResponse extends AbstractModel
      * @param string $Uin <p>用户UIN</p>
      * @param string $SubAccountUin <p>子用户UIN</p>
      * @param string $Status <p>集群状态</p>
+     * @param string $StatusMessage <p>状态详情/错误信息</p>
      * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $UpdateTime <p>更新时间</p>
+     * @param string $GroupName <p>所属集群组名称</p>
+     * @param string $GroupId <p>计算组 ID</p>
      * @param string $ResourceConfig <p>资源配置(JSON)</p>
+     * @param string $ResourceConfigId <p>资源配置ID</p>
      * @param string $Image <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
      * @param string $Catalog <p>存储卷和挂载卷配置(JSON)</p>
      * @param string $HistoryUrl <p>Dashboard URL / 历史记录链接</p>
+     * @param string $ImagePullPolicy <p>镜像拉取策略</p>
      * @param string $AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
      * @param integer $Priority <p>优先级（1-9，数字越大优先级越高）</p>
      * @param integer $StartTime <p>启动时间（最近一次启动）</p>
+     * @param integer $StopTime <p>停止时间（最近一次停止/休眠）</p>
+     * @param integer $DeleteTime <p>删除时间</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue）</p>
      * @param PersistentWorkDir $PersistentWorkDir <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
      * @param boolean $EnableToken <p>是否开启token认证</p>
      * @param string $Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param string $AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
      * @param string $LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param string $ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -282,6 +378,10 @@ class StopLabResponse extends AbstractModel
             $this->ExampleId = $param["ExampleId"];
         }
 
+        if (array_key_exists("CodeArchiveUrl",$param) and $param["CodeArchiveUrl"] !== null) {
+            $this->CodeArchiveUrl = $param["CodeArchiveUrl"];
+        }
+
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = [];
             foreach ($param["Services"] as $key => $value){
@@ -295,6 +395,10 @@ class StopLabResponse extends AbstractModel
             $this->LabImage = $param["LabImage"];
         }
 
+        if (array_key_exists("LabImagePullPolicy",$param) and $param["LabImagePullPolicy"] !== null) {
+            $this->LabImagePullPolicy = $param["LabImagePullPolicy"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
@@ -305,6 +409,10 @@ class StopLabResponse extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("ResourcePartitionId",$param) and $param["ResourcePartitionId"] !== null) {
@@ -335,12 +443,32 @@ class StopLabResponse extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("StatusMessage",$param) and $param["StatusMessage"] !== null) {
+            $this->StatusMessage = $param["StatusMessage"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
 
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = $param["ResourceConfig"];
+        }
+
+        if (array_key_exists("ResourceConfigId",$param) and $param["ResourceConfigId"] !== null) {
+            $this->ResourceConfigId = $param["ResourceConfigId"];
         }
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
@@ -355,6 +483,10 @@ class StopLabResponse extends AbstractModel
             $this->HistoryUrl = $param["HistoryUrl"];
         }
 
+        if (array_key_exists("ImagePullPolicy",$param) and $param["ImagePullPolicy"] !== null) {
+            $this->ImagePullPolicy = $param["ImagePullPolicy"];
+        }
+
         if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
             $this->AdvancedOptions = $param["AdvancedOptions"];
         }
@@ -365,6 +497,14 @@ class StopLabResponse extends AbstractModel
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("StopTime",$param) and $param["StopTime"] !== null) {
+            $this->StopTime = $param["StopTime"];
+        }
+
+        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
+            $this->DeleteTime = $param["DeleteTime"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -387,6 +527,10 @@ class StopLabResponse extends AbstractModel
 
         if (array_key_exists("Token",$param) and $param["Token"] !== null) {
             $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
+            $this->AutoscalerOptions = $param["AutoscalerOptions"];
         }
 
         if (array_key_exists("LabImagePullType",$param) and $param["LabImagePullType"] !== null) {

@@ -20,63 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelUpdateSealStatus请求参数结构体
  *
- * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
- * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
- * @method string getStatus() 获取印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
- * @method void setStatus(string $Status) 设置印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
- * @method string getSealId() 获取印章ID
- * @method void setSealId(string $SealId) 设置印章ID
- * @method string getReason() 获取更新印章状态原因说明
- * @method void setReason(string $Reason) 设置更新印章状态原因说明
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method array getOptions() 获取个性化配置字段，默认不传。
- * @method void setOptions(array $Options) 设置个性化配置字段，默认不传。
+ * @method Agent getAgent() 获取<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
+ * @method void setAgent(Agent $Agent) 设置<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
+ * @method string getStatus() 获取<p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
+ * @method void setStatus(string $Status) 设置<p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
+ * @method string getSealId() 获取<p>印章ID</p>
+ * @method void setSealId(string $SealId) 设置<p>印章ID</p>
+ * @method string getReason() 获取<p>更新印章状态原因说明</p>
+ * @method void setReason(string $Reason) 设置<p>更新印章状态原因说明</p>
+ * @method UserInfo getOperator() 获取<p>操作者的信息</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>操作者的信息</p>
+ * @method array getOptions() 获取<p>个性化配置字段，默认不传。</p>
+ * @method void setOptions(array $Options) 设置<p>个性化配置字段，默认不传。</p>
  */
 class ChannelUpdateSealStatusRequest extends AbstractModel
 {
     /**
-     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * @var Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
      */
     public $Agent;
 
     /**
-     * @var string 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
+     * @var string <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 印章ID
+     * @var string <p>印章ID</p>
      */
     public $SealId;
 
     /**
-     * @var string 更新印章状态原因说明
+     * @var string <p>更新印章状态原因说明</p>
      */
     public $Reason;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo <p>操作者的信息</p>
      * @deprecated
      */
     public $Operator;
 
     /**
-     * @var array 个性化配置字段，默认不传。
+     * @var array <p>个性化配置字段，默认不传。</p>
      */
     public $Options;
 
     /**
-     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-     * @param string $Status 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
-     * @param string $SealId 印章ID
-     * @param string $Reason 更新印章状态原因说明
-     * @param UserInfo $Operator 操作者的信息
-     * @param array $Options 个性化配置字段，默认不传。
+     * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
+     * @param string $Status <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
+     * @param string $SealId <p>印章ID</p>
+     * @param string $Reason <p>更新印章状态原因说明</p>
+     * @param UserInfo $Operator <p>操作者的信息</p>
+     * @param array $Options <p>个性化配置字段，默认不传。</p>
      */
     function __construct()
     {

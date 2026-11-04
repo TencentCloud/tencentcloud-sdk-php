@@ -20,82 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述实例的备份信息
  *
- * @method array getAutoBackupPolicyIdSet() 获取实例绑定的定期备份策略列表。
- * @method void setAutoBackupPolicyIdSet(array $AutoBackupPolicyIdSet) 设置实例绑定的定期备份策略列表。
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getAppId() 获取用户AppId。
- * @method void setAppId(integer $AppId) 设置用户AppId。
- * @method string getLatestBackupTime() 获取实例最新备份时间。
+ * @method array getAutoBackupPolicyIdSet() 获取<p>实例绑定的定期备份策略列表。</p>
+ * @method void setAutoBackupPolicyIdSet(array $AutoBackupPolicyIdSet) 设置<p>实例绑定的定期备份策略列表。</p>
+ * @method string getInstanceId() 获取<p>实例ID。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID。</p>
+ * @method integer getAppId() 获取<p>用户AppId。</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppId。</p>
+ * @method string getLatestBackupTime() 获取<p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLatestBackupTime(string $LatestBackupTime) 设置实例最新备份时间。
+ * @method void setLatestBackupTime(string $LatestBackupTime) 设置<p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBackupGroupIdSet() 获取实例的备份组ID列表。
- * @method void setBackupGroupIdSet(array $BackupGroupIdSet) 设置实例的备份组ID列表。
- * @method string getModifyTime() 获取修改时间。
+ * @method array getBackupGroupIdSet() 获取<p>实例的备份组ID列表。</p>
+ * @method void setBackupGroupIdSet(array $BackupGroupIdSet) 设置<p>实例的备份组ID列表。</p>
+ * @method string getModifyTime() 获取<p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModifyTime(string $ModifyTime) 设置修改时间。
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method integer getBackupSizeMb() 获取<p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSizeMb(integer $BackupSizeMb) 设置<p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupInstance extends AbstractModel
 {
     /**
-     * @var array 实例绑定的定期备份策略列表。
+     * @var array <p>实例绑定的定期备份策略列表。</p>
      */
     public $AutoBackupPolicyIdSet;
 
     /**
-     * @var string 实例ID。
+     * @var string <p>实例ID。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 用户AppId。
+     * @var integer <p>用户AppId。</p>
      */
     public $AppId;
 
     /**
-     * @var string 实例最新备份时间。
+     * @var string <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestBackupTime;
 
     /**
-     * @var array 实例的备份组ID列表。
+     * @var array <p>实例的备份组ID列表。</p>
      */
     public $BackupGroupIdSet;
 
     /**
-     * @var string 修改时间。
+     * @var string <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @param array $AutoBackupPolicyIdSet 实例绑定的定期备份策略列表。
-     * @param string $InstanceId 实例ID。
-     * @param integer $AppId 用户AppId。
-     * @param string $LatestBackupTime 实例最新备份时间。
+     * @var integer <p>备份数据量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BackupGroupIdSet 实例的备份组ID列表。
-     * @param string $ModifyTime 修改时间。
+     */
+    public $BackupSizeMb;
+
+    /**
+     * @param array $AutoBackupPolicyIdSet <p>实例绑定的定期备份策略列表。</p>
+     * @param string $InstanceId <p>实例ID。</p>
+     * @param integer $AppId <p>用户AppId。</p>
+     * @param string $LatestBackupTime <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
-     * @param string $InstanceName 实例名称
+     * @param array $BackupGroupIdSet <p>实例的备份组ID列表。</p>
+     * @param string $ModifyTime <p>修改时间。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param integer $BackupSizeMb <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +152,10 @@ class BackupInstance extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("BackupSizeMb",$param) and $param["BackupSizeMb"] !== null) {
+            $this->BackupSizeMb = $param["BackupSizeMb"];
         }
     }
 }

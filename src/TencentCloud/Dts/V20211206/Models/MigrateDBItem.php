@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询迁移实例列表的实例对象
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getVip() 获取实例Vip
- * @method void setVip(string $Vip) 设置实例Vip
- * @method integer getVport() 获取实例Vport
- * @method void setVport(integer $Vport) 设置实例Vport
- * @method integer getUsable() 获取是否可以作为迁移对象，1-可以，0-不可以
- * @method void setUsable(integer $Usable) 设置是否可以作为迁移对象，1-可以，0-不可以
- * @method string getHint() 获取不可以作为迁移对象的原因
- * @method void setHint(string $Hint) 设置不可以作为迁移对象的原因
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getInstanceName() 获取<p>实例名称</p>
+ * @method void setInstanceName(string $InstanceName) 设置<p>实例名称</p>
+ * @method string getVip() 获取<p>实例Vip</p>
+ * @method void setVip(string $Vip) 设置<p>实例Vip</p>
+ * @method integer getVport() 获取<p>实例Vport</p>
+ * @method void setVport(integer $Vport) 设置<p>实例Vport</p>
+ * @method integer getUsable() 获取<p>是否可以作为迁移对象，1-可以，0-不可以</p>
+ * @method void setUsable(integer $Usable) 设置<p>是否可以作为迁移对象，1-可以，0-不可以</p>
+ * @method string getHint() 获取<p>不可以作为迁移对象的原因</p>
+ * @method void setHint(string $Hint) 设置<p>不可以作为迁移对象的原因</p>
+ * @method string getStorageType() 获取<p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+ * @method void setStorageType(string $StorageType) 设置<p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
  */
 class MigrateDBItem extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string <p>实例名称</p>
      */
     public $InstanceName;
 
     /**
-     * @var string 实例Vip
+     * @var string <p>实例Vip</p>
      */
     public $Vip;
 
     /**
-     * @var integer 实例Vport
+     * @var integer <p>实例Vport</p>
      */
     public $Vport;
 
     /**
-     * @var integer 是否可以作为迁移对象，1-可以，0-不可以
+     * @var integer <p>是否可以作为迁移对象，1-可以，0-不可以</p>
      */
     public $Usable;
 
     /**
-     * @var string 不可以作为迁移对象的原因
+     * @var string <p>不可以作为迁移对象的原因</p>
      */
     public $Hint;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param string $Vip 实例Vip
-     * @param integer $Vport 实例Vport
-     * @param integer $Usable 是否可以作为迁移对象，1-可以，0-不可以
-     * @param string $Hint 不可以作为迁移对象的原因
+     * @var string <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+     */
+    public $StorageType;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $InstanceName <p>实例名称</p>
+     * @param string $Vip <p>实例Vip</p>
+     * @param integer $Vport <p>实例Vport</p>
+     * @param integer $Usable <p>是否可以作为迁移对象，1-可以，0-不可以</p>
+     * @param string $Hint <p>不可以作为迁移对象的原因</p>
+     * @param string $StorageType <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class MigrateDBItem extends AbstractModel
 
         if (array_key_exists("Hint",$param) and $param["Hint"] !== null) {
             $this->Hint = $param["Hint"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

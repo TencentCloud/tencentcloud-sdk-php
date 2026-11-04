@@ -20,20 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopMigrateJob请求参数结构体
  *
- * @method string getJobId() 获取数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
- * @method void setJobId(string $JobId) 设置数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+ * @method string getJobId() 获取<p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method void setJobId(string $JobId) 设置<p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+ * @method string getMigrateAdvancedObject() 获取<p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+ * @method void setMigrateAdvancedObject(string $MigrateAdvancedObject) 设置<p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
  */
 class StopMigrateJobRequest extends AbstractModel
 {
     /**
-     * @var string 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * @var string <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public $JobId;
 
     /**
-     * @param string $JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+     * @var string <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+     */
+    public $MigrateAdvancedObject;
+
+    /**
+     * @param string $JobId <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param string $MigrateAdvancedObject <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
      */
     function __construct()
     {
@@ -50,6 +56,10 @@ class StopMigrateJobRequest extends AbstractModel
         }
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("MigrateAdvancedObject",$param) and $param["MigrateAdvancedObject"] !== null) {
+            $this->MigrateAdvancedObject = $param["MigrateAdvancedObject"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEntrypoint() 获取<p>入口命令</p>
  * @method void setEntrypoint(string $Entrypoint) 设置<p>入口命令</p>
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
  * @method string getResourcePartitionId() 获取<p>资源分区ID</p>
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>资源分区ID</p>
  * @method string getQueue() 获取<p>队列名称</p>
@@ -46,10 +48,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数，JSON 字符串（透传到 Neutrino）</p>
  * @method string getGroupId() 获取<p>计算组ID；与 ClusterId 互斥。组成员展开为候选集群后由 neutrino 侧路由</p>
  * @method void setGroupId(string $GroupId) 设置<p>计算组ID；与 ClusterId 互斥。组成员展开为候选集群后由 neutrino 侧路由</p>
+ * @method string getDispatchStrategy() 获取<p>集群分派策略，本期仅支持 RANDOM；大小写不敏感</p>
+ * @method void setDispatchStrategy(string $DispatchStrategy) 设置<p>集群分派策略，本期仅支持 RANDOM；大小写不敏感</p>
  * @method integer getPriority() 获取<p>作业优先级（1-9，数字越大优先级越高）</p>
  * @method void setPriority(integer $Priority) 设置<p>作业优先级（1-9，数字越大优先级越高）</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+ * @method string getJobPackage() 获取<p>作业包 URL</p>
+ * @method void setJobPackage(string $JobPackage) 设置<p>作业包 URL</p>
+ * @method string getJobPackageName() 获取<p>作业包名称</p>
+ * @method void setJobPackageName(string $JobPackageName) 设置<p>作业包名称</p>
+ * @method string getJobPackageSource() 获取<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+ * @method void setJobPackageSource(string $JobPackageSource) 设置<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+ * @method string getJobSource() 获取<p>业务来源标识，只为调用上下文，不落盘 JobSpec</p>
+ * @method void setJobSource(string $JobSource) 设置<p>业务来源标识，只为调用上下文，不落盘 JobSpec</p>
+ * @method string getFlowId() 获取<p>外部工作流引擎业务键 flowId</p>
+ * @method void setFlowId(string $FlowId) 设置<p>外部工作流引擎业务键 flowId</p>
+ * @method string getExecutionId() 获取<p>外部工作流引擎业务键 executionId</p>
+ * @method void setExecutionId(string $ExecutionId) 设置<p>外部工作流引擎业务键 executionId</p>
  * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串</p>
  * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串</p>
  */
@@ -59,6 +75,11 @@ class SubmitRayJobRequest extends AbstractModel
      * @var string <p>入口命令</p>
      */
     public $Entrypoint;
+
+    /**
+     * @var string <p>集群ID</p>
+     */
+    public $ClusterId;
 
     /**
      * @var string <p>资源分区ID</p>
@@ -121,6 +142,11 @@ class SubmitRayJobRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string <p>集群分派策略，本期仅支持 RANDOM；大小写不敏感</p>
+     */
+    public $DispatchStrategy;
+
+    /**
      * @var integer <p>作业优先级（1-9，数字越大优先级越高）</p>
      */
     public $Priority;
@@ -131,12 +157,43 @@ class SubmitRayJobRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>作业包 URL</p>
+     */
+    public $JobPackage;
+
+    /**
+     * @var string <p>作业包名称</p>
+     */
+    public $JobPackageName;
+
+    /**
+     * @var string <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     */
+    public $JobPackageSource;
+
+    /**
+     * @var string <p>业务来源标识，只为调用上下文，不落盘 JobSpec</p>
+     */
+    public $JobSource;
+
+    /**
+     * @var string <p>外部工作流引擎业务键 flowId</p>
+     */
+    public $FlowId;
+
+    /**
+     * @var string <p>外部工作流引擎业务键 executionId</p>
+     */
+    public $ExecutionId;
+
+    /**
      * @var string <p>用户网络配置 JSON 字符串</p>
      */
     public $NetworkConfig;
 
     /**
      * @param string $Entrypoint <p>入口命令</p>
+     * @param string $ClusterId <p>集群ID</p>
      * @param string $ResourcePartitionId <p>资源分区ID</p>
      * @param string $Queue <p>队列名称</p>
      * @param string $JobName <p>任务名称</p>
@@ -149,8 +206,15 @@ class SubmitRayJobRequest extends AbstractModel
      * @param string $AutoscalerOptions <p>弹性伸缩配置</p>
      * @param string $AdvancedOptions <p>高级参数，JSON 字符串（透传到 Neutrino）</p>
      * @param string $GroupId <p>计算组ID；与 ClusterId 互斥。组成员展开为候选集群后由 neutrino 侧路由</p>
+     * @param string $DispatchStrategy <p>集群分派策略，本期仅支持 RANDOM；大小写不敏感</p>
      * @param integer $Priority <p>作业优先级（1-9，数字越大优先级越高）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+     * @param string $JobPackage <p>作业包 URL</p>
+     * @param string $JobPackageName <p>作业包名称</p>
+     * @param string $JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     * @param string $JobSource <p>业务来源标识，只为调用上下文，不落盘 JobSpec</p>
+     * @param string $FlowId <p>外部工作流引擎业务键 flowId</p>
+     * @param string $ExecutionId <p>外部工作流引擎业务键 executionId</p>
      * @param string $NetworkConfig <p>用户网络配置 JSON 字符串</p>
      */
     function __construct()
@@ -168,6 +232,10 @@ class SubmitRayJobRequest extends AbstractModel
         }
         if (array_key_exists("Entrypoint",$param) and $param["Entrypoint"] !== null) {
             $this->Entrypoint = $param["Entrypoint"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("ResourcePartitionId",$param) and $param["ResourcePartitionId"] !== null) {
@@ -218,6 +286,10 @@ class SubmitRayJobRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
+        if (array_key_exists("DispatchStrategy",$param) and $param["DispatchStrategy"] !== null) {
+            $this->DispatchStrategy = $param["DispatchStrategy"];
+        }
+
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
         }
@@ -229,6 +301,30 @@ class SubmitRayJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("JobPackage",$param) and $param["JobPackage"] !== null) {
+            $this->JobPackage = $param["JobPackage"];
+        }
+
+        if (array_key_exists("JobPackageName",$param) and $param["JobPackageName"] !== null) {
+            $this->JobPackageName = $param["JobPackageName"];
+        }
+
+        if (array_key_exists("JobPackageSource",$param) and $param["JobPackageSource"] !== null) {
+            $this->JobPackageSource = $param["JobPackageSource"];
+        }
+
+        if (array_key_exists("JobSource",$param) and $param["JobSource"] !== null) {
+            $this->JobSource = $param["JobSource"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("ExecutionId",$param) and $param["ExecutionId"] !== null) {
+            $this->ExecutionId = $param["ExecutionId"];
         }
 
         if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {

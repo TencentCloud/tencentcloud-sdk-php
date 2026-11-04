@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoBackupPolicy请求参数结构体
  *
- * @method array getPolicy() 获取定期备份的执行策略。
- * @method void setPolicy(array $Policy) 设置定期备份的执行策略。
- * @method boolean getIsPermanent() 获取通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
- * @method void setIsPermanent(boolean $IsPermanent) 设置通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
- * @method string getAutoBackupPolicyName() 获取定期备份策略的名称。
- * @method void setAutoBackupPolicyName(string $AutoBackupPolicyName) 设置定期备份策略的名称。
- * @method boolean getIsActivated() 获取是否激活定期备份策略。
- * @method void setIsActivated(boolean $IsActivated) 设置是否激活定期备份策略。
- * @method integer getRetentionDays() 获取通过定期备份策略创建出的备份保留时间。
- * @method void setRetentionDays(integer $RetentionDays) 设置通过定期备份策略创建出的备份保留时间。
- * @method integer getRetentionMonths() 获取该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
- * @method void setRetentionMonths(integer $RetentionMonths) 设置该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
- * @method integer getRetentionAmount() 获取通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
- * @method void setRetentionAmount(integer $RetentionAmount) 设置通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
- * @method string getStorageType() 获取备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
- * @method void setStorageType(string $StorageType) 设置备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
- * @method string getVaultId() 获取备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
- * @method void setVaultId(string $VaultId) 设置备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
- * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
- * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+ * @method array getPolicy() 获取<p>定期备份的执行策略。</p>
+ * @method void setPolicy(array $Policy) 设置<p>定期备份的执行策略。</p>
+ * @method boolean getIsPermanent() 获取<p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
+ * @method void setIsPermanent(boolean $IsPermanent) 设置<p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
+ * @method string getAutoBackupPolicyName() 获取<p>定期备份策略的名称。</p>
+ * @method void setAutoBackupPolicyName(string $AutoBackupPolicyName) 设置<p>定期备份策略的名称。</p>
+ * @method boolean getIsActivated() 获取<p>是否激活定期备份策略。</p>
+ * @method void setIsActivated(boolean $IsActivated) 设置<p>是否激活定期备份策略。</p>
+ * @method integer getRetentionDays() 获取<p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method void setRetentionDays(integer $RetentionDays) 设置<p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method integer getRetentionMonths() 获取<p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method void setRetentionMonths(integer $RetentionMonths) 设置<p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method integer getRetentionAmount() 获取<p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method void setRetentionAmount(integer $RetentionAmount) 设置<p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+ * @method string getStorageType() 获取<p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
+ * @method void setStorageType(string $StorageType) 设置<p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
+ * @method string getVaultId() 获取<p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
+ * @method void setVaultId(string $VaultId) 设置<p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
+ * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取<p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
+ * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置<p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
  */
 class CreateAutoBackupPolicyRequest extends AbstractModel
 {
     /**
-     * @var array 定期备份的执行策略。
+     * @var array <p>定期备份的执行策略。</p>
      */
     public $Policy;
 
     /**
-     * @var boolean 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
+     * @var boolean <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
      */
     public $IsPermanent;
 
     /**
-     * @var string 定期备份策略的名称。
+     * @var string <p>定期备份策略的名称。</p>
      */
     public $AutoBackupPolicyName;
 
     /**
-     * @var boolean 是否激活定期备份策略。
+     * @var boolean <p>是否激活定期备份策略。</p>
      */
     public $IsActivated;
 
     /**
-     * @var integer 通过定期备份策略创建出的备份保留时间。
+     * @var integer <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public $RetentionDays;
 
     /**
-     * @var integer 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
+     * @var integer <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public $RetentionMonths;
 
     /**
-     * @var integer 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
+     * @var integer <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public $RetentionAmount;
 
     /**
-     * @var string 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
+     * @var string <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
      */
     public $StorageType;
 
     /**
-     * @var string 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
+     * @var string <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
      */
     public $VaultId;
 
     /**
-     * @var AdvancedRetentionPolicy 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+     * @var AdvancedRetentionPolicy <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
      */
     public $AdvancedRetentionPolicy;
 
     /**
-     * @param array $Policy 定期备份的执行策略。
-     * @param boolean $IsPermanent 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
-     * @param string $AutoBackupPolicyName 定期备份策略的名称。
-     * @param boolean $IsActivated 是否激活定期备份策略。
-     * @param integer $RetentionDays 通过定期备份策略创建出的备份保留时间。
-     * @param integer $RetentionMonths 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
-     * @param integer $RetentionAmount 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
-     * @param string $StorageType 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
-     * @param string $VaultId 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
-     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+     * @param array $Policy <p>定期备份的执行策略。</p>
+     * @param boolean $IsPermanent <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
+     * @param string $AutoBackupPolicyName <p>定期备份策略的名称。</p>
+     * @param boolean $IsActivated <p>是否激活定期备份策略。</p>
+     * @param integer $RetentionDays <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param integer $RetentionMonths <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param integer $RetentionAmount <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param string $StorageType <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
+     * @param string $VaultId <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
+     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
      */
     function __construct()
     {

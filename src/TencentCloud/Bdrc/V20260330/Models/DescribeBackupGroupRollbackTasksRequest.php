@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupGroupRollbackTasks请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤
- * @method void setFilters(array $Filters) 设置过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤
- * @method integer getOffset() 获取偏移量，默认0
- * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method integer getLimit() 获取返回数量，默认20，最大1000
- * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大1000
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getOrderField() 获取排序字段
- * @method void setOrderField(string $OrderField) 设置排序字段
+ * @method array getFilters() 获取<p>过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤</p>
+ * @method integer getOffset() 获取<p>偏移量，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20，最大1000</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20，最大1000</p>
+ * @method string getOrder() 获取<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method string getOrderField() 获取<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
  */
 class DescribeBackupGroupRollbackTasksRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤
+     * @var array <p>过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤</p>
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认0
+     * @var integer <p>偏移量，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20，最大1000
+     * @var integer <p>返回数量，默认20，最大1000</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public $OrderField;
 
     /**
-     * @param array $Filters 过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤
-     * @param integer $Offset 偏移量，默认0
-     * @param integer $Limit 返回数量，默认20，最大1000
-     * @param string $Order 排序方式
-     * @param string $OrderField 排序字段
+     * @param array $Filters <p>过滤条件，支持恢复任务ID（task-id）、备份组ID（backup-group-id）、源实例ID（source-instance-id）、目标实例ID（target-instance-id）、恢复状态（status）和回滚类型（rollback-type）过滤</p>
+     * @param integer $Offset <p>偏移量，默认0</p>
+     * @param integer $Limit <p>返回数量，默认20，最大1000</p>
+     * @param string $Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param string $OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     function __construct()
     {

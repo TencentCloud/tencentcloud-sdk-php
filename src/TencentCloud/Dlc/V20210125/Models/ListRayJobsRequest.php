@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRayJobs请求参数结构体
  *
- * @method integer getPage() 获取当前页码（从1开始）
- * @method void setPage(integer $Page) 设置当前页码（从1开始）
- * @method integer getPageSize() 获取页数
- * @method void setPageSize(integer $PageSize) 设置页数
- * @method array getFilters() 获取过滤条件列表（列表的字段名称）
- * @method void setFilters(array $Filters) 设置过滤条件列表（列表的字段名称）
- * @method integer getStartTime() 获取提交时间起始过滤-时间戳（毫秒，可选）
- * @method void setStartTime(integer $StartTime) 设置提交时间起始过滤-时间戳（毫秒，可选）
- * @method integer getEndTime() 获取提交时间截止过滤-时间戳（毫秒，可选）
- * @method void setEndTime(integer $EndTime) 设置提交时间截止过滤-时间戳（毫秒，可选）
- * @method array getSortFields() 获取排序字段列表（列表字段）
- * @method void setSortFields(array $SortFields) 设置排序字段列表（列表字段）
+ * @method integer getPage() 获取<p>当前页码（从1开始）</p>
+ * @method void setPage(integer $Page) 设置<p>当前页码（从1开始）</p>
+ * @method integer getPageSize() 获取<p>页数</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>页数</p>
+ * @method array getFilters() 获取<p>过滤条件列表（列表的字段名称）</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件列表（列表的字段名称）</p>
+ * @method integer getStartTime() 获取<p>提交时间起始过滤-时间戳（毫秒，可选）</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>提交时间起始过滤-时间戳（毫秒，可选）</p>
+ * @method integer getEndTime() 获取<p>提交时间截止过滤-时间戳（毫秒，可选）</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>提交时间截止过滤-时间戳（毫秒，可选）</p>
+ * @method array getSortFields() 获取<p>排序字段列表（列表字段）</p>
+ * @method void setSortFields(array $SortFields) 设置<p>排序字段列表（列表字段）</p>
  */
 class ListRayJobsRequest extends AbstractModel
 {
     /**
-     * @var integer 当前页码（从1开始）
+     * @var integer <p>当前页码（从1开始）</p>
      */
     public $Page;
 
     /**
-     * @var integer 页数
+     * @var integer <p>页数</p>
      */
     public $PageSize;
 
     /**
-     * @var array 过滤条件列表（列表的字段名称）
+     * @var array <p>过滤条件列表（列表的字段名称）</p>
      */
     public $Filters;
 
     /**
-     * @var integer 提交时间起始过滤-时间戳（毫秒，可选）
+     * @var integer <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 提交时间截止过滤-时间戳（毫秒，可选）
+     * @var integer <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
      */
     public $EndTime;
 
     /**
-     * @var array 排序字段列表（列表字段）
+     * @var array <p>排序字段列表（列表字段）</p>
      */
     public $SortFields;
 
     /**
-     * @param integer $Page 当前页码（从1开始）
-     * @param integer $PageSize 页数
-     * @param array $Filters 过滤条件列表（列表的字段名称）
-     * @param integer $StartTime 提交时间起始过滤-时间戳（毫秒，可选）
-     * @param integer $EndTime 提交时间截止过滤-时间戳（毫秒，可选）
-     * @param array $SortFields 排序字段列表（列表字段）
+     * @param integer $Page <p>当前页码（从1开始）</p>
+     * @param integer $PageSize <p>页数</p>
+     * @param array $Filters <p>过滤条件列表（列表的字段名称）</p>
+     * @param integer $StartTime <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
+     * @param integer $EndTime <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
+     * @param array $SortFields <p>排序字段列表（列表字段）</p>
      */
     function __construct()
     {

@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InstanceBackupOverview getInstanceBackupOverview() 获取<p>整机备份（CVM 备份组）概览数据</p>
  * @method void setInstanceBackupOverview(InstanceBackupOverview $InstanceBackupOverview) 设置<p>整机备份（CVM 备份组）概览数据</p>
- * @method FileBackupOverview getFileBackupOverview() 获取<p>文件备份概览数据</p>
- * @method void setFileBackupOverview(FileBackupOverview $FileBackupOverview) 设置<p>文件备份概览数据</p>
+ * @method FileBackupOverview getFileBackupOverview() 获取<p>CVM文件备份概览数据</p>
+ * @method void setFileBackupOverview(FileBackupOverview $FileBackupOverview) 设置<p>CVM文件备份概览数据</p>
  * @method BackupPolicyOverview getBackupPolicyOverview() 获取<p>备份策略概览</p>
  * @method void setBackupPolicyOverview(BackupPolicyOverview $BackupPolicyOverview) 设置<p>备份策略概览</p>
  * @method BackupVaultOverview getBackupVaultOverview() 获取<p>备份库概览</p>
  * @method void setBackupVaultOverview(BackupVaultOverview $BackupVaultOverview) 设置<p>备份库概览</p>
  * @method ProtectedResourceOverview getProtectedResourceOverview() 获取<p>受保护资源概览</p>
  * @method void setProtectedResourceOverview(ProtectedResourceOverview $ProtectedResourceOverview) 设置<p>受保护资源概览</p>
+ * @method FileBackupOverview getCFSAgentBackupOverview() 获取<p>CFS文件备份概览数据</p>
+ * @method void setCFSAgentBackupOverview(FileBackupOverview $CFSAgentBackupOverview) 设置<p>CFS文件备份概览数据</p>
+ * @method FileBackupOverview getCOSAgentBackupOverview() 获取<p>COS备份概览数据</p>
+ * @method void setCOSAgentBackupOverview(FileBackupOverview $COSAgentBackupOverview) 设置<p>COS备份概览数据</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -41,7 +45,7 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
     public $InstanceBackupOverview;
 
     /**
-     * @var FileBackupOverview <p>文件备份概览数据</p>
+     * @var FileBackupOverview <p>CVM文件备份概览数据</p>
      */
     public $FileBackupOverview;
 
@@ -61,16 +65,28 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
     public $ProtectedResourceOverview;
 
     /**
+     * @var FileBackupOverview <p>CFS文件备份概览数据</p>
+     */
+    public $CFSAgentBackupOverview;
+
+    /**
+     * @var FileBackupOverview <p>COS备份概览数据</p>
+     */
+    public $COSAgentBackupOverview;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param InstanceBackupOverview $InstanceBackupOverview <p>整机备份（CVM 备份组）概览数据</p>
-     * @param FileBackupOverview $FileBackupOverview <p>文件备份概览数据</p>
+     * @param FileBackupOverview $FileBackupOverview <p>CVM文件备份概览数据</p>
      * @param BackupPolicyOverview $BackupPolicyOverview <p>备份策略概览</p>
      * @param BackupVaultOverview $BackupVaultOverview <p>备份库概览</p>
      * @param ProtectedResourceOverview $ProtectedResourceOverview <p>受保护资源概览</p>
+     * @param FileBackupOverview $CFSAgentBackupOverview <p>CFS文件备份概览数据</p>
+     * @param FileBackupOverview $COSAgentBackupOverview <p>COS备份概览数据</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +125,16 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
         if (array_key_exists("ProtectedResourceOverview",$param) and $param["ProtectedResourceOverview"] !== null) {
             $this->ProtectedResourceOverview = new ProtectedResourceOverview();
             $this->ProtectedResourceOverview->deserialize($param["ProtectedResourceOverview"]);
+        }
+
+        if (array_key_exists("CFSAgentBackupOverview",$param) and $param["CFSAgentBackupOverview"] !== null) {
+            $this->CFSAgentBackupOverview = new FileBackupOverview();
+            $this->CFSAgentBackupOverview->deserialize($param["CFSAgentBackupOverview"]);
+        }
+
+        if (array_key_exists("COSAgentBackupOverview",$param) and $param["COSAgentBackupOverview"] !== null) {
+            $this->COSAgentBackupOverview = new FileBackupOverview();
+            $this->COSAgentBackupOverview->deserialize($param["COSAgentBackupOverview"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,84 +20,100 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFileBackupPlan请求参数结构体
  *
- * @method string getPlanId() 获取备份计划ID
- * @method void setPlanId(string $PlanId) 设置备份计划ID
- * @method string getPolicyId() 获取备份策略ID
- * @method void setPolicyId(string $PolicyId) 设置备份策略ID
- * @method string getPlanName() 获取计划名称
- * @method void setPlanName(string $PlanName) 设置计划名称
- * @method array getBackupPaths() 获取备份路径列表，1~20 个
- * @method void setBackupPaths(array $BackupPaths) 设置备份路径列表，1~20 个
- * @method array getIncludeFileTypes() 获取包含文件类型，0~20 个
- * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置包含文件类型，0~20 个
- * @method array getExcludePatterns() 获取排除文件路径列表，0~20 个
- * @method void setExcludePatterns(array $ExcludePatterns) 设置排除文件路径列表，0~20 个
- * @method boolean getExcludeSystemDirectories() 获取是否排除系统目录
- * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置是否排除系统目录
- * @method string getBackupStorageId() 获取备份库ID
- * @method void setBackupStorageId(string $BackupStorageId) 设置备份库ID
- * @method string getStatus() 获取计划状态，可选值：normal（正常）、paused（暂停）
- * @method void setStatus(string $Status) 设置计划状态，可选值：normal（正常）、paused（暂停）
+ * @method string getPlanId() 获取<p>备份计划ID，此参数必填。</p>
+ * @method void setPlanId(string $PlanId) 设置<p>备份计划ID，此参数必填。</p>
+ * @method string getPolicyId() 获取<p>备份策略ID</p>
+ * @method void setPolicyId(string $PolicyId) 设置<p>备份策略ID</p>
+ * @method string getPlanName() 获取<p>计划名称</p>
+ * @method void setPlanName(string $PlanName) 设置<p>计划名称</p>
+ * @method array getBackupPaths() 获取<p>备份路径列表，1~20 个</p>
+ * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径列表，1~20 个</p>
+ * @method array getIncludeFileTypes() 获取<p>包含文件类型，0~20 个</p>
+ * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置<p>包含文件类型，0~20 个</p>
+ * @method array getExcludePatterns() 获取<p>排除文件路径列表，0~20 个</p>
+ * @method void setExcludePatterns(array $ExcludePatterns) 设置<p>排除文件路径列表，0~20 个</p>
+ * @method boolean getExcludeSystemDirectories() 获取<p>是否排除系统目录</p>
+ * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置<p>是否排除系统目录</p>
+ * @method string getBackupStorageId() 获取<p>备份库ID</p>
+ * @method void setBackupStorageId(string $BackupStorageId) 设置<p>备份库ID</p>
+ * @method string getStatus() 获取<p>计划状态，可选值：normal（正常）、paused（暂停）</p>
+ * @method void setStatus(string $Status) 设置<p>计划状态，可选值：normal（正常）、paused（暂停）</p>
+ * @method boolean getEnableObjectAcl() 获取<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method void setEnableObjectAcl(boolean $EnableObjectAcl) 设置<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method boolean getEnableObjectTags() 获取<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method void setEnableObjectTags(boolean $EnableObjectTags) 设置<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
  */
 class ModifyFileBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string 备份计划ID
+     * @var string <p>备份计划ID，此参数必填。</p>
      */
     public $PlanId;
 
     /**
-     * @var string 备份策略ID
+     * @var string <p>备份策略ID</p>
      * @deprecated
      */
     public $PolicyId;
 
     /**
-     * @var string 计划名称
+     * @var string <p>计划名称</p>
      */
     public $PlanName;
 
     /**
-     * @var array 备份路径列表，1~20 个
+     * @var array <p>备份路径列表，1~20 个</p>
      */
     public $BackupPaths;
 
     /**
-     * @var array 包含文件类型，0~20 个
+     * @var array <p>包含文件类型，0~20 个</p>
      */
     public $IncludeFileTypes;
 
     /**
-     * @var array 排除文件路径列表，0~20 个
+     * @var array <p>排除文件路径列表，0~20 个</p>
      */
     public $ExcludePatterns;
 
     /**
-     * @var boolean 是否排除系统目录
+     * @var boolean <p>是否排除系统目录</p>
      */
     public $ExcludeSystemDirectories;
 
     /**
-     * @var string 备份库ID
+     * @var string <p>备份库ID</p>
      * @deprecated
      */
     public $BackupStorageId;
 
     /**
-     * @var string 计划状态，可选值：normal（正常）、paused（暂停）
+     * @var string <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
      */
     public $Status;
 
     /**
-     * @param string $PlanId 备份计划ID
-     * @param string $PolicyId 备份策略ID
-     * @param string $PlanName 计划名称
-     * @param array $BackupPaths 备份路径列表，1~20 个
-     * @param array $IncludeFileTypes 包含文件类型，0~20 个
-     * @param array $ExcludePatterns 排除文件路径列表，0~20 个
-     * @param boolean $ExcludeSystemDirectories 是否排除系统目录
-     * @param string $BackupStorageId 备份库ID
-     * @param string $Status 计划状态，可选值：normal（正常）、paused（暂停）
+     * @var boolean <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public $EnableObjectAcl;
+
+    /**
+     * @var boolean <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public $EnableObjectTags;
+
+    /**
+     * @param string $PlanId <p>备份计划ID，此参数必填。</p>
+     * @param string $PolicyId <p>备份策略ID</p>
+     * @param string $PlanName <p>计划名称</p>
+     * @param array $BackupPaths <p>备份路径列表，1~20 个</p>
+     * @param array $IncludeFileTypes <p>包含文件类型，0~20 个</p>
+     * @param array $ExcludePatterns <p>排除文件路径列表，0~20 个</p>
+     * @param boolean $ExcludeSystemDirectories <p>是否排除系统目录</p>
+     * @param string $BackupStorageId <p>备份库ID</p>
+     * @param string $Status <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
+     * @param boolean $EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param boolean $EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     function __construct()
     {
@@ -146,6 +162,14 @@ class ModifyFileBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EnableObjectAcl",$param) and $param["EnableObjectAcl"] !== null) {
+            $this->EnableObjectAcl = $param["EnableObjectAcl"];
+        }
+
+        if (array_key_exists("EnableObjectTags",$param) and $param["EnableObjectTags"] !== null) {
+            $this->EnableObjectTags = $param["EnableObjectTags"];
         }
     }
 }

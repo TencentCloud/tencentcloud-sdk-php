@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDispatchStrategy() 获取<p>集群分派策略（本期仅支持 RANDOM；NULL 时退化为依赖 ClusterGroup 配置兜底）</p>
  * @method void setDispatchStrategy(string $DispatchStrategy) 设置<p>集群分派策略（本期仅支持 RANDOM；NULL 时退化为依赖 ClusterGroup 配置兜底）</p>
+ * @method string getSubmissionTarget() 获取<p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+ * @method void setSubmissionTarget(string $SubmissionTarget) 设置<p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
  * @method string getJobPackage() 获取<p>作业包URL</p>
  * @method void setJobPackage(string $JobPackage) 设置<p>作业包URL</p>
  * @method string getJobPackageName() 获取<p>作业包名称</p>
@@ -88,8 +90,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数，JSON 字符串（内容为 Key-Value 对象）</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+ * @method string getGroupName() 获取<p>计算组名称</p>
+ * @method void setGroupName(string $GroupName) 设置<p>计算组名称</p>
+ * @method string getClusterName() 获取<p>集群名称</p>
+ * @method void setClusterName(string $ClusterName) 设置<p>集群名称</p>
  * @method string getJobPackageSource() 获取<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
  * @method void setJobPackageSource(string $JobPackageSource) 设置<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+ * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -193,6 +201,11 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
     public $DispatchStrategy;
 
     /**
+     * @var string <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+     */
+    public $SubmissionTarget;
+
+    /**
      * @var string <p>作业包URL</p>
      */
     public $JobPackage;
@@ -254,9 +267,24 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>计算组名称</p>
+     */
+    public $GroupName;
+
+    /**
+     * @var string <p>集群名称</p>
+     */
+    public $ClusterName;
+
+    /**
      * @var string <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
      */
     public $JobPackageSource;
+
+    /**
+     * @var string <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -285,6 +313,7 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
      * @param string $ClusterId <p>默认集群 ID（与 GroupId 互斥）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DispatchStrategy <p>集群分派策略（本期仅支持 RANDOM；NULL 时退化为依赖 ClusterGroup 配置兜底）</p>
+     * @param string $SubmissionTarget <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
      * @param string $JobPackage <p>作业包URL</p>
      * @param string $JobPackageName <p>作业包名称</p>
      * @param integer $Priority <p>作业优先级（1-9，数字越大优先级越高）</p>
@@ -298,7 +327,10 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
      * @param boolean $HasRunningJobs <p>是否有运行中的作业实例</p>
      * @param string $AdvancedOptions <p>高级参数，JSON 字符串（内容为 Key-Value 对象）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
+     * @param string $GroupName <p>计算组名称</p>
+     * @param string $ClusterName <p>集群名称</p>
      * @param string $JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
+     * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -390,6 +422,10 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
             $this->DispatchStrategy = $param["DispatchStrategy"];
         }
 
+        if (array_key_exists("SubmissionTarget",$param) and $param["SubmissionTarget"] !== null) {
+            $this->SubmissionTarget = $param["SubmissionTarget"];
+        }
+
         if (array_key_exists("JobPackage",$param) and $param["JobPackage"] !== null) {
             $this->JobPackage = $param["JobPackage"];
         }
@@ -443,8 +479,20 @@ class UpdateJobSpecPriorityResponse extends AbstractModel
             }
         }
 
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
         if (array_key_exists("JobPackageSource",$param) and $param["JobPackageSource"] !== null) {
             $this->JobPackageSource = $param["JobPackageSource"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

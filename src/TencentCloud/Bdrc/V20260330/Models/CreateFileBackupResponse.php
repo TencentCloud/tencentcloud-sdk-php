@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileBackup返回参数结构体
  *
- * @method string getBackupId() 获取备份Id
- * @method void setBackupId(string $BackupId) 设置备份Id
+ * @method string getBackupId() 获取<p>备份Id</p>
+ * @method void setBackupId(string $BackupId) 设置<p>备份Id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFileBackupResponse extends AbstractModel
 {
     /**
-     * @var string 备份Id
+     * @var string <p>备份Id</p>
      */
     public $BackupId;
 
@@ -38,7 +38,7 @@ class CreateFileBackupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BackupId 备份Id
+     * @param string $BackupId <p>备份Id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

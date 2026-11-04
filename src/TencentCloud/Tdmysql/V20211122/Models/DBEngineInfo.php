@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSupportParamTemplate(boolean $IsSupportParamTemplate) 设置<p>是否支持参数模板</p>
  * @method boolean getIsSupportServerless() 获取<p>是否支持Serverless模式</p>
  * @method void setIsSupportServerless(boolean $IsSupportServerless) 设置<p>是否支持Serverless模式</p>
+ * @method boolean getIsSupportTDE() 获取<p>是否支持透明加密</p>
+ * @method void setIsSupportTDE(boolean $IsSupportTDE) 设置<p>是否支持透明加密</p>
+ * @method boolean getIsSupportPasswordComplexity() 获取<p>是否支持密码复杂度</p>
+ * @method void setIsSupportPasswordComplexity(boolean $IsSupportPasswordComplexity) 设置<p>是否支持密码复杂度</p>
  */
 class DBEngineInfo extends AbstractModel
 {
@@ -92,6 +96,16 @@ class DBEngineInfo extends AbstractModel
     public $IsSupportServerless;
 
     /**
+     * @var boolean <p>是否支持透明加密</p>
+     */
+    public $IsSupportTDE;
+
+    /**
+     * @var boolean <p>是否支持密码复杂度</p>
+     */
+    public $IsSupportPasswordComplexity;
+
+    /**
      * @param string $Type <p>引擎类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version <p>引擎版本</p>
@@ -104,6 +118,8 @@ class DBEngineInfo extends AbstractModel
      * @param array $SQLMode <p>支持的兼容的模式，以,分隔</p>
      * @param boolean $IsSupportParamTemplate <p>是否支持参数模板</p>
      * @param boolean $IsSupportServerless <p>是否支持Serverless模式</p>
+     * @param boolean $IsSupportTDE <p>是否支持透明加密</p>
+     * @param boolean $IsSupportPasswordComplexity <p>是否支持密码复杂度</p>
      */
     function __construct()
     {
@@ -148,6 +164,14 @@ class DBEngineInfo extends AbstractModel
 
         if (array_key_exists("IsSupportServerless",$param) and $param["IsSupportServerless"] !== null) {
             $this->IsSupportServerless = $param["IsSupportServerless"];
+        }
+
+        if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
+            $this->IsSupportTDE = $param["IsSupportTDE"];
+        }
+
+        if (array_key_exists("IsSupportPasswordComplexity",$param) and $param["IsSupportPasswordComplexity"] !== null) {
+            $this->IsSupportPasswordComplexity = $param["IsSupportPasswordComplexity"];
         }
     }
 }

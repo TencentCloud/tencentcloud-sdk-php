@@ -20,182 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 定期备份策略的详细信息
  *
- * @method boolean getIsActivated() 获取定期备份策略是否激活。
- * @method void setIsActivated(boolean $IsActivated) 设置定期备份策略是否激活。
- * @method boolean getIsPermanent() 获取使用该定期备份策略创建出来的备份是否永久保留。
+ * @method boolean getIsActivated() 获取<p>定期备份策略是否激活。</p>
+ * @method void setIsActivated(boolean $IsActivated) 设置<p>定期备份策略是否激活。</p>
+ * @method boolean getIsPermanent() 获取<p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsPermanent(boolean $IsPermanent) 设置使用该定期备份策略创建出来的备份是否永久保留。
+ * @method void setIsPermanent(boolean $IsPermanent) 设置<p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNextTriggerTime() 获取使用该定期备份策略创建出来的备份是否永久保留。
- * @method void setNextTriggerTime(string $NextTriggerTime) 设置使用该定期备份策略创建出来的备份是否永久保留。
- * @method string getAutoBackupPolicyState() 获取NORMAL
- * @method void setAutoBackupPolicyState(string $AutoBackupPolicyState) 设置NORMAL
- * @method string getAutoBackupPolicyName() 获取备份策略的名称。
- * @method void setAutoBackupPolicyName(string $AutoBackupPolicyName) 设置备份策略的名称。
- * @method array getPolicy() 获取定期备份的执行策略。
- * @method void setPolicy(array $Policy) 设置定期备份的执行策略。
- * @method string getAutoBackupPolicyId() 获取备份策略ID。
- * @method void setAutoBackupPolicyId(string $AutoBackupPolicyId) 设置备份策略ID。
- * @method string getCreateTime() 获取备份策略的创建时间。
- * @method void setCreateTime(string $CreateTime) 设置备份策略的创建时间。
- * @method integer getRetentionDays() 获取使用该定期备份策略创建出来的备份保留天数。
- * @method void setRetentionDays(integer $RetentionDays) 设置使用该定期备份策略创建出来的备份保留天数。
- * @method integer getAppId() 获取用户AppId。
- * @method void setAppId(integer $AppId) 设置用户AppId。
- * @method array getInstanceIdSet() 获取定期备份策略绑定的实例ID列表。
- * @method void setInstanceIdSet(array $InstanceIdSet) 设置定期备份策略绑定的实例ID列表。
- * @method integer getRetentionMonths() 获取该定期快照创建的快照最大保留月数
- * @method void setRetentionMonths(integer $RetentionMonths) 设置该定期快照创建的快照最大保留月数
- * @method integer getRetentionAmount() 获取该定期快照创建的快照最大保留数量
- * @method void setRetentionAmount(integer $RetentionAmount) 设置该定期快照创建的快照最大保留数量
- * @method string getAccountName() 获取创建人。
+ * @method string getNextTriggerTime() 获取<p>使用该定期备份策略创建出来的备份是否永久保留。</p>
+ * @method void setNextTriggerTime(string $NextTriggerTime) 设置<p>使用该定期备份策略创建出来的备份是否永久保留。</p>
+ * @method string getAutoBackupPolicyState() 获取<p>NORMAL</p>
+ * @method void setAutoBackupPolicyState(string $AutoBackupPolicyState) 设置<p>NORMAL</p>
+ * @method string getAutoBackupPolicyName() 获取<p>备份策略的名称。</p>
+ * @method void setAutoBackupPolicyName(string $AutoBackupPolicyName) 设置<p>备份策略的名称。</p>
+ * @method array getPolicy() 获取<p>定期备份的执行策略。</p>
+ * @method void setPolicy(array $Policy) 设置<p>定期备份的执行策略。</p>
+ * @method string getAutoBackupPolicyId() 获取<p>备份策略ID。</p>
+ * @method void setAutoBackupPolicyId(string $AutoBackupPolicyId) 设置<p>备份策略ID。</p>
+ * @method string getCreateTime() 获取<p>备份策略的创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>备份策略的创建时间。</p>
+ * @method integer getRetentionDays() 获取<p>使用该定期备份策略创建出来的备份保留天数。</p>
+ * @method void setRetentionDays(integer $RetentionDays) 设置<p>使用该定期备份策略创建出来的备份保留天数。</p>
+ * @method integer getAppId() 获取<p>用户AppId。</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppId。</p>
+ * @method array getInstanceIdSet() 获取<p>定期备份策略绑定的实例ID列表。</p>
+ * @method void setInstanceIdSet(array $InstanceIdSet) 设置<p>定期备份策略绑定的实例ID列表。</p>
+ * @method integer getRetentionMonths() 获取<p>使用该定期备份策略创建的备份最大保留月数</p>
+ * @method void setRetentionMonths(integer $RetentionMonths) 设置<p>使用该定期备份策略创建的备份最大保留月数</p>
+ * @method integer getRetentionAmount() 获取<p>使用该定期备份策略创建的备份最大保留数量</p>
+ * @method void setRetentionAmount(integer $RetentionAmount) 设置<p>使用该定期备份策略创建的备份最大保留数量</p>
+ * @method string getAccountName() 获取<p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountName(string $AccountName) 设置创建人。
+ * @method void setAccountName(string $AccountName) 设置<p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountUin() 获取主账号uin。
+ * @method string getAccountUin() 获取<p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountUin(string $AccountUin) 设置主账号uin。
+ * @method void setAccountUin(string $AccountUin) 设置<p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubAccountUin() 获取子账号uin。
+ * @method string getSubAccountUin() 获取<p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubAccountUin(string $SubAccountUin) 设置子账号uin。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStorageType() 获取策略存储类型
- * @method void setStorageType(string $StorageType) 设置策略存储类型
- * @method string getVaultId() 获取备份库ID
+ * @method string getStorageType() 获取<p>策略存储类型</p>
+ * @method void setStorageType(string $StorageType) 设置<p>策略存储类型</p>
+ * @method string getVaultId() 获取<p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVaultId(string $VaultId) 设置备份库ID
+ * @method void setVaultId(string $VaultId) 设置<p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取高级保留策略
- * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置高级保留策略
+ * @method AdvancedRetentionPolicy getAdvancedRetentionPolicy() 获取<p>高级保留策略</p>
+ * @method void setAdvancedRetentionPolicy(AdvancedRetentionPolicy $AdvancedRetentionPolicy) 设置<p>高级保留策略</p>
+ * @method array getBackupResourceInfos() 获取<p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupResourceInfos(array $BackupResourceInfos) 设置<p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoBackupPolicy extends AbstractModel
 {
     /**
-     * @var boolean 定期备份策略是否激活。
+     * @var boolean <p>定期备份策略是否激活。</p>
      */
     public $IsActivated;
 
     /**
-     * @var boolean 使用该定期备份策略创建出来的备份是否永久保留。
+     * @var boolean <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPermanent;
 
     /**
-     * @var string 使用该定期备份策略创建出来的备份是否永久保留。
+     * @var string <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
      */
     public $NextTriggerTime;
 
     /**
-     * @var string NORMAL
+     * @var string <p>NORMAL</p>
      */
     public $AutoBackupPolicyState;
 
     /**
-     * @var string 备份策略的名称。
+     * @var string <p>备份策略的名称。</p>
      */
     public $AutoBackupPolicyName;
 
     /**
-     * @var array 定期备份的执行策略。
+     * @var array <p>定期备份的执行策略。</p>
      */
     public $Policy;
 
     /**
-     * @var string 备份策略ID。
+     * @var string <p>备份策略ID。</p>
      */
     public $AutoBackupPolicyId;
 
     /**
-     * @var string 备份策略的创建时间。
+     * @var string <p>备份策略的创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 使用该定期备份策略创建出来的备份保留天数。
+     * @var integer <p>使用该定期备份策略创建出来的备份保留天数。</p>
      */
     public $RetentionDays;
 
     /**
-     * @var integer 用户AppId。
+     * @var integer <p>用户AppId。</p>
      */
     public $AppId;
 
     /**
-     * @var array 定期备份策略绑定的实例ID列表。
+     * @var array <p>定期备份策略绑定的实例ID列表。</p>
      */
     public $InstanceIdSet;
 
     /**
-     * @var integer 该定期快照创建的快照最大保留月数
+     * @var integer <p>使用该定期备份策略创建的备份最大保留月数</p>
      */
     public $RetentionMonths;
 
     /**
-     * @var integer 该定期快照创建的快照最大保留数量
+     * @var integer <p>使用该定期备份策略创建的备份最大保留数量</p>
      */
     public $RetentionAmount;
 
     /**
-     * @var string 创建人。
+     * @var string <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
 
     /**
-     * @var string 主账号uin。
+     * @var string <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountUin;
 
     /**
-     * @var string 子账号uin。
+     * @var string <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
-     * @var string 策略存储类型
+     * @var string <p>策略存储类型</p>
      */
     public $StorageType;
 
     /**
-     * @var string 备份库ID
+     * @var string <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VaultId;
 
     /**
-     * @var AdvancedRetentionPolicy 高级保留策略
+     * @var AdvancedRetentionPolicy <p>高级保留策略</p>
      */
     public $AdvancedRetentionPolicy;
 
     /**
-     * @param boolean $IsActivated 定期备份策略是否激活。
-     * @param boolean $IsPermanent 使用该定期备份策略创建出来的备份是否永久保留。
+     * @var array <p>备份资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NextTriggerTime 使用该定期备份策略创建出来的备份是否永久保留。
-     * @param string $AutoBackupPolicyState NORMAL
-     * @param string $AutoBackupPolicyName 备份策略的名称。
-     * @param array $Policy 定期备份的执行策略。
-     * @param string $AutoBackupPolicyId 备份策略ID。
-     * @param string $CreateTime 备份策略的创建时间。
-     * @param integer $RetentionDays 使用该定期备份策略创建出来的备份保留天数。
-     * @param integer $AppId 用户AppId。
-     * @param array $InstanceIdSet 定期备份策略绑定的实例ID列表。
-     * @param integer $RetentionMonths 该定期快照创建的快照最大保留月数
-     * @param integer $RetentionAmount 该定期快照创建的快照最大保留数量
-     * @param string $AccountName 创建人。
+     */
+    public $BackupResourceInfos;
+
+    /**
+     * @param boolean $IsActivated <p>定期备份策略是否激活。</p>
+     * @param boolean $IsPermanent <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountUin 主账号uin。
+     * @param string $NextTriggerTime <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
+     * @param string $AutoBackupPolicyState <p>NORMAL</p>
+     * @param string $AutoBackupPolicyName <p>备份策略的名称。</p>
+     * @param array $Policy <p>定期备份的执行策略。</p>
+     * @param string $AutoBackupPolicyId <p>备份策略ID。</p>
+     * @param string $CreateTime <p>备份策略的创建时间。</p>
+     * @param integer $RetentionDays <p>使用该定期备份策略创建出来的备份保留天数。</p>
+     * @param integer $AppId <p>用户AppId。</p>
+     * @param array $InstanceIdSet <p>定期备份策略绑定的实例ID列表。</p>
+     * @param integer $RetentionMonths <p>使用该定期备份策略创建的备份最大保留月数</p>
+     * @param integer $RetentionAmount <p>使用该定期备份策略创建的备份最大保留数量</p>
+     * @param string $AccountName <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubAccountUin 子账号uin。
+     * @param string $AccountUin <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StorageType 策略存储类型
-     * @param string $VaultId 备份库ID
+     * @param string $SubAccountUin <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy 高级保留策略
+     * @param string $StorageType <p>策略存储类型</p>
+     * @param string $VaultId <p>备份库ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedRetentionPolicy $AdvancedRetentionPolicy <p>高级保留策略</p>
+     * @param array $BackupResourceInfos <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -290,6 +302,15 @@ class AutoBackupPolicy extends AbstractModel
         if (array_key_exists("AdvancedRetentionPolicy",$param) and $param["AdvancedRetentionPolicy"] !== null) {
             $this->AdvancedRetentionPolicy = new AdvancedRetentionPolicy();
             $this->AdvancedRetentionPolicy->deserialize($param["AdvancedRetentionPolicy"]);
+        }
+
+        if (array_key_exists("BackupResourceInfos",$param) and $param["BackupResourceInfos"] !== null) {
+            $this->BackupResourceInfos = [];
+            foreach ($param["BackupResourceInfos"] as $key => $value){
+                $obj = new BackupResourceInfo();
+                $obj->deserialize($value);
+                array_push($this->BackupResourceInfos, $obj);
+            }
         }
     }
 }

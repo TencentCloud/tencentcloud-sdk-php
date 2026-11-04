@@ -38,6 +38,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\CreateAndroidInstanceAcceleratorTokenResponse CreateAndroidInstanceAcceleratorToken(Models\CreateAndroidInstanceAcceleratorTokenRequest $req) 创建安卓实例加速Token
  * @method Models\CreateAndroidInstanceImageResponse CreateAndroidInstanceImage(Models\CreateAndroidInstanceImageRequest $req) 使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
  * @method Models\CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabel(Models\CreateAndroidInstanceLabelRequest $req) 创建安卓实例标签
+ * @method Models\CreateAndroidInstanceMCPTokenResponse CreateAndroidInstanceMCPToken(Models\CreateAndroidInstanceMCPTokenRequest $req) 创建安卓实例MCP token
  * @method Models\CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSH(Models\CreateAndroidInstanceSSHRequest $req) 创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
  * @method Models\CreateAndroidInstanceWebShellResponse CreateAndroidInstanceWebShell(Models\CreateAndroidInstanceWebShellRequest $req) 创建安卓实例 WebShell 连接信息，返回的 ConnectUrl 可通过浏览器直接打开访问，链接有效期 1 小时，链接打开后可持续使用。
  * @method Models\CreateAndroidInstancesResponse CreateAndroidInstances(Models\CreateAndroidInstancesRequest $req) 创建安卓实例
@@ -51,11 +52,13 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DeleteAndroidInstanceBackupsResponse DeleteAndroidInstanceBackups(Models\DeleteAndroidInstanceBackupsRequest $req) 批量删除安卓实例备份
  * @method Models\DeleteAndroidInstanceImagesResponse DeleteAndroidInstanceImages(Models\DeleteAndroidInstanceImagesRequest $req) 删除安卓实例镜像
  * @method Models\DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabel(Models\DeleteAndroidInstanceLabelRequest $req) 删除安卓实例标签
+ * @method Models\DeleteAndroidInstanceMCPTokenResponse DeleteAndroidInstanceMCPToken(Models\DeleteAndroidInstanceMCPTokenRequest $req) 删除安卓实例 MCP token
  * @method Models\DescribeAndroidAppsResponse DescribeAndroidApps(Models\DescribeAndroidAppsRequest $req) 查询安卓应用信息
  * @method Models\DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceApps(Models\DescribeAndroidInstanceAppsRequest $req) 查询安卓实例应用
  * @method Models\DescribeAndroidInstanceBackupsResponse DescribeAndroidInstanceBackups(Models\DescribeAndroidInstanceBackupsRequest $req) 查询安卓实例备份列表
  * @method Models\DescribeAndroidInstanceImagesResponse DescribeAndroidInstanceImages(Models\DescribeAndroidInstanceImagesRequest $req) 查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
  * @method Models\DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabels(Models\DescribeAndroidInstanceLabelsRequest $req) 查询安卓实例标签
+ * @method Models\DescribeAndroidInstanceMCPTokensResponse DescribeAndroidInstanceMCPTokens(Models\DescribeAndroidInstanceMCPTokensRequest $req) 查询安卓实例MCP Token
  * @method Models\DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatus(Models\DescribeAndroidInstanceTasksStatusRequest $req) 查询安卓实例任务状态
  * @method Models\DescribeAndroidInstancesResponse DescribeAndroidInstances(Models\DescribeAndroidInstancesRequest $req) 查询安卓实例
  * @method Models\DescribeAndroidInstancesAppBlacklistResponse DescribeAndroidInstancesAppBlacklist(Models\DescribeAndroidInstancesAppBlacklistRequest $req) 查询安卓实例黑名单
@@ -90,6 +93,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
 - 当前每 15 分钟只能重启一次
 - 一个宿主机可能有多个云手机实例，重启宿主机会影响运行在上面的所有实例，请确保该宿主机上的所有云手机实例未投入业务使用
  * @method Models\RebootAndroidInstancesResponse RebootAndroidInstances(Models\RebootAndroidInstancesRequest $req) 重启安卓实例
+ * @method Models\RenewAndroidInstanceMCPTokenResponse RenewAndroidInstanceMCPToken(Models\RenewAndroidInstanceMCPTokenRequest $req) 续期安卓实例 MCP token
  * @method Models\RenewAndroidInstancesAccessTokenResponse RenewAndroidInstancesAccessToken(Models\RenewAndroidInstancesAccessTokenRequest $req) 续期安卓实例访问Token
  * @method Models\ResetAndroidInstancesResponse ResetAndroidInstances(Models\ResetAndroidInstancesRequest $req) 重置安卓实例
  * @method Models\RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(Models\RestartAndroidInstancesAppRequest $req) 重启安卓实例应用

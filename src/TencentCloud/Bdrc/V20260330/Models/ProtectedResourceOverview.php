@@ -20,42 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 受保护资源概览
  *
- * @method integer getTotalProtectedCount() 获取受保护资源总数
- * @method void setTotalProtectedCount(integer $TotalProtectedCount) 设置受保护资源总数
- * @method integer getTotalResourceCount() 获取总资源数
- * @method void setTotalResourceCount(integer $TotalResourceCount) 设置总资源数
- * @method ResourceProtectStat getCvm() 获取CVM 受保护统计
- * @method void setCvm(ResourceProtectStat $Cvm) 设置CVM 受保护统计
- * @method ResourceProtectStat getCFS() 获取CFS 受保护统计
- * @method void setCFS(ResourceProtectStat $CFS) 设置CFS 受保护统计
+ * @method integer getTotalProtectedCount() 获取<p>受保护资源总数</p>
+ * @method void setTotalProtectedCount(integer $TotalProtectedCount) 设置<p>受保护资源总数</p>
+ * @method integer getTotalResourceCount() 获取<p>总资源数</p>
+ * @method void setTotalResourceCount(integer $TotalResourceCount) 设置<p>总资源数</p>
+ * @method ResourceProtectStat getCvm() 获取<p>CVM整机备份受保护统计</p>
+ * @method void setCvm(ResourceProtectStat $Cvm) 设置<p>CVM整机备份受保护统计</p>
+ * @method ResourceProtectStat getCFS() 获取<p>CVM文件备份受保护统计</p>
+ * @method void setCFS(ResourceProtectStat $CFS) 设置<p>CVM文件备份受保护统计</p>
+ * @method ResourceProtectStat getCFSAgent() 获取<p>CFS文件备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCFSAgent(ResourceProtectStat $CFSAgent) 设置<p>CFS文件备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceProtectStat getCOSAgent() 获取<p>COS备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCOSAgent(ResourceProtectStat $COSAgent) 设置<p>COS备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectedResourceOverview extends AbstractModel
 {
     /**
-     * @var integer 受保护资源总数
+     * @var integer <p>受保护资源总数</p>
      */
     public $TotalProtectedCount;
 
     /**
-     * @var integer 总资源数
+     * @var integer <p>总资源数</p>
      */
     public $TotalResourceCount;
 
     /**
-     * @var ResourceProtectStat CVM 受保护统计
+     * @var ResourceProtectStat <p>CVM整机备份受保护统计</p>
      */
     public $Cvm;
 
     /**
-     * @var ResourceProtectStat CFS 受保护统计
+     * @var ResourceProtectStat <p>CVM文件备份受保护统计</p>
      */
     public $CFS;
 
     /**
-     * @param integer $TotalProtectedCount 受保护资源总数
-     * @param integer $TotalResourceCount 总资源数
-     * @param ResourceProtectStat $Cvm CVM 受保护统计
-     * @param ResourceProtectStat $CFS CFS 受保护统计
+     * @var ResourceProtectStat <p>CFS文件备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CFSAgent;
+
+    /**
+     * @var ResourceProtectStat <p>COS备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $COSAgent;
+
+    /**
+     * @param integer $TotalProtectedCount <p>受保护资源总数</p>
+     * @param integer $TotalResourceCount <p>总资源数</p>
+     * @param ResourceProtectStat $Cvm <p>CVM整机备份受保护统计</p>
+     * @param ResourceProtectStat $CFS <p>CVM文件备份受保护统计</p>
+     * @param ResourceProtectStat $CFSAgent <p>CFS文件备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceProtectStat $COSAgent <p>COS备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -86,6 +110,16 @@ class ProtectedResourceOverview extends AbstractModel
         if (array_key_exists("CFS",$param) and $param["CFS"] !== null) {
             $this->CFS = new ResourceProtectStat();
             $this->CFS->deserialize($param["CFS"]);
+        }
+
+        if (array_key_exists("CFSAgent",$param) and $param["CFSAgent"] !== null) {
+            $this->CFSAgent = new ResourceProtectStat();
+            $this->CFSAgent->deserialize($param["CFSAgent"]);
+        }
+
+        if (array_key_exists("COSAgent",$param) and $param["COSAgent"] !== null) {
+            $this->COSAgent = new ResourceProtectStat();
+            $this->COSAgent->deserialize($param["COSAgent"]);
         }
     }
 }

@@ -20,166 +20,202 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份计划详情
  *
- * @method string getPlanId() 获取备份计划ID
- * @method void setPlanId(string $PlanId) 设置备份计划ID
- * @method array getResourceIds() 获取计划关联的实例ID
- * @method void setResourceIds(array $ResourceIds) 设置计划关联的实例ID
- * @method string getPlanName() 获取计划名称
- * @method void setPlanName(string $PlanName) 设置计划名称
- * @method array getBackupPaths() 获取备份路径列表，1~20 个
+ * @method string getPlanId() 获取<p>备份计划ID</p>
+ * @method void setPlanId(string $PlanId) 设置<p>备份计划ID</p>
+ * @method array getResourceIds() 获取<p>计划关联的实例ID</p>
+ * @method void setResourceIds(array $ResourceIds) 设置<p>计划关联的实例ID</p>
+ * @method string getPlanName() 获取<p>计划名称</p>
+ * @method void setPlanName(string $PlanName) 设置<p>计划名称</p>
+ * @method array getBackupPaths() 获取<p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupPaths(array $BackupPaths) 设置备份路径列表，1~20 个
+ * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIncludeFileTypes() 获取包含文件类型，0~20 个
+ * @method array getIncludeFileTypes() 获取<p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置包含文件类型，0~20 个
+ * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置<p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExcludePatterns() 获取排除文件路径列表，0~20 个
+ * @method array getExcludePatterns() 获取<p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExcludePatterns(array $ExcludePatterns) 设置排除文件路径列表，0~20 个
+ * @method void setExcludePatterns(array $ExcludePatterns) 设置<p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getExcludeSystemDirectories() 获取是否排除系统目录
- * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置是否排除系统目录
- * @method string getVaultId() 获取备份库ID
- * @method void setVaultId(string $VaultId) 设置备份库ID
- * @method string getStatus() 获取备份计划状态
- * @method void setStatus(string $Status) 设置备份计划状态
- * @method string getAspId() 获取策略ID
- * @method void setAspId(string $AspId) 设置策略ID
- * @method string getAspName() 获取策略名称
- * @method void setAspName(string $AspName) 设置策略名称
- * @method AspInfo getAspPolicy() 获取策略详情
- * @method void setAspPolicy(AspInfo $AspPolicy) 设置策略详情
- * @method string getLastExecuteTime() 获取最近一次执行时间
- * @method void setLastExecuteTime(string $LastExecuteTime) 设置最近一次执行时间
- * @method string getNextTriggerTime() 获取下次触发时间
- * @method void setNextTriggerTime(string $NextTriggerTime) 设置下次触发时间
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getLastTriggerError() 获取最近一次执行错误信息
- * @method void setLastTriggerError(string $LastTriggerError) 设置最近一次执行错误信息
- * @method integer getBackupCount() 获取备份数量
- * @method void setBackupCount(integer $BackupCount) 设置备份数量
- * @method array getFlowControlSettings() 获取流控信息
- * @method void setFlowControlSettings(array $FlowControlSettings) 设置流控信息
+ * @method boolean getExcludeSystemDirectories() 获取<p>是否排除系统目录</p>
+ * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置<p>是否排除系统目录</p>
+ * @method string getVaultId() 获取<p>备份库ID</p>
+ * @method void setVaultId(string $VaultId) 设置<p>备份库ID</p>
+ * @method string getStatus() 获取<p>备份计划状态</p>
+ * @method void setStatus(string $Status) 设置<p>备份计划状态</p>
+ * @method string getAspId() 获取<p>策略ID</p>
+ * @method void setAspId(string $AspId) 设置<p>策略ID</p>
+ * @method string getAspName() 获取<p>策略名称</p>
+ * @method void setAspName(string $AspName) 设置<p>策略名称</p>
+ * @method AspInfo getAspPolicy() 获取<p>策略详情</p>
+ * @method void setAspPolicy(AspInfo $AspPolicy) 设置<p>策略详情</p>
+ * @method string getLastExecuteTime() 获取<p>最近一次执行时间</p>
+ * @method void setLastExecuteTime(string $LastExecuteTime) 设置<p>最近一次执行时间</p>
+ * @method string getNextTriggerTime() 获取<p>下次触发时间</p>
+ * @method void setNextTriggerTime(string $NextTriggerTime) 设置<p>下次触发时间</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method string getLastTriggerError() 获取<p>最近一次执行错误信息</p>
+ * @method void setLastTriggerError(string $LastTriggerError) 设置<p>最近一次执行错误信息</p>
+ * @method integer getBackupCount() 获取<p>备份数量</p>
+ * @method void setBackupCount(integer $BackupCount) 设置<p>备份数量</p>
+ * @method array getFlowControlSettings() 获取<p>流控信息</p>
+ * @method void setFlowControlSettings(array $FlowControlSettings) 设置<p>流控信息</p>
+ * @method boolean getEnableObjectAcl() 获取<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableObjectAcl(boolean $EnableObjectAcl) 设置<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableObjectTags() 获取<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableObjectTags(boolean $EnableObjectTags) 设置<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductType() 获取<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductType(string $ProductType) 设置<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlanInfo extends AbstractModel
 {
     /**
-     * @var string 备份计划ID
+     * @var string <p>备份计划ID</p>
      */
     public $PlanId;
 
     /**
-     * @var array 计划关联的实例ID
+     * @var array <p>计划关联的实例ID</p>
      */
     public $ResourceIds;
 
     /**
-     * @var string 计划名称
+     * @var string <p>计划名称</p>
      */
     public $PlanName;
 
     /**
-     * @var array 备份路径列表，1~20 个
+     * @var array <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupPaths;
 
     /**
-     * @var array 包含文件类型，0~20 个
+     * @var array <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeFileTypes;
 
     /**
-     * @var array 排除文件路径列表，0~20 个
+     * @var array <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludePatterns;
 
     /**
-     * @var boolean 是否排除系统目录
+     * @var boolean <p>是否排除系统目录</p>
      */
     public $ExcludeSystemDirectories;
 
     /**
-     * @var string 备份库ID
+     * @var string <p>备份库ID</p>
      */
     public $VaultId;
 
     /**
-     * @var string 备份计划状态
+     * @var string <p>备份计划状态</p>
      */
     public $Status;
 
     /**
-     * @var string 策略ID
+     * @var string <p>策略ID</p>
      */
     public $AspId;
 
     /**
-     * @var string 策略名称
+     * @var string <p>策略名称</p>
      */
     public $AspName;
 
     /**
-     * @var AspInfo 策略详情
+     * @var AspInfo <p>策略详情</p>
      */
     public $AspPolicy;
 
     /**
-     * @var string 最近一次执行时间
+     * @var string <p>最近一次执行时间</p>
      */
     public $LastExecuteTime;
 
     /**
-     * @var string 下次触发时间
+     * @var string <p>下次触发时间</p>
      */
     public $NextTriggerTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 最近一次执行错误信息
+     * @var string <p>最近一次执行错误信息</p>
      */
     public $LastTriggerError;
 
     /**
-     * @var integer 备份数量
+     * @var integer <p>备份数量</p>
      */
     public $BackupCount;
 
     /**
-     * @var array 流控信息
+     * @var array <p>流控信息</p>
      */
     public $FlowControlSettings;
 
     /**
-     * @param string $PlanId 备份计划ID
-     * @param array $ResourceIds 计划关联的实例ID
-     * @param string $PlanName 计划名称
-     * @param array $BackupPaths 备份路径列表，1~20 个
+     * @var boolean <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $IncludeFileTypes 包含文件类型，0~20 个
+     */
+    public $EnableObjectAcl;
+
+    /**
+     * @var boolean <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ExcludePatterns 排除文件路径列表，0~20 个
+     */
+    public $EnableObjectTags;
+
+    /**
+     * @var string <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ExcludeSystemDirectories 是否排除系统目录
-     * @param string $VaultId 备份库ID
-     * @param string $Status 备份计划状态
-     * @param string $AspId 策略ID
-     * @param string $AspName 策略名称
-     * @param AspInfo $AspPolicy 策略详情
-     * @param string $LastExecuteTime 最近一次执行时间
-     * @param string $NextTriggerTime 下次触发时间
-     * @param string $CreatedTime 创建时间
-     * @param string $LastTriggerError 最近一次执行错误信息
-     * @param integer $BackupCount 备份数量
-     * @param array $FlowControlSettings 流控信息
+     */
+    public $ProductType;
+
+    /**
+     * @param string $PlanId <p>备份计划ID</p>
+     * @param array $ResourceIds <p>计划关联的实例ID</p>
+     * @param string $PlanName <p>计划名称</p>
+     * @param array $BackupPaths <p>备份路径列表，1~20 个</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IncludeFileTypes <p>包含文件类型，0~20 个</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExcludePatterns <p>排除文件路径列表，0~20 个</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ExcludeSystemDirectories <p>是否排除系统目录</p>
+     * @param string $VaultId <p>备份库ID</p>
+     * @param string $Status <p>备份计划状态</p>
+     * @param string $AspId <p>策略ID</p>
+     * @param string $AspName <p>策略名称</p>
+     * @param AspInfo $AspPolicy <p>策略详情</p>
+     * @param string $LastExecuteTime <p>最近一次执行时间</p>
+     * @param string $NextTriggerTime <p>下次触发时间</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param string $LastTriggerError <p>最近一次执行错误信息</p>
+     * @param integer $BackupCount <p>备份数量</p>
+     * @param array $FlowControlSettings <p>流控信息</p>
+     * @param boolean $EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -270,6 +306,18 @@ class PlanInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FlowControlSettings, $obj);
             }
+        }
+
+        if (array_key_exists("EnableObjectAcl",$param) and $param["EnableObjectAcl"] !== null) {
+            $this->EnableObjectAcl = $param["EnableObjectAcl"];
+        }
+
+        if (array_key_exists("EnableObjectTags",$param) and $param["EnableObjectTags"] !== null) {
+            $this->EnableObjectTags = $param["EnableObjectTags"];
+        }
+
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
         }
     }
 }

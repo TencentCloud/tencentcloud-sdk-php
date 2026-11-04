@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>集群状态</p>
  * @method string getStatusMessage() 获取<p>状态详情/错误信息</p>
  * @method void setStatusMessage(string $StatusMessage) 设置<p>状态详情/错误信息</p>
+ * @method integer getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method integer getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p>
  * @method string getResourceConfig() 获取<p>资源配置(JSON)</p>
  * @method void setResourceConfig(string $ResourceConfig) 设置<p>资源配置(JSON)</p>
  * @method string getResourceConfigId() 获取<p>资源配置ID</p>
@@ -80,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersistentWorkDir(PersistentWorkDir $PersistentWorkDir) 设置<p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
  * @method boolean getEnableToken() 获取<p>是否开启token认证</p>
  * @method void setEnableToken(boolean $EnableToken) 设置<p>是否开启token认证</p>
+ * @method string getToken() 获取<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+ * @method void setToken(string $Token) 设置<p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+ * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置（JSON）</p>
+ * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置（JSON）</p>
  * @method string getLabImagePullType() 获取<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method void setLabImagePullType(string $LabImagePullType) 设置<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
@@ -174,6 +182,16 @@ class GetLabDetailResponse extends AbstractModel
     public $StatusMessage;
 
     /**
+     * @var integer <p>创建时间</p>
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer <p>更新时间</p>
+     */
+    public $UpdateTime;
+
+    /**
      * @var string <p>资源配置(JSON)</p>
      */
     public $ResourceConfig;
@@ -244,6 +262,16 @@ class GetLabDetailResponse extends AbstractModel
     public $EnableToken;
 
     /**
+     * @var string <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public $Token;
+
+    /**
+     * @var string <p>弹性伸缩配置（JSON）</p>
+     */
+    public $AutoscalerOptions;
+
+    /**
      * @var string <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
     public $LabImagePullType;
@@ -285,6 +313,8 @@ class GetLabDetailResponse extends AbstractModel
      * @param string $SubAccountUin <p>子用户UIN</p>
      * @param string $Status <p>集群状态</p>
      * @param string $StatusMessage <p>状态详情/错误信息</p>
+     * @param integer $CreateTime <p>创建时间</p>
+     * @param integer $UpdateTime <p>更新时间</p>
      * @param string $ResourceConfig <p>资源配置(JSON)</p>
      * @param string $ResourceConfigId <p>资源配置ID</p>
      * @param string $Image <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
@@ -299,6 +329,8 @@ class GetLabDetailResponse extends AbstractModel
      * @param array $Tags <p>标签列表（TagKey-TagValue）</p>
      * @param PersistentWorkDir $PersistentWorkDir <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
      * @param boolean $EnableToken <p>是否开启token认证</p>
+     * @param string $Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param string $AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
      * @param string $LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param string $ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -387,6 +419,14 @@ class GetLabDetailResponse extends AbstractModel
             $this->StatusMessage = $param["StatusMessage"];
         }
 
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
         if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
             $this->ResourceConfig = $param["ResourceConfig"];
         }
@@ -447,6 +487,14 @@ class GetLabDetailResponse extends AbstractModel
 
         if (array_key_exists("EnableToken",$param) and $param["EnableToken"] !== null) {
             $this->EnableToken = $param["EnableToken"];
+        }
+
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
+            $this->AutoscalerOptions = $param["AutoscalerOptions"];
         }
 
         if (array_key_exists("LabImagePullType",$param) and $param["LabImagePullType"] !== null) {

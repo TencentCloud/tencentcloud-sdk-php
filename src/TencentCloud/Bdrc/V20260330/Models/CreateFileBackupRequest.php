@@ -20,82 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileBackup请求参数结构体
  *
- * @method string getResourceId() 获取资源ID列表
- * @method void setResourceId(string $ResourceId) 设置资源ID列表
- * @method string getPlanId() 获取计划ID
- * @method void setPlanId(string $PlanId) 设置计划ID
- * @method array getBackupPaths() 获取备份路径列表，1~20 个
- * @method void setBackupPaths(array $BackupPaths) 设置备份路径列表，1~20 个
- * @method array getIncludeFileTypes() 获取包含文件类型，0~20 个
- * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置包含文件类型，0~20 个
- * @method array getExcludePatterns() 获取排除文件路径列表，0~20 个
- * @method void setExcludePatterns(array $ExcludePatterns) 设置排除文件路径列表，0~20 个
- * @method boolean getExcludeSystemDirectories() 获取是否排除系统目录
- * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置是否排除系统目录
- * @method string getBackupStorageId() 获取备份库ID
- * @method void setBackupStorageId(string $BackupStorageId) 设置备份库ID
- * @method string getDeadline() 获取备份到期时间
- * @method void setDeadline(string $Deadline) 设置备份到期时间
- * @method string getBackupName() 获取备份名称
- * @method void setBackupName(string $BackupName) 设置备份名称
+ * @method string getResourceId() 获取<p>资源ID列表</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID列表</p>
+ * @method string getPlanId() 获取<p>计划ID</p>
+ * @method void setPlanId(string $PlanId) 设置<p>计划ID</p>
+ * @method array getBackupPaths() 获取<p>备份路径列表，1~20 个</p>
+ * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径列表，1~20 个</p>
+ * @method array getIncludeFileTypes() 获取<p>包含文件类型，0~20 个</p>
+ * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置<p>包含文件类型，0~20 个</p>
+ * @method array getExcludePatterns() 获取<p>排除文件路径列表，0~20 个</p>
+ * @method void setExcludePatterns(array $ExcludePatterns) 设置<p>排除文件路径列表，0~20 个</p>
+ * @method boolean getExcludeSystemDirectories() 获取<p>是否排除系统目录</p>
+ * @method void setExcludeSystemDirectories(boolean $ExcludeSystemDirectories) 设置<p>是否排除系统目录</p>
+ * @method string getBackupStorageId() 获取<p>备份库ID，此参数必填。</p>
+ * @method void setBackupStorageId(string $BackupStorageId) 设置<p>备份库ID，此参数必填。</p>
+ * @method string getDeadline() 获取<p>备份到期时间</p>
+ * @method void setDeadline(string $Deadline) 设置<p>备份到期时间</p>
+ * @method string getBackupName() 获取<p>备份名称</p>
+ * @method void setBackupName(string $BackupName) 设置<p>备份名称</p>
+ * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+ * @method boolean getEnableObjectAcl() 获取<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+ * @method void setEnableObjectAcl(boolean $EnableObjectAcl) 设置<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+ * @method boolean getEnableObjectTags() 获取<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+ * @method void setEnableObjectTags(boolean $EnableObjectTags) 设置<p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
  */
 class CreateFileBackupRequest extends AbstractModel
 {
     /**
-     * @var string 资源ID列表
+     * @var string <p>资源ID列表</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 计划ID
+     * @var string <p>计划ID</p>
      */
     public $PlanId;
 
     /**
-     * @var array 备份路径列表，1~20 个
+     * @var array <p>备份路径列表，1~20 个</p>
      */
     public $BackupPaths;
 
     /**
-     * @var array 包含文件类型，0~20 个
+     * @var array <p>包含文件类型，0~20 个</p>
      */
     public $IncludeFileTypes;
 
     /**
-     * @var array 排除文件路径列表，0~20 个
+     * @var array <p>排除文件路径列表，0~20 个</p>
      */
     public $ExcludePatterns;
 
     /**
-     * @var boolean 是否排除系统目录
+     * @var boolean <p>是否排除系统目录</p>
      */
     public $ExcludeSystemDirectories;
 
     /**
-     * @var string 备份库ID
+     * @var string <p>备份库ID，此参数必填。</p>
      */
     public $BackupStorageId;
 
     /**
-     * @var string 备份到期时间
+     * @var string <p>备份到期时间</p>
      */
     public $Deadline;
 
     /**
-     * @var string 备份名称
+     * @var string <p>备份名称</p>
      */
     public $BackupName;
 
     /**
-     * @param string $ResourceId 资源ID列表
-     * @param string $PlanId 计划ID
-     * @param array $BackupPaths 备份路径列表，1~20 个
-     * @param array $IncludeFileTypes 包含文件类型，0~20 个
-     * @param array $ExcludePatterns 排除文件路径列表，0~20 个
-     * @param boolean $ExcludeSystemDirectories 是否排除系统目录
-     * @param string $BackupStorageId 备份库ID
-     * @param string $Deadline 备份到期时间
-     * @param string $BackupName 备份名称
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public $ResourceType;
+
+    /**
+     * @var boolean <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public $EnableObjectAcl;
+
+    /**
+     * @var boolean <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public $EnableObjectTags;
+
+    /**
+     * @param string $ResourceId <p>资源ID列表</p>
+     * @param string $PlanId <p>计划ID</p>
+     * @param array $BackupPaths <p>备份路径列表，1~20 个</p>
+     * @param array $IncludeFileTypes <p>包含文件类型，0~20 个</p>
+     * @param array $ExcludePatterns <p>排除文件路径列表，0~20 个</p>
+     * @param boolean $ExcludeSystemDirectories <p>是否排除系统目录</p>
+     * @param string $BackupStorageId <p>备份库ID，此参数必填。</p>
+     * @param string $Deadline <p>备份到期时间</p>
+     * @param string $BackupName <p>备份名称</p>
+     * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     * @param boolean $EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     * @param boolean $EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
      */
     function __construct()
     {
@@ -144,6 +168,18 @@ class CreateFileBackupRequest extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("EnableObjectAcl",$param) and $param["EnableObjectAcl"] !== null) {
+            $this->EnableObjectAcl = $param["EnableObjectAcl"];
+        }
+
+        if (array_key_exists("EnableObjectTags",$param) and $param["EnableObjectTags"] !== null) {
+            $this->EnableObjectTags = $param["EnableObjectTags"];
         }
     }
 }

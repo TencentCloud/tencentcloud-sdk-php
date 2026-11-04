@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteHaVip请求参数结构体
  *
- * @method string getHaVipId() 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
- * @method void setHaVipId(string $HaVipId) 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+ * @method string getHaVipId() 获取<p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
+ * @method void setHaVipId(string $HaVipId) 设置<p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
+ * @method boolean getSkipTerminationProtection() 获取<p>忽略删除保护。</p>
+ * @method void setSkipTerminationProtection(boolean $SkipTerminationProtection) 设置<p>忽略删除保护。</p>
  */
 class DeleteHaVipRequest extends AbstractModel
 {
     /**
-     * @var string `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @var string <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
      */
     public $HaVipId;
 
     /**
-     * @param string $HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * @var boolean <p>忽略删除保护。</p>
+     */
+    public $SkipTerminationProtection;
+
+    /**
+     * @param string $HaVipId <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
+     * @param boolean $SkipTerminationProtection <p>忽略删除保护。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteHaVipRequest extends AbstractModel
         }
         if (array_key_exists("HaVipId",$param) and $param["HaVipId"] !== null) {
             $this->HaVipId = $param["HaVipId"];
+        }
+
+        if (array_key_exists("SkipTerminationProtection",$param) and $param["SkipTerminationProtection"] !== null) {
+            $this->SkipTerminationProtection = $param["SkipTerminationProtection"];
         }
     }
 }

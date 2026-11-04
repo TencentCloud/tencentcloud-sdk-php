@@ -58,10 +58,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobPackage(string $JobPackage) 设置<p>作业包URL</p>
  * @method string getJobPackageName() 获取<p>作业包名称</p>
  * @method void setJobPackageName(string $JobPackageName) 设置<p>作业包名称</p>
+ * @method string getJobPackageSource() 获取<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+ * @method void setJobPackageSource(string $JobPackageSource) 设置<p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
  * @method integer getAppId() 获取<p>应用ID</p>
  * @method void setAppId(integer $AppId) 设置<p>应用ID</p>
  * @method string getUin() 获取<p>创建者UIN</p>
  * @method void setUin(string $Uin) 设置<p>创建者UIN</p>
+ * @method string getSubAccountUin() 获取<p>子用户UIN</p>
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子用户UIN</p>
+ * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
  * @method integer getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
  * @method integer getUpdateTime() 获取<p>更新时间</p>
@@ -195,6 +201,11 @@ class CopyJobSpecResponse extends AbstractModel
     public $JobPackageName;
 
     /**
+     * @var string <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     */
+    public $JobPackageSource;
+
+    /**
      * @var integer <p>应用ID</p>
      */
     public $AppId;
@@ -203,6 +214,16 @@ class CopyJobSpecResponse extends AbstractModel
      * @var string <p>创建者UIN</p>
      */
     public $Uin;
+
+    /**
+     * @var string <p>子用户UIN</p>
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var integer <p>创建时间</p>
@@ -297,8 +318,11 @@ class CopyJobSpecResponse extends AbstractModel
      * @param string $QueueAlias <p>所属队列别名</p>
      * @param string $JobPackage <p>作业包URL</p>
      * @param string $JobPackageName <p>作业包名称</p>
+     * @param string $JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
      * @param integer $AppId <p>应用ID</p>
      * @param string $Uin <p>创建者UIN</p>
+     * @param string $SubAccountUin <p>子用户UIN</p>
+     * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param integer $CreateTime <p>创建时间</p>
      * @param integer $UpdateTime <p>更新时间</p>
      * @param integer $JobInstanceCount <p>该配置产生的作业实例数量</p>
@@ -406,12 +430,24 @@ class CopyJobSpecResponse extends AbstractModel
             $this->JobPackageName = $param["JobPackageName"];
         }
 
+        if (array_key_exists("JobPackageSource",$param) and $param["JobPackageSource"] !== null) {
+            $this->JobPackageSource = $param["JobPackageSource"];
+        }
+
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
         }
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

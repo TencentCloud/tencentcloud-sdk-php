@@ -20,166 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视立方license用户 应用结构
  *
- * @method string getAppName() 获取应用名称
- * @method void setAppName(string $AppName) 设置应用名称
- * @method string getBundleId() 获取Ios应用的唯一标识
+ * @method string getAppName() 获取<p>应用名称</p>
+ * @method void setAppName(string $AppName) 设置<p>应用名称</p>
+ * @method string getBundleId() 获取<p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBundleId(string $BundleId) 设置Ios应用的唯一标识
+ * @method void setBundleId(string $BundleId) 设置<p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppType() 获取应用类型，formal： 正式应用，test：测试应用
- * @method void setAppType(string $AppType) 设置应用类型，formal： 正式应用，test：测试应用
- * @method array getLicenses() 获取license数组
+ * @method string getAppType() 获取<p>应用类型，formal： 正式应用，test：测试应用</p>
+ * @method void setAppType(string $AppType) 设置<p>应用类型，formal： 正式应用，test：测试应用</p>
+ * @method array getLicenses() 获取<p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLicenses(array $Licenses) 设置license数组
+ * @method void setLicenses(array $Licenses) 设置<p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLicenseKey() 获取license 秘钥
- * @method void setLicenseKey(string $LicenseKey) 设置license 秘钥
- * @method string getPackageName() 获取安卓应用的唯一标识
+ * @method string getLicenseKey() 获取<p>license 秘钥</p>
+ * @method void setLicenseKey(string $LicenseKey) 设置<p>license 秘钥</p>
+ * @method string getPackageName() 获取<p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageName(string $PackageName) 设置安卓应用的唯一标识
+ * @method void setPackageName(string $PackageName) 设置<p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
- * @method string getUpdatedAt() 获取更新时间
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
- * @method integer getApplicationId() 获取用户应用Id
- * @method void setApplicationId(integer $ApplicationId) 设置用户应用Id
- * @method string getLicenseUrl() 获取视立方下载license的url
- * @method void setLicenseUrl(string $LicenseUrl) 设置视立方下载license的url
- * @method array getXMagics() 获取优图美视信息列表
+ * @method string getCreatedAt() 获取<p>创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间</p>
+ * @method string getUpdatedAt() 获取<p>更新时间</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间</p>
+ * @method integer getApplicationId() 获取<p>用户应用Id</p>
+ * @method void setApplicationId(integer $ApplicationId) 设置<p>用户应用Id</p>
+ * @method string getLicenseUrl() 获取<p>视立方下载license的url</p>
+ * @method void setLicenseUrl(string $LicenseUrl) 设置<p>视立方下载license的url</p>
+ * @method array getXMagics() 获取<p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setXMagics(array $XMagics) 设置优图美视信息列表
+ * @method void setXMagics(array $XMagics) 设置<p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMacBundleId() 获取Mac  进程名
+ * @method string getMacBundleId() 获取<p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMacBundleId(string $MacBundleId) 设置Mac  进程名
+ * @method void setMacBundleId(string $MacBundleId) 设置<p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWinProcessName() 获取windows 进程名
+ * @method string getWinProcessName() 获取<p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWinProcessName(string $WinProcessName) 设置windows 进程名
+ * @method void setWinProcessName(string $WinProcessName) 设置<p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDomainList() 获取web端Domain列表
+ * @method array getDomainList() 获取<p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomainList(array $DomainList) 设置web端Domain列表
+ * @method void setDomainList(array $DomainList) 设置<p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppId() 获取账号AppId
- * @method void setAppId(string $AppId) 设置账号AppId
- * @method integer getNameLimit() 获取扩展包名数量上限
- * @method void setNameLimit(integer $NameLimit) 设置扩展包名数量上限
+ * @method string getAppId() 获取<p>账号AppId</p>
+ * @method void setAppId(string $AppId) 设置<p>账号AppId</p>
+ * @method integer getNameLimit() 获取<p>扩展包名数量上限</p>
+ * @method void setNameLimit(integer $NameLimit) 设置<p>扩展包名数量上限</p>
+ * @method string getLinuxProcessName() 获取<p>linux 进程名</p>
+ * @method void setLinuxProcessName(string $LinuxProcessName) 设置<p>linux 进程名</p>
  */
 class ApplicationInfo extends AbstractModel
 {
     /**
-     * @var string 应用名称
+     * @var string <p>应用名称</p>
      */
     public $AppName;
 
     /**
-     * @var string Ios应用的唯一标识
+     * @var string <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleId;
 
     /**
-     * @var string 应用类型，formal： 正式应用，test：测试应用
+     * @var string <p>应用类型，formal： 正式应用，test：测试应用</p>
      */
     public $AppType;
 
     /**
-     * @var array license数组
+     * @var array <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Licenses;
 
     /**
-     * @var string license 秘钥
+     * @var string <p>license 秘钥</p>
      */
     public $LicenseKey;
 
     /**
-     * @var string 安卓应用的唯一标识
+     * @var string <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var integer 用户应用Id
+     * @var integer <p>用户应用Id</p>
      */
     public $ApplicationId;
 
     /**
-     * @var string 视立方下载license的url
+     * @var string <p>视立方下载license的url</p>
      */
     public $LicenseUrl;
 
     /**
-     * @var array 优图美视信息列表
+     * @var array <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $XMagics;
 
     /**
-     * @var string Mac  进程名
+     * @var string <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MacBundleId;
 
     /**
-     * @var string windows 进程名
+     * @var string <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WinProcessName;
 
     /**
-     * @var array web端Domain列表
+     * @var array <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainList;
 
     /**
-     * @var string 账号AppId
+     * @var string <p>账号AppId</p>
      */
     public $AppId;
 
     /**
-     * @var integer 扩展包名数量上限
+     * @var integer <p>扩展包名数量上限</p>
      */
     public $NameLimit;
 
     /**
-     * @param string $AppName 应用名称
-     * @param string $BundleId Ios应用的唯一标识
+     * @var string <p>linux 进程名</p>
+     */
+    public $LinuxProcessName;
+
+    /**
+     * @param string $AppName <p>应用名称</p>
+     * @param string $BundleId <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppType 应用类型，formal： 正式应用，test：测试应用
-     * @param array $Licenses license数组
+     * @param string $AppType <p>应用类型，formal： 正式应用，test：测试应用</p>
+     * @param array $Licenses <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LicenseKey license 秘钥
-     * @param string $PackageName 安卓应用的唯一标识
+     * @param string $LicenseKey <p>license 秘钥</p>
+     * @param string $PackageName <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间
-     * @param string $UpdatedAt 更新时间
-     * @param integer $ApplicationId 用户应用Id
-     * @param string $LicenseUrl 视立方下载license的url
-     * @param array $XMagics 优图美视信息列表
+     * @param string $CreatedAt <p>创建时间</p>
+     * @param string $UpdatedAt <p>更新时间</p>
+     * @param integer $ApplicationId <p>用户应用Id</p>
+     * @param string $LicenseUrl <p>视立方下载license的url</p>
+     * @param array $XMagics <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MacBundleId Mac  进程名
+     * @param string $MacBundleId <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WinProcessName windows 进程名
+     * @param string $WinProcessName <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DomainList web端Domain列表
+     * @param array $DomainList <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppId 账号AppId
-     * @param integer $NameLimit 扩展包名数量上限
+     * @param string $AppId <p>账号AppId</p>
+     * @param integer $NameLimit <p>扩展包名数量上限</p>
+     * @param string $LinuxProcessName <p>linux 进程名</p>
      */
     function __construct()
     {
@@ -266,6 +274,10 @@ class ApplicationInfo extends AbstractModel
 
         if (array_key_exists("NameLimit",$param) and $param["NameLimit"] !== null) {
             $this->NameLimit = $param["NameLimit"];
+        }
+
+        if (array_key_exists("LinuxProcessName",$param) and $param["LinuxProcessName"] !== null) {
+            $this->LinuxProcessName = $param["LinuxProcessName"];
         }
     }
 }

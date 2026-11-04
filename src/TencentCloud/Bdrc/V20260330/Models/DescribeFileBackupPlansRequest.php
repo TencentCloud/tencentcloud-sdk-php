@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileBackupPlans请求参数结构体
  *
- * @method integer getOffset() 获取偏移量，默认0
- * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method integer getLimit() 获取返回数量，默认20，最大500
- * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大500
- * @method string getOrderField() 获取排序字段
- * @method void setOrderField(string $OrderField) 设置排序字段
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method array getFilters() 获取过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id
- * @method void setFilters(array $Filters) 设置过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id
+ * @method integer getOffset() 获取<p>偏移量，默认0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认0</p>
+ * @method integer getLimit() 获取<p>返回数量，默认20，最大100</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认20，最大100</p>
+ * @method string getOrderField() 获取<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li><li>CreatedTime： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+ * @method void setOrderField(string $OrderField) 设置<p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li><li>CreatedTime： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+ * @method string getOrder() 获取<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method void setOrder(string $Order) 设置<p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+ * @method array getFilters() 获取<p>过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id</p>
+ * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM 文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+ * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM 文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  */
 class DescribeFileBackupPlansRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量，默认0
+     * @var integer <p>偏移量，默认0</p>
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20，最大500
+     * @var integer <p>返回数量，默认20，最大100</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序字段
+     * @var string <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li><li>CreatedTime： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public $OrderField;
 
     /**
-     * @var string 排序方式
+     * @var string <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public $Order;
 
     /**
-     * @var array 过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id
+     * @var array <p>过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id</p>
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 偏移量，默认0
-     * @param integer $Limit 返回数量，默认20，最大500
-     * @param string $OrderField 排序字段
-     * @param string $Order 排序方式
-     * @param array $Filters 过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id
+     * @var string <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM 文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public $ResourceType;
+
+    /**
+     * @param integer $Offset <p>偏移量，默认0</p>
+     * @param integer $Limit <p>返回数量，默认20，最大100</p>
+     * @param string $OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li><li>CreatedTime： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+     * @param string $Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param array $Filters <p>过滤条件。支持: instance-id, plan-id, plan-name, status, auto-backup-policy-id</p>
+     * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM 文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeFileBackupPlansRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
         }
     }
 }

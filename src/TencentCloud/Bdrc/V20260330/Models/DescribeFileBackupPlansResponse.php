@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileBackupPlans返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的计划总数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的计划总数量
- * @method array getPlanSet() 获取符合条件的计划详情
- * @method void setPlanSet(array $PlanSet) 设置符合条件的计划详情
+ * @method integer getTotalCount() 获取<p>符合条件的计划总数量</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的计划总数量</p>
+ * @method array getPlanSet() 获取<p>符合条件的计划详情</p>
+ * @method void setPlanSet(array $PlanSet) 设置<p>符合条件的计划详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFileBackupPlansResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的计划总数量
+     * @var integer <p>符合条件的计划总数量</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 符合条件的计划详情
+     * @var array <p>符合条件的计划详情</p>
      */
     public $PlanSet;
 
@@ -45,8 +45,8 @@ class DescribeFileBackupPlansResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的计划总数量
-     * @param array $PlanSet 符合条件的计划详情
+     * @param integer $TotalCount <p>符合条件的计划总数量</p>
+     * @param array $PlanSet <p>符合条件的计划详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersistentWorkDir(PersistentWorkDir $PersistentWorkDir) 设置<p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
  * @method boolean getEnableToken() 获取<p>是否开启token认证</p>
  * @method void setEnableToken(boolean $EnableToken) 设置<p>是否开启token认证</p>
+ * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置（JSON）</p>
+ * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置（JSON）</p>
  * @method string getImagePullType() 获取<p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method void setImagePullType(string $ImagePullType) 设置<p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method string getLabImagePullType() 获取<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -170,6 +172,11 @@ class CreateLabRequest extends AbstractModel
     public $EnableToken;
 
     /**
+     * @var string <p>弹性伸缩配置（JSON）</p>
+     */
+    public $AutoscalerOptions;
+
+    /**
      * @var string <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
     public $ImagePullType;
@@ -205,6 +212,7 @@ class CreateLabRequest extends AbstractModel
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
      * @param PersistentWorkDir $PersistentWorkDir <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
      * @param boolean $EnableToken <p>是否开启token认证</p>
+     * @param string $AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
      * @param string $ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
@@ -306,6 +314,10 @@ class CreateLabRequest extends AbstractModel
 
         if (array_key_exists("EnableToken",$param) and $param["EnableToken"] !== null) {
             $this->EnableToken = $param["EnableToken"];
+        }
+
+        if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
+            $this->AutoscalerOptions = $param["AutoscalerOptions"];
         }
 
         if (array_key_exists("ImagePullType",$param) and $param["ImagePullType"] !== null) {

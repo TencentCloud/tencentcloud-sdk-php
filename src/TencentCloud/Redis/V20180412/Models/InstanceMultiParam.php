@@ -20,90 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例多选项类型参数描述
  *
- * @method string getParamName() 获取参数名称。
- * @method void setParamName(string $ParamName) 设置参数名称。
- * @method string getValueType() 获取参数类型。例如：multi。
- * @method void setValueType(string $ValueType) 设置参数类型。例如：multi。
- * @method string getNeedRestart() 获取参数修改后是否需要重启。
-- true：需要。
-- false：不需要。
- * @method void setNeedRestart(string $NeedRestart) 设置参数修改后是否需要重启。
-- true：需要。
-- false：不需要。
- * @method string getDefaultValue() 获取参数默认值。
- * @method void setDefaultValue(string $DefaultValue) 设置参数默认值。
- * @method string getCurrentValue() 获取当前运行参数值。
- * @method void setCurrentValue(string $CurrentValue) 设置当前运行参数值。
- * @method string getTips() 获取参数说明。
- * @method void setTips(string $Tips) 设置参数说明。
- * @method array getEnumValue() 获取参数枚举值。
- * @method void setEnumValue(array $EnumValue) 设置参数枚举值。
- * @method integer getStatus() 获取参数修改的状态。
-- 1：修改中。
-- 2：修改完成。
- * @method void setStatus(integer $Status) 设置参数修改的状态。
-- 1：修改中。
-- 2：修改完成。
+ * @method string getParamName() 获取<p>参数名称。</p>
+ * @method void setParamName(string $ParamName) 设置<p>参数名称。</p>
+ * @method string getValueType() 获取<p>参数类型。例如：multi。</p>
+ * @method void setValueType(string $ValueType) 设置<p>参数类型。例如：multi。</p>
+ * @method string getNeedRestart() 获取<p>参数修改后是否需要重启。</p><ul><li>true：需要。</li><li>false：不需要。</li></ul>
+ * @method void setNeedRestart(string $NeedRestart) 设置<p>参数修改后是否需要重启。</p><ul><li>true：需要。</li><li>false：不需要。</li></ul>
+ * @method string getDefaultValue() 获取<p>参数默认值。</p>
+ * @method void setDefaultValue(string $DefaultValue) 设置<p>参数默认值。</p>
+ * @method string getCurrentValue() 获取<p>当前运行参数值。</p>
+ * @method void setCurrentValue(string $CurrentValue) 设置<p>当前运行参数值。</p>
+ * @method string getTips() 获取<p>参数说明。</p>
+ * @method void setTips(string $Tips) 设置<p>参数说明。</p>
+ * @method array getEnumValue() 获取<p>参数枚举值。</p>
+ * @method void setEnumValue(array $EnumValue) 设置<p>参数枚举值。</p>
+ * @method integer getStatus() 获取<p>参数修改的状态。</p><ul><li>1：修改中。</li><li>2：修改完成。</li></ul>
+ * @method void setStatus(integer $Status) 设置<p>参数修改的状态。</p><ul><li>1：修改中。</li><li>2：修改完成。</li></ul>
+ * @method string getParamType() 获取<p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis： tendis支持的参数</li></ul>
+ * @method void setParamType(string $ParamType) 设置<p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis： tendis支持的参数</li></ul>
+ * @method boolean getFeatureSupported() 获取<p>当前实例是否支持该特性</p>
+ * @method void setFeatureSupported(boolean $FeatureSupported) 设置<p>当前实例是否支持该特性</p>
+ * @method string getNewFeatureOnlineTime() 获取<p>新特性上线日期</p><p>参数格式：参数格式：时间格式YYYY-MM-DD</p>
+ * @method void setNewFeatureOnlineTime(string $NewFeatureOnlineTime) 设置<p>新特性上线日期</p><p>参数格式：参数格式：时间格式YYYY-MM-DD</p>
+ * @method string getPattern() 获取<p>正则校验规则</p>
+ * @method void setPattern(string $Pattern) 设置<p>正则校验规则</p>
+ * @method string getInputDescription() 获取<p>输入格式描述</p>
+ * @method void setInputDescription(string $InputDescription) 设置<p>输入格式描述</p>
  */
 class InstanceMultiParam extends AbstractModel
 {
     /**
-     * @var string 参数名称。
+     * @var string <p>参数名称。</p>
      */
     public $ParamName;
 
     /**
-     * @var string 参数类型。例如：multi。
+     * @var string <p>参数类型。例如：multi。</p>
      */
     public $ValueType;
 
     /**
-     * @var string 参数修改后是否需要重启。
-- true：需要。
-- false：不需要。
+     * @var string <p>参数修改后是否需要重启。</p><ul><li>true：需要。</li><li>false：不需要。</li></ul>
      */
     public $NeedRestart;
 
     /**
-     * @var string 参数默认值。
+     * @var string <p>参数默认值。</p>
      */
     public $DefaultValue;
 
     /**
-     * @var string 当前运行参数值。
+     * @var string <p>当前运行参数值。</p>
      */
     public $CurrentValue;
 
     /**
-     * @var string 参数说明。
+     * @var string <p>参数说明。</p>
      */
     public $Tips;
 
     /**
-     * @var array 参数枚举值。
+     * @var array <p>参数枚举值。</p>
      */
     public $EnumValue;
 
     /**
-     * @var integer 参数修改的状态。
-- 1：修改中。
-- 2：修改完成。
+     * @var integer <p>参数修改的状态。</p><ul><li>1：修改中。</li><li>2：修改完成。</li></ul>
      */
     public $Status;
 
     /**
-     * @param string $ParamName 参数名称。
-     * @param string $ValueType 参数类型。例如：multi。
-     * @param string $NeedRestart 参数修改后是否需要重启。
-- true：需要。
-- false：不需要。
-     * @param string $DefaultValue 参数默认值。
-     * @param string $CurrentValue 当前运行参数值。
-     * @param string $Tips 参数说明。
-     * @param array $EnumValue 参数枚举值。
-     * @param integer $Status 参数修改的状态。
-- 1：修改中。
-- 2：修改完成。
+     * @var string <p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis： tendis支持的参数</li></ul>
+     */
+    public $ParamType;
+
+    /**
+     * @var boolean <p>当前实例是否支持该特性</p>
+     */
+    public $FeatureSupported;
+
+    /**
+     * @var string <p>新特性上线日期</p><p>参数格式：参数格式：时间格式YYYY-MM-DD</p>
+     */
+    public $NewFeatureOnlineTime;
+
+    /**
+     * @var string <p>正则校验规则</p>
+     */
+    public $Pattern;
+
+    /**
+     * @var string <p>输入格式描述</p>
+     */
+    public $InputDescription;
+
+    /**
+     * @param string $ParamName <p>参数名称。</p>
+     * @param string $ValueType <p>参数类型。例如：multi。</p>
+     * @param string $NeedRestart <p>参数修改后是否需要重启。</p><ul><li>true：需要。</li><li>false：不需要。</li></ul>
+     * @param string $DefaultValue <p>参数默认值。</p>
+     * @param string $CurrentValue <p>当前运行参数值。</p>
+     * @param string $Tips <p>参数说明。</p>
+     * @param array $EnumValue <p>参数枚举值。</p>
+     * @param integer $Status <p>参数修改的状态。</p><ul><li>1：修改中。</li><li>2：修改完成。</li></ul>
+     * @param string $ParamType <p>参数类型</p><p>枚举值：</p><ul><li>redis： cache节点支持的参数</li><li>redis-interface： 代理proxy支持的参数</li><li>tendis： tendis支持的参数</li></ul>
+     * @param boolean $FeatureSupported <p>当前实例是否支持该特性</p>
+     * @param string $NewFeatureOnlineTime <p>新特性上线日期</p><p>参数格式：参数格式：时间格式YYYY-MM-DD</p>
+     * @param string $Pattern <p>正则校验规则</p>
+     * @param string $InputDescription <p>输入格式描述</p>
      */
     function __construct()
     {
@@ -148,6 +172,26 @@ class InstanceMultiParam extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ParamType",$param) and $param["ParamType"] !== null) {
+            $this->ParamType = $param["ParamType"];
+        }
+
+        if (array_key_exists("FeatureSupported",$param) and $param["FeatureSupported"] !== null) {
+            $this->FeatureSupported = $param["FeatureSupported"];
+        }
+
+        if (array_key_exists("NewFeatureOnlineTime",$param) and $param["NewFeatureOnlineTime"] !== null) {
+            $this->NewFeatureOnlineTime = $param["NewFeatureOnlineTime"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("InputDescription",$param) and $param["InputDescription"] !== null) {
+            $this->InputDescription = $param["InputDescription"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegistryRecordVersionList返回参数结构体
  *
- * @method array getVersionSet() 获取<p>Version 对象数组。</p>
- * @method void setVersionSet(array $VersionSet) 设置<p>Version 对象数组。</p>
+ * @method array getVersionSet() 获取<p>筛选和分页后的版本数组。普通模式指定 RecordId 时按 Revision 降序，普通跨 Record 查询与市场查询均按 CreateTime 降序、VersionId 升序。</p><p>市场模式只返回公开字段。支持此版本契约的后端返回 SupportedHarnessVersions 和 Metadata 数组，未设置时返回空数组。Metadata 的每项由字符串 Name 和 Value 组成。无匹配时返回空数组。</p>
+ * @method void setVersionSet(array $VersionSet) 设置<p>筛选和分页后的版本数组。普通模式指定 RecordId 时按 Revision 降序，普通跨 Record 查询与市场查询均按 CreateTime 降序、VersionId 升序。</p><p>市场模式只返回公开字段。支持此版本契约的后端返回 SupportedHarnessVersions 和 Metadata 数组，未设置时返回空数组。Metadata 的每项由字符串 Name 和 Value 组成。无匹配时返回空数组。</p>
  * @method integer getTotalCount() 获取<p>符合条件的总数。</p>
  * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的总数。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRegistryRecordVersionListResponse extends AbstractModel
 {
     /**
-     * @var array <p>Version 对象数组。</p>
+     * @var array <p>筛选和分页后的版本数组。普通模式指定 RecordId 时按 Revision 降序，普通跨 Record 查询与市场查询均按 CreateTime 降序、VersionId 升序。</p><p>市场模式只返回公开字段。支持此版本契约的后端返回 SupportedHarnessVersions 和 Metadata 数组，未设置时返回空数组。Metadata 的每项由字符串 Name 和 Value 组成。无匹配时返回空数组。</p>
      */
     public $VersionSet;
 
@@ -45,7 +45,7 @@ class DescribeRegistryRecordVersionListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $VersionSet <p>Version 对象数组。</p>
+     * @param array $VersionSet <p>筛选和分页后的版本数组。普通模式指定 RecordId 时按 Revision 降序，普通跨 Record 查询与市场查询均按 CreateTime 降序、VersionId 升序。</p><p>市场模式只返回公开字段。支持此版本契约的后端返回 SupportedHarnessVersions 和 Metadata 数组，未设置时返回空数组。Metadata 的每项由字符串 Name 和 Value 组成。无匹配时返回空数组。</p>
      * @param integer $TotalCount <p>符合条件的总数。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

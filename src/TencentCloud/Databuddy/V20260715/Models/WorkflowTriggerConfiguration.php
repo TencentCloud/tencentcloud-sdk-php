@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedConfig(WorkflowTriggerAdvancedConfiguration $AdvancedConfig) 设置<p>高级配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileArrivalConfig getFileArrivalConfig() 获取<p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileArrivalConfig(FileArrivalConfig $FileArrivalConfig) 设置<p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfiguration extends AbstractModel
 {
@@ -134,6 +138,12 @@ class WorkflowTriggerConfiguration extends AbstractModel
     public $AdvancedConfig;
 
     /**
+     * @var FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileArrivalConfig;
+
+    /**
      * @param string $TriggerId <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchedulerStatus <p>调度状态 启动：START，暂停：PAUSE</p>
@@ -155,6 +165,8 @@ class WorkflowTriggerConfiguration extends AbstractModel
      * @param string $ExtraInfo <p>Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkflowTriggerAdvancedConfiguration $AdvancedConfig <p>高级配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileArrivalConfig $FileArrivalConfig <p>工作流调度文件到达方式配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,11 @@ class WorkflowTriggerConfiguration extends AbstractModel
         if (array_key_exists("AdvancedConfig",$param) and $param["AdvancedConfig"] !== null) {
             $this->AdvancedConfig = new WorkflowTriggerAdvancedConfiguration();
             $this->AdvancedConfig->deserialize($param["AdvancedConfig"]);
+        }
+
+        if (array_key_exists("FileArrivalConfig",$param) and $param["FileArrivalConfig"] !== null) {
+            $this->FileArrivalConfig = new FileArrivalConfig();
+            $this->FileArrivalConfig->deserialize($param["FileArrivalConfig"]);
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCopyPairType(string $CopyPairType) 设置<p>要查询复制对的类型，可选值：DISK、INSTANCE、CFS</p>
  * @method array getCopyPairIds() 获取<p>要查询复制对ID列表</p>
  * @method void setCopyPairIds(array $CopyPairIds) 设置<p>要查询复制对ID列表</p>
- * @method array getFilters() 获取<p>过滤条件，详见过滤条件表。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
- * @method void setFilters(array $Filters) 设置<p>过滤条件，详见过滤条件表。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
+ * @method array getFilters() 获取<p>过滤条件。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤条件。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
  * @method integer getOffset() 获取<p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节</p>
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节</p>
  * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
@@ -56,7 +56,7 @@ class DescribeCopyPairsRequest extends AbstractModel
     public $CopyPairIds;
 
     /**
-     * @var array <p>过滤条件，详见过滤条件表。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
+     * @var array <p>过滤条件。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
      */
     public $Filters;
 
@@ -103,7 +103,7 @@ class DescribeCopyPairsRequest extends AbstractModel
     /**
      * @param string $CopyPairType <p>要查询复制对的类型，可选值：DISK、INSTANCE、CFS</p>
      * @param array $CopyPairIds <p>要查询复制对ID列表</p>
-     * @param array $Filters <p>过滤条件，详见过滤条件表。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
+     * @param array $Filters <p>过滤条件。支持的Name：disaster-recovery-site-pair-id、target-resource-id、source-resource-id、copy-pair-id、copy-pair-name</p>
      * @param integer $Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节</p>
      * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
      * @param string $Order <p>输出结果按升序还是降序，可选值：ASC、DESC</p>

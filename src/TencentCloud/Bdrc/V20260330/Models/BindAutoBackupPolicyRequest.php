@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoBackupPolicy请求参数结构体
  *
-
+ * @method string getAutoBackupPolicyId() 获取<p>备份策略ID</p>
+ * @method void setAutoBackupPolicyId(string $AutoBackupPolicyId) 设置<p>备份策略ID</p>
+ * @method array getInstanceIds() 获取<p>实例ID列表</p>
+ * @method void setInstanceIds(array $InstanceIds) 设置<p>实例ID列表</p>
  */
 class BindAutoBackupPolicyRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>备份策略ID</p>
+     */
+    public $AutoBackupPolicyId;
 
     /**
+     * @var array <p>实例ID列表</p>
+     */
+    public $InstanceIds;
 
+    /**
+     * @param string $AutoBackupPolicyId <p>备份策略ID</p>
+     * @param array $InstanceIds <p>实例ID列表</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class BindAutoBackupPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AutoBackupPolicyId",$param) and $param["AutoBackupPolicyId"] !== null) {
+            $this->AutoBackupPolicyId = $param["AutoBackupPolicyId"];
+        }
 
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
     }
 }

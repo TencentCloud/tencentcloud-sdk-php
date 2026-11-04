@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateLab请求参数结构体
  *
+ * @method string getId() 获取<p>数据实验室ID</p>
+ * @method void setId(string $Id) 设置<p>数据实验室ID</p>
  * @method string getName() 获取<p>数据实验室名称</p>
  * @method void setName(string $Name) 设置<p>数据实验室名称</p>
  * @method string getImage() 获取<p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
@@ -30,20 +32,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>数据实验室描述</p>
  * @method string getImagePullPolicy() 获取<p>镜像拉取策略（Always, IfNotPresent, Never）</p>
  * @method void setImagePullPolicy(string $ImagePullPolicy) 设置<p>镜像拉取策略（Always, IfNotPresent, Never）</p>
+ * @method string getResourceConfig() 获取<p>资源配置</p>
+ * @method void setResourceConfig(string $ResourceConfig) 设置<p>资源配置</p>
  * @method string getResourceConfigId() 获取<p>资源配置ID</p>
  * @method void setResourceConfigId(string $ResourceConfigId) 设置<p>资源配置ID</p>
+ * @method string getCatalog() 获取<p>存储卷和挂载卷配置</p>
+ * @method void setCatalog(string $Catalog) 设置<p>存储卷和挂载卷配置</p>
  * @method string getGroupId() 获取<p>计算组 ID</p>
  * @method void setGroupId(string $GroupId) 设置<p>计算组 ID</p>
  * @method string getResourcePartitionId() 获取<p>资源分区ID</p>
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>资源分区ID</p>
  * @method string getQueue() 获取<p>队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>队列名称</p>
+ * @method array getServiceTypes() 获取<p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+ * @method void setServiceTypes(array $ServiceTypes) 设置<p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
  * @method string getExampleId() 获取<p>案例ID，当 startMode=EXAMPLE 时必填</p>
  * @method void setExampleId(string $ExampleId) 设置<p>案例ID，当 startMode=EXAMPLE 时必填</p>
  * @method string getCodeArchiveUrl() 获取<p>案例代码包地址，当 startMode=EXAMPLE 时填写</p>
  * @method void setCodeArchiveUrl(string $CodeArchiveUrl) 设置<p>案例代码包地址，当 startMode=EXAMPLE 时填写</p>
  * @method string getLabImagePullPolicy() 获取<p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
  * @method void setLabImagePullPolicy(string $LabImagePullPolicy) 设置<p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+ * @method string getAdvancedOptions() 获取<p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+ * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
  * @method integer getPriority() 获取<p>优先级（1-9，数字越大优先级越高）</p>
  * @method void setPriority(integer $Priority) 设置<p>优先级（1-9，数字越大优先级越高）</p>
  * @method boolean getEnableToken() 获取<p>是否开启token认证</p>
@@ -52,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
  * @method PersistentWorkDir getPersistentWorkDir() 获取<p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
  * @method void setPersistentWorkDir(PersistentWorkDir $PersistentWorkDir) 设置<p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
+ * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置（JSON）</p>
+ * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置（JSON）</p>
  * @method string getImagePullType() 获取<p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method void setImagePullType(string $ImagePullType) 设置<p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
  * @method string getLabImagePullType() 获取<p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -61,6 +73,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class UpdateLabRequest extends AbstractModel
 {
+    /**
+     * @var string <p>数据实验室ID</p>
+     */
+    public $Id;
+
     /**
      * @var string <p>数据实验室名称</p>
      */
@@ -87,9 +104,19 @@ class UpdateLabRequest extends AbstractModel
     public $ImagePullPolicy;
 
     /**
+     * @var string <p>资源配置</p>
+     */
+    public $ResourceConfig;
+
+    /**
      * @var string <p>资源配置ID</p>
      */
     public $ResourceConfigId;
+
+    /**
+     * @var string <p>存储卷和挂载卷配置</p>
+     */
+    public $Catalog;
 
     /**
      * @var string <p>计算组 ID</p>
@@ -107,6 +134,11 @@ class UpdateLabRequest extends AbstractModel
     public $Queue;
 
     /**
+     * @var array <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+     */
+    public $ServiceTypes;
+
+    /**
      * @var string <p>案例ID，当 startMode=EXAMPLE 时必填</p>
      */
     public $ExampleId;
@@ -120,6 +152,11 @@ class UpdateLabRequest extends AbstractModel
      * @var string <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
      */
     public $LabImagePullPolicy;
+
+    /**
+     * @var string <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     */
+    public $AdvancedOptions;
 
     /**
      * @var integer <p>优先级（1-9，数字越大优先级越高）</p>
@@ -142,6 +179,11 @@ class UpdateLabRequest extends AbstractModel
     public $PersistentWorkDir;
 
     /**
+     * @var string <p>弹性伸缩配置（JSON）</p>
+     */
+    public $AutoscalerOptions;
+
+    /**
      * @var string <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
     public $ImagePullType;
@@ -157,22 +199,28 @@ class UpdateLabRequest extends AbstractModel
     public $NetworkConfig;
 
     /**
+     * @param string $Id <p>数据实验室ID</p>
      * @param string $Name <p>数据实验室名称</p>
      * @param string $Image <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
      * @param string $LabImage <p>Lab 镜像地址（必填，用于开发工具如 Jupyter/VSCode/WebShell）。前端在&quot;内置 / 自定义&quot;两态中选择此值；当 Image 字段未显式传入时，后端会基于该字段按 R1（镜像表命中）/R2（同值 fallback）派生 Ray 集群镜像。</p>
      * @param string $Description <p>数据实验室描述</p>
      * @param string $ImagePullPolicy <p>镜像拉取策略（Always, IfNotPresent, Never）</p>
+     * @param string $ResourceConfig <p>资源配置</p>
      * @param string $ResourceConfigId <p>资源配置ID</p>
+     * @param string $Catalog <p>存储卷和挂载卷配置</p>
      * @param string $GroupId <p>计算组 ID</p>
      * @param string $ResourcePartitionId <p>资源分区ID</p>
      * @param string $Queue <p>队列名称</p>
+     * @param array $ServiceTypes <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
      * @param string $ExampleId <p>案例ID，当 startMode=EXAMPLE 时必填</p>
      * @param string $CodeArchiveUrl <p>案例代码包地址，当 startMode=EXAMPLE 时填写</p>
      * @param string $LabImagePullPolicy <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+     * @param string $AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
      * @param integer $Priority <p>优先级（1-9，数字越大优先级越高）</p>
      * @param boolean $EnableToken <p>是否开启token认证</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
      * @param PersistentWorkDir $PersistentWorkDir <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
+     * @param string $AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
      * @param string $ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      * @param string $NetworkConfig <p>用户网络配置(JSON，跨租户 ENI 等)</p>
@@ -190,6 +238,10 @@ class UpdateLabRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -210,8 +262,16 @@ class UpdateLabRequest extends AbstractModel
             $this->ImagePullPolicy = $param["ImagePullPolicy"];
         }
 
+        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+            $this->ResourceConfig = $param["ResourceConfig"];
+        }
+
         if (array_key_exists("ResourceConfigId",$param) and $param["ResourceConfigId"] !== null) {
             $this->ResourceConfigId = $param["ResourceConfigId"];
+        }
+
+        if (array_key_exists("Catalog",$param) and $param["Catalog"] !== null) {
+            $this->Catalog = $param["Catalog"];
         }
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
@@ -226,6 +286,10 @@ class UpdateLabRequest extends AbstractModel
             $this->Queue = $param["Queue"];
         }
 
+        if (array_key_exists("ServiceTypes",$param) and $param["ServiceTypes"] !== null) {
+            $this->ServiceTypes = $param["ServiceTypes"];
+        }
+
         if (array_key_exists("ExampleId",$param) and $param["ExampleId"] !== null) {
             $this->ExampleId = $param["ExampleId"];
         }
@@ -236,6 +300,10 @@ class UpdateLabRequest extends AbstractModel
 
         if (array_key_exists("LabImagePullPolicy",$param) and $param["LabImagePullPolicy"] !== null) {
             $this->LabImagePullPolicy = $param["LabImagePullPolicy"];
+        }
+
+        if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
+            $this->AdvancedOptions = $param["AdvancedOptions"];
         }
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
@@ -258,6 +326,10 @@ class UpdateLabRequest extends AbstractModel
         if (array_key_exists("PersistentWorkDir",$param) and $param["PersistentWorkDir"] !== null) {
             $this->PersistentWorkDir = new PersistentWorkDir();
             $this->PersistentWorkDir->deserialize($param["PersistentWorkDir"]);
+        }
+
+        if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
+            $this->AutoscalerOptions = $param["AutoscalerOptions"];
         }
 
         if (array_key_exists("ImagePullType",$param) and $param["ImagePullType"] !== null) {

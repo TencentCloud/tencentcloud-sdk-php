@@ -20,15 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileBackupObjects返回参数结构体
  *
- * @method integer getTotalCount() 获取当前路径下包含的目录及文件总数
- * @method void setTotalCount(integer $TotalCount) 设置当前路径下包含的目录及文件总数
+ * @method array getDirList() 获取<p>当前路径下包含的目录信息</p>
+ * @method void setDirList(array $DirList) 设置<p>当前路径下包含的目录信息</p>
+ * @method array getFileList() 获取<p>当前路径下包含的文件信息</p>
+ * @method void setFileList(array $FileList) 设置<p>当前路径下包含的文件信息</p>
+ * @method integer getTotalCount() 获取<p>当前路径下包含的目录及文件总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>当前路径下包含的目录及文件总数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFileBackupObjectsResponse extends AbstractModel
 {
     /**
-     * @var integer 当前路径下包含的目录及文件总数
+     * @var array <p>当前路径下包含的目录信息</p>
+     */
+    public $DirList;
+
+    /**
+     * @var array <p>当前路径下包含的文件信息</p>
+     */
+    public $FileList;
+
+    /**
+     * @var integer <p>当前路径下包含的目录及文件总数</p>
      */
     public $TotalCount;
 
@@ -38,7 +52,9 @@ class DescribeFileBackupObjectsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 当前路径下包含的目录及文件总数
+     * @param array $DirList <p>当前路径下包含的目录信息</p>
+     * @param array $FileList <p>当前路径下包含的文件信息</p>
+     * @param integer $TotalCount <p>当前路径下包含的目录及文件总数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,6 +70,24 @@ class DescribeFileBackupObjectsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DirList",$param) and $param["DirList"] !== null) {
+            $this->DirList = [];
+            foreach ($param["DirList"] as $key => $value){
+                $obj = new FileInfo();
+                $obj->deserialize($value);
+                array_push($this->DirList, $obj);
+            }
+        }
+
+        if (array_key_exists("FileList",$param) and $param["FileList"] !== null) {
+            $this->FileList = [];
+            foreach ($param["FileList"] as $key => $value){
+                $obj = new FileInfo();
+                $obj->deserialize($value);
+                array_push($this->FileList, $obj);
+            }
+        }
+
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
         }

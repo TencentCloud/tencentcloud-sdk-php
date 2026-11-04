@@ -33,7 +33,7 @@ use TencentCloud\Bdrc\V20260330\Models as Models;
  * @method Models\CreateDisasterRecoveryVpcMappingResponse CreateDisasterRecoveryVpcMapping(Models\CreateDisasterRecoveryVpcMappingRequest $req) 本接口用于创建容灾站点VPC网络映射
  * @method Models\CreateFileBackupResponse CreateFileBackup(Models\CreateFileBackupRequest $req) 本接口用于创建文件备份点
  * @method Models\CreateFileBackupPlanResponse CreateFileBackupPlan(Models\CreateFileBackupPlanRequest $req) 本接口用于创建备份计划
- * @method Models\CreateFileRestoreTaskResponse CreateFileRestoreTask(Models\CreateFileRestoreTaskRequest $req) 创建恢复任务
+ * @method Models\CreateFileRestoreTaskResponse CreateFileRestoreTask(Models\CreateFileRestoreTaskRequest $req) 创建恢复任务。
  * @method Models\CreateInstanceCopyPairResponse CreateInstanceCopyPair(Models\CreateInstanceCopyPairRequest $req) 本接口用于创建CVM复制对
  * @method Models\CreateInstanceDrillPairsResponse CreateInstanceDrillPairs(Models\CreateInstanceDrillPairsRequest $req) 创建cvm演练
  * @method Models\CreateSecurityGroupMappingResponse CreateSecurityGroupMapping(Models\CreateSecurityGroupMappingRequest $req) 本接口用于为站点对新增安全组映射，生产端实例绑定的安全组为源端，需要为每个生产端实例绑定的安全组建立映射，在创建复制对时，会自动以映射后的目标安全组作为容灾端实例绑定的安全组。

@@ -18,7 +18,7 @@ namespace TencentCloud\Ags\V20250920\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Record 的一个不可变 Version 快照；记录了描述符、来源配置与审批状态。
+ * Record 的版本信息，包含不可变描述符、来源配置与审批状态。DescribeRegistryRecordVersionList 另返回所属 Record 当前的 Name、Description、DescriptorType 展示投影；这些展示字段不属于版本快照，其他接口可不返回。
  *
  * @method string getVersionId() 获取<p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,9 +96,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovalActions(array $ApprovalActions) 设置<p>Version 历次审批动作。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContentReadyTime() 获取<p>TAR 内容成功校验、完成物化并进入 READY 的时间；MANUAL / URL_IMPORT 或尚未 READY 的 TAR_PACKAGE 均为空。</p>
+ * @method string getContentReadyTime() 获取<p>文件内容就绪时间，UTC RFC3339 格式。</p><p>仅 TAR_PACKAGE 或 FILE 来源且 ContentStatus=READY 的版本返回；其他来源或未就绪文件为空。Skill 沿用现有 TAR 内容校验机制，Plugin 仅确认文件大小和完整性。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContentReadyTime(string $ContentReadyTime) 设置<p>TAR 内容成功校验、完成物化并进入 READY 的时间；MANUAL / URL_IMPORT 或尚未 READY 的 TAR_PACKAGE 均为空。</p>
+ * @method void setContentReadyTime(string $ContentReadyTime) 设置<p>文件内容就绪时间，UTC RFC3339 格式。</p><p>仅 TAR_PACKAGE 或 FILE 来源且 ContentStatus=READY 的版本返回；其他来源或未就绪文件为空。Skill 沿用现有 TAR 内容校验机制，Plugin 仅确认文件大小和完整性。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChangeLog() 获取<p>本次 Version 的变更原因，最大 4096 字符；不可修改。Revision 1 或未填写时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,6 +108,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelSet(array $LabelSet) 设置<p>当前绑定该 Version 的 Label Name 列表（例如 stable / latest 或自定义 Label 名称）。未绑定 Label 不在此返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSupportedHarnessVersions() 获取<p>该资产版本支持的 Harness 引擎与具体版本对象列表。</p><p>参数格式：元素为 HarnessVersionReference，包含必填的 HarnessEngine 和 HarnessEngineVersion，原样使用 DescribeHarnessEngineList 返回值；每个字段 1 至 128 字符，最多 128 项，按二元组区分大小写去重。不使用拼接标识、通配符或版本范围。</p><p>默认值：[]</p><p>随版本创建，不继承。省略或空列表表示未声明，不代表支持所有 Harness。旧字符串快照按未声明返回 []，不推断引擎，不匹配兼容筛选。supported_harness_engine 和 supported_harness_version 必须同时传入并精确匹配同一个对象；Managed Harness 按目标引擎与版本二元组校验。</p>
+ * @method void setSupportedHarnessVersions(array $SupportedHarnessVersions) 设置<p>该资产版本支持的 Harness 引擎与具体版本对象列表。</p><p>参数格式：元素为 HarnessVersionReference，包含必填的 HarnessEngine 和 HarnessEngineVersion，原样使用 DescribeHarnessEngineList 返回值；每个字段 1 至 128 字符，最多 128 项，按二元组区分大小写去重。不使用拼接标识、通配符或版本范围。</p><p>默认值：[]</p><p>随版本创建，不继承。省略或空列表表示未声明，不代表支持所有 Harness。旧字符串快照按未声明返回 []，不推断引擎，不匹配兼容筛选。supported_harness_engine 和 supported_harness_version 必须同时传入并精确匹配同一个对象；Managed Harness 按目标引擎与版本二元组校验。</p>
+ * @method array getMetadata() 获取<p>版本元数据的 Name/Value 对象数组。</p><p>参数格式：每项仅包含必填的 Name、Value 两个字符串字段。Name 非空、小写且数组内唯一，不自动转换；重复 Name 即使 Value 相同也返回 InvalidParameter。Value 允许空字符串，保留大小写；不接受嵌套对象、数组或非字符串值。</p><p>默认值：空数组 []。创建新版本时省略或 [] 均为空，不继承；null、JSON 字符串和原生对象非法。响应按 Name 升序返回，旧 SQL NULL 归一为 []。服务内部使用 map[string]string，数据库 JSON 列保存对象。publisher 表示发布者展示名称；metadata.&lt;key&gt; 按完整小写名称精确筛选，规则不变。</p>
+ * @method void setMetadata(array $Metadata) 设置<p>版本元数据的 Name/Value 对象数组。</p><p>参数格式：每项仅包含必填的 Name、Value 两个字符串字段。Name 非空、小写且数组内唯一，不自动转换；重复 Name 即使 Value 相同也返回 InvalidParameter。Value 允许空字符串，保留大小写；不接受嵌套对象、数组或非字符串值。</p><p>默认值：空数组 []。创建新版本时省略或 [] 均为空，不继承；null、JSON 字符串和原生对象非法。响应按 Name 升序返回，旧 SQL NULL 归一为 []。服务内部使用 map[string]string，数据库 JSON 列保存对象。publisher 表示发布者展示名称；metadata.&lt;key&gt; 按完整小写名称精确筛选，规则不变。</p>
+ * @method string getName() 获取<p>所属 Record 当前的名称。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示。</p><p>展示投影不保存到不可变版本快照；其他返回版本信息的接口可不包含此字段。</p>
+ * @method void setName(string $Name) 设置<p>所属 Record 当前的名称。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示。</p><p>展示投影不保存到不可变版本快照；其他返回版本信息的接口可不包含此字段。</p>
+ * @method string getDescription() 获取<p>所属 Record 当前的描述。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，允许为空字符串。</p><p>Record 描述更新后，列表查询同步反映新值，包括空字符串；固定 VersionId、Descriptors 和其他版本内容不变。其他返回版本信息的接口可不包含此字段。</p>
+ * @method void setDescription(string $Description) 设置<p>所属 Record 当前的描述。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，允许为空字符串。</p><p>Record 描述更新后，列表查询同步反映新值，包括空字符串；固定 VersionId、Descriptors 和其他版本内容不变。其他返回版本信息的接口可不包含此字段。</p>
+ * @method string getDescriptorType() 获取<p>所属 Record 的底层资产类型。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示及 descriptor_type 筛选。</p><p>取值包括 MCP、A2A、AGUI、CUSTOM、AGENT_SKILLS 和 PLUGIN。不新增 Kind 或 TOOL 类型；此展示投影不保存到版本快照，其他返回版本信息的接口可不包含此字段。</p>
+ * @method void setDescriptorType(string $DescriptorType) 设置<p>所属 Record 的底层资产类型。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示及 descriptor_type 筛选。</p><p>取值包括 MCP、A2A、AGUI、CUSTOM、AGENT_SKILLS 和 PLUGIN。不新增 Kind 或 TOOL 类型；此展示投影不保存到版本快照，其他返回版本信息的接口可不包含此字段。</p>
  */
 class CloudRecordVersion extends AbstractModel
 {
@@ -226,7 +236,7 @@ class CloudRecordVersion extends AbstractModel
     public $ApprovalActions;
 
     /**
-     * @var string <p>TAR 内容成功校验、完成物化并进入 READY 的时间；MANUAL / URL_IMPORT 或尚未 READY 的 TAR_PACKAGE 均为空。</p>
+     * @var string <p>文件内容就绪时间，UTC RFC3339 格式。</p><p>仅 TAR_PACKAGE 或 FILE 来源且 ContentStatus=READY 的版本返回；其他来源或未就绪文件为空。Skill 沿用现有 TAR 内容校验机制，Plugin 仅确认文件大小和完整性。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentReadyTime;
@@ -242,6 +252,31 @@ class CloudRecordVersion extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelSet;
+
+    /**
+     * @var array <p>该资产版本支持的 Harness 引擎与具体版本对象列表。</p><p>参数格式：元素为 HarnessVersionReference，包含必填的 HarnessEngine 和 HarnessEngineVersion，原样使用 DescribeHarnessEngineList 返回值；每个字段 1 至 128 字符，最多 128 项，按二元组区分大小写去重。不使用拼接标识、通配符或版本范围。</p><p>默认值：[]</p><p>随版本创建，不继承。省略或空列表表示未声明，不代表支持所有 Harness。旧字符串快照按未声明返回 []，不推断引擎，不匹配兼容筛选。supported_harness_engine 和 supported_harness_version 必须同时传入并精确匹配同一个对象；Managed Harness 按目标引擎与版本二元组校验。</p>
+     */
+    public $SupportedHarnessVersions;
+
+    /**
+     * @var array <p>版本元数据的 Name/Value 对象数组。</p><p>参数格式：每项仅包含必填的 Name、Value 两个字符串字段。Name 非空、小写且数组内唯一，不自动转换；重复 Name 即使 Value 相同也返回 InvalidParameter。Value 允许空字符串，保留大小写；不接受嵌套对象、数组或非字符串值。</p><p>默认值：空数组 []。创建新版本时省略或 [] 均为空，不继承；null、JSON 字符串和原生对象非法。响应按 Name 升序返回，旧 SQL NULL 归一为 []。服务内部使用 map[string]string，数据库 JSON 列保存对象。publisher 表示发布者展示名称；metadata.&lt;key&gt; 按完整小写名称精确筛选，规则不变。</p>
+     */
+    public $Metadata;
+
+    /**
+     * @var string <p>所属 Record 当前的名称。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示。</p><p>展示投影不保存到不可变版本快照；其他返回版本信息的接口可不包含此字段。</p>
+     */
+    public $Name;
+
+    /**
+     * @var string <p>所属 Record 当前的描述。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，允许为空字符串。</p><p>Record 描述更新后，列表查询同步反映新值，包括空字符串；固定 VersionId、Descriptors 和其他版本内容不变。其他返回版本信息的接口可不包含此字段。</p>
+     */
+    public $Description;
+
+    /**
+     * @var string <p>所属 Record 的底层资产类型。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示及 descriptor_type 筛选。</p><p>取值包括 MCP、A2A、AGUI、CUSTOM、AGENT_SKILLS 和 PLUGIN。不新增 Kind 或 TOOL 类型；此展示投影不保存到版本快照，其他返回版本信息的接口可不包含此字段。</p>
+     */
+    public $DescriptorType;
 
     /**
      * @param string $VersionId <p>Version ID；格式 <code>rv-</code> + 8 位小写字母/数字。</p>
@@ -282,12 +317,17 @@ class CloudRecordVersion extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApprovalActions <p>Version 历次审批动作。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContentReadyTime <p>TAR 内容成功校验、完成物化并进入 READY 的时间；MANUAL / URL_IMPORT 或尚未 READY 的 TAR_PACKAGE 均为空。</p>
+     * @param string $ContentReadyTime <p>文件内容就绪时间，UTC RFC3339 格式。</p><p>仅 TAR_PACKAGE 或 FILE 来源且 ContentStatus=READY 的版本返回；其他来源或未就绪文件为空。Skill 沿用现有 TAR 内容校验机制，Plugin 仅确认文件大小和完整性。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChangeLog <p>本次 Version 的变更原因，最大 4096 字符；不可修改。Revision 1 或未填写时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelSet <p>当前绑定该 Version 的 Label Name 列表（例如 stable / latest 或自定义 Label 名称）。未绑定 Label 不在此返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SupportedHarnessVersions <p>该资产版本支持的 Harness 引擎与具体版本对象列表。</p><p>参数格式：元素为 HarnessVersionReference，包含必填的 HarnessEngine 和 HarnessEngineVersion，原样使用 DescribeHarnessEngineList 返回值；每个字段 1 至 128 字符，最多 128 项，按二元组区分大小写去重。不使用拼接标识、通配符或版本范围。</p><p>默认值：[]</p><p>随版本创建，不继承。省略或空列表表示未声明，不代表支持所有 Harness。旧字符串快照按未声明返回 []，不推断引擎，不匹配兼容筛选。supported_harness_engine 和 supported_harness_version 必须同时传入并精确匹配同一个对象；Managed Harness 按目标引擎与版本二元组校验。</p>
+     * @param array $Metadata <p>版本元数据的 Name/Value 对象数组。</p><p>参数格式：每项仅包含必填的 Name、Value 两个字符串字段。Name 非空、小写且数组内唯一，不自动转换；重复 Name 即使 Value 相同也返回 InvalidParameter。Value 允许空字符串，保留大小写；不接受嵌套对象、数组或非字符串值。</p><p>默认值：空数组 []。创建新版本时省略或 [] 均为空，不继承；null、JSON 字符串和原生对象非法。响应按 Name 升序返回，旧 SQL NULL 归一为 []。服务内部使用 map[string]string，数据库 JSON 列保存对象。publisher 表示发布者展示名称；metadata.&lt;key&gt; 按完整小写名称精确筛选，规则不变。</p>
+     * @param string $Name <p>所属 Record 当前的名称。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示。</p><p>展示投影不保存到不可变版本快照；其他返回版本信息的接口可不包含此字段。</p>
+     * @param string $Description <p>所属 Record 当前的描述。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，允许为空字符串。</p><p>Record 描述更新后，列表查询同步反映新值，包括空字符串；固定 VersionId、Descriptors 和其他版本内容不变。其他返回版本信息的接口可不包含此字段。</p>
+     * @param string $DescriptorType <p>所属 Record 的底层资产类型。仅 DescribeRegistryRecordVersionList 在普通模式和市场模式中返回，用于卡片展示及 descriptor_type 筛选。</p><p>取值包括 MCP、A2A、AGUI、CUSTOM、AGENT_SKILLS 和 PLUGIN。不新增 Kind 或 TOOL 类型；此展示投影不保存到版本快照，其他返回版本信息的接口可不包含此字段。</p>
      */
     function __construct()
     {
@@ -393,6 +433,36 @@ class CloudRecordVersion extends AbstractModel
 
         if (array_key_exists("LabelSet",$param) and $param["LabelSet"] !== null) {
             $this->LabelSet = $param["LabelSet"];
+        }
+
+        if (array_key_exists("SupportedHarnessVersions",$param) and $param["SupportedHarnessVersions"] !== null) {
+            $this->SupportedHarnessVersions = [];
+            foreach ($param["SupportedHarnessVersions"] as $key => $value){
+                $obj = new HarnessVersionReference();
+                $obj->deserialize($value);
+                array_push($this->SupportedHarnessVersions, $obj);
+            }
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = [];
+            foreach ($param["Metadata"] as $key => $value){
+                $obj = new MetadataEntry();
+                $obj->deserialize($value);
+                array_push($this->Metadata, $obj);
+            }
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("DescriptorType",$param) and $param["DescriptorType"] !== null) {
+            $this->DescriptorType = $param["DescriptorType"];
         }
     }
 }

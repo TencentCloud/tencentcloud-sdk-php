@@ -22,10 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取<p>任务ID</p>
  * @method void setId(string $Id) 设置<p>任务ID</p>
+ * @method string getClusterId() 获取<p>所属集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>所属集群ID</p>
  * @method string getResourcePartitionId() 获取<p>所属资源分区ID</p>
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>所属资源分区ID</p>
+ * @method string getResourcePartitionName() 获取<p>默认资源分区名称</p>
+ * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>默认资源分区名称</p>
  * @method string getQueue() 获取<p>所属队列名称</p>
  * @method void setQueue(string $Queue) 设置<p>所属队列名称</p>
+ * @method string getSubmissionId() 获取<p>Ray Submission ID</p>
+ * @method void setSubmissionId(string $SubmissionId) 设置<p>Ray Submission ID</p>
  * @method string getStatus() 获取<p>任务状态</p>
  * @method void setStatus(string $Status) 设置<p>任务状态</p>
  * @method string getEntrypoint() 获取<p>入口命令</p>
@@ -38,10 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置<p>用户UIN</p>
  * @method string getSubAccountUin() 获取<p>子用户UIN</p>
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子用户UIN</p>
+ * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method string getHistoryUrl() 获取<p>历史记录链接</p>
+ * @method void setHistoryUrl(string $HistoryUrl) 设置<p>历史记录链接</p>
  * @method integer getRunningTime() 获取<p>运行时间(ms)</p>
  * @method void setRunningTime(integer $RunningTime) 设置<p>运行时间(ms)</p>
+ * @method integer getFinishTime() 获取<p>完成时间</p>
+ * @method void setFinishTime(integer $FinishTime) 设置<p>完成时间</p>
  * @method integer getCreateTime() 获取<p>创建时间</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p>
+ * @method string getErrorMessage() 获取<p>失败原因/错误信息</p>
+ * @method void setErrorMessage(string $ErrorMessage) 设置<p>失败原因/错误信息</p>
  * @method string getRuntimeEnv() 获取<p>运行时环境配置(JSON)</p>
  * @method void setRuntimeEnv(string $RuntimeEnv) 设置<p>运行时环境配置(JSON)</p>
  * @method string getImage() 获取<p>镜像地址</p>
@@ -54,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePullPolicy(string $ImagePullPolicy) 设置<p>镜像拉取策略</p>
  * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置(JSON)</p>
  * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置(JSON)</p>
+ * @method string getSpecId() 获取<p>来源配置ID</p>
+ * @method void setSpecId(string $SpecId) 设置<p>来源配置ID</p>
+ * @method string getSpecName() 获取<p>来源配置名称</p>
+ * @method void setSpecName(string $SpecName) 设置<p>来源配置名称</p>
  * @method string getAdvancedOptions() 获取<p>高级参数，JSON 字符串（透传到 Neutrino）</p>
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数，JSON 字符串（透传到 Neutrino）</p>
  * @method integer getPriority() 获取<p>作业优先级（1-9，数字越大优先级越高）</p>
@@ -75,14 +93,29 @@ class SubmitRayJobResponse extends AbstractModel
     public $Id;
 
     /**
+     * @var string <p>所属集群ID</p>
+     */
+    public $ClusterId;
+
+    /**
      * @var string <p>所属资源分区ID</p>
      */
     public $ResourcePartitionId;
 
     /**
+     * @var string <p>默认资源分区名称</p>
+     */
+    public $ResourcePartitionName;
+
+    /**
      * @var string <p>所属队列名称</p>
      */
     public $Queue;
+
+    /**
+     * @var string <p>Ray Submission ID</p>
+     */
+    public $SubmissionId;
 
     /**
      * @var string <p>任务状态</p>
@@ -115,14 +148,34 @@ class SubmitRayJobResponse extends AbstractModel
     public $SubAccountUin;
 
     /**
+     * @var string <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public $SubAccountName;
+
+    /**
+     * @var string <p>历史记录链接</p>
+     */
+    public $HistoryUrl;
+
+    /**
      * @var integer <p>运行时间(ms)</p>
      */
     public $RunningTime;
 
     /**
+     * @var integer <p>完成时间</p>
+     */
+    public $FinishTime;
+
+    /**
      * @var integer <p>创建时间</p>
      */
     public $CreateTime;
+
+    /**
+     * @var string <p>失败原因/错误信息</p>
+     */
+    public $ErrorMessage;
 
     /**
      * @var string <p>运行时环境配置(JSON)</p>
@@ -153,6 +206,16 @@ class SubmitRayJobResponse extends AbstractModel
      * @var string <p>弹性伸缩配置(JSON)</p>
      */
     public $AutoscalerOptions;
+
+    /**
+     * @var string <p>来源配置ID</p>
+     */
+    public $SpecId;
+
+    /**
+     * @var string <p>来源配置名称</p>
+     */
+    public $SpecName;
 
     /**
      * @var string <p>高级参数，JSON 字符串（透传到 Neutrino）</p>
@@ -186,22 +249,31 @@ class SubmitRayJobResponse extends AbstractModel
 
     /**
      * @param string $Id <p>任务ID</p>
+     * @param string $ClusterId <p>所属集群ID</p>
      * @param string $ResourcePartitionId <p>所属资源分区ID</p>
+     * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>所属队列名称</p>
+     * @param string $SubmissionId <p>Ray Submission ID</p>
      * @param string $Status <p>任务状态</p>
      * @param string $Entrypoint <p>入口命令</p>
      * @param string $JobName <p>任务名称</p>
      * @param integer $AppId <p>应用ID</p>
      * @param string $Uin <p>用户UIN</p>
      * @param string $SubAccountUin <p>子用户UIN</p>
+     * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param string $HistoryUrl <p>历史记录链接</p>
      * @param integer $RunningTime <p>运行时间(ms)</p>
+     * @param integer $FinishTime <p>完成时间</p>
      * @param integer $CreateTime <p>创建时间</p>
+     * @param string $ErrorMessage <p>失败原因/错误信息</p>
      * @param string $RuntimeEnv <p>运行时环境配置(JSON)</p>
      * @param string $Image <p>镜像地址</p>
      * @param string $ResourceConfig <p>资源配置(JSON)</p>
      * @param string $Catalog <p>存储卷和挂载卷配置(JSON)</p>
      * @param string $ImagePullPolicy <p>镜像拉取策略</p>
      * @param string $AutoscalerOptions <p>弹性伸缩配置(JSON)</p>
+     * @param string $SpecId <p>来源配置ID</p>
+     * @param string $SpecName <p>来源配置名称</p>
      * @param string $AdvancedOptions <p>高级参数，JSON 字符串（透传到 Neutrino）</p>
      * @param integer $Priority <p>作业优先级（1-9，数字越大优先级越高）</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将资源与腾讯云标签系统中的标签绑定</p>
@@ -226,12 +298,24 @@ class SubmitRayJobResponse extends AbstractModel
             $this->Id = $param["Id"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("ResourcePartitionId",$param) and $param["ResourcePartitionId"] !== null) {
             $this->ResourcePartitionId = $param["ResourcePartitionId"];
         }
 
+        if (array_key_exists("ResourcePartitionName",$param) and $param["ResourcePartitionName"] !== null) {
+            $this->ResourcePartitionName = $param["ResourcePartitionName"];
+        }
+
         if (array_key_exists("Queue",$param) and $param["Queue"] !== null) {
             $this->Queue = $param["Queue"];
+        }
+
+        if (array_key_exists("SubmissionId",$param) and $param["SubmissionId"] !== null) {
+            $this->SubmissionId = $param["SubmissionId"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -258,12 +342,28 @@ class SubmitRayJobResponse extends AbstractModel
             $this->SubAccountUin = $param["SubAccountUin"];
         }
 
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
+        }
+
+        if (array_key_exists("HistoryUrl",$param) and $param["HistoryUrl"] !== null) {
+            $this->HistoryUrl = $param["HistoryUrl"];
+        }
+
         if (array_key_exists("RunningTime",$param) and $param["RunningTime"] !== null) {
             $this->RunningTime = $param["RunningTime"];
         }
 
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
 
         if (array_key_exists("RuntimeEnv",$param) and $param["RuntimeEnv"] !== null) {
@@ -288,6 +388,14 @@ class SubmitRayJobResponse extends AbstractModel
 
         if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
             $this->AutoscalerOptions = $param["AutoscalerOptions"];
+        }
+
+        if (array_key_exists("SpecId",$param) and $param["SpecId"] !== null) {
+            $this->SpecId = $param["SpecId"];
+        }
+
+        if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
+            $this->SpecName = $param["SpecName"];
         }
 
         if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {

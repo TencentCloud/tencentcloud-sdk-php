@@ -20,146 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 持有的电子印章信息
  *
- * @method string getSealId() 获取电子印章编号
- * @method void setSealId(string $SealId) 设置电子印章编号
- * @method string getSealName() 获取电子印章名称
- * @method void setSealName(string $SealName) 设置电子印章名称
- * @method integer getCreateOn() 获取电子印章授权时间戳，单位秒
- * @method void setCreateOn(integer $CreateOn) 设置电子印章授权时间戳，单位秒
- * @method string getCreator() 获取电子印章授权人，电子签的UserId
- * @method void setCreator(string $Creator) 设置电子印章授权人，电子签的UserId
- * @method string getSealPolicyId() 获取电子印章策略Id
- * @method void setSealPolicyId(string $SealPolicyId) 设置电子印章策略Id
- * @method string getSealStatus() 获取印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
- * @method void setSealStatus(string $SealStatus) 设置印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
- * @method string getFailReason() 获取审核失败原因
- * @method void setFailReason(string $FailReason) 设置审核失败原因
- * @method string getUrl() 获取印章图片url，5分钟内有效
- * @method void setUrl(string $Url) 设置印章图片url，5分钟内有效
- * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
- * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
- * @method boolean getIsAllTime() 获取用印申请是否为永久授权
- * @method void setIsAllTime(boolean $IsAllTime) 设置用印申请是否为永久授权
- * @method array getAuthorizedUsers() 获取授权人列表
- * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
- * @method integer getRealWidth() 获取印章的真实宽度，单位毫米	
- * @method void setRealWidth(integer $RealWidth) 设置印章的真实宽度，单位毫米	
- * @method integer getRealHeight() 获取印章的真实高度，单位毫米	
- * @method void setRealHeight(integer $RealHeight) 设置印章的真实高度，单位毫米	
- * @method string getSealDescription() 获取印章描述
- * @method void setSealDescription(string $SealDescription) 设置印章描述
+ * @method string getSealId() 获取<p>电子印章编号</p>
+ * @method void setSealId(string $SealId) 设置<p>电子印章编号</p>
+ * @method string getSealName() 获取<p>电子印章名称</p>
+ * @method void setSealName(string $SealName) 设置<p>电子印章名称</p>
+ * @method integer getCreateOn() 获取<p>电子印章授权时间戳，单位秒</p>
+ * @method void setCreateOn(integer $CreateOn) 设置<p>电子印章授权时间戳，单位秒</p>
+ * @method string getCreator() 获取<p>电子印章授权人，电子签的UserId</p>
+ * @method void setCreator(string $Creator) 设置<p>电子印章授权人，电子签的UserId</p>
+ * @method string getSealPolicyId() 获取<p>电子印章策略Id</p>
+ * @method void setSealPolicyId(string $SealPolicyId) 设置<p>电子印章策略Id</p>
+ * @method string getSealStatus() 获取<p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
+ * @method void setSealStatus(string $SealStatus) 设置<p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
+ * @method string getFailReason() 获取<p>审核失败原因</p>
+ * @method void setFailReason(string $FailReason) 设置<p>审核失败原因</p>
+ * @method string getUrl() 获取<p>印章图片url，5分钟内有效</p>
+ * @method void setUrl(string $Url) 设置<p>印章图片url，5分钟内有效</p>
+ * @method string getSealType() 获取<p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
+ * @method void setSealType(string $SealType) 设置<p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
+ * @method boolean getIsAllTime() 获取<p>用印申请是否为永久授权</p>
+ * @method void setIsAllTime(boolean $IsAllTime) 设置<p>用印申请是否为永久授权</p>
+ * @method array getAuthorizedUsers() 获取<p>授权人列表</p>
+ * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置<p>授权人列表</p>
+ * @method integer getRealWidth() 获取<p>印章的真实宽度，单位毫米</p>
+ * @method void setRealWidth(integer $RealWidth) 设置<p>印章的真实宽度，单位毫米</p>
+ * @method integer getRealHeight() 获取<p>印章的真实高度，单位毫米</p>
+ * @method void setRealHeight(integer $RealHeight) 设置<p>印章的真实高度，单位毫米</p>
+ * @method string getSealDescription() 获取<p>印章描述</p>
+ * @method void setSealDescription(string $SealDescription) 设置<p>印章描述</p>
  */
 class OccupiedSeal extends AbstractModel
 {
     /**
-     * @var string 电子印章编号
+     * @var string <p>电子印章编号</p>
      */
     public $SealId;
 
     /**
-     * @var string 电子印章名称
+     * @var string <p>电子印章名称</p>
      */
     public $SealName;
 
     /**
-     * @var integer 电子印章授权时间戳，单位秒
+     * @var integer <p>电子印章授权时间戳，单位秒</p>
      */
     public $CreateOn;
 
     /**
-     * @var string 电子印章授权人，电子签的UserId
+     * @var string <p>电子印章授权人，电子签的UserId</p>
      */
     public $Creator;
 
     /**
-     * @var string 电子印章策略Id
+     * @var string <p>电子印章策略Id</p>
      */
     public $SealPolicyId;
 
     /**
-     * @var string 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
+     * @var string <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
      */
     public $SealStatus;
 
     /**
-     * @var string 审核失败原因
+     * @var string <p>审核失败原因</p>
      */
     public $FailReason;
 
     /**
-     * @var string 印章图片url，5分钟内有效
+     * @var string <p>印章图片url，5分钟内有效</p>
      */
     public $Url;
 
     /**
-     * @var string 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
+     * @var string <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
      */
     public $SealType;
 
     /**
-     * @var boolean 用印申请是否为永久授权
+     * @var boolean <p>用印申请是否为永久授权</p>
      */
     public $IsAllTime;
 
     /**
-     * @var array 授权人列表
+     * @var array <p>授权人列表</p>
      */
     public $AuthorizedUsers;
 
     /**
-     * @var integer 印章的真实宽度，单位毫米	
+     * @var integer <p>印章的真实宽度，单位毫米</p>
      */
     public $RealWidth;
 
     /**
-     * @var integer 印章的真实高度，单位毫米	
+     * @var integer <p>印章的真实高度，单位毫米</p>
      */
     public $RealHeight;
 
     /**
-     * @var string 印章描述
+     * @var string <p>印章描述</p>
      */
     public $SealDescription;
 
     /**
-     * @param string $SealId 电子印章编号
-     * @param string $SealName 电子印章名称
-     * @param integer $CreateOn 电子印章授权时间戳，单位秒
-     * @param string $Creator 电子印章授权人，电子签的UserId
-     * @param string $SealPolicyId 电子印章策略Id
-     * @param string $SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
-     * @param string $FailReason 审核失败原因
-     * @param string $Url 印章图片url，5分钟内有效
-     * @param string $SealType 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-     * @param boolean $IsAllTime 用印申请是否为永久授权
-     * @param array $AuthorizedUsers 授权人列表
-     * @param integer $RealWidth 印章的真实宽度，单位毫米	
-     * @param integer $RealHeight 印章的真实高度，单位毫米	
-     * @param string $SealDescription 印章描述
+     * @param string $SealId <p>电子印章编号</p>
+     * @param string $SealName <p>电子印章名称</p>
+     * @param integer $CreateOn <p>电子印章授权时间戳，单位秒</p>
+     * @param string $Creator <p>电子印章授权人，电子签的UserId</p>
+     * @param string $SealPolicyId <p>电子印章策略Id</p>
+     * @param string $SealStatus <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
+     * @param string $FailReason <p>审核失败原因</p>
+     * @param string $Url <p>印章图片url，5分钟内有效</p>
+     * @param string $SealType <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
+     * @param boolean $IsAllTime <p>用印申请是否为永久授权</p>
+     * @param array $AuthorizedUsers <p>授权人列表</p>
+     * @param integer $RealWidth <p>印章的真实宽度，单位毫米</p>
+     * @param integer $RealHeight <p>印章的真实高度，单位毫米</p>
+     * @param string $SealDescription <p>印章描述</p>
      */
     function __construct()
     {

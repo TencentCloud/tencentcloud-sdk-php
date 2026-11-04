@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() 获取<p>任务ID</p>
  * @method void setId(string $Id) 设置<p>任务ID</p>
+ * @method string getClusterId() 获取<p>所属集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>所属集群ID</p>
  * @method string getResourcePartitionId() 获取<p>所属资源分区ID</p>
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>所属资源分区ID</p>
  * @method string getResourcePartitionName() 获取<p>默认资源分区名称</p>
@@ -30,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueue(string $Queue) 设置<p>所属队列名称</p>
  * @method string getQueueAlias() 获取<p>所属队列别名</p>
  * @method void setQueueAlias(string $QueueAlias) 设置<p>所属队列别名</p>
+ * @method string getSubmissionId() 获取<p>Ray Submission ID</p>
+ * @method void setSubmissionId(string $SubmissionId) 设置<p>Ray Submission ID</p>
  * @method string getStatus() 获取<p>任务状态</p>
  * @method void setStatus(string $Status) 设置<p>任务状态</p>
  * @method string getEntrypoint() 获取<p>入口命令</p>
@@ -42,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(string $Uin) 设置<p>用户主账号UIN</p>
  * @method string getSubAccountUin() 获取<p>创建账号</p>
  * @method void setSubAccountUin(string $SubAccountUin) 设置<p>创建账号</p>
+ * @method string getSubAccountName() 获取<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子用户名称（由聚合层通过 CAM 接口回填）</p>
  * @method string getHistoryUrl() 获取<p>历史记录链接</p>
  * @method void setHistoryUrl(string $HistoryUrl) 设置<p>历史记录链接</p>
  * @method integer getRunningTime() 获取<p>运行时间(ms)</p>
@@ -89,6 +95,11 @@ class GetRayJobResponse extends AbstractModel
     public $Id;
 
     /**
+     * @var string <p>所属集群ID</p>
+     */
+    public $ClusterId;
+
+    /**
      * @var string <p>所属资源分区ID</p>
      */
     public $ResourcePartitionId;
@@ -107,6 +118,11 @@ class GetRayJobResponse extends AbstractModel
      * @var string <p>所属队列别名</p>
      */
     public $QueueAlias;
+
+    /**
+     * @var string <p>Ray Submission ID</p>
+     */
+    public $SubmissionId;
 
     /**
      * @var string <p>任务状态</p>
@@ -137,6 +153,11 @@ class GetRayJobResponse extends AbstractModel
      * @var string <p>创建账号</p>
      */
     public $SubAccountUin;
+
+    /**
+     * @var string <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var string <p>历史记录链接</p>
@@ -235,16 +256,19 @@ class GetRayJobResponse extends AbstractModel
 
     /**
      * @param string $Id <p>任务ID</p>
+     * @param string $ClusterId <p>所属集群ID</p>
      * @param string $ResourcePartitionId <p>所属资源分区ID</p>
      * @param string $ResourcePartitionName <p>默认资源分区名称</p>
      * @param string $Queue <p>所属队列名称</p>
      * @param string $QueueAlias <p>所属队列别名</p>
+     * @param string $SubmissionId <p>Ray Submission ID</p>
      * @param string $Status <p>任务状态</p>
      * @param string $Entrypoint <p>入口命令</p>
      * @param string $JobName <p>任务名称</p>
      * @param integer $AppId <p>应用ID</p>
      * @param string $Uin <p>用户主账号UIN</p>
      * @param string $SubAccountUin <p>创建账号</p>
+     * @param string $SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
      * @param string $HistoryUrl <p>历史记录链接</p>
      * @param integer $RunningTime <p>运行时间(ms)</p>
      * @param integer $FinishTime <p>完成时间</p>
@@ -282,6 +306,10 @@ class GetRayJobResponse extends AbstractModel
             $this->Id = $param["Id"];
         }
 
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("ResourcePartitionId",$param) and $param["ResourcePartitionId"] !== null) {
             $this->ResourcePartitionId = $param["ResourcePartitionId"];
         }
@@ -296,6 +324,10 @@ class GetRayJobResponse extends AbstractModel
 
         if (array_key_exists("QueueAlias",$param) and $param["QueueAlias"] !== null) {
             $this->QueueAlias = $param["QueueAlias"];
+        }
+
+        if (array_key_exists("SubmissionId",$param) and $param["SubmissionId"] !== null) {
+            $this->SubmissionId = $param["SubmissionId"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -320,6 +352,10 @@ class GetRayJobResponse extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("HistoryUrl",$param) and $param["HistoryUrl"] !== null) {

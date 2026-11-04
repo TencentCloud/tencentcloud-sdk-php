@@ -180,6 +180,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduledTime(string $ScheduledTime) 设置<p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileArrivalConfig getFileArrivalConfig() 获取<p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileArrivalConfig(FileArrivalConfig $FileArrivalConfig) 设置<p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTaskRun extends AbstractModel
 {
@@ -424,6 +428,12 @@ class WorkflowTaskRun extends AbstractModel
     public $ScheduledTime;
 
     /**
+     * @var FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileArrivalConfig;
+
+    /**
      * @param string $TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowTaskRunId <p>任务运行ID</p>
@@ -503,6 +513,8 @@ class WorkflowTaskRun extends AbstractModel
      * @param InnerWorkflowTaskBrief $InnerTask <p>内嵌工作流任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScheduledTime <p>计划调度时间</p><p>参数格式：毫秒时间戳，UTC</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileArrivalConfig $FileArrivalConfig <p>工作流调度文件到达方式配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -683,6 +695,11 @@ class WorkflowTaskRun extends AbstractModel
 
         if (array_key_exists("ScheduledTime",$param) and $param["ScheduledTime"] !== null) {
             $this->ScheduledTime = $param["ScheduledTime"];
+        }
+
+        if (array_key_exists("FileArrivalConfig",$param) and $param["FileArrivalConfig"] !== null) {
+            $this->FileArrivalConfig = new FileArrivalConfig();
+            $this->FileArrivalConfig->deserialize($param["FileArrivalConfig"]);
         }
     }
 }

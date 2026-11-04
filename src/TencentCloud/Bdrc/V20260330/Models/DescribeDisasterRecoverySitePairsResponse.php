@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisasterRecoverySitePairs返回参数结构体
  *
- * @method integer getTotalCount() 获取有效的容灾策略数量。
- * @method void setTotalCount(integer $TotalCount) 设置有效的容灾策略数量。
- * @method array getSitePairSet() 获取容灾策略列表。
- * @method void setSitePairSet(array $SitePairSet) 设置容灾策略列表。
+ * @method integer getTotalCount() 获取<p>有效的容灾策略数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>有效的容灾策略数量。</p>
+ * @method array getSitePairSet() 获取<p>容灾策略列表。</p>
+ * @method void setSitePairSet(array $SitePairSet) 设置<p>容灾策略列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDisasterRecoverySitePairsResponse extends AbstractModel
 {
     /**
-     * @var integer 有效的容灾策略数量。
+     * @var integer <p>有效的容灾策略数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 容灾策略列表。
+     * @var array <p>容灾策略列表。</p>
      */
     public $SitePairSet;
 
@@ -45,8 +45,8 @@ class DescribeDisasterRecoverySitePairsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 有效的容灾策略数量。
-     * @param array $SitePairSet 容灾策略列表。
+     * @param integer $TotalCount <p>有效的容灾策略数量。</p>
+     * @param array $SitePairSet <p>容灾策略列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

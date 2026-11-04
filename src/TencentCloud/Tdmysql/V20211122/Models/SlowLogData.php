@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExplain(array $Explain) 设置<p>执行计划</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExplainTree() 获取<p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExplainTree(string $ExplainTree) 设置<p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowLogData extends AbstractModel
 {
@@ -204,6 +208,12 @@ class SlowLogData extends AbstractModel
     public $Explain;
 
     /**
+     * @var string <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExplainTree;
+
+    /**
      * @param string $Timestamp <p>Sql的执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $QueryTime <p>Sql的执行时长（秒）</p>
@@ -239,6 +249,8 @@ class SlowLogData extends AbstractModel
      * @param string $TraceId <p>全局标识ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Explain <p>执行计划</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExplainTree <p>执行计划树</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +341,10 @@ class SlowLogData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Explain, $obj);
             }
+        }
+
+        if (array_key_exists("ExplainTree",$param) and $param["ExplainTree"] !== null) {
+            $this->ExplainTree = $param["ExplainTree"];
         }
     }
 }

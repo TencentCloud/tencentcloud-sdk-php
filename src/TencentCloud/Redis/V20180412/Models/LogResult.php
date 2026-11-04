@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandDetail(string $CommandDetail) 设置<p>命令详情</p>
  * @method string getErrMsg() 获取<p>错误信息</p>
  * @method void setErrMsg(string $ErrMsg) 设置<p>错误信息</p>
+ * @method string getNode() 获取<p>proxy的节点ID</p>
+ * @method void setNode(string $Node) 设置<p>proxy的节点ID</p>
  */
 class LogResult extends AbstractModel
 {
@@ -87,6 +89,11 @@ class LogResult extends AbstractModel
     public $ErrMsg;
 
     /**
+     * @var string <p>proxy的节点ID</p>
+     */
+    public $Node;
+
+    /**
      * @param integer $DBId <p>数据库ID</p>
      * @param integer $CommandLatency <p>命令延迟（毫秒）</p>
      * @param string $Timestamp <p>创建时间（格式：2006-01-02 15:04:05.000）</p>
@@ -96,6 +103,7 @@ class LogResult extends AbstractModel
      * @param string $CacheCode <p>缓存代码，后端redis节点</p>
      * @param string $CommandDetail <p>命令详情</p>
      * @param string $ErrMsg <p>错误信息</p>
+     * @param string $Node <p>proxy的节点ID</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class LogResult extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("Node",$param) and $param["Node"] !== null) {
+            $this->Node = $param["Node"];
         }
     }
 }

@@ -20,36 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRayClusterJobs返回参数结构体
  *
- * @method integer getPage() 获取当前页码（从1开始）
- * @method void setPage(integer $Page) 设置当前页码（从1开始）
- * @method integer getPageSize() 获取每页数量
- * @method void setPageSize(integer $PageSize) 设置每页数量
- * @method integer getTotalPages() 获取总页数
- * @method void setTotalPages(integer $TotalPages) 设置总页数
- * @method array getItems() 获取该集群下的Ray作业列表
- * @method void setItems(array $Items) 设置该集群下的Ray作业列表
+ * @method integer getTotal() 获取<p>总记录数</p>
+ * @method void setTotal(integer $Total) 设置<p>总记录数</p>
+ * @method integer getPage() 获取<p>当前页码（从1开始）</p>
+ * @method void setPage(integer $Page) 设置<p>当前页码（从1开始）</p>
+ * @method integer getPageSize() 获取<p>每页数量</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>每页数量</p>
+ * @method integer getTotalPages() 获取<p>总页数</p>
+ * @method void setTotalPages(integer $TotalPages) 设置<p>总页数</p>
+ * @method array getItems() 获取<p>该集群下的Ray作业列表</p>
+ * @method void setItems(array $Items) 设置<p>该集群下的Ray作业列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ListRayClusterJobsResponse extends AbstractModel
 {
     /**
-     * @var integer 当前页码（从1开始）
+     * @var integer <p>总记录数</p>
+     */
+    public $Total;
+
+    /**
+     * @var integer <p>当前页码（从1开始）</p>
      */
     public $Page;
 
     /**
-     * @var integer 每页数量
+     * @var integer <p>每页数量</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 总页数
+     * @var integer <p>总页数</p>
      */
     public $TotalPages;
 
     /**
-     * @var array 该集群下的Ray作业列表
+     * @var array <p>该集群下的Ray作业列表</p>
      */
     public $Items;
 
@@ -59,10 +66,11 @@ class ListRayClusterJobsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Page 当前页码（从1开始）
-     * @param integer $PageSize 每页数量
-     * @param integer $TotalPages 总页数
-     * @param array $Items 该集群下的Ray作业列表
+     * @param integer $Total <p>总记录数</p>
+     * @param integer $Page <p>当前页码（从1开始）</p>
+     * @param integer $PageSize <p>每页数量</p>
+     * @param integer $TotalPages <p>总页数</p>
+     * @param array $Items <p>该集群下的Ray作业列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,6 +86,10 @@ class ListRayClusterJobsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
         if (array_key_exists("Page",$param) and $param["Page"] !== null) {
             $this->Page = $param["Page"];
         }

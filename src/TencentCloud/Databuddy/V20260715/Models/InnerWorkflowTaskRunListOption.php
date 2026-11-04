@@ -18,7 +18,7 @@ namespace TencentCloud\Databuddy\V20260715\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内嵌工作流任务运行列表选项（仅限 FOR_EACH 任务使用）
+ * <p>嵌套工作流任务运行的查询选项。<br>PageNumber：页码，从 1 开始<br>PageSize：每页数量，最大 200<br>RunStates：按运行状态过滤，如 ["SUCCESS"]</p>
  *
  * @method integer getPageNumber() 获取<p>分页页码，从 1 开始。非必填，默认 1</p>
 注意：此字段可能返回 null，表示取不到有效值。

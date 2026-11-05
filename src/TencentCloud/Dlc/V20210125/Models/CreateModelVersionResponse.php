@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置<p>模型版本号</p>
  * @method boolean getUseCustomStorage() 获取<p>是否使用用户自带存储桶（true=用户自带桶，false=平台托管）</p>
  * @method void setUseCustomStorage(boolean $UseCustomStorage) 设置<p>是否使用用户自带存储桶（true=用户自带桶，false=平台托管）</p>
+ * @method RegisterMeta getRegisterMeta() 获取<p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+ * @method void setRegisterMeta(RegisterMeta $RegisterMeta) 设置<p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+ * @method string getVersionUid() 获取<p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+ * @method void setVersionUid(string $VersionUid) 设置<p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+ * @method LoraVersionMeta getLoraMeta() 获取<p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+ * @method void setLoraMeta(LoraVersionMeta $LoraMeta) 设置<p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+ * @method string getPoolImportStatus() 获取<p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+ * @method void setPoolImportStatus(string $PoolImportStatus) 设置<p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +118,26 @@ class CreateModelVersionResponse extends AbstractModel
     public $UseCustomStorage;
 
     /**
+     * @var RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     */
+    public $RegisterMeta;
+
+    /**
+     * @var string <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+     */
+    public $VersionUid;
+
+    /**
+     * @var LoraVersionMeta <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+     */
+    public $LoraMeta;
+
+    /**
+     * @var string <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+     */
+    public $PoolImportStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -131,6 +159,10 @@ class CreateModelVersionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version <p>模型版本号</p>
      * @param boolean $UseCustomStorage <p>是否使用用户自带存储桶（true=用户自带桶，false=平台托管）</p>
+     * @param RegisterMeta $RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     * @param string $VersionUid <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+     * @param LoraVersionMeta $LoraMeta <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+     * @param string $PoolImportStatus <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -185,6 +217,24 @@ class CreateModelVersionResponse extends AbstractModel
 
         if (array_key_exists("UseCustomStorage",$param) and $param["UseCustomStorage"] !== null) {
             $this->UseCustomStorage = $param["UseCustomStorage"];
+        }
+
+        if (array_key_exists("RegisterMeta",$param) and $param["RegisterMeta"] !== null) {
+            $this->RegisterMeta = new RegisterMeta();
+            $this->RegisterMeta->deserialize($param["RegisterMeta"]);
+        }
+
+        if (array_key_exists("VersionUid",$param) and $param["VersionUid"] !== null) {
+            $this->VersionUid = $param["VersionUid"];
+        }
+
+        if (array_key_exists("LoraMeta",$param) and $param["LoraMeta"] !== null) {
+            $this->LoraMeta = new LoraVersionMeta();
+            $this->LoraMeta->deserialize($param["LoraMeta"]);
+        }
+
+        if (array_key_exists("PoolImportStatus",$param) and $param["PoolImportStatus"] !== null) {
+            $this->PoolImportStatus = $param["PoolImportStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SignByAsymmetricKey请求参数结构体
  *
- * @method string getAlgorithm() 获取签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
- * @method void setAlgorithm(string $Algorithm) 设置签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
- * @method string getMessage() 获取消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节
- * @method void setMessage(string $Message) 设置消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节
- * @method string getKeyId() 获取密钥的唯一标识
- * @method void setKeyId(string $KeyId) 设置密钥的唯一标识
- * @method string getMessageType() 获取消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
- * @method void setMessageType(string $MessageType) 设置消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+ * @method string getAlgorithm() 获取<p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。</p>
+ * @method void setAlgorithm(string $Algorithm) 设置<p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。</p>
+ * @method string getMessage() 获取<p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节</p>
+ * @method void setMessage(string $Message) 设置<p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节</p>
+ * @method string getKeyId() 获取<p>密钥的唯一标识</p>
+ * @method void setKeyId(string $KeyId) 设置<p>密钥的唯一标识</p>
+ * @method string getMessageType() 获取<p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
+ * @method void setMessageType(string $MessageType) 设置<p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
  */
 class SignByAsymmetricKeyRequest extends AbstractModel
 {
     /**
-     * @var string 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
+     * @var string <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。</p>
      */
     public $Algorithm;
 
     /**
-     * @var string 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节
+     * @var string <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节</p>
      */
     public $Message;
 
     /**
-     * @var string 密钥的唯一标识
+     * @var string <p>密钥的唯一标识</p>
      */
     public $KeyId;
 
     /**
-     * @var string 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+     * @var string <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
      */
     public $MessageType;
 
     /**
-     * @param string $Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
-     * @param string $Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节
-     * @param string $KeyId 密钥的唯一标识
-     * @param string $MessageType 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+     * @param string $Algorithm <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。</p>
+     * @param string $Message <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，消息摘要长度（Base64编码前的长度）必须等于32字节</p>
+     * @param string $KeyId <p>密钥的唯一标识</p>
+     * @param string $MessageType <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
      */
     function __construct()
     {

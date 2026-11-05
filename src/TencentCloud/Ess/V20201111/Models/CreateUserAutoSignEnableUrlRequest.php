@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
  * @method void setOperator(UserInfo $Operator) 设置<p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
- * @method string getSceneKey() 获取<p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
- * @method void setSceneKey(string $SceneKey) 设置<p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+ * @method string getSceneKey() 获取<p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li><p>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景<strong>（需要联系客户经理添加白名单才能使用）</strong></p></li><li><p>OTHER： 通用场景</p></li></ul>
+ * @method void setSceneKey(string $SceneKey) 设置<p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li><p>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景<strong>（需要联系客户经理添加白名单才能使用）</strong></p></li><li><p>OTHER： 通用场景</p></li></ul>
  * @method AutoSignConfig getAutoSignConfig() 获取<p>“授权签”开通配置信息, 包括开通的人员的信息等</p>
  * @method void setAutoSignConfig(AutoSignConfig $AutoSignConfig) 设置<p>“授权签”开通配置信息, 包括开通的人员的信息等</p>
  * @method string getUrlType() 获取<p>生成的链接类型：</p><ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li><li> **H5SIGN** : 生成H5端开通链接</li></ul>
@@ -49,7 +49,7 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * @var string <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li><p>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景<strong>（需要联系客户经理添加白名单才能使用）</strong></p></li><li><p>OTHER： 通用场景</p></li></ul>
      */
     public $SceneKey;
 
@@ -95,7 +95,7 @@ class CreateUserAutoSignEnableUrlRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
-     * @param string $SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:<ul><li> <strong>E_PRESCRIPTION_AUTO_SIGN</strong> :  电子处方场景</li><li> <strong>OTHER</strong> :  通用场景</li></ul></p>
+     * @param string $SceneKey <p>“授权签”使用的场景值, 可以选择的场景值如下:</p><p>枚举值：</p><ul><li><p>E_PRESCRIPTION_AUTO_SIGN： 电子处方场景<strong>（需要联系客户经理添加白名单才能使用）</strong></p></li><li><p>OTHER： 通用场景</p></li></ul>
      * @param AutoSignConfig $AutoSignConfig <p>“授权签”开通配置信息, 包括开通的人员的信息等</p>
      * @param string $UrlType <p>生成的链接类型：</p><ul><li> 不传(即为空值) 则会生成小程序端开通链接(默认)</li><li> **H5SIGN** : 生成H5端开通链接</li></ul>
      * @param string $NotifyType <p>是否通知开通方，通知类型:<ul><li>默认为不通知开通方</li><li><strong>SMS</strong> :  短信通知 ,如果需要短信通知则NotifyAddress填写对方的手机号</li></ul></p>

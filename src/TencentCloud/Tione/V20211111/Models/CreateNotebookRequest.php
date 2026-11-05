@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置<p>GooseFS存储配置</p>
  * @method string getDescription() 获取<p>描述</p>
  * @method void setDescription(string $Description) 设置<p>描述</p>
+ * @method ResourceSupplyAttribute getResourceSupplyAttribute() 获取<p>资源供应属性</p>
+ * @method void setResourceSupplyAttribute(ResourceSupplyAttribute $ResourceSupplyAttribute) 设置<p>资源供应属性</p>
+ * @method array getQueues() 获取<p>队列ID</p>
+ * @method void setQueues(array $Queues) 设置<p>队列ID</p>
  */
 class CreateNotebookRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class CreateNotebookRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var ResourceSupplyAttribute <p>资源供应属性</p>
+     */
+    public $ResourceSupplyAttribute;
+
+    /**
+     * @var array <p>队列ID</p>
+     */
+    public $Queues;
+
+    /**
      * @param string $Name <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      * @param string $ChargeType <p>计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
      * @param ResourceConf $ResourceConf <p>计算资源配置</p>
@@ -232,6 +246,8 @@ class CreateNotebookRequest extends AbstractModel
      * @param SSHConfig $SSHConfig <p>SSH配置信息</p>
      * @param GooseFS $VolumeSourceGooseFS <p>GooseFS存储配置</p>
      * @param string $Description <p>描述</p>
+     * @param ResourceSupplyAttribute $ResourceSupplyAttribute <p>资源供应属性</p>
+     * @param array $Queues <p>队列ID</p>
      */
     function __construct()
     {
@@ -364,6 +380,15 @@ class CreateNotebookRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ResourceSupplyAttribute",$param) and $param["ResourceSupplyAttribute"] !== null) {
+            $this->ResourceSupplyAttribute = new ResourceSupplyAttribute();
+            $this->ResourceSupplyAttribute->deserialize($param["ResourceSupplyAttribute"]);
+        }
+
+        if (array_key_exists("Queues",$param) and $param["Queues"] !== null) {
+            $this->Queues = $param["Queues"];
         }
     }
 }

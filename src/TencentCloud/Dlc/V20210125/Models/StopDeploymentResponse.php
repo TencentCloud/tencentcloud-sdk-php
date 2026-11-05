@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImagePullPolicy(string $ImagePullPolicy) 设置<p>镜像拉取策略</p>
  * @method string getResourcePartitionName() 获取<p>资源分区名称</p>
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>资源分区名称</p>
+ * @method array getLoraBindings() 获取<p>部署当前挂载的 LoRA 模型版本列表。</p>
+ * @method void setLoraBindings(array $LoraBindings) 设置<p>部署当前挂载的 LoRA 模型版本列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -268,6 +270,11 @@ class StopDeploymentResponse extends AbstractModel
     public $ResourcePartitionName;
 
     /**
+     * @var array <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public $LoraBindings;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -319,6 +326,7 @@ class StopDeploymentResponse extends AbstractModel
      * @param string $ImagePullType <p>镜像拉取方式</p>
      * @param string $ImagePullPolicy <p>镜像拉取策略</p>
      * @param string $ResourcePartitionName <p>资源分区名称</p>
+     * @param array $LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -436,6 +444,15 @@ class StopDeploymentResponse extends AbstractModel
 
         if (array_key_exists("ResourcePartitionName",$param) and $param["ResourcePartitionName"] !== null) {
             $this->ResourcePartitionName = $param["ResourcePartitionName"];
+        }
+
+        if (array_key_exists("LoraBindings",$param) and $param["LoraBindings"] !== null) {
+            $this->LoraBindings = [];
+            foreach ($param["LoraBindings"] as $key => $value){
+                $obj = new LoraItem();
+                $obj->deserialize($value);
+                array_push($this->LoraBindings, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

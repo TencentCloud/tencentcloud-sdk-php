@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueryString(AccessURLRedirectQueryString $QueryString) 设置<p>携带查询参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AccessURLRedirectPort getPort() 获取<p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPort(AccessURLRedirectPort $Port) 设置<p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessURLRedirectParameters extends AbstractModel
 {
@@ -68,6 +72,12 @@ class AccessURLRedirectParameters extends AbstractModel
     public $QueryString;
 
     /**
+     * @var AccessURLRedirectPort <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Port;
+
+    /**
      * @param integer $StatusCode <p>状态码，取值为 301、302、303、307、308 之一。</p>
      * @param string $Protocol <p>目标请求协议。</p><p>枚举值：</p><ul><li>http： 目标请求协议为 HTTP。</li><li>https： 目标请求协议为 HTTPS。</li><li>follow： 跟随请求。</li></ul>
      * @param HostName $HostName <p>目标 HostName。</p>
@@ -75,6 +85,8 @@ class AccessURLRedirectParameters extends AbstractModel
      * @param URLPath $URLPath <p>目标路径。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessURLRedirectQueryString $QueryString <p>携带查询参数。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessURLRedirectPort $Port <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -111,6 +123,11 @@ class AccessURLRedirectParameters extends AbstractModel
         if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
             $this->QueryString = new AccessURLRedirectQueryString();
             $this->QueryString->deserialize($param["QueryString"]);
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = new AccessURLRedirectPort();
+            $this->Port->deserialize($param["Port"]);
         }
     }
 }

@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageMode(string $StorageMode) 设置<p>存储模式: cos / cfs / local</p>
  * @method MlFlowResourceConfig getResourceConfig() 获取<p>MlFlow的资源配置</p>
  * @method void setResourceConfig(MlFlowResourceConfig $ResourceConfig) 设置<p>MlFlow的资源配置</p>
+ * @method string getServerArgs() 获取<p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+ * @method void setServerArgs(string $ServerArgs) 设置<p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
  * @method array getTags() 获取<p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
+ * @method string getDescription() 获取<p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
  */
 class CreateMlflowServerRequest extends AbstractModel
 {
@@ -75,9 +79,19 @@ class CreateMlflowServerRequest extends AbstractModel
     public $ResourceConfig;
 
     /**
+     * @var string <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+     */
+    public $ServerArgs;
+
+    /**
      * @var array <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
      */
     public $Tags;
+
+    /**
+     * @var string <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+     */
+    public $Description;
 
     /**
      * @param string $ServerName <p>MlFlow Server 名称</p>
@@ -87,7 +101,9 @@ class CreateMlflowServerRequest extends AbstractModel
      * @param string $StorageConfig <p>存储配置 JSON，按 StorageMode 解释：cos={bucket,region,path}，cfs={fileSystemId,path}（cos/cfs 必填，local 为空）</p>
      * @param string $StorageMode <p>存储模式: cos / cfs / local</p>
      * @param MlFlowResourceConfig $ResourceConfig <p>MlFlow的资源配置</p>
+     * @param string $ServerArgs <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
+     * @param string $Description <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
      */
     function __construct()
     {
@@ -131,6 +147,10 @@ class CreateMlflowServerRequest extends AbstractModel
             $this->ResourceConfig->deserialize($param["ResourceConfig"]);
         }
 
+        if (array_key_exists("ServerArgs",$param) and $param["ServerArgs"] !== null) {
+            $this->ServerArgs = $param["ServerArgs"];
+        }
+
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = [];
             foreach ($param["Tags"] as $key => $value){
@@ -138,6 +158,10 @@ class CreateMlflowServerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

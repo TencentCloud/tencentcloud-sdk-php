@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZones(array $SlaveZones) 设置<p>备可用区列表</p>
  * @method string getStorageVersion() 获取<p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
  * @method void setStorageVersion(string $StorageVersion) 设置<p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+ * @method InstanceServerlessQuotaInfo getServerlessQuotaInfo() 获取<p>实例Serverless弹性信息</p>
+ * @method void setServerlessQuotaInfo(InstanceServerlessQuotaInfo $ServerlessQuotaInfo) 设置<p>实例Serverless弹性信息</p>
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -297,6 +299,11 @@ class CynosdbInstanceDetail extends AbstractModel
     public $StorageVersion;
 
     /**
+     * @var InstanceServerlessQuotaInfo <p>实例Serverless弹性信息</p>
+     */
+    public $ServerlessQuotaInfo;
+
+    /**
      * @param string $Uin <p>用户Uin</p>
      * @param integer $AppId <p>用户AppId</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -336,6 +343,7 @@ class CynosdbInstanceDetail extends AbstractModel
      * @param string $RealZone <p>实例的真实可用区</p>
      * @param array $SlaveZones <p>备可用区列表</p>
      * @param string $StorageVersion <p>存储版本</p><p>枚举值：</p><ul><li>1.0： 1.0版本存储</li><li>2.0： 2.0版本存储</li></ul>
+     * @param InstanceServerlessQuotaInfo $ServerlessQuotaInfo <p>实例Serverless弹性信息</p>
      */
     function __construct()
     {
@@ -504,6 +512,11 @@ class CynosdbInstanceDetail extends AbstractModel
 
         if (array_key_exists("StorageVersion",$param) and $param["StorageVersion"] !== null) {
             $this->StorageVersion = $param["StorageVersion"];
+        }
+
+        if (array_key_exists("ServerlessQuotaInfo",$param) and $param["ServerlessQuotaInfo"] !== null) {
+            $this->ServerlessQuotaInfo = new InstanceServerlessQuotaInfo();
+            $this->ServerlessQuotaInfo->deserialize($param["ServerlessQuotaInfo"]);
         }
     }
 }

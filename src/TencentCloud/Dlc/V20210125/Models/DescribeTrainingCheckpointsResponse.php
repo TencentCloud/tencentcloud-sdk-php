@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageType(string $StorageType) 设置<p>存储类型：COS / CFS / CFS_TURBO / GOOSEFS</p>
  * @method string getStoragePath() 获取<p>存储路径（COS 桶路径或 CFS/GooseFSx 挂载路径）</p>
  * @method void setStoragePath(string $StoragePath) 设置<p>存储路径（COS 桶路径或 CFS/GooseFSx 挂载路径）</p>
+ * @method string getArtifactRootUri() 获取<p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+ * @method void setArtifactRootUri(string $ArtifactRootUri) 设置<p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
  * @method string getMessage() 获取<p>错误或提示信息（仅在请求异常时有值）</p>
  * @method void setMessage(string $Message) 设置<p>错误或提示信息（仅在请求异常时有值）</p>
  * @method integer getSnapshotTimestamp() 获取<p>快照时间戳（仅 CFS/GooseFSx 存储时有值）</p>
@@ -65,6 +67,11 @@ class DescribeTrainingCheckpointsResponse extends AbstractModel
     public $StoragePath;
 
     /**
+     * @var string <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+     */
+    public $ArtifactRootUri;
+
+    /**
      * @var string <p>错误或提示信息（仅在请求异常时有值）</p>
      */
     public $Message;
@@ -85,6 +92,7 @@ class DescribeTrainingCheckpointsResponse extends AbstractModel
      * @param string $SubPath <p>当前浏览的子路径</p>
      * @param string $StorageType <p>存储类型：COS / CFS / CFS_TURBO / GOOSEFS</p>
      * @param string $StoragePath <p>存储路径（COS 桶路径或 CFS/GooseFSx 挂载路径）</p>
+     * @param string $ArtifactRootUri <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
      * @param string $Message <p>错误或提示信息（仅在请求异常时有值）</p>
      * @param integer $SnapshotTimestamp <p>快照时间戳（仅 CFS/GooseFSx 存储时有值）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -125,6 +133,10 @@ class DescribeTrainingCheckpointsResponse extends AbstractModel
 
         if (array_key_exists("StoragePath",$param) and $param["StoragePath"] !== null) {
             $this->StoragePath = $param["StoragePath"];
+        }
+
+        if (array_key_exists("ArtifactRootUri",$param) and $param["ArtifactRootUri"] !== null) {
+            $this->ArtifactRootUri = $param["ArtifactRootUri"];
         }
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {

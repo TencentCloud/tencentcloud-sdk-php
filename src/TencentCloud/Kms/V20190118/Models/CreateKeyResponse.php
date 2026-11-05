@@ -20,71 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKey返回参数结构体
  *
- * @method string getKeyId() 获取CMK的全局唯一标识符
- * @method void setKeyId(string $KeyId) 设置CMK的全局唯一标识符
- * @method string getAlias() 获取作为密钥更容易辨识，更容易被人看懂的别名
- * @method void setAlias(string $Alias) 设置作为密钥更容易辨识，更容易被人看懂的别名
- * @method integer getCreateTime() 获取密钥创建时间，unix时间戳
- * @method void setCreateTime(integer $CreateTime) 设置密钥创建时间，unix时间戳
- * @method string getDescription() 获取CMK的描述
- * @method void setDescription(string $Description) 设置CMK的描述
- * @method string getKeyState() 获取CMK的状态
- * @method void setKeyState(string $KeyState) 设置CMK的状态
- * @method string getKeyUsage() 获取CMK的用途
- * @method void setKeyUsage(string $KeyUsage) 设置CMK的用途
- * @method integer getTagCode() 获取标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
- * @method void setTagCode(integer $TagCode) 设置标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
- * @method string getTagMsg() 获取标签操作的返回信息
- * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
- * @method string getHsmClusterId() 获取HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
- * @method void setHsmClusterId(string $HsmClusterId) 设置HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+ * @method string getKeyId() 获取<p>CMK的全局唯一标识符</p>
+ * @method void setKeyId(string $KeyId) 设置<p>CMK的全局唯一标识符</p>
+ * @method string getAlias() 获取<p>作为密钥更容易辨识，更容易被人看懂的别名</p>
+ * @method void setAlias(string $Alias) 设置<p>作为密钥更容易辨识，更容易被人看懂的别名</p>
+ * @method integer getCreateTime() 获取<p>密钥创建时间，unix时间戳</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>密钥创建时间，unix时间戳</p>
+ * @method string getDescription() 获取<p>CMK的描述</p>
+ * @method void setDescription(string $Description) 设置<p>CMK的描述</p>
+ * @method string getKeyState() 获取<p>CMK的状态</p>
+ * @method void setKeyState(string $KeyState) 设置<p>CMK的状态</p>
+ * @method string getKeyUsage() 获取<p>CMK的用途</p>
+ * @method void setKeyUsage(string $KeyUsage) 设置<p>CMK的用途</p>
+ * @method integer getTagCode() 获取<p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+ * @method void setTagCode(integer $TagCode) 设置<p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+ * @method string getTagMsg() 获取<p>标签操作的返回信息</p>
+ * @method void setTagMsg(string $TagMsg) 设置<p>标签操作的返回信息</p>
+ * @method string getHsmClusterId() 获取<p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
+ * @method void setHsmClusterId(string $HsmClusterId) 设置<p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateKeyResponse extends AbstractModel
 {
     /**
-     * @var string CMK的全局唯一标识符
+     * @var string <p>CMK的全局唯一标识符</p>
      */
     public $KeyId;
 
     /**
-     * @var string 作为密钥更容易辨识，更容易被人看懂的别名
+     * @var string <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
      */
     public $Alias;
 
     /**
-     * @var integer 密钥创建时间，unix时间戳
+     * @var integer <p>密钥创建时间，unix时间戳</p>
      */
     public $CreateTime;
 
     /**
-     * @var string CMK的描述
+     * @var string <p>CMK的描述</p>
      */
     public $Description;
 
     /**
-     * @var string CMK的状态
+     * @var string <p>CMK的状态</p>
      */
     public $KeyState;
 
     /**
-     * @var string CMK的用途
+     * @var string <p>CMK的用途</p>
      */
     public $KeyUsage;
 
     /**
-     * @var integer 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * @var integer <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public $TagCode;
 
     /**
-     * @var string 标签操作的返回信息
+     * @var string <p>标签操作的返回信息</p>
      */
     public $TagMsg;
 
     /**
-     * @var string HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * @var string <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public $HsmClusterId;
 
@@ -94,15 +94,15 @@ class CreateKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $KeyId CMK的全局唯一标识符
-     * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
-     * @param integer $CreateTime 密钥创建时间，unix时间戳
-     * @param string $Description CMK的描述
-     * @param string $KeyState CMK的状态
-     * @param string $KeyUsage CMK的用途
-     * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
-     * @param string $TagMsg 标签操作的返回信息
-     * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * @param string $KeyId <p>CMK的全局唯一标识符</p>
+     * @param string $Alias <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
+     * @param integer $CreateTime <p>密钥创建时间，unix时间戳</p>
+     * @param string $Description <p>CMK的描述</p>
+     * @param string $KeyState <p>CMK的状态</p>
+     * @param string $KeyUsage <p>CMK的用途</p>
+     * @param integer $TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+     * @param string $TagMsg <p>标签操作的返回信息</p>
+     * @param string $HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

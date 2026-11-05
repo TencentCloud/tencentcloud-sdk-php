@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataAgentSession请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getSessionId() 获取会话ID
- * @method void setSessionId(string $SessionId) 设置会话ID
- * @method array getSessionIds() 获取批量删除 会话id 列表
- * @method void setSessionIds(array $SessionIds) 设置批量删除 会话id 列表
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
+ * @method string getSessionId() 获取<p>会话ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话ID</p>
+ * @method array getSessionIds() 获取<p>批量删除 会话id 列表</p>
+ * @method void setSessionIds(array $SessionIds) 设置<p>批量删除 会话id 列表</p>
+ * @method SurfaceContext getSurfaceContext() 获取<p>上下文</p>
+ * @method void setSurfaceContext(SurfaceContext $SurfaceContext) 设置<p>上下文</p>
  */
 class DeleteDataAgentSessionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 会话ID
+     * @var string <p>会话ID</p>
      */
     public $SessionId;
 
     /**
-     * @var array 批量删除 会话id 列表
+     * @var array <p>批量删除 会话id 列表</p>
      */
     public $SessionIds;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $SessionId 会话ID
-     * @param array $SessionIds 批量删除 会话id 列表
+     * @var SurfaceContext <p>上下文</p>
+     */
+    public $SurfaceContext;
+
+    /**
+     * @param string $InstanceId <p>实例ID</p>
+     * @param string $SessionId <p>会话ID</p>
+     * @param array $SessionIds <p>批量删除 会话id 列表</p>
+     * @param SurfaceContext $SurfaceContext <p>上下文</p>
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class DeleteDataAgentSessionRequest extends AbstractModel
 
         if (array_key_exists("SessionIds",$param) and $param["SessionIds"] !== null) {
             $this->SessionIds = $param["SessionIds"];
+        }
+
+        if (array_key_exists("SurfaceContext",$param) and $param["SurfaceContext"] !== null) {
+            $this->SurfaceContext = new SurfaceContext();
+            $this->SurfaceContext->deserialize($param["SurfaceContext"]);
         }
     }
 }

@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotStatus(integer $SnapshotStatus) 设置<p>快照状态<br>枚举值：<br>-1：无需创建快照<br>0：未开始<br>1：进行中<br>2：已完成<br>3：创建失败</p>
  * @method string getExceptionMessage() 获取<p>异常提示信息</p>
  * @method void setExceptionMessage(string $ExceptionMessage) 设置<p>异常提示信息</p>
+ * @method string getErrorCode() 获取<p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+ * @method void setErrorCode(string $ErrorCode) 设置<p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+ * @method string getErrorReason() 获取<p>结构化失败原因</p>
+ * @method void setErrorReason(string $ErrorReason) 设置<p>结构化失败原因</p>
+ * @method string getErrorSolution() 获取<p>结构化解决方案</p>
+ * @method void setErrorSolution(string $ErrorSolution) 设置<p>结构化解决方案</p>
+ * @method string getRawErrorMessage() 获取<p>原始错误信息（不做翻译）</p>
+ * @method void setRawErrorMessage(string $RawErrorMessage) 设置<p>原始错误信息（不做翻译）</p>
  * @method string getStartTime() 获取<p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
  * @method void setStartTime(string $StartTime) 设置<p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
  * @method string getEndTime() 获取<p>修复结束时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
@@ -54,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotExpireTime(string $SnapshotExpireTime) 设置<p>快照到期时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
  * @method string getSnapshotFailReason() 获取<p>快照创建失败原因（当 SnapshotStatus=3 时有值）</p>
  * @method void setSnapshotFailReason(string $SnapshotFailReason) 设置<p>快照创建失败原因（当 SnapshotStatus=3 时有值）</p>
+ * @method string getMachineType() 获取<p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+ * @method void setMachineType(string $MachineType) 设置<p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+ * @method boolean getSnapshotReused() 获取<p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method void setSnapshotReused(boolean $SnapshotReused) 设置<p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
  */
 class VulFixTaskDetailItem extends AbstractModel
 {
@@ -118,6 +130,26 @@ class VulFixTaskDetailItem extends AbstractModel
     public $ExceptionMessage;
 
     /**
+     * @var string <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+     */
+    public $ErrorCode;
+
+    /**
+     * @var string <p>结构化失败原因</p>
+     */
+    public $ErrorReason;
+
+    /**
+     * @var string <p>结构化解决方案</p>
+     */
+    public $ErrorSolution;
+
+    /**
+     * @var string <p>原始错误信息（不做翻译）</p>
+     */
+    public $RawErrorMessage;
+
+    /**
      * @var string <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
     public $StartTime;
@@ -143,6 +175,16 @@ class VulFixTaskDetailItem extends AbstractModel
     public $SnapshotFailReason;
 
     /**
+     * @var string <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+     */
+    public $MachineType;
+
+    /**
+     * @var boolean <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public $SnapshotReused;
+
+    /**
      * @param integer $Id <p>明细记录ID</p>
      * @param integer $TaskId <p>关联的修复任务ID</p>
      * @param integer $VulId <p>修复的漏洞ID</p>
@@ -155,11 +197,17 @@ class VulFixTaskDetailItem extends AbstractModel
      * @param integer $FixStatus <p>修复结果</p><p>枚举值：</p><ul><li>0： 初始状态</li><li>1： 修复成功</li><li>2： 修复失败</li><li>3： 修复中</li></ul>
      * @param integer $SnapshotStatus <p>快照状态<br>枚举值：<br>-1：无需创建快照<br>0：未开始<br>1：进行中<br>2：已完成<br>3：创建失败</p>
      * @param string $ExceptionMessage <p>异常提示信息</p>
+     * @param string $ErrorCode <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+     * @param string $ErrorReason <p>结构化失败原因</p>
+     * @param string $ErrorSolution <p>结构化解决方案</p>
+     * @param string $RawErrorMessage <p>原始错误信息（不做翻译）</p>
      * @param string $StartTime <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param string $EndTime <p>修复结束时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param string $SnapshotCreateTime <p>快照创建时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param string $SnapshotExpireTime <p>快照到期时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param string $SnapshotFailReason <p>快照创建失败原因（当 SnapshotStatus=3 时有值）</p>
+     * @param string $MachineType <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+     * @param boolean $SnapshotReused <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     function __construct()
     {
@@ -222,6 +270,22 @@ class VulFixTaskDetailItem extends AbstractModel
             $this->ExceptionMessage = $param["ExceptionMessage"];
         }
 
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
+        }
+
+        if (array_key_exists("ErrorReason",$param) and $param["ErrorReason"] !== null) {
+            $this->ErrorReason = $param["ErrorReason"];
+        }
+
+        if (array_key_exists("ErrorSolution",$param) and $param["ErrorSolution"] !== null) {
+            $this->ErrorSolution = $param["ErrorSolution"];
+        }
+
+        if (array_key_exists("RawErrorMessage",$param) and $param["RawErrorMessage"] !== null) {
+            $this->RawErrorMessage = $param["RawErrorMessage"];
+        }
+
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -240,6 +304,14 @@ class VulFixTaskDetailItem extends AbstractModel
 
         if (array_key_exists("SnapshotFailReason",$param) and $param["SnapshotFailReason"] !== null) {
             $this->SnapshotFailReason = $param["SnapshotFailReason"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("SnapshotReused",$param) and $param["SnapshotReused"] !== null) {
+            $this->SnapshotReused = $param["SnapshotReused"];
         }
     }
 }

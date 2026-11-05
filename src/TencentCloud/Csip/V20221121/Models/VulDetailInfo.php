@@ -136,6 +136,12 @@ false：未收录
  * @method void setHarmDescription(string $HarmDescription) 设置<p>漏洞危害描述</p>
  * @method array getAffectVendorProduct() 获取<p>漏洞影响产品</p>
  * @method void setAffectVendorProduct(array $AffectVendorProduct) 设置<p>漏洞影响产品</p>
+ * @method VPRExplainInfo getVPRExplainInfo() 获取<p>VPR暴露面信息</p>
+ * @method void setVPRExplainInfo(VPRExplainInfo $VPRExplainInfo) 设置<p>VPR暴露面信息</p>
+ * @method integer getScanTaskId() 获取<p>最近扫描任务id(应急漏洞)</p>
+ * @method void setScanTaskId(integer $ScanTaskId) 设置<p>最近扫描任务id(应急漏洞)</p>
+ * @method integer getAffectAsset() 获取<p>影响资产数(应急漏洞)</p>
+ * @method void setAffectAsset(integer $AffectAsset) 设置<p>影响资产数(应急漏洞)</p>
  */
 class VulDetailInfo extends AbstractModel
 {
@@ -318,6 +324,21 @@ false：未收录
     public $AffectVendorProduct;
 
     /**
+     * @var VPRExplainInfo <p>VPR暴露面信息</p>
+     */
+    public $VPRExplainInfo;
+
+    /**
+     * @var integer <p>最近扫描任务id(应急漏洞)</p>
+     */
+    public $ScanTaskId;
+
+    /**
+     * @var integer <p>影响资产数(应急漏洞)</p>
+     */
+    public $AffectAsset;
+
+    /**
      * @param integer $ID <p>漏洞ID</p>
      * @param string $Name <p>漏洞名字</p>
      * @param string $CVEID <p>CveID</p>
@@ -376,6 +397,9 @@ false：未收录
      * @param string $RefLink <p>参考链接</p>
      * @param string $HarmDescription <p>漏洞危害描述</p>
      * @param array $AffectVendorProduct <p>漏洞影响产品</p>
+     * @param VPRExplainInfo $VPRExplainInfo <p>VPR暴露面信息</p>
+     * @param integer $ScanTaskId <p>最近扫描任务id(应急漏洞)</p>
+     * @param integer $AffectAsset <p>影响资产数(应急漏洞)</p>
      */
     function __construct()
     {
@@ -524,6 +548,19 @@ false：未收录
                 $obj->deserialize($value);
                 array_push($this->AffectVendorProduct, $obj);
             }
+        }
+
+        if (array_key_exists("VPRExplainInfo",$param) and $param["VPRExplainInfo"] !== null) {
+            $this->VPRExplainInfo = new VPRExplainInfo();
+            $this->VPRExplainInfo->deserialize($param["VPRExplainInfo"]);
+        }
+
+        if (array_key_exists("ScanTaskId",$param) and $param["ScanTaskId"] !== null) {
+            $this->ScanTaskId = $param["ScanTaskId"];
+        }
+
+        if (array_key_exists("AffectAsset",$param) and $param["AffectAsset"] !== null) {
+            $this->AffectAsset = $param["AffectAsset"];
         }
     }
 }

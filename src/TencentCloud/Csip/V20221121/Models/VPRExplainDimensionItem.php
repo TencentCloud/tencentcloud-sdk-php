@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置<p>标签名称</p>
  * @method string getRemark() 获取<p>标签描述</p>
  * @method void setRemark(string $Remark) 设置<p>标签描述</p>
+ * @method string getLevel() 获取<p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+ * @method void setLevel(string $Level) 设置<p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
  */
 class VPRExplainDimensionItem extends AbstractModel
 {
@@ -45,9 +47,15 @@ class VPRExplainDimensionItem extends AbstractModel
     public $Remark;
 
     /**
+     * @var string <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+     */
+    public $Level;
+
+    /**
      * @param string $Key <p>标签</p>
      * @param string $Name <p>标签名称</p>
      * @param string $Remark <p>标签描述</p>
+     * @param string $Level <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class VPRExplainDimensionItem extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

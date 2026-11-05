@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadActiveDeviceCount请求参数结构体
  *
- * @method integer getPeriod() 获取查询粒度。0:day, 1:week, 2:month, 不传默认为day
- * @method void setPeriod(integer $Period) 设置查询粒度。0:day, 1:week, 2:month, 不传默认为day
- * @method integer getStartTime() 获取开始时间。单位秒
- * @method void setStartTime(integer $StartTime) 设置开始时间。单位秒
- * @method integer getEndTime() 获取结束时间。单位秒
- * @method void setEndTime(integer $EndTime) 设置结束时间。单位秒
- * @method string getDevGroup() 获取设备组, 不传查询全部
- * @method void setDevGroup(string $DevGroup) 设置设备组, 不传查询全部
- * @method integer getLicenseType() 获取license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
- * @method void setLicenseType(integer $LicenseType) 设置license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+ * @method integer getPeriod() 获取<p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
+ * @method void setPeriod(integer $Period) 设置<p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
+ * @method integer getStartTime() 获取<p>开始时间。单位秒</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间。单位秒</p>
+ * @method integer getEndTime() 获取<p>结束时间。单位秒</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间。单位秒</p>
+ * @method string getDevGroup() 获取<p>设备组, 不传查询全部</p>
+ * @method void setDevGroup(string $DevGroup) 设置<p>设备组, 不传查询全部</p>
+ * @method string getApplicationId() 获取<p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+ * @method void setApplicationId(string $ApplicationId) 设置<p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+ * @method integer getLicenseType() 获取<p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+ * @method void setLicenseType(integer $LicenseType) 设置<p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
  */
 class DownloadActiveDeviceCountRequest extends AbstractModel
 {
     /**
-     * @var integer 查询粒度。0:day, 1:week, 2:month, 不传默认为day
+     * @var integer <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public $Period;
 
     /**
-     * @var integer 开始时间。单位秒
+     * @var integer <p>开始时间。单位秒</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间。单位秒
+     * @var integer <p>结束时间。单位秒</p>
      */
     public $EndTime;
 
     /**
-     * @var string 设备组, 不传查询全部
+     * @var string <p>设备组, 不传查询全部</p>
      */
     public $DevGroup;
 
     /**
-     * @var integer license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * @var string <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+     */
+    public $ApplicationId;
+
+    /**
+     * @var integer <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public $LicenseType;
 
     /**
-     * @param integer $Period 查询粒度。0:day, 1:week, 2:month, 不传默认为day
-     * @param integer $StartTime 开始时间。单位秒
-     * @param integer $EndTime 结束时间。单位秒
-     * @param string $DevGroup 设备组, 不传查询全部
-     * @param integer $LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * @param integer $Period <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
+     * @param integer $StartTime <p>开始时间。单位秒</p>
+     * @param integer $EndTime <p>结束时间。单位秒</p>
+     * @param string $DevGroup <p>设备组, 不传查询全部</p>
+     * @param string $ApplicationId <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+     * @param integer $LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class DownloadActiveDeviceCountRequest extends AbstractModel
 
         if (array_key_exists("DevGroup",$param) and $param["DevGroup"] !== null) {
             $this->DevGroup = $param["DevGroup"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {

@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库资源信息
  *
- * @method string getInstanceId() 获取数据库唯一标识
- * @method void setInstanceId(string $InstanceId) 设置数据库唯一标识
- * @method string getStatus() 获取状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
- * @method void setStatus(string $Status) 设置状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
- * @method string getRegion() 获取所属地域。
-当前支持ap-shanghai
- * @method void setRegion(string $Region) 设置所属地域。
-当前支持ap-shanghai
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getInstanceId() 获取<p>数据库唯一标识</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>数据库唯一标识</p>
+ * @method string getStatus() 获取<p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
+ * @method void setStatus(string $Status) 设置<p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
+ * @method string getRegion() 获取<p>所属地域。<br>当前支持ap-shanghai</p>
+ * @method void setRegion(string $Region) 设置<p>所属地域。<br>当前支持ap-shanghai</p>
+ * @method string getUpdateTime() 获取<p>更新时间</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>更新时间</p>
  */
 class DatabasesInfo extends AbstractModel
 {
     /**
-     * @var string 数据库唯一标识
+     * @var string <p>数据库唯一标识</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+     * @var string <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
      */
     public $Status;
 
     /**
-     * @var string 所属地域。
-当前支持ap-shanghai
+     * @var string <p>所属地域。<br>当前支持ap-shanghai</p>
      */
     public $Region;
 
     /**
-     * @var string 更新时间
+     * @var string <p>更新时间</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $InstanceId 数据库唯一标识
-     * @param string $Status 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
-     * @param string $Region 所属地域。
-当前支持ap-shanghai
-     * @param string $UpdateTime 更新时间
+     * @param string $InstanceId <p>数据库唯一标识</p>
+     * @param string $Status <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
+     * @param string $Region <p>所属地域。<br>当前支持ap-shanghai</p>
+     * @param string $UpdateTime <p>更新时间</p>
      */
     function __construct()
     {

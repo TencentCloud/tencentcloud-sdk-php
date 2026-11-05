@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIP(string $PublicIP) 设置<p>公网 IP 地址</p>
  * @method string getPrivateIP() 获取<p>内网 IP 地址</p>
  * @method void setPrivateIP(string $PrivateIP) 设置<p>内网 IP 地址</p>
- * @method string getDefendVersion() 获取<p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
- * @method void setDefendVersion(string $DefendVersion) 设置<p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+ * @method string getDefendVersion() 获取<p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
+ * @method void setDefendVersion(string $DefendVersion) 设置<p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
  * @method string getDefendStatus() 获取<p>漏洞防御状态<br>枚举值：<br>ENABLED：已开启<br>NOT_SUPPORTED：不支持<br>NOT_ENABLED：未开启</p>
  * @method void setDefendStatus(string $DefendStatus) 设置<p>漏洞防御状态<br>枚举值：<br>ENABLED：已开启<br>NOT_SUPPORTED：不支持<br>NOT_ENABLED：未开启</p>
  * @method AccountBriefInfo getAccount() 获取<p>所属账号信息</p>
  * @method void setAccount(AccountBriefInfo $Account) 设置<p>所属账号信息</p>
- * @method string getInstanceStatus() 获取<p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
- * @method void setInstanceStatus(string $InstanceStatus) 设置<p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+ * @method string getInstanceStatus() 获取<p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+ * @method void setInstanceStatus(string $InstanceStatus) 设置<p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
  * @method string getRiskStatus() 获取<p>修复状态枚举值</p><p>枚举值：</p><ul><li>PENDING： 待修复</li><li>SCANNING： 扫描中</li><li>FIXED： 已修复</li><li>IGNORED： 已忽略</li><li>FIXING： 修复中</li><li>FIX_FAILED： 修复失败</li><li>NEED_REBOOT： 修复待重启</li></ul>
  * @method void setRiskStatus(string $RiskStatus) 设置<p>修复状态枚举值</p><p>枚举值：</p><ul><li>PENDING： 待修复</li><li>SCANNING： 扫描中</li><li>FIXED： 已修复</li><li>IGNORED： 已忽略</li><li>FIXING： 修复中</li><li>FIX_FAILED： 修复失败</li><li>NEED_REBOOT： 修复待重启</li></ul>
  * @method VPRRatingInfo getVPRRating() 获取<p>VPR 评级信息（含评级结果与各维度详情）</p>
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagItem(array $TagItem) 设置<p>资产标签列表（CSIP 内部资产标签）</p>
  * @method array getCloudTag() 获取<p>云上标签列表（云资产侧 Tag）</p>
  * @method void setCloudTag(array $CloudTag) 设置<p>云上标签列表（云资产侧 Tag）</p>
+ * @method VPRExplainInfo getVPRExplainInfo() 获取<p>VPR评级解释卡片</p>
+ * @method void setVPRExplainInfo(VPRExplainInfo $VPRExplainInfo) 设置<p>VPR评级解释卡片</p>
  */
 class VulHostBriefInfo extends AbstractModel
 {
@@ -70,7 +72,7 @@ class VulHostBriefInfo extends AbstractModel
     public $PrivateIP;
 
     /**
-     * @var string <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+     * @var string <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
      */
     public $DefendVersion;
 
@@ -85,7 +87,7 @@ class VulHostBriefInfo extends AbstractModel
     public $Account;
 
     /**
-     * @var string <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+     * @var string <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
      */
     public $InstanceStatus;
 
@@ -115,19 +117,25 @@ class VulHostBriefInfo extends AbstractModel
     public $CloudTag;
 
     /**
+     * @var VPRExplainInfo <p>VPR评级解释卡片</p>
+     */
+    public $VPRExplainInfo;
+
+    /**
      * @param string $InstanceID <p>云主机实例 ID<br>参数格式：形如 ins-xxxxxxxx</p>
      * @param string $Name <p>主机名称</p>
      * @param string $PublicIP <p>公网 IP 地址</p>
      * @param string $PrivateIP <p>内网 IP 地址</p>
-     * @param string $DefendVersion <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+     * @param string $DefendVersion <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
      * @param string $DefendStatus <p>漏洞防御状态<br>枚举值：<br>ENABLED：已开启<br>NOT_SUPPORTED：不支持<br>NOT_ENABLED：未开启</p>
      * @param AccountBriefInfo $Account <p>所属账号信息</p>
-     * @param string $InstanceStatus <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+     * @param string $InstanceStatus <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
      * @param string $RiskStatus <p>修复状态枚举值</p><p>枚举值：</p><ul><li>PENDING： 待修复</li><li>SCANNING： 扫描中</li><li>FIXED： 已修复</li><li>IGNORED： 已忽略</li><li>FIXING： 修复中</li><li>FIX_FAILED： 修复失败</li><li>NEED_REBOOT： 修复待重启</li></ul>
      * @param VPRRatingInfo $VPRRating <p>VPR 评级信息（含评级结果与各维度详情）</p>
      * @param string $AgentStatus <p>CWP Agent 状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线<br>UNINSTALLED：未安装</p>
      * @param array $TagItem <p>资产标签列表（CSIP 内部资产标签）</p>
      * @param array $CloudTag <p>云上标签列表（云资产侧 Tag）</p>
+     * @param VPRExplainInfo $VPRExplainInfo <p>VPR评级解释卡片</p>
      */
     function __construct()
     {
@@ -204,6 +212,11 @@ class VulHostBriefInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CloudTag, $obj);
             }
+        }
+
+        if (array_key_exists("VPRExplainInfo",$param) and $param["VPRExplainInfo"] !== null) {
+            $this->VPRExplainInfo = new VPRExplainInfo();
+            $this->VPRExplainInfo->deserialize($param["VPRExplainInfo"]);
         }
     }
 }

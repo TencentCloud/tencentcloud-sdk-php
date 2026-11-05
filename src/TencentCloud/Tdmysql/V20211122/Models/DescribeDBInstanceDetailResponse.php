@@ -154,6 +154,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionKmsRegion(string $EncryptionKmsRegion) 设置<p>真实使用的kms地域，用于后续调用kms服务</p>
  * @method array getAutoScaleConfigs() 获取<p>serverless自动变配配置</p>
  * @method void setAutoScaleConfigs(array $AutoScaleConfigs) 设置<p>serverless自动变配配置</p>
+ * @method string getSSLStatus() 获取<p>SSL开启状态</p>
+ * @method void setSSLStatus(string $SSLStatus) 设置<p>SSL开启状态</p>
+ * @method string getCollation() 获取<p>字符集的排序规则</p>
+ * @method void setCollation(string $Collation) 设置<p>字符集的排序规则</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -475,6 +479,16 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
     public $AutoScaleConfigs;
 
     /**
+     * @var string <p>SSL开启状态</p>
+     */
+    public $SSLStatus;
+
+    /**
+     * @var string <p>字符集的排序规则</p>
+     */
+    public $Collation;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -547,6 +561,8 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
      * @param integer $EncryptionEnable <p>是否开启透明加密，0：未开启；1：已开启</p>
      * @param string $EncryptionKmsRegion <p>真实使用的kms地域，用于后续调用kms服务</p>
      * @param array $AutoScaleConfigs <p>serverless自动变配配置</p>
+     * @param string $SSLStatus <p>SSL开启状态</p>
+     * @param string $Collation <p>字符集的排序规则</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -836,6 +852,14 @@ class DescribeDBInstanceDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AutoScaleConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("SSLStatus",$param) and $param["SSLStatus"] !== null) {
+            $this->SSLStatus = $param["SSLStatus"];
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

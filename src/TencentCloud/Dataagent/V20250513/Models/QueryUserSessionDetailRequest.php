@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
  * @method string getInstanceId() 获取<p>实例id</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method SurfaceContext getSurfaceContext() 获取<p>上下文</p>
+ * @method void setSurfaceContext(SurfaceContext $SurfaceContext) 设置<p>上下文</p>
  */
 class QueryUserSessionDetailRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class QueryUserSessionDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var SurfaceContext <p>上下文</p>
+     */
+    public $SurfaceContext;
+
+    /**
      * @param string $SessionId <p>会话id</p>
      * @param integer $Limit <p>分页参数</p>
      * @param integer $Offset <p>偏移量</p>
      * @param string $InstanceId <p>实例id</p>
+     * @param SurfaceContext $SurfaceContext <p>上下文</p>
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class QueryUserSessionDetailRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("SurfaceContext",$param) and $param["SurfaceContext"] !== null) {
+            $this->SurfaceContext = new SurfaceContext();
+            $this->SurfaceContext->deserialize($param["SurfaceContext"]);
         }
     }
 }

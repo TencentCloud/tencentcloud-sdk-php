@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileVolumeMountList(array $FileVolumeMountList) 设置<p>应用挂载云盘</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method A2AConfig getA2AConfig() 获取<p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setA2AConfig(A2AConfig $A2AConfig) 设置<p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class App extends AbstractModel
 {
@@ -124,6 +128,12 @@ class App extends AbstractModel
     public $FileVolumeMountList;
 
     /**
+     * @var A2AConfig <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $A2AConfig;
+
+    /**
      * @param AppAuxiliaryInfo $AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppConfig $Config <p>配置</p>
@@ -143,6 +153,8 @@ class App extends AbstractModel
      * @param PortalShareConfig $PortalShareConfig <p>portal共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileVolumeMountList <p>应用挂载云盘</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param A2AConfig $A2AConfig <p>A2A配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -214,6 +226,11 @@ class App extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileVolumeMountList, $obj);
             }
+        }
+
+        if (array_key_exists("A2AConfig",$param) and $param["A2AConfig"] !== null) {
+            $this->A2AConfig = new A2AConfig();
+            $this->A2AConfig->deserialize($param["A2AConfig"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Agent输入值，支持直接赋值和引用
  *
- * @method integer getInputType() 获取<p>输入来源类型：0 用户输入，3 自定义变量（API参数）</p>
- * @method void setInputType(integer $InputType) 设置<p>输入来源类型：0 用户输入，3 自定义变量（API参数）</p>
+ * @method integer getInputType() 获取<p>输入来源类型</p><p>枚举值：</p><ul><li>1： 用户输入</li><li>2： 系统变量</li><li>3： 自定义变量（API参数）</li><li>4： 环境变量</li><li>5： 应用变量</li><li>6： 工具参数</li></ul>
+ * @method void setInputType(integer $InputType) 设置<p>输入来源类型</p><p>枚举值：</p><ul><li>1： 用户输入</li><li>2： 系统变量</li><li>3： 自定义变量（API参数）</li><li>4： 环境变量</li><li>5： 应用变量</li><li>6： 工具参数</li></ul>
  * @method AgentUserInputValue getUserInputValue() 获取<p>用户手写输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserInputValue(AgentUserInputValue $UserInputValue) 设置<p>用户手写输入</p>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class AgentInput extends AbstractModel
 {
     /**
-     * @var integer <p>输入来源类型：0 用户输入，3 自定义变量（API参数）</p>
+     * @var integer <p>输入来源类型</p><p>枚举值：</p><ul><li>1： 用户输入</li><li>2： 系统变量</li><li>3： 自定义变量（API参数）</li><li>4： 环境变量</li><li>5： 应用变量</li><li>6： 工具参数</li></ul>
      */
     public $InputType;
 
@@ -72,7 +72,7 @@ class AgentInput extends AbstractModel
     public $AppVariableId;
 
     /**
-     * @param integer $InputType <p>输入来源类型：0 用户输入，3 自定义变量（API参数）</p>
+     * @param integer $InputType <p>输入来源类型</p><p>枚举值：</p><ul><li>1： 用户输入</li><li>2： 系统变量</li><li>3： 自定义变量（API参数）</li><li>4： 环境变量</li><li>5： 应用变量</li><li>6： 工具参数</li></ul>
      * @param AgentUserInputValue $UserInputValue <p>用户手写输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentSystemVariable $SystemVariable <p>系统参数</p>

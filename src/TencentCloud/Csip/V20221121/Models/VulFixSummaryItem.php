@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAffectedCount(integer $AffectedCount) 设置<p>受影响主机数</p>
  * @method boolean getNeedReboot() 获取<p>修复后是否需要重启系统</p>
  * @method void setNeedReboot(boolean $NeedReboot) 设置<p>修复后是否需要重启系统</p>
- * @method boolean getFixSwitch() 获取<p>是否支持一键修复true-支持 false-不支持</p>
- * @method void setFixSwitch(boolean $FixSwitch) 设置<p>是否支持一键修复true-支持 false-不支持</p>
+ * @method boolean getFixSwitch() 获取<p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method void setFixSwitch(boolean $FixSwitch) 设置<p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
  */
 class VulFixSummaryItem extends AbstractModel
 {
@@ -61,7 +61,7 @@ class VulFixSummaryItem extends AbstractModel
     public $NeedReboot;
 
     /**
-     * @var boolean <p>是否支持一键修复true-支持 false-不支持</p>
+     * @var boolean <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     public $FixSwitch;
 
@@ -71,7 +71,7 @@ class VulFixSummaryItem extends AbstractModel
      * @param string $CveId <p>CVE编号</p>
      * @param integer $AffectedCount <p>受影响主机数</p>
      * @param boolean $NeedReboot <p>修复后是否需要重启系统</p>
-     * @param boolean $FixSwitch <p>是否支持一键修复true-支持 false-不支持</p>
+     * @param boolean $FixSwitch <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     function __construct()
     {

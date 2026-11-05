@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>训练实例ID</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>训练实例ID</p>
+ * @method string getResumeCheckpointSubDir() 获取<p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+ * @method void setResumeCheckpointSubDir(string $ResumeCheckpointSubDir) 设置<p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
  */
 class ResumeTrainingJobInstanceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ResumeTrainingJobInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+     */
+    public $ResumeCheckpointSubDir;
+
+    /**
      * @param string $InstanceId <p>训练实例ID</p>
+     * @param string $ResumeCheckpointSubDir <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ResumeTrainingJobInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ResumeCheckpointSubDir",$param) and $param["ResumeCheckpointSubDir"] !== null) {
+            $this->ResumeCheckpointSubDir = $param["ResumeCheckpointSubDir"];
         }
     }
 }

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadActiveDeviceCount返回参数结构体
  *
- * @method string getFilePath() 获取URL地址
- * @method void setFilePath(string $FilePath) 设置URL地址
+ * @method string getFilePath() 获取<p>URL地址</p>
+ * @method void setFilePath(string $FilePath) 设置<p>URL地址</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DownloadActiveDeviceCountResponse extends AbstractModel
 {
     /**
-     * @var string URL地址
+     * @var string <p>URL地址</p>
      */
     public $FilePath;
 
@@ -38,7 +38,7 @@ class DownloadActiveDeviceCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FilePath URL地址
+     * @param string $FilePath <p>URL地址</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

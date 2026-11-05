@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceSupplyAttribute(ResourceSupplyAttribute $ResourceSupplyAttribute) 设置<p>资源供应属性（潮汐/竞价等供应模式），公有云场景用于指定机器来源类型。仅区分供应来源，计费/部署/伸缩仍按后付费处理（ChargeType 恒为 POSTPAID_BY_HOUR）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupSWType() 获取<p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+ * @method void setResourceGroupSWType(string $ResourceGroupSWType) 设置<p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
  */
 class SmartRouterResourceSpec extends AbstractModel
 {
@@ -76,6 +78,11 @@ class SmartRouterResourceSpec extends AbstractModel
     public $ResourceSupplyAttribute;
 
     /**
+     * @var string <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+     */
+    public $ResourceGroupSWType;
+
+    /**
      * @param string $ChargeType <p>付费模式：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）。不传则默认 POSTPAID_BY_HOUR</p>
      * @param string $ResourceGroupId <p>预付费资源组 ID（ChargeType=PREPAID 时必填）</p>
      * @param string $ResourceGroupName <p>预付费资源组名称（output only，ChargeType=PREPAID 时有值，查询时回显）</p>
@@ -84,6 +91,7 @@ class SmartRouterResourceSpec extends AbstractModel
      * @param integer $Priority <p>服务的优先级，可选范围 [0,9]，默认 0（内网版/私有化使用）</p>
      * @param ResourceSupplyAttribute $ResourceSupplyAttribute <p>资源供应属性（潮汐/竞价等供应模式），公有云场景用于指定机器来源类型。仅区分供应来源，计费/部署/伸缩仍按后付费处理（ChargeType 恒为 POSTPAID_BY_HOUR）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupSWType <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class SmartRouterResourceSpec extends AbstractModel
         if (array_key_exists("ResourceSupplyAttribute",$param) and $param["ResourceSupplyAttribute"] !== null) {
             $this->ResourceSupplyAttribute = new ResourceSupplyAttribute();
             $this->ResourceSupplyAttribute->deserialize($param["ResourceSupplyAttribute"]);
+        }
+
+        if (array_key_exists("ResourceGroupSWType",$param) and $param["ResourceGroupSWType"] !== null) {
+            $this->ResourceGroupSWType = $param["ResourceGroupSWType"];
         }
     }
 }

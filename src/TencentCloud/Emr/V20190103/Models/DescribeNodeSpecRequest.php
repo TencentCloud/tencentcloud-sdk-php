@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNodeSpec请求参数结构体
  *
- * @method integer getZoneId() 获取<p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
- * @method void setZoneId(integer $ZoneId) 设置<p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+ * @method integer getZoneId() 获取<p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
+ * @method void setZoneId(integer $ZoneId) 设置<p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
  * @method integer getCvmPayMode() 获取<p>0,按量，1包年包月，99按量+包年包月，错填将不会展示费用信息</p>
  * @method void setCvmPayMode(integer $CvmPayMode) 设置<p>0,按量，1包年包月，99按量+包年包月，错填将不会展示费用信息</p>
  * @method string getNodeType() 获取<p>节点类型,Master,Core,Task,Router,All</p>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeNodeSpecRequest extends AbstractModel
 {
     /**
-     * @var integer <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+     * @var integer <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
      */
     public $ZoneId;
 
@@ -80,7 +80,7 @@ class DescribeNodeSpecRequest extends AbstractModel
     public $ComputeResourceId;
 
     /**
-     * @param integer $ZoneId <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+     * @param integer $ZoneId <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
      * @param integer $CvmPayMode <p>0,按量，1包年包月，99按量+包年包月，错填将不会展示费用信息</p>
      * @param string $NodeType <p>节点类型,Master,Core,Task,Router,All</p>
      * @param integer $TradeType <p>0:旧计费页面,1:新计费页面。 错填，默认为旧计费</p>

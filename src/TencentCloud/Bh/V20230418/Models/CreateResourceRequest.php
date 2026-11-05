@@ -20,106 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResource请求参数结构体
  *
- * @method string getDeployRegion() 获取部署region
- * @method void setDeployRegion(string $DeployRegion) 设置部署region
- * @method string getVpcId() 获取部署堡垒机的VpcId
- * @method void setVpcId(string $VpcId) 设置部署堡垒机的VpcId
- * @method string getSubnetId() 获取部署堡垒机的SubnetId
- * @method void setSubnetId(string $SubnetId) 设置部署堡垒机的SubnetId
- * @method string getResourceEdition() 获取资源类型。取值:standard/pro
- * @method void setResourceEdition(string $ResourceEdition) 设置资源类型。取值:standard/pro
- * @method integer getResourceNode() 获取资源节点数
- * @method void setResourceNode(integer $ResourceNode) 设置资源节点数
- * @method string getTimeUnit() 获取计费周期
- * @method void setTimeUnit(string $TimeUnit) 设置计费周期
- * @method integer getTimeSpan() 获取计费时长
- * @method void setTimeSpan(integer $TimeSpan) 设置计费时长
- * @method integer getPayMode() 获取计费模式 1预付费
- * @method void setPayMode(integer $PayMode) 设置计费模式 1预付费
- * @method integer getAutoRenewFlag() 获取自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费
- * @method string getDeployZone() 获取部署zone
- * @method void setDeployZone(string $DeployZone) 设置部署zone
- * @method integer getTrial() 获取0非试用版，1试用版
- * @method void setTrial(integer $Trial) 设置0非试用版，1试用版
- * @method integer getShareClb() 获取是否共享clb，0：不共享，1：共享
- * @method void setShareClb(integer $ShareClb) 设置是否共享clb，0：不共享，1：共享
+ * @method string getDeployRegion() 获取<p>部署region</p>
+ * @method void setDeployRegion(string $DeployRegion) 设置<p>部署region</p>
+ * @method string getVpcId() 获取<p>部署堡垒机的VpcId</p>
+ * @method void setVpcId(string $VpcId) 设置<p>部署堡垒机的VpcId</p>
+ * @method string getSubnetId() 获取<p>部署堡垒机的SubnetId</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>部署堡垒机的SubnetId</p>
+ * @method string getResourceEdition() 获取<p>资源类型。取值:standard/pro</p>
+ * @method void setResourceEdition(string $ResourceEdition) 设置<p>资源类型。取值:standard/pro</p>
+ * @method integer getResourceNode() 获取<p>资源节点数</p>
+ * @method void setResourceNode(integer $ResourceNode) 设置<p>资源节点数</p>
+ * @method string getTimeUnit() 获取<p>计费周期</p>
+ * @method void setTimeUnit(string $TimeUnit) 设置<p>计费周期</p>
+ * @method integer getTimeSpan() 获取<p>计费时长</p>
+ * @method void setTimeSpan(integer $TimeSpan) 设置<p>计费时长</p>
+ * @method integer getPayMode() 获取<p>计费模式 1预付费</p>
+ * @method void setPayMode(integer $PayMode) 设置<p>计费模式 1预付费</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费</p>
+ * @method integer getIOAResource() 获取<p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+ * @method void setIOAResource(integer $IOAResource) 设置<p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+ * @method integer getPackageIOAUserCount() 获取<p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+ * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置<p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+ * @method integer getPackageIOABandwidth() 获取<p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+ * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置<p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+ * @method string getDeployZone() 获取<p>部署zone</p>
+ * @method void setDeployZone(string $DeployZone) 设置<p>部署zone</p>
+ * @method integer getTrial() 获取<p>0非试用版，1试用版</p>
+ * @method void setTrial(integer $Trial) 设置<p>0非试用版，1试用版</p>
+ * @method integer getShareClb() 获取<p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
+ * @method void setShareClb(integer $ShareClb) 设置<p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
  */
 class CreateResourceRequest extends AbstractModel
 {
     /**
-     * @var string 部署region
+     * @var string <p>部署region</p>
      */
     public $DeployRegion;
 
     /**
-     * @var string 部署堡垒机的VpcId
+     * @var string <p>部署堡垒机的VpcId</p>
      */
     public $VpcId;
 
     /**
-     * @var string 部署堡垒机的SubnetId
+     * @var string <p>部署堡垒机的SubnetId</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 资源类型。取值:standard/pro
+     * @var string <p>资源类型。取值:standard/pro</p>
      */
     public $ResourceEdition;
 
     /**
-     * @var integer 资源节点数
+     * @var integer <p>资源节点数</p>
      */
     public $ResourceNode;
 
     /**
-     * @var string 计费周期
+     * @var string <p>计费周期</p>
      */
     public $TimeUnit;
 
     /**
-     * @var integer 计费时长
+     * @var integer <p>计费时长</p>
      */
     public $TimeSpan;
 
     /**
-     * @var integer 计费模式 1预付费
+     * @var integer <p>计费模式 1预付费</p>
      */
     public $PayMode;
 
     /**
-     * @var integer 自动续费
+     * @var integer <p>自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 部署zone
+     * @var integer <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+     */
+    public $IOAResource;
+
+    /**
+     * @var integer <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public $PackageIOAUserCount;
+
+    /**
+     * @var integer <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public $PackageIOABandwidth;
+
+    /**
+     * @var string <p>部署zone</p>
      */
     public $DeployZone;
 
     /**
-     * @var integer 0非试用版，1试用版
+     * @var integer <p>0非试用版，1试用版</p>
      */
     public $Trial;
 
     /**
-     * @var integer 是否共享clb，0：不共享，1：共享
+     * @var integer <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
      */
     public $ShareClb;
 
     /**
-     * @param string $DeployRegion 部署region
-     * @param string $VpcId 部署堡垒机的VpcId
-     * @param string $SubnetId 部署堡垒机的SubnetId
-     * @param string $ResourceEdition 资源类型。取值:standard/pro
-     * @param integer $ResourceNode 资源节点数
-     * @param string $TimeUnit 计费周期
-     * @param integer $TimeSpan 计费时长
-     * @param integer $PayMode 计费模式 1预付费
-     * @param integer $AutoRenewFlag 自动续费
-     * @param string $DeployZone 部署zone
-     * @param integer $Trial 0非试用版，1试用版
-     * @param integer $ShareClb 是否共享clb，0：不共享，1：共享
+     * @param string $DeployRegion <p>部署region</p>
+     * @param string $VpcId <p>部署堡垒机的VpcId</p>
+     * @param string $SubnetId <p>部署堡垒机的SubnetId</p>
+     * @param string $ResourceEdition <p>资源类型。取值:standard/pro</p>
+     * @param integer $ResourceNode <p>资源节点数</p>
+     * @param string $TimeUnit <p>计费周期</p>
+     * @param integer $TimeSpan <p>计费时长</p>
+     * @param integer $PayMode <p>计费模式 1预付费</p>
+     * @param integer $AutoRenewFlag <p>自动续费</p>
+     * @param integer $IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+     * @param integer $PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     * @param integer $PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     * @param string $DeployZone <p>部署zone</p>
+     * @param integer $Trial <p>0非试用版，1试用版</p>
+     * @param integer $ShareClb <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
      */
     function __construct()
     {
@@ -168,6 +192,18 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("IOAResource",$param) and $param["IOAResource"] !== null) {
+            $this->IOAResource = $param["IOAResource"];
+        }
+
+        if (array_key_exists("PackageIOAUserCount",$param) and $param["PackageIOAUserCount"] !== null) {
+            $this->PackageIOAUserCount = $param["PackageIOAUserCount"];
+        }
+
+        if (array_key_exists("PackageIOABandwidth",$param) and $param["PackageIOABandwidth"] !== null) {
+            $this->PackageIOABandwidth = $param["PackageIOABandwidth"];
         }
 
         if (array_key_exists("DeployZone",$param) and $param["DeployZone"] !== null) {

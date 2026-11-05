@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingItem(string $BillingItem) 设置<p>评测容器计费项（规格）。仅允许 CPU 计费项。</p>
  * @method integer getSpec() 获取<p>评测容器计费项规格倍数</p>
  * @method void setSpec(integer $Spec) 设置<p>评测容器计费项规格倍数</p>
+ * @method string getModelIdentifier() 获取<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+ * @method void setModelIdentifier(string $ModelIdentifier) 设置<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
  */
 class CreateBenchmarkTaskRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateBenchmarkTaskRequest extends AbstractModel
     public $Spec;
 
     /**
+     * @var string <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     */
+    public $ModelIdentifier;
+
+    /**
      * @param string $ServiceId <p>推理服务Id</p>
      * @param string $TaskName <p>任务名称（可选，不填则自动生成）</p>
      * @param integer $InputTokens <p>每个 Prompt 的平均输入 Token 数</p>
@@ -136,6 +143,7 @@ class CreateBenchmarkTaskRequest extends AbstractModel
      * @param string $Queue <p>评测容器所在资源包下的资源组名称</p>
      * @param string $BillingItem <p>评测容器计费项（规格）。仅允许 CPU 计费项。</p>
      * @param integer $Spec <p>评测容器计费项规格倍数</p>
+     * @param string $ModelIdentifier <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateBenchmarkTaskRequest extends AbstractModel
 
         if (array_key_exists("Spec",$param) and $param["Spec"] !== null) {
             $this->Spec = $param["Spec"];
+        }
+
+        if (array_key_exists("ModelIdentifier",$param) and $param["ModelIdentifier"] !== null) {
+            $this->ModelIdentifier = $param["ModelIdentifier"];
         }
     }
 }

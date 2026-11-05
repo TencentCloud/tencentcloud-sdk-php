@@ -44,10 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageConfig(string $StorageConfig) 设置<p>存储配置 JSON，具体结构按 storageMode 解释（cos / cfs / local）</p>
  * @method string getStorageMode() 获取<p>存储模式</p><p>枚举值：</p><ul><li>cos： cos 对象存储</li><li>cfs： cfs 文件系统存储</li></ul>
  * @method void setStorageMode(string $StorageMode) 设置<p>存储模式</p><p>枚举值：</p><ul><li>cos： cos 对象存储</li><li>cfs： cfs 文件系统存储</li></ul>
+ * @method string getServerArgs() 获取<p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+ * @method void setServerArgs(string $ServerArgs) 设置<p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+ * @method string getDescription() 获取<p>描述信息（纯文本；null = 未填写）</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息（纯文本；null = 未填写）</p>
  * @method integer getAppId() 获取<p>应用 ID</p>
  * @method void setAppId(integer $AppId) 设置<p>应用 ID</p>
  * @method string getUin() 获取<p>创建者 UIN</p>
  * @method void setUin(string $Uin) 设置<p>创建者 UIN</p>
+ * @method string getSubAccountUin() 获取<p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+ * @method string getSubAccountName() 获取<p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
  * @method integer getCreateTime() 获取<p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
  * @method integer getUpdateTime() 获取<p>更新时间（epoch 毫秒）</p><p>单位：毫秒</p>
@@ -58,6 +66,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>标签列表（TagKey-TagValue）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastProbeSuccessTime() 获取<p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+ * @method void setLastProbeSuccessTime(integer $LastProbeSuccessTime) 设置<p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+ * @method integer getConsecutiveProbeFailures() 获取<p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+ * @method void setConsecutiveProbeFailures(integer $ConsecutiveProbeFailures) 设置<p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+ * @method string getLastProbeError() 获取<p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+ * @method void setLastProbeError(string $LastProbeError) 设置<p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+ * @method integer getTotalInstanceCount() 获取<p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+ * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置<p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+ * @method integer getRunningInstanceCount() 获取<p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+ * @method void setRunningInstanceCount(integer $RunningInstanceCount) 设置<p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
  */
 class MlFlowServerInfo extends AbstractModel
 {
@@ -122,6 +140,16 @@ class MlFlowServerInfo extends AbstractModel
     public $StorageMode;
 
     /**
+     * @var string <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+     */
+    public $ServerArgs;
+
+    /**
+     * @var string <p>描述信息（纯文本；null = 未填写）</p>
+     */
+    public $Description;
+
+    /**
      * @var integer <p>应用 ID</p>
      */
     public $AppId;
@@ -130,6 +158,16 @@ class MlFlowServerInfo extends AbstractModel
      * @var string <p>创建者 UIN</p>
      */
     public $Uin;
+
+    /**
+     * @var string <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var integer <p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
@@ -153,6 +191,31 @@ class MlFlowServerInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+     */
+    public $LastProbeSuccessTime;
+
+    /**
+     * @var integer <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+     */
+    public $ConsecutiveProbeFailures;
+
+    /**
+     * @var string <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+     */
+    public $LastProbeError;
+
+    /**
+     * @var integer <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+     */
+    public $TotalInstanceCount;
+
+    /**
+     * @var integer <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+     */
+    public $RunningInstanceCount;
+
+    /**
      * @param string $ServerId <p>MLflow 实例的 ID</p>
      * @param string $ServerName <p>实例名称</p>
      * @param string $ResourcePartitionId <p>资源分区 ID</p>
@@ -165,13 +228,22 @@ class MlFlowServerInfo extends AbstractModel
      * @param string $Image <p>MLflow 镜像地址</p>
      * @param string $StorageConfig <p>存储配置 JSON，具体结构按 storageMode 解释（cos / cfs / local）</p>
      * @param string $StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>cos： cos 对象存储</li><li>cfs： cfs 文件系统存储</li></ul>
+     * @param string $ServerArgs <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+     * @param string $Description <p>描述信息（纯文本；null = 未填写）</p>
      * @param integer $AppId <p>应用 ID</p>
      * @param string $Uin <p>创建者 UIN</p>
+     * @param string $SubAccountUin <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+     * @param string $SubAccountName <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
      * @param integer $CreateTime <p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
      * @param integer $UpdateTime <p>更新时间（epoch 毫秒）</p><p>单位：毫秒</p>
      * @param string $ResourceConfig <p>资源配置 JSON</p>
      * @param array $Tags <p>标签列表（TagKey-TagValue）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastProbeSuccessTime <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+     * @param integer $ConsecutiveProbeFailures <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+     * @param string $LastProbeError <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+     * @param integer $TotalInstanceCount <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+     * @param integer $RunningInstanceCount <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
      */
     function __construct()
     {
@@ -234,12 +306,28 @@ class MlFlowServerInfo extends AbstractModel
             $this->StorageMode = $param["StorageMode"];
         }
 
+        if (array_key_exists("ServerArgs",$param) and $param["ServerArgs"] !== null) {
+            $this->ServerArgs = $param["ServerArgs"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
         }
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -261,6 +349,26 @@ class MlFlowServerInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("LastProbeSuccessTime",$param) and $param["LastProbeSuccessTime"] !== null) {
+            $this->LastProbeSuccessTime = $param["LastProbeSuccessTime"];
+        }
+
+        if (array_key_exists("ConsecutiveProbeFailures",$param) and $param["ConsecutiveProbeFailures"] !== null) {
+            $this->ConsecutiveProbeFailures = $param["ConsecutiveProbeFailures"];
+        }
+
+        if (array_key_exists("LastProbeError",$param) and $param["LastProbeError"] !== null) {
+            $this->LastProbeError = $param["LastProbeError"];
+        }
+
+        if (array_key_exists("TotalInstanceCount",$param) and $param["TotalInstanceCount"] !== null) {
+            $this->TotalInstanceCount = $param["TotalInstanceCount"];
+        }
+
+        if (array_key_exists("RunningInstanceCount",$param) and $param["RunningInstanceCount"] !== null) {
+            $this->RunningInstanceCount = $param["RunningInstanceCount"];
         }
     }
 }

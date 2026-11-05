@@ -66,6 +66,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingEnabled(boolean $AutoscalingEnabled) 设置<p>是否开启自动伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinReplicas() 获取<p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinReplicas(integer $MinReplicas) 设置<p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxReplicas() 获取<p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxReplicas(integer $MaxReplicas) 设置<p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAutoscalerOptions() 获取<p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoscalerOptions(string $AutoscalerOptions) 设置<p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModelStorageConfig() 获取<p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelStorageConfig(string $ModelStorageConfig) 设置<p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
@@ -90,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeutrinoServeId(string $NeutrinoServeId) 设置<p>Neutrino Serve ID (RayService CR name)</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRayDashboardUrl() 获取<p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRayDashboardUrl(string $RayDashboardUrl) 设置<p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourcePartitionId() 获取<p>资源分区 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePartitionId(string $ResourcePartitionId) 设置<p>资源分区 ID</p>
@@ -106,6 +122,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePartitionName(string $ResourcePartitionName) 设置<p>资源分区名称</p>
  * @method string getAdvancedOptions() 获取<p>高级参数</p>
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数</p>
+ * @method string getCodePackageUri() 获取<p>用户代码包 URL</p>
+ * @method void setCodePackageUri(string $CodePackageUri) 设置<p>用户代码包 URL</p>
+ * @method string getCodePackageOriginalName() 获取<p>用户上传代码包的原始文件名</p>
+ * @method void setCodePackageOriginalName(string $CodePackageOriginalName) 设置<p>用户上传代码包的原始文件名</p>
+ * @method array getLoraBindings() 获取<p>部署当前挂载的 LoRA 模型版本列表。</p>
+ * @method void setLoraBindings(array $LoraBindings) 设置<p>部署当前挂载的 LoRA 模型版本列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -183,6 +205,24 @@ class AddDeploymentResponse extends AbstractModel
     public $AutoscalingEnabled;
 
     /**
+     * @var integer <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinReplicas;
+
+    /**
+     * @var integer <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxReplicas;
+
+    /**
+     * @var string <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoscalerOptions;
+
+    /**
      * @var string <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -219,6 +259,12 @@ class AddDeploymentResponse extends AbstractModel
     public $NeutrinoServeId;
 
     /**
+     * @var string <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RayDashboardUrl;
+
+    /**
      * @var string <p>资源分区 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -251,6 +297,21 @@ class AddDeploymentResponse extends AbstractModel
     public $AdvancedOptions;
 
     /**
+     * @var string <p>用户代码包 URL</p>
+     */
+    public $CodePackageUri;
+
+    /**
+     * @var string <p>用户上传代码包的原始文件名</p>
+     */
+    public $CodePackageOriginalName;
+
+    /**
+     * @var array <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public $LoraBindings;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -279,6 +340,12 @@ class AddDeploymentResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoscalingEnabled <p>是否开启自动伸缩</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinReplicas <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxReplicas <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoscalerOptions <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelStorageConfig <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId <p>AppId</p>
@@ -291,6 +358,8 @@ class AddDeploymentResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NeutrinoServeId <p>Neutrino Serve ID (RayService CR name)</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RayDashboardUrl <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourcePartitionId <p>资源分区 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Queue <p>资源队列名称</p>
@@ -299,6 +368,9 @@ class AddDeploymentResponse extends AbstractModel
      * @param string $Image <p>镜像名称</p>
      * @param string $ResourcePartitionName <p>资源分区名称</p>
      * @param string $AdvancedOptions <p>高级参数</p>
+     * @param string $CodePackageUri <p>用户代码包 URL</p>
+     * @param string $CodePackageOriginalName <p>用户上传代码包的原始文件名</p>
+     * @param array $LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -362,6 +434,18 @@ class AddDeploymentResponse extends AbstractModel
             $this->AutoscalingEnabled = $param["AutoscalingEnabled"];
         }
 
+        if (array_key_exists("MinReplicas",$param) and $param["MinReplicas"] !== null) {
+            $this->MinReplicas = $param["MinReplicas"];
+        }
+
+        if (array_key_exists("MaxReplicas",$param) and $param["MaxReplicas"] !== null) {
+            $this->MaxReplicas = $param["MaxReplicas"];
+        }
+
+        if (array_key_exists("AutoscalerOptions",$param) and $param["AutoscalerOptions"] !== null) {
+            $this->AutoscalerOptions = $param["AutoscalerOptions"];
+        }
+
         if (array_key_exists("ModelStorageConfig",$param) and $param["ModelStorageConfig"] !== null) {
             $this->ModelStorageConfig = $param["ModelStorageConfig"];
         }
@@ -386,6 +470,10 @@ class AddDeploymentResponse extends AbstractModel
             $this->NeutrinoServeId = $param["NeutrinoServeId"];
         }
 
+        if (array_key_exists("RayDashboardUrl",$param) and $param["RayDashboardUrl"] !== null) {
+            $this->RayDashboardUrl = $param["RayDashboardUrl"];
+        }
+
         if (array_key_exists("ResourcePartitionId",$param) and $param["ResourcePartitionId"] !== null) {
             $this->ResourcePartitionId = $param["ResourcePartitionId"];
         }
@@ -408,6 +496,23 @@ class AddDeploymentResponse extends AbstractModel
 
         if (array_key_exists("AdvancedOptions",$param) and $param["AdvancedOptions"] !== null) {
             $this->AdvancedOptions = $param["AdvancedOptions"];
+        }
+
+        if (array_key_exists("CodePackageUri",$param) and $param["CodePackageUri"] !== null) {
+            $this->CodePackageUri = $param["CodePackageUri"];
+        }
+
+        if (array_key_exists("CodePackageOriginalName",$param) and $param["CodePackageOriginalName"] !== null) {
+            $this->CodePackageOriginalName = $param["CodePackageOriginalName"];
+        }
+
+        if (array_key_exists("LoraBindings",$param) and $param["LoraBindings"] !== null) {
+            $this->LoraBindings = [];
+            foreach ($param["LoraBindings"] as $key => $value){
+                $obj = new LoraItem();
+                $obj->deserialize($value);
+                array_push($this->LoraBindings, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

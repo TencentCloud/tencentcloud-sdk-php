@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeList(array $NodeList) 设置<p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
  * @method string getServerlessStatus() 获取<p>serverless实例子状态</p>
  * @method void setServerlessStatus(string $ServerlessStatus) 设置<p>serverless实例子状态</p>
+ * @method InstanceServerlessQuotaInfo getServerlessQuotaInfo() 获取<p>实例Serverless弹性配置信息</p>
+ * @method void setServerlessQuotaInfo(InstanceServerlessQuotaInfo $ServerlessQuotaInfo) 设置<p>实例Serverless弹性配置信息</p>
  * @method AIOptimizerStatus getAIOptimizerStatus() 获取<p>AI优化器状态</p>
  * @method void setAIOptimizerStatus(AIOptimizerStatus $AIOptimizerStatus) 设置<p>AI优化器状态</p>
  * @method integer getProjectId() 获取<p>项目ID</p>
@@ -302,6 +304,11 @@ class ClusterInstanceDetail extends AbstractModel
     public $ServerlessStatus;
 
     /**
+     * @var InstanceServerlessQuotaInfo <p>实例Serverless弹性配置信息</p>
+     */
+    public $ServerlessQuotaInfo;
+
+    /**
      * @var AIOptimizerStatus <p>AI优化器状态</p>
      */
     public $AIOptimizerStatus;
@@ -502,6 +509,7 @@ class ClusterInstanceDetail extends AbstractModel
      * @param string $DbMode <p>数据库类型</p>
      * @param array $NodeList <p>节点列表<br>说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。</p>
      * @param string $ServerlessStatus <p>serverless实例子状态</p>
+     * @param InstanceServerlessQuotaInfo $ServerlessQuotaInfo <p>实例Serverless弹性配置信息</p>
      * @param AIOptimizerStatus $AIOptimizerStatus <p>AI优化器状态</p>
      * @param integer $ProjectId <p>项目ID</p>
      * @param string $Region <p>地域</p>
@@ -670,6 +678,11 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("ServerlessQuotaInfo",$param) and $param["ServerlessQuotaInfo"] !== null) {
+            $this->ServerlessQuotaInfo = new InstanceServerlessQuotaInfo();
+            $this->ServerlessQuotaInfo->deserialize($param["ServerlessQuotaInfo"]);
         }
 
         if (array_key_exists("AIOptimizerStatus",$param) and $param["AIOptimizerStatus"] !== null) {

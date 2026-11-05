@@ -132,6 +132,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuTopology(CpuTopology $CpuTopology) 设置<p>描述了实例CPU拓扑结构的相关信息。</p>
  * @method integer getPartitionNumber() 获取<p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
  * @method void setPartitionNumber(integer $PartitionNumber) 设置<p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+ * @method string getSuperNodeId() 获取<p>逻辑超节点标识</p>
+ * @method void setSuperNodeId(string $SuperNodeId) 设置<p>逻辑超节点标识</p>
  */
 class Instance extends AbstractModel
 {
@@ -385,6 +387,11 @@ class Instance extends AbstractModel
     public $PartitionNumber;
 
     /**
+     * @var string <p>逻辑超节点标识</p>
+     */
+    public $SuperNodeId;
+
+    /**
      * @param Placement $Placement <p>实例所在的位置。</p>
      * @param string $InstanceId <p>实例<code>ID</code>。</p>
      * @param string $InstanceType <p>实例机型。</p>
@@ -441,6 +448,7 @@ class Instance extends AbstractModel
      * @param array $PublicIPv6Addresses <p>实例绑定的公网IPv6地址。</p>
      * @param CpuTopology $CpuTopology <p>描述了实例CPU拓扑结构的相关信息。</p>
      * @param integer $PartitionNumber <p>分区置放群组的分区号，具体取决于所选置放群组的分区数量(功能灰度中)</p>
+     * @param string $SuperNodeId <p>逻辑超节点标识</p>
      */
     function __construct()
     {
@@ -663,6 +671,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
             $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("SuperNodeId",$param) and $param["SuperNodeId"] !== null) {
+            $this->SuperNodeId = $param["SuperNodeId"];
         }
     }
 }

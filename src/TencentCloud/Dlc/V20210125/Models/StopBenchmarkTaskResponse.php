@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeploymentResources(array $DeploymentResources) 设置<p>与本次评测关联的部署及其资源规格。语义按模式区分： • 网关模式（UseGateway=true）：Service 下所有 Running 部署（长度可能 &gt; 1） • 直连模式（UseGateway=false）：仅绑定的那个部署（长度恒为 1）</p>
  * @method string getErrorMessage() 获取<p>发生错误时的错误信息</p>
  * @method void setErrorMessage(string $ErrorMessage) 设置<p>发生错误时的错误信息</p>
+ * @method string getModelIdentifier() 获取<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+ * @method void setModelIdentifier(string $ModelIdentifier) 设置<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +182,11 @@ class StopBenchmarkTaskResponse extends AbstractModel
     public $ErrorMessage;
 
     /**
+     * @var string <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     */
+    public $ModelIdentifier;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +214,7 @@ class StopBenchmarkTaskResponse extends AbstractModel
      * @param BenchmarkResourceInfo $Resources <p>评测容器自身使用的资源规格</p>
      * @param array $DeploymentResources <p>与本次评测关联的部署及其资源规格。语义按模式区分： • 网关模式（UseGateway=true）：Service 下所有 Running 部署（长度可能 &gt; 1） • 直连模式（UseGateway=false）：仅绑定的那个部署（长度恒为 1）</p>
      * @param string $ErrorMessage <p>发生错误时的错误信息</p>
+     * @param string $ModelIdentifier <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -314,6 +322,10 @@ class StopBenchmarkTaskResponse extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("ModelIdentifier",$param) and $param["ModelIdentifier"] !== null) {
+            $this->ModelIdentifier = $param["ModelIdentifier"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

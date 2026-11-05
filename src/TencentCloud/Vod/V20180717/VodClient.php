@@ -622,7 +622,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
  * @method Models\SplitMediaResponse SplitMedia(Models\SplitMediaRequest $req) 对点播视频进行拆条，生成多个新的点播视频。
- * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果。
+ * @method Models\TextToSpeechAsyncResponse TextToSpeechAsync(Models\TextToSpeechAsyncRequest $req) 发起语音合成任务，将文本合成为语音，面向长文本场景（最大 200000 字符），支持指定音色及语速、音量、音调、采样率、输出格式等合成参数。语音合成为异步任务，完成后产出音频结果，可通过 DescribeTaskDetail 查询。
  * @method Models\TextToSpeechSyncResponse TextToSpeechSync(Models\TextToSpeechSyncRequest $req) 发起语音合成任务，将文本合成为语音。
  * @method Models\UpdateAigcApiTokenResponse UpdateAigcApiToken(Models\UpdateAigcApiTokenRequest $req) 创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
  * @method Models\UpdateVoiceResponse UpdateVoice(Models\UpdateVoiceRequest $req) 按音色 ID 更新音色的画像信息（名称、描述、性别、年龄、语言、标签、场景等），返回更新后的完整音色信息。仅支持更新本账号下的音色，系统预置音色不支持更新。

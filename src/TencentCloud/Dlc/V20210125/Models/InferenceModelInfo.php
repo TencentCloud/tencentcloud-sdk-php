@@ -112,6 +112,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置<p>系统标签列表（TagKey-TagValue）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelSource() 获取<p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+ * @method void setModelSource(string $ModelSource) 设置<p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+ * @method string getModelCategory() 获取<p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+ * @method void setModelCategory(string $ModelCategory) 设置<p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+ * @method string getBaseModelUid() 获取<p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+ * @method void setBaseModelUid(string $BaseModelUid) 设置<p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+ * @method string getLatestVersionUid() 获取<p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+ * @method void setLatestVersionUid(string $LatestVersionUid) 设置<p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+ * @method string getBaseModelVersionUid() 获取<p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+ * @method void setBaseModelVersionUid(string $BaseModelVersionUid) 设置<p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+ * @method string getBaseModelName() 获取<p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+ * @method void setBaseModelName(string $BaseModelName) 设置<p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+ * @method string getBaseModelVersion() 获取<p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+ * @method void setBaseModelVersion(string $BaseModelVersion) 设置<p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
  */
 class InferenceModelInfo extends AbstractModel
 {
@@ -258,6 +272,41 @@ class InferenceModelInfo extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     */
+    public $ModelSource;
+
+    /**
+     * @var string <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public $ModelCategory;
+
+    /**
+     * @var string <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public $BaseModelUid;
+
+    /**
+     * @var string <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+     */
+    public $LatestVersionUid;
+
+    /**
+     * @var string <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public $BaseModelVersionUid;
+
+    /**
+     * @var string <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+     */
+    public $BaseModelName;
+
+    /**
+     * @var string <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public $BaseModelVersion;
+
+    /**
      * @param string $ModelId <p>Model ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelUid <p>模型业务唯一标识</p>
@@ -304,6 +353,13 @@ class InferenceModelInfo extends AbstractModel
      * @param string $SubAccountUin <p>云账户的 Sub UIN</p>
      * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelSource <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     * @param string $ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     * @param string $BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     * @param string $LatestVersionUid <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+     * @param string $BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     * @param string $BaseModelName <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+     * @param string $BaseModelVersion <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
      */
     function __construct()
     {
@@ -417,6 +473,34 @@ class InferenceModelInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ModelSource",$param) and $param["ModelSource"] !== null) {
+            $this->ModelSource = $param["ModelSource"];
+        }
+
+        if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
+            $this->ModelCategory = $param["ModelCategory"];
+        }
+
+        if (array_key_exists("BaseModelUid",$param) and $param["BaseModelUid"] !== null) {
+            $this->BaseModelUid = $param["BaseModelUid"];
+        }
+
+        if (array_key_exists("LatestVersionUid",$param) and $param["LatestVersionUid"] !== null) {
+            $this->LatestVersionUid = $param["LatestVersionUid"];
+        }
+
+        if (array_key_exists("BaseModelVersionUid",$param) and $param["BaseModelVersionUid"] !== null) {
+            $this->BaseModelVersionUid = $param["BaseModelVersionUid"];
+        }
+
+        if (array_key_exists("BaseModelName",$param) and $param["BaseModelName"] !== null) {
+            $this->BaseModelName = $param["BaseModelName"];
+        }
+
+        if (array_key_exists("BaseModelVersion",$param) and $param["BaseModelVersion"] !== null) {
+            $this->BaseModelVersion = $param["BaseModelVersion"];
         }
     }
 }

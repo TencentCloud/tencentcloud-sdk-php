@@ -117,6 +117,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeInstanceDetailResponse DescribeInstanceDetail(Models\DescribeInstanceDetailRequest $req) 本接口(DescribeInstanceDetail)用于查询实例详情。
  * @method Models\DescribeInstanceErrorLogsResponse DescribeInstanceErrorLogs(Models\DescribeInstanceErrorLogsRequest $req) 本接口（DescribeInstanceErrorLogs）用于查询实例错误日志列表。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询实例参数列表。
+ * @method Models\DescribeInstanceServerlessQuotaResponse DescribeInstanceServerlessQuota(Models\DescribeInstanceServerlessQuotaRequest $req) 查询集群设置的serverless弹性配置
  * @method Models\DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(Models\DescribeInstanceSlowQueriesRequest $req) 此接口（DescribeInstanceSlowQueries）用于查询实例慢日志详情。受到平台返回大小限制，当返回结果过大时，可能会对超过限制的内容进行截断。
  * @method Models\DescribeInstanceSpecsResponse DescribeInstanceSpecs(Models\DescribeInstanceSpecsRequest $req) 本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格。
  * @method Models\DescribeInstanceSpecsByOperationTypeResponse DescribeInstanceSpecsByOperationType(Models\DescribeInstanceSpecsByOperationTypeRequest $req) 根据操作类型查询实例规格
@@ -252,6 +253,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\RollbackToNewClusterResponse RollbackToNewCluster(Models\RollbackToNewClusterRequest $req) 本接口（RollbackToNewCluster）用于回档到新集群。
  * @method Models\SearchClusterDatabasesResponse SearchClusterDatabases(Models\SearchClusterDatabasesRequest $req) 本接口（SearchClusterDatabases）用于搜索集群数据库列表。
  * @method Models\SearchClusterTablesResponse SearchClusterTables(Models\SearchClusterTablesRequest $req) 本接口（SearchClusterTables）用于搜索集群数据表列表。
+ * @method Models\SetInstanceServerlessQuotaResponse SetInstanceServerlessQuota(Models\SetInstanceServerlessQuotaRequest $req) 将普通集群转换为Serverless集群
  * @method Models\SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlag(Models\SetLibraDBClusterRenewFlagRequest $req) 设置 TDSQL-C 分析集群是否续费
  * @method Models\SetRenewFlagResponse SetRenewFlag(Models\SetRenewFlagRequest $req) 本接口（SetRenewFlag）用于设置实例的自动续费功能。
  * @method Models\StartCLSDeliveryResponse StartCLSDelivery(Models\StartCLSDeliveryRequest $req) 本接口（StartCLSDelivery）用于开启日志投递功能。

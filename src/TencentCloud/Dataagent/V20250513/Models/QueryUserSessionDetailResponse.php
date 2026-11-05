@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置<p>记录总数</p>
  * @method string getRunRecord() 获取<p>运行中的聊天请求, 返回为json字符串</p>
  * @method void setRunRecord(string $RunRecord) 设置<p>运行中的聊天请求, 返回为json字符串</p>
+ * @method SessionTargetInfo getSessionTargetInfo() 获取<p>会话归属信息</p>
+ * @method void setSessionTargetInfo(SessionTargetInfo $SessionTargetInfo) 设置<p>会话归属信息</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class QueryUserSessionDetailResponse extends AbstractModel
     public $RunRecord;
 
     /**
+     * @var SessionTargetInfo <p>会话归属信息</p>
+     */
+    public $SessionTargetInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class QueryUserSessionDetailResponse extends AbstractModel
      * @param array $RecordList <p>会话详情数组</p>
      * @param integer $TotalCount <p>记录总数</p>
      * @param string $RunRecord <p>运行中的聊天请求, 返回为json字符串</p>
+     * @param SessionTargetInfo $SessionTargetInfo <p>会话归属信息</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +117,11 @@ class QueryUserSessionDetailResponse extends AbstractModel
 
         if (array_key_exists("RunRecord",$param) and $param["RunRecord"] !== null) {
             $this->RunRecord = $param["RunRecord"];
+        }
+
+        if (array_key_exists("SessionTargetInfo",$param) and $param["SessionTargetInfo"] !== null) {
+            $this->SessionTargetInfo = new SessionTargetInfo();
+            $this->SessionTargetInfo->deserialize($param["SessionTargetInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

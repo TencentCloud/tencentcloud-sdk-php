@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHistoryUrl(string $HistoryUrl) 设置<p>Ray Dashboard History 链接</p>
  * @method string getCreator() 获取<p>创建人</p>
  * @method void setCreator(string $Creator) 设置<p>创建人</p>
+ * @method string getSubAccountUin() 获取<p>子账号 UIN</p>
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>子账号 UIN</p>
+ * @method string getSubAccountName() 获取<p>子账号名称</p>
+ * @method void setSubAccountName(string $SubAccountName) 设置<p>子账号名称</p>
  * @method integer getCreateTime() 获取<p>创建时间（毫秒时间戳）</p>
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间（毫秒时间戳）</p>
  * @method string getResourcePartitionId() 获取<p>资源分区 ID</p>
@@ -86,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTuningParams(TrainingTuningParams $TuningParams) 设置<p>创建实例时的调优参数快照（仅 POST_TRAINING，仅详情返回）</p>
  * @method boolean getResumeTraining() 获取<p>创建实例时的断点续训意图声明快照（仅详情返回）</p>
  * @method void setResumeTraining(boolean $ResumeTraining) 设置<p>创建实例时的断点续训意图声明快照（仅详情返回）</p>
+ * @method string getNetworkConfig() 获取<p>自定义网络配置</p>
+ * @method void setNetworkConfig(string $NetworkConfig) 设置<p>自定义网络配置</p>
+ * @method string getResumeSourceInstanceId() 获取<p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+ * @method void setResumeSourceInstanceId(string $ResumeSourceInstanceId) 设置<p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
  */
 class TrainingJobInstance extends AbstractModel
 {
@@ -138,6 +146,16 @@ class TrainingJobInstance extends AbstractModel
      * @var string <p>创建人</p>
      */
     public $Creator;
+
+    /**
+     * @var string <p>子账号 UIN</p>
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string <p>子账号名称</p>
+     */
+    public $SubAccountName;
 
     /**
      * @var integer <p>创建时间（毫秒时间戳）</p>
@@ -255,6 +273,16 @@ class TrainingJobInstance extends AbstractModel
     public $ResumeTraining;
 
     /**
+     * @var string <p>自定义网络配置</p>
+     */
+    public $NetworkConfig;
+
+    /**
+     * @var string <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+     */
+    public $ResumeSourceInstanceId;
+
+    /**
      * @param string $InstanceId <p>实例 ID（即 RayJob UUID）</p>
      * @param string $SpecId <p>关联配置 ID</p>
      * @param string $SpecName <p>配置名称</p>
@@ -265,6 +293,8 @@ class TrainingJobInstance extends AbstractModel
      * @param integer $JobRunningTime <p>RayJob 运行时长（毫秒）</p>
      * @param string $HistoryUrl <p>Ray Dashboard History 链接</p>
      * @param string $Creator <p>创建人</p>
+     * @param string $SubAccountUin <p>子账号 UIN</p>
+     * @param string $SubAccountName <p>子账号名称</p>
      * @param integer $CreateTime <p>创建时间（毫秒时间戳）</p>
      * @param string $ResourcePartitionId <p>资源分区 ID</p>
      * @param string $ResourcePartitionName <p>资源分区名称</p>
@@ -288,6 +318,8 @@ class TrainingJobInstance extends AbstractModel
      * @param CheckpointConfig $Checkpoint <p>创建实例时的 Checkpoint 产出配置快照（仅详情返回）</p>
      * @param TrainingTuningParams $TuningParams <p>创建实例时的调优参数快照（仅 POST_TRAINING，仅详情返回）</p>
      * @param boolean $ResumeTraining <p>创建实例时的断点续训意图声明快照（仅详情返回）</p>
+     * @param string $NetworkConfig <p>自定义网络配置</p>
+     * @param string $ResumeSourceInstanceId <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
      */
     function __construct()
     {
@@ -340,6 +372,14 @@ class TrainingJobInstance extends AbstractModel
 
         if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
             $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("SubAccountName",$param) and $param["SubAccountName"] !== null) {
+            $this->SubAccountName = $param["SubAccountName"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -445,6 +485,14 @@ class TrainingJobInstance extends AbstractModel
 
         if (array_key_exists("ResumeTraining",$param) and $param["ResumeTraining"] !== null) {
             $this->ResumeTraining = $param["ResumeTraining"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = $param["NetworkConfig"];
+        }
+
+        if (array_key_exists("ResumeSourceInstanceId",$param) and $param["ResumeSourceInstanceId"] !== null) {
+            $this->ResumeSourceInstanceId = $param["ResumeSourceInstanceId"];
         }
     }
 }

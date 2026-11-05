@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExclusiveInstance(integer $IsExclusiveInstance) 设置<p>独享实例</p>
  * @method array getZones() 获取<p>可用区组合列表</p>
  * @method void setZones(array $Zones) 设置<p>可用区组合列表</p>
+ * @method string getInstanceId() 获取<p>实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例ID</p>
  */
 class DescribeSpecsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeSpecsRequest extends AbstractModel
     public $Zones;
 
     /**
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $FullReplications <p>全能型副本数，当前支持范围：1-3，默认为3</p>
      * @param integer $IsExclusiveInstance <p>独享实例</p>
      * @param array $Zones <p>可用区组合列表</p>
+     * @param string $InstanceId <p>实例ID</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeSpecsRequest extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

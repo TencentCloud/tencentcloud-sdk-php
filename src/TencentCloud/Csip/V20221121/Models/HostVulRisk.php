@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskStatus(string $RiskStatus) 设置<p>修复状态<br>枚举值：<br>PENDING：待修复<br>SCANNING：扫描中<br>FIXED：已修复<br>IGNORED：已加白<br>FIXING：修复中<br>FIX_FAILED：修复失败<br>NOTSCAN：未扫描<br>WITHOUT_RISK：无风险<br>NEED_REBOOT：修复待重启</p>
  * @method VulDetailInfo getVulDetail() 获取<p>漏洞详细信息</p>
  * @method void setVulDetail(VulDetailInfo $VulDetail) 设置<p>漏洞详细信息</p>
+ * @method string getFixTaskId() 获取<p>修复任务ID</p>
+ * @method void setFixTaskId(string $FixTaskId) 设置<p>修复任务ID</p>
+ * @method integer getSupportAutoFix() 获取<p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+ * @method void setSupportAutoFix(integer $SupportAutoFix) 设置<p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
  */
 class HostVulRisk extends AbstractModel
 {
@@ -73,6 +77,16 @@ class HostVulRisk extends AbstractModel
     public $VulDetail;
 
     /**
+     * @var string <p>修复任务ID</p>
+     */
+    public $FixTaskId;
+
+    /**
+     * @var integer <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+     */
+    public $SupportAutoFix;
+
+    /**
      * @param integer $RiskID <p>风险记录 ID（host_vul_risk.id）</p>
      * @param integer $EffectHostCount <p>受影响主机数</p>
      * @param string $LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
@@ -80,6 +94,8 @@ class HostVulRisk extends AbstractModel
      * @param string $DefendStatus <p>漏洞防御状态<br>枚举值：<br>ENABLED：已开启<br>NOT_SUPPORTED：不支持<br>NOT_ENABLED：未开启</p>
      * @param string $RiskStatus <p>修复状态<br>枚举值：<br>PENDING：待修复<br>SCANNING：扫描中<br>FIXED：已修复<br>IGNORED：已加白<br>FIXING：修复中<br>FIX_FAILED：修复失败<br>NOTSCAN：未扫描<br>WITHOUT_RISK：无风险<br>NEED_REBOOT：修复待重启</p>
      * @param VulDetailInfo $VulDetail <p>漏洞详细信息</p>
+     * @param string $FixTaskId <p>修复任务ID</p>
+     * @param integer $SupportAutoFix <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
      */
     function __construct()
     {
@@ -126,6 +142,14 @@ class HostVulRisk extends AbstractModel
         if (array_key_exists("VulDetail",$param) and $param["VulDetail"] !== null) {
             $this->VulDetail = new VulDetailInfo();
             $this->VulDetail->deserialize($param["VulDetail"]);
+        }
+
+        if (array_key_exists("FixTaskId",$param) and $param["FixTaskId"] !== null) {
+            $this->FixTaskId = $param["FixTaskId"];
+        }
+
+        if (array_key_exists("SupportAutoFix",$param) and $param["SupportAutoFix"] !== null) {
+            $this->SupportAutoFix = $param["SupportAutoFix"];
         }
     }
 }

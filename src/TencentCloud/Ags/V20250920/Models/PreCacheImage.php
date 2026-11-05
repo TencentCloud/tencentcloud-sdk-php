@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置<p>镜像预热来源</p><p>枚举值：</p><ul><li>AUTO： Sandbox Tool / Instance 自动预热</li><li>EXPLICIT： 手动预热</li><li>TCR_AUTO： TCR自动预热</li></ul>
  * @method integer getCachedImageSizeBytes() 获取<p>镜像预热存储大小</p><p>单位：Byte</p>
  * @method void setCachedImageSizeBytes(integer $CachedImageSizeBytes) 设置<p>镜像预热存储大小</p><p>单位：Byte</p>
+ * @method string getReadyTime() 获取<p>镜像预热完成时间</p>
+ * @method void setReadyTime(string $ReadyTime) 设置<p>镜像预热完成时间</p>
  * @method string getLastUsedTime() 获取<p>该预热镜像最近一次被沙箱实例使用时间</p>
  * @method void setLastUsedTime(string $LastUsedTime) 设置<p>该预热镜像最近一次被沙箱实例使用时间</p>
  */
@@ -82,6 +84,11 @@ class PreCacheImage extends AbstractModel
     public $CachedImageSizeBytes;
 
     /**
+     * @var string <p>镜像预热完成时间</p>
+     */
+    public $ReadyTime;
+
+    /**
      * @var string <p>该预热镜像最近一次被沙箱实例使用时间</p>
      */
     public $LastUsedTime;
@@ -95,6 +102,7 @@ class PreCacheImage extends AbstractModel
      * @param string $PreCacheImageId <p>镜像预热ID</p>
      * @param string $SourceType <p>镜像预热来源</p><p>枚举值：</p><ul><li>AUTO： Sandbox Tool / Instance 自动预热</li><li>EXPLICIT： 手动预热</li><li>TCR_AUTO： TCR自动预热</li></ul>
      * @param integer $CachedImageSizeBytes <p>镜像预热存储大小</p><p>单位：Byte</p>
+     * @param string $ReadyTime <p>镜像预热完成时间</p>
      * @param string $LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
      */
     function __construct()
@@ -140,6 +148,10 @@ class PreCacheImage extends AbstractModel
 
         if (array_key_exists("CachedImageSizeBytes",$param) and $param["CachedImageSizeBytes"] !== null) {
             $this->CachedImageSizeBytes = $param["CachedImageSizeBytes"];
+        }
+
+        if (array_key_exists("ReadyTime",$param) and $param["ReadyTime"] !== null) {
+            $this->ReadyTime = $param["ReadyTime"];
         }
 
         if (array_key_exists("LastUsedTime",$param) and $param["LastUsedTime"] !== null) {

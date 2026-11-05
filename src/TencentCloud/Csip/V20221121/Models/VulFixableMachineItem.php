@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsName(string $OsName) 设置<p>操作系统名称</p>
  * @method string getMachineStatus() 获取<p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
  * @method void setMachineStatus(string $MachineStatus) 设置<p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+ * @method string getHostStatus() 获取<p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+ * @method void setHostStatus(string $HostStatus) 设置<p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
  * @method integer getSupportAutoFix() 获取<p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
  * @method void setSupportAutoFix(integer $SupportAutoFix) 设置<p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
  * @method integer getFixStatus() 获取<p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
@@ -44,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestFixTime(string $LatestFixTime) 设置<p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
  * @method string getNotFixableReason() 获取<p>不可修复原因，SupportAutoFix为0时返回</p>
  * @method void setNotFixableReason(string $NotFixableReason) 设置<p>不可修复原因，SupportAutoFix为0时返回</p>
+ * @method string getNotFixableReasonCode() 获取<p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+ * @method void setNotFixableReasonCode(string $NotFixableReasonCode) 设置<p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+ * @method VulFixableMachineAction getNotFixableAction() 获取<p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+ * @method void setNotFixableAction(VulFixableMachineAction $NotFixableAction) 设置<p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
  * @method array getFixCommands() 获取<p>修复命令列表，SupportAutoFix为1时返回</p>
  * @method void setFixCommands(array $FixCommands) 设置<p>修复命令列表，SupportAutoFix为1时返回</p>
  * @method array getComponents() 获取<p>关联组件列表</p>
@@ -98,6 +104,11 @@ class VulFixableMachineItem extends AbstractModel
     public $MachineStatus;
 
     /**
+     * @var string <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+     */
+    public $HostStatus;
+
+    /**
      * @var integer <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
      */
     public $SupportAutoFix;
@@ -116,6 +127,16 @@ class VulFixableMachineItem extends AbstractModel
      * @var string <p>不可修复原因，SupportAutoFix为0时返回</p>
      */
     public $NotFixableReason;
+
+    /**
+     * @var string <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+     */
+    public $NotFixableReasonCode;
+
+    /**
+     * @var VulFixableMachineAction <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+     */
+    public $NotFixableAction;
 
     /**
      * @var array <p>修复命令列表，SupportAutoFix为1时返回</p>
@@ -151,10 +172,13 @@ class VulFixableMachineItem extends AbstractModel
      * @param string $OsType <p>操作系统类型<br>枚举值：<br>linux：Linux操作系统<br>windows：Windows操作系统</p>
      * @param string $OsName <p>操作系统名称</p>
      * @param string $MachineStatus <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+     * @param string $HostStatus <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
      * @param integer $SupportAutoFix <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
      * @param integer $FixStatus <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
      * @param string $LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param string $NotFixableReason <p>不可修复原因，SupportAutoFix为0时返回</p>
+     * @param string $NotFixableReasonCode <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+     * @param VulFixableMachineAction $NotFixableAction <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
      * @param array $FixCommands <p>修复命令列表，SupportAutoFix为1时返回</p>
      * @param array $Components <p>关联组件列表</p>
      * @param array $TagItems <p>资产标签列表</p>
@@ -206,6 +230,10 @@ class VulFixableMachineItem extends AbstractModel
             $this->MachineStatus = $param["MachineStatus"];
         }
 
+        if (array_key_exists("HostStatus",$param) and $param["HostStatus"] !== null) {
+            $this->HostStatus = $param["HostStatus"];
+        }
+
         if (array_key_exists("SupportAutoFix",$param) and $param["SupportAutoFix"] !== null) {
             $this->SupportAutoFix = $param["SupportAutoFix"];
         }
@@ -220,6 +248,15 @@ class VulFixableMachineItem extends AbstractModel
 
         if (array_key_exists("NotFixableReason",$param) and $param["NotFixableReason"] !== null) {
             $this->NotFixableReason = $param["NotFixableReason"];
+        }
+
+        if (array_key_exists("NotFixableReasonCode",$param) and $param["NotFixableReasonCode"] !== null) {
+            $this->NotFixableReasonCode = $param["NotFixableReasonCode"];
+        }
+
+        if (array_key_exists("NotFixableAction",$param) and $param["NotFixableAction"] !== null) {
+            $this->NotFixableAction = new VulFixableMachineAction();
+            $this->NotFixableAction->deserialize($param["NotFixableAction"]);
         }
 
         if (array_key_exists("FixCommands",$param) and $param["FixCommands"] !== null) {

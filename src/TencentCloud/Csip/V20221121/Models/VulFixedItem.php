@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestFixTime(string $LatestFixTime) 设置<p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
  * @method VPRExplainInfo getVPRExplainInfo() 获取<p>VPR评级依据</p>
  * @method void setVPRExplainInfo(VPRExplainInfo $VPRExplainInfo) 设置<p>VPR评级依据</p>
+ * @method string getRepairMethod() 获取<p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+ * @method void setRepairMethod(string $RepairMethod) 设置<p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
  */
 class VulFixedItem extends AbstractModel
 {
@@ -108,6 +110,11 @@ class VulFixedItem extends AbstractModel
     public $VPRExplainInfo;
 
     /**
+     * @var string <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+     */
+    public $RepairMethod;
+
+    /**
      * @param integer $VulId <p>漏洞ID</p>
      * @param string $VulName <p>漏洞名称</p>
      * @param string $Level <p>漏洞等级<br>枚举值：<br>LOW：低危<br>MEDIUM：中危<br>HIGH：高危<br>CRITICAL：严重</p>
@@ -120,6 +127,7 @@ class VulFixedItem extends AbstractModel
      * @param array $Components <p>关联组件&amp;路径列表</p>
      * @param string $LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      * @param VPRExplainInfo $VPRExplainInfo <p>VPR评级依据</p>
+     * @param string $RepairMethod <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
      */
     function __construct()
     {
@@ -182,6 +190,10 @@ class VulFixedItem extends AbstractModel
         if (array_key_exists("VPRExplainInfo",$param) and $param["VPRExplainInfo"] !== null) {
             $this->VPRExplainInfo = new VPRExplainInfo();
             $this->VPRExplainInfo->deserialize($param["VPRExplainInfo"]);
+        }
+
+        if (array_key_exists("RepairMethod",$param) and $param["RepairMethod"] !== null) {
+            $this->RepairMethod = $param["RepairMethod"];
         }
     }
 }

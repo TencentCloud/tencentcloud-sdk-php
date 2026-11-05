@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkspaceId(string $WorkspaceId) 设置<p>工作空间ID，可通过 ListWorkspaces 获取。必填</p>
  * @method string getWorkflowId() 获取<p>待更新的工作流ID，可通过 ListWorkflows 获取。必填</p>
  * @method void setWorkflowId(string $WorkflowId) 设置<p>待更新的工作流ID，可通过 ListWorkflows 获取。必填</p>
- * @method array getFieldToRemoveList() 获取<p>需要清空的字段名列表，用于将指定字段重置为空</p>
- * @method void setFieldToRemoveList(array $FieldToRemoveList) 设置<p>需要清空的字段名列表，用于将指定字段重置为空</p>
+ * @method array getFieldToRemoveList() 获取<p>需要清空的字段名列表，用于将指定字段重置为空。每项为斜杠分隔的字段路径（如 /BaseInfo/Description、/ParamList:[参数ID]），路径段与 NewSetting 字段名一致；列表字段用 字段名:[主键值] 定位单个元素、不带 [] 表示清空整个列表；workflowId、workspaceId、baseInfo 等标识类受保护字段不可删除，路径无效或未命中将返回 InvalidParameterValue 报错。</p>
+ * @method void setFieldToRemoveList(array $FieldToRemoveList) 设置<p>需要清空的字段名列表，用于将指定字段重置为空。每项为斜杠分隔的字段路径（如 /BaseInfo/Description、/ParamList:[参数ID]），路径段与 NewSetting 字段名一致；列表字段用 字段名:[主键值] 定位单个元素、不带 [] 表示清空整个列表；workflowId、workspaceId、baseInfo 等标识类受保护字段不可删除，路径无效或未命中将返回 InvalidParameterValue 报错。</p>
  * @method Workflow getNewSetting() 获取<p>更新后的工作流配置，仅传入需要变更的部分即可</p>
  * @method void setNewSetting(Workflow $NewSetting) 设置<p>更新后的工作流配置，仅传入需要变更的部分即可</p>
  */
@@ -42,7 +42,7 @@ class UpdateWorkflowRequest extends AbstractModel
     public $WorkflowId;
 
     /**
-     * @var array <p>需要清空的字段名列表，用于将指定字段重置为空</p>
+     * @var array <p>需要清空的字段名列表，用于将指定字段重置为空。每项为斜杠分隔的字段路径（如 /BaseInfo/Description、/ParamList:[参数ID]），路径段与 NewSetting 字段名一致；列表字段用 字段名:[主键值] 定位单个元素、不带 [] 表示清空整个列表；workflowId、workspaceId、baseInfo 等标识类受保护字段不可删除，路径无效或未命中将返回 InvalidParameterValue 报错。</p>
      */
     public $FieldToRemoveList;
 
@@ -54,7 +54,7 @@ class UpdateWorkflowRequest extends AbstractModel
     /**
      * @param string $WorkspaceId <p>工作空间ID，可通过 ListWorkspaces 获取。必填</p>
      * @param string $WorkflowId <p>待更新的工作流ID，可通过 ListWorkflows 获取。必填</p>
-     * @param array $FieldToRemoveList <p>需要清空的字段名列表，用于将指定字段重置为空</p>
+     * @param array $FieldToRemoveList <p>需要清空的字段名列表，用于将指定字段重置为空。每项为斜杠分隔的字段路径（如 /BaseInfo/Description、/ParamList:[参数ID]），路径段与 NewSetting 字段名一致；列表字段用 字段名:[主键值] 定位单个元素、不带 [] 表示清空整个列表；workflowId、workspaceId、baseInfo 等标识类受保护字段不可删除，路径无效或未命中将返回 InvalidParameterValue 报错。</p>
      * @param Workflow $NewSetting <p>更新后的工作流配置，仅传入需要变更的部分即可</p>
      */
     function __construct()

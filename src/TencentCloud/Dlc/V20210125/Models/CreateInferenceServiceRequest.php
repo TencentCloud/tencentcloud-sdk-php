@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuntimeEnv(string $RuntimeEnv) 设置<p>python runtime env</p>
  * @method string getNetworkConfig() 获取<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
  * @method void setNetworkConfig(string $NetworkConfig) 设置<p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+ * @method array getLoraBindings() 获取<p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+ * @method void setLoraBindings(array $LoraBindings) 设置<p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
  */
 class CreateInferenceServiceRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class CreateInferenceServiceRequest extends AbstractModel
     public $NetworkConfig;
 
     /**
+     * @var array <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public $LoraBindings;
+
+    /**
      * @param string $Name <p>推理服务名称</p>
      * @param string $ModelUid <p>模型 UID（业务级唯一标识）</p>
      * @param string $Engine <p>推理引擎（vllm / xgboost）</p>
@@ -208,6 +215,7 @@ class CreateInferenceServiceRequest extends AbstractModel
      * @param boolean $IsCustom <p>自定义RayServe提交</p>
      * @param string $RuntimeEnv <p>python runtime env</p>
      * @param string $NetworkConfig <p>用户网络配置 JSON 字符串（跨租户 ENI 注入）</p>
+     * @param array $LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
      */
     function __construct()
     {
@@ -317,6 +325,15 @@ class CreateInferenceServiceRequest extends AbstractModel
 
         if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
             $this->NetworkConfig = $param["NetworkConfig"];
+        }
+
+        if (array_key_exists("LoraBindings",$param) and $param["LoraBindings"] !== null) {
+            $this->LoraBindings = [];
+            foreach ($param["LoraBindings"] as $key => $value){
+                $obj = new LoraAdapterBinding();
+                $obj->deserialize($value);
+                array_push($this->LoraBindings, $obj);
+            }
         }
     }
 }

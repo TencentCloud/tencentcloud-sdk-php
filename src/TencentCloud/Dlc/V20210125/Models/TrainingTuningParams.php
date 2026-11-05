@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTensorModelParallelSize(integer $TensorModelParallelSize) 设置<p>rollout tensor model parallel size，默认 1</p>
  * @method float getGpuMemoryUtilization() 获取<p>vLLM GPU memory utilization，默认 0.5</p>
  * @method void setGpuMemoryUtilization(float $GpuMemoryUtilization) 设置<p>vLLM GPU memory utilization，默认 0.5</p>
+ * @method integer getPPOMaxTokenLenPerGpu() 获取<p>Actor Token 上限 / GPU</p>
+ * @method void setPPOMaxTokenLenPerGpu(integer $PPOMaxTokenLenPerGpu) 设置<p>Actor Token 上限 / GPU</p>
+ * @method integer getLogProbMaxTokenLenPerGpu() 获取<p>LogProb Token 上限 / GPU</p>
+ * @method void setLogProbMaxTokenLenPerGpu(integer $LogProbMaxTokenLenPerGpu) 设置<p>LogProb Token 上限 / GPU</p>
+ * @method boolean getActorParamOffload() 获取<p>Actor 参数 Offload</p>
+ * @method void setActorParamOffload(boolean $ActorParamOffload) 设置<p>Actor 参数 Offload</p>
+ * @method boolean getActorOptimizerOffload() 获取<p>优化器 Offload</p>
+ * @method void setActorOptimizerOffload(boolean $ActorOptimizerOffload) 设置<p>优化器 Offload</p>
+ * @method boolean getRefParamOffload() 获取<p>Ref 参数 Offload</p>
+ * @method void setRefParamOffload(boolean $RefParamOffload) 设置<p>Ref 参数 Offload</p>
+ * @method integer getPPOMicroBatchSizePerGpu() 获取<p>Actor Micro Batch / GPU</p>
+ * @method void setPPOMicroBatchSizePerGpu(integer $PPOMicroBatchSizePerGpu) 设置<p>Actor Micro Batch / GPU</p>
+ * @method integer getRollOutLogProbMicroBatchSizePerGpu() 获取<p>LogProb Micro Batch / GPU</p>
+ * @method void setRollOutLogProbMicroBatchSizePerGpu(integer $RollOutLogProbMicroBatchSizePerGpu) 设置<p>LogProb Micro Batch / GPU</p>
+ * @method string getGRPORawOverrides() 获取<p>直接追加为命令行 override，优先级最高</p>
+ * @method void setGRPORawOverrides(string $GRPORawOverrides) 设置<p>直接追加为命令行 override，优先级最高</p>
  */
 class TrainingTuningParams extends AbstractModel
 {
@@ -234,6 +250,46 @@ class TrainingTuningParams extends AbstractModel
     public $GpuMemoryUtilization;
 
     /**
+     * @var integer <p>Actor Token 上限 / GPU</p>
+     */
+    public $PPOMaxTokenLenPerGpu;
+
+    /**
+     * @var integer <p>LogProb Token 上限 / GPU</p>
+     */
+    public $LogProbMaxTokenLenPerGpu;
+
+    /**
+     * @var boolean <p>Actor 参数 Offload</p>
+     */
+    public $ActorParamOffload;
+
+    /**
+     * @var boolean <p>优化器 Offload</p>
+     */
+    public $ActorOptimizerOffload;
+
+    /**
+     * @var boolean <p>Ref 参数 Offload</p>
+     */
+    public $RefParamOffload;
+
+    /**
+     * @var integer <p>Actor Micro Batch / GPU</p>
+     */
+    public $PPOMicroBatchSizePerGpu;
+
+    /**
+     * @var integer <p>LogProb Micro Batch / GPU</p>
+     */
+    public $RollOutLogProbMicroBatchSizePerGpu;
+
+    /**
+     * @var string <p>直接追加为命令行 override，优先级最高</p>
+     */
+    public $GRPORawOverrides;
+
+    /**
      * @param string $FineTuneType <p>微调方式：lora / full / freeze；默认由算法决定（SFT/DPO=lora，CPT/GRPO=full）</p>
      * @param integer $LoraRank <p>LoRA rank，仅 finetuneType=lora 时生效</p>
      * @param integer $LoraAlpha <p>LoRA alpha</p>
@@ -264,6 +320,14 @@ class TrainingTuningParams extends AbstractModel
      * @param integer $TrainBatchSize <p>训练总 batch size（每步 prompt 数量），默认 128</p>
      * @param integer $TensorModelParallelSize <p>rollout tensor model parallel size，默认 1</p>
      * @param float $GpuMemoryUtilization <p>vLLM GPU memory utilization，默认 0.5</p>
+     * @param integer $PPOMaxTokenLenPerGpu <p>Actor Token 上限 / GPU</p>
+     * @param integer $LogProbMaxTokenLenPerGpu <p>LogProb Token 上限 / GPU</p>
+     * @param boolean $ActorParamOffload <p>Actor 参数 Offload</p>
+     * @param boolean $ActorOptimizerOffload <p>优化器 Offload</p>
+     * @param boolean $RefParamOffload <p>Ref 参数 Offload</p>
+     * @param integer $PPOMicroBatchSizePerGpu <p>Actor Micro Batch / GPU</p>
+     * @param integer $RollOutLogProbMicroBatchSizePerGpu <p>LogProb Micro Batch / GPU</p>
+     * @param string $GRPORawOverrides <p>直接追加为命令行 override，优先级最高</p>
      */
     function __construct()
     {
@@ -396,6 +460,38 @@ class TrainingTuningParams extends AbstractModel
 
         if (array_key_exists("GpuMemoryUtilization",$param) and $param["GpuMemoryUtilization"] !== null) {
             $this->GpuMemoryUtilization = $param["GpuMemoryUtilization"];
+        }
+
+        if (array_key_exists("PPOMaxTokenLenPerGpu",$param) and $param["PPOMaxTokenLenPerGpu"] !== null) {
+            $this->PPOMaxTokenLenPerGpu = $param["PPOMaxTokenLenPerGpu"];
+        }
+
+        if (array_key_exists("LogProbMaxTokenLenPerGpu",$param) and $param["LogProbMaxTokenLenPerGpu"] !== null) {
+            $this->LogProbMaxTokenLenPerGpu = $param["LogProbMaxTokenLenPerGpu"];
+        }
+
+        if (array_key_exists("ActorParamOffload",$param) and $param["ActorParamOffload"] !== null) {
+            $this->ActorParamOffload = $param["ActorParamOffload"];
+        }
+
+        if (array_key_exists("ActorOptimizerOffload",$param) and $param["ActorOptimizerOffload"] !== null) {
+            $this->ActorOptimizerOffload = $param["ActorOptimizerOffload"];
+        }
+
+        if (array_key_exists("RefParamOffload",$param) and $param["RefParamOffload"] !== null) {
+            $this->RefParamOffload = $param["RefParamOffload"];
+        }
+
+        if (array_key_exists("PPOMicroBatchSizePerGpu",$param) and $param["PPOMicroBatchSizePerGpu"] !== null) {
+            $this->PPOMicroBatchSizePerGpu = $param["PPOMicroBatchSizePerGpu"];
+        }
+
+        if (array_key_exists("RollOutLogProbMicroBatchSizePerGpu",$param) and $param["RollOutLogProbMicroBatchSizePerGpu"] !== null) {
+            $this->RollOutLogProbMicroBatchSizePerGpu = $param["RollOutLogProbMicroBatchSizePerGpu"];
+        }
+
+        if (array_key_exists("GRPORawOverrides",$param) and $param["GRPORawOverrides"] !== null) {
+            $this->GRPORawOverrides = $param["GRPORawOverrides"];
         }
     }
 }

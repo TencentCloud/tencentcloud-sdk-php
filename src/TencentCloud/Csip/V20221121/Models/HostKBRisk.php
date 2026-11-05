@@ -26,12 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKBDetail(KBDetail $KBDetail) 设置<p>Windows KB 补丁详细信息</p>
  * @method integer getEffectHostCount() 获取<p>受影响主机数</p>
  * @method void setEffectHostCount(integer $EffectHostCount) 设置<p>受影响主机数</p>
- * @method string getLatestScanTime() 获取<p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
- * @method void setLatestScanTime(string $LatestScanTime) 设置<p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+ * @method string getLatestScanTime() 获取<p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
+ * @method void setLatestScanTime(string $LatestScanTime) 设置<p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
  * @method array getAccount() 获取<p>所属账号列表</p>
  * @method void setAccount(array $Account) 设置<p>所属账号列表</p>
  * @method string getRiskStatus() 获取<p>修复状态<br>枚举值：<br>PENDING：待修复<br>SCANNING：扫描中<br>FIXED：已修复<br>IGNORED：已加白<br>FIXING：修复中<br>FIX_FAILED：修复失败</p>
  * @method void setRiskStatus(string $RiskStatus) 设置<p>修复状态<br>枚举值：<br>PENDING：待修复<br>SCANNING：扫描中<br>FIXED：已修复<br>IGNORED：已加白<br>FIXING：修复中<br>FIX_FAILED：修复失败</p>
+ * @method boolean getIsNew() 获取<p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method void setIsNew(boolean $IsNew) 设置<p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+ * @method string getFixTaskId() 获取<p>修复任务id</p>
+ * @method void setFixTaskId(string $FixTaskId) 设置<p>修复任务id</p>
  */
 class HostKBRisk extends AbstractModel
 {
@@ -51,7 +55,7 @@ class HostKBRisk extends AbstractModel
     public $EffectHostCount;
 
     /**
-     * @var string <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+     * @var string <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
      */
     public $LatestScanTime;
 
@@ -66,12 +70,24 @@ class HostKBRisk extends AbstractModel
     public $RiskStatus;
 
     /**
+     * @var boolean <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public $IsNew;
+
+    /**
+     * @var string <p>修复任务id</p>
+     */
+    public $FixTaskId;
+
+    /**
      * @param integer $RiskID <p>风险记录 ID（kb_risk.id）</p>
      * @param KBDetail $KBDetail <p>Windows KB 补丁详细信息</p>
      * @param integer $EffectHostCount <p>受影响主机数</p>
-     * @param string $LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+     * @param string $LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
      * @param array $Account <p>所属账号列表</p>
      * @param string $RiskStatus <p>修复状态<br>枚举值：<br>PENDING：待修复<br>SCANNING：扫描中<br>FIXED：已修复<br>IGNORED：已加白<br>FIXING：修复中<br>FIX_FAILED：修复失败</p>
+     * @param boolean $IsNew <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param string $FixTaskId <p>修复任务id</p>
      */
     function __construct()
     {
@@ -114,6 +130,14 @@ class HostKBRisk extends AbstractModel
 
         if (array_key_exists("RiskStatus",$param) and $param["RiskStatus"] !== null) {
             $this->RiskStatus = $param["RiskStatus"];
+        }
+
+        if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
+            $this->IsNew = $param["IsNew"];
+        }
+
+        if (array_key_exists("FixTaskId",$param) and $param["FixTaskId"] !== null) {
+            $this->FixTaskId = $param["FixTaskId"];
         }
     }
 }

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstances请求参数结构体
  *
- * @method string getZone() 获取<p>创建实例区域</p>
- * @method void setZone(string $Zone) 设置<p>创建实例区域</p>
  * @method string getVpcId() 获取<p>字符型vpcid</p>
  * @method void setVpcId(string $VpcId) 设置<p>字符型vpcid</p>
  * @method string getSubnetId() 获取<p>字符型subnetid</p>
@@ -36,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplications(integer $Replications) 设置<p>存储节点副本数量，最大为5，要求为奇数</p>
  * @method integer getInstanceCount() 获取<p>创建实例个数，上限为10</p>
  * @method void setInstanceCount(integer $InstanceCount) 设置<p>创建实例个数，上限为10</p>
+ * @method string getZone() 获取<p>创建实例区域</p>
+ * @method void setZone(string $Zone) 设置<p>创建实例区域</p>
  * @method integer getFullReplications() 获取<p>全能型副本数量</p>
  * @method void setFullReplications(integer $FullReplications) 设置<p>全能型副本数量</p>
  * @method string getCreateVersion() 获取<p>创建实例版本，默认使用当前最新版本</p>
@@ -90,14 +90,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptionEnable(integer $EncryptionEnable) 设置<p>是否开启透明加密，0：不开启，1：开启</p>
  * @method array getAutoScaleConfigs() 获取<p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
  * @method void setAutoScaleConfigs(array $AutoScaleConfigs) 设置<p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+ * @method PasswordComplexity getPasswordComplexity() 获取<p>密码复杂度</p>
+ * @method void setPasswordComplexity(PasswordComplexity $PasswordComplexity) 设置<p>密码复杂度</p>
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
-    /**
-     * @var string <p>创建实例区域</p>
-     */
-    public $Zone;
-
     /**
      * @var string <p>字符型vpcid</p>
      */
@@ -132,6 +129,11 @@ class CreateDBInstancesRequest extends AbstractModel
      * @var integer <p>创建实例个数，上限为10</p>
      */
     public $InstanceCount;
+
+    /**
+     * @var string <p>创建实例区域</p>
+     */
+    public $Zone;
 
     /**
      * @var integer <p>全能型副本数量</p>
@@ -269,7 +271,11 @@ class CreateDBInstancesRequest extends AbstractModel
     public $AutoScaleConfigs;
 
     /**
-     * @param string $Zone <p>创建实例区域</p>
+     * @var PasswordComplexity <p>密码复杂度</p>
+     */
+    public $PasswordComplexity;
+
+    /**
      * @param string $VpcId <p>字符型vpcid</p>
      * @param string $SubnetId <p>字符型subnetid</p>
      * @param string $SpecCode <p>购买规格</p>
@@ -277,6 +283,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $StorageNodeNum <p>存储节点数量</p>
      * @param integer $Replications <p>存储节点副本数量，最大为5，要求为奇数</p>
      * @param integer $InstanceCount <p>创建实例个数，上限为10</p>
+     * @param string $Zone <p>创建实例区域</p>
      * @param integer $FullReplications <p>全能型副本数量</p>
      * @param string $CreateVersion <p>创建实例版本，默认使用当前最新版本</p>
      * @param string $InstanceName <p>实例名称，要求长度1-60，允许包含中文、英文大小写、数字、-、_</p>
@@ -304,6 +311,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $Password <p>dbaadmin密码</p>
      * @param integer $EncryptionEnable <p>是否开启透明加密，0：不开启，1：开启</p>
      * @param array $AutoScaleConfigs <p>SVLS 实例的自动变配相关限制</p><p>入参限制：传入时 AutoScaleConfig 参数不再生效</p>
+     * @param PasswordComplexity $PasswordComplexity <p>密码复杂度</p>
      */
     function __construct()
     {
@@ -318,10 +326,6 @@ class CreateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
-        }
-
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
         }
@@ -348,6 +352,10 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
             $this->InstanceCount = $param["InstanceCount"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
 
         if (array_key_exists("FullReplications",$param) and $param["FullReplications"] !== null) {
@@ -472,6 +480,11 @@ class CreateDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AutoScaleConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("PasswordComplexity",$param) and $param["PasswordComplexity"] !== null) {
+            $this->PasswordComplexity = new PasswordComplexity();
+            $this->PasswordComplexity->deserialize($param["PasswordComplexity"]);
         }
     }
 }

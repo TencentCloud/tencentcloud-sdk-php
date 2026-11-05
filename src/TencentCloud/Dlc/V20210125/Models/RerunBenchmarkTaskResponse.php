@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResources(BenchmarkResourceInfo $Resources) 设置<p>评测容器自身使用的资源规格</p>
  * @method array getDeploymentResources() 获取<p>与本次评测关联的部署及其资源规格</p>
  * @method void setDeploymentResources(array $DeploymentResources) 设置<p>与本次评测关联的部署及其资源规格</p>
+ * @method string getModelIdentifier() 获取<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+ * @method void setModelIdentifier(string $ModelIdentifier) 设置<p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -173,6 +175,11 @@ class RerunBenchmarkTaskResponse extends AbstractModel
     public $DeploymentResources;
 
     /**
+     * @var string <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     */
+    public $ModelIdentifier;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -199,6 +206,7 @@ class RerunBenchmarkTaskResponse extends AbstractModel
      * @param string $SubAccountUin <p>子账号UIN（实际操作者）</p>
      * @param BenchmarkResourceInfo $Resources <p>评测容器自身使用的资源规格</p>
      * @param array $DeploymentResources <p>与本次评测关联的部署及其资源规格</p>
+     * @param string $ModelIdentifier <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -302,6 +310,10 @@ class RerunBenchmarkTaskResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DeploymentResources, $obj);
             }
+        }
+
+        if (array_key_exists("ModelIdentifier",$param) and $param["ModelIdentifier"] !== null) {
+            $this->ModelIdentifier = $param["ModelIdentifier"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

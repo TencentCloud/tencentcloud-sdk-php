@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGooseFSConfig(GooseFSConfig $GooseFSConfig) 设置<p>模型文件来源于goosefs</p>
  * @method string getStorageType() 获取<p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
  * @method void setStorageType(string $StorageType) 设置<p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+ * @method string getModelSource() 获取<p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+ * @method void setModelSource(string $ModelSource) 设置<p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+ * @method RegisterMeta getRegisterMeta() 获取<p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+ * @method void setRegisterMeta(RegisterMeta $RegisterMeta) 设置<p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+ * @method array getFileList() 获取<p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+ * @method void setFileList(array $FileList) 设置<p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+ * @method string getBaseModelUid() 获取<p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+ * @method void setBaseModelUid(string $BaseModelUid) 设置<p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+ * @method string getBaseModelVersionUid() 获取<p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+ * @method void setBaseModelVersionUid(string $BaseModelVersionUid) 设置<p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+ * @method string getModelCategory() 获取<p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+ * @method void setModelCategory(string $ModelCategory) 设置<p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
  */
 class CreateInferenceModelRequest extends AbstractModel
 {
@@ -122,6 +134,36 @@ class CreateInferenceModelRequest extends AbstractModel
     public $StorageType;
 
     /**
+     * @var string <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     */
+    public $ModelSource;
+
+    /**
+     * @var RegisterMeta <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+     */
+    public $RegisterMeta;
+
+    /**
+     * @var array <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     */
+    public $FileList;
+
+    /**
+     * @var string <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public $BaseModelUid;
+
+    /**
+     * @var string <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public $BaseModelVersionUid;
+
+    /**
+     * @var string <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public $ModelCategory;
+
+    /**
      * @param string $Name <p>模型名称（最长 256）</p>
      * @param string $ModelType <p>模型类型（如 LLM、Embedding、Reranker、ASR、TTS 等）</p>
      * @param string $InitialVersion <p>初始版本号（必填，如 v1、v1.5）</p>
@@ -136,6 +178,12 @@ class CreateInferenceModelRequest extends AbstractModel
      * @param array $ResourceTags <p>系统标签列表（TagKey-TagValue）</p>
      * @param GooseFSConfig $GooseFSConfig <p>模型文件来源于goosefs</p>
      * @param string $StorageType <p>模型上传来源类型</p><p>枚举值：</p><ul><li>Local： 本地上传</li><li>COS： COS上传</li><li>CFS： CFS上传</li><li>CFSTurbo： CFSTurbo上传</li><li>GooseFS： GooseFS上传</li></ul>
+     * @param string $ModelSource <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     * @param RegisterMeta $RegisterMeta <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+     * @param array $FileList <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     * @param string $BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     * @param string $BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     * @param string $ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
      */
     function __construct()
     {
@@ -210,6 +258,36 @@ class CreateInferenceModelRequest extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("ModelSource",$param) and $param["ModelSource"] !== null) {
+            $this->ModelSource = $param["ModelSource"];
+        }
+
+        if (array_key_exists("RegisterMeta",$param) and $param["RegisterMeta"] !== null) {
+            $this->RegisterMeta = new RegisterMeta();
+            $this->RegisterMeta->deserialize($param["RegisterMeta"]);
+        }
+
+        if (array_key_exists("FileList",$param) and $param["FileList"] !== null) {
+            $this->FileList = [];
+            foreach ($param["FileList"] as $key => $value){
+                $obj = new FileNode();
+                $obj->deserialize($value);
+                array_push($this->FileList, $obj);
+            }
+        }
+
+        if (array_key_exists("BaseModelUid",$param) and $param["BaseModelUid"] !== null) {
+            $this->BaseModelUid = $param["BaseModelUid"];
+        }
+
+        if (array_key_exists("BaseModelVersionUid",$param) and $param["BaseModelVersionUid"] !== null) {
+            $this->BaseModelVersionUid = $param["BaseModelVersionUid"];
+        }
+
+        if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
+            $this->ModelCategory = $param["ModelCategory"];
         }
     }
 }

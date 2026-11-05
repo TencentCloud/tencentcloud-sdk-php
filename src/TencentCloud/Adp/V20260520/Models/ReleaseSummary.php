@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortalShareConfig(PortalShareConfig $PortalShareConfig) 设置<p>portal配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method A2AConfig getA2AConfig() 获取<p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setA2AConfig(A2AConfig $A2AConfig) 设置<p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseSummary extends AbstractModel
 {
@@ -96,6 +100,12 @@ class ReleaseSummary extends AbstractModel
     public $PortalShareConfig;
 
     /**
+     * @var A2AConfig <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $A2AConfig;
+
+    /**
      * @param string $CreateTime <p>创建时间 (Unix时间戳,秒级)</p>
      * @param string $Description <p>发布描述</p>
      * @param string $ReleaseId <p>发布ID</p>
@@ -107,6 +117,8 @@ class ReleaseSummary extends AbstractModel
      * @param CorpShareConfig $CorpShareConfig <p>企业共享配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PortalShareConfig $PortalShareConfig <p>portal配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param A2AConfig $A2AConfig <p>A2A配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -159,6 +171,11 @@ class ReleaseSummary extends AbstractModel
         if (array_key_exists("PortalShareConfig",$param) and $param["PortalShareConfig"] !== null) {
             $this->PortalShareConfig = new PortalShareConfig();
             $this->PortalShareConfig->deserialize($param["PortalShareConfig"]);
+        }
+
+        if (array_key_exists("A2AConfig",$param) and $param["A2AConfig"] !== null) {
+            $this->A2AConfig = new A2AConfig();
+            $this->A2AConfig->deserialize($param["A2AConfig"]);
         }
     }
 }

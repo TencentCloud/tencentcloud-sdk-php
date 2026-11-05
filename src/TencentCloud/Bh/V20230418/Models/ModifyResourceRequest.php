@@ -20,75 +20,99 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResource请求参数结构体
  *
- * @method string getResourceId() 获取需要开通服务的资源ID
- * @method void setResourceId(string $ResourceId) 设置需要开通服务的资源ID
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getResourceEdition() 获取实例版本
- * @method void setResourceEdition(string $ResourceEdition) 设置实例版本
- * @method integer getResourceNode() 获取资源节点数
- * @method void setResourceNode(integer $ResourceNode) 设置资源节点数
- * @method integer getAutoRenewFlag() 获取自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费
- * @method integer getPackageBandwidth() 获取带宽扩展包个数(4M)
- * @method void setPackageBandwidth(integer $PackageBandwidth) 设置带宽扩展包个数(4M)
- * @method integer getPackageNode() 获取授权点数扩展包个数(50点)
- * @method void setPackageNode(integer $PackageNode) 设置授权点数扩展包个数(50点)
- * @method integer getLogDelivery() 获取日志投递
- * @method void setLogDelivery(integer $LogDelivery) 设置日志投递
+ * @method string getResourceId() 获取<p>需要开通服务的资源ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>需要开通服务的资源ID</p>
+ * @method string getStatus() 获取<p>状态</p>
+ * @method void setStatus(string $Status) 设置<p>状态</p>
+ * @method string getResourceEdition() 获取<p>实例版本</p>
+ * @method void setResourceEdition(string $ResourceEdition) 设置<p>实例版本</p>
+ * @method integer getResourceNode() 获取<p>资源节点数</p>
+ * @method void setResourceNode(integer $ResourceNode) 设置<p>资源节点数</p>
+ * @method integer getAutoRenewFlag() 获取<p>自动续费</p>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置<p>自动续费</p>
+ * @method integer getPackageBandwidth() 获取<p>带宽扩展包个数(4M)</p>
+ * @method void setPackageBandwidth(integer $PackageBandwidth) 设置<p>带宽扩展包个数(4M)</p>
+ * @method integer getPackageNode() 获取<p>授权点数扩展包个数(50点)</p>
+ * @method void setPackageNode(integer $PackageNode) 设置<p>授权点数扩展包个数(50点)</p>
+ * @method integer getLogDelivery() 获取<p>日志投递</p>
+ * @method void setLogDelivery(integer $LogDelivery) 设置<p>日志投递</p>
+ * @method integer getIOAResource() 获取<p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+ * @method void setIOAResource(integer $IOAResource) 设置<p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+ * @method integer getPackageIOAUserCount() 获取<p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+ * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置<p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+ * @method integer getPackageIOABandwidth() 获取<p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+ * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置<p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
  */
 class ModifyResourceRequest extends AbstractModel
 {
     /**
-     * @var string 需要开通服务的资源ID
+     * @var string <p>需要开通服务的资源ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 状态
+     * @var string <p>状态</p>
      * @deprecated
      */
     public $Status;
 
     /**
-     * @var string 实例版本
+     * @var string <p>实例版本</p>
      */
     public $ResourceEdition;
 
     /**
-     * @var integer 资源节点数
+     * @var integer <p>资源节点数</p>
      */
     public $ResourceNode;
 
     /**
-     * @var integer 自动续费
+     * @var integer <p>自动续费</p>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 带宽扩展包个数(4M)
+     * @var integer <p>带宽扩展包个数(4M)</p>
      */
     public $PackageBandwidth;
 
     /**
-     * @var integer 授权点数扩展包个数(50点)
+     * @var integer <p>授权点数扩展包个数(50点)</p>
      */
     public $PackageNode;
 
     /**
-     * @var integer 日志投递
+     * @var integer <p>日志投递</p>
      */
     public $LogDelivery;
 
     /**
-     * @param string $ResourceId 需要开通服务的资源ID
-     * @param string $Status 状态
-     * @param string $ResourceEdition 实例版本
-     * @param integer $ResourceNode 资源节点数
-     * @param integer $AutoRenewFlag 自动续费
-     * @param integer $PackageBandwidth 带宽扩展包个数(4M)
-     * @param integer $PackageNode 授权点数扩展包个数(50点)
-     * @param integer $LogDelivery 日志投递
+     * @var integer <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+     */
+    public $IOAResource;
+
+    /**
+     * @var integer <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public $PackageIOAUserCount;
+
+    /**
+     * @var integer <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public $PackageIOABandwidth;
+
+    /**
+     * @param string $ResourceId <p>需要开通服务的资源ID</p>
+     * @param string $Status <p>状态</p>
+     * @param string $ResourceEdition <p>实例版本</p>
+     * @param integer $ResourceNode <p>资源节点数</p>
+     * @param integer $AutoRenewFlag <p>自动续费</p>
+     * @param integer $PackageBandwidth <p>带宽扩展包个数(4M)</p>
+     * @param integer $PackageNode <p>授权点数扩展包个数(50点)</p>
+     * @param integer $LogDelivery <p>日志投递</p>
+     * @param integer $IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+     * @param integer $PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     * @param integer $PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
      */
     function __construct()
     {
@@ -133,6 +157,18 @@ class ModifyResourceRequest extends AbstractModel
 
         if (array_key_exists("LogDelivery",$param) and $param["LogDelivery"] !== null) {
             $this->LogDelivery = $param["LogDelivery"];
+        }
+
+        if (array_key_exists("IOAResource",$param) and $param["IOAResource"] !== null) {
+            $this->IOAResource = $param["IOAResource"];
+        }
+
+        if (array_key_exists("PackageIOAUserCount",$param) and $param["PackageIOAUserCount"] !== null) {
+            $this->PackageIOAUserCount = $param["PackageIOAUserCount"];
+        }
+
+        if (array_key_exists("PackageIOABandwidth",$param) and $param["PackageIOABandwidth"] !== null) {
+            $this->PackageIOABandwidth = $param["PackageIOABandwidth"];
         }
     }
 }

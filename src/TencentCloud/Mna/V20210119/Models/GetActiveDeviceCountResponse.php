@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetActiveDeviceCount返回参数结构体
  *
- * @method array getActiveDeviceList() 获取激活设备统计
- * @method void setActiveDeviceList(array $ActiveDeviceList) 设置激活设备统计
- * @method integer getPeriod() 获取查询粒度，0:day, 1:week, 2:month, 不传默认为day
- * @method void setPeriod(integer $Period) 设置查询粒度，0:day, 1:week, 2:month, 不传默认为day
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getDevGroup() 获取设备组
- * @method void setDevGroup(string $DevGroup) 设置设备组
- * @method string getLicenseType() 获取license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
- * @method void setLicenseType(string $LicenseType) 设置license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
- * @method string getAppId() 获取租户ID
- * @method void setAppId(string $AppId) 设置租户ID
+ * @method array getActiveDeviceList() 获取<p>激活设备统计</p>
+ * @method void setActiveDeviceList(array $ActiveDeviceList) 设置<p>激活设备统计</p>
+ * @method integer getPeriod() 获取<p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
+ * @method void setPeriod(integer $Period) 设置<p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
+ * @method string getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+ * @method string getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
+ * @method string getDevGroup() 获取<p>设备组</p>
+ * @method void setDevGroup(string $DevGroup) 设置<p>设备组</p>
+ * @method string getLicenseType() 获取<p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+ * @method void setLicenseType(string $LicenseType) 设置<p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+ * @method string getAppId() 获取<p>租户ID</p>
+ * @method void setAppId(string $AppId) 设置<p>租户ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetActiveDeviceCountResponse extends AbstractModel
 {
     /**
-     * @var array 激活设备统计
+     * @var array <p>激活设备统计</p>
      */
     public $ActiveDeviceList;
 
     /**
-     * @var integer 查询粒度，0:day, 1:week, 2:month, 不传默认为day
+     * @var integer <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public $Period;
 
     /**
-     * @var string 开始时间
+     * @var string <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 设备组
+     * @var string <p>设备组</p>
      */
     public $DevGroup;
 
     /**
-     * @var string license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * @var string <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public $LicenseType;
 
     /**
-     * @var string 租户ID
+     * @var string <p>租户ID</p>
      */
     public $AppId;
 
@@ -80,13 +80,13 @@ class GetActiveDeviceCountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ActiveDeviceList 激活设备统计
-     * @param integer $Period 查询粒度，0:day, 1:week, 2:month, 不传默认为day
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param string $DevGroup 设备组
-     * @param string $LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
-     * @param string $AppId 租户ID
+     * @param array $ActiveDeviceList <p>激活设备统计</p>
+     * @param integer $Period <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
+     * @param string $StartTime <p>开始时间</p>
+     * @param string $EndTime <p>结束时间</p>
+     * @param string $DevGroup <p>设备组</p>
+     * @param string $LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+     * @param string $AppId <p>租户ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

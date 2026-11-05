@@ -20,122 +20,226 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 可更新补丁主机信息
  *
- * @method integer getKBId() 获取<p>KB补丁ID</p>
- * @method void setKBId(integer $KBId) 设置<p>KB补丁ID</p>
- * @method string getInstanceId() 获取<p>主机实例ID</p>
- * @method void setInstanceId(string $InstanceId) 设置<p>主机实例ID</p>
- * @method string getMachineName() 获取<p>主机名称</p>
- * @method void setMachineName(string $MachineName) 设置<p>主机名称</p>
- * @method string getMachineIp() 获取<p>主机IP</p>
- * @method void setMachineIp(string $MachineIp) 设置<p>主机IP</p>
- * @method string getPublicIp() 获取<p>公网IP</p>
- * @method void setPublicIp(string $PublicIp) 设置<p>公网IP</p>
- * @method string getOsName() 获取<p>操作系统名称</p>
- * @method void setOsName(string $OsName) 设置<p>操作系统名称</p>
- * @method string getMachineStatus() 获取<p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
- * @method void setMachineStatus(string $MachineStatus) 设置<p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
- * @method integer getSupportAutoFix() 获取<p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
- * @method void setSupportAutoFix(integer $SupportAutoFix) 设置<p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
- * @method integer getFixStatus() 获取<p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
- * @method void setFixStatus(integer $FixStatus) 设置<p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
- * @method string getLatestFixTime() 获取<p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
- * @method void setLatestFixTime(string $LatestFixTime) 设置<p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
- * @method string getNotFixableReason() 获取<p>不可修复原因，SupportAutoFix为0时返回</p>
- * @method void setNotFixableReason(string $NotFixableReason) 设置<p>不可修复原因，SupportAutoFix为0时返回</p>
- * @method array getTagItems() 获取<p>资产标签列表</p>
- * @method void setTagItems(array $TagItems) 设置<p>资产标签列表</p>
- * @method integer getAppId() 获取<p>所属账号AppId</p>
- * @method void setAppId(integer $AppId) 设置<p>所属账号AppId</p>
- * @method string getPayVersion() 获取<p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
- * @method void setPayVersion(string $PayVersion) 设置<p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+ * @method integer getKBId() 获取KB补丁ID
+ * @method void setKBId(integer $KBId) 设置KB补丁ID
+ * @method string getInstanceId() 获取主机实例ID
+ * @method void setInstanceId(string $InstanceId) 设置主机实例ID
+ * @method string getMachineName() 获取主机名称
+ * @method void setMachineName(string $MachineName) 设置主机名称
+ * @method string getMachineIp() 获取主机IP
+ * @method void setMachineIp(string $MachineIp) 设置主机IP
+ * @method string getPublicIp() 获取公网IP
+ * @method void setPublicIp(string $PublicIp) 设置公网IP
+ * @method string getOsName() 获取操作系统名称
+ * @method void setOsName(string $OsName) 设置操作系统名称
+ * @method string getMachineStatus() 获取主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
+ * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
+ * @method string getHostStatus() 获取主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+ * @method void setHostStatus(string $HostStatus) 设置主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+ * @method integer getSupportAutoFix() 获取是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
+ * @method void setSupportAutoFix(integer $SupportAutoFix) 设置是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
+ * @method integer getFixStatus() 获取当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
+ * @method void setFixStatus(integer $FixStatus) 设置当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
+ * @method string getLatestFixTime() 获取最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+ * @method void setLatestFixTime(string $LatestFixTime) 设置最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+ * @method string getNotFixableReason() 获取不可修复原因，SupportAutoFix为0时返回
+ * @method void setNotFixableReason(string $NotFixableReason) 设置不可修复原因，SupportAutoFix为0时返回
+ * @method VulFixableMachineAction getNotFixableAction() 获取不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+ * @method void setNotFixableAction(VulFixableMachineAction $NotFixableAction) 设置不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+ * @method array getTagItems() 获取资产标签列表
+ * @method void setTagItems(array $TagItems) 设置资产标签列表
+ * @method integer getAppId() 获取所属账号AppId
+ * @method void setAppId(integer $AppId) 设置所属账号AppId
+ * @method string getPayVersion() 获取付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
+ * @method void setPayVersion(string $PayVersion) 设置付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
  */
 class KBUpdateMachineItem extends AbstractModel
 {
     /**
-     * @var integer <p>KB补丁ID</p>
+     * @var integer KB补丁ID
      */
     public $KBId;
 
     /**
-     * @var string <p>主机实例ID</p>
+     * @var string 主机实例ID
      */
     public $InstanceId;
 
     /**
-     * @var string <p>主机名称</p>
+     * @var string 主机名称
      */
     public $MachineName;
 
     /**
-     * @var string <p>主机IP</p>
+     * @var string 主机IP
      */
     public $MachineIp;
 
     /**
-     * @var string <p>公网IP</p>
+     * @var string 公网IP
      */
     public $PublicIp;
 
     /**
-     * @var string <p>操作系统名称</p>
+     * @var string 操作系统名称
      */
     public $OsName;
 
     /**
-     * @var string <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+     * @var string 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
      */
     public $MachineStatus;
 
     /**
-     * @var integer <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
+     * @var string 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+     */
+    public $HostStatus;
+
+    /**
+     * @var integer 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
      */
     public $SupportAutoFix;
 
     /**
-     * @var integer <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
+     * @var integer 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
      */
     public $FixStatus;
 
     /**
-     * @var string <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * @var string 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
      */
     public $LatestFixTime;
 
     /**
-     * @var string <p>不可修复原因，SupportAutoFix为0时返回</p>
+     * @var string 不可修复原因，SupportAutoFix为0时返回
      */
     public $NotFixableReason;
 
     /**
-     * @var array <p>资产标签列表</p>
+     * @var VulFixableMachineAction 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+     */
+    public $NotFixableAction;
+
+    /**
+     * @var array 资产标签列表
      */
     public $TagItems;
 
     /**
-     * @var integer <p>所属账号AppId</p>
+     * @var integer 所属账号AppId
      */
     public $AppId;
 
     /**
-     * @var string <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+     * @var string 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
      */
     public $PayVersion;
 
     /**
-     * @param integer $KBId <p>KB补丁ID</p>
-     * @param string $InstanceId <p>主机实例ID</p>
-     * @param string $MachineName <p>主机名称</p>
-     * @param string $MachineIp <p>主机IP</p>
-     * @param string $PublicIp <p>公网IP</p>
-     * @param string $OsName <p>操作系统名称</p>
-     * @param string $MachineStatus <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
-     * @param integer $SupportAutoFix <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
-     * @param integer $FixStatus <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
-     * @param string $LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
-     * @param string $NotFixableReason <p>不可修复原因，SupportAutoFix为0时返回</p>
-     * @param array $TagItems <p>资产标签列表</p>
-     * @param integer $AppId <p>所属账号AppId</p>
-     * @param string $PayVersion <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+     * @param integer $KBId KB补丁ID
+     * @param string $InstanceId 主机实例ID
+     * @param string $MachineName 主机名称
+     * @param string $MachineIp 主机IP
+     * @param string $PublicIp 公网IP
+     * @param string $OsName 操作系统名称
+     * @param string $MachineStatus 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
+     * @param string $HostStatus 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+     * @param integer $SupportAutoFix 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
+     * @param integer $FixStatus 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
+     * @param string $LatestFixTime 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * @param string $NotFixableReason 不可修复原因，SupportAutoFix为0时返回
+     * @param VulFixableMachineAction $NotFixableAction 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+     * @param array $TagItems 资产标签列表
+     * @param integer $AppId 所属账号AppId
+     * @param string $PayVersion 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
      */
     function __construct()
     {
@@ -178,6 +282,10 @@ class KBUpdateMachineItem extends AbstractModel
             $this->MachineStatus = $param["MachineStatus"];
         }
 
+        if (array_key_exists("HostStatus",$param) and $param["HostStatus"] !== null) {
+            $this->HostStatus = $param["HostStatus"];
+        }
+
         if (array_key_exists("SupportAutoFix",$param) and $param["SupportAutoFix"] !== null) {
             $this->SupportAutoFix = $param["SupportAutoFix"];
         }
@@ -192,6 +300,11 @@ class KBUpdateMachineItem extends AbstractModel
 
         if (array_key_exists("NotFixableReason",$param) and $param["NotFixableReason"] !== null) {
             $this->NotFixableReason = $param["NotFixableReason"];
+        }
+
+        if (array_key_exists("NotFixableAction",$param) and $param["NotFixableAction"] !== null) {
+            $this->NotFixableAction = new VulFixableMachineAction();
+            $this->NotFixableAction->deserialize($param["NotFixableAction"]);
         }
 
         if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {

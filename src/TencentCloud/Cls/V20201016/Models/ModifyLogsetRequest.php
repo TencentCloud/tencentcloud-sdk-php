@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLogset请求参数结构体
  *
- * @method string getLogsetId() 获取日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
- * @method void setLogsetId(string $LogsetId) 设置日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
- * @method string getLogsetName() 获取日志集名字。- 最大支持255个字符。不支持`|`字符。
- * @method void setLogsetName(string $LogsetName) 设置日志集名字。- 最大支持255个字符。不支持`|`字符。
- * @method array getTags() 获取日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。
- * @method void setTags(array $Tags) 设置日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。
+ * @method string getLogsetId() 获取<p>日志集Id。通过 <a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</p>
+ * @method void setLogsetId(string $LogsetId) 设置<p>日志集Id。通过 <a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</p>
+ * @method string getLogsetName() 获取<p>日志集名字。- 最大支持255个字符。不支持&quot;|&quot;字符。</p>
+ * @method void setLogsetName(string $LogsetName) 设置<p>日志集名字。- 最大支持255个字符。不支持&quot;|&quot;字符。</p>
+ * @method array getTags() 获取<p>日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。</p>
+ * @method void setTags(array $Tags) 设置<p>日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。</p>
  */
 class ModifyLogsetRequest extends AbstractModel
 {
     /**
-     * @var string 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+     * @var string <p>日志集Id。通过 <a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</p>
      */
     public $LogsetId;
 
     /**
-     * @var string 日志集名字。- 最大支持255个字符。不支持`|`字符。
+     * @var string <p>日志集名字。- 最大支持255个字符。不支持&quot;|&quot;字符。</p>
      */
     public $LogsetName;
 
     /**
-     * @var array 日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。
+     * @var array <p>日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。</p>
      */
     public $Tags;
 
     /**
-     * @param string $LogsetId 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
-     * @param string $LogsetName 日志集名字。- 最大支持255个字符。不支持`|`字符。
-     * @param array $Tags 日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。
+     * @param string $LogsetId <p>日志集Id。通过 <a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</p>
+     * @param string $LogsetName <p>日志集名字。- 最大支持255个字符。不支持&quot;|&quot;字符。</p>
+     * @param array $Tags <p>日志集的绑定的标签键值对。最大支持10个标签键值对，同一个资源只能同时绑定一个标签键。</p>
      */
     function __construct()
     {

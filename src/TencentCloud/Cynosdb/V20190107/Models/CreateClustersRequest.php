@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncWay(string $SyncWay) 设置<p>同步方式。可选值：async、semisync、sync。</p>
  * @method integer getSemiSyncTimeout() 获取<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
  * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) 设置<p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+ * @method array getServerlessQuotaConfigs() 获取<p>集群实例Serverless弹性配置</p>
+ * @method void setServerlessQuotaConfigs(array $ServerlessQuotaConfigs) 设置<p>集群实例Serverless弹性配置</p>
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -367,6 +369,11 @@ class CreateClustersRequest extends AbstractModel
     public $SemiSyncTimeout;
 
     /**
+     * @var array <p>集群实例Serverless弹性配置</p>
+     */
+    public $ServerlessQuotaConfigs;
+
+    /**
      * @param string $Zone <p>可用区</p>
      * @param string $VpcId <p>所属VPC网络ID</p>
      * @param string $SubnetId <p>所属子网ID</p>
@@ -416,6 +423,7 @@ class CreateClustersRequest extends AbstractModel
      * @param string $CynosVersion <p>内核小版本号</p>
      * @param string $SyncWay <p>同步方式。可选值：async、semisync、sync。</p>
      * @param integer $SemiSyncTimeout <p>半同步超时时间，单位ms。为保证业务稳定性，半同步复制存在退化逻辑，当主可用区集群在等待备可用区集群确认事务时若超过该超时时间，复制方式将降为异步复制。</p><p>取值范围：[1000, 4294967295]</p><p>单位：毫秒</p><p>默认值：10000</p>
+     * @param array $ServerlessQuotaConfigs <p>集群实例Serverless弹性配置</p>
      */
     function __construct()
     {
@@ -640,6 +648,15 @@ class CreateClustersRequest extends AbstractModel
 
         if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
             $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
+        }
+
+        if (array_key_exists("ServerlessQuotaConfigs",$param) and $param["ServerlessQuotaConfigs"] !== null) {
+            $this->ServerlessQuotaConfigs = [];
+            foreach ($param["ServerlessQuotaConfigs"] as $key => $value){
+                $obj = new ServerlessQuotaConfig();
+                $obj->deserialize($value);
+                array_push($this->ServerlessQuotaConfigs, $obj);
+            }
         }
     }
 }

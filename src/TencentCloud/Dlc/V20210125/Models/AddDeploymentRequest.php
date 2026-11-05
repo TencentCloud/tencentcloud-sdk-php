@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedOptions(string $AdvancedOptions) 设置<p>高级参数</p>
  * @method string getNetworkConfig() 获取<p>NetworkConfig</p>
  * @method void setNetworkConfig(string $NetworkConfig) 设置<p>NetworkConfig</p>
+ * @method array getLoraBindings() 获取<p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+ * @method void setLoraBindings(array $LoraBindings) 设置<p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+ * @method string getCodePackageOriginalName() 获取<p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+ * @method void setCodePackageOriginalName(string $CodePackageOriginalName) 设置<p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+ * @method string getCodePackageUri() 获取<p>代码包 URI（Git URL / COS URI）</p>
+ * @method void setCodePackageUri(string $CodePackageUri) 设置<p>代码包 URI（Git URL / COS URI）</p>
  */
 class AddDeploymentRequest extends AbstractModel
 {
@@ -115,6 +121,21 @@ class AddDeploymentRequest extends AbstractModel
     public $NetworkConfig;
 
     /**
+     * @var array <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public $LoraBindings;
+
+    /**
+     * @var string <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+     */
+    public $CodePackageOriginalName;
+
+    /**
+     * @var string <p>代码包 URI（Git URL / COS URI）</p>
+     */
+    public $CodePackageUri;
+
+    /**
      * @param string $ServiceId <p>ServiceId</p>
      * @param string $DeploymentName <p>部署名称</p>
      * @param string $Engine <p>推理引擎（vllm / xgboost）</p>
@@ -128,6 +149,9 @@ class AddDeploymentRequest extends AbstractModel
      * @param string $Image <p>镜像名称</p>
      * @param string $AdvancedOptions <p>高级参数</p>
      * @param string $NetworkConfig <p>NetworkConfig</p>
+     * @param array $LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     * @param string $CodePackageOriginalName <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+     * @param string $CodePackageUri <p>代码包 URI（Git URL / COS URI）</p>
      */
     function __construct()
     {
@@ -192,6 +216,23 @@ class AddDeploymentRequest extends AbstractModel
 
         if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
             $this->NetworkConfig = $param["NetworkConfig"];
+        }
+
+        if (array_key_exists("LoraBindings",$param) and $param["LoraBindings"] !== null) {
+            $this->LoraBindings = [];
+            foreach ($param["LoraBindings"] as $key => $value){
+                $obj = new LoraAdapterBinding();
+                $obj->deserialize($value);
+                array_push($this->LoraBindings, $obj);
+            }
+        }
+
+        if (array_key_exists("CodePackageOriginalName",$param) and $param["CodePackageOriginalName"] !== null) {
+            $this->CodePackageOriginalName = $param["CodePackageOriginalName"];
+        }
+
+        if (array_key_exists("CodePackageUri",$param) and $param["CodePackageUri"] !== null) {
+            $this->CodePackageUri = $param["CodePackageUri"];
         }
     }
 }

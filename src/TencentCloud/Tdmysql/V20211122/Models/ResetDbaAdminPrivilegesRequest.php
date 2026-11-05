@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取<p>实例id</p>
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
+ * @method string getHost() 获取<p>DbaAdmin的host</p>
+ * @method void setHost(string $Host) 设置<p>DbaAdmin的host</p>
  */
 class ResetDbaAdminPrivilegesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ResetDbaAdminPrivilegesRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string <p>DbaAdmin的host</p>
+     */
+    public $Host;
+
+    /**
      * @param string $InstanceId <p>实例id</p>
+     * @param string $Host <p>DbaAdmin的host</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ResetDbaAdminPrivilegesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }

@@ -24,7 +24,14 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
  * @method Models\AsyncTextToSpeechResponse AsyncTextToSpeech(Models\AsyncTextToSpeechRequest $req) 异步语音合成
+ * @method Models\BatchDeleteTRTCVoicePrintResponse BatchDeleteTRTCVoicePrint(Models\BatchDeleteTRTCVoicePrintRequest $req) 接口说明：
+批量软删除声纹，单次最多 50 个 VoiceprintId，请求内自动去重。
+
+• 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 会被当作 VoiceprintNotFound 失败项返回。
+• 成功项返回 VoiceprintId，失败项返回 VoiceprintId + ErrorCode + ErrorMessage。
+• 已删除的声纹再次批量删除会计入 FailCount（错误码 FailedOperation.VoiceprintNotFound）。
  * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) 提供服务端控制机器人的功能
+ * @method Models\ControlVoiceConversationResponse ControlVoiceConversation(Models\ControlVoiceConversationRequest $req) 成功开启对话后，可以使用此接口来控制任务。
  * @method Models\CreateAudioModerationSyncResponse CreateAudioModerationSync(Models\CreateAudioModerationSyncRequest $req) 短音频同步内容理解接口
  * @method Models\CreateCloudModerationResponse CreateCloudModeration(Models\CreateCloudModerationRequest $req) 启动AI 内容理解功能，完成房间内的音视频切片，视频截帧，或者录制音频流，投递到AI内容理解，完成内容识别。您可以通过此接口实现如下目标：
 ●指定内容参数（ModerationParams）来指定内容理解需要的详细参数。
@@ -63,6 +70,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 • 本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
 • 热词权重取值范围为[1,11]之间的整数或者100，权重越大代表该词被识别出来的概率越大。
 • 注意: 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+ * @method Models\CreateVoiceConversationResponse CreateVoiceConversation(Models\CreateVoiceConversationRequest $req) 创建AI对话任务。
  * @method Models\DeleteCloudModerationResponse DeleteCloudModeration(Models\DeleteCloudModerationRequest $req) 成功开启AI 内容理解任务后，可以使用此接口来停止进行内容识别。
  * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteCloudSliceTaskResponse DeleteCloudSliceTask(Models\DeleteCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来停止任务。停止切片成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
@@ -71,6 +79,13 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\DeleteRecognizeVocabV3Response DeleteRecognizeVocabV3(Models\DeleteRecognizeVocabV3Request $req) 接口说明：
 用户通过本接口进行热词表的删除。
+ * @method Models\DeleteTRTCVoicePrintResponse DeleteTRTCVoicePrint(Models\DeleteTRTCVoicePrintRequest $req) 接口说明：
+按 VoiceprintId 软删除声纹。
+
+• 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，跨租户 ID 返回 VoiceprintNotFound。
+• 重复删除幂等：对已删除的声纹再次调用仍返回成功。
+• 底层 COS 音频由后台异步清理，删除接口不等待其完成。
+ * @method Models\DeleteVoiceConversationResponse DeleteVoiceConversation(Models\DeleteVoiceConversationRequest $req) 成功开启对话后，可以使用此接口来停止对话任务。
  * @method Models\DeleteVoicePrintResponse DeleteVoicePrint(Models\DeleteVoicePrintRequest $req) 传入声纹ID，删除之前注册的声纹信息
  * @method Models\DescribeAIConversationResponse DescribeAIConversation(Models\DescribeAIConversationRequest $req) 查询AI对话任务状态。
  * @method Models\DescribeAITranscriptionResponse DescribeAITranscription(Models\DescribeAITranscriptionRequest $req) 查询AI转录任务状态。
@@ -145,16 +160,6 @@ peakCurrentUsers：峰值同时在线人数。
 注意：
 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明](https://cloud.tencent.com/document/product/647/81331)。
 2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
- * @method Models\DescribeTRTCMarketScaleMetricDataResponse DescribeTRTCMarketScaleMetricData(Models\DescribeTRTCMarketScaleMetricDataRequest $req) 云监控monitor接口已下线，trtc同步下线接口
-
-查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
-userCount：通话人数，
-roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
-peakCurrentChannels：峰值同时在线频道数。
-peakCurrentUsers：峰值同时在线人数。
-注意：
-1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
  * @method Models\DescribeTRTCRealTimeQualityDataResponse DescribeTRTCRealTimeQualityData(Models\DescribeTRTCRealTimeQualityDataRequest $req) 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
 -视频卡顿率
 -音频卡顿率
@@ -171,6 +176,12 @@ peakCurrentUsers：峰值同时在线人数。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+ * @method Models\DescribeTRTCVoicePrintResponse DescribeTRTCVoicePrint(Models\DescribeTRTCVoicePrintRequest $req) 接口说明：
+分页查询当前 (AppId, SdkAppId) 下的声纹列表。
+
+• Offset/Limit 可选，默认从 0 起取 20 条，Limit 最大 100。
+• TotalCount 为活跃状态声纹总数，用于分页控件计算总页数。
+• 仅返回业务可见字段（VoiceprintId / SpeakerId / CreateTime / UpdateTime），不暴露内部 COS 路径。
  * @method Models\DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(Models\DescribeTrtcMcuTranscodeTimeRequest $req) 查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。
@@ -196,6 +207,7 @@ peakCurrentUsers：峰值同时在线人数。
 2.该接口自2024年4月1日起正式商业化，需订阅套餐解锁调用能力，提供以下两种解锁方式，可任选其一解锁：
 方式一：通过订阅[包月套餐](https://cloud.tencent.com/document/product/647/85386)「尊享版」（可查近7天）和「旗舰版」（可查近14天），[前往订阅](https://buy.cloud.tencent.com/trtc?trtcversion=top)。
 方式二：通过订阅[监控仪表盘](https://cloud.tencent.com/document/product/647/81331)商业套餐包「基础版」（可查近7天）和「进阶版」（可查近14天），[前往订阅](https://buy.cloud.tencent.com/trtc_monitor)。
+ * @method Models\DescribeVoiceConversationResponse DescribeVoiceConversation(Models\DescribeVoiceConversationRequest $req) 成功开启对话后，可以使用此接口来查询对话状态。仅在对话任务进行时有效，对话退出后查询将会返回错误。
  * @method Models\DescribeVoicePrintResponse DescribeVoicePrint(Models\DescribeVoicePrintRequest $req) 查询先前注册的声纹信息
  * @method Models\DescribeWebRecordResponse DescribeWebRecord(Models\DescribeWebRecordRequest $req) 查询页面录制任务
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
@@ -210,6 +222,13 @@ peakCurrentUsers：峰值同时在线人数。
  * @method Models\ModifyCloudRecordingResponse ModifyCloudRecording(Models\ModifyCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
  * @method Models\ModifyCloudSliceTaskResponse ModifyCloudSliceTask(Models\ModifyCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来更新任务。用于更新指定订阅流白名单或者黑名单。
  * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
+ * @method Models\ModifyVoiceConversationResponse ModifyVoiceConversation(Models\ModifyVoiceConversationRequest $req) 成功开启对话后，可以使用此接口来修改对话任务配置。
+ * @method Models\RegisterTRTCVoicePrintResponse RegisterTRTCVoicePrint(Models\RegisterTRTCVoicePrintRequest $req) 接口说明：
+用户通过本接口注册一条声纹，后续可用于声纹 1:1 验证。
+
+• 音频要求：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+• 同一 (AppId, SdkAppId, SpeakerId) 重复注册时走 Upsert 语义：旧记录软删 + 新建一行，返回新的 VoiceprintId。业务方需以本次返回的 VoiceprintId 为准更新自己的映射。
+• 单账号声纹数量有上限（由七彩石配置，默认每 (AppId, SdkAppId) 维度限量），达到上限时返回 LimitExceeded.VoiceprintFull；覆盖场景净增为 0，不受上限影响。
  * @method Models\RegisterVoicePrintResponse RegisterVoicePrint(Models\RegisterVoicePrintRequest $req) 传入音频base64串，注册声纹信息，返回声纹ID
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
@@ -283,6 +302,9 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
 使用输入在线媒体流功能需先订阅 [尊享版或旗舰版套餐包](https://cloud.tencent.com/document/product/647/85386) 解锁能力位。
  * @method Models\StartWebRecordResponse StartWebRecord(Models\StartWebRecordRequest $req) 通过此接口可以发起 WEB 页面录制任务，在接口参数中指定录制 URL，录制分辨率，录制结果存储等参数。
 因为参数或API逻辑问题会立即返回结果。而因为页面问题，如页面无法访问，会在回调中返回结果，请关注。
+
+> ⚠️注意：
+页面录制服务当前为受限功能，使用前需进行加白申请。请 [提交工单](https://console.cloud.tencent.com/workorder/category?source=1)，审批通过后即可正常使用。
  * @method Models\StopAIConversationResponse StopAIConversation(Models\StopAIConversationRequest $req) 停止AI对话任务
  * @method Models\StopAITranscriptionResponse StopAITranscription(Models\StopAITranscriptionRequest $req) 停止AI转录任务。
  * @method Models\StopMCUMixTranscodeResponse StopMCUMixTranscode(Models\StopMCUMixTranscodeRequest $req) 接口说明：结束云端混流
@@ -300,7 +322,18 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
  * @method Models\UpdateRecognizeVocabV3Response UpdateRecognizeVocabV3(Models\UpdateRecognizeVocabV3Request $req) 接口说明：
 用户通过本接口进行热词表的更新。
  * @method Models\UpdateStreamIngestResponse UpdateStreamIngest(Models\UpdateStreamIngestRequest $req) 更新输入在线媒体流任务的StreamUrl
+ * @method Models\UpdateTRTCVoicePrintResponse UpdateTRTCVoicePrint(Models\UpdateTRTCVoicePrintRequest $req) 接口说明：
+按 VoicePrintId 覆盖式更新声纹音频，VoicePrintId 保持不变，只替换底层音频与声纹向量。
+
+• 音频要求同 RegisterTRTCVoicePrint：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+• 按 (AppId, SdkAppId, VoiceprintId) 做数据隔离，仅允许更新自己账号下的声纹。
  * @method Models\UpdateVoicePrintResponse UpdateVoicePrint(Models\UpdateVoicePrintRequest $req) 传入声纹ID以及对应音频信息，更新对应声纹信息
+ * @method Models\VerifyTRTCVoicePrintResponse VerifyTRTCVoicePrint(Models\VerifyTRTCVoicePrintRequest $req) 接口说明：
+对给定 VoiceprintId 做 1:1 声纹验证，返回相似度分值与服务端判决结果。
+
+• 音频要求同 VoiceprintEnroll：16kHz/16bit/单声道 PCM 或 WAV；Base64 解码后 ≤ 2MB；PCM 裸数据 10s ≤ 时长 ≤ 45s。
+• 阈值判决完全由服务端裁定（默认 60 分），Score 为字符串保留两位小数，Decision 为 0/1。
+• 不消费声纹配额、不改动底库，仅做比对。
  * @method Models\VoiceCloneResponse VoiceClone(Models\VoiceCloneRequest $req) 声音克隆
  */
 

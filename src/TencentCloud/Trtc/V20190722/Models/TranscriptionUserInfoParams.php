@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转录用户信息
  *
- * @method string getUserId() 获取用户ID。
- * @method void setUserId(string $UserId) 设置用户ID。
+ * @method string getUserId() 获取<p>用户ID。</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID。</p>
  */
 class TranscriptionUserInfoParams extends AbstractModel
 {
     /**
-     * @var string 用户ID。
+     * @var string <p>用户ID。</p>
      */
     public $UserId;
 
     /**
-     * @param string $UserId 用户ID。
+     * @param string $UserId <p>用户ID。</p>
      */
     function __construct()
     {

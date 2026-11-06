@@ -18,22 +18,26 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTRTCMarketScaleMetricData返回参数结构体
+ * DeleteTRTCVoicePrint返回参数结构体
  *
- * @method TRTCDataResp getData() 获取TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(TRTCDataResp $Data) 设置TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoicePrintId() 获取已删除的声纹 ID（回显，便于调用方核对）
+ * @method void setVoicePrintId(string $VoicePrintId) 设置已删除的声纹 ID（回显，便于调用方核对）
+ * @method string getMessage() 获取结果描述，成功时为 voiceprint deleted successfully
+ * @method void setMessage(string $Message) 设置结果描述，成功时为 voiceprint deleted successfully
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTRTCMarketScaleMetricDataResponse extends AbstractModel
+class DeleteTRTCVoicePrintResponse extends AbstractModel
 {
     /**
-     * @var TRTCDataResp TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 已删除的声纹 ID（回显，便于调用方核对）
      */
-    public $Data;
+    public $VoicePrintId;
+
+    /**
+     * @var string 结果描述，成功时为 voiceprint deleted successfully
+     */
+    public $Message;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class DescribeTRTCMarketScaleMetricDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TRTCDataResp $Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoicePrintId 已删除的声纹 ID（回显，便于调用方核对）
+     * @param string $Message 结果描述，成功时为 voiceprint deleted successfully
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +62,12 @@ class DescribeTRTCMarketScaleMetricDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new TRTCDataResp();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("VoicePrintId",$param) and $param["VoicePrintId"] !== null) {
+            $this->VoicePrintId = $param["VoicePrintId"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

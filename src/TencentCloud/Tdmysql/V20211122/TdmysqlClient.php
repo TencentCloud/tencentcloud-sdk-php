@@ -62,6 +62,7 @@ use TencentCloud\Tdmysql\V20211122\Models as Models;
  * @method Models\ExpandInstanceResponse ExpandInstance(Models\ExpandInstanceRequest $req) 本接口（ExpandInstance）提供横向扩容实例功能
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口（IsolateDBInstance）提供批量隔离实例功能
  * @method Models\ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(Models\ModifyAutoRenewFlagRequest $req) 本接口（ModifyAutoRenewFlag）用于修改自动续费标志
+ * @method Models\ModifyDBInstanceResponse ModifyDBInstance(Models\ModifyDBInstanceRequest $req) 本接口（ModifyDBInstance）提供通用变配实例功能，合并纵向变配（UpgradeInstance）和横向变配（ExpandInstance）的能力，支持CPU/内存/磁盘/节点数/可用区/存储类型的复合变更。支持DryRun预检查模式，可在不实际执行变配的情况下获取变配计划。
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
  * @method Models\ModifyDBInstanceVPortResponse ModifyDBInstanceVPort(Models\ModifyDBInstanceVPortRequest $req) 本接口(ModifyDBInstanceVPort)修改实例VPC端口
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口（ModifyDBParameters）用于修改实例参数。

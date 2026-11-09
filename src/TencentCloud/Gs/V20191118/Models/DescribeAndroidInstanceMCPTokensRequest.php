@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAndroidInstanceMCPTokens请求参数结构体
  *
-
+ * @method integer getOffset() 获取<p>偏移量，默认为 0</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0</p>
+ * @method integer getLimit() 获取<p>本次请求单次返回数据条数，用于分页控制</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+ * @method void setLimit(integer $Limit) 设置<p>本次请求单次返回数据条数，用于分页控制</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
  */
 class DescribeAndroidInstanceMCPTokensRequest extends AbstractModel
 {
-
+    /**
+     * @var integer <p>偏移量，默认为 0</p>
+     */
+    public $Offset;
 
     /**
+     * @var integer <p>本次请求单次返回数据条数，用于分页控制</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
+     */
+    public $Limit;
 
+    /**
+     * @param integer $Offset <p>偏移量，默认为 0</p>
+     * @param integer $Limit <p>本次请求单次返回数据条数，用于分页控制</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeAndroidInstanceMCPTokensRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置<p>页码，从 0 开始</p>
  * @method integer getPageSize() 获取<p>每页数量，最大 100</p>
  * @method void setPageSize(integer $PageSize) 设置<p>每页数量，最大 100</p>
+ * @method string getSpaceId() 获取<p>空间 ID；空间或应用视图必传，由服务端校验空间权限</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间 ID；空间或应用视图必传，由服务端校验空间权限</p>
  */
 class DescribeUsageDetailListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeUsageDetailListRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string <p>空间 ID；空间或应用视图必传，由服务端校验空间权限</p>
+     */
+    public $SpaceId;
+
+    /**
      * @param integer $ResourceType <p>资源类型，限定为 RESOURCE_TYPE_MODEL / RESOURCE_TYPE_PLUGIN</p><table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>RESOURCE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>RESOURCE_TYPE_MODEL</td><td>1</td><td>模型用量</td></tr><tr><td>RESOURCE_TYPE_PLUGIN</td><td>2</td><td>插件用量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_PLATFORM</td><td>3</td><td>平台功能用量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_MODEL_CONCURRENCY</td><td>4</td><td>模型并发超限（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_KB_CAPACITY</td><td>5</td><td>知识库容量（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_USAGE_SUMMARY</td><td>6</td><td>用量汇总（预留，暂不支持）</td></tr><tr><td>RESOURCE_TYPE_RESOURCE_CONSUME</td><td>7</td><td>资源消耗（计费明细）（预留，暂不支持）</td></tr></tbody></table>
      * @param TimeRange $TimeRange <p>查询时间范围（Unix 秒）</p>
      * @param ViewScope $ViewScope <p>视图范围：企业视图 / 空间视图 / 应用视图</p>
      * @param array $FilterList <p>扩展过滤（resource_type=MODEL）。Filter 组合规则：多项 AND，同项 value_list OR。支持 Name：model_name、user_id、space_id、resource_id/source_id、metric_source_type（METRIC_SOURCE_TYPE_* 或整数）、call_type（调用类型）</p>
      * @param integer $PageNumber <p>页码，从 0 开始</p>
      * @param integer $PageSize <p>每页数量，最大 100</p>
+     * @param string $SpaceId <p>空间 ID；空间或应用视图必传，由服务端校验空间权限</p>
      */
     function __construct()
     {
@@ -115,6 +123,10 @@ class DescribeUsageDetailListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

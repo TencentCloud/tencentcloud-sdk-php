@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunFailoverCopyPairs请求参数结构体
  *
- * @method array getCopyPairIds() 获取复制对ID列表
- * @method void setCopyPairIds(array $CopyPairIds) 设置复制对ID列表
- * @method string getCopyPairType() 获取复制对类型，枚举值：DISK / INSTANCE / CFS。
- * @method void setCopyPairType(string $CopyPairType) 设置复制对类型，枚举值：DISK / INSTANCE / CFS。
- * @method string getFailoverType() 获取切换类型，支持WAIT和NOW
- * @method void setFailoverType(string $FailoverType) 设置切换类型，支持WAIT和NOW
+ * @method array getCopyPairIds() 获取<p>复制对ID列表</p>
+ * @method void setCopyPairIds(array $CopyPairIds) 设置<p>复制对ID列表</p>
+ * @method string getCopyPairType() 获取<p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
+ * @method void setCopyPairType(string $CopyPairType) 设置<p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
+ * @method string getFailoverType() 获取<p>切换类型，支持WAIT和NOW</p>
+ * @method void setFailoverType(string $FailoverType) 设置<p>切换类型，支持WAIT和NOW</p>
+ * @method boolean getStopSourceInstance() 获取<p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+ * @method void setStopSourceInstance(boolean $StopSourceInstance) 设置<p>故障切换成功后是否自动关机生产端实例，默认为true</p>
  */
 class RunFailoverCopyPairsRequest extends AbstractModel
 {
     /**
-     * @var array 复制对ID列表
+     * @var array <p>复制对ID列表</p>
      */
     public $CopyPairIds;
 
     /**
-     * @var string 复制对类型，枚举值：DISK / INSTANCE / CFS。
+     * @var string <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
      */
     public $CopyPairType;
 
     /**
-     * @var string 切换类型，支持WAIT和NOW
+     * @var string <p>切换类型，支持WAIT和NOW</p>
      */
     public $FailoverType;
 
     /**
-     * @param array $CopyPairIds 复制对ID列表
-     * @param string $CopyPairType 复制对类型，枚举值：DISK / INSTANCE / CFS。
-     * @param string $FailoverType 切换类型，支持WAIT和NOW
+     * @var boolean <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+     */
+    public $StopSourceInstance;
+
+    /**
+     * @param array $CopyPairIds <p>复制对ID列表</p>
+     * @param string $CopyPairType <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
+     * @param string $FailoverType <p>切换类型，支持WAIT和NOW</p>
+     * @param boolean $StopSourceInstance <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RunFailoverCopyPairsRequest extends AbstractModel
 
         if (array_key_exists("FailoverType",$param) and $param["FailoverType"] !== null) {
             $this->FailoverType = $param["FailoverType"];
+        }
+
+        if (array_key_exists("StopSourceInstance",$param) and $param["StopSourceInstance"] !== null) {
+            $this->StopSourceInstance = $param["StopSourceInstance"];
         }
     }
 }

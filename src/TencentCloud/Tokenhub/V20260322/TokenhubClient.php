@@ -108,6 +108,9 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
 - TotalStats：时间窗内全部对象的整段聚合值。
 - PageStats：当前翻页内对象的整段聚合值。
 - TopList：按MetricKeys[0]降序的对象列表，含整段聚合值与逐时间点曲线。
+ * @method Models\ModifyApiKeyBindingsResponse ModifyApiKeyBindings(Models\ModifyApiKeyBindingsRequest $req) 更新 API 密钥绑定。
+
+更新 API 密钥的绑定关系和绑定类型。BindType 为 all 时 Bindings 必须为空，BindType含 custom 时 Bindings 为绑定列表。
  * @method Models\ModifyApiKeyInfoResponse ModifyApiKeyInfo(Models\ModifyApiKeyInfoRequest $req) 更新 API 密钥信息。
 
 更新 API 密钥的备注信息、 IP 白名单和 Token 限额（修改限额推荐使用QuotaDesired参数）。所有可选参数不传表示不修改。

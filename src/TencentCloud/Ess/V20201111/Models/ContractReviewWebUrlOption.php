@@ -20,42 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合同审查个性化参数，用于控制页面的展示内容
  *
- * @method boolean getDisableTemporaryStore() 获取禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
- * @method void setDisableTemporaryStore(boolean $DisableTemporaryStore) 设置禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
- * @method boolean getDisableExport() 获取禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
- * @method void setDisableExport(boolean $DisableExport) 设置禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
- * @method boolean getDisableReviewAgain() 获取禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
- * @method void setDisableReviewAgain(boolean $DisableReviewAgain) 设置禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
- * @method boolean getDisableWxQrcode() 获取禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
- * @method void setDisableWxQrcode(boolean $DisableWxQrcode) 设置禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+ * @method boolean getDisableTemporaryStore() 获取<p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
+ * @method void setDisableTemporaryStore(boolean $DisableTemporaryStore) 设置<p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
+ * @method boolean getDisableExport() 获取<p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
+ * @method void setDisableExport(boolean $DisableExport) 设置<p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
+ * @method boolean getDisableReviewAgain() 获取<p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
+ * @method void setDisableReviewAgain(boolean $DisableReviewAgain) 设置<p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
+ * @method boolean getDisableWxQrcode() 获取<p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
+ * @method void setDisableWxQrcode(boolean $DisableWxQrcode) 设置<p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
+ * @method boolean getDisableIgnoreRisk() 获取<p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+ * @method void setDisableIgnoreRisk(boolean $DisableIgnoreRisk) 设置<p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+ * @method boolean getDisableRevisedRisk() 获取<p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+ * @method void setDisableRevisedRisk(boolean $DisableRevisedRisk) 设置<p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
  */
 class ContractReviewWebUrlOption extends AbstractModel
 {
     /**
-     * @var boolean 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
+     * @var boolean <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
      */
     public $DisableTemporaryStore;
 
     /**
-     * @var boolean 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
+     * @var boolean <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
      */
     public $DisableExport;
 
     /**
-     * @var boolean 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
+     * @var boolean <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
      */
     public $DisableReviewAgain;
 
     /**
-     * @var boolean 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+     * @var boolean <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
      */
     public $DisableWxQrcode;
 
     /**
-     * @param boolean $DisableTemporaryStore 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
-     * @param boolean $DisableExport 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
-     * @param boolean $DisableReviewAgain 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
-     * @param boolean $DisableWxQrcode 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+     * @var boolean <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+     */
+    public $DisableIgnoreRisk;
+
+    /**
+     * @var boolean <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+     */
+    public $DisableRevisedRisk;
+
+    /**
+     * @param boolean $DisableTemporaryStore <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
+     * @param boolean $DisableExport <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
+     * @param boolean $DisableReviewAgain <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
+     * @param boolean $DisableWxQrcode <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
+     * @param boolean $DisableIgnoreRisk <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+     * @param boolean $DisableRevisedRisk <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ContractReviewWebUrlOption extends AbstractModel
 
         if (array_key_exists("DisableWxQrcode",$param) and $param["DisableWxQrcode"] !== null) {
             $this->DisableWxQrcode = $param["DisableWxQrcode"];
+        }
+
+        if (array_key_exists("DisableIgnoreRisk",$param) and $param["DisableIgnoreRisk"] !== null) {
+            $this->DisableIgnoreRisk = $param["DisableIgnoreRisk"];
+        }
+
+        if (array_key_exists("DisableRevisedRisk",$param) and $param["DisableRevisedRisk"] !== null) {
+            $this->DisableRevisedRisk = $param["DisableRevisedRisk"];
         }
     }
 }

@@ -107,6 +107,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListRecordTemplatesResponse ListRecordTemplates(Models\ListRecordTemplatesRequest $req) 用于查询实时上云模板列表
  * @method Models\ListSubTasksResponse ListSubTasks(Models\ListSubTasksRequest $req) 用于查询任务的子任务列表
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 用于查询批量任务和简单任务列表
+ * @method Models\ListVLPlanResultsResponse ListVLPlanResults(Models\ListVLPlanResultsRequest $req) 获取视觉理解计划结果列表
  * @method Models\ListVLPlansResponse ListVLPlans(Models\ListVLPlansRequest $req) 获取视觉理解计划列表
  * @method Models\ListVLTemplatesResponse ListVLTemplates(Models\ListVLTemplatesRequest $req) 获取视觉理解模板列表
  * @method Models\ListVideoDownloadTaskResponse ListVideoDownloadTask(Models\ListVideoDownloadTaskRequest $req) 查询本店里录像下载任务列表

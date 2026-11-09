@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentCredentialID(string $AgentCredentialID) 设置<p>凭据ID</p>
  * @method DescribeAgentCredentialResp getAgentCredentialVO() 获取<p>凭据详情</p>
  * @method void setAgentCredentialVO(DescribeAgentCredentialResp $AgentCredentialVO) 设置<p>凭据详情</p>
+ * @method DescribeAgentAppResp getAgentAppVO() 获取<p>应用</p>
+ * @method void setAgentAppVO(DescribeAgentAppResp $AgentAppVO) 设置<p>应用</p>
  */
 class AgentAppServiceVO extends AbstractModel
 {
@@ -94,6 +96,11 @@ class AgentAppServiceVO extends AbstractModel
     public $AgentCredentialVO;
 
     /**
+     * @var DescribeAgentAppResp <p>应用</p>
+     */
+    public $AgentAppVO;
+
+    /**
      * @param string $ID <p>ID</p>
      * @param string $AgentAppID <p>应用ID</p>
      * @param string $ServiceID <p>服务ID</p>
@@ -104,6 +111,7 @@ class AgentAppServiceVO extends AbstractModel
      * @param boolean $NeedAuth <p>是否需要认证</p>
      * @param string $AgentCredentialID <p>凭据ID</p>
      * @param DescribeAgentCredentialResp $AgentCredentialVO <p>凭据详情</p>
+     * @param DescribeAgentAppResp $AgentAppVO <p>应用</p>
      */
     function __construct()
     {
@@ -159,6 +167,11 @@ class AgentAppServiceVO extends AbstractModel
         if (array_key_exists("AgentCredentialVO",$param) and $param["AgentCredentialVO"] !== null) {
             $this->AgentCredentialVO = new DescribeAgentCredentialResp();
             $this->AgentCredentialVO->deserialize($param["AgentCredentialVO"]);
+        }
+
+        if (array_key_exists("AgentAppVO",$param) and $param["AgentAppVO"] !== null) {
+            $this->AgentAppVO = new DescribeAgentAppResp();
+            $this->AgentAppVO->deserialize($param["AgentAppVO"]);
         }
     }
 }

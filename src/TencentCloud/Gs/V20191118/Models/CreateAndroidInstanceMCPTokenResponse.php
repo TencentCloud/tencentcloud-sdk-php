@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAndroidInstanceMCPToken返回参数结构体
  *
+ * @method string getTokenId() 获取<p>内部 ID，格式 k_ + 16 位 hex</p>
+ * @method void setTokenId(string $TokenId) 设置<p>内部 ID，格式 k_ + 16 位 hex</p>
+ * @method string getToken() 获取<p>明文 token，格式 mcpk_ + 48 位 hex。服务端只存 sha256，只返回这一次</p>
+ * @method void setToken(string $Token) 设置<p>明文 token，格式 mcpk_ + 48 位 hex。服务端只存 sha256，只返回这一次</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAndroidInstanceMCPTokenResponse extends AbstractModel
 {
     /**
+     * @var string <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public $TokenId;
+
+    /**
+     * @var string <p>明文 token，格式 mcpk_ + 48 位 hex。服务端只存 sha256，只返回这一次</p>
+     */
+    public $Token;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     * @param string $Token <p>明文 token，格式 mcpk_ + 48 位 hex。服务端只存 sha256，只返回这一次</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class CreateAndroidInstanceMCPTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
+            $this->TokenId = $param["TokenId"];
+        }
+
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

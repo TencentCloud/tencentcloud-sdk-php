@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewAndroidInstanceMCPToken请求参数结构体
  *
-
+ * @method string getTokenId() 获取<p>内部 ID，格式 k_ + 16 位 hex</p>
+ * @method void setTokenId(string $TokenId) 设置<p>内部 ID，格式 k_ + 16 位 hex</p>
+ * @method integer getExpireSeconds() 获取<p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+ * @method void setExpireSeconds(integer $ExpireSeconds) 设置<p>有效期（秒），必须大于 0</p><p>单位：秒</p>
  */
 class RenewAndroidInstanceMCPTokenRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public $TokenId;
 
     /**
+     * @var integer <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+     */
+    public $ExpireSeconds;
 
+    /**
+     * @param string $TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     * @param integer $ExpireSeconds <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RenewAndroidInstanceMCPTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
+            $this->TokenId = $param["TokenId"];
+        }
 
+        if (array_key_exists("ExpireSeconds",$param) and $param["ExpireSeconds"] !== null) {
+            $this->ExpireSeconds = $param["ExpireSeconds"];
+        }
     }
 }

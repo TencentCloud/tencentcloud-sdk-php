@@ -52,7 +52,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\CropEnhanceImageOCRResponse CropEnhanceImageOCR(Models\CropEnhanceImageOCRRequest $req) 图像切边矫正增强是面向文档类图片提供的图像增强处理能力，包括切边增强、图像矫正、阴影去除、摩尔纹去除等；可以有效优化文档类的图片质量，提升文字的清晰度，可以作为所有识别场景的图像预处理原子能力，从而提升识别效果。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(Models\DescribeExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
+ * @method Models\DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(Models\DescribeExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】。
  * @method Models\DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJob(Models\DescribeMarkEssayAgentJobRequest $req) 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
 
 默认接口请求并发限制：2次/分钟。

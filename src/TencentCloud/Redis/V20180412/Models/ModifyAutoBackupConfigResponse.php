@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoBackupConfig返回参数结构体
  *
- * @method integer getAutoBackupType() 获取自动备份类型。目前仅能配置为：1 ，指定时备份。
- * @method void setAutoBackupType(integer $AutoBackupType) 设置自动备份类型。目前仅能配置为：1 ，指定时备份。
- * @method array getWeekDays() 获取自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
- * @method void setWeekDays(array $WeekDays) 设置自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
- * @method string getTimePeriod() 获取自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
- * @method void setTimePeriod(string $TimePeriod) 设置自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
- * @method integer getBackupStorageDays() 获取全量备份文件保存天数,单位：天。
- * @method void setBackupStorageDays(integer $BackupStorageDays) 设置全量备份文件保存天数,单位：天。
+ * @method integer getAutoBackupType() 获取<p>自动备份类型。目前仅能配置为：1 ，指定时备份。</p>
+ * @method void setAutoBackupType(integer $AutoBackupType) 设置<p>自动备份类型。目前仅能配置为：1 ，指定时备份。</p>
+ * @method array getWeekDays() 获取<p>自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
+ * @method void setWeekDays(array $WeekDays) 设置<p>自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
+ * @method string getTimePeriod() 获取<p>自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。</p>
+ * @method void setTimePeriod(string $TimePeriod) 设置<p>自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。</p>
+ * @method integer getBackupStorageDays() 获取<p>全量备份文件保存天数,单位：天。</p>
+ * @method void setBackupStorageDays(integer $BackupStorageDays) 设置<p>全量备份文件保存天数,单位：天。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAutoBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 自动备份类型。目前仅能配置为：1 ，指定时备份。
+     * @var integer <p>自动备份类型。目前仅能配置为：1 ，指定时备份。</p>
      */
     public $AutoBackupType;
 
     /**
-     * @var array 自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * @var array <p>自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
      */
     public $WeekDays;
 
     /**
-     * @var string 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+     * @var string <p>自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。</p>
      */
     public $TimePeriod;
 
     /**
-     * @var integer 全量备份文件保存天数,单位：天。
+     * @var integer <p>全量备份文件保存天数,单位：天。</p>
      */
     public $BackupStorageDays;
 
@@ -59,10 +59,10 @@ class ModifyAutoBackupConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
-     * @param array $WeekDays 自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
-     * @param string $TimePeriod 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
-     * @param integer $BackupStorageDays 全量备份文件保存天数,单位：天。
+     * @param integer $AutoBackupType <p>自动备份类型。目前仅能配置为：1 ，指定时备份。</p>
+     * @param array $WeekDays <p>自动备份周期。取值为：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
+     * @param string $TimePeriod <p>自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。</p>
+     * @param integer $BackupStorageDays <p>全量备份文件保存天数,单位：天。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

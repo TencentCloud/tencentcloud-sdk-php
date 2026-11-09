@@ -20,23 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型调用明细
  *
+ * @method string getApiKeyDisplay() 获取<p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+ * @method void setApiKeyDisplay(string $ApiKeyDisplay) 设置<p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+ * @method integer getBillingType() 获取<p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+ * @method void setBillingType(integer $BillingType) 设置<p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
  * @method string getCallType() 获取<p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
  * @method void setCallType(string $CallType) 设置<p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
+ * @method float getConsumptionPU() 获取<p>本次调用消耗 PU 量</p>
+ * @method void setConsumptionPU(float $ConsumptionPU) 设置<p>本次调用消耗 PU 量</p>
  * @method boolean getIsDefaultKB() 获取<p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
  * @method void setIsDefaultKB(boolean $IsDefaultKB) 设置<p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
  * @method string getModelName() 获取<p>模型名称</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
  * @method array getResourceConsumptionList() 获取<p>MODEL 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
  * @method void setResourceConsumptionList(array $ResourceConsumptionList) 设置<p>MODEL 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
- * @method float getConsumptionPU() 获取<p>本次调用消耗 PU 量</p>
- * @method void setConsumptionPU(float $ConsumptionPU) 设置<p>本次调用消耗 PU 量</p>
  */
 class ModelUsageDetail extends AbstractModel
 {
     /**
+     * @var string <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+     */
+    public $ApiKeyDisplay;
+
+    /**
+     * @var integer <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+     */
+    public $BillingType;
+
+    /**
      * @var string <p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
      */
     public $CallType;
+
+    /**
+     * @var float <p>本次调用消耗 PU 量</p>
+     */
+    public $ConsumptionPU;
 
     /**
      * @var boolean <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
@@ -54,16 +73,13 @@ class ModelUsageDetail extends AbstractModel
     public $ResourceConsumptionList;
 
     /**
-     * @var float <p>本次调用消耗 PU 量</p>
-     */
-    public $ConsumptionPU;
-
-    /**
+     * @param string $ApiKeyDisplay <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+     * @param integer $BillingType <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
      * @param string $CallType <p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
+     * @param float $ConsumptionPU <p>本次调用消耗 PU 量</p>
      * @param boolean $IsDefaultKB <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
      * @param string $ModelName <p>模型名称</p>
      * @param array $ResourceConsumptionList <p>MODEL 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
-     * @param float $ConsumptionPU <p>本次调用消耗 PU 量</p>
      */
     function __construct()
     {
@@ -78,8 +94,20 @@ class ModelUsageDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ApiKeyDisplay",$param) and $param["ApiKeyDisplay"] !== null) {
+            $this->ApiKeyDisplay = $param["ApiKeyDisplay"];
+        }
+
+        if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
+            $this->BillingType = $param["BillingType"];
+        }
+
         if (array_key_exists("CallType",$param) and $param["CallType"] !== null) {
             $this->CallType = $param["CallType"];
+        }
+
+        if (array_key_exists("ConsumptionPU",$param) and $param["ConsumptionPU"] !== null) {
+            $this->ConsumptionPU = $param["ConsumptionPU"];
         }
 
         if (array_key_exists("IsDefaultKB",$param) and $param["IsDefaultKB"] !== null) {
@@ -97,10 +125,6 @@ class ModelUsageDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceConsumptionList, $obj);
             }
-        }
-
-        if (array_key_exists("ConsumptionPU",$param) and $param["ConsumptionPU"] !== null) {
-            $this->ConsumptionPU = $param["ConsumptionPU"];
         }
     }
 }

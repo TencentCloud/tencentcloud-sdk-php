@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getCallCount() 获取<p>调用次数（业务调用维度的顶层计数）</p>
  * @method void setCallCount(float $CallCount) 设置<p>调用次数（业务调用维度的顶层计数）</p>
+ * @method float getConsumptionPU() 获取<p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+ * @method void setConsumptionPU(float $ConsumptionPU) 设置<p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
  * @method boolean getIsDefaultKB() 获取<p>是否默认知识库</p>
  * @method void setIsDefaultKB(boolean $IsDefaultKB) 设置<p>是否默认知识库</p>
  * @method string getModelName() 获取<p>模型名称，标识使用的 AI 模型</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称，标识使用的 AI 模型</p>
  * @method array getResourceConsumptionList() 获取<p>MODEL 域消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
  * @method void setResourceConsumptionList(array $ResourceConsumptionList) 设置<p>MODEL 域消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
- * @method float getConsumptionPU() 获取<p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
- * @method void setConsumptionPU(float $ConsumptionPU) 设置<p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
  */
 class ModelUsageSummary extends AbstractModel
 {
@@ -37,6 +37,11 @@ class ModelUsageSummary extends AbstractModel
      * @var float <p>调用次数（业务调用维度的顶层计数）</p>
      */
     public $CallCount;
+
+    /**
+     * @var float <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+     */
+    public $ConsumptionPU;
 
     /**
      * @var boolean <p>是否默认知识库</p>
@@ -54,16 +59,11 @@ class ModelUsageSummary extends AbstractModel
     public $ResourceConsumptionList;
 
     /**
-     * @var float <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-     */
-    public $ConsumptionPU;
-
-    /**
      * @param float $CallCount <p>调用次数（业务调用维度的顶层计数）</p>
+     * @param float $ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
      * @param boolean $IsDefaultKB <p>是否默认知识库</p>
      * @param string $ModelName <p>模型名称，标识使用的 AI 模型</p>
      * @param array $ResourceConsumptionList <p>MODEL 域消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*/cache_*），label 为空表示 total_tokens；unit=PAGE_COUNT 表示模型消耗页数</p>
-     * @param float $ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
      */
     function __construct()
     {
@@ -82,6 +82,10 @@ class ModelUsageSummary extends AbstractModel
             $this->CallCount = $param["CallCount"];
         }
 
+        if (array_key_exists("ConsumptionPU",$param) and $param["ConsumptionPU"] !== null) {
+            $this->ConsumptionPU = $param["ConsumptionPU"];
+        }
+
         if (array_key_exists("IsDefaultKB",$param) and $param["IsDefaultKB"] !== null) {
             $this->IsDefaultKB = $param["IsDefaultKB"];
         }
@@ -97,10 +101,6 @@ class ModelUsageSummary extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceConsumptionList, $obj);
             }
-        }
-
-        if (array_key_exists("ConsumptionPU",$param) and $param["ConsumptionPU"] !== null) {
-            $this->ConsumptionPU = $param["ConsumptionPU"];
         }
     }
 }

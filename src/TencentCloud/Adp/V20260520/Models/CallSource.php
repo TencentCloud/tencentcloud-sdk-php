@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 调用来源
  *
+ * @method string getDeploymentUuid() 获取<p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+ * @method void setDeploymentUuid(string $DeploymentUuid) 设置<p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+ * @method string getSpaceId() 获取<p>空间 ID</p>
+ * @method void setSpaceId(string $SpaceId) 设置<p>空间 ID</p>
+ * @method string getSpaceName() 获取<p>空间名称；空间不存在或查询失败时为空</p>
+ * @method void setSpaceName(string $SpaceName) 设置<p>空间名称；空间不存在或查询失败时为空</p>
  * @method string getSubjectId() 获取<p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
  * @method void setSubjectId(string $SubjectId) 设置<p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
  * @method string getSubjectName() 获取<p>调用主体名称</p>
@@ -29,6 +35,21 @@ use TencentCloud\Common\AbstractModel;
  */
 class CallSource extends AbstractModel
 {
+    /**
+     * @var string <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+     */
+    public $DeploymentUuid;
+
+    /**
+     * @var string <p>空间 ID</p>
+     */
+    public $SpaceId;
+
+    /**
+     * @var string <p>空间名称；空间不存在或查询失败时为空</p>
+     */
+    public $SpaceName;
+
     /**
      * @var string <p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
      */
@@ -45,6 +66,9 @@ class CallSource extends AbstractModel
     public $SubjectType;
 
     /**
+     * @param string $DeploymentUuid <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+     * @param string $SpaceId <p>空间 ID</p>
+     * @param string $SpaceName <p>空间名称；空间不存在或查询失败时为空</p>
      * @param string $SubjectId <p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
      * @param string $SubjectName <p>调用主体名称</p>
      * @param integer $SubjectType <p>调用主体类型：APP/KB/WIDGET/OPEN_CLAW/KB_RECALL_TEST/WORKBENCH/MODEL_API</p><table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>METRIC_SOURCE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>METRIC_SOURCE_TYPE_APP</td><td>1</td><td>应用开发</td></tr><tr><td>METRIC_SOURCE_TYPE_KB</td><td>2</td><td>知识库</td></tr><tr><td>METRIC_SOURCE_TYPE_WIDGET</td><td>3</td><td>Widget</td></tr><tr><td>METRIC_SOURCE_TYPE_OPEN_CLAW</td><td>4</td><td>ClawPro</td></tr><tr><td>METRIC_SOURCE_TYPE_KB_RECALL_TEST</td><td>5</td><td>知识库召回测试</td></tr><tr><td>METRIC_SOURCE_TYPE_WORKBENCH</td><td>6</td><td>智能工作台</td></tr><tr><td>METRIC_SOURCE_TYPE_MODEL_API</td><td>7</td><td>模型 API 调用</td></tr></tbody></table>
@@ -62,6 +86,18 @@ class CallSource extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DeploymentUuid",$param) and $param["DeploymentUuid"] !== null) {
+            $this->DeploymentUuid = $param["DeploymentUuid"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
+        }
+
+        if (array_key_exists("SpaceName",$param) and $param["SpaceName"] !== null) {
+            $this->SpaceName = $param["SpaceName"];
+        }
+
         if (array_key_exists("SubjectId",$param) and $param["SubjectId"] !== null) {
             $this->SubjectId = $param["SubjectId"];
         }

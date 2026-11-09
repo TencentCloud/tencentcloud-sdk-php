@@ -31,26 +31,26 @@ Filters.0.Name=zone
 &Filters.1.Values.1=POSTPAID_BY_HOUR
 ```
  *
- * @method string getName() 获取需要过滤的字段。
- * @method void setName(string $Name) 设置需要过滤的字段。
- * @method array getValues() 获取字段的过滤值。
- * @method void setValues(array $Values) 设置字段的过滤值。
+ * @method string getName() 获取<p>需要过滤的字段。</p>
+ * @method void setName(string $Name) 设置<p>需要过滤的字段。</p>
+ * @method array getValues() 获取<p>字段的过滤值。</p>
+ * @method void setValues(array $Values) 设置<p>字段的过滤值。</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string 需要过滤的字段。
+     * @var string <p>需要过滤的字段。</p>
      */
     public $Name;
 
     /**
-     * @var array 字段的过滤值。
+     * @var array <p>字段的过滤值。</p>
      */
     public $Values;
 
     /**
-     * @param string $Name 需要过滤的字段。
-     * @param array $Values 字段的过滤值。
+     * @param string $Name <p>需要过滤的字段。</p>
+     * @param array $Values <p>字段的过滤值。</p>
      */
     function __construct()
     {

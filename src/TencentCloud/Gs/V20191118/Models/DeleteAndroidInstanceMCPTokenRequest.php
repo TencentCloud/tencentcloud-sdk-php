@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAndroidInstanceMCPToken请求参数结构体
  *
-
+ * @method string getTokenId() 获取<p>内部 ID，格式 k_ + 16 位 hex</p>
+ * @method void setTokenId(string $TokenId) 设置<p>内部 ID，格式 k_ + 16 位 hex</p>
  */
 class DeleteAndroidInstanceMCPTokenRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public $TokenId;
 
     /**
-
+     * @param string $TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeleteAndroidInstanceMCPTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
+            $this->TokenId = $param["TokenId"];
+        }
     }
 }

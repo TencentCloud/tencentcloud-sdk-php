@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CallSource getCallSource() 获取<p>调用来源</p>
  * @method void setCallSource(CallSource $CallSource) 设置<p>调用来源</p>
+ * @method DocumentParseUsageDetail getDocumentParse() 获取<p>MODEL 类型的文档解析明细</p>
+ * @method void setDocumentParse(DocumentParseUsageDetail $DocumentParse) 设置<p>MODEL 类型的文档解析明细</p>
  * @method string getDosageId() 获取<p>计量 ID，用于对账/回溯</p>
  * @method void setDosageId(string $DosageId) 设置<p>计量 ID，用于对账/回溯</p>
  * @method string getEventTime() 获取<p>调用时间戳（Unix 秒）</p>
@@ -41,6 +43,11 @@ class UsageDetail extends AbstractModel
      * @var CallSource <p>调用来源</p>
      */
     public $CallSource;
+
+    /**
+     * @var DocumentParseUsageDetail <p>MODEL 类型的文档解析明细</p>
+     */
+    public $DocumentParse;
 
     /**
      * @var string <p>计量 ID，用于对账/回溯</p>
@@ -74,6 +81,7 @@ class UsageDetail extends AbstractModel
 
     /**
      * @param CallSource $CallSource <p>调用来源</p>
+     * @param DocumentParseUsageDetail $DocumentParse <p>MODEL 类型的文档解析明细</p>
      * @param string $DosageId <p>计量 ID，用于对账/回溯</p>
      * @param string $EventTime <p>调用时间戳（Unix 秒）</p>
      * @param ModelUsageDetail $Model <p>MODEL 域专属</p>
@@ -97,6 +105,11 @@ class UsageDetail extends AbstractModel
         if (array_key_exists("CallSource",$param) and $param["CallSource"] !== null) {
             $this->CallSource = new CallSource();
             $this->CallSource->deserialize($param["CallSource"]);
+        }
+
+        if (array_key_exists("DocumentParse",$param) and $param["DocumentParse"] !== null) {
+            $this->DocumentParse = new DocumentParseUsageDetail();
+            $this->DocumentParse->deserialize($param["DocumentParse"]);
         }
 
         if (array_key_exists("DosageId",$param) and $param["DosageId"] !== null) {

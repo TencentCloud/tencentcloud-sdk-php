@@ -250,6 +250,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) 查询安全防护配置详情。
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) 查询指定策略模板的绑定关系列表。
  * @method Models\DescribeSharedCNAMEResponse DescribeSharedCNAME(Models\DescribeSharedCNAMERequest $req) 查询共享CNAME列表，支持模糊搜索、分页、排序等。
+ * @method Models\DescribeTimingFunctionAnalysisDataResponse DescribeTimingFunctionAnalysisData(Models\DescribeTimingFunctionAnalysisDataRequest $req) 本接口查询边缘函数分析的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) <p>本接口（<code>DescribeTimingL4Data</code>）用于查询四层时序数据列表。</p>
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 本接口用于查询七层域名业务的时序数据。
 注意：
@@ -258,6 +259,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) 本接口用于查询七层缓存分析时序类流量数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80648">DescribeTimingL7AnalysisData</a> 接口。
  * @method Models\DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(Models\DescribeTimingL7OriginPullDataRequest $req) 本接口用以查询七层域名业务的回源时序数据。
 您可以选择通过指定查询维度 <code>DimensionName</code> 进行分组查询，返回多组时序数据，详细指引与使用限制请参考 [如何使用 API 实现单次调用中的分组查询](https://cloud.tencent.com/document/product/1552/127501)。
+ * @method Models\DescribeTopFunctionAnalysisDataResponse DescribeTopFunctionAnalysisData(Models\DescribeTopFunctionAnalysisDataRequest $req) 本接口用于查询边缘函数按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
  * @method Models\DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(Models\DescribeTopL7AnalysisDataRequest $req) 本接口用于查询七层域名业务按照指定维度的 topN 数据。
 注意：
 1. 本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。

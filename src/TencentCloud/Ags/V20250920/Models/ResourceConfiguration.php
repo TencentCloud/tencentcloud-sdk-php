@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorage(string $Storage) 设置<p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGPUResourceGroupId() 获取<p>关联的GPU资源组ID</p>
+ * @method void setGPUResourceGroupId(string $GPUResourceGroupId) 设置<p>关联的GPU资源组ID</p>
  */
 class ResourceConfiguration extends AbstractModel
 {
@@ -48,10 +50,16 @@ class ResourceConfiguration extends AbstractModel
     public $Storage;
 
     /**
+     * @var string <p>关联的GPU资源组ID</p>
+     */
+    public $GPUResourceGroupId;
+
+    /**
      * @param string $CPU <p>cpu 资源量</p>
      * @param string $Memory <p>内存资源量</p>
      * @param string $Storage <p>自定义磁盘大小</p><p>枚举值：</p><ul><li>1Gi： 1Gi</li><li>5Gi： 5Gi</li><li>10Gi： 10Gi</li><li>20Gi： 20Gi</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GPUResourceGroupId <p>关联的GPU资源组ID</p>
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class ResourceConfiguration extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("GPUResourceGroupId",$param) and $param["GPUResourceGroupId"] !== null) {
+            $this->GPUResourceGroupId = $param["GPUResourceGroupId"];
         }
     }
 }

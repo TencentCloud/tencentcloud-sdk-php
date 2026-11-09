@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageDigest(string $ImageDigest) 设置<p>镜像 Digest</p>
  * @method string getPreCacheImageId() 获取<p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
  * @method void setPreCacheImageId(string $PreCacheImageId) 设置<p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
+ * @method string getPreCacheType() 获取<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+ * @method void setPreCacheType(string $PreCacheType) 设置<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
  */
 class DescribePreCacheImageTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribePreCacheImageTaskRequest extends AbstractModel
     public $PreCacheImageId;
 
     /**
+     * @var string <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public $PreCacheType;
+
+    /**
      * @param string $Image <p>镜像地址</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code> 。</p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      * @param string $ImageDigest <p>镜像 Digest</p>
      * @param string $PreCacheImageId <p>镜像预热ID，只能ID或三元组（Image、ImageDigest、ImageRegistrytype）二选一查询</p>
+     * @param string $PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribePreCacheImageTaskRequest extends AbstractModel
 
         if (array_key_exists("PreCacheImageId",$param) and $param["PreCacheImageId"] !== null) {
             $this->PreCacheImageId = $param["PreCacheImageId"];
+        }
+
+        if (array_key_exists("PreCacheType",$param) and $param["PreCacheType"] !== null) {
+            $this->PreCacheType = $param["PreCacheType"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 插件调用明细
  *
- * @method string getPluginName() 获取<p>插件名称</p>
- * @method void setPluginName(string $PluginName) 设置<p>插件名称</p>
- * @method array getResourceConsumptionList() 获取<p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
- * @method void setResourceConsumptionList(array $ResourceConsumptionList) 设置<p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
- * @method string getToolName() 获取<p>插件工具名（tool_name）</p>
- * @method void setToolName(string $ToolName) 设置<p>插件工具名（tool_name）</p>
+ * @method string getPluginName() 获取<p>连接器与工具名称</p>
+ * @method void setPluginName(string $PluginName) 设置<p>连接器与工具名称</p>
+ * @method array getResourceConsumptionList() 获取<p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
+ * @method void setResourceConsumptionList(array $ResourceConsumptionList) 设置<p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
+ * @method string getToolName() 获取<p>工具名称</p>
+ * @method void setToolName(string $ToolName) 设置<p>工具名称</p>
  */
 class PluginUsageDetail extends AbstractModel
 {
     /**
-     * @var string <p>插件名称</p>
+     * @var string <p>连接器与工具名称</p>
      */
     public $PluginName;
 
     /**
-     * @var array <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
+     * @var array <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
      */
     public $ResourceConsumptionList;
 
     /**
-     * @var string <p>插件工具名（tool_name）</p>
+     * @var string <p>工具名称</p>
      */
     public $ToolName;
 
     /**
-     * @param string $PluginName <p>插件名称</p>
-     * @param array $ResourceConsumptionList <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
-     * @param string $ToolName <p>插件工具名（tool_name）</p>
+     * @param string $PluginName <p>连接器与工具名称</p>
+     * @param array $ResourceConsumptionList <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
+     * @param string $ToolName <p>工具名称</p>
      */
     function __construct()
     {

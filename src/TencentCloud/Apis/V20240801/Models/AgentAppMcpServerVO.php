@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用关联的mcp响应
  *
- * @method string getID() 获取绑定ID
- * @method void setID(string $ID) 设置绑定ID
- * @method boolean getNeedAuth() 获取需要认证
- * @method void setNeedAuth(boolean $NeedAuth) 设置需要认证
- * @method string getAgentCredentialID() 获取凭据ID
- * @method void setAgentCredentialID(string $AgentCredentialID) 设置凭据ID
- * @method DescribeAgentCredentialResp getAgentCredentialVO() 获取凭据详情
- * @method void setAgentCredentialVO(DescribeAgentCredentialResp $AgentCredentialVO) 设置凭据详情
- * @method DescribeMcpServerResponseVO getMcpServerVO() 获取mcp详情
- * @method void setMcpServerVO(DescribeMcpServerResponseVO $McpServerVO) 设置mcp详情
- * @method string getRelateTime() 获取关联时间
- * @method void setRelateTime(string $RelateTime) 设置关联时间
- * @method string getSSEResourceIdentifier() 获取应用为OAuth2认证时，sse模式请求mcp时的资源标识
+ * @method string getID() 获取<p>绑定ID</p>
+ * @method void setID(string $ID) 设置<p>绑定ID</p>
+ * @method boolean getNeedAuth() 获取<p>需要认证</p>
+ * @method void setNeedAuth(boolean $NeedAuth) 设置<p>需要认证</p>
+ * @method string getAgentCredentialID() 获取<p>凭据ID</p>
+ * @method void setAgentCredentialID(string $AgentCredentialID) 设置<p>凭据ID</p>
+ * @method DescribeAgentCredentialResp getAgentCredentialVO() 获取<p>凭据详情</p>
+ * @method void setAgentCredentialVO(DescribeAgentCredentialResp $AgentCredentialVO) 设置<p>凭据详情</p>
+ * @method DescribeMcpServerResponseVO getMcpServerVO() 获取<p>mcp详情</p>
+ * @method void setMcpServerVO(DescribeMcpServerResponseVO $McpServerVO) 设置<p>mcp详情</p>
+ * @method string getRelateTime() 获取<p>关联时间</p>
+ * @method void setRelateTime(string $RelateTime) 设置<p>关联时间</p>
+ * @method string getSSEResourceIdentifier() 获取<p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSSEResourceIdentifier(string $SSEResourceIdentifier) 设置应用为OAuth2认证时，sse模式请求mcp时的资源标识
+ * @method void setSSEResourceIdentifier(string $SSEResourceIdentifier) 设置<p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStreamableResourceIdentifier() 获取应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+ * @method string getStreamableResourceIdentifier() 获取<p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStreamableResourceIdentifier(string $StreamableResourceIdentifier) 设置应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+ * @method void setStreamableResourceIdentifier(string $StreamableResourceIdentifier) 设置<p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAgentAppID() 获取应用ID
+ * @method string getAgentAppID() 获取<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAgentAppID(string $AgentAppID) 设置应用ID
+ * @method void setAgentAppID(string $AgentAppID) 设置<p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMcpServerID() 获取mcp ID
+ * @method string getMcpServerID() 获取<p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMcpServerID(string $McpServerID) 设置mcp ID
+ * @method void setMcpServerID(string $McpServerID) 设置<p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeAgentAppResp getAgentAppVO() 获取<p>应用</p>
+ * @method void setAgentAppVO(DescribeAgentAppResp $AgentAppVO) 设置<p>应用</p>
  */
 class AgentAppMcpServerVO extends AbstractModel
 {
     /**
-     * @var string 绑定ID
+     * @var string <p>绑定ID</p>
      */
     public $ID;
 
     /**
-     * @var boolean 需要认证
+     * @var boolean <p>需要认证</p>
      */
     public $NeedAuth;
 
     /**
-     * @var string 凭据ID
+     * @var string <p>凭据ID</p>
      */
     public $AgentCredentialID;
 
     /**
-     * @var DescribeAgentCredentialResp 凭据详情
+     * @var DescribeAgentCredentialResp <p>凭据详情</p>
      */
     public $AgentCredentialVO;
 
     /**
-     * @var DescribeMcpServerResponseVO mcp详情
+     * @var DescribeMcpServerResponseVO <p>mcp详情</p>
      */
     public $McpServerVO;
 
     /**
-     * @var string 关联时间
+     * @var string <p>关联时间</p>
      */
     public $RelateTime;
 
     /**
-     * @var string 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @var string <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSEResourceIdentifier;
 
     /**
-     * @var string 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @var string <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamableResourceIdentifier;
 
     /**
-     * @var string 应用ID
+     * @var string <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentAppID;
 
     /**
-     * @var string mcp ID
+     * @var string <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $McpServerID;
 
     /**
-     * @param string $ID 绑定ID
-     * @param boolean $NeedAuth 需要认证
-     * @param string $AgentCredentialID 凭据ID
-     * @param DescribeAgentCredentialResp $AgentCredentialVO 凭据详情
-     * @param DescribeMcpServerResponseVO $McpServerVO mcp详情
-     * @param string $RelateTime 关联时间
-     * @param string $SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @var DescribeAgentAppResp <p>应用</p>
+     */
+    public $AgentAppVO;
+
+    /**
+     * @param string $ID <p>绑定ID</p>
+     * @param boolean $NeedAuth <p>需要认证</p>
+     * @param string $AgentCredentialID <p>凭据ID</p>
+     * @param DescribeAgentCredentialResp $AgentCredentialVO <p>凭据详情</p>
+     * @param DescribeMcpServerResponseVO $McpServerVO <p>mcp详情</p>
+     * @param string $RelateTime <p>关联时间</p>
+     * @param string $SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @param string $StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AgentAppID 应用ID
+     * @param string $AgentAppID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $McpServerID mcp ID
+     * @param string $McpServerID <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeAgentAppResp $AgentAppVO <p>应用</p>
      */
     function __construct()
     {
@@ -174,6 +182,11 @@ class AgentAppMcpServerVO extends AbstractModel
 
         if (array_key_exists("McpServerID",$param) and $param["McpServerID"] !== null) {
             $this->McpServerID = $param["McpServerID"];
+        }
+
+        if (array_key_exists("AgentAppVO",$param) and $param["AgentAppVO"] !== null) {
+            $this->AgentAppVO = new DescribeAgentAppResp();
+            $this->AgentAppVO->deserialize($param["AgentAppVO"]);
         }
     }
 }

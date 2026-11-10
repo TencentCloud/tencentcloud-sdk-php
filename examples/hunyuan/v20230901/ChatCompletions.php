@@ -47,14 +47,18 @@ try {
     $req = new ChatCompletionsRequest();
     $req->TopP = 0;
     $req->Temperature = 0;
+    $req->Stream = false;
     $req->Model = "hunyuan-standard";
     $reqMessage = new Message();
     $reqMessage->Role = "user";
     $reqMessage->Content = "计算1+1";
     $req->Messages = [$reqMessage];
-    
-    // 通过client对象调用ChatCompletions方法发起请求。注意请求方法名与请求对象是对应的
-    $client->ChatCompletions($req);
+
+    // 返回的resp是一个ChatCompletionsResponse的实例，与请求对象对应
+    $resp = $client->ChatCompletions($req);
+    if (is_object($resp)) {
+        print_r($resp->toJsonString());
+    }
     
 }
 catch(TencentCloudSDKException $e) {

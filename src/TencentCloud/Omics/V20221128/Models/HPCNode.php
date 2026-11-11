@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置<p>队列名称</p>
  * @method string getStatus() 获取<p>节点状态。取值范围：<br>IDLE 空闲<br>DOWN 节点下线<br>MIXED 节点部分使用<br>ALLOC  节点完全分配<br>DRAIN 排空，不接受新任务</p>
  * @method void setStatus(string $Status) 设置<p>节点状态。取值范围：<br>IDLE 空闲<br>DOWN 节点下线<br>MIXED 节点部分使用<br>ALLOC  节点完全分配<br>DRAIN 排空，不接受新任务</p>
+ * @method boolean getIsExistingNode() 获取<p>是否存量节点</p>
+ * @method void setIsExistingNode(boolean $IsExistingNode) 设置<p>是否存量节点</p>
  */
 class HPCNode extends AbstractModel
 {
@@ -108,6 +110,11 @@ class HPCNode extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean <p>是否存量节点</p>
+     */
+    public $IsExistingNode;
+
+    /**
      * @param string $NodeId <p>节点ID</p>
      * @param string $QueueId <p>队列ID</p>
      * @param string $ClusterId <p>集群ID</p>
@@ -120,6 +127,7 @@ class HPCNode extends AbstractModel
      * @param string $Name <p>节点名称</p>
      * @param string $QueueName <p>队列名称</p>
      * @param string $Status <p>节点状态。取值范围：<br>IDLE 空闲<br>DOWN 节点下线<br>MIXED 节点部分使用<br>ALLOC  节点完全分配<br>DRAIN 排空，不接受新任务</p>
+     * @param boolean $IsExistingNode <p>是否存量节点</p>
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class HPCNode extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsExistingNode",$param) and $param["IsExistingNode"] !== null) {
+            $this->IsExistingNode = $param["IsExistingNode"];
         }
     }
 }

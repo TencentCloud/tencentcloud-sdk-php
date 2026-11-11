@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulID(integer $VulID) 设置<p>漏洞 ID（vul_vuls.id）</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method array getFilters() 获取<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签</p>
- * @method void setFilters(array $Filters) 设置<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签</p>
+ * @method array getFilters() 获取<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签<br>ClusterId：集群id（仅支持单集群id筛选）</p>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签<br>ClusterId：集群id（仅支持单集群id筛选）</p>
  * @method integer getLimit() 获取<p>每页返回数量<br>取值范围：[1, 100]<br>默认值：10</p>
  * @method void setLimit(integer $Limit) 设置<p>每页返回数量<br>取值范围：[1, 100]<br>默认值：10</p>
  * @method integer getOffset() 获取<p>分页偏移量<br>取值范围：[0, +∞)<br>默认值：0</p>
@@ -55,7 +55,7 @@ class DescribeVulRiskRelateHostRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签</p>
+     * @var array <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      */
     public $Filters;
 
@@ -83,7 +83,7 @@ class DescribeVulRiskRelateHostRequest extends AbstractModel
      * @param integer $KBID <p>KB 补丁内部 ID（kb_info.id）</p>
      * @param integer $VulID <p>漏洞 ID（vul_vuls.id）</p>
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param array $Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签</p>
+     * @param array $Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对主机名/IP/InstanceID 模糊匹配）<br>CloudTag: 云标签<br>Tag: 安全中心标签<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      * @param integer $Limit <p>每页返回数量<br>取值范围：[1, 100]<br>默认值：10</p>
      * @param integer $Offset <p>分页偏移量<br>取值范围：[0, +∞)<br>默认值：0</p>
      * @param string $Order <p>排序方向<br>枚举值：<br>ASC：升序<br>DESC：降序<br>默认值：DESC</p>

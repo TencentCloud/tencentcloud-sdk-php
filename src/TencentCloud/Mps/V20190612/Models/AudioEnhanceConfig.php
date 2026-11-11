@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioEnhanceEdit(AudioEnhanceEditConfig $AudioEnhanceEdit) 设置<p>音频增强编辑。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AudioSRConfig getAudioSR() 获取<p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioSR(AudioSRConfig $AudioSR) 设置<p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SpatialAudioConfig getSpatialAudio() 获取<p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpatialAudio(SpatialAudioConfig $SpatialAudio) 设置<p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioEnhanceConfig extends AbstractModel
 {
@@ -74,6 +82,18 @@ class AudioEnhanceConfig extends AbstractModel
     public $AudioEnhanceEdit;
 
     /**
+     * @var AudioSRConfig <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioSR;
+
+    /**
+     * @var SpatialAudioConfig <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpatialAudio;
+
+    /**
      * @param AudioDenoiseConfig $Denoise <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioSeparateConfig $Separate <p>音频分离配置。</p>
@@ -83,6 +103,10 @@ class AudioEnhanceConfig extends AbstractModel
      * @param AudioBeautifyConfig $Beautify <p>音频美化配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioEnhanceEditConfig $AudioEnhanceEdit <p>音频增强编辑。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioSRConfig $AudioSR <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpatialAudioConfig $SpatialAudio <p>空间音频配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +145,16 @@ class AudioEnhanceConfig extends AbstractModel
         if (array_key_exists("AudioEnhanceEdit",$param) and $param["AudioEnhanceEdit"] !== null) {
             $this->AudioEnhanceEdit = new AudioEnhanceEditConfig();
             $this->AudioEnhanceEdit->deserialize($param["AudioEnhanceEdit"]);
+        }
+
+        if (array_key_exists("AudioSR",$param) and $param["AudioSR"] !== null) {
+            $this->AudioSR = new AudioSRConfig();
+            $this->AudioSR->deserialize($param["AudioSR"]);
+        }
+
+        if (array_key_exists("SpatialAudio",$param) and $param["SpatialAudio"] !== null) {
+            $this->SpatialAudio = new SpatialAudioConfig();
+            $this->SpatialAudio->deserialize($param["SpatialAudio"]);
         }
     }
 }

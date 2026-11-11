@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchEndTime(string $SwitchEndTime) 设置<p>切换时间窗口结束时间</p>
  * @method integer getSwitchInterval() 获取<p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
  * @method void setSwitchInterval(integer $SwitchInterval) 设置<p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+ * @method string getMasterHostId() 获取<p>主节点所在机器，类似svr-xxx</p>
+ * @method void setMasterHostId(string $MasterHostId) 设置<p>主节点所在机器，类似svr-xxx</p>
+ * @method array getSlaveHostIds() 获取<p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+ * @method void setSlaveHostIds(array $SlaveHostIds) 设置<p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
  */
 class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
     public $SwitchInterval;
 
     /**
+     * @var string <p>主节点所在机器，类似svr-xxx</p>
+     */
+    public $MasterHostId;
+
+    /**
+     * @var array <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+     */
+    public $SlaveHostIds;
+
+    /**
      * @param string $UpgradeType <p>升级类型，取值为ADD，SPLIT和EXPAND。ADD-添加分片；SPLIT-切分某个分片；EXPAND-垂直扩容某个分片</p>
      * @param string $InstanceId <p>实例ID，形如 dcdbt-mlfjm74h</p>
      * @param AddShardConfig $AddShardConfig <p>当UpgradeType取值为ADD时，添加分片的配置参数</p>
@@ -96,6 +110,8 @@ class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
      * @param string $SwitchStartTime <p>切换时间窗口开始时间</p>
      * @param string $SwitchEndTime <p>切换时间窗口结束时间</p>
      * @param integer $SwitchInterval <p>多个分片同时发起扩容，并发切换中的切换时间间隔，即当前分片切换开始时间和下一个分片的切换开始时间间隔，不传默认为1。</p><p>取值范围：[1, 180]</p><p>单位：秒</p>
+     * @param string $MasterHostId <p>主节点所在机器，类似svr-xxx</p>
+     * @param array $SlaveHostIds <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
      */
     function __construct()
     {
@@ -147,6 +163,14 @@ class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SwitchInterval",$param) and $param["SwitchInterval"] !== null) {
             $this->SwitchInterval = $param["SwitchInterval"];
+        }
+
+        if (array_key_exists("MasterHostId",$param) and $param["MasterHostId"] !== null) {
+            $this->MasterHostId = $param["MasterHostId"];
+        }
+
+        if (array_key_exists("SlaveHostIds",$param) and $param["SlaveHostIds"] !== null) {
+            $this->SlaveHostIds = $param["SlaveHostIds"];
         }
     }
 }

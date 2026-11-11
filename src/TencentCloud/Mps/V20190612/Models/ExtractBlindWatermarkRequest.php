@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExtractBlindWatermark请求参数结构体
  *
- * @method string getType() 获取数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
- * @method void setType(string $Type) 设置数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
- * @method MediaInputInfo getInputInfo() 获取媒体处理的文件输入信息。
- * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的文件输入信息。
- * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
- * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
- * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() 获取提取数字水印任务配置
- * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) 设置提取数字水印任务配置
- * @method string getResourceId() 获取资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
- * @method void setResourceId(string $ResourceId) 设置资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+ * @method string getType() 获取<p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
+ * @method void setType(string $Type) 设置<p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
+ * @method MediaInputInfo getInputInfo() 获取<p>媒体处理的文件输入信息。</p>
+ * @method void setInputInfo(MediaInputInfo $InputInfo) 设置<p>媒体处理的文件输入信息。</p>
+ * @method TaskNotifyConfig getTaskNotifyConfig() 获取<p>任务的事件通知信息，不填代表不获取事件通知。</p>
+ * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置<p>任务的事件通知信息，不填代表不获取事件通知。</p>
+ * @method ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() 获取<p>提取数字水印任务配置</p>
+ * @method void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig) 设置<p>提取数字水印任务配置</p>
+ * @method string getResourceId() 获取<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
  */
 class ExtractBlindWatermarkRequest extends AbstractModel
 {
     /**
-     * @var string 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
+     * @var string <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
      */
     public $Type;
 
     /**
-     * @var MediaInputInfo 媒体处理的文件输入信息。
+     * @var MediaInputInfo <p>媒体处理的文件输入信息。</p>
      */
     public $InputInfo;
 
     /**
-     * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * @var TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public $TaskNotifyConfig;
 
     /**
-     * @var ExtractBlindWatermarkTaskConfig 提取数字水印任务配置
+     * @var ExtractBlindWatermarkTaskConfig <p>提取数字水印任务配置</p>
      */
     public $ExtractBlindWatermarkConfig;
 
     /**
-     * @var string 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * @var string <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     public $ResourceId;
 
     /**
-     * @param string $Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
-     * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
-     * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
-     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig 提取数字水印任务配置
-     * @param string $ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * @param string $Type <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
+     * @param MediaInputInfo $InputInfo <p>媒体处理的文件输入信息。</p>
+     * @param TaskNotifyConfig $TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
+     * @param ExtractBlindWatermarkTaskConfig $ExtractBlindWatermarkConfig <p>提取数字水印任务配置</p>
+     * @param string $ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     function __construct()
     {

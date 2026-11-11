@@ -20,170 +20,206 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 恢复任务信息
  *
- * @method string getTaskId() 获取恢复任务 ID
- * @method void setTaskId(string $TaskId) 设置恢复任务 ID
- * @method string getBackupId() 获取关联备份点 ID
- * @method void setBackupId(string $BackupId) 设置关联备份点 ID
- * @method string getResourceId() 获取源实例 ID
- * @method void setResourceId(string $ResourceId) 设置源实例 ID
- * @method string getTargetResourceId() 获取目标实例 ID
- * @method void setTargetResourceId(string $TargetResourceId) 设置目标实例 ID
- * @method array getRestorePaths() 获取恢复路径列表
- * @method void setRestorePaths(array $RestorePaths) 设置恢复路径列表
- * @method string getTargetLocation() 获取目标恢复位置
- * @method void setTargetLocation(string $TargetLocation) 设置目标恢复位置
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
- * @method integer getTotalFileCount() 获取需恢复文件总数
- * @method void setTotalFileCount(integer $TotalFileCount) 设置需恢复文件总数
- * @method integer getTotalSize() 获取需恢复数据总量（字节）
- * @method void setTotalSize(integer $TotalSize) 设置需恢复数据总量（字节）
- * @method string getTotalSizeFormatted() 获取需恢复数据总量（格式化，如 "1.5 GB"）
- * @method void setTotalSizeFormatted(string $TotalSizeFormatted) 设置需恢复数据总量（格式化，如 "1.5 GB"）
- * @method integer getRestoreFileCount() 获取已恢复文件数
- * @method void setRestoreFileCount(integer $RestoreFileCount) 设置已恢复文件数
- * @method integer getRestoreSize() 获取已恢复数据量（字节）
- * @method void setRestoreSize(integer $RestoreSize) 设置已恢复数据量（字节）
- * @method string getRestoreSizeFormatted() 获取已恢复数据量（格式化）
- * @method void setRestoreSizeFormatted(string $RestoreSizeFormatted) 设置已恢复数据量（格式化）
- * @method float getProgress() 获取恢复进度（0-100）
- * @method void setProgress(float $Progress) 设置恢复进度（0-100）
- * @method string getJobId() 获取关联 Job ID
- * @method void setJobId(string $JobId) 设置关联 Job ID
- * @method string getStartTime() 获取任务开始时间（ISO 格式）
- * @method void setStartTime(string $StartTime) 设置任务开始时间（ISO 格式）
- * @method string getEndTime() 获取任务结束时间
- * @method void setEndTime(string $EndTime) 设置任务结束时间
- * @method string getCreatedTime() 获取任务创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置任务创建时间
- * @method string getFailReason() 获取恢复任务失败原因
- * @method void setFailReason(string $FailReason) 设置恢复任务失败原因
- * @method string getConflictStrategy() 获取冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
- * @method void setConflictStrategy(string $ConflictStrategy) 设置冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+ * @method string getTaskId() 获取<p>恢复任务 ID</p>
+ * @method void setTaskId(string $TaskId) 设置<p>恢复任务 ID</p>
+ * @method string getBackupId() 获取<p>关联备份点 ID</p>
+ * @method void setBackupId(string $BackupId) 设置<p>关联备份点 ID</p>
+ * @method string getResourceId() 获取<p>源实例 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>源实例 ID</p>
+ * @method string getTargetResourceId() 获取<p>目标实例 ID</p>
+ * @method void setTargetResourceId(string $TargetResourceId) 设置<p>目标实例 ID</p>
+ * @method array getRestorePaths() 获取<p>恢复路径列表</p>
+ * @method void setRestorePaths(array $RestorePaths) 设置<p>恢复路径列表</p>
+ * @method string getTargetLocation() 获取<p>目标恢复位置</p>
+ * @method void setTargetLocation(string $TargetLocation) 设置<p>目标恢复位置</p>
+ * @method string getStatus() 获取<p>任务状态</p>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p>
+ * @method integer getTotalFileCount() 获取<p>需恢复文件总数</p>
+ * @method void setTotalFileCount(integer $TotalFileCount) 设置<p>需恢复文件总数</p>
+ * @method integer getTotalSize() 获取<p>需恢复数据总量（字节）</p>
+ * @method void setTotalSize(integer $TotalSize) 设置<p>需恢复数据总量（字节）</p>
+ * @method string getTotalSizeFormatted() 获取<p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
+ * @method void setTotalSizeFormatted(string $TotalSizeFormatted) 设置<p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
+ * @method integer getRestoreFileCount() 获取<p>已恢复文件数</p>
+ * @method void setRestoreFileCount(integer $RestoreFileCount) 设置<p>已恢复文件数</p>
+ * @method integer getRestoreSize() 获取<p>已恢复数据量（字节）</p>
+ * @method void setRestoreSize(integer $RestoreSize) 设置<p>已恢复数据量（字节）</p>
+ * @method string getRestoreSizeFormatted() 获取<p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
+ * @method void setRestoreSizeFormatted(string $RestoreSizeFormatted) 设置<p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
+ * @method float getProgress() 获取<p>恢复进度（0-100）</p>
+ * @method void setProgress(float $Progress) 设置<p>恢复进度（0-100）</p>
+ * @method string getJobId() 获取<p>关联 Job ID</p>
+ * @method void setJobId(string $JobId) 设置<p>关联 Job ID</p>
+ * @method string getStartTime() 获取<p>任务开始时间（ISO 格式）</p>
+ * @method void setStartTime(string $StartTime) 设置<p>任务开始时间（ISO 格式）</p>
+ * @method string getEndTime() 获取<p>任务结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>任务结束时间</p>
+ * @method string getCreatedTime() 获取<p>任务创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>任务创建时间</p>
+ * @method string getFailReason() 获取<p>恢复任务失败原因</p>
+ * @method void setFailReason(string $FailReason) 设置<p>恢复任务失败原因</p>
+ * @method string getConflictStrategy() 获取<p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
+ * @method void setConflictStrategy(string $ConflictStrategy) 设置<p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
+ * @method boolean getIsOriginalPath() 获取<p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOriginalPath(boolean $IsOriginalPath) 设置<p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCloudResourceId() 获取<p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudResourceId(string $CloudResourceId) 设置<p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetCloudResourceId() 获取<p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetCloudResourceId(string $TargetCloudResourceId) 设置<p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RestoreTask extends AbstractModel
 {
     /**
-     * @var string 恢复任务 ID
+     * @var string <p>恢复任务 ID</p>
      */
     public $TaskId;
 
     /**
-     * @var string 关联备份点 ID
+     * @var string <p>关联备份点 ID</p>
      */
     public $BackupId;
 
     /**
-     * @var string 源实例 ID
+     * @var string <p>源实例 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var string 目标实例 ID
+     * @var string <p>目标实例 ID</p>
      */
     public $TargetResourceId;
 
     /**
-     * @var array 恢复路径列表
+     * @var array <p>恢复路径列表</p>
      */
     public $RestorePaths;
 
     /**
-     * @var string 目标恢复位置
+     * @var string <p>目标恢复位置</p>
      */
     public $TargetLocation;
 
     /**
-     * @var string 任务状态
+     * @var string <p>任务状态</p>
      */
     public $Status;
 
     /**
-     * @var integer 需恢复文件总数
+     * @var integer <p>需恢复文件总数</p>
      */
     public $TotalFileCount;
 
     /**
-     * @var integer 需恢复数据总量（字节）
+     * @var integer <p>需恢复数据总量（字节）</p>
      */
     public $TotalSize;
 
     /**
-     * @var string 需恢复数据总量（格式化，如 "1.5 GB"）
+     * @var string <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
      */
     public $TotalSizeFormatted;
 
     /**
-     * @var integer 已恢复文件数
+     * @var integer <p>已恢复文件数</p>
      */
     public $RestoreFileCount;
 
     /**
-     * @var integer 已恢复数据量（字节）
+     * @var integer <p>已恢复数据量（字节）</p>
      */
     public $RestoreSize;
 
     /**
-     * @var string 已恢复数据量（格式化）
+     * @var string <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
      */
     public $RestoreSizeFormatted;
 
     /**
-     * @var float 恢复进度（0-100）
+     * @var float <p>恢复进度（0-100）</p>
      */
     public $Progress;
 
     /**
-     * @var string 关联 Job ID
+     * @var string <p>关联 Job ID</p>
      */
     public $JobId;
 
     /**
-     * @var string 任务开始时间（ISO 格式）
+     * @var string <p>任务开始时间（ISO 格式）</p>
      */
     public $StartTime;
 
     /**
-     * @var string 任务结束时间
+     * @var string <p>任务结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 任务创建时间
+     * @var string <p>任务创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string 恢复任务失败原因
+     * @var string <p>恢复任务失败原因</p>
      */
     public $FailReason;
 
     /**
-     * @var string 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+     * @var string <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
      */
     public $ConflictStrategy;
 
     /**
-     * @param string $TaskId 恢复任务 ID
-     * @param string $BackupId 关联备份点 ID
-     * @param string $ResourceId 源实例 ID
-     * @param string $TargetResourceId 目标实例 ID
-     * @param array $RestorePaths 恢复路径列表
-     * @param string $TargetLocation 目标恢复位置
-     * @param string $Status 任务状态
-     * @param integer $TotalFileCount 需恢复文件总数
-     * @param integer $TotalSize 需恢复数据总量（字节）
-     * @param string $TotalSizeFormatted 需恢复数据总量（格式化，如 "1.5 GB"）
-     * @param integer $RestoreFileCount 已恢复文件数
-     * @param integer $RestoreSize 已恢复数据量（字节）
-     * @param string $RestoreSizeFormatted 已恢复数据量（格式化）
-     * @param float $Progress 恢复进度（0-100）
-     * @param string $JobId 关联 Job ID
-     * @param string $StartTime 任务开始时间（ISO 格式）
-     * @param string $EndTime 任务结束时间
-     * @param string $CreatedTime 任务创建时间
-     * @param string $FailReason 恢复任务失败原因
-     * @param string $ConflictStrategy 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+     * @var boolean <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOriginalPath;
+
+    /**
+     * @var string <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudResourceId;
+
+    /**
+     * @var string <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetCloudResourceId;
+
+    /**
+     * @param string $TaskId <p>恢复任务 ID</p>
+     * @param string $BackupId <p>关联备份点 ID</p>
+     * @param string $ResourceId <p>源实例 ID</p>
+     * @param string $TargetResourceId <p>目标实例 ID</p>
+     * @param array $RestorePaths <p>恢复路径列表</p>
+     * @param string $TargetLocation <p>目标恢复位置</p>
+     * @param string $Status <p>任务状态</p>
+     * @param integer $TotalFileCount <p>需恢复文件总数</p>
+     * @param integer $TotalSize <p>需恢复数据总量（字节）</p>
+     * @param string $TotalSizeFormatted <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
+     * @param integer $RestoreFileCount <p>已恢复文件数</p>
+     * @param integer $RestoreSize <p>已恢复数据量（字节）</p>
+     * @param string $RestoreSizeFormatted <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
+     * @param float $Progress <p>恢复进度（0-100）</p>
+     * @param string $JobId <p>关联 Job ID</p>
+     * @param string $StartTime <p>任务开始时间（ISO 格式）</p>
+     * @param string $EndTime <p>任务结束时间</p>
+     * @param string $CreatedTime <p>任务创建时间</p>
+     * @param string $FailReason <p>恢复任务失败原因</p>
+     * @param string $ConflictStrategy <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
+     * @param boolean $IsOriginalPath <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CloudResourceId <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetCloudResourceId <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +312,18 @@ class RestoreTask extends AbstractModel
 
         if (array_key_exists("ConflictStrategy",$param) and $param["ConflictStrategy"] !== null) {
             $this->ConflictStrategy = $param["ConflictStrategy"];
+        }
+
+        if (array_key_exists("IsOriginalPath",$param) and $param["IsOriginalPath"] !== null) {
+            $this->IsOriginalPath = $param["IsOriginalPath"];
+        }
+
+        if (array_key_exists("CloudResourceId",$param) and $param["CloudResourceId"] !== null) {
+            $this->CloudResourceId = $param["CloudResourceId"];
+        }
+
+        if (array_key_exists("TargetCloudResourceId",$param) and $param["TargetCloudResourceId"] !== null) {
+            $this->TargetCloudResourceId = $param["TargetCloudResourceId"];
         }
     }
 }

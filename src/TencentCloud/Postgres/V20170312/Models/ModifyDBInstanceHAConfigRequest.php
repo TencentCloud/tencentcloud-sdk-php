@@ -20,110 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceHAConfig请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method string getSyncMode() 获取主从同步方式：
-<li>Semi-sync：半同步</li>
-<li>Async：异步</li>
-
- * @method void setSyncMode(string $SyncMode) 设置主从同步方式：
-<li>Semi-sync：半同步</li>
-<li>Async：异步</li>
-
- * @method integer getMaxStandbyLatency() 获取高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte</li>
-<li>参数范围：[1073741824, 322122547200]</li>
- * @method void setMaxStandbyLatency(integer $MaxStandbyLatency) 设置高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte</li>
-<li>参数范围：[1073741824, 322122547200]</li>
- * @method integer getMaxStandbyLag() 获取高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s</li>
-<li>参数范围：[5, 10]</li>
- * @method void setMaxStandbyLag(integer $MaxStandbyLag) 设置高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s</li>
-<li>参数范围：[5, 10]</li>
- * @method integer getMaxSyncStandbyLatency() 获取同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
- * @method void setMaxSyncStandbyLatency(integer $MaxSyncStandbyLatency) 设置同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
- * @method integer getMaxSyncStandbyLag() 获取同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，
- * @method void setMaxSyncStandbyLag(integer $MaxSyncStandbyLag) 设置同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，
+ * @method string getDBInstanceId() 获取<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method string getSyncMode() 获取<p>主从同步方式：</p><li>Semi-sync：半同步</li><li>Async：异步</li>
+ * @method void setSyncMode(string $SyncMode) 设置<p>主从同步方式：</p><li>Semi-sync：半同步</li><li>Async：异步</li>
+ * @method integer getMaxStandbyLatency() 获取<p>高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。</p><li>单位：byte</li><li>参数范围：[1073741824, 322122547200]</li>
+ * @method void setMaxStandbyLatency(integer $MaxStandbyLatency) 设置<p>高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。</p><li>单位：byte</li><li>参数范围：[1073741824, 322122547200]</li>
+ * @method integer getMaxStandbyLag() 获取<p>高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。</p><li>单位：s</li><li>参数范围：[5, 10]</li>
+ * @method void setMaxStandbyLag(integer $MaxStandbyLag) 设置<p>高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。</p><li>单位：s</li><li>参数范围：[5, 10]</li>
+ * @method integer getMaxSyncStandbyLatency() 获取<p>同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。</p>
+ * @method void setMaxSyncStandbyLatency(integer $MaxSyncStandbyLatency) 设置<p>同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。</p>
+ * @method integer getMaxSyncStandbyLag() 获取<p>同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，</p>
+ * @method void setMaxSyncStandbyLag(integer $MaxSyncStandbyLag) 设置<p>同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，</p>
  */
 class ModifyDBInstanceHAConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string 主从同步方式：
-<li>Semi-sync：半同步</li>
-<li>Async：异步</li>
-
+     * @var string <p>主从同步方式：</p><li>Semi-sync：半同步</li><li>Async：异步</li>
      */
     public $SyncMode;
 
     /**
-     * @var integer 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte</li>
-<li>参数范围：[1073741824, 322122547200]</li>
+     * @var integer <p>高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。</p><li>单位：byte</li><li>参数范围：[1073741824, 322122547200]</li>
      */
     public $MaxStandbyLatency;
 
     /**
-     * @var integer 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s</li>
-<li>参数范围：[5, 10]</li>
+     * @var integer <p>高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。</p><li>单位：s</li><li>参数范围：[5, 10]</li>
      */
     public $MaxStandbyLag;
 
     /**
-     * @var integer 同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
+     * @var integer <p>同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。</p>
      */
     public $MaxSyncStandbyLatency;
 
     /**
-     * @var integer 同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，
+     * @var integer <p>同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，</p>
      */
     public $MaxSyncStandbyLag;
 
     /**
-     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param string $SyncMode 主从同步方式：
-<li>Semi-sync：半同步</li>
-<li>Async：异步</li>
-
-     * @param integer $MaxStandbyLatency 高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。
-<li>单位：byte</li>
-<li>参数范围：[1073741824, 322122547200]</li>
-     * @param integer $MaxStandbyLag 高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。
-<li>单位：s</li>
-<li>参数范围：[5, 10]</li>
-     * @param integer $MaxSyncStandbyLatency 同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-     * @param integer $MaxSyncStandbyLag 同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。
-该参数值针对SyncMode设置为Semi-sync的实例有效。
-半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。
-半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，
+     * @param string $DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param string $SyncMode <p>主从同步方式：</p><li>Semi-sync：半同步</li><li>Async：异步</li>
+     * @param integer $MaxStandbyLatency <p>高可用备机最大延迟数据量。备节点延迟数据量小于等于该值，且备节点延迟时间小于等于MaxStandbyLag时，可以切换为主节点。</p><li>单位：byte</li><li>参数范围：[1073741824, 322122547200]</li>
+     * @param integer $MaxStandbyLag <p>高可用备机最大延迟时间。备节点延迟时间小于等于该值，且备节点延迟数据量小于等于MaxStandbyLatency时，可以切换为主节点。</p><li>单位：s</li><li>参数范围：[5, 10]</li>
+     * @param integer $MaxSyncStandbyLatency <p>同步备机最大延迟数据量。备机延迟数据量小于等于该值，且该备机延迟时间小于等于MaxSyncStandbyLag时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag。</p>
+     * @param integer $MaxSyncStandbyLag <p>同步备机最大延迟时间。备机延迟时间小于等于该值，且该备机延迟数据量小于等于MaxSyncStandbyLatency时，则该备机采用同步复制；否则，采用异步复制。<br>该参数值针对SyncMode设置为Semi-sync的实例有效。<br>半同步实例禁止退化为异步复制时，不设置MaxSyncStandbyLatency、MaxSyncStandbyLag。<br>半同步实例允许退化异步复制时，PostgreSQL 9版本的实例须设置MaxSyncStandbyLatency且不设置MaxSyncStandbyLag，PostgreSQL 10及以上版本的实例须设置MaxSyncStandbyLatency、MaxSyncStandbyLag，</p>
      */
     function __construct()
     {

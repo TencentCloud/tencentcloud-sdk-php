@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ConfigureChcAssistVpc请求参数结构体
  *
- * @method array getChcIds() 获取CHC物理服务器的实例Id。
- * @method void setChcIds(array $ChcIds) 设置CHC物理服务器的实例Id。
- * @method VirtualPrivateCloud getBmcVirtualPrivateCloud() 获取带外网络信息。
- * @method void setBmcVirtualPrivateCloud(VirtualPrivateCloud $BmcVirtualPrivateCloud) 设置带外网络信息。
- * @method array getBmcSecurityGroupIds() 获取带外网络的安全组列表
- * @method void setBmcSecurityGroupIds(array $BmcSecurityGroupIds) 设置带外网络的安全组列表
- * @method VirtualPrivateCloud getDeployVirtualPrivateCloud() 获取部署网络信息。
- * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) 设置部署网络信息。
- * @method array getDeploySecurityGroupIds() 获取部署网络的安全组列表
- * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) 设置部署网络的安全组列表
- * @method ChcDeployExtraConfig getChcDeployExtraConfig() 获取部署网络的附加参数，用于指定minios类型、bios引导模式等
- * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) 设置部署网络的附加参数，用于指定minios类型、bios引导模式等
+ * @method array getChcIds() 获取<p>CHC物理服务器ID。</p>
+ * @method void setChcIds(array $ChcIds) 设置<p>CHC物理服务器ID。</p>
+ * @method VirtualPrivateCloud getBmcVirtualPrivateCloud() 获取<p>带外网络信息。</p>
+ * @method void setBmcVirtualPrivateCloud(VirtualPrivateCloud $BmcVirtualPrivateCloud) 设置<p>带外网络信息。</p>
+ * @method array getBmcSecurityGroupIds() 获取<p>带外网络的安全组列表。</p>
+ * @method void setBmcSecurityGroupIds(array $BmcSecurityGroupIds) 设置<p>带外网络的安全组列表。</p>
+ * @method VirtualPrivateCloud getDeployVirtualPrivateCloud() 获取<p>部署网络信息。</p>
+ * @method void setDeployVirtualPrivateCloud(VirtualPrivateCloud $DeployVirtualPrivateCloud) 设置<p>部署网络信息。</p>
+ * @method array getDeploySecurityGroupIds() 获取<p>部署网络的安全组列表。</p>
+ * @method void setDeploySecurityGroupIds(array $DeploySecurityGroupIds) 设置<p>部署网络的安全组列表。</p>
+ * @method ChcDeployExtraConfig getChcDeployExtraConfig() 获取<p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
+ * @method void setChcDeployExtraConfig(ChcDeployExtraConfig $ChcDeployExtraConfig) 设置<p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
+ * @method boolean getSkipBmcCheck() 获取<p>是否跳过带外检查。</p><p>默认值：false</p>
+ * @method void setSkipBmcCheck(boolean $SkipBmcCheck) 设置<p>是否跳过带外检查。</p><p>默认值：false</p>
  */
 class ConfigureChcAssistVpcRequest extends AbstractModel
 {
     /**
-     * @var array CHC物理服务器的实例Id。
+     * @var array <p>CHC物理服务器ID。</p>
      */
     public $ChcIds;
 
     /**
-     * @var VirtualPrivateCloud 带外网络信息。
+     * @var VirtualPrivateCloud <p>带外网络信息。</p>
      */
     public $BmcVirtualPrivateCloud;
 
     /**
-     * @var array 带外网络的安全组列表
+     * @var array <p>带外网络的安全组列表。</p>
      */
     public $BmcSecurityGroupIds;
 
     /**
-     * @var VirtualPrivateCloud 部署网络信息。
+     * @var VirtualPrivateCloud <p>部署网络信息。</p>
      */
     public $DeployVirtualPrivateCloud;
 
     /**
-     * @var array 部署网络的安全组列表
+     * @var array <p>部署网络的安全组列表。</p>
      */
     public $DeploySecurityGroupIds;
 
     /**
-     * @var ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     * @var ChcDeployExtraConfig <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
      */
     public $ChcDeployExtraConfig;
 
     /**
-     * @param array $ChcIds CHC物理服务器的实例Id。
-     * @param VirtualPrivateCloud $BmcVirtualPrivateCloud 带外网络信息。
-     * @param array $BmcSecurityGroupIds 带外网络的安全组列表
-     * @param VirtualPrivateCloud $DeployVirtualPrivateCloud 部署网络信息。
-     * @param array $DeploySecurityGroupIds 部署网络的安全组列表
-     * @param ChcDeployExtraConfig $ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     * @var boolean <p>是否跳过带外检查。</p><p>默认值：false</p>
+     */
+    public $SkipBmcCheck;
+
+    /**
+     * @param array $ChcIds <p>CHC物理服务器ID。</p>
+     * @param VirtualPrivateCloud $BmcVirtualPrivateCloud <p>带外网络信息。</p>
+     * @param array $BmcSecurityGroupIds <p>带外网络的安全组列表。</p>
+     * @param VirtualPrivateCloud $DeployVirtualPrivateCloud <p>部署网络信息。</p>
+     * @param array $DeploySecurityGroupIds <p>部署网络的安全组列表。</p>
+     * @param ChcDeployExtraConfig $ChcDeployExtraConfig <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
+     * @param boolean $SkipBmcCheck <p>是否跳过带外检查。</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -111,6 +119,10 @@ class ConfigureChcAssistVpcRequest extends AbstractModel
         if (array_key_exists("ChcDeployExtraConfig",$param) and $param["ChcDeployExtraConfig"] !== null) {
             $this->ChcDeployExtraConfig = new ChcDeployExtraConfig();
             $this->ChcDeployExtraConfig->deserialize($param["ChcDeployExtraConfig"]);
+        }
+
+        if (array_key_exists("SkipBmcCheck",$param) and $param["SkipBmcCheck"] !== null) {
+            $this->SkipBmcCheck = $param["SkipBmcCheck"];
         }
     }
 }

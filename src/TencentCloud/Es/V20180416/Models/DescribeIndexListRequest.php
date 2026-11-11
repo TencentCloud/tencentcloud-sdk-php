@@ -20,90 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIndexList请求参数结构体
  *
- * @method string getIndexType() 获取索引类型。auto：自治索引；normal：普通索引
- * @method void setIndexType(string $IndexType) 设置索引类型。auto：自治索引；normal：普通索引
- * @method string getInstanceId() 获取ES集群ID
- * @method void setInstanceId(string $InstanceId) 设置ES集群ID
- * @method string getIndexName() 获取索引名，若填空则获取所有索引
- * @method void setIndexName(string $IndexName) 设置索引名，若填空则获取所有索引
- * @method string getUsername() 获取集群访问用户名
- * @method void setUsername(string $Username) 设置集群访问用户名
- * @method string getPassword() 获取集群访问密码
- * @method void setPassword(string $Password) 设置集群访问密码
- * @method integer getOffset() 获取分页起始位置
- * @method void setOffset(integer $Offset) 设置分页起始位置
- * @method integer getLimit() 获取一页展示数量
- * @method void setLimit(integer $Limit) 设置一页展示数量
- * @method string getOrderBy() 获取排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
- * @method void setOrderBy(string $OrderBy) 设置排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
- * @method array getIndexStatusList() 获取过滤索引状态
- * @method void setIndexStatusList(array $IndexStatusList) 设置过滤索引状态
- * @method string getOrder() 获取排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
- * @method void setOrder(string $Order) 设置排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
+ * @method string getIndexType() 获取<p>索引类型。auto：自治索引；normal：普通索引</p>
+ * @method void setIndexType(string $IndexType) 设置<p>索引类型。auto：自治索引；normal：普通索引</p>
+ * @method string getInstanceId() 获取<p>ES集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ES集群ID</p>
+ * @method string getIndexName() 获取<p>索引名，若填空则获取所有索引</p>
+ * @method void setIndexName(string $IndexName) 设置<p>索引名，若填空则获取所有索引</p>
+ * @method string getUsername() 获取<p>集群访问用户名</p>
+ * @method void setUsername(string $Username) 设置<p>集群访问用户名</p>
+ * @method string getPassword() 获取<p>集群访问密码</p>
+ * @method void setPassword(string $Password) 设置<p>集群访问密码</p>
+ * @method integer getOffset() 获取<p>分页起始位置</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页起始位置</p>
+ * @method integer getLimit() 获取<p>一页展示数量</p>
+ * @method void setLimit(integer $Limit) 设置<p>一页展示数量</p>
+ * @method string getOrderBy() 获取<p>排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime</p>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime</p>
+ * @method array getIndexStatusList() 获取<p>过滤索引状态</p>
+ * @method void setIndexStatusList(array $IndexStatusList) 设置<p>过滤索引状态</p>
+ * @method string getOrder() 获取<p>排序顺序，支持asc、desc，默认为desc 数据格式&quot;asc&quot;,&quot;desc&quot;</p>
+ * @method void setOrder(string $Order) 设置<p>排序顺序，支持asc、desc，默认为desc 数据格式&quot;asc&quot;,&quot;desc&quot;</p>
+ * @method array getFilterIndexNames() 获取<p>索引名称过滤列表。仅返回列表中指定的索引，常用于事件中心跳转时筛选受影响的索引；不填返回全部索引。单次最多支持100个索引名称。</p>
+ * @method void setFilterIndexNames(array $FilterIndexNames) 设置<p>索引名称过滤列表。仅返回列表中指定的索引，常用于事件中心跳转时筛选受影响的索引；不填返回全部索引。单次最多支持100个索引名称。</p>
  */
 class DescribeIndexListRequest extends AbstractModel
 {
     /**
-     * @var string 索引类型。auto：自治索引；normal：普通索引
+     * @var string <p>索引类型。auto：自治索引；normal：普通索引</p>
      */
     public $IndexType;
 
     /**
-     * @var string ES集群ID
+     * @var string <p>ES集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 索引名，若填空则获取所有索引
+     * @var string <p>索引名，若填空则获取所有索引</p>
      */
     public $IndexName;
 
     /**
-     * @var string 集群访问用户名
+     * @var string <p>集群访问用户名</p>
      */
     public $Username;
 
     /**
-     * @var string 集群访问密码
+     * @var string <p>集群访问密码</p>
      */
     public $Password;
 
     /**
-     * @var integer 分页起始位置
+     * @var integer <p>分页起始位置</p>
      */
     public $Offset;
 
     /**
-     * @var integer 一页展示数量
+     * @var integer <p>一页展示数量</p>
      */
     public $Limit;
 
     /**
-     * @var string 排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
+     * @var string <p>排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime</p>
      */
     public $OrderBy;
 
     /**
-     * @var array 过滤索引状态
+     * @var array <p>过滤索引状态</p>
      */
     public $IndexStatusList;
 
     /**
-     * @var string 排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
+     * @var string <p>排序顺序，支持asc、desc，默认为desc 数据格式&quot;asc&quot;,&quot;desc&quot;</p>
      */
     public $Order;
 
     /**
-     * @param string $IndexType 索引类型。auto：自治索引；normal：普通索引
-     * @param string $InstanceId ES集群ID
-     * @param string $IndexName 索引名，若填空则获取所有索引
-     * @param string $Username 集群访问用户名
-     * @param string $Password 集群访问密码
-     * @param integer $Offset 分页起始位置
-     * @param integer $Limit 一页展示数量
-     * @param string $OrderBy 排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime
-     * @param array $IndexStatusList 过滤索引状态
-     * @param string $Order 排序顺序，支持asc、desc，默认为desc 数据格式"asc","desc"
+     * @var array <p>索引名称过滤列表。仅返回列表中指定的索引，常用于事件中心跳转时筛选受影响的索引；不填返回全部索引。单次最多支持100个索引名称。</p>
+     */
+    public $FilterIndexNames;
+
+    /**
+     * @param string $IndexType <p>索引类型。auto：自治索引；normal：普通索引</p>
+     * @param string $InstanceId <p>ES集群ID</p>
+     * @param string $IndexName <p>索引名，若填空则获取所有索引</p>
+     * @param string $Username <p>集群访问用户名</p>
+     * @param string $Password <p>集群访问密码</p>
+     * @param integer $Offset <p>分页起始位置</p>
+     * @param integer $Limit <p>一页展示数量</p>
+     * @param string $OrderBy <p>排序字段，支持索引名：IndexName、索引存储量：IndexStorage、索引创建时间：IndexCreateTime</p>
+     * @param array $IndexStatusList <p>过滤索引状态</p>
+     * @param string $Order <p>排序顺序，支持asc、desc，默认为desc 数据格式&quot;asc&quot;,&quot;desc&quot;</p>
+     * @param array $FilterIndexNames <p>索引名称过滤列表。仅返回列表中指定的索引，常用于事件中心跳转时筛选受影响的索引；不填返回全部索引。单次最多支持100个索引名称。</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeIndexListRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("FilterIndexNames",$param) and $param["FilterIndexNames"] !== null) {
+            $this->FilterIndexNames = $param["FilterIndexNames"];
         }
     }
 }

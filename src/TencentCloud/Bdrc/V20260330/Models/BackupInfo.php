@@ -100,9 +100,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudResourceId(string $CloudResourceId) 设置<p>云上资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProductType() 获取<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+ * @method string getProductType() 获取<p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProductType(string $ProductType) 设置<p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+ * @method void setProductType(string $ProductType) 设置<p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBackupCompletedSize() 获取<p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupCompletedSize(integer $BackupCompletedSize) 设置<p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupCompletedSizeFormatted() 获取<p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupCompletedSizeFormatted(string $BackupCompletedSizeFormatted) 设置<p>备份完成量</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupInfo extends AbstractModel
@@ -276,10 +284,22 @@ class BackupInfo extends AbstractModel
     public $CloudResourceId;
 
     /**
-     * @var string <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * @var string <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductType;
+
+    /**
+     * @var integer <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupCompletedSize;
+
+    /**
+     * @var string <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupCompletedSizeFormatted;
 
     /**
      * @param string $BackupId <p>备份点ID</p>
@@ -322,7 +342,11 @@ class BackupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudResourceId <p>云上资源ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * @param string $ProductType <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BackupCompletedSize <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupCompletedSizeFormatted <p>备份完成量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -468,6 +492,14 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
             $this->ProductType = $param["ProductType"];
+        }
+
+        if (array_key_exists("BackupCompletedSize",$param) and $param["BackupCompletedSize"] !== null) {
+            $this->BackupCompletedSize = $param["BackupCompletedSize"];
+        }
+
+        if (array_key_exists("BackupCompletedSizeFormatted",$param) and $param["BackupCompletedSizeFormatted"] !== null) {
+            $this->BackupCompletedSizeFormatted = $param["BackupCompletedSizeFormatted"];
         }
     }
 }

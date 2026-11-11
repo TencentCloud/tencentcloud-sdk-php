@@ -221,6 +221,7 @@ peakCurrentUsers：峰值同时在线人数。
  * @method Models\ModifyCloudModerationResponse ModifyCloudModeration(Models\ModifyCloudModerationRequest $req) 成功开启AI 内容理解任务后，可以使用此接口来更新订阅黑白名单。
  * @method Models\ModifyCloudRecordingResponse ModifyCloudRecording(Models\ModifyCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
  * @method Models\ModifyCloudSliceTaskResponse ModifyCloudSliceTask(Models\ModifyCloudSliceTaskRequest $req) 成功开启切片任务后，可以使用此接口来更新任务。用于更新指定订阅流白名单或者黑名单。
+ * @method Models\ModifyCloudTranscriptionResponse ModifyCloudTranscription(Models\ModifyCloudTranscriptionRequest $req) 成功开启转录后，可以使用此接口来更新转录任务。仅在转录任务进行时有效，转录退出后更新将会返回错误。
  * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\ModifyVoiceConversationResponse ModifyVoiceConversation(Models\ModifyVoiceConversationRequest $req) 成功开启对话后，可以使用此接口来修改对话任务配置。
  * @method Models\RegisterTRTCVoicePrintResponse RegisterTRTCVoicePrint(Models\RegisterTRTCVoicePrintRequest $req) 接口说明：

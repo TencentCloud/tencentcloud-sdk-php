@@ -43,6 +43,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateAuditKeywordsResponse CreateAuditKeywords(Models\CreateAuditKeywordsRequest $req) 创建关键词，并关联到关键词库。
  * @method Models\CreateAuditRuleResponse CreateAuditRule(Models\CreateAuditRuleRequest $req) 创建审核规则。
  * @method Models\CreateAuditTemplateResponse CreateAuditTemplate(Models\CreateAuditTemplateRequest $req) 创建单个审核模板。
+ * @method Models\CreateAvatarEditingLiveResponse CreateAvatarEditingLive(Models\CreateAvatarEditingLiveRequest $req) 调用该接口，用于创建数字人直播间。
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
  * @method Models\CreateCasterPgmResponse CreateCasterPgm(Models\CreateCasterPgmRequest $req) 该接口用来启动主监任务，并将获取主监画面的播放地址。
@@ -188,6 +189,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 获取审核规则列表。
  * @method Models\DescribeAuditTemplateResponse DescribeAuditTemplate(Models\DescribeAuditTemplateRequest $req) 获取单个审核模板。
  * @method Models\DescribeAuditTemplatesResponse DescribeAuditTemplates(Models\DescribeAuditTemplatesRequest $req) 返回当前用户的审核模板列表。
+ * @method Models\DescribeAvatarEditingLiveResponse DescribeAvatarEditingLive(Models\DescribeAvatarEditingLiveRequest $req) 调用该接口，查询数字人直播间信息列表。
  * @method Models\DescribeBackupStreamListResponse DescribeBackupStreamList(Models\DescribeBackupStreamListRequest $req) 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
 
 注意：
@@ -410,6 +412,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StartLiveAvatarRoomResponse StartLiveAvatarRoom(Models\StartLiveAvatarRoomRequest $req) 调用该接口，用于启动数字人（包括AIGC数字人）直播间。
  * @method Models\StartLivePadStreamResponse StartLivePadStream(Models\StartLivePadStreamRequest $req) 使用该接口将直播流开始切入垫片。
  * @method Models\StartLiveStreamMonitorResponse StartLiveStreamMonitor(Models\StartLiveStreamMonitorRequest $req) 该接口用来启动直播流监播任务。
+ * @method Models\StopAvatarEditingLiveResponse StopAvatarEditingLive(Models\StopAvatarEditingLiveRequest $req) 调用该接口，用于停止数字人直播间。
  * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
  * @method Models\StopCasterPvwResponse StopCasterPvw(Models\StopCasterPvwRequest $req) 该接口用来停止导播台的预监任务。
@@ -419,6 +422,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，中止运行中的录制任务并生成录制文件。任务被成功终止后，本次任务将不再启动。
  * @method Models\StopScreenshotTaskResponse StopScreenshotTask(Models\StopScreenshotTaskRequest $req) 提前结束截图，中止运行中的截图任务。任务被成功终止后，本次任务将不再启动。
+ * @method Models\SwitchAvatarEditingSceneResponse SwitchAvatarEditingScene(Models\SwitchAvatarEditingSceneRequest $req) 调用该接口，用于临时驱动数字人播报。
  * @method Models\SwitchBackupStreamResponse SwitchBackupStream(Models\SwitchBackupStreamRequest $req) 调用该接口实现切换当前播放所使用的主备流。
  * @method Models\SwitchCasterToEmergencyResponse SwitchCasterToEmergency(Models\SwitchCasterToEmergencyRequest $req) 该接口用来将导播台切换到备播状态。
 该接口使用时，主监任务需处于运行状态。

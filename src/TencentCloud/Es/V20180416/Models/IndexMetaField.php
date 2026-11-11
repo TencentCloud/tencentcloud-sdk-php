@@ -20,202 +20,266 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 索引元数据字段
  *
- * @method string getIndexType() 获取索引类型
+ * @method string getIndexType() 获取<p>索引类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexType(string $IndexType) 设置索引类型
+ * @method void setIndexType(string $IndexType) 设置<p>索引类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexName() 获取索引名
+ * @method string getIndexName() 获取<p>索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexName(string $IndexName) 设置索引名
+ * @method void setIndexName(string $IndexName) 设置<p>索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexMetaJson() 获取索引元数据JSON
+ * @method string getIndexMetaJson() 获取<p>索引元数据JSON</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexMetaJson(string $IndexMetaJson) 设置索引元数据JSON
+ * @method void setIndexMetaJson(string $IndexMetaJson) 设置<p>索引元数据JSON</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexStatus() 获取索引状态
+ * @method string getIndexStatus() 获取<p>索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexStatus(string $IndexStatus) 设置索引状态
+ * @method void setIndexStatus(string $IndexStatus) 设置<p>索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndexStorage() 获取索引存储大小，单位Byte
+ * @method integer getIndexStorage() 获取<p>索引存储大小，单位Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexStorage(integer $IndexStorage) 设置索引存储大小，单位Byte
+ * @method void setIndexStorage(integer $IndexStorage) 设置<p>索引存储大小，单位Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIndexCreateTime() 获取索引创建时间
+ * @method string getIndexCreateTime() 获取<p>索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexCreateTime(string $IndexCreateTime) 设置索引创建时间
+ * @method void setIndexCreateTime(string $IndexCreateTime) 设置<p>索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBackingIndices() 获取后备索引
+ * @method array getBackingIndices() 获取<p>后备索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackingIndices(array $BackingIndices) 设置后备索引
+ * @method void setBackingIndices(array $BackingIndices) 设置<p>后备索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterId() 获取索引所属集群ID
+ * @method string getClusterId() 获取<p>索引所属集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterId(string $ClusterId) 设置索引所属集群ID
+ * @method void setClusterId(string $ClusterId) 设置<p>索引所属集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterName() 获取索引所属集群名
+ * @method string getClusterName() 获取<p>索引所属集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterName(string $ClusterName) 设置索引所属集群名
+ * @method void setClusterName(string $ClusterName) 设置<p>索引所属集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterVersion() 获取索引所属集群版本
+ * @method string getClusterVersion() 获取<p>索引所属集群版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterVersion(string $ClusterVersion) 设置索引所属集群版本
+ * @method void setClusterVersion(string $ClusterVersion) 设置<p>索引所属集群版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IndexPolicyField getIndexPolicyField() 获取索引生命周期字段
+ * @method IndexPolicyField getIndexPolicyField() 获取<p>索引生命周期字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexPolicyField(IndexPolicyField $IndexPolicyField) 设置索引生命周期字段
+ * @method void setIndexPolicyField(IndexPolicyField $IndexPolicyField) 设置<p>索引生命周期字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IndexOptionsField getIndexOptionsField() 获取索引自治字段
+ * @method IndexOptionsField getIndexOptionsField() 获取<p>索引自治字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexOptionsField(IndexOptionsField $IndexOptionsField) 设置索引自治字段
+ * @method void setIndexOptionsField(IndexOptionsField $IndexOptionsField) 设置<p>索引自治字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IndexSettingsField getIndexSettingsField() 获取索引配置字段
+ * @method IndexSettingsField getIndexSettingsField() 获取<p>索引配置字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexSettingsField(IndexSettingsField $IndexSettingsField) 设置索引配置字段
+ * @method void setIndexSettingsField(IndexSettingsField $IndexSettingsField) 设置<p>索引配置字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIndexAliasesField() 获取索引别名字段
+ * @method array getIndexAliasesField() 获取<p>索引别名字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexAliasesField(array $IndexAliasesField) 设置索引别名字段
+ * @method void setIndexAliasesField(array $IndexAliasesField) 设置<p>索引别名字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取索引所属集群APP ID
+ * @method integer getAppId() 获取<p>索引所属集群APP ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置索引所属集群APP ID
+ * @method void setAppId(integer $AppId) 设置<p>索引所属集群APP ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIndexDocs() 获取索引文档数
+ * @method integer getIndexDocs() 获取<p>索引文档数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexDocs(integer $IndexDocs) 设置索引文档数
+ * @method void setIndexDocs(integer $IndexDocs) 设置<p>索引文档数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFieldCount() 获取<p>当前字段数</p>
+ * @method void setFieldCount(integer $FieldCount) 设置<p>当前字段数</p>
+ * @method integer getFieldLimit() 获取<p>当前上限</p>
+ * @method void setFieldLimit(integer $FieldLimit) 设置<p>当前上限</p>
+ * @method string getFieldUsageRatio() 获取<p>使用率</p>
+ * @method void setFieldUsageRatio(string $FieldUsageRatio) 设置<p>使用率</p>
+ * @method integer getOccupiedShards() 获取<p>占用分片数</p>
+ * @method void setOccupiedShards(integer $OccupiedShards) 设置<p>占用分片数</p>
+ * @method string getIndexOpenStatus() 获取<p>索引开启状态</p>
+ * @method void setIndexOpenStatus(string $IndexOpenStatus) 设置<p>索引开启状态</p>
+ * @method integer getFieldLimitHardCap() 获取<p>索引字段数硬上限</p>
+ * @method void setFieldLimitHardCap(integer $FieldLimitHardCap) 设置<p>索引字段数硬上限</p>
+ * @method integer getFieldLimitMin() 获取<p>上限可调整最小值</p>
+ * @method void setFieldLimitMin(integer $FieldLimitMin) 设置<p>上限可调整最小值</p>
+ * @method integer getFieldAutoAdjustRemaining() 获取<p>剩余调整次数</p>
+ * @method void setFieldAutoAdjustRemaining(integer $FieldAutoAdjustRemaining) 设置<p>剩余调整次数</p>
  */
 class IndexMetaField extends AbstractModel
 {
     /**
-     * @var string 索引类型
+     * @var string <p>索引类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexType;
 
     /**
-     * @var string 索引名
+     * @var string <p>索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexName;
 
     /**
-     * @var string 索引元数据JSON
+     * @var string <p>索引元数据JSON</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexMetaJson;
 
     /**
-     * @var string 索引状态
+     * @var string <p>索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexStatus;
 
     /**
-     * @var integer 索引存储大小，单位Byte
+     * @var integer <p>索引存储大小，单位Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexStorage;
 
     /**
-     * @var string 索引创建时间
+     * @var string <p>索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexCreateTime;
 
     /**
-     * @var array 后备索引
+     * @var array <p>后备索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackingIndices;
 
     /**
-     * @var string 索引所属集群ID
+     * @var string <p>索引所属集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
-     * @var string 索引所属集群名
+     * @var string <p>索引所属集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
-     * @var string 索引所属集群版本
+     * @var string <p>索引所属集群版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterVersion;
 
     /**
-     * @var IndexPolicyField 索引生命周期字段
+     * @var IndexPolicyField <p>索引生命周期字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexPolicyField;
 
     /**
-     * @var IndexOptionsField 索引自治字段
+     * @var IndexOptionsField <p>索引自治字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexOptionsField;
 
     /**
-     * @var IndexSettingsField 索引配置字段
+     * @var IndexSettingsField <p>索引配置字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexSettingsField;
 
     /**
-     * @var array 索引别名字段
+     * @var array <p>索引别名字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexAliasesField;
 
     /**
-     * @var integer 索引所属集群APP ID
+     * @var integer <p>索引所属集群APP ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
-     * @var integer 索引文档数
+     * @var integer <p>索引文档数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexDocs;
 
     /**
-     * @param string $IndexType 索引类型
+     * @var integer <p>当前字段数</p>
+     */
+    public $FieldCount;
+
+    /**
+     * @var integer <p>当前上限</p>
+     */
+    public $FieldLimit;
+
+    /**
+     * @var string <p>使用率</p>
+     */
+    public $FieldUsageRatio;
+
+    /**
+     * @var integer <p>占用分片数</p>
+     */
+    public $OccupiedShards;
+
+    /**
+     * @var string <p>索引开启状态</p>
+     */
+    public $IndexOpenStatus;
+
+    /**
+     * @var integer <p>索引字段数硬上限</p>
+     */
+    public $FieldLimitHardCap;
+
+    /**
+     * @var integer <p>上限可调整最小值</p>
+     */
+    public $FieldLimitMin;
+
+    /**
+     * @var integer <p>剩余调整次数</p>
+     */
+    public $FieldAutoAdjustRemaining;
+
+    /**
+     * @param string $IndexType <p>索引类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexName 索引名
+     * @param string $IndexName <p>索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexMetaJson 索引元数据JSON
+     * @param string $IndexMetaJson <p>索引元数据JSON</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexStatus 索引状态
+     * @param string $IndexStatus <p>索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IndexStorage 索引存储大小，单位Byte
+     * @param integer $IndexStorage <p>索引存储大小，单位Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IndexCreateTime 索引创建时间
+     * @param string $IndexCreateTime <p>索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BackingIndices 后备索引
+     * @param array $BackingIndices <p>后备索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterId 索引所属集群ID
+     * @param string $ClusterId <p>索引所属集群ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterName 索引所属集群名
+     * @param string $ClusterName <p>索引所属集群名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterVersion 索引所属集群版本
+     * @param string $ClusterVersion <p>索引所属集群版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexPolicyField $IndexPolicyField 索引生命周期字段
+     * @param IndexPolicyField $IndexPolicyField <p>索引生命周期字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexOptionsField $IndexOptionsField 索引自治字段
+     * @param IndexOptionsField $IndexOptionsField <p>索引自治字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexSettingsField $IndexSettingsField 索引配置字段
+     * @param IndexSettingsField $IndexSettingsField <p>索引配置字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $IndexAliasesField 索引别名字段
+     * @param array $IndexAliasesField <p>索引别名字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 索引所属集群APP ID
+     * @param integer $AppId <p>索引所属集群APP ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IndexDocs 索引文档数
+     * @param integer $IndexDocs <p>索引文档数</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FieldCount <p>当前字段数</p>
+     * @param integer $FieldLimit <p>当前上限</p>
+     * @param string $FieldUsageRatio <p>使用率</p>
+     * @param integer $OccupiedShards <p>占用分片数</p>
+     * @param string $IndexOpenStatus <p>索引开启状态</p>
+     * @param integer $FieldLimitHardCap <p>索引字段数硬上限</p>
+     * @param integer $FieldLimitMin <p>上限可调整最小值</p>
+     * @param integer $FieldAutoAdjustRemaining <p>剩余调整次数</p>
      */
     function __construct()
     {
@@ -300,6 +364,38 @@ class IndexMetaField extends AbstractModel
 
         if (array_key_exists("IndexDocs",$param) and $param["IndexDocs"] !== null) {
             $this->IndexDocs = $param["IndexDocs"];
+        }
+
+        if (array_key_exists("FieldCount",$param) and $param["FieldCount"] !== null) {
+            $this->FieldCount = $param["FieldCount"];
+        }
+
+        if (array_key_exists("FieldLimit",$param) and $param["FieldLimit"] !== null) {
+            $this->FieldLimit = $param["FieldLimit"];
+        }
+
+        if (array_key_exists("FieldUsageRatio",$param) and $param["FieldUsageRatio"] !== null) {
+            $this->FieldUsageRatio = $param["FieldUsageRatio"];
+        }
+
+        if (array_key_exists("OccupiedShards",$param) and $param["OccupiedShards"] !== null) {
+            $this->OccupiedShards = $param["OccupiedShards"];
+        }
+
+        if (array_key_exists("IndexOpenStatus",$param) and $param["IndexOpenStatus"] !== null) {
+            $this->IndexOpenStatus = $param["IndexOpenStatus"];
+        }
+
+        if (array_key_exists("FieldLimitHardCap",$param) and $param["FieldLimitHardCap"] !== null) {
+            $this->FieldLimitHardCap = $param["FieldLimitHardCap"];
+        }
+
+        if (array_key_exists("FieldLimitMin",$param) and $param["FieldLimitMin"] !== null) {
+            $this->FieldLimitMin = $param["FieldLimitMin"];
+        }
+
+        if (array_key_exists("FieldAutoAdjustRemaining",$param) and $param["FieldAutoAdjustRemaining"] !== null) {
+            $this->FieldAutoAdjustRemaining = $param["FieldAutoAdjustRemaining"];
         }
     }
 }

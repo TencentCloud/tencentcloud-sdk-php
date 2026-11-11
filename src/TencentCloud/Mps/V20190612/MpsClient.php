@@ -54,6 +54,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
 
 1. 对一个原视频和多个转码后的视频进行评分。
 2. 计算不同转码方式的 BD-Rate。
+ * @method Models\CreateModelChatTaskResponse CreateModelChatTask(Models\CreateModelChatTaskRequest $req) 提交异步多模态理解任务，返回 TaskId
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
  * @method Models\CreateProcessImageTemplateResponse CreateProcessImageTemplate(Models\CreateProcessImageTemplateRequest $req) 创建图片处理模板
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 剧集项目创建
@@ -169,6 +170,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
  * @method Models\DescribeMDPMPSUserInfoResponse DescribeMDPMPSUserInfo(Models\DescribeMDPMPSUserInfoRequest $req) 查询用户开通mps信息，是否开通/授权。
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
+ * @method Models\DescribeModelChatTaskResponse DescribeModelChatTask(Models\DescribeModelChatTaskRequest $req) 按 TaskId 查询多模态理解任务结果
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。
  * @method Models\DescribeProcessImageTemplatesResponse DescribeProcessImageTemplates(Models\DescribeProcessImageTemplatesRequest $req) 查询图片处理模板列表。
  * @method Models\DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(Models\DescribeQualityControlTemplatesRequest $req) 查询用户自定义媒体质检模板，支持根据条件，分页查询。

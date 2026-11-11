@@ -102,6 +102,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeSlowLogTopSqlsResponse DescribeSlowLogTopSqls(Models\DescribeSlowLogTopSqlsRequest $req) 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
  * @method Models\DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStats(Models\DescribeSlowLogUserHostStatsRequest $req) 获取慢日志来源地址统计分布图。
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) 获取指定时间内某个sql模板的慢日志明细
+ * @method Models\DescribeSqlExplainV2Response DescribeSqlExplainV2(Models\DescribeSqlExplainV2Request $req) 查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
  * @method Models\DescribeSqlFiltersResponse DescribeSqlFilters(Models\DescribeSqlFiltersRequest $req) 查询实例SQL限流任务列表。
  * @method Models\DescribeSqlTemplateResponse DescribeSqlTemplate(Models\DescribeSqlTemplateRequest $req) 查询SQL模板。
  * @method Models\DescribeTableSpaceDataV2Response DescribeTableSpaceDataV2(Models\DescribeTableSpaceDataV2Request $req) 表空间数据查询（融合接口，多产品统一入口）。按入参 TableSchema + TableName（PG 系额外需 TableCatalog）定位单张表/集合，返回该表的空间使用明细。支持产品：mysql（云数据库 MySQL）、cynosdb（TDSQL-C MySQL 版）、mongodb（云数据库 MongoDB）、postgres（云数据库 PostgreSQL）、sqlserver（SQL Server）、dcdb（TDSQL MySQL 版）、tdsql（TDSQL）、mariadb（云数据库 MariaDB）。返回值按产品隔离：MySQL 系列返回 MysqlTableSpaceData；PostgreSQL 返回 PostgresTableSpaceData；MongoDB 返回 MongodbTableSpaceData（含集合明细列表 SpaceSchemas 和外层 Timestamp）；SQL Server 返回 SqlServerTableSpaceData。注意：只读实例（CDB RO / RO 组 / CynosDB RO / TDSQL-C 集群 RO）不支持空间分析，调用将直接报错。

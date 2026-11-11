@@ -20,133 +20,145 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 点播文件视频流信息
  *
- * @method integer getBitrate() 获取视频流的码率，单位：bps。
- * @method void setBitrate(integer $Bitrate) 设置视频流的码率，单位：bps。
- * @method integer getHeight() 获取视频流的高度，单位：px。
- * @method void setHeight(integer $Height) 设置视频流的高度，单位：px。
- * @method integer getWidth() 获取视频流的宽度，单位：px。
- * @method void setWidth(integer $Width) 设置视频流的宽度，单位：px。
- * @method string getCodec() 获取视频流的编码格式，例如 h264。
- * @method void setCodec(string $Codec) 设置视频流的编码格式，例如 h264。
- * @method integer getFps() 获取帧率，单位：hz。
- * @method void setFps(integer $Fps) 设置帧率，单位：hz。
- * @method string getColorPrimaries() 获取色彩空间。
+ * @method integer getBitrate() 获取<p>视频流的码率，单位：bps。</p>
+ * @method void setBitrate(integer $Bitrate) 设置<p>视频流的码率，单位：bps。</p>
+ * @method integer getHeight() 获取<p>视频流的高度，单位：px。</p>
+ * @method void setHeight(integer $Height) 设置<p>视频流的高度，单位：px。</p>
+ * @method integer getWidth() 获取<p>视频流的宽度，单位：px。</p>
+ * @method void setWidth(integer $Width) 设置<p>视频流的宽度，单位：px。</p>
+ * @method string getCodec() 获取<p>视频流的编码格式，例如 h264。</p>
+ * @method void setCodec(string $Codec) 设置<p>视频流的编码格式，例如 h264。</p>
+ * @method integer getFps() 获取<p>帧率，单位：hz。</p>
+ * @method void setFps(integer $Fps) 设置<p>帧率，单位：hz。</p>
+ * @method string getColorPrimaries() 获取<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColorPrimaries(string $ColorPrimaries) 设置色彩空间。
+ * @method void setColorPrimaries(string $ColorPrimaries) 设置<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getColorSpace() 获取色彩空间。
+ * @method string getColorSpace() 获取<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColorSpace(string $ColorSpace) 设置色彩空间。
+ * @method void setColorSpace(string $ColorSpace) 设置<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getColorTransfer() 获取色彩空间。
+ * @method string getColorTransfer() 获取<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColorTransfer(string $ColorTransfer) 设置色彩空间。
+ * @method void setColorTransfer(string $ColorTransfer) 设置<p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHdrType() 获取HDR类型。
+ * @method string getHdrType() 获取<p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHdrType(string $HdrType) 设置HDR类型。
+ * @method void setHdrType(string $HdrType) 设置<p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCodecs() 获取视频Codecs。
+ * @method string getCodecs() 获取<p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodecs(string $Codecs) 设置视频Codecs。
+ * @method void setCodecs(string $Codecs) 设置<p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFpsNumerator() 获取帧率分子部分
+ * @method float getDuration() 获取<p>视频时长。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFpsNumerator(integer $FpsNumerator) 设置帧率分子部分
+ * @method void setDuration(float $Duration) 设置<p>视频时长。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFpsDenominator() 获取帧率分母部分
+ * @method integer getFpsNumerator() 获取<p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFpsDenominator(integer $FpsDenominator) 设置帧率分母部分
+ * @method void setFpsNumerator(integer $FpsNumerator) 设置<p>帧率分子部分</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFpsDenominator() 获取<p>帧率分母部分</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFpsDenominator(integer $FpsDenominator) 设置<p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaVideoStreamItem extends AbstractModel
 {
     /**
-     * @var integer 视频流的码率，单位：bps。
+     * @var integer <p>视频流的码率，单位：bps。</p>
      */
     public $Bitrate;
 
     /**
-     * @var integer 视频流的高度，单位：px。
+     * @var integer <p>视频流的高度，单位：px。</p>
      */
     public $Height;
 
     /**
-     * @var integer 视频流的宽度，单位：px。
+     * @var integer <p>视频流的宽度，单位：px。</p>
      */
     public $Width;
 
     /**
-     * @var string 视频流的编码格式，例如 h264。
+     * @var string <p>视频流的编码格式，例如 h264。</p>
      */
     public $Codec;
 
     /**
-     * @var integer 帧率，单位：hz。
+     * @var integer <p>帧率，单位：hz。</p>
      */
     public $Fps;
 
     /**
-     * @var string 色彩空间。
+     * @var string <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColorPrimaries;
 
     /**
-     * @var string 色彩空间。
+     * @var string <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColorSpace;
 
     /**
-     * @var string 色彩空间。
+     * @var string <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColorTransfer;
 
     /**
-     * @var string HDR类型。
+     * @var string <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HdrType;
 
     /**
-     * @var string 视频Codecs。
+     * @var string <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codecs;
 
     /**
-     * @var integer 帧率分子部分
+     * @var float <p>视频时长。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Duration;
+
+    /**
+     * @var integer <p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FpsNumerator;
 
     /**
-     * @var integer 帧率分母部分
+     * @var integer <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FpsDenominator;
 
     /**
-     * @param integer $Bitrate 视频流的码率，单位：bps。
-     * @param integer $Height 视频流的高度，单位：px。
-     * @param integer $Width 视频流的宽度，单位：px。
-     * @param string $Codec 视频流的编码格式，例如 h264。
-     * @param integer $Fps 帧率，单位：hz。
-     * @param string $ColorPrimaries 色彩空间。
+     * @param integer $Bitrate <p>视频流的码率，单位：bps。</p>
+     * @param integer $Height <p>视频流的高度，单位：px。</p>
+     * @param integer $Width <p>视频流的宽度，单位：px。</p>
+     * @param string $Codec <p>视频流的编码格式，例如 h264。</p>
+     * @param integer $Fps <p>帧率，单位：hz。</p>
+     * @param string $ColorPrimaries <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ColorSpace 色彩空间。
+     * @param string $ColorSpace <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ColorTransfer 色彩空间。
+     * @param string $ColorTransfer <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HdrType HDR类型。
+     * @param string $HdrType <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Codecs 视频Codecs。
+     * @param string $Codecs <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FpsNumerator 帧率分子部分
+     * @param float $Duration <p>视频时长。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FpsDenominator 帧率分母部分
+     * @param integer $FpsNumerator <p>帧率分子部分</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FpsDenominator <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +212,10 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("Codecs",$param) and $param["Codecs"] !== null) {
             $this->Codecs = $param["Codecs"];
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
 
         if (array_key_exists("FpsNumerator",$param) and $param["FpsNumerator"] !== null) {

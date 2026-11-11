@@ -20,173 +20,197 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份组详情
  *
- * @method string getBackupGroupId() 获取备份组ID。
- * @method void setBackupGroupId(string $BackupGroupId) 设置备份组ID。
- * @method integer getPercent() 获取备份组创建进度。
+ * @method string getBackupGroupId() 获取<p>备份组ID。</p>
+ * @method void setBackupGroupId(string $BackupGroupId) 设置<p>备份组ID。</p>
+ * @method integer getPercent() 获取<p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPercent(integer $Percent) 设置备份组创建进度。
+ * @method void setPercent(integer $Percent) 设置<p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBackupBindDisk() 获取备份和云盘绑定关系
+ * @method array getBackupBindDisk() 获取<p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupBindDisk(array $BackupBindDisk) 设置备份和云盘绑定关系
+ * @method void setBackupBindDisk(array $BackupBindDisk) 设置<p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBackupGroupName() 获取备份组名称。
- * @method void setBackupGroupName(string $BackupGroupName) 设置备份组名称。
- * @method string getBackupGroupState() 获取备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
- * @method void setBackupGroupState(string $BackupGroupState) 设置备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
- * @method string getModifyTime() 获取修改时间
- * @method void setModifyTime(string $ModifyTime) 设置修改时间
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method integer getAppId() 获取用户AppId。
- * @method void setAppId(integer $AppId) 设置用户AppId。
- * @method boolean getIsPermanent() 获取是否为永久备份组。
- * @method void setIsPermanent(boolean $IsPermanent) 设置是否为永久备份组。
- * @method string getDeadlineTime() 获取备份组的到期时间。如果为永久备份组，则取值为null。
+ * @method string getBackupGroupName() 获取<p>备份组名称。</p>
+ * @method void setBackupGroupName(string $BackupGroupName) 设置<p>备份组名称。</p>
+ * @method string getBackupGroupState() 获取<p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
+ * @method void setBackupGroupState(string $BackupGroupState) 设置<p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
+ * @method string getModifyTime() 获取<p>修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method integer getAppId() 获取<p>用户AppId。</p>
+ * @method void setAppId(integer $AppId) 设置<p>用户AppId。</p>
+ * @method boolean getIsPermanent() 获取<p>是否为永久备份组。</p>
+ * @method void setIsPermanent(boolean $IsPermanent) 设置<p>是否为永久备份组。</p>
+ * @method string getDeadlineTime() 获取<p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadlineTime(string $DeadlineTime) 设置备份组的到期时间。如果为永久备份组，则取值为null。
+ * @method void setDeadlineTime(string $DeadlineTime) 设置<p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取创建备份组的实例ID。
+ * @method string getInstanceId() 获取<p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置创建备份组的实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置<p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceDetails() 获取创建备份组时刻实例的详情。
+ * @method string getInstanceDetails() 获取<p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceDetails(string $InstanceDetails) 设置创建备份组时刻实例的详情。
+ * @method void setInstanceDetails(string $InstanceDetails) 设置<p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountName() 获取创建人名称。
+ * @method string getAccountName() 获取<p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountName(string $AccountName) 设置创建人名称。
+ * @method void setAccountName(string $AccountName) 设置<p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountUin() 获取主账号uin。
+ * @method string getAccountUin() 获取<p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountUin(string $AccountUin) 设置主账号uin。
+ * @method void setAccountUin(string $AccountUin) 设置<p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubAccountUin() 获取创建备份的子账号uin。
+ * @method string getSubAccountUin() 获取<p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubAccountUin(string $SubAccountUin) 设置创建备份的子账号uin。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAutoBackupPolicyId() 获取创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+ * @method string getAutoBackupPolicyId() 获取<p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoBackupPolicyId(string $AutoBackupPolicyId) 设置创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+ * @method void setAutoBackupPolicyId(string $AutoBackupPolicyId) 设置<p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取<p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置<p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndTime() 获取<p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(string $EndTime) 设置<p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupGroup extends AbstractModel
 {
     /**
-     * @var string 备份组ID。
+     * @var string <p>备份组ID。</p>
      */
     public $BackupGroupId;
 
     /**
-     * @var integer 备份组创建进度。
+     * @var integer <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
-     * @var array 备份和云盘绑定关系
+     * @var array <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupBindDisk;
 
     /**
-     * @var string 备份组名称。
+     * @var string <p>备份组名称。</p>
      */
     public $BackupGroupName;
 
     /**
-     * @var string 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
+     * @var string <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
      */
     public $BackupGroupState;
 
     /**
-     * @var string 修改时间
+     * @var string <p>修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var integer 用户AppId。
+     * @var integer <p>用户AppId。</p>
      */
     public $AppId;
 
     /**
-     * @var boolean 是否为永久备份组。
+     * @var boolean <p>是否为永久备份组。</p>
      */
     public $IsPermanent;
 
     /**
-     * @var string 备份组的到期时间。如果为永久备份组，则取值为null。
+     * @var string <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineTime;
 
     /**
-     * @var string 创建备份组的实例ID。
+     * @var string <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @var string 创建备份组时刻实例的详情。
+     * @var string <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceDetails;
 
     /**
-     * @var string 创建人名称。
+     * @var string <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
 
     /**
-     * @var string 主账号uin。
+     * @var string <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountUin;
 
     /**
-     * @var string 创建备份的子账号uin。
+     * @var string <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
-     * @var string 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * @var string <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoBackupPolicyId;
 
     /**
-     * @param string $BackupGroupId 备份组ID。
-     * @param integer $Percent 备份组创建进度。
+     * @var string <p>开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BackupBindDisk 备份和云盘绑定关系
+     */
+    public $StartTime;
+
+    /**
+     * @var string <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BackupGroupName 备份组名称。
-     * @param string $BackupGroupState 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
-     * @param string $ModifyTime 修改时间
-     * @param string $CreateTime 创建时间
-     * @param integer $AppId 用户AppId。
-     * @param boolean $IsPermanent 是否为永久备份组。
-     * @param string $DeadlineTime 备份组的到期时间。如果为永久备份组，则取值为null。
+     */
+    public $EndTime;
+
+    /**
+     * @param string $BackupGroupId <p>备份组ID。</p>
+     * @param integer $Percent <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 创建备份组的实例ID。
+     * @param array $BackupBindDisk <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceDetails 创建备份组时刻实例的详情。
+     * @param string $BackupGroupName <p>备份组名称。</p>
+     * @param string $BackupGroupState <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
+     * @param string $ModifyTime <p>修改时间</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param integer $AppId <p>用户AppId。</p>
+     * @param boolean $IsPermanent <p>是否为永久备份组。</p>
+     * @param string $DeadlineTime <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountName 创建人名称。
+     * @param string $InstanceId <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountUin 主账号uin。
+     * @param string $InstanceDetails <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubAccountUin 创建备份的子账号uin。
+     * @param string $AccountName <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AutoBackupPolicyId 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * @param string $AccountUin <p>主账号uin。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin <p>创建备份的子账号uin。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoBackupPolicyId <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndTime <p>结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -269,6 +293,14 @@ class BackupGroup extends AbstractModel
 
         if (array_key_exists("AutoBackupPolicyId",$param) and $param["AutoBackupPolicyId"] !== null) {
             $this->AutoBackupPolicyId = $param["AutoBackupPolicyId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

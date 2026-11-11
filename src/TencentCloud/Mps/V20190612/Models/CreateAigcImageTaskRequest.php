@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputImageCount(integer $OutputImageCount) 设置<p>指定图片输出张数。目前默认支持输出 1 张。</p>
  * @method AigcImageExtraParam getExtraParameters() 获取<p>用于传入模型要求的额外参数。</p>
  * @method void setExtraParameters(AigcImageExtraParam $ExtraParameters) 设置<p>用于传入模型要求的额外参数。</p>
- * @method string getAdditionalParameters() 获取<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
- * @method void setAdditionalParameters(string $AdditionalParameters) 设置<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
+ * @method string getAdditionalParameters() 获取<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li><li>Hunyuan 3.5-preivew, 支持多轮编辑，可通过携带previous_task_id的方式来继续编辑图片。</li></ol><p>示例： {"size":"1024x1024"}， {"previous_task_id":"4-AigcVideo-56349234"}。</p>
+ * @method void setAdditionalParameters(string $AdditionalParameters) 设置<p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li><li>Hunyuan 3.5-preivew, 支持多轮编辑，可通过携带previous_task_id的方式来继续编辑图片。</li></ol><p>示例： {"size":"1024x1024"}， {"previous_task_id":"4-AigcVideo-56349234"}。</p>
  * @method AigcStoreCosParam getStoreCosParam() 获取<p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
  * @method void setStoreCosParam(AigcStoreCosParam $StoreCosParam) 设置<p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
  * @method string getOperator() 获取<p>接口操作者名称。</p>
@@ -93,7 +93,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
     public $ExtraParameters;
 
     /**
-     * @var string <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
+     * @var string <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li><li>Hunyuan 3.5-preivew, 支持多轮编辑，可通过携带previous_task_id的方式来继续编辑图片。</li></ol><p>示例： {"size":"1024x1024"}， {"previous_task_id":"4-AigcVideo-56349234"}。</p>
      */
     public $AdditionalParameters;
 
@@ -117,7 +117,7 @@ class CreateAigcImageTaskRequest extends AbstractModel
      * @param array $ImageInfos <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>Kling 2.1，可支持最多 4 张图片输入作为资源图。</li><li>Kling 3.0-Omni，可支持最多 10 张图片输入作为资源图。</li><li>Kling O1，可支持最多 10 张图片输入作为资源图。</li><li>Vidu q2，可支持最多 7 张图片输入作为资源图。</li><li>Hunyuan 3.5-preview 可最多支持5张参数图，3.0 可支持最多 3 张图片输入作为资源图。</li><li>wand-vega-image 最多支持10张，每张大小不超过20M。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
      * @param integer $OutputImageCount <p>指定图片输出张数。目前默认支持输出 1 张。</p>
      * @param AigcImageExtraParam $ExtraParameters <p>用于传入模型要求的额外参数。</p>
-     * @param string $AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li></ol><p>示例： {"size":"1024x1024"}。</p>
+     * @param string $AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 </p><ol><li>Hunyuan 3.0，支持自由设置分辨率宽高，宽、高均在 [512, 2048] 像素范围内，宽高乘积 ≤ 1024x1024 像素。</li><li>Qwen 0925，支持自由设置分辨率宽高，合法总像素范围 [512x512=261632, 2048x2048=4194304]。</li><li>Hunyuan 3.5-preivew, 支持多轮编辑，可通过携带previous_task_id的方式来继续编辑图片。</li></ol><p>示例： {"size":"1024x1024"}， {"previous_task_id":"4-AigcVideo-56349234"}。</p>
      * @param AigcStoreCosParam $StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      * @param string $Operator <p>接口操作者名称。</p>
      */

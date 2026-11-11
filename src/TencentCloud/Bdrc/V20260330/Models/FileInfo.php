@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件信息
  *
- * @method string getPath() 获取文件名称
- * @method void setPath(string $Path) 设置文件名称
+ * @method string getPath() 获取完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
+ * @method void setPath(string $Path) 设置完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
  * @method integer getSize() 获取文件大小，单位是Bytes
  * @method void setSize(integer $Size) 设置文件大小，单位是Bytes
  * @method integer getModifyTime() 获取文件mtime
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class FileInfo extends AbstractModel
 {
     /**
-     * @var string 文件名称
+     * @var string 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
      */
     public $Path;
 
@@ -59,7 +59,7 @@ class FileInfo extends AbstractModel
     public $Type;
 
     /**
-     * @param string $Path 文件名称
+     * @param string $Path 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
      * @param integer $Size 文件大小，单位是Bytes
      * @param integer $ModifyTime 文件mtime
      * @param integer $ChangeTime 文件ctime

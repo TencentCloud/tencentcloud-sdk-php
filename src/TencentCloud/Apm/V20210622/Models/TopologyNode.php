@@ -20,238 +20,247 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 拓扑图边节点
  *
- * @method float getErrRate() 获取错误率
+ * @method float getErrRate() 获取<p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrRate(float $ErrRate) 设置错误率
+ * @method void setErrRate(float $ErrRate) 设置<p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKind() 获取节点类型
+ * @method string getKind() 获取<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKind(string $Kind) 设置节点类型
+ * @method void setKind(string $Kind) 设置<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取节点名
- * @method void setName(string $Name) 设置节点名
- * @method float getWeight() 获取节点权重
+ * @method string getName() 获取<p>节点名</p>
+ * @method void setName(string $Name) 设置<p>节点名</p>
+ * @method float getWeight() 获取<p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(float $Weight) 设置节点权重
+ * @method void setWeight(float $Weight) 设置<p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getColor() 获取节点颜色
+ * @method string getColor() 获取<p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColor(string $Color) 设置节点颜色
+ * @method void setColor(string $Color) 设置<p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getDuration() 获取响应时间
+ * @method float getDuration() 获取<p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDuration(float $Duration) 设置响应时间
+ * @method void setDuration(float $Duration) 设置<p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getQps() 获取吞吐量
+ * @method float getQps() 获取<p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQps(float $Qps) 设置吞吐量
+ * @method void setQps(float $Qps) 设置<p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取节点类型
+ * @method string getType() 获取<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置节点类型
+ * @method void setType(string $Type) 设置<p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getId() 获取节点ID
- * @method void setId(string $Id) 设置节点ID
- * @method string getSize() 获取节点大小
+ * @method string getId() 获取<p>节点ID</p>
+ * @method void setId(string $Id) 设置<p>节点ID</p>
+ * @method string getSize() 获取<p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSize(string $Size) 设置节点大小
+ * @method void setSize(string $Size) 设置<p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsModule() 获取节点是否为组件类型
+ * @method boolean getIsModule() 获取<p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsModule(boolean $IsModule) 设置节点是否为组件类型
+ * @method void setIsModule(boolean $IsModule) 设置<p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Position getPosition() 获取节点位置信息
+ * @method Position getPosition() 获取<p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPosition(Position $Position) 设置节点位置信息
+ * @method void setPosition(Position $Position) 设置<p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取节点标签
+ * @method array getTags() 获取<p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置节点标签
+ * @method void setTags(array $Tags) 设置<p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCanDrillDown() 获取节点是否可以下钻
+ * @method boolean getCanDrillDown() 获取<p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCanDrillDown(boolean $CanDrillDown) 设置节点是否可以下钻
+ * @method void setCanDrillDown(boolean $CanDrillDown) 设置<p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Resource getResource() 获取资源层信息
+ * @method Resource getResource() 获取<p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResource(Resource $Resource) 设置资源层信息
+ * @method void setResource(Resource $Resource) 设置<p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeView() 获取拓扑节点视图名字
- * @method void setNodeView(string $NodeView) 设置拓扑节点视图名字
- * @method float getConsumerDuration() 获取MQ 消费者视角的响应时间 ms
- * @method void setConsumerDuration(float $ConsumerDuration) 设置MQ 消费者视角的响应时间 ms
- * @method float getConsumerErrRate() 获取MQ 消费者视角的错误率 %
- * @method void setConsumerErrRate(float $ConsumerErrRate) 设置MQ 消费者视角的错误率 %
- * @method float getConsumerQps() 获取MQ 消费者视角的吞吐量
- * @method void setConsumerQps(float $ConsumerQps) 设置MQ 消费者视角的吞吐量
- * @method string getServiceId() 获取应用 ID
- * @method void setServiceId(string $ServiceId) 设置应用 ID
- * @method integer getReqCnt() 获取调用次数
- * @method void setReqCnt(integer $ReqCnt) 设置调用次数
- * @method integer getConsumerReqCnt() 获取消息队列消费者视角的调用次数
- * @method void setConsumerReqCnt(integer $ConsumerReqCnt) 设置消息队列消费者视角的调用次数
+ * @method string getNodeView() 获取<p>拓扑节点视图名字</p>
+ * @method void setNodeView(string $NodeView) 设置<p>拓扑节点视图名字</p>
+ * @method float getConsumerDuration() 获取<p>MQ 消费者视角的响应时间 ms</p>
+ * @method void setConsumerDuration(float $ConsumerDuration) 设置<p>MQ 消费者视角的响应时间 ms</p>
+ * @method float getConsumerErrRate() 获取<p>MQ 消费者视角的错误率 %</p>
+ * @method void setConsumerErrRate(float $ConsumerErrRate) 设置<p>MQ 消费者视角的错误率 %</p>
+ * @method float getConsumerQps() 获取<p>MQ 消费者视角的吞吐量</p>
+ * @method void setConsumerQps(float $ConsumerQps) 设置<p>MQ 消费者视角的吞吐量</p>
+ * @method string getServiceId() 获取<p>应用 ID</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>应用 ID</p>
+ * @method integer getReqCnt() 获取<p>调用次数</p>
+ * @method void setReqCnt(integer $ReqCnt) 设置<p>调用次数</p>
+ * @method integer getConsumerReqCnt() 获取<p>消息队列消费者视角的调用次数</p>
+ * @method void setConsumerReqCnt(integer $ConsumerReqCnt) 设置<p>消息队列消费者视角的调用次数</p>
+ * @method string getServiceID() 获取<p>应用 ID</p>
+ * @method void setServiceID(string $ServiceID) 设置<p>应用 ID</p>
  */
 class TopologyNode extends AbstractModel
 {
     /**
-     * @var float 错误率
+     * @var float <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrRate;
 
     /**
-     * @var string 节点类型
+     * @var string <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kind;
 
     /**
-     * @var string 节点名
+     * @var string <p>节点名</p>
      */
     public $Name;
 
     /**
-     * @var float 节点权重
+     * @var float <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var string 节点颜色
+     * @var string <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Color;
 
     /**
-     * @var float 响应时间
+     * @var float <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @var float 吞吐量
+     * @var float <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
 
     /**
-     * @var string 节点类型
+     * @var string <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 节点ID
+     * @var string <p>节点ID</p>
      */
     public $Id;
 
     /**
-     * @var string 节点大小
+     * @var string <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
-     * @var boolean 节点是否为组件类型
+     * @var boolean <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsModule;
 
     /**
-     * @var Position 节点位置信息
+     * @var Position <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
 
     /**
-     * @var array 节点标签
+     * @var array <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var boolean 节点是否可以下钻
+     * @var boolean <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanDrillDown;
 
     /**
-     * @var Resource 资源层信息
+     * @var Resource <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
-     * @var string 拓扑节点视图名字
+     * @var string <p>拓扑节点视图名字</p>
      */
     public $NodeView;
 
     /**
-     * @var float MQ 消费者视角的响应时间 ms
+     * @var float <p>MQ 消费者视角的响应时间 ms</p>
      */
     public $ConsumerDuration;
 
     /**
-     * @var float MQ 消费者视角的错误率 %
+     * @var float <p>MQ 消费者视角的错误率 %</p>
      */
     public $ConsumerErrRate;
 
     /**
-     * @var float MQ 消费者视角的吞吐量
+     * @var float <p>MQ 消费者视角的吞吐量</p>
      */
     public $ConsumerQps;
 
     /**
-     * @var string 应用 ID
+     * @var string <p>应用 ID</p>
+     * @deprecated
      */
     public $ServiceId;
 
     /**
-     * @var integer 调用次数
+     * @var integer <p>调用次数</p>
      */
     public $ReqCnt;
 
     /**
-     * @var integer 消息队列消费者视角的调用次数
+     * @var integer <p>消息队列消费者视角的调用次数</p>
      */
     public $ConsumerReqCnt;
 
     /**
-     * @param float $ErrRate 错误率
+     * @var string <p>应用 ID</p>
+     */
+    public $ServiceID;
+
+    /**
+     * @param float $ErrRate <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Kind 节点类型
+     * @param string $Kind <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 节点名
-     * @param float $Weight 节点权重
+     * @param string $Name <p>节点名</p>
+     * @param float $Weight <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Color 节点颜色
+     * @param string $Color <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Duration 响应时间
+     * @param float $Duration <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Qps 吞吐量
+     * @param float $Qps <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 节点类型
+     * @param string $Type <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Id 节点ID
-     * @param string $Size 节点大小
+     * @param string $Id <p>节点ID</p>
+     * @param string $Size <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsModule 节点是否为组件类型
+     * @param boolean $IsModule <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Position $Position 节点位置信息
+     * @param Position $Position <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 节点标签
+     * @param array $Tags <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CanDrillDown 节点是否可以下钻
+     * @param boolean $CanDrillDown <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource $Resource 资源层信息
+     * @param Resource $Resource <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeView 拓扑节点视图名字
-     * @param float $ConsumerDuration MQ 消费者视角的响应时间 ms
-     * @param float $ConsumerErrRate MQ 消费者视角的错误率 %
-     * @param float $ConsumerQps MQ 消费者视角的吞吐量
-     * @param string $ServiceId 应用 ID
-     * @param integer $ReqCnt 调用次数
-     * @param integer $ConsumerReqCnt 消息队列消费者视角的调用次数
+     * @param string $NodeView <p>拓扑节点视图名字</p>
+     * @param float $ConsumerDuration <p>MQ 消费者视角的响应时间 ms</p>
+     * @param float $ConsumerErrRate <p>MQ 消费者视角的错误率 %</p>
+     * @param float $ConsumerQps <p>MQ 消费者视角的吞吐量</p>
+     * @param string $ServiceId <p>应用 ID</p>
+     * @param integer $ReqCnt <p>调用次数</p>
+     * @param integer $ConsumerReqCnt <p>消息队列消费者视角的调用次数</p>
+     * @param string $ServiceID <p>应用 ID</p>
      */
     function __construct()
     {
@@ -359,6 +368,10 @@ class TopologyNode extends AbstractModel
 
         if (array_key_exists("ConsumerReqCnt",$param) and $param["ConsumerReqCnt"] !== null) {
             $this->ConsumerReqCnt = $param["ConsumerReqCnt"];
+        }
+
+        if (array_key_exists("ServiceID",$param) and $param["ServiceID"] !== null) {
+            $this->ServiceID = $param["ServiceID"];
         }
     }
 }

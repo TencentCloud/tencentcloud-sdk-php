@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * chc部署网络minos引导配置。
  *
- * @method string getMiniOsType() 获取minos类型。是使用腾讯云的minios，还是客户自己的minios。
- * @method void setMiniOsType(string $MiniOsType) 设置minos类型。是使用腾讯云的minios，还是客户自己的minios。
- * @method string getBootType() 获取服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
- * @method void setBootType(string $BootType) 设置服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
- * @method string getBootFile() 获取PXE使用的引导文件。默认为pxelinux.0。
- * @method void setBootFile(string $BootFile) 设置PXE使用的引导文件。默认为pxelinux.0。
- * @method string getNextServerAddress() 获取tftp服务器的ip地址。
- * @method void setNextServerAddress(string $NextServerAddress) 设置tftp服务器的ip地址。
+ * @method string getMiniOsType() 获取<p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
+ * @method void setMiniOsType(string $MiniOsType) 设置<p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
+ * @method string getBootType() 获取<p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
+ * @method void setBootType(string $BootType) 设置<p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
+ * @method string getBootFile() 获取<p>PXE使用的引导文件。默认为pxelinux.0。</p>
+ * @method void setBootFile(string $BootFile) 设置<p>PXE使用的引导文件。默认为pxelinux.0。</p>
+ * @method string getNextServerAddress() 获取<p>TFTP服务器的IP地址。</p>
+ * @method void setNextServerAddress(string $NextServerAddress) 设置<p>TFTP服务器的IP地址。</p>
  */
 class ChcDeployExtraConfig extends AbstractModel
 {
     /**
-     * @var string minos类型。是使用腾讯云的minios，还是客户自己的minios。
+     * @var string <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
      */
     public $MiniOsType;
 
     /**
-     * @var string 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+     * @var string <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
      */
     public $BootType;
 
     /**
-     * @var string PXE使用的引导文件。默认为pxelinux.0。
+     * @var string <p>PXE使用的引导文件。默认为pxelinux.0。</p>
      */
     public $BootFile;
 
     /**
-     * @var string tftp服务器的ip地址。
+     * @var string <p>TFTP服务器的IP地址。</p>
      */
     public $NextServerAddress;
 
     /**
-     * @param string $MiniOsType minos类型。是使用腾讯云的minios，还是客户自己的minios。
-     * @param string $BootType 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-     * @param string $BootFile PXE使用的引导文件。默认为pxelinux.0。
-     * @param string $NextServerAddress tftp服务器的ip地址。
+     * @param string $MiniOsType <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
+     * @param string $BootType <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
+     * @param string $BootFile <p>PXE使用的引导文件。默认为pxelinux.0。</p>
+     * @param string $NextServerAddress <p>TFTP服务器的IP地址。</p>
      */
     function __construct()
     {

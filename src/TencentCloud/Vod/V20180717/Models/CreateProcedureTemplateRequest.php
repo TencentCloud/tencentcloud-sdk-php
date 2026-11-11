@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置<p>模板描述信息，长度限制：256 个字符。</p>
  * @method MediaProcessTaskInput getMediaProcessTask() 获取<p>视频处理类型任务参数。</p>
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置<p>视频处理类型任务参数。</p>
- * @method AiContentReviewTaskInput getAiContentReviewTask() 获取<p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置<p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+ * @method AiContentReviewTaskInput getAiContentReviewTask() 获取<p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置<p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
  * @method AiAnalysisTaskInput getAiAnalysisTask() 获取<p>AI 内容分析类型任务参数。</p>
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置<p>AI 内容分析类型任务参数。</p>
  * @method array getAiRecognitionTaskSet() 获取<p>AI 内容识别类型任务参数。</p>
@@ -64,7 +64,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * @var AiContentReviewTaskInput <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public $AiContentReviewTask;
 
@@ -99,7 +99,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
      * @param integer $SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      * @param string $Comment <p>模板描述信息，长度限制：256 个字符。</p>
      * @param MediaProcessTaskInput $MediaProcessTask <p>视频处理类型任务参数。</p>
-     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * @param AiContentReviewTaskInput $AiContentReviewTask <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      * @param AiAnalysisTaskInput $AiAnalysisTask <p>AI 内容分析类型任务参数。</p>
      * @param array $AiRecognitionTaskSet <p>AI 内容识别类型任务参数。</p>
      * @param AiRecognitionTaskInput $AiRecognitionTask <p>该参数已不推荐使用，建议使用 AiRecognitionTaskSet。</p>

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackingIndexName(string $BackingIndexName) 设置<p>后备索引名</p>
  * @method string getIndexPhrase() 获取<p>索引生命阶段</p>
  * @method void setIndexPhrase(string $IndexPhrase) 设置<p>索引生命阶段</p>
+ * @method array getIndexNames() 获取<p>索引列表</p>
+ * @method void setIndexNames(array $IndexNames) 设置<p>索引列表</p>
  */
 class DeleteIndexRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DeleteIndexRequest extends AbstractModel
     public $IndexPhrase;
 
     /**
+     * @var array <p>索引列表</p>
+     */
+    public $IndexNames;
+
+    /**
      * @param string $InstanceId <p>ES集群ID</p>
      * @param string $IndexType <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
      * @param string $IndexName <p>删除的索引名</p>
@@ -80,6 +87,7 @@ class DeleteIndexRequest extends AbstractModel
      * @param string $Password <p>集群访问密码</p>
      * @param string $BackingIndexName <p>后备索引名</p>
      * @param string $IndexPhrase <p>索引生命阶段</p>
+     * @param array $IndexNames <p>索引列表</p>
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DeleteIndexRequest extends AbstractModel
 
         if (array_key_exists("IndexPhrase",$param) and $param["IndexPhrase"] !== null) {
             $this->IndexPhrase = $param["IndexPhrase"];
+        }
+
+        if (array_key_exists("IndexNames",$param) and $param["IndexNames"] !== null) {
+            $this->IndexNames = $param["IndexNames"];
         }
     }
 }

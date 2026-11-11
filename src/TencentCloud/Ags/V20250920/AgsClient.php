@@ -58,6 +58,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DescribeAPIKeyListResponse DescribeAPIKeyList(Models\DescribeAPIKeyListRequest $req) 获取API密钥列表，包含API密钥简略信息，包含名称、创建时间等。
  * @method Models\DescribeDeploymentResponse DescribeDeployment(Models\DescribeDeploymentRequest $req) 查询 Deployment 信息
  * @method Models\DescribeDeploymentListResponse DescribeDeploymentList(Models\DescribeDeploymentListRequest $req) 查询 Deployment 列表
+ * @method Models\DescribeEventCenterEventsResponse DescribeEventCenterEvents(Models\DescribeEventCenterEventsRequest $req) 本接口用于查询当前账号在指定地域的事件列表，支持按事件来源、资源对象、事件类型、事件级别及时间范围等条件筛选，并支持分页和时间排序。默认查询最近 1 小时的事件，支持查询最近 7 天内的事件。
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 查询事件列表。
 
 查询指定会话的事件流，支持按作者和起始时间筛选。

@@ -20,33 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CVM元数据
  *
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置<p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceID() 获取实例ID
+ * @method string getInstanceID() 获取<p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceID(string $InstanceID) 设置实例ID
+ * @method void setInstanceID(string $InstanceID) 设置<p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取<p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置<p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CVMMeta extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @var string 实例ID
+     * @var string <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $InstanceID;
 
     /**
-     * @param string $Region 地域
+     * @var string <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceID 实例ID
+     */
+    public $InstanceId;
+
+    /**
+     * @param string $Region <p>地域</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceID <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +81,10 @@ class CVMMeta extends AbstractModel
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

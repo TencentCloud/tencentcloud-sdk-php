@@ -20,46 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 索引配置字段
  *
- * @method string getNumberOfShards() 获取索引主分片数
+ * @method string getNumberOfShards() 获取<p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumberOfShards(string $NumberOfShards) 设置索引主分片数
+ * @method void setNumberOfShards(string $NumberOfShards) 设置<p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNumberOfReplicas() 获取索引副本分片数
+ * @method string getNumberOfReplicas() 获取<p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumberOfReplicas(string $NumberOfReplicas) 设置索引副本分片数
+ * @method void setNumberOfReplicas(string $NumberOfReplicas) 设置<p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRefreshInterval() 获取索引刷新频率
+ * @method string getRefreshInterval() 获取<p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRefreshInterval(string $RefreshInterval) 设置索引刷新频率
+ * @method void setRefreshInterval(string $RefreshInterval) 设置<p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDynamic() 获取<p>动态字段识别开关</p>
+ * @method void setDynamic(string $Dynamic) 设置<p>动态字段识别开关</p>
+ * @method string getTotalFieldsLimit() 获取<p>索引字段数上限</p>
+ * @method void setTotalFieldsLimit(string $TotalFieldsLimit) 设置<p>索引字段数上限</p>
  */
 class IndexSettingsField extends AbstractModel
 {
     /**
-     * @var string 索引主分片数
+     * @var string <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberOfShards;
 
     /**
-     * @var string 索引副本分片数
+     * @var string <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NumberOfReplicas;
 
     /**
-     * @var string 索引刷新频率
+     * @var string <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefreshInterval;
 
     /**
-     * @param string $NumberOfShards 索引主分片数
+     * @var string <p>动态字段识别开关</p>
+     */
+    public $Dynamic;
+
+    /**
+     * @var string <p>索引字段数上限</p>
+     */
+    public $TotalFieldsLimit;
+
+    /**
+     * @param string $NumberOfShards <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NumberOfReplicas 索引副本分片数
+     * @param string $NumberOfReplicas <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RefreshInterval 索引刷新频率
+     * @param string $RefreshInterval <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Dynamic <p>动态字段识别开关</p>
+     * @param string $TotalFieldsLimit <p>索引字段数上限</p>
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class IndexSettingsField extends AbstractModel
 
         if (array_key_exists("RefreshInterval",$param) and $param["RefreshInterval"] !== null) {
             $this->RefreshInterval = $param["RefreshInterval"];
+        }
+
+        if (array_key_exists("Dynamic",$param) and $param["Dynamic"] !== null) {
+            $this->Dynamic = $param["Dynamic"];
+        }
+
+        if (array_key_exists("TotalFieldsLimit",$param) and $param["TotalFieldsLimit"] !== null) {
+            $this->TotalFieldsLimit = $param["TotalFieldsLimit"];
         }
     }
 }

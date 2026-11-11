@@ -46,6 +46,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(Models\CreateAccessKeyCheckTaskRequest $req) 检测AK 异步任务
  * @method Models\CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(Models\CreateAccessKeySyncTaskRequest $req) 发起AK资产同步任务
  * @method Models\CreateAllAssetsExportJobResponse CreateAllAssetsExportJob(Models\CreateAllAssetsExportJobRequest $req) 创建全部资产导出任务
+ * @method Models\CreateAssetBaselineRiskExportJobResponse CreateAssetBaselineRiskExportJob(Models\CreateAssetBaselineRiskExportJobRequest $req) 创建资产基线风险导出任务
  * @method Models\CreateAssetComponentListExportJobResponse CreateAssetComponentListExportJob(Models\CreateAssetComponentListExportJobRequest $req) 创建镜像资产中组件列表导出任务
  * @method Models\CreateAssetComponentRelatedImageListExportJobResponse CreateAssetComponentRelatedImageListExportJob(Models\CreateAssetComponentRelatedImageListExportJobRequest $req) 创建镜像仓库组件关联镜像列表导出任务
  * @method Models\CreateAssetFilterViewResponse CreateAssetFilterView(Models\CreateAssetFilterViewRequest $req) 创建资产搜索视图
@@ -145,6 +146,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
 根据指定的AI 定时任务 ID 删除对应的定时任务。删除后不可恢复。
  * @method Models\DeleteAssetFilterViewResponse DeleteAssetFilterView(Models\DeleteAssetFilterViewRequest $req) 删除用户创建的指定资产搜索视图
  * @method Models\DeleteAssetTagResponse DeleteAssetTag(Models\DeleteAssetTagRequest $req) 删除资产标签
+ * @method Models\DeleteBaselineIgnorePolicyResponse DeleteBaselineIgnorePolicy(Models\DeleteBaselineIgnorePolicyRequest $req) 删除基线忽略策略
  * @method Models\DeleteBaselineSelfDefinedPolicyListResponse DeleteBaselineSelfDefinedPolicyList(Models\DeleteBaselineSelfDefinedPolicyListRequest $req) 批量删除自定义基线策略。仅支持删除 PolicyType=SELF 的策略；删除后历史风险记录保留，但不再产生新结果。
  * @method Models\DeleteCSIPMalwareScanTaskResponse DeleteCSIPMalwareScanTask(Models\DeleteCSIPMalwareScanTaskRequest $req) CSIP 手动扫描任务删除接口
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群
@@ -234,6 +236,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeAgentRunModeResponse DescribeAgentRunMode(Models\DescribeAgentRunModeRequest $req) 获取客户端运行模式和运行配置信息
  * @method Models\DescribeAgentRunPolicyResponse DescribeAgentRunPolicy(Models\DescribeAgentRunPolicyRequest $req) 查询客户端运行策略（策略组），从DescribeAgentRunMode拆分出的独立接口
  * @method Models\DescribeAlertListResponse DescribeAlertList(Models\DescribeAlertListRequest $req) 告警中心全量告警列表接口
+ * @method Models\DescribeAssetBaselineRiskListResponse DescribeAssetBaselineRiskList(Models\DescribeAssetBaselineRiskListRequest $req) 获取资产风险列表
  * @method Models\DescribeAssetComponentListResponse DescribeAssetComponentList(Models\DescribeAssetComponentListRequest $req) 查询资产中组件列表
  * @method Models\DescribeAssetComponentRelatedImageListResponse DescribeAssetComponentRelatedImageList(Models\DescribeAssetComponentRelatedImageListRequest $req) 查询镜像仓库组件关联的镜像列表
  * @method Models\DescribeAssetDetailResponse DescribeAssetDetail(Models\DescribeAssetDetailRequest $req) 资产详情信息
@@ -259,6 +262,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeBaselineCalculatingStatisticsPolicyIDListResponse DescribeBaselineCalculatingStatisticsPolicyIDList(Models\DescribeBaselineCalculatingStatisticsPolicyIDListRequest $req) 查询当前处于“统计计算中”状态的策略 ID 列表，用于前端轮询判断扫描结果统计是否就绪。
  * @method Models\DescribeBaselineCategoryItemListResponse DescribeBaselineCategoryItemList(Models\DescribeBaselineCategoryItemListRequest $req) 获取分类检测项列表
  * @method Models\DescribeBaselineFixRecordListResponse DescribeBaselineFixRecordList(Models\DescribeBaselineFixRecordListRequest $req) 获取基线风险修复历史记录列表，用于“修复记录”页展示已修复的检测项与对应资产。
+ * @method Models\DescribeBaselineIgnorePolicyListResponse DescribeBaselineIgnorePolicyList(Models\DescribeBaselineIgnorePolicyListRequest $req) 获取基线忽略策略列表
  * @method Models\DescribeBaselineItemRiskListResponse DescribeBaselineItemRiskList(Models\DescribeBaselineItemRiskListRequest $req) 获取检测项维度的风险记录列表。
  * @method Models\DescribeBaselineMainTaskItemListResponse DescribeBaselineMainTaskItemList(Models\DescribeBaselineMainTaskItemListRequest $req) 获取系统内置基线分类的检测项列表（父分类 → 子分类 → 内置检测项 ID 列表），用于策略编辑页选择基线检测项。
  * @method Models\DescribeBaselineMainTaskListResponse DescribeBaselineMainTaskList(Models\DescribeBaselineMainTaskListRequest $req) 获取扫描主任务列表，用于“任务记录”页展示一键扫描 / 周期扫描 / 分散扫描的历史记录及结果。
@@ -312,6 +316,7 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeClusterAssetListResponse DescribeClusterAssetList(Models\DescribeClusterAssetListRequest $req) 查询容器集群资产列表
  * @method Models\DescribeClusterAssetSyncTaskStatusResponse DescribeClusterAssetSyncTaskStatus(Models\DescribeClusterAssetSyncTaskStatusRequest $req) 查询集群资产同步任务状态
  * @method Models\DescribeClusterAssetsResponse DescribeClusterAssets(Models\DescribeClusterAssetsRequest $req) 集群列表
+ * @method Models\DescribeClusterBaselineRiskPolicyListResponse DescribeClusterBaselineRiskPolicyList(Models\DescribeClusterBaselineRiskPolicyListRequest $req) 获取集群风险策略列表
  * @method Models\DescribeClusterContainerAppListResponse DescribeClusterContainerAppList(Models\DescribeClusterContainerAppListRequest $req) 查询容器关联应用列表。通过容器ID获取关联的应用服务信息，支持分页。
  * @method Models\DescribeClusterContainerComponentListResponse DescribeClusterContainerComponentList(Models\DescribeClusterContainerComponentListRequest $req) 查询容器关联组件列表。通过容器ID获取关联的组件信息，支持分页。
  * @method Models\DescribeClusterContainerDetailResponse DescribeClusterContainerDetail(Models\DescribeClusterContainerDetailRequest $req) 查询集群容器详情。通过容器ID获取容器基本信息、镜像信息、挂载信息、网络信息以及关联节点信息。
@@ -374,6 +379,8 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeDspmAccessTopologyAccountsResponse DescribeDspmAccessTopologyAccounts(Models\DescribeDspmAccessTopologyAccountsRequest $req) 查询Dspm访问拓扑账号列表
  * @method Models\DescribeDspmAccessTopologyAssetsResponse DescribeDspmAccessTopologyAssets(Models\DescribeDspmAccessTopologyAssetsRequest $req) 查询Dspm访问拓扑资产列表
  * @method Models\DescribeDspmAccessTopologyIpsResponse DescribeDspmAccessTopologyIps(Models\DescribeDspmAccessTopologyIpsRequest $req) 查询Dspm访问拓扑ip列表
+ * @method Models\DescribeDspmAccessTopologySummaryResponse DescribeDspmAccessTopologySummary(Models\DescribeDspmAccessTopologySummaryRequest $req) 查询数据库访问拓扑（库级/表级）的概览卡片数据，包含来源IP数、访问账号数、被访问库数/表数、近7天与近30天访问次数。
+数据由后台预聚合产生，查询侧无聚合开销；出参 LastCalcTime 为数据最后计算时间，可据此判断数据新鲜度。
  * @method Models\DescribeDspmApplyHistoryResponse DescribeDspmApplyHistory(Models\DescribeDspmApplyHistoryRequest $req) 查询Dspm申请历史
  * @method Models\DescribeDspmApplyOrderListResponse DescribeDspmApplyOrderList(Models\DescribeDspmApplyOrderListRequest $req) 查询Dspm申请单列表
  * @method Models\DescribeDspmApproveHistoryResponse DescribeDspmApproveHistory(Models\DescribeDspmApproveHistoryRequest $req) 查询Dspm审批历史
@@ -464,7 +471,9 @@ use TencentCloud\Csip\V20221121\Models as Models;
  * @method Models\DescribeHostKBRiskListResponse DescribeHostKBRiskList(Models\DescribeHostKBRiskListRequest $req) 获取主机kb风险列表
  * @method Models\DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfo(Models\DescribeHostVulItemVPRInfoRequest $req) 获取主机漏洞VPR信息
  * @method Models\DescribeHostVulOverviewResponse DescribeHostVulOverview(Models\DescribeHostVulOverviewRequest $req) 获取主机漏洞概览
+ * @method Models\DescribeHostVulRiskEventListResponse DescribeHostVulRiskEventList(Models\DescribeHostVulRiskEventListRequest $req) 查询主机漏洞风险事件列表，按风险记录维度返回漏洞基础信息、实例信息、风险状态和最近扫描时间。
  * @method Models\DescribeHostVulRiskListResponse DescribeHostVulRiskList(Models\DescribeHostVulRiskListRequest $req) 获取主机漏洞风险列表
+ * @method Models\DescribeHostVulScanStatusResponse DescribeHostVulScanStatus(Models\DescribeHostVulScanStatusRequest $req) 查询主机漏洞扫描状态，用于判断是否扫描过漏洞、首次漏洞扫描是否失败，以及首次扫描完成后的可修复漏洞状态。
  * @method Models\DescribeIaCFileListResponse DescribeIaCFileList(Models\DescribeIaCFileListRequest $req) 获取IaC检测文件列表
  * @method Models\DescribeIaCFileOverviewResponse DescribeIaCFileOverview(Models\DescribeIaCFileOverviewRequest $req) 获取IaC检测文件概览
  * @method Models\DescribeIaCFileReportResponse DescribeIaCFileReport(Models\DescribeIaCFileReportRequest $req) 获取IaC检测文件报告
@@ -669,6 +678,7 @@ capi 层处理流程：
  * @method Models\ModifyAssetTagsResponse ModifyAssetTags(Models\ModifyAssetTagsRequest $req) 操作资产编辑标签
  * @method Models\ModifyAssetTagsByAssetInfoResponse ModifyAssetTagsByAssetInfo(Models\ModifyAssetTagsByAssetInfoRequest $req) 操作资产编辑标签
  * @method Models\ModifyBanModeResponse ModifyBanMode(Models\ModifyBanModeRequest $req) 修改爆破阻断模式
+ * @method Models\ModifyBaselineIgnorePolicyResponse ModifyBaselineIgnorePolicy(Models\ModifyBaselineIgnorePolicyRequest $req) 修改基线忽略策略
  * @method Models\ModifyBaselinePolicyResponse ModifyBaselinePolicy(Models\ModifyBaselinePolicyRequest $req) 新建或编辑一条基线策略。Policy.ID 为 0 视为新建，非 0 视为编辑；新建/编辑时 Name 必填，CheckAssetType 与 Type 需符合 CheckAssetType / PolicyType 枚举。
  * @method Models\ModifyBaselinePolicyEnableResponse ModifyBaselinePolicyEnable(Models\ModifyBaselinePolicyEnableRequest $req) 批量启用或停用基线策略。停用后的策略将不再参与扫描与统计。
  * @method Models\ModifyBaselineSyncConfResponse ModifyBaselineSyncConf(Models\ModifyBaselineSyncConfRequest $req) 更新当前账号（管理员）的基线同步配置。AutoSync=true 时 TargetAppidList 不可为空，且元素不可为 0。
@@ -680,6 +690,7 @@ capi 层处理流程：
  * @method Models\ModifyCSIPLicenseUnBindsResponse ModifyCSIPLicenseUnBinds(Models\ModifyCSIPLicenseUnBindsRequest $req) 手动解绑主机授权。同步执行，直接返回结果。仅解绑主机授权（category=0，含专业版/旗舰版）。单订单模式下appid即可定位订单，无需传ResourceId。RASP解绑请用ModifyCSIPRaspLicenseUnBinds。
  * @method Models\ModifyCSIPRaspLicenseBindsResponse ModifyCSIPRaspLicenseBinds(Models\ModifyCSIPRaspLicenseBindsRequest $req) 绑定 RASP / 旗舰版授权到指定订单。异步执行，返回TaskId供查询进度。LicenseType=rasp 绑 RASP，LicenseType=enterprise_hp 绑旗舰版主机授权；AssetType 区分主机/容器节点/EKS。
  * @method Models\ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBinds(Models\ModifyCSIPRaspLicenseUnBindsRequest $req) 手动解绑RASP授权。同步执行，直接返回结果。仅解绑RASP授权（category=1），无解绑次数限制。单订单模式下appid即可定位订单，无需传ResourceId。
+ * @method Models\ModifyClusterAuditLogStatusResponse ModifyClusterAuditLogStatus(Models\ModifyClusterAuditLogStatusRequest $req) 修改集群审计日志状态
  * @method Models\ModifyClusterDefendStatusResponse ModifyClusterDefendStatus(Models\ModifyClusterDefendStatusRequest $req) 修改集群防护状态
  * @method Models\ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatus(Models\ModifyCosAuditBucketMonitorStatusRequest $req) 修改存储桶监测状态
  * @method Models\ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccount(Models\ModifyCosAuditMonitorAccountRequest $req) 修改cos审计监测账号

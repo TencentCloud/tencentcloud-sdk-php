@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulID(integer $VulID) 设置<p>漏洞 ID（vul_vuls.id）</p>
  * @method array getMemberId() 获取<p>集团账号的成员id</p>
  * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
- * @method array getFilters() 获取<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
- * @method void setFilters(array $Filters) 设置<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+ * @method array getFilters() 获取<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
+ * @method void setFilters(array $Filters) 设置<p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
  */
 class DescribeVulRiskRelateComponentRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeVulRiskRelateComponentRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var array <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+     * @var array <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      */
     public $Filters;
 
     /**
      * @param integer $VulID <p>漏洞 ID（vul_vuls.id）</p>
      * @param array $MemberId <p>集团账号的成员id</p>
-     * @param array $Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+     * @param array $Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      */
     function __construct()
     {

@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDedicatedDBInstance请求参数结构体
  *
- * @method string getInstanceId() 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
- * @method void setInstanceId(string $InstanceId) 设置待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
- * @method integer getMemory() 获取内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
- * @method void setMemory(integer $Memory) 设置内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
- * @method integer getStorage() 获取存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
- * @method void setStorage(integer $Storage) 设置存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
- * @method integer getSwitchAutoRetry() 获取错过切换时间窗口时，是否自动重试一次，0-否，1-是
- * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) 设置错过切换时间窗口时，是否自动重试一次，0-否，1-是
- * @method string getSwitchStartTime() 获取切换时间窗口开始时间
- * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换时间窗口开始时间
- * @method string getSwitchEndTime() 获取切换时间窗口结束时间
- * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换时间窗口结束时间
+ * @method string getInstanceId() 获取<p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
+ * @method integer getMemory() 获取<p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
+ * @method integer getStorage() 获取<p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
+ * @method void setStorage(integer $Storage) 设置<p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
+ * @method integer getSwitchAutoRetry() 获取<p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
+ * @method void setSwitchAutoRetry(integer $SwitchAutoRetry) 设置<p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
+ * @method string getSwitchStartTime() 获取<p>切换时间窗口开始时间</p>
+ * @method void setSwitchStartTime(string $SwitchStartTime) 设置<p>切换时间窗口开始时间</p>
+ * @method string getSwitchEndTime() 获取<p>切换时间窗口结束时间</p>
+ * @method void setSwitchEndTime(string $SwitchEndTime) 设置<p>切换时间窗口结束时间</p>
+ * @method string getMasterHostId() 获取<p>主节点的机器id，类似svr-xxx</p>
+ * @method void setMasterHostId(string $MasterHostId) 设置<p>主节点的机器id，类似svr-xxx</p>
+ * @method array getSlaveHostIds() 获取<p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+ * @method void setSlaveHostIds(array $SlaveHostIds) 设置<p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
  */
 class UpgradeDedicatedDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
+     * @var string <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
+     * @var integer <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
      */
     public $Memory;
 
     /**
-     * @var integer 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * @var integer <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
      */
     public $Storage;
 
     /**
-     * @var integer 错过切换时间窗口时，是否自动重试一次，0-否，1-是
+     * @var integer <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
      */
     public $SwitchAutoRetry;
 
     /**
-     * @var string 切换时间窗口开始时间
+     * @var string <p>切换时间窗口开始时间</p>
      */
     public $SwitchStartTime;
 
     /**
-     * @var string 切换时间窗口结束时间
+     * @var string <p>切换时间窗口结束时间</p>
      */
     public $SwitchEndTime;
 
     /**
-     * @param string $InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
-     * @param integer $Memory 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
-     * @param integer $Storage 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
-     * @param integer $SwitchAutoRetry 错过切换时间窗口时，是否自动重试一次，0-否，1-是
-     * @param string $SwitchStartTime 切换时间窗口开始时间
-     * @param string $SwitchEndTime 切换时间窗口结束时间
+     * @var string <p>主节点的机器id，类似svr-xxx</p>
+     */
+    public $MasterHostId;
+
+    /**
+     * @var array <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+     */
+    public $SlaveHostIds;
+
+    /**
+     * @param string $InstanceId <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
+     * @param integer $Memory <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
+     * @param integer $Storage <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
+     * @param integer $SwitchAutoRetry <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
+     * @param string $SwitchStartTime <p>切换时间窗口开始时间</p>
+     * @param string $SwitchEndTime <p>切换时间窗口结束时间</p>
+     * @param string $MasterHostId <p>主节点的机器id，类似svr-xxx</p>
+     * @param array $SlaveHostIds <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
      */
     function __construct()
     {
@@ -116,6 +124,14 @@ class UpgradeDedicatedDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SwitchEndTime",$param) and $param["SwitchEndTime"] !== null) {
             $this->SwitchEndTime = $param["SwitchEndTime"];
+        }
+
+        if (array_key_exists("MasterHostId",$param) and $param["MasterHostId"] !== null) {
+            $this->MasterHostId = $param["MasterHostId"];
+        }
+
+        if (array_key_exists("SlaveHostIds",$param) and $param["SlaveHostIds"] !== null) {
+            $this->SlaveHostIds = $param["SlaveHostIds"];
         }
     }
 }

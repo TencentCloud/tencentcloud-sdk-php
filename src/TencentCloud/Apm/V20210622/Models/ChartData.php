@@ -34,6 +34,7 @@ class ChartData extends AbstractModel
 
     /**
      * @var array <p>接口参数列表</p>
+     * @deprecated
      */
     public $YAxis;
 

@@ -81,6 +81,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeLogInstanceListResponse DescribeLogInstanceList(Models\DescribeLogInstanceListRequest $req) 日志实例列表查询
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 查询日志
  * @method Models\DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(Models\DescribeMaintenanceWindowRequest $req) 本接口（DescribeMaintenanceWindow）用于查询实例维护时间窗。在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+ * @method Models\DescribeModulesResponse DescribeModules(Models\DescribeModulesRequest $req) 本接口（DescribeModules）用于查询实例的扩展模块信息，包括模块的支持状态（是否支持）、启用状态（是否已启用）等信息。
  * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) 本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 本接口（DescribeParamTemplates）用于查询参数模板列表。
  * @method Models\DescribeProductInfoResponse DescribeProductInfo(Models\DescribeProductInfoRequest $req) 本接口（DescribeProductInfo）用于查询全地域 Redis 的售卖规格。
@@ -128,9 +129,12 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(Models\ModifyInstanceReadOnlyRequest $req) 本接口（ModifyInstanceReadOnly）用于设置实例输入模式。
  * @method Models\ModifyLogResponse ModifyLog(Models\ModifyLogRequest $req) 修改日志
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
+ * @method Models\ModifyModuleResponse ModifyModule(Models\ModifyModuleRequest $req) 本接口（ModifyModule）用于修改实例扩展模块的启用状态。
  * @method Models\ModifyNetworkConfigResponse ModifyNetworkConfig(Models\ModifyNetworkConfigRequest $req) 本接口（ModifyNetworkConfig）用于修改实例网络配置。
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 本接口（ModifyParamTemplate）用于修改参数模板。
  * @method Models\ModifyReplicationGroupResponse ModifyReplicationGroup(Models\ModifyReplicationGroupRequest $req) 本接口（ModifyReplicationGroup）用于修改复制组信息。
+ * @method Models\ModifySSLEncryptionModeResponse ModifySSLEncryptionMode(Models\ModifySSLEncryptionModeRequest $req) 本接口（ModifySSLEncryptionMode）用于更改SSL加密模式
+ * @method Models\ModifyValkeyModuleResponse ModifyValkeyModule(Models\ModifyValkeyModuleRequest $req) 本接口（ModifyValkeyModule）用于修改Valkey实例扩展模块的启用状态。
  * @method Models\OpenLogResponse OpenLog(Models\OpenLogRequest $req) 开启日志
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 本接口（OpenSSL）用于开启 SSL 加密认证功能。
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) 本接口（ReleaseWanAddress）用于关闭外网访问。
@@ -143,6 +147,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\SwitchAccessNewInstanceResponse SwitchAccessNewInstance(Models\SwitchAccessNewInstanceRequest $req) 本接口（SwitchAccessNewInstance）针对处于时间窗口中待切换操作的实例，用户可主动发起该操作。
  * @method Models\SwitchInstanceVipResponse SwitchInstanceVip(Models\SwitchInstanceVipRequest $req) 在通过 DTS 支持跨可用区灾备的场景中，通过该接口（SwitchInstanceVip）交换实例 VIP 完成实例灾备切换。交换 VIP 后目标实例可写，源和目标实例VIP互换，同时源与目标实例间 DTS 同步任务断开。
  * @method Models\SwitchProxyResponse SwitchProxy(Models\SwitchProxyRequest $req) 本接口（SwitchProxy）为 Proxy 模拟故障接口。
+ * @method Models\UpdateSSLCertResponse UpdateSSLCert(Models\UpdateSSLCertRequest $req) 本接口（UpdateSSLCert）用于更新SSL密钥信息。
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 本接口（UpgradeInstance）用于变更实例的配置规格。
  * @method Models\UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersion(Models\UpgradeInstanceProductVersionRequest $req) 本接口（UpgradeInstanceProductVersion）用于升级实例类型，可从通用 I 型升级到通用 II 型。
  * @method Models\UpgradeInstanceVersionResponse UpgradeInstanceVersion(Models\UpgradeInstanceVersionRequest $req) 本接口（UpgradeInstanceVersion）用于将当前实例升级到更高版本，或者将当前标准架构升级至集群架构。

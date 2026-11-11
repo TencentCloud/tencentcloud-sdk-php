@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppId() 获取<p>用户appid</p>
+ * @method void setAppId(string $AppId) 设置<p>用户appid</p>
+ * @method string getCreateUin() 获取<p>主账号uin</p>
+ * @method void setCreateUin(string $CreateUin) 设置<p>主账号uin</p>
  */
 class ServiceDetail extends AbstractModel
 {
@@ -84,12 +88,14 @@ class ServiceDetail extends AbstractModel
     /**
      * @var integer <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AppID;
 
     /**
      * @var string <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $CreateUIN;
 
@@ -141,6 +147,16 @@ class ServiceDetail extends AbstractModel
     public $ResponseDurationWarningThreshold;
 
     /**
+     * @var string <p>用户appid</p>
+     */
+    public $AppId;
+
+    /**
+     * @var string <p>主账号uin</p>
+     */
+    public $CreateUin;
+
+    /**
      * @param string $ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceKey <p>业务系统ID</p>
@@ -164,6 +180,8 @@ class ServiceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppId <p>用户appid</p>
+     * @param string $CreateUin <p>主账号uin</p>
      */
     function __construct()
     {
@@ -229,6 +247,14 @@ class ServiceDetail extends AbstractModel
 
         if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
             $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("CreateUin",$param) and $param["CreateUin"] !== null) {
+            $this->CreateUin = $param["CreateUin"];
         }
     }
 }

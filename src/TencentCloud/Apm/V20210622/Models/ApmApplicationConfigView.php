@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置<p>响应时间预警阈值</p><p>单位：ms</p>
  * @method boolean getUseDefaultFuseConfig() 获取<p>是否使用探针默认熔断阈值</p>
  * @method void setUseDefaultFuseConfig(boolean $UseDefaultFuseConfig) 设置<p>是否使用探针默认熔断阈值</p>
+ * @method string getIsJNDIInjectionAnalysis() 获取<p>是否开启JNDI注入检测</p>
+ * @method void setIsJNDIInjectionAnalysis(string $IsJNDIInjectionAnalysis) 设置<p>是否开启JNDI注入检测</p>
+ * @method string getIsJNIInjectionAnalysis() 获取<p>是否开启JNI注入检测</p>
+ * @method void setIsJNIInjectionAnalysis(string $IsJNIInjectionAnalysis) 设置<p>是否开启JNI注入检测</p>
  */
 class ApmApplicationConfigView extends AbstractModel
 {
@@ -292,11 +296,13 @@ class ApmApplicationConfigView extends AbstractModel
 
     /**
      * @var integer <p>是否开启JNDI注入检测</p>
+     * @deprecated
      */
     public $IsJndiInjectionAnalysis;
 
     /**
      * @var integer <p>是否开启JNI注入检测</p>
+     * @deprecated
      */
     public $IsJniInjectionAnalysis;
 
@@ -381,6 +387,16 @@ class ApmApplicationConfigView extends AbstractModel
     public $UseDefaultFuseConfig;
 
     /**
+     * @var string <p>是否开启JNDI注入检测</p>
+     */
+    public $IsJNDIInjectionAnalysis;
+
+    /**
+     * @var string <p>是否开启JNI注入检测</p>
+     */
+    public $IsJNIInjectionAnalysis;
+
+    /**
      * @param string $InstanceKey <p>业务系统 ID</p>
      * @param string $ServiceName <p>应用名</p>
      * @param string $OperationNameFilter <p>接口过滤</p>
@@ -432,6 +448,8 @@ class ApmApplicationConfigView extends AbstractModel
      * @param integer $ErrRateThreshold <p>错误率阈值</p><p>单位：%</p>
      * @param integer $ResponseDurationWarningThreshold <p>响应时间预警阈值</p><p>单位：ms</p>
      * @param boolean $UseDefaultFuseConfig <p>是否使用探针默认熔断阈值</p>
+     * @param string $IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测</p>
+     * @param string $IsJNIInjectionAnalysis <p>是否开启JNI注入检测</p>
      */
     function __construct()
     {
@@ -659,6 +677,14 @@ class ApmApplicationConfigView extends AbstractModel
 
         if (array_key_exists("UseDefaultFuseConfig",$param) and $param["UseDefaultFuseConfig"] !== null) {
             $this->UseDefaultFuseConfig = $param["UseDefaultFuseConfig"];
+        }
+
+        if (array_key_exists("IsJNDIInjectionAnalysis",$param) and $param["IsJNDIInjectionAnalysis"] !== null) {
+            $this->IsJNDIInjectionAnalysis = $param["IsJNDIInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsJNIInjectionAnalysis",$param) and $param["IsJNIInjectionAnalysis"] !== null) {
+            $this->IsJNIInjectionAnalysis = $param["IsJNIInjectionAnalysis"];
         }
     }
 }

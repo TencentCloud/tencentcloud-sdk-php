@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIndexList返回参数结构体
  *
- * @method array getIndexMetaFields() 获取索引元数据字段
+ * @method array getIndexMetaFields() 获取<p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexMetaFields(array $IndexMetaFields) 设置索引元数据字段
+ * @method void setIndexMetaFields(array $IndexMetaFields) 设置<p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取查询总数
+ * @method integer getTotalCount() 获取<p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置查询总数
+ * @method void setTotalCount(integer $TotalCount) 设置<p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIndexListResponse extends AbstractModel
 {
     /**
-     * @var array 索引元数据字段
+     * @var array <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexMetaFields;
 
     /**
-     * @var integer 查询总数
+     * @var integer <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
@@ -51,9 +51,9 @@ class DescribeIndexListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $IndexMetaFields 索引元数据字段
+     * @param array $IndexMetaFields <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 查询总数
+     * @param integer $TotalCount <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

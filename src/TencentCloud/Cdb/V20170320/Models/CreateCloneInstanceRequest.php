@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置<p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
  * @method string getFourthZone() 获取<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
  * @method void setFourthZone(string $FourthZone) 设置<p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+ * @method integer getUseLatestMinorVersion() 获取<p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+ * @method void setUseLatestMinorVersion(integer $UseLatestMinorVersion) 设置<p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -228,6 +230,11 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $FourthZone;
 
     /**
+     * @var integer <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+     */
+    public $UseLatestMinorVersion;
+
+    /**
      * @param string $InstanceId <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
      * @param string $SpecifiedRollbackTime <p>如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。<br>说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。</p>
      * @param integer $SpecifiedBackupId <p>如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 <a href="/document/api/236/15842">查询数据备份文件列表</a>。</p><p>如果是克隆双节点、三节点、四节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。</p>
@@ -257,6 +264,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $MasterZone <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
      * @param string $Zone <p>新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。</p>
      * @param string $FourthZone <p>备库 3 的可用区信息，默认为空，购买四节点主实例时可指定该参数。</p>
+     * @param integer $UseLatestMinorVersion <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
      */
     function __construct()
     {
@@ -391,6 +399,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("FourthZone",$param) and $param["FourthZone"] !== null) {
             $this->FourthZone = $param["FourthZone"];
+        }
+
+        if (array_key_exists("UseLatestMinorVersion",$param) and $param["UseLatestMinorVersion"] !== null) {
+            $this->UseLatestMinorVersion = $param["UseLatestMinorVersion"];
         }
     }
 }

@@ -20,254 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 套餐信息
  *
- * @method string getPlanType() 获取套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
- * @method void setPlanType(string $PlanType) 设置套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
- * @method string getPlanId() 获取套餐 ID。形如 edgeone-2y041pblwaxe。
- * @method void setPlanId(string $PlanId) 设置套餐 ID。形如 edgeone-2y041pblwaxe。
- * @method string getArea() 获取服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
- * @method void setArea(string $Area) 设置服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
- * @method boolean getAutoRenewal() 获取自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
- * @method void setAutoRenewal(boolean $AutoRenewal) 设置自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
- * @method string getStatus() 获取套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
- * @method void setStatus(string $Status) 设置套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
- * @method integer getPayMode() 获取付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
- * @method void setPayMode(integer $PayMode) 设置付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
- * @method array getZonesInfo() 获取套餐绑定的站点信息，包括站点id和站点名称，站点状态。
- * @method void setZonesInfo(array $ZonesInfo) 设置套餐绑定的站点信息，包括站点id和站点名称，站点状态。
- * @method integer getSmartRequestCapacity() 获取套餐内智能加速请求数规格，单位：次。
- * @method void setSmartRequestCapacity(integer $SmartRequestCapacity) 设置套餐内智能加速请求数规格，单位：次。
- * @method integer getVAUCapacity() 获取套餐内VAU规格，单位：个。
- * @method void setVAUCapacity(integer $VAUCapacity) 设置套餐内VAU规格，单位：个。
- * @method integer getAccTrafficCapacity() 获取套餐内内容加速流量规格，单位：字节。
- * @method void setAccTrafficCapacity(integer $AccTrafficCapacity) 设置套餐内内容加速流量规格，单位：字节。
- * @method integer getSmartTrafficCapacity() 获取套餐内智能加速流量规格，单位：字节。
- * @method void setSmartTrafficCapacity(integer $SmartTrafficCapacity) 设置套餐内智能加速流量规格，单位：字节。
- * @method integer getDDoSTrafficCapacity() 获取套餐内DDoS防护流量规格，单位：字节。
- * @method void setDDoSTrafficCapacity(integer $DDoSTrafficCapacity) 设置套餐内DDoS防护流量规格，单位：字节。
- * @method integer getSecTrafficCapacity() 获取套餐内安全流量规格，单位：字节。
- * @method void setSecTrafficCapacity(integer $SecTrafficCapacity) 设置套餐内安全流量规格，单位：字节。
- * @method integer getSecRequestCapacity() 获取套餐内安全请求数规格，单位：次。
- * @method void setSecRequestCapacity(integer $SecRequestCapacity) 设置套餐内安全请求数规格，单位：次。
- * @method integer getL4TrafficCapacity() 获取套餐内四层加速流量规格，单位：字节。
- * @method void setL4TrafficCapacity(integer $L4TrafficCapacity) 设置套餐内四层加速流量规格，单位：字节。
- * @method integer getCrossMLCTrafficCapacity() 获取套餐内中国大陆网络优化流量规格，单位：字节。
- * @method void setCrossMLCTrafficCapacity(integer $CrossMLCTrafficCapacity) 设置套餐内中国大陆网络优化流量规格，单位：字节。
- * @method string getBindable() 获取套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
- * @method void setBindable(string $Bindable) 设置套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
- * @method string getEnabledTime() 获取套餐生效时间。
- * @method void setEnabledTime(string $EnabledTime) 设置套餐生效时间。
- * @method string getExpiredTime() 获取套餐过期时间。
- * @method void setExpiredTime(string $ExpiredTime) 设置套餐过期时间。
- * @method array getFeatures() 获取套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
- * @method void setFeatures(array $Features) 设置套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+ * @method string getPlanType() 获取<p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
+ * @method void setPlanType(string $PlanType) 设置<p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
+ * @method string getPlanId() 获取<p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
+ * @method void setPlanId(string $PlanId) 设置<p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
+ * @method string getArea() 获取<p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
+ * @method void setArea(string $Area) 设置<p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
+ * @method boolean getAutoRenewal() 获取<p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
+ * @method void setAutoRenewal(boolean $AutoRenewal) 设置<p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
+ * @method string getStatus() 获取<p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
+ * @method void setStatus(string $Status) 设置<p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
+ * @method integer getPayMode() 获取<p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
+ * @method void setPayMode(integer $PayMode) 设置<p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
+ * @method array getZonesInfo() 获取<p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
+ * @method void setZonesInfo(array $ZonesInfo) 设置<p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
+ * @method integer getSmartRequestCapacity() 获取<p>套餐内智能加速请求数规格，单位：次。</p>
+ * @method void setSmartRequestCapacity(integer $SmartRequestCapacity) 设置<p>套餐内智能加速请求数规格，单位：次。</p>
+ * @method integer getVAUCapacity() 获取<p>套餐内VAU规格，单位：个。</p>
+ * @method void setVAUCapacity(integer $VAUCapacity) 设置<p>套餐内VAU规格，单位：个。</p>
+ * @method integer getAccTrafficCapacity() 获取<p>套餐内内容加速流量规格，单位：字节。</p>
+ * @method void setAccTrafficCapacity(integer $AccTrafficCapacity) 设置<p>套餐内内容加速流量规格，单位：字节。</p>
+ * @method integer getClientAuthTrafficCapacity() 获取<p>套餐内客户端认证流量规格，单位：字节。</p>
+ * @method void setClientAuthTrafficCapacity(integer $ClientAuthTrafficCapacity) 设置<p>套餐内客户端认证流量规格，单位：字节。</p>
+ * @method integer getSmartTrafficCapacity() 获取<p>套餐内智能加速流量规格，单位：字节。</p>
+ * @method void setSmartTrafficCapacity(integer $SmartTrafficCapacity) 设置<p>套餐内智能加速流量规格，单位：字节。</p>
+ * @method integer getDDoSTrafficCapacity() 获取<p>套餐内DDoS防护流量规格，单位：字节。</p>
+ * @method void setDDoSTrafficCapacity(integer $DDoSTrafficCapacity) 设置<p>套餐内DDoS防护流量规格，单位：字节。</p>
+ * @method integer getSecTrafficCapacity() 获取<p>套餐内安全流量规格，单位：字节。</p>
+ * @method void setSecTrafficCapacity(integer $SecTrafficCapacity) 设置<p>套餐内安全流量规格，单位：字节。</p>
+ * @method integer getSecRequestCapacity() 获取<p>套餐内安全请求数规格，单位：次。</p>
+ * @method void setSecRequestCapacity(integer $SecRequestCapacity) 设置<p>套餐内安全请求数规格，单位：次。</p>
+ * @method integer getL4TrafficCapacity() 获取<p>套餐内四层加速流量规格，单位：字节。</p>
+ * @method void setL4TrafficCapacity(integer $L4TrafficCapacity) 设置<p>套餐内四层加速流量规格，单位：字节。</p>
+ * @method integer getCrossMLCTrafficCapacity() 获取<p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
+ * @method void setCrossMLCTrafficCapacity(integer $CrossMLCTrafficCapacity) 设置<p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
+ * @method string getBindable() 获取<p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
+ * @method void setBindable(string $Bindable) 设置<p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
+ * @method string getEnabledTime() 获取<p>套餐生效时间。</p>
+ * @method void setEnabledTime(string $EnabledTime) 设置<p>套餐生效时间。</p>
+ * @method string getExpiredTime() 获取<p>套餐过期时间。</p>
+ * @method void setExpiredTime(string $ExpiredTime) 设置<p>套餐过期时间。</p>
+ * @method array getFeatures() 获取<p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
+ * @method void setFeatures(array $Features) 设置<p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
  */
 class Plan extends AbstractModel
 {
     /**
-     * @var string 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
+     * @var string <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
      */
     public $PlanType;
 
     /**
-     * @var string 套餐 ID。形如 edgeone-2y041pblwaxe。
+     * @var string <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
      */
     public $PlanId;
 
     /**
-     * @var string 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
+     * @var string <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
      */
     public $Area;
 
     /**
-     * @var boolean 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
+     * @var boolean <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
      */
     public $AutoRenewal;
 
     /**
-     * @var string 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
+     * @var string <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
      */
     public $Status;
 
     /**
-     * @var integer 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
+     * @var integer <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
      */
     public $PayMode;
 
     /**
-     * @var array 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
+     * @var array <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
      */
     public $ZonesInfo;
 
     /**
-     * @var integer 套餐内智能加速请求数规格，单位：次。
+     * @var integer <p>套餐内智能加速请求数规格，单位：次。</p>
      */
     public $SmartRequestCapacity;
 
     /**
-     * @var integer 套餐内VAU规格，单位：个。
+     * @var integer <p>套餐内VAU规格，单位：个。</p>
      */
     public $VAUCapacity;
 
     /**
-     * @var integer 套餐内内容加速流量规格，单位：字节。
+     * @var integer <p>套餐内内容加速流量规格，单位：字节。</p>
      */
     public $AccTrafficCapacity;
 
     /**
-     * @var integer 套餐内智能加速流量规格，单位：字节。
+     * @var integer <p>套餐内客户端认证流量规格，单位：字节。</p>
+     */
+    public $ClientAuthTrafficCapacity;
+
+    /**
+     * @var integer <p>套餐内智能加速流量规格，单位：字节。</p>
      */
     public $SmartTrafficCapacity;
 
     /**
-     * @var integer 套餐内DDoS防护流量规格，单位：字节。
+     * @var integer <p>套餐内DDoS防护流量规格，单位：字节。</p>
      */
     public $DDoSTrafficCapacity;
 
     /**
-     * @var integer 套餐内安全流量规格，单位：字节。
+     * @var integer <p>套餐内安全流量规格，单位：字节。</p>
      */
     public $SecTrafficCapacity;
 
     /**
-     * @var integer 套餐内安全请求数规格，单位：次。
+     * @var integer <p>套餐内安全请求数规格，单位：次。</p>
      */
     public $SecRequestCapacity;
 
     /**
-     * @var integer 套餐内四层加速流量规格，单位：字节。
+     * @var integer <p>套餐内四层加速流量规格，单位：字节。</p>
      */
     public $L4TrafficCapacity;
 
     /**
-     * @var integer 套餐内中国大陆网络优化流量规格，单位：字节。
+     * @var integer <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
      */
     public $CrossMLCTrafficCapacity;
 
     /**
-     * @var string 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
+     * @var string <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
      */
     public $Bindable;
 
     /**
-     * @var string 套餐生效时间。
+     * @var string <p>套餐生效时间。</p>
      */
     public $EnabledTime;
 
     /**
-     * @var string 套餐过期时间。
+     * @var string <p>套餐过期时间。</p>
      */
     public $ExpiredTime;
 
     /**
-     * @var array 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+     * @var array <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
      */
     public $Features;
 
     /**
-     * @param string $PlanType 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
-     * @param string $PlanId 套餐 ID。形如 edgeone-2y041pblwaxe。
-     * @param string $Area 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
-     * @param boolean $AutoRenewal 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
-     * @param string $Status 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
-     * @param integer $PayMode 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
-     * @param array $ZonesInfo 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
-     * @param integer $SmartRequestCapacity 套餐内智能加速请求数规格，单位：次。
-     * @param integer $VAUCapacity 套餐内VAU规格，单位：个。
-     * @param integer $AccTrafficCapacity 套餐内内容加速流量规格，单位：字节。
-     * @param integer $SmartTrafficCapacity 套餐内智能加速流量规格，单位：字节。
-     * @param integer $DDoSTrafficCapacity 套餐内DDoS防护流量规格，单位：字节。
-     * @param integer $SecTrafficCapacity 套餐内安全流量规格，单位：字节。
-     * @param integer $SecRequestCapacity 套餐内安全请求数规格，单位：次。
-     * @param integer $L4TrafficCapacity 套餐内四层加速流量规格，单位：字节。
-     * @param integer $CrossMLCTrafficCapacity 套餐内中国大陆网络优化流量规格，单位：字节。
-     * @param string $Bindable 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
-     * @param string $EnabledTime 套餐生效时间。
-     * @param string $ExpiredTime 套餐过期时间。
-     * @param array $Features 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+     * @param string $PlanType <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
+     * @param string $PlanId <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
+     * @param string $Area <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
+     * @param boolean $AutoRenewal <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
+     * @param string $Status <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
+     * @param integer $PayMode <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
+     * @param array $ZonesInfo <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
+     * @param integer $SmartRequestCapacity <p>套餐内智能加速请求数规格，单位：次。</p>
+     * @param integer $VAUCapacity <p>套餐内VAU规格，单位：个。</p>
+     * @param integer $AccTrafficCapacity <p>套餐内内容加速流量规格，单位：字节。</p>
+     * @param integer $ClientAuthTrafficCapacity <p>套餐内客户端认证流量规格，单位：字节。</p>
+     * @param integer $SmartTrafficCapacity <p>套餐内智能加速流量规格，单位：字节。</p>
+     * @param integer $DDoSTrafficCapacity <p>套餐内DDoS防护流量规格，单位：字节。</p>
+     * @param integer $SecTrafficCapacity <p>套餐内安全流量规格，单位：字节。</p>
+     * @param integer $SecRequestCapacity <p>套餐内安全请求数规格，单位：次。</p>
+     * @param integer $L4TrafficCapacity <p>套餐内四层加速流量规格，单位：字节。</p>
+     * @param integer $CrossMLCTrafficCapacity <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
+     * @param string $Bindable <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
+     * @param string $EnabledTime <p>套餐生效时间。</p>
+     * @param string $ExpiredTime <p>套餐过期时间。</p>
+     * @param array $Features <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
      */
     function __construct()
     {
@@ -325,6 +249,10 @@ class Plan extends AbstractModel
 
         if (array_key_exists("AccTrafficCapacity",$param) and $param["AccTrafficCapacity"] !== null) {
             $this->AccTrafficCapacity = $param["AccTrafficCapacity"];
+        }
+
+        if (array_key_exists("ClientAuthTrafficCapacity",$param) and $param["ClientAuthTrafficCapacity"] !== null) {
+            $this->ClientAuthTrafficCapacity = $param["ClientAuthTrafficCapacity"];
         }
 
         if (array_key_exists("SmartTrafficCapacity",$param) and $param["SmartTrafficCapacity"] !== null) {

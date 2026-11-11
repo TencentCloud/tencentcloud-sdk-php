@@ -106,6 +106,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\GetModelResponse GetModel(Models\GetModelRequest $req) 获取模型详情
  * @method Models\GetModelVersionResponse GetModelVersion(Models\GetModelVersionRequest $req) 获取模型版本详情
  * @method Models\GetSchemaResponse GetSchema(Models\GetSchemaRequest $req) 查询schema详情
+ * @method Models\GetSessionStatusResponse GetSessionStatus(Models\GetSessionStatusRequest $req) 查询会话任务运行状态（支持批量）
  * @method Models\GetTableResponse GetTable(Models\GetTableRequest $req) 查询table详情
  * @method Models\GetTablesResponse GetTables(Models\GetTablesRequest $req) 批量获取表的元数据。使用场景：根据表的全名列表（catalogName.schemaName.tableName）批量获取表的详细元数据信息。前置条件：需要有对应workspace的读权限，仅返回当前workspace有权限的catalog下的表。权限校验：通过getAuthedCatalogNames获取有权限的catalogName进行过滤，不在权限范围内的表会被静默跳过。限制：FullNames最大支持20个表全名
  * @method Models\GetViewResponse GetView(Models\GetViewRequest $req) 查询view详情
@@ -141,6 +142,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\ListWorkspaceRolesResponse ListWorkspaceRoles(Models\ListWorkspaceRolesRequest $req) 查询工作空间角色列表
  * @method Models\ListWorkspaceUsersResponse ListWorkspaceUsers(Models\ListWorkspaceUsersRequest $req) 查询工作空间用户列表
  * @method Models\ListWorkspacesResponse ListWorkspaces(Models\ListWorkspacesRequest $req) 查询工作空间列表，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\ReadProductJsonResponse ReadProductJson(Models\ReadProductJsonRequest $req) databuddy 产物获取接口
  * @method Models\RemoveConsoleUsersResponse RemoveConsoleUsers(Models\RemoveConsoleUsersRequest $req) <p>批量移除控制台用户（单次最多10个；前置校验任一不满足整体拒绝；执行阶段单个失败不中断后续删除，成败以 SuccessUins/FailItems 为准），该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。</p>
  * @method Models\RemoveWorkspaceGroupsResponse RemoveWorkspaceGroups(Models\RemoveWorkspaceGroupsRequest $req) 移除工作空间用户组
  * @method Models\RemoveWorkspaceUsersResponse RemoveWorkspaceUsers(Models\RemoveWorkspaceUsersRequest $req) <p>批量移除工作空间用户（单次最多10个；单个 UIN 失败不影响其他 UIN 移除，成败以 SuccessUins/FailItems 为准）</p>

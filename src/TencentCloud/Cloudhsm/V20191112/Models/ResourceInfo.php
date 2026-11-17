@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置<p>集群id</p>
  * @method integer getClusterRole() 获取<p>集群角色，0-未加入集群 1-主 2-从</p>
  * @method void setClusterRole(integer $ClusterRole) 设置<p>集群角色，0-未加入集群 1-主 2-从</p>
+ * @method string getSyncStatus() 获取<p>同步状态</p>
+ * @method void setSyncStatus(string $SyncStatus) 设置<p>同步状态</p>
  */
 class ResourceInfo extends AbstractModel
 {
@@ -227,6 +229,11 @@ class ResourceInfo extends AbstractModel
     public $ClusterRole;
 
     /**
+     * @var string <p>同步状态</p>
+     */
+    public $SyncStatus;
+
+    /**
      * @param string $ResourceId <p>资源Id</p>
      * @param string $ResourceName <p>资源名称</p>
      * @param integer $Status <p>资源状态，1-正常，2-隔离，3-销毁</p>
@@ -256,6 +263,7 @@ class ResourceInfo extends AbstractModel
      * @param string $Version <p>vsm版本号</p>
      * @param string $ClusterId <p>集群id</p>
      * @param integer $ClusterRole <p>集群角色，0-未加入集群 1-主 2-从</p>
+     * @param string $SyncStatus <p>同步状态</p>
      */
     function __construct()
     {
@@ -394,6 +402,10 @@ class ResourceInfo extends AbstractModel
 
         if (array_key_exists("ClusterRole",$param) and $param["ClusterRole"] !== null) {
             $this->ClusterRole = $param["ClusterRole"];
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
         }
     }
 }

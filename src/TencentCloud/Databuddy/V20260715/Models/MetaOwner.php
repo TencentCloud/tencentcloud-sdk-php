@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogSource(string $CatalogSource) 设置数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConnectionId() 获取数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetaOwner extends AbstractModel
 {
@@ -74,6 +78,12 @@ class MetaOwner extends AbstractModel
     public $CatalogSource;
 
     /**
+     * @var string 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectionId;
+
+    /**
      * @param string $FullName 元数据名称（全名）:catalog.schema.table
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerType 所有者类型:User
@@ -83,6 +93,8 @@ class MetaOwner extends AbstractModel
      * @param string $OwnerName 所有者名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CatalogSource 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConnectionId 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class MetaOwner extends AbstractModel
 
         if (array_key_exists("CatalogSource",$param) and $param["CatalogSource"] !== null) {
             $this->CatalogSource = $param["CatalogSource"];
+        }
+
+        if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
+            $this->ConnectionId = $param["ConnectionId"];
         }
     }
 }

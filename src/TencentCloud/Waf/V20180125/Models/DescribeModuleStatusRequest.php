@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModuleStatus请求参数结构体
  *
- * @method string getDomain() 获取要查询状态的域名
- * @method void setDomain(string $Domain) 设置要查询状态的域名
+ * @method string getDomain() 获取<p>要查询状态的域名</p>
+ * @method void setDomain(string $Domain) 设置<p>要查询状态的域名</p>
  */
 class DescribeModuleStatusRequest extends AbstractModel
 {
     /**
-     * @var string 要查询状态的域名
+     * @var string <p>要查询状态的域名</p>
      */
     public $Domain;
 
     /**
-     * @param string $Domain 要查询状态的域名
+     * @param string $Domain <p>要查询状态的域名</p>
      */
     function __construct()
     {

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegexPriority(integer $RegexPriority) 设置<p>增加优先级</p>
  * @method array getQueryStringParameters() 获取<p>querysring参数</p>
  * @method void setQueryStringParameters(array $QueryStringParameters) 设置<p>querysring参数</p>
+ * @method integer getTimeout() 获取<p>路由级超时时间，单位ms</p>
+ * @method void setTimeout(integer $Timeout) 设置<p>路由级超时时间，单位ms</p>
  */
 class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
 {
@@ -151,6 +153,11 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
     public $QueryStringParameters;
 
     /**
+     * @var integer <p>路由级超时时间，单位ms</p>
+     */
+    public $Timeout;
+
+    /**
      * @param string $GatewayId <p>网关ID</p>
      * @param string $ServiceID <p>所属服务的ID</p>
      * @param string $RouteID <p>路由的ID，实例级别唯一</p>
@@ -169,6 +176,7 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
      * @param boolean $ResponseBuffering <p>是否缓存响应body，默认true</p>
      * @param integer $RegexPriority <p>增加优先级</p>
      * @param array $QueryStringParameters <p>querysring参数</p>
+     * @param integer $Timeout <p>路由级超时时间，单位ms</p>
      */
     function __construct()
     {
@@ -263,6 +271,10 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->QueryStringParameters, $obj);
             }
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

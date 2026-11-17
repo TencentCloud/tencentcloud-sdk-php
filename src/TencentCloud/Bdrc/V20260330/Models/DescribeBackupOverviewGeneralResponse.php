@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCFSAgentBackupOverview(FileBackupOverview $CFSAgentBackupOverview) 设置<p>CFS文件备份概览数据</p>
  * @method FileBackupOverview getCOSAgentBackupOverview() 获取<p>COS备份概览数据</p>
  * @method void setCOSAgentBackupOverview(FileBackupOverview $COSAgentBackupOverview) 设置<p>COS备份概览数据</p>
+ * @method FileBackupOverview getLocalCVMAgentBackupOverview() 获取<p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalCVMAgentBackupOverview(FileBackupOverview $LocalCVMAgentBackupOverview) 设置<p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileBackupOverview getLocalCFSAgentBackupOverview() 获取<p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalCFSAgentBackupOverview(FileBackupOverview $LocalCFSAgentBackupOverview) 设置<p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +83,18 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
     public $COSAgentBackupOverview;
 
     /**
+     * @var FileBackupOverview <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalCVMAgentBackupOverview;
+
+    /**
+     * @var FileBackupOverview <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalCFSAgentBackupOverview;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +107,10 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
      * @param ProtectedResourceOverview $ProtectedResourceOverview <p>受保护资源概览</p>
      * @param FileBackupOverview $CFSAgentBackupOverview <p>CFS文件备份概览数据</p>
      * @param FileBackupOverview $COSAgentBackupOverview <p>COS备份概览数据</p>
+     * @param FileBackupOverview $LocalCVMAgentBackupOverview <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileBackupOverview $LocalCFSAgentBackupOverview <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -135,6 +159,16 @@ class DescribeBackupOverviewGeneralResponse extends AbstractModel
         if (array_key_exists("COSAgentBackupOverview",$param) and $param["COSAgentBackupOverview"] !== null) {
             $this->COSAgentBackupOverview = new FileBackupOverview();
             $this->COSAgentBackupOverview->deserialize($param["COSAgentBackupOverview"]);
+        }
+
+        if (array_key_exists("LocalCVMAgentBackupOverview",$param) and $param["LocalCVMAgentBackupOverview"] !== null) {
+            $this->LocalCVMAgentBackupOverview = new FileBackupOverview();
+            $this->LocalCVMAgentBackupOverview->deserialize($param["LocalCVMAgentBackupOverview"]);
+        }
+
+        if (array_key_exists("LocalCFSAgentBackupOverview",$param) and $param["LocalCFSAgentBackupOverview"] !== null) {
+            $this->LocalCFSAgentBackupOverview = new FileBackupOverview();
+            $this->LocalCFSAgentBackupOverview->deserialize($param["LocalCFSAgentBackupOverview"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

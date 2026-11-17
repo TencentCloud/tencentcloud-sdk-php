@@ -93,6 +93,9 @@ use TencentCloud\Tokenhub\V20260322\Models as Models;
  * @method Models\DescribeTokenPlanListResponse DescribeTokenPlanList(Models\DescribeTokenPlanListRequest $req) 查询 TokenPlan 套餐列表。
 
 支持分页、过滤和排序。主账号可查看全部，子账号仅可查看自己创建的。返回结果包含每个套餐关联的额度中心主额度包详情。
+ * @method Models\DescribeTokenPlanPersonalPackageResponse DescribeTokenPlanPersonalPackage(Models\DescribeTokenPlanPersonalPackageRequest $req) 查询个人版套餐详情。
+
+查询指定产品类型的个人版 Token Plan 套餐状态、额度及续费信息。
  * @method Models\DescribeUsageRankListResponse DescribeUsageRankList(Models\DescribeUsageRankListRequest $req) 查询用量排行列表。
 
 指标族（MetricType）

@@ -28,17 +28,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecord(CloudRecord $Record) 设置<p>新建的 Record 详情。</p>
  * @method CloudRecordVersion getVersion() 获取<p>本次创建的 Revision 1 Version 详情。</p>
  * @method void setVersion(CloudRecordVersion $Version) 设置<p>本次创建的 Revision 1 Version 详情。</p>
- * @method string getUploadURL() 获取<p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+ * @method string getUploadURL() 获取<p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUploadURL(string $UploadURL) 设置<p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+ * @method void setUploadURL(string $UploadURL) 设置<p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取<p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+ * @method string getExpireTime() 获取<p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置<p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContentStatus() 获取<p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+ * @method string getContentStatus() 获取<p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContentStatus(string $ContentStatus) 设置<p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+ * @method void setContentStatus(string $ContentStatus) 设置<p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -62,19 +62,19 @@ class CreateRegistryRecordResponse extends AbstractModel
     public $Version;
 
     /**
-     * @var string <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * @var string <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadURL;
 
     /**
-     * @var string <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * @var string <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var string <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * @var string <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContentStatus;
@@ -89,11 +89,11 @@ class CreateRegistryRecordResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudRecord $Record <p>新建的 Record 详情。</p>
      * @param CloudRecordVersion $Version <p>本次创建的 Revision 1 Version 详情。</p>
-     * @param string $UploadURL <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * @param string $UploadURL <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * @param string $ExpireTime <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContentStatus <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * @param string $ContentStatus <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

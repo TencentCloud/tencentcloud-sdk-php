@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegistryRecord请求参数结构体
  *
- * @method string getRegistryId() 获取<p>父 Registry ID。</p>
- * @method void setRegistryId(string $RegistryId) 设置<p>父 Registry ID。</p>
+ * @method string getRegistryId() 获取<p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
+ * @method void setRegistryId(string $RegistryId) 设置<p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
  * @method string getRecordId() 获取<p>Record ID。</p>
  * @method void setRecordId(string $RecordId) 设置<p>Record ID。</p>
  * @method string getVersionId() 获取<p>Version ID，与 Label 互斥。指定时返回该 Version；均省略时等价于 Label=stable。</p>
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRegistryRecordRequest extends AbstractModel
 {
     /**
-     * @var string <p>父 Registry ID。</p>
+     * @var string <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
      */
     public $RegistryId;
 
@@ -52,7 +52,7 @@ class DescribeRegistryRecordRequest extends AbstractModel
     public $Label;
 
     /**
-     * @param string $RegistryId <p>父 Registry ID。</p>
+     * @param string $RegistryId <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
      * @param string $RecordId <p>Record ID。</p>
      * @param string $VersionId <p>Version ID，与 Label 互斥。指定时返回该 Version；均省略时等价于 Label=stable。</p>
      * @param string $Label <p>Label 名称，与 VersionId 互斥。指定时返回 Label 当前指向的 Version；均省略时等价于 stable。</p>

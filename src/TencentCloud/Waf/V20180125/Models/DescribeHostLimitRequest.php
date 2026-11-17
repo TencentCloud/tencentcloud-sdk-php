@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置添加的域名
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
- * @method string getAlbType() 获取流量来源
- * @method void setAlbType(string $AlbType) 设置流量来源
+ * @method string getAlbType() 获取流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
+ * @method void setAlbType(string $AlbType) 设置流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
  */
 class DescribeHostLimitRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeHostLimitRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string 流量来源
+     * @var string 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
      */
     public $AlbType;
 
     /**
      * @param string $Domain 添加的域名
      * @param string $InstanceID 实例id
-     * @param string $AlbType 流量来源
+     * @param string $AlbType 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
      */
     function __construct()
     {

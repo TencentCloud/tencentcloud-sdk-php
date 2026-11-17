@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取CC规则开关，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置CC规则开关，0表示关闭，1表示开启
  * @method string getAdvance() 获取高级模式（是否使用Session检测），0表示不启用，1表示启用
  * @method void setAdvance(string $Advance) 设置高级模式（是否使用Session检测），0表示不启用，1表示启用
  * @method string getLimit() 获取CC检测阈值
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionType(string $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
- * @method integer getValidTime() 获取动作有效时间
- * @method void setValidTime(integer $ValidTime) 设置动作有效时间
+ * @method integer getValidTime() 获取动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
+ * @method void setValidTime(integer $ValidTime) 设置动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
  * @method string getUrl() 获取检测Url
  * @method void setUrl(string $Url) 设置检测Url
  * @method integer getMatchFunc() 获取匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOptionsArr(string $OptionsArr) 设置CC的匹配条件JSON序列化的字符串，示例：[{"key":"Method","args":["=R0VU"],"match":"0","encodeflag":true}] Key可选值为 URL、Method、Post、Referer、Cookie、User-Agent、CustomHeader、IPLocation、CaptchaRisk、CaptchaDeviceRisk、CaptchaScore，match可选值为：当Key为URL的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）。 当Key为Method的时候可选值为0（等于）、3（不等于）。 Key为Post的时候可选值为0（等于）、3（不等于），Key为Cookie的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）， 当Key为Referer的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为User-Agent的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为CustomHeader的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）、4（内容为空）、5（不存在）。 Key为IPLocation时，可选值为13（属于）、14（不属于）。 Key为CaptchaRisk时，可选值为15（数值等于）、16（数值不等于）、13（属于）、14（不属于）、12（存在）、5（不存在）。 Key为CaptchaDeviceRisk时，可选值为13（属于）、14（不属于）、12（存在）、5（不存在）。 Key为CaptchaScore时，可选值为15（数值等于）、17（数值大于）、18（数值小于）、19（数值大于等于）、20（数值小于等于）、12（存在）、5（不存在）。args用来表示匹配内容，需要设置encodeflag为true。当匹配字段（Key）为Post、Cookie、CustomHeader时，需要将具体的参数名和参数值分别进行Base64编码并去掉末尾的等号=，然后再用等号=连接起来，类似YWJj=ZGVm；当匹配字段（Key）为Referer、User-Agent时，只需将目标值进行Base64编码并去掉末尾的等号=，然后再在其前面用等号=来串接，类似=YWJj。
  * @method string getEdition() 获取waf版本，sparta-waf或者clb-waf
  * @method void setEdition(string $Edition) 设置waf版本，sparta-waf或者clb-waf
- * @method integer getType() 获取操作类型
- * @method void setType(integer $Type) 设置操作类型
+ * @method integer getType() 获取CC规则类型，0表示基础规则，1表示高级规则
+ * @method void setType(integer $Type) 设置CC规则类型，0表示基础规则，1表示高级规则
  * @method string getEventId() 获取添加规则的来源事件id
  * @method void setEventId(string $EventId) 设置添加规则的来源事件id
  * @method array getSessionApplied() 获取规则需要启用的SessionID
@@ -92,7 +92,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 状态
+     * @var integer CC规则开关，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -122,7 +122,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Priority;
 
     /**
-     * @var integer 动作有效时间
+     * @var integer 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
      */
     public $ValidTime;
 
@@ -147,7 +147,7 @@ class UpsertCCRuleRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var integer 操作类型
+     * @var integer CC规则类型，0表示基础规则，1表示高级规则
      */
     public $Type;
 
@@ -229,18 +229,18 @@ class UpsertCCRuleRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param string $Name 名称
-     * @param integer $Status 状态
+     * @param integer $Status CC规则开关，0表示关闭，1表示开启
      * @param string $Advance 高级模式（是否使用Session检测），0表示不启用，1表示启用
      * @param string $Limit CC检测阈值
      * @param string $Interval CC检测周期
      * @param string $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      * @param integer $Priority 优先级
-     * @param integer $ValidTime 动作有效时间
+     * @param integer $ValidTime 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
      * @param string $Url 检测Url
      * @param integer $MatchFunc 匹配方法，0表示等于，1表示前缀匹配，2表示包含，3表示不等于，6表示后缀匹配，7表示不包含
      * @param string $OptionsArr CC的匹配条件JSON序列化的字符串，示例：[{"key":"Method","args":["=R0VU"],"match":"0","encodeflag":true}] Key可选值为 URL、Method、Post、Referer、Cookie、User-Agent、CustomHeader、IPLocation、CaptchaRisk、CaptchaDeviceRisk、CaptchaScore，match可选值为：当Key为URL的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）。 当Key为Method的时候可选值为0（等于）、3（不等于）。 Key为Post的时候可选值为0（等于）、3（不等于），Key为Cookie的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）， 当Key为Referer的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为User-Agent的时候可选值为0（等于）、3（不等于）、1（前缀匹配）、6（后缀匹配）、2（包含）、7（不包含）、12（存在）、5（不存在）、4（内容为空）， 当Key为CustomHeader的时候可选值为0（等于）、3（不等于）、2（包含）、7（不包含）、4（内容为空）、5（不存在）。 Key为IPLocation时，可选值为13（属于）、14（不属于）。 Key为CaptchaRisk时，可选值为15（数值等于）、16（数值不等于）、13（属于）、14（不属于）、12（存在）、5（不存在）。 Key为CaptchaDeviceRisk时，可选值为13（属于）、14（不属于）、12（存在）、5（不存在）。 Key为CaptchaScore时，可选值为15（数值等于）、17（数值大于）、18（数值小于）、19（数值大于等于）、20（数值小于等于）、12（存在）、5（不存在）。args用来表示匹配内容，需要设置encodeflag为true。当匹配字段（Key）为Post、Cookie、CustomHeader时，需要将具体的参数名和参数值分别进行Base64编码并去掉末尾的等号=，然后再用等号=连接起来，类似YWJj=ZGVm；当匹配字段（Key）为Referer、User-Agent时，只需将目标值进行Base64编码并去掉末尾的等号=，然后再在其前面用等号=来串接，类似=YWJj。
      * @param string $Edition waf版本，sparta-waf或者clb-waf
-     * @param integer $Type 操作类型
+     * @param integer $Type CC规则类型，0表示基础规则，1表示高级规则
      * @param string $EventId 添加规则的来源事件id
      * @param array $SessionApplied 规则需要启用的SessionID
      * @param integer $RuleId 规则ID，新增时填0

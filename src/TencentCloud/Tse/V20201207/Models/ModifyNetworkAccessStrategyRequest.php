@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkAccessStrategy请求参数结构体
  *
- * @method string getGatewayId() 获取云原生API网关实例ID。
- * @method void setGatewayId(string $GatewayId) 设置云原生API网关实例ID。
- * @method string getGroupId() 获取分组id
- * @method void setGroupId(string $GroupId) 设置分组id
- * @method string getNetworkType() 获取网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
- * @method void setNetworkType(string $NetworkType) 设置网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
- * @method string getVip() 获取ip地址
- * @method void setVip(string $Vip) 设置ip地址
- * @method NetworkAccessControl getAccessControl() 获取访问控制策略
- * @method void setAccessControl(NetworkAccessControl $AccessControl) 设置访问控制策略
+ * @method string getGatewayId() 获取<p>云原生API网关实例ID。</p>
+ * @method void setGatewayId(string $GatewayId) 设置<p>云原生API网关实例ID。</p>
+ * @method string getGroupId() 获取<p>分组id</p>
+ * @method void setGroupId(string $GroupId) 设置<p>分组id</p>
+ * @method string getNetworkType() 获取<p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
+ * @method void setNetworkType(string $NetworkType) 设置<p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
+ * @method string getVip() 获取<p>ip地址</p>
+ * @method void setVip(string $Vip) 设置<p>ip地址</p>
+ * @method NetworkAccessControl getAccessControl() 获取<p>访问控制策略</p>
+ * @method void setAccessControl(NetworkAccessControl $AccessControl) 设置<p>访问控制策略</p>
+ * @method string getAccessControlSource() 获取<p>GlobalConfig / Custom；不传默认 Custom</p>
+ * @method void setAccessControlSource(string $AccessControlSource) 设置<p>GlobalConfig / Custom；不传默认 Custom</p>
+ * @method string getGlobalConfigId() 获取<p>全局配置ID</p>
+ * @method void setGlobalConfigId(string $GlobalConfigId) 设置<p>全局配置ID</p>
  */
 class ModifyNetworkAccessStrategyRequest extends AbstractModel
 {
     /**
-     * @var string 云原生API网关实例ID。
+     * @var string <p>云原生API网关实例ID。</p>
      */
     public $GatewayId;
 
     /**
-     * @var string 分组id
+     * @var string <p>分组id</p>
      */
     public $GroupId;
 
     /**
-     * @var string 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
+     * @var string <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
      */
     public $NetworkType;
 
     /**
-     * @var string ip地址
+     * @var string <p>ip地址</p>
      */
     public $Vip;
 
     /**
-     * @var NetworkAccessControl 访问控制策略
+     * @var NetworkAccessControl <p>访问控制策略</p>
      */
     public $AccessControl;
 
     /**
-     * @param string $GatewayId 云原生API网关实例ID。
-     * @param string $GroupId 分组id
-     * @param string $NetworkType 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
-     * @param string $Vip ip地址
-     * @param NetworkAccessControl $AccessControl 访问控制策略
+     * @var string <p>GlobalConfig / Custom；不传默认 Custom</p>
+     */
+    public $AccessControlSource;
+
+    /**
+     * @var string <p>全局配置ID</p>
+     */
+    public $GlobalConfigId;
+
+    /**
+     * @param string $GatewayId <p>云原生API网关实例ID。</p>
+     * @param string $GroupId <p>分组id</p>
+     * @param string $NetworkType <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
+     * @param string $Vip <p>ip地址</p>
+     * @param NetworkAccessControl $AccessControl <p>访问控制策略</p>
+     * @param string $AccessControlSource <p>GlobalConfig / Custom；不传默认 Custom</p>
+     * @param string $GlobalConfigId <p>全局配置ID</p>
      */
     function __construct()
     {
@@ -105,6 +113,14 @@ class ModifyNetworkAccessStrategyRequest extends AbstractModel
         if (array_key_exists("AccessControl",$param) and $param["AccessControl"] !== null) {
             $this->AccessControl = new NetworkAccessControl();
             $this->AccessControl->deserialize($param["AccessControl"]);
+        }
+
+        if (array_key_exists("AccessControlSource",$param) and $param["AccessControlSource"] !== null) {
+            $this->AccessControlSource = $param["AccessControlSource"];
+        }
+
+        if (array_key_exists("GlobalConfigId",$param) and $param["GlobalConfigId"] !== null) {
+            $this->GlobalConfigId = $param["GlobalConfigId"];
         }
     }
 }

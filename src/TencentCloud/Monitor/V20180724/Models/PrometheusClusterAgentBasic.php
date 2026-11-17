@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropAll(boolean $DropAll) 设置<p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
  * @method boolean getCollectAll() 获取<p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
  * @method void setCollectAll(boolean $CollectAll) 设置<p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+ * @method string getPrivateLinkIP() 获取<p>私有连接的 IP</p>
+ * @method void setPrivateLinkIP(string $PrivateLinkIP) 设置<p>私有连接的 IP</p>
  * @method boolean getOpenDefaultRecord() 获取<p>是否开启默认预聚合规则</p>
  * @method void setOpenDefaultRecord(boolean $OpenDefaultRecord) 设置<p>是否开启默认预聚合规则</p>
  */
@@ -96,6 +98,11 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $CollectAll;
 
     /**
+     * @var string <p>私有连接的 IP</p>
+     */
+    public $PrivateLinkIP;
+
+    /**
      * @var boolean <p>是否开启默认预聚合规则</p>
      */
     public $OpenDefaultRecord;
@@ -111,6 +118,7 @@ class PrometheusClusterAgentBasic extends AbstractModel
      * @param boolean $NotScrape <p>是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置</p>
      * @param boolean $DropAll <p>是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标</p>
      * @param boolean $CollectAll <p>是否采集全部指标</p><p>枚举值：</p><ul><li>false： 不采集</li><li>true： 采集</li></ul><p>默认值：false</p>
+     * @param string $PrivateLinkIP <p>私有连接的 IP</p>
      * @param boolean $OpenDefaultRecord <p>是否开启默认预聚合规则</p>
      */
     function __construct()
@@ -170,6 +178,10 @@ class PrometheusClusterAgentBasic extends AbstractModel
 
         if (array_key_exists("CollectAll",$param) and $param["CollectAll"] !== null) {
             $this->CollectAll = $param["CollectAll"];
+        }
+
+        if (array_key_exists("PrivateLinkIP",$param) and $param["PrivateLinkIP"] !== null) {
+            $this->PrivateLinkIP = $param["PrivateLinkIP"];
         }
 
         if (array_key_exists("OpenDefaultRecord",$param) and $param["OpenDefaultRecord"] !== null) {

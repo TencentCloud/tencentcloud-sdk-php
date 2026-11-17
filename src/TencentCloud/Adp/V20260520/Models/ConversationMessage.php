@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConversationId() 获取<p>会话 ID</p>
  * @method void setConversationId(string $ConversationId) 设置<p>会话 ID</p>
+ * @method ConversationMessageExtraInfo getExtraInfo() 获取<p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraInfo(ConversationMessageExtraInfo $ExtraInfo) 设置<p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIcon() 获取<p>消息图标</p>
  * @method void setIcon(string $Icon) 设置<p>消息图标</p>
  * @method string getMessageId() 获取<p>消息 ID</p>
@@ -51,6 +55,12 @@ class ConversationMessage extends AbstractModel
      * @var string <p>会话 ID</p>
      */
     public $ConversationId;
+
+    /**
+     * @var ConversationMessageExtraInfo <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraInfo;
 
     /**
      * @var string <p>消息图标</p>
@@ -109,6 +119,8 @@ class ConversationMessage extends AbstractModel
 
     /**
      * @param string $ConversationId <p>会话 ID</p>
+     * @param ConversationMessageExtraInfo $ExtraInfo <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Icon <p>消息图标</p>
      * @param string $MessageId <p>消息 ID</p>
      * @param string $Name <p>消息名称</p>
@@ -136,6 +148,11 @@ class ConversationMessage extends AbstractModel
         }
         if (array_key_exists("ConversationId",$param) and $param["ConversationId"] !== null) {
             $this->ConversationId = $param["ConversationId"];
+        }
+
+        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
+            $this->ExtraInfo = new ConversationMessageExtraInfo();
+            $this->ExtraInfo->deserialize($param["ExtraInfo"]);
         }
 
         if (array_key_exists("Icon",$param) and $param["Icon"] !== null) {

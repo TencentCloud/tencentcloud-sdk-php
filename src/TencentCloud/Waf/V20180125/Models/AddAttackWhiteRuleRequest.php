@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getStatus() 获取规则状态
- * @method void setStatus(integer $Status) 设置规则状态
+ * @method integer getStatus() 获取规则状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置规则状态，0表示关闭，1表示开启
  * @method array getRules() 获取匹配规则项列表
  * @method void setRules(array $Rules) 设置匹配规则项列表
  * @method integer getRuleId() 获取规则序号
@@ -47,7 +47,7 @@ class AddAttackWhiteRuleRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 规则状态
+     * @var integer 规则状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -88,7 +88,7 @@ class AddAttackWhiteRuleRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $Status 规则状态
+     * @param integer $Status 规则状态，0表示关闭，1表示开启
      * @param array $Rules 匹配规则项列表
      * @param integer $RuleId 规则序号
      * @param string $SignatureId 规则Id

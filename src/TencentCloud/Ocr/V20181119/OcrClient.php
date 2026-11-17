@@ -29,6 +29,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\ArithmeticOCRResponse ArithmeticOCR(Models\ArithmeticOCRRequest $req) 本接口支持作业算式题目的自动识别和判分，目前覆盖 K12 学力范围内的 11 种题型，包括加减乘除四则、加减乘除已知结果求运算因子、判断大小、约等于估算、带余数除法、分数四则运算、单位换算、竖式加减法、竖式乘除法、脱式计算和解方程，平均识别精度达到93%以上。
 
 默认接口请求频率限制：10次/秒。
+ * @method Models\AuditMaterialAgentResponse AuditMaterialAgent(Models\AuditMaterialAgentRequest $req) 针对业务流程中的卡证图片、场景图片等资料，提供分类、识别、比对、鉴伪等综合审核能力，可应用于商户审核、信贷审核等业务流程。一期先实现商户照片审核Agent，未来支持更多类型。
  * @method Models\BankCardOCRResponse BankCardOCR(Models\BankCardOCRRequest $req) 本接口支持对中国大陆主流银行卡正反面关键字段的检测与识别，包括卡号、卡类型、卡名字、银行信息、有效期。支持竖排异形卡识别、多角度旋转图片识别。支持对复印件、翻拍件、边框遮挡的银行卡进行告警，可应用于各种银行卡信息有效性校验场景，如金融行业身份认证、第三方支付绑卡等场景。
 
 默认接口请求频率限制：10次/秒。
@@ -53,10 +54,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：5次/秒。
  * @method Models\DescribeExtractDocAgentJobResponse DescribeExtractDocAgentJob(Models\DescribeExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】。
- * @method Models\DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJob(Models\DescribeMarkEssayAgentJobRequest $req) 用于作文批改Agent查询任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+ * @method Models\DescribeMarkEssayAgentJobResponse DescribeMarkEssayAgentJob(Models\DescribeMarkEssayAgentJobRequest $req) 用于智能教育SuperAgent查询任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
 
 默认接口请求并发限制：2次/分钟。
- * @method Models\DescribeMultimodalDocParseJobResponse DescribeMultimodalDocParseJob(Models\DescribeMultimodalDocParseJobRequest $req) 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+ * @method Models\DescribeMultimodalDocParseJobResponse DescribeMultimodalDocParseJob(Models\DescribeMultimodalDocParseJobRequest $req) 用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
 
 创建任务接口文档地址[：https://cloud.tencent.com/document/product/866/139312](https://cloud.tencent.com/document/product/866/139312)
 
@@ -339,7 +340,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：5次/秒。
  * @method Models\QueryEnterpriseBasicInfoResponse QueryEnterpriseBasicInfo(Models\QueryEnterpriseBasicInfoRequest $req) 提供查询企业基本信息的能力。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能为空或无法查得，具体以实际查询结果为准。
-重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请联系商务或在线客服登记信息、开通服务。
+重要提醒：使用本产品需要符合真实企业、真实业务场景、真实用户授权的要求，请[填写登记表申请开通服务](https://cloud.tencent.com/apply/p/du5vwoxm3fw)。
  * @method Models\QuestionOCRResponse QuestionOCR(Models\QuestionOCRRequest $req) 题目识别是教育的基础OCR识别能力。可支持扫描、拍照场景的单题题目识别。接口支持印刷体文本、手写体文本及公式的OCR识别和坐标返回，此外，接口还可对题目中的配图位置进行检测并返回坐标位置。适用于智能批改等场景的题目内容识别作为检索输入。
 
 默认接口请求频率限制：2次/秒。
@@ -659,10 +660,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
 
 默认接口请求频率限制：5次/秒。
  * @method Models\SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJob(Models\SubmitExtractDocAgentJobRequest $req) 模型参数更大，速度更慢。推荐场景：可以接受异步（超过30s返回），样本输入输出token大于2000，长文本类文档建议用异步模型。需要 SubmitExtractDocAgentJob（提交任务）、DescribeExtractDocAgentJob（查询任务）两个接口配套使用，计费发生在提交任务后。【备注：1.固定价格不限抽取字段数，2.自适应价格抽取字段大于10记两次费用，小于等于10记一次费用】
- * @method Models\SubmitMarkEssayAgentJobResponse SubmitMarkEssayAgentJob(Models\SubmitMarkEssayAgentJobRequest $req) 用于作文批改Agent提交任务。基于业界领先的千亿参数多模态大模型技术，提供中英文手写作文的精准批改端到端服务。核心功能涵盖错别字智能识别、好词好句点评、错句纠错，并能够在原文中定位至具体段落与字符位置，同时提供详细的修改建议与优化内容。此能力是作业批改场景中的核心模块。
+ * @method Models\SubmitMarkEssayAgentJobResponse SubmitMarkEssayAgentJob(Models\SubmitMarkEssayAgentJobRequest $req) 用于智能教育SuperAgent提交任务。基于业界领先的千亿参数多模态大模型，本智能教育SuperAgent提供全场景端到端的精准服务。系统内置涵盖**中文/英文作文批改**、**教辅试卷题库拆录**等核心Agent，并支持快速定制专属教育场景Agent，全面赋能教学与测评环节。
 
 默认接口请求并发限制：2次/分钟。
- * @method Models\SubmitMultimodalDocParseJobResponse SubmitMultimodalDocParseJob(Models\SubmitMultimodalDocParseJobRequest $req) 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
+ * @method Models\SubmitMultimodalDocParseJobResponse SubmitMultimodalDocParseJob(Models\SubmitMultimodalDocParseJobRequest $req) 本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用。
 
 查询任务接口文档地址[：https://cloud.tencent.com/document/product/866/139313](https://cloud.tencent.com/document/product/866/139313)
 

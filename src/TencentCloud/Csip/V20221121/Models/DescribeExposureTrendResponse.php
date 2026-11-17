@@ -20,45 +20,59 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposureTrend返回参数结构体
  *
- * @method array getExposeTrendList() 获取暴露周期趋势数量统计信息
- * @method void setExposeTrendList(array $ExposeTrendList) 设置暴露周期趋势数量统计信息
- * @method integer getExposeIncrement() 获取暴露周期新增数量统计
- * @method void setExposeIncrement(integer $ExposeIncrement) 设置暴露周期新增数量统计
- * @method integer getOpenCount() 获取近1天（24h）完全开放数量
- * @method void setOpenCount(integer $OpenCount) 设置近1天（24h）完全开放数量
- * @method integer getAclCount() 获取近1天（24h）受限访问数量
- * @method void setAclCount(integer $AclCount) 设置近1天（24h）受限访问数量
- * @method integer getCloseCount() 获取近1天（24h）无法访问数量
- * @method void setCloseCount(integer $CloseCount) 设置近1天（24h）无法访问数量
+ * @method array getExposeTrendList() 获取<p>暴露周期趋势数量统计信息</p>
+ * @method void setExposeTrendList(array $ExposeTrendList) 设置<p>暴露周期趋势数量统计信息</p>
+ * @method integer getExposeIncrement() 获取<p>暴露周期新增数量统计</p>
+ * @method void setExposeIncrement(integer $ExposeIncrement) 设置<p>暴露周期新增数量统计</p>
+ * @method integer getOpenCount() 获取<p>近1天（24h）完全开放数量</p>
+ * @method void setOpenCount(integer $OpenCount) 设置<p>近1天（24h）完全开放数量</p>
+ * @method integer getAclCount() 获取<p>近1天（24h）受限访问数量</p>
+ * @method void setAclCount(integer $AclCount) 设置<p>近1天（24h）受限访问数量</p>
+ * @method integer getCloseCount() 获取<p>近1天（24h）无法访问数量</p>
+ * @method void setCloseCount(integer $CloseCount) 设置<p>近1天（24h）无法访问数量</p>
+ * @method integer getExposeTotalCount() 获取<p>互联网边界总数</p>
+ * @method void setExposeTotalCount(integer $ExposeTotalCount) 设置<p>互联网边界总数</p>
+ * @method integer getToGovernRiskCount() 获取<p>待处理边界数量</p>
+ * @method void setToGovernRiskCount(integer $ToGovernRiskCount) 设置<p>待处理边界数量</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExposureTrendResponse extends AbstractModel
 {
     /**
-     * @var array 暴露周期趋势数量统计信息
+     * @var array <p>暴露周期趋势数量统计信息</p>
      */
     public $ExposeTrendList;
 
     /**
-     * @var integer 暴露周期新增数量统计
+     * @var integer <p>暴露周期新增数量统计</p>
      */
     public $ExposeIncrement;
 
     /**
-     * @var integer 近1天（24h）完全开放数量
+     * @var integer <p>近1天（24h）完全开放数量</p>
      */
     public $OpenCount;
 
     /**
-     * @var integer 近1天（24h）受限访问数量
+     * @var integer <p>近1天（24h）受限访问数量</p>
      */
     public $AclCount;
 
     /**
-     * @var integer 近1天（24h）无法访问数量
+     * @var integer <p>近1天（24h）无法访问数量</p>
      */
     public $CloseCount;
+
+    /**
+     * @var integer <p>互联网边界总数</p>
+     */
+    public $ExposeTotalCount;
+
+    /**
+     * @var integer <p>待处理边界数量</p>
+     */
+    public $ToGovernRiskCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +80,13 @@ class DescribeExposureTrendResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ExposeTrendList 暴露周期趋势数量统计信息
-     * @param integer $ExposeIncrement 暴露周期新增数量统计
-     * @param integer $OpenCount 近1天（24h）完全开放数量
-     * @param integer $AclCount 近1天（24h）受限访问数量
-     * @param integer $CloseCount 近1天（24h）无法访问数量
+     * @param array $ExposeTrendList <p>暴露周期趋势数量统计信息</p>
+     * @param integer $ExposeIncrement <p>暴露周期新增数量统计</p>
+     * @param integer $OpenCount <p>近1天（24h）完全开放数量</p>
+     * @param integer $AclCount <p>近1天（24h）受限访问数量</p>
+     * @param integer $CloseCount <p>近1天（24h）无法访问数量</p>
+     * @param integer $ExposeTotalCount <p>互联网边界总数</p>
+     * @param integer $ToGovernRiskCount <p>待处理边界数量</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +125,14 @@ class DescribeExposureTrendResponse extends AbstractModel
 
         if (array_key_exists("CloseCount",$param) and $param["CloseCount"] !== null) {
             $this->CloseCount = $param["CloseCount"];
+        }
+
+        if (array_key_exists("ExposeTotalCount",$param) and $param["ExposeTotalCount"] !== null) {
+            $this->ExposeTotalCount = $param["ExposeTotalCount"];
+        }
+
+        if (array_key_exists("ToGovernRiskCount",$param) and $param["ToGovernRiskCount"] !== null) {
+            $this->ToGovernRiskCount = $param["ToGovernRiskCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

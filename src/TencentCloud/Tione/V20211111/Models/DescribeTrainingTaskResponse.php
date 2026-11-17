@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrainingTask返回参数结构体
  *
- * @method TrainingTaskDetail getTrainingTaskDetail() 获取训练任务详情
- * @method void setTrainingTaskDetail(TrainingTaskDetail $TrainingTaskDetail) 设置训练任务详情
+ * @method TrainingTaskDetail getTrainingTaskDetail() 获取<p>训练任务详情</p>
+ * @method void setTrainingTaskDetail(TrainingTaskDetail $TrainingTaskDetail) 设置<p>训练任务详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTrainingTaskResponse extends AbstractModel
 {
     /**
-     * @var TrainingTaskDetail 训练任务详情
+     * @var TrainingTaskDetail <p>训练任务详情</p>
      */
     public $TrainingTaskDetail;
 
@@ -38,7 +38,7 @@ class DescribeTrainingTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TrainingTaskDetail $TrainingTaskDetail 训练任务详情
+     * @param TrainingTaskDetail $TrainingTaskDetail <p>训练任务详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

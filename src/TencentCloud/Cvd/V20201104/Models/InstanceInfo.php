@@ -160,6 +160,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>实例绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUnderwriteDeadline() 获取<p>包销到期时间</p>
+ * @method void setUnderwriteDeadline(string $UnderwriteDeadline) 设置<p>包销到期时间</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -394,6 +396,11 @@ class InstanceInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string <p>包销到期时间</p>
+     */
+    public $UnderwriteDeadline;
+
+    /**
      * @param string $InstanceId <p>实例id</p>
      * @param string $Name <p>实例名称</p>
      * @param string $Status <p>实例状态<br>PENDING：表示创建中<br>LAUNCH_FAILED：表示创建失败<br>RUNNING：表示运行中<br>STOPPED：表示关机<br>STARTING：表示开机中<br>STOPPING：表示关机中<br>REBOOTING：表示重启中<br>SHUTDOWN：表示停止待销毁<br>TERMINATING：表示销毁中<br>DELETED：表示资源已经销毁，这个状态是业务层面的状态，cvm如果销毁了，在cvm侧资源已经不存在了<br>FAILED：表示资源创建失败.这个是业务层面的状态<br>ROLLBACKING：表示回滚中<br>USING：表示使用中<br>RESETTING：表示重置中.</p>
@@ -464,6 +471,7 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags <p>实例绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UnderwriteDeadline <p>包销到期时间</p>
      */
     function __construct()
     {
@@ -647,6 +655,10 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("UnderwriteDeadline",$param) and $param["UnderwriteDeadline"] !== null) {
+            $this->UnderwriteDeadline = $param["UnderwriteDeadline"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) 设置<p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
  * @method string getImageRegistryType() 获取<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
  * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+ * @method string getPreCacheType() 获取<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+ * @method void setPreCacheType(string $PreCacheType) 设置<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
  */
 class CreatePreCacheImageTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreatePreCacheImageTaskRequest extends AbstractModel
     public $ImageRegistryType;
 
     /**
+     * @var string <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public $PreCacheType;
+
+    /**
      * @param string $Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
+     * @param string $PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreatePreCacheImageTaskRequest extends AbstractModel
 
         if (array_key_exists("ImageRegistryType",$param) and $param["ImageRegistryType"] !== null) {
             $this->ImageRegistryType = $param["ImageRegistryType"];
+        }
+
+        if (array_key_exists("PreCacheType",$param) and $param["PreCacheType"] !== null) {
+            $this->PreCacheType = $param["PreCacheType"];
         }
     }
 }

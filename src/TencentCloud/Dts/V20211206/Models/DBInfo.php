@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptConn(string $EncryptConn) 设置<p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
  * @method string getSetId() 获取<p>tdsql的分片id。如节点类型为set必填。</p>
  * @method void setSetId(string $SetId) 设置<p>tdsql的分片id。如节点类型为set必填。</p>
+ * @method string getShard() 获取<p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+ * @method void setShard(string $Shard) 设置<p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
  */
 class DBInfo extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DBInfo extends AbstractModel
     public $SetId;
 
     /**
+     * @var string <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+     */
+    public $Shard;
+
+    /**
      * @param string $Role <p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
      * @param string $DbKernel <p>内核版本，针对mariadb的不同内核版本等</p>
      * @param string $Host <p>实例的IP地址，对于公网、专线、VPN、云联网、自研上云、VPC等接入方式此项必填</p>
@@ -200,6 +207,7 @@ class DBInfo extends AbstractModel
      * @param string $TmpToken <p>临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。</p>
      * @param string $EncryptConn <p>是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted</p>
      * @param string $SetId <p>tdsql的分片id。如节点类型为set必填。</p>
+     * @param string $Shard <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class DBInfo extends AbstractModel
 
         if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
             $this->SetId = $param["SetId"];
+        }
+
+        if (array_key_exists("Shard",$param) and $param["Shard"] !== null) {
+            $this->Shard = $param["Shard"];
         }
     }
 }

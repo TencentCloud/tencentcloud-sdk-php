@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageId(string $PageId) 设置页面ID
  * @method integer getActionRatio() 获取动作灰度的比例，1-100，默认是100
  * @method void setActionRatio(integer $ActionRatio) 设置动作灰度的比例，1-100，默认是100
+ * @method integer getPreview() 获取自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+ * @method void setPreview(integer $Preview) 设置自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
  */
 class ModifyBatchCustomRuleRequest extends AbstractModel
 {
@@ -144,6 +156,16 @@ class ModifyBatchCustomRuleRequest extends AbstractModel
     public $ActionRatio;
 
     /**
+     * @var integer 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public $Preview;
+
+    /**
      * @param integer $Id 批量规则Id
      * @param string $Name 规则名称
      * @param integer $ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
@@ -161,6 +183,12 @@ class ModifyBatchCustomRuleRequest extends AbstractModel
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      * @param string $PageId 页面ID
      * @param integer $ActionRatio 动作灰度的比例，1-100，默认是100
+     * @param integer $Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
      */
     function __construct()
     {
@@ -247,6 +275,10 @@ class ModifyBatchCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
             $this->ActionRatio = $param["ActionRatio"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

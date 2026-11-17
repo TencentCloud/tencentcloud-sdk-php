@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKernels(array $Kernels) 设置<p>要保存的kernel数组</p>
  * @method boolean getRegisterToImageCenter() 获取<p>是否保存到镜像中心</p>
  * @method void setRegisterToImageCenter(boolean $RegisterToImageCenter) 设置<p>是否保存到镜像中心</p>
+ * @method boolean getIgnoreUnfreezableProcesses() 获取<p>是否忽略无法被冻结的进程</p>
+ * @method void setIgnoreUnfreezableProcesses(boolean $IgnoreUnfreezableProcesses) 设置<p>是否忽略无法被冻结的进程</p>
  */
 class CreateNotebookImageRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateNotebookImageRequest extends AbstractModel
     public $RegisterToImageCenter;
 
     /**
+     * @var boolean <p>是否忽略无法被冻结的进程</p>
+     */
+    public $IgnoreUnfreezableProcesses;
+
+    /**
      * @param ImageInfo $ImageInfo <p>镜像信息</p>
      * @param string $NotebookId <p>notebook id</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
      * @param array $Kernels <p>要保存的kernel数组</p>
      * @param boolean $RegisterToImageCenter <p>是否保存到镜像中心</p>
+     * @param boolean $IgnoreUnfreezableProcesses <p>是否忽略无法被冻结的进程</p>
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CreateNotebookImageRequest extends AbstractModel
 
         if (array_key_exists("RegisterToImageCenter",$param) and $param["RegisterToImageCenter"] !== null) {
             $this->RegisterToImageCenter = $param["RegisterToImageCenter"];
+        }
+
+        if (array_key_exists("IgnoreUnfreezableProcesses",$param) and $param["IgnoreUnfreezableProcesses"] !== null) {
+            $this->IgnoreUnfreezableProcesses = $param["IgnoreUnfreezableProcesses"];
         }
     }
 }

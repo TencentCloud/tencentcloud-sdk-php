@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionRatio(integer $ActionRatio) 设置<p>动作灰度的比例</p>
  * @method array getGroupIds() 获取<p>防护对象组ID</p>
  * @method void setGroupIds(array $GroupIds) 设置<p>防护对象组ID</p>
+ * @method integer getPreview() 获取自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+ * @method void setPreview(integer $Preview) 设置自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
  */
 class BatchCustomRuleListItem extends AbstractModel
 {
@@ -185,6 +193,14 @@ class BatchCustomRuleListItem extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var integer 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     */
+    public $Preview;
+
+    /**
      * @param integer $Id <p>规则Id</p>
      * @param integer $ActionType <p>动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验</p>
      * @param string $Bypass <p>加白模块</p>
@@ -208,6 +224,10 @@ class BatchCustomRuleListItem extends AbstractModel
      * @param string $LogicalOp <p>匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系</p>
      * @param integer $ActionRatio <p>动作灰度的比例</p>
      * @param array $GroupIds <p>防护对象组ID</p>
+     * @param integer $Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
      */
     function __construct()
     {
@@ -318,6 +338,10 @@ class BatchCustomRuleListItem extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

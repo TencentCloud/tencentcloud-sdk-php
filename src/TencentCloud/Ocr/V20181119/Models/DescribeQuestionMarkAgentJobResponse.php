@@ -59,6 +59,7 @@ class DescribeQuestionMarkAgentJobResponse extends AbstractModel
 
     /**
      * @var array <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
+     * @deprecated
      */
     public $MarkInfos;
 

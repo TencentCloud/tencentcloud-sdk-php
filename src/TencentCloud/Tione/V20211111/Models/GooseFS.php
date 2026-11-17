@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountOptions() 获取<p>客户端的挂载参数，逗号分隔的参数名</p>
  * @method void setMountOptions(string $MountOptions) 设置<p>客户端的挂载参数，逗号分隔的参数名</p>
+ * @method string getFuseOptions() 获取<p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+ * @method void setFuseOptions(string $FuseOptions) 设置<p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
  */
 class GooseFS extends AbstractModel
 {
@@ -71,6 +73,11 @@ class GooseFS extends AbstractModel
     public $MountOptions;
 
     /**
+     * @var string <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+     */
+    public $FuseOptions;
+
+    /**
      * @param string $Id <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type <p>GooseFS类型，包括GooseFS和GooseFSx</p>
@@ -80,6 +87,7 @@ class GooseFS extends AbstractModel
      * @param string $NameSpace <p>GooseFS命名空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountOptions <p>客户端的挂载参数，逗号分隔的参数名</p>
+     * @param string $FuseOptions <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class GooseFS extends AbstractModel
 
         if (array_key_exists("MountOptions",$param) and $param["MountOptions"] !== null) {
             $this->MountOptions = $param["MountOptions"];
+        }
+
+        if (array_key_exists("FuseOptions",$param) and $param["FuseOptions"] !== null) {
+            $this->FuseOptions = $param["FuseOptions"];
         }
     }
 }

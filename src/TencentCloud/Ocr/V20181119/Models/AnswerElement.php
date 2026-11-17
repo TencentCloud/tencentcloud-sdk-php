@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getIsCorrect() 获取<p>答案是否正确</p>
  * @method void setIsCorrect(boolean $IsCorrect) 设置<p>答案是否正确</p>
- * @method string getAnswerAnalysis() 获取<p>答案分析结果</p>
- * @method void setAnswerAnalysis(string $AnswerAnalysis) 设置<p>答案分析结果</p>
- * @method string getRightAnswer() 获取<p>返回正确答案内容</p>
- * @method void setRightAnswer(string $RightAnswer) 设置<p>返回正确答案内容</p>
+ * @method string getAnswerAnalysis() 获取<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
+ * @method void setAnswerAnalysis(string $AnswerAnalysis) 设置<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
+ * @method string getRightAnswer() 获取<p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
+ * @method void setRightAnswer(string $RightAnswer) 设置<p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
  */
 class AnswerElement extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AnswerElement extends AbstractModel
     public $IsCorrect;
 
     /**
-     * @var string <p>答案分析结果</p>
+     * @var string <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
      */
     public $AnswerAnalysis;
 
     /**
-     * @var string <p>返回正确答案内容</p>
+     * @var string <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
      */
     public $RightAnswer;
 
     /**
      * @param boolean $IsCorrect <p>答案是否正确</p>
-     * @param string $AnswerAnalysis <p>答案分析结果</p>
-     * @param string $RightAnswer <p>返回正确答案内容</p>
+     * @param string $AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
+     * @param string $RightAnswer <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleIds(array $RuleIds) 设置规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
  * @method boolean getDeleteAll() 获取是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
  * @method void setDeleteAll(boolean $DeleteAll) 设置是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
- * @method string getSourceType() 获取用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
- * @method void setSourceType(string $SourceType) 设置用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+ * @method string getSourceType() 获取数据来源，'batch'表示批量黑白名单规则，空/不传表示单域名黑白名单规则
+ * @method void setSourceType(string $SourceType) 设置数据来源，'batch'表示批量黑白名单规则，空/不传表示单域名黑白名单规则
  * @method integer getActionType() 获取IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
  * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
  */
@@ -49,7 +49,7 @@ class DeleteIpAccessControlV2Request extends AbstractModel
     public $DeleteAll;
 
     /**
-     * @var string 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+     * @var string 数据来源，'batch'表示批量黑白名单规则，空/不传表示单域名黑白名单规则
      */
     public $SourceType;
 
@@ -62,7 +62,7 @@ class DeleteIpAccessControlV2Request extends AbstractModel
      * @param string $Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      * @param array $RuleIds 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
      * @param boolean $DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
-     * @param string $SourceType 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+     * @param string $SourceType 数据来源，'batch'表示批量黑白名单规则，空/不传表示单域名黑白名单规则
      * @param integer $ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
      */
     function __construct()

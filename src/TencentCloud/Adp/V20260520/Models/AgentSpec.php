@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置<p>高级设置</p>
  * @method array getExternalToolList() 获取<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
  * @method void setExternalToolList(array $ExternalToolList) 设置<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+ * @method integer getProviderType() 获取<p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+ * @method void setProviderType(integer $ProviderType) 设置<p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+ * @method string getReferenceAppId() 获取<p>引用应用的Id</p>
+ * @method void setReferenceAppId(string $ReferenceAppId) 设置<p>引用应用的Id</p>
+ * @method array getBuiltinToolList() 获取<p>内置工具信息</p>
+ * @method void setBuiltinToolList(array $BuiltinToolList) 设置<p>内置工具信息</p>
  */
 class AgentSpec extends AbstractModel
 {
@@ -80,6 +86,21 @@ class AgentSpec extends AbstractModel
     public $ExternalToolList;
 
     /**
+     * @var integer <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public $ProviderType;
+
+    /**
+     * @var string <p>引用应用的Id</p>
+     */
+    public $ReferenceAppId;
+
+    /**
+     * @var array <p>内置工具信息</p>
+     */
+    public $BuiltinToolList;
+
+    /**
      * @param AgentProfile $Profile <p>Agent基本配置</p>
      * @param string $Instructions <p>系统提示词</p>
      * @param AgentModelConfig $Model <p>主模型配置</p>
@@ -88,6 +109,9 @@ class AgentSpec extends AbstractModel
      * @param array $SkillList <p>技能信息</p>
      * @param AgentAdvancedConfig $AdvancedConfig <p>高级设置</p>
      * @param array $ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent  忽略该字段与</p>
+     * @param integer $ProviderType <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     * @param string $ReferenceAppId <p>引用应用的Id</p>
+     * @param array $BuiltinToolList <p>内置工具信息</p>
      */
     function __construct()
     {
@@ -154,6 +178,23 @@ class AgentSpec extends AbstractModel
                 $obj = new AgentExternalToolConfig();
                 $obj->deserialize($value);
                 array_push($this->ExternalToolList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProviderType",$param) and $param["ProviderType"] !== null) {
+            $this->ProviderType = $param["ProviderType"];
+        }
+
+        if (array_key_exists("ReferenceAppId",$param) and $param["ReferenceAppId"] !== null) {
+            $this->ReferenceAppId = $param["ReferenceAppId"];
+        }
+
+        if (array_key_exists("BuiltinToolList",$param) and $param["BuiltinToolList"] !== null) {
+            $this->BuiltinToolList = [];
+            foreach ($param["BuiltinToolList"] as $key => $value){
+                $obj = new AgentBuiltinToolConfig();
+                $obj->deserialize($value);
+                array_push($this->BuiltinToolList, $obj);
             }
         }
     }

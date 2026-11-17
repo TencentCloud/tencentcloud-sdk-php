@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 常用登录地（入参）
  *
- * @method integer getCountryId() 获取<p>国家ID，当前仅支持国内：1</p>
- * @method void setCountryId(integer $CountryId) 设置<p>国家ID，当前仅支持国内：1</p>
+ * @method integer getCountryId() 获取<p>国家ID，当前仅支持境内：1</p>
+ * @method void setCountryId(integer $CountryId) 设置<p>国家ID，当前仅支持境内：1</p>
  * @method integer getProvinceId() 获取<p>省份ID；99999 表示全部省份</p>
  * @method void setProvinceId(integer $ProvinceId) 设置<p>省份ID；99999 表示全部省份</p>
  * @method integer getCityId() 获取<p>城市ID；99999 表示全部城市</p>
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class LoginWhitePlaceInput extends AbstractModel
 {
     /**
-     * @var integer <p>国家ID，当前仅支持国内：1</p>
+     * @var integer <p>国家ID，当前仅支持境内：1</p>
      */
     public $CountryId;
 
@@ -45,7 +45,7 @@ class LoginWhitePlaceInput extends AbstractModel
     public $CityId;
 
     /**
-     * @param integer $CountryId <p>国家ID，当前仅支持国内：1</p>
+     * @param integer $CountryId <p>国家ID，当前仅支持境内：1</p>
      * @param integer $ProvinceId <p>省份ID；99999 表示全部省份</p>
      * @param integer $CityId <p>城市ID；99999 表示全部城市</p>
      */

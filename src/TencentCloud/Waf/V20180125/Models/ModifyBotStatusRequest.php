@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCategory() 获取类别
  * @method void setCategory(string $Category) 设置类别
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
+ * @method string getStatus() 获取BOT模块开关状态，传入'0'表示关闭，'1'表示开启
+ * @method void setStatus(string $Status) 设置BOT模块开关状态，传入'0'表示关闭，'1'表示开启
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getInstanceID() 获取实例id
@@ -43,7 +43,7 @@ class ModifyBotStatusRequest extends AbstractModel
     public $Category;
 
     /**
-     * @var string 状态
+     * @var string BOT模块开关状态，传入'0'表示关闭，'1'表示开启
      */
     public $Status;
 
@@ -74,7 +74,7 @@ class ModifyBotStatusRequest extends AbstractModel
 
     /**
      * @param string $Category 类别
-     * @param string $Status 状态
+     * @param string $Status BOT模块开关状态，传入'0'表示关闭，'1'表示开启
      * @param string $Domain 域名
      * @param string $InstanceID 实例id
      * @param boolean $IsVersionFour 是否是bot4.0版本

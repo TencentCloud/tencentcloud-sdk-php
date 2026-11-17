@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKnowledgeUsage(float $KnowledgeUsage) 设置<p>知识库用量</p>
  * @method integer getResourceStatus() 获取<p>资源包状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>3： 已到期</li><li>4： 即将到期</li></ul>
  * @method void setResourceStatus(integer $ResourceStatus) 设置<p>资源包状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>3： 已到期</li><li>4： 即将到期</li></ul>
+ * @method float getCloudDiskCapacity() 获取<p>云盘容量</p><p>单位：GB</p>
+ * @method void setCloudDiskCapacity(float $CloudDiskCapacity) 设置<p>云盘容量</p><p>单位：GB</p>
+ * @method float getCloudDiskUsage() 获取<p>云盘用量</p><p>单位：GB</p>
+ * @method void setCloudDiskUsage(float $CloudDiskUsage) 设置<p>云盘用量</p><p>单位：GB</p>
  */
 class ResourcePackageInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ResourcePackageInfo extends AbstractModel
     public $ResourceStatus;
 
     /**
+     * @var float <p>云盘容量</p><p>单位：GB</p>
+     */
+    public $CloudDiskCapacity;
+
+    /**
+     * @var float <p>云盘用量</p><p>单位：GB</p>
+     */
+    public $CloudDiskUsage;
+
+    /**
      * @param integer $PackageType <p>套餐类型</p><p>枚举值：</p><ul><li>1： 免费版</li><li>2： 专业版</li><li>3： 企业版</li></ul>
      * @param integer $ResourceTotal <p>资源包总量</p>
      * @param float $ResourceUsage <p>资源包用量</p>
      * @param float $KnowledgeCapacity <p>知识库容量</p>
      * @param float $KnowledgeUsage <p>知识库用量</p>
      * @param integer $ResourceStatus <p>资源包状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>3： 已到期</li><li>4： 即将到期</li></ul>
+     * @param float $CloudDiskCapacity <p>云盘容量</p><p>单位：GB</p>
+     * @param float $CloudDiskUsage <p>云盘用量</p><p>单位：GB</p>
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ResourcePackageInfo extends AbstractModel
 
         if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
             $this->ResourceStatus = $param["ResourceStatus"];
+        }
+
+        if (array_key_exists("CloudDiskCapacity",$param) and $param["CloudDiskCapacity"] !== null) {
+            $this->CloudDiskCapacity = $param["CloudDiskCapacity"];
+        }
+
+        if (array_key_exists("CloudDiskUsage",$param) and $param["CloudDiskUsage"] !== null) {
+            $this->CloudDiskUsage = $param["CloudDiskUsage"];
         }
     }
 }

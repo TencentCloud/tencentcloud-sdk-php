@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategyName(string $StrategyName) 设置<p>策略名称。</p>
  * @method boolean getBindStatus() 获取<p>当前用户是否绑定桌面，true：绑定，false：未绑定任何桌面</p>
  * @method void setBindStatus(boolean $BindStatus) 设置<p>当前用户是否绑定桌面，true：绑定，false：未绑定任何桌面</p>
+ * @method integer getLockRemainMs() 获取<p>用户登录锁定剩余时间</p>
+ * @method void setLockRemainMs(integer $LockRemainMs) 设置<p>用户登录锁定剩余时间</p>
  */
 class User extends AbstractModel
 {
@@ -94,6 +96,11 @@ class User extends AbstractModel
     public $BindStatus;
 
     /**
+     * @var integer <p>用户登录锁定剩余时间</p>
+     */
+    public $LockRemainMs;
+
+    /**
      * @param string $Id <p>用户ID。</p>
      * @param string $Name <p>名字。</p>
      * @param string $DisplayName <p>显示名字。</p>
@@ -104,6 +111,7 @@ class User extends AbstractModel
      * @param string $StrategyId <p>策略ID。</p>
      * @param string $StrategyName <p>策略名称。</p>
      * @param boolean $BindStatus <p>当前用户是否绑定桌面，true：绑定，false：未绑定任何桌面</p>
+     * @param integer $LockRemainMs <p>用户登录锁定剩余时间</p>
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class User extends AbstractModel
 
         if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
             $this->BindStatus = $param["BindStatus"];
+        }
+
+        if (array_key_exists("LockRemainMs",$param) and $param["LockRemainMs"] !== null) {
+            $this->LockRemainMs = $param["LockRemainMs"];
         }
     }
 }

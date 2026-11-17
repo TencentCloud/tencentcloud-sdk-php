@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvancedConfig(AgentAdvancedConfig $AdvancedConfig) 设置<p>高级配置</p>
  * @method array getExternalToolList() 获取<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
  * @method void setExternalToolList(array $ExternalToolList) 设置<p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+ * @method integer getProviderType() 获取<p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+ * @method void setProviderType(integer $ProviderType) 设置<p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+ * @method string getReferenceAppId() 获取<p>引用应用的ID</p>
+ * @method void setReferenceAppId(string $ReferenceAppId) 设置<p>引用应用的ID</p>
+ * @method integer getReferenceAppStatus() 获取<p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+ * @method void setReferenceAppStatus(integer $ReferenceAppStatus) 设置<p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+ * @method ReferenceAppDetail getReferenceApp() 获取<p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReferenceApp(ReferenceAppDetail $ReferenceApp) 设置<p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBuiltinToolList() 获取<p>内置工具列表</p>
+ * @method void setBuiltinToolList(array $BuiltinToolList) 设置<p>内置工具列表</p>
  */
 class AgentDetail extends AbstractModel
 {
@@ -87,6 +99,32 @@ class AgentDetail extends AbstractModel
     public $ExternalToolList;
 
     /**
+     * @var integer <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public $ProviderType;
+
+    /**
+     * @var string <p>引用应用的ID</p>
+     */
+    public $ReferenceAppId;
+
+    /**
+     * @var integer <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     */
+    public $ReferenceAppStatus;
+
+    /**
+     * @var ReferenceAppDetail <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReferenceApp;
+
+    /**
+     * @var array <p>内置工具列表</p>
+     */
+    public $BuiltinToolList;
+
+    /**
      * @param string $AgentId <p>Agent ID</p>
      * @param AgentProfile $Profile <p>Agent基本配置</p>
      * @param string $Instructions <p>系统提示词</p>
@@ -96,6 +134,12 @@ class AgentDetail extends AbstractModel
      * @param array $SkillList <p>技能详情</p>
      * @param AgentAdvancedConfig $AdvancedConfig <p>高级配置</p>
      * @param array $ExternalToolList <p>调用方执行的 Function Tool 列表</p><p>入参限制：仅在 C 端用户态 Agent 场景可用，B 端配置态 Agent 忽略该字段与</p>
+     * @param integer $ProviderType <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     * @param string $ReferenceAppId <p>引用应用的ID</p>
+     * @param integer $ReferenceAppStatus <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     * @param ReferenceAppDetail $ReferenceApp <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BuiltinToolList <p>内置工具列表</p>
      */
     function __construct()
     {
@@ -166,6 +210,32 @@ class AgentDetail extends AbstractModel
                 $obj = new AgentExternalToolConfig();
                 $obj->deserialize($value);
                 array_push($this->ExternalToolList, $obj);
+            }
+        }
+
+        if (array_key_exists("ProviderType",$param) and $param["ProviderType"] !== null) {
+            $this->ProviderType = $param["ProviderType"];
+        }
+
+        if (array_key_exists("ReferenceAppId",$param) and $param["ReferenceAppId"] !== null) {
+            $this->ReferenceAppId = $param["ReferenceAppId"];
+        }
+
+        if (array_key_exists("ReferenceAppStatus",$param) and $param["ReferenceAppStatus"] !== null) {
+            $this->ReferenceAppStatus = $param["ReferenceAppStatus"];
+        }
+
+        if (array_key_exists("ReferenceApp",$param) and $param["ReferenceApp"] !== null) {
+            $this->ReferenceApp = new ReferenceAppDetail();
+            $this->ReferenceApp->deserialize($param["ReferenceApp"]);
+        }
+
+        if (array_key_exists("BuiltinToolList",$param) and $param["BuiltinToolList"] !== null) {
+            $this->BuiltinToolList = [];
+            foreach ($param["BuiltinToolList"] as $key => $value){
+                $obj = new AgentBuiltinTool();
+                $obj->deserialize($value);
+                array_push($this->BuiltinToolList, $obj);
             }
         }
     }

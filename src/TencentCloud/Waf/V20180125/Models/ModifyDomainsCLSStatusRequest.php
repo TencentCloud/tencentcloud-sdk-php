@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomains() 获取需要修改的域名列表
  * @method void setDomains(array $Domains) 设置需要修改的域名列表
- * @method integer getStatus() 获取修改域名的访问日志开关为Status
- * @method void setStatus(integer $Status) 设置修改域名的访问日志开关为Status
+ * @method integer getStatus() 获取CLS访问日志开关，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置CLS访问日志开关，0表示关闭，1表示开启
  */
 class ModifyDomainsCLSStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyDomainsCLSStatusRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var integer 修改域名的访问日志开关为Status
+     * @var integer CLS访问日志开关，0表示关闭，1表示开启
      */
     public $Status;
 
     /**
      * @param array $Domains 需要修改的域名列表
-     * @param integer $Status 修改域名的访问日志开关为Status
+     * @param integer $Status CLS访问日志开关，0表示关闭，1表示开启
      */
     function __construct()
     {

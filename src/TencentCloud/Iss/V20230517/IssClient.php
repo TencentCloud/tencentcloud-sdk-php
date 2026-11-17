@@ -111,6 +111,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListVLPlansResponse ListVLPlans(Models\ListVLPlansRequest $req) 获取视觉理解计划列表
  * @method Models\ListVLTemplatesResponse ListVLTemplates(Models\ListVLTemplatesRequest $req) 获取视觉理解模板列表
  * @method Models\ListVideoDownloadTaskResponse ListVideoDownloadTask(Models\ListVideoDownloadTaskRequest $req) 查询本店里录像下载任务列表
+ * @method Models\ListVideoSnapshotResultResponse ListVideoSnapshotResult(Models\ListVideoSnapshotResultRequest $req) 获取截图结果列表
  * @method Models\ListVideoSnapshotTemplateResponse ListVideoSnapshotTemplate(Models\ListVideoSnapshotTemplateRequest $req) 获取截图模板详情列表
  * @method Models\ModifyVLPlanResponse ModifyVLPlan(Models\ModifyVLPlanRequest $req) 修改视觉理解计划
  * @method Models\ModifyVideoSnapshotConfigResponse ModifyVideoSnapshotConfig(Models\ModifyVideoSnapshotConfigRequest $req) 更新截图配置

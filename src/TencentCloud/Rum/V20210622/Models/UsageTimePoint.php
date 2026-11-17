@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置<p>时间 YYYY-MM-DD HH:00:00</p>
  * @method integer getReportVolume() 获取<p>上报量</p>
  * @method void setReportVolume(integer $ReportVolume) 设置<p>上报量</p>
+ * @method string getDatetime() 获取<p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+ * @method void setDatetime(string $Datetime) 设置<p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
  */
 class UsageTimePoint extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UsageTimePoint extends AbstractModel
     public $ReportVolume;
 
     /**
+     * @var string <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public $Datetime;
+
+    /**
      * @param string $Time <p>时间 YYYY-MM-DD HH:00:00</p>
      * @param integer $ReportVolume <p>上报量</p>
+     * @param string $Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class UsageTimePoint extends AbstractModel
 
         if (array_key_exists("ReportVolume",$param) and $param["ReportVolume"] !== null) {
             $this->ReportVolume = $param["ReportVolume"];
+        }
+
+        if (array_key_exists("Datetime",$param) and $param["Datetime"] !== null) {
+            $this->Datetime = $param["Datetime"];
         }
     }
 }

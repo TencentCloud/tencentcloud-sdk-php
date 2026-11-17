@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances返回参数结构体
  *
- * @method array getInstanceList() 获取返回查询到的所有实例信息
+ * @method array getInstanceList() 获取<p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceList(array $InstanceList) 设置返回查询到的所有实例信息
+ * @method void setInstanceList(array $InstanceList) 设置<p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取返回当前查询到的实例总数
+ * @method integer getTotal() 获取<p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置返回当前查询到的实例总数
+ * @method void setTotal(integer $Total) 设置<p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 返回查询到的所有实例信息
+     * @var array <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
     /**
-     * @var integer 返回当前查询到的实例总数
+     * @var integer <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
@@ -51,9 +51,9 @@ class DescribeInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceList 返回查询到的所有实例信息
+     * @param array $InstanceList <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 返回当前查询到的实例总数
+     * @param integer $Total <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * [获取录音识别结果的返回参数](https://cloud.tencent.com/document/product/1093/37822#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0)
  *
- * @method integer getTaskId() 获取任务标识。注意：TaskId数据类型为uint64。
- * @method void setTaskId(integer $TaskId) 设置任务标识。注意：TaskId数据类型为uint64。
- * @method integer getStatus() 获取任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
- * @method void setStatus(integer $Status) 设置任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
- * @method string getStatusStr() 获取任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
- * @method void setStatusStr(string $StatusStr) 设置任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
- * @method string getResult() 获取识别结果。
- * @method void setResult(string $Result) 设置识别结果。
- * @method string getErrorMsg() 获取失败原因说明。
- * @method void setErrorMsg(string $ErrorMsg) 设置失败原因说明。
- * @method array getResultDetail() 获取识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+ * @method integer getTaskId() 获取<p>任务标识。注意：TaskId数据类型为uint64。</p>
+ * @method void setTaskId(integer $TaskId) 设置<p>任务标识。注意：TaskId数据类型为uint64。</p>
+ * @method integer getStatus() 获取<p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
+ * @method void setStatus(integer $Status) 设置<p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
+ * @method string getStatusStr() 获取<p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
+ * @method void setStatusStr(string $StatusStr) 设置<p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
+ * @method string getResult() 获取<p>识别结果。</p>
+ * @method void setResult(string $Result) 设置<p>识别结果。</p>
+ * @method string getErrorMsg() 获取<p>失败原因说明。</p>
+ * @method void setErrorMsg(string $ErrorMsg) 设置<p>失败原因说明。</p>
+ * @method array getResultDetail() 获取<p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResultDetail(array $ResultDetail) 设置识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+ * @method void setResultDetail(array $ResultDetail) 设置<p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getAudioDuration() 获取音频时长(秒)。
+ * @method float getAudioDuration() 获取<p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAudioDuration(float $AudioDuration) 设置音频时长(秒)。
+ * @method void setAudioDuration(float $AudioDuration) 设置<p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLlmResults() 获取大模型后处理结果
- * @method void setLlmResults(array $LlmResults) 设置大模型后处理结果
+ * @method array getLlmResults() 获取<p>大模型后处理结果</p>
+ * @method void setLlmResults(array $LlmResults) 设置<p>大模型后处理结果</p>
+ * @method string getSpeakerContextId() 获取<p>说话人上下文 ID</p>
+ * @method void setSpeakerContextId(string $SpeakerContextId) 设置<p>说话人上下文 ID</p>
  */
 class TaskStatus extends AbstractModel
 {
     /**
-     * @var integer 任务标识。注意：TaskId数据类型为uint64。
+     * @var integer <p>任务标识。注意：TaskId数据类型为uint64。</p>
      */
     public $TaskId;
 
     /**
-     * @var integer 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+     * @var integer <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
      */
     public $Status;
 
     /**
-     * @var string 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+     * @var string <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
      */
     public $StatusStr;
 
     /**
-     * @var string 识别结果。
+     * @var string <p>识别结果。</p>
      */
     public $Result;
 
     /**
-     * @var string 失败原因说明。
+     * @var string <p>失败原因说明。</p>
      */
     public $ErrorMsg;
 
     /**
-     * @var array 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * @var array <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultDetail;
 
     /**
-     * @var float 音频时长(秒)。
+     * @var float <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioDuration;
 
     /**
-     * @var array 大模型后处理结果
+     * @var array <p>大模型后处理结果</p>
      */
     public $LlmResults;
 
     /**
-     * @param integer $TaskId 任务标识。注意：TaskId数据类型为uint64。
-     * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
-     * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
-     * @param string $Result 识别结果。
-     * @param string $ErrorMsg 失败原因说明。
-     * @param array $ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * @var string <p>说话人上下文 ID</p>
+     */
+    public $SpeakerContextId;
+
+    /**
+     * @param integer $TaskId <p>任务标识。注意：TaskId数据类型为uint64。</p>
+     * @param integer $Status <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
+     * @param string $StatusStr <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
+     * @param string $Result <p>识别结果。</p>
+     * @param string $ErrorMsg <p>失败原因说明。</p>
+     * @param array $ResultDetail <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $AudioDuration 音频时长(秒)。
+     * @param float $AudioDuration <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LlmResults 大模型后处理结果
+     * @param array $LlmResults <p>大模型后处理结果</p>
+     * @param string $SpeakerContextId <p>说话人上下文 ID</p>
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class TaskStatus extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LlmResults, $obj);
             }
+        }
+
+        if (array_key_exists("SpeakerContextId",$param) and $param["SpeakerContextId"] !== null) {
+            $this->SpeakerContextId = $param["SpeakerContextId"];
         }
     }
 }

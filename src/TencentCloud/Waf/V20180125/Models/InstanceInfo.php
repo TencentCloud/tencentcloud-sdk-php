@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainPkg(DomainPackageNew $DomainPkg) 设置<p>域名扩展包信息</p>
  * @method integer getAppId() 获取<p>用户appid</p>
  * @method void setAppId(integer $AppId) 设置<p>用户appid</p>
- * @method string getEdition() 获取<p>clb或saas</p>
- * @method void setEdition(string $Edition) 设置<p>clb或saas</p>
+ * @method string getEdition() 获取<p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
+ * @method void setEdition(string $Edition) 设置<p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
  * @method FraudPkg getFraudPkg() 获取<p>业务安全包</p>
  * @method void setFraudPkg(FraudPkg $FraudPkg) 设置<p>业务安全包</p>
  * @method BotPkg getBotPkg() 获取<p>Bot资源包</p>
@@ -234,7 +234,7 @@ class InstanceInfo extends AbstractModel
     public $AppId;
 
     /**
-     * @var string <p>clb或saas</p>
+     * @var string <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
      */
     public $Edition;
 
@@ -462,7 +462,7 @@ class InstanceInfo extends AbstractModel
      * @param QPSPackageNew $QPS <p>qps扩展包信息</p>
      * @param DomainPackageNew $DomainPkg <p>域名扩展包信息</p>
      * @param integer $AppId <p>用户appid</p>
-     * @param string $Edition <p>clb或saas</p>
+     * @param string $Edition <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
      * @param FraudPkg $FraudPkg <p>业务安全包</p>
      * @param BotPkg $BotPkg <p>Bot资源包</p>
      * @param BotQPS $BotQPS <p>bot的qps详情</p>

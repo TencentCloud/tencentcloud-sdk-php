@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeight(integer $Weight) 设置节点权重
  * @method boolean getIsDefaultWeight() 获取是否默认权重
  * @method void setIsDefaultWeight(boolean $IsDefaultWeight) 设置是否默认权重
+ * @method string getNodeType() 获取节点类型
+ * @method void setNodeType(string $NodeType) 设置节点类型
  */
 class CloudNativeAPIGatewayNode extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CloudNativeAPIGatewayNode extends AbstractModel
     public $IsDefaultWeight;
 
     /**
+     * @var string 节点类型
+     */
+    public $NodeType;
+
+    /**
      * @param string $NodeId 云原生网关节点 id
      * @param string $NodeIp 节点 ip
      * @param string $ZoneId Zone id
@@ -96,6 +103,7 @@ class CloudNativeAPIGatewayNode extends AbstractModel
      * @param string $Status 状态
      * @param integer $Weight 节点权重
      * @param boolean $IsDefaultWeight 是否默认权重
+     * @param string $NodeType 节点类型
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CloudNativeAPIGatewayNode extends AbstractModel
 
         if (array_key_exists("IsDefaultWeight",$param) and $param["IsDefaultWeight"] !== null) {
             $this->IsDefaultWeight = $param["IsDefaultWeight"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
         }
     }
 }

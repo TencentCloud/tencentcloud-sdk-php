@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterCaCertificate返回参数结构体
  *
- * @method string getInstanceId() 获取mqtt实例ID
- * @method void setInstanceId(string $InstanceId) 设置mqtt实例ID
- * @method string getCaSn() 获取ca 证书的序列号
- * @method void setCaSn(string $CaSn) 设置ca 证书的序列号
+ * @method string getInstanceId() 获取<p>mqtt实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>mqtt实例ID</p>
+ * @method string getCaSn() 获取<p>ca 证书的序列号</p>
+ * @method void setCaSn(string $CaSn) 设置<p>ca 证书的序列号</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RegisterCaCertificateResponse extends AbstractModel
 {
     /**
-     * @var string mqtt实例ID
+     * @var string <p>mqtt实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string ca 证书的序列号
+     * @var string <p>ca 证书的序列号</p>
      */
     public $CaSn;
 
@@ -45,8 +45,8 @@ class RegisterCaCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId mqtt实例ID
-     * @param string $CaSn ca 证书的序列号
+     * @param string $InstanceId <p>mqtt实例ID</p>
+     * @param string $CaSn <p>ca 证书的序列号</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

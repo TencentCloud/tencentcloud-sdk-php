@@ -20,138 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceMajorVersion请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
- * @method string getTargetDBKernelVersion() 获取目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
- * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
- * @method boolean getUpgradeCheck() 获取是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
- * @method void setUpgradeCheck(boolean $UpgradeCheck) 设置是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
- * @method boolean getBackupBeforeUpgrade() 获取升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
- * @method void setBackupBeforeUpgrade(boolean $BackupBeforeUpgrade) 设置升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
- * @method integer getStatisticsRefreshOption() 获取统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，
-0：不需要收集统计信息；
-1：实例恢复写之前收集统计信息；
-3：实例恢复写之后收集统计信息。
-UpgradeCheck为True时，此参数无效。
- * @method void setStatisticsRefreshOption(integer $StatisticsRefreshOption) 设置统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，
-0：不需要收集统计信息；
-1：实例恢复写之前收集统计信息；
-3：实例恢复写之后收集统计信息。
-UpgradeCheck为True时，此参数无效。
- * @method integer getExtensionUpgradeOption() 获取插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行"ALTER EXTENSION UPDATE"。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：
-0：不需要自动升级插件；
-1：恢复写之前升级插件；
-2：恢复写之后升级插件。
-UpgradeCheck为True时，此参数无效。
- * @method void setExtensionUpgradeOption(integer $ExtensionUpgradeOption) 设置插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行"ALTER EXTENSION UPDATE"。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：
-0：不需要自动升级插件；
-1：恢复写之前升级插件；
-2：恢复写之后升级插件。
-UpgradeCheck为True时，此参数无效。
- * @method integer getUpgradeTimeOption() 获取升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：
-0：自动执行，不需要指定时间窗；
-1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；
-2：在实例运维时间窗内执行。
-UpgradeCheck为True时，此参数无效。
- * @method void setUpgradeTimeOption(integer $UpgradeTimeOption) 设置升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：
-0：自动执行，不需要指定时间窗；
-1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；
-2：在实例运维时间窗内执行。
-UpgradeCheck为True时，此参数无效。
- * @method string getUpgradeTimeBegin() 获取升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
- * @method void setUpgradeTimeBegin(string $UpgradeTimeBegin) 设置升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
- * @method string getUpgradeTimeEnd() 获取升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
- * @method void setUpgradeTimeEnd(string $UpgradeTimeEnd) 设置升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
+ * @method string getDBInstanceId() 获取<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method void setDBInstanceId(string $DBInstanceId) 设置<p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+ * @method string getTargetDBKernelVersion() 获取<p>目标内核版本号，可以通过API <a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取可以升级的目标内核版本号。</p>
+ * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置<p>目标内核版本号，可以通过API <a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取可以升级的目标内核版本号。</p>
+ * @method boolean getUpgradeCheck() 获取<p>是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。</p>
+ * @method void setUpgradeCheck(boolean $UpgradeCheck) 设置<p>是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。</p>
+ * @method boolean getBackupBeforeUpgrade() 获取<p>升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。</p>
+ * @method void setBackupBeforeUpgrade(boolean $BackupBeforeUpgrade) 设置<p>升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。</p>
+ * @method integer getStatisticsRefreshOption() 获取<p>统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，<br>0：不需要收集统计信息；<br>1：实例恢复写之前收集统计信息；<br>3：实例恢复写之后收集统计信息。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method void setStatisticsRefreshOption(integer $StatisticsRefreshOption) 设置<p>统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，<br>0：不需要收集统计信息；<br>1：实例恢复写之前收集统计信息；<br>3：实例恢复写之后收集统计信息。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method integer getExtensionUpgradeOption() 获取<p>插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行&quot;ALTER EXTENSION UPDATE&quot;。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：<br>0：不需要自动升级插件；<br>1：恢复写之前升级插件；<br>2：恢复写之后升级插件。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method void setExtensionUpgradeOption(integer $ExtensionUpgradeOption) 设置<p>插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行&quot;ALTER EXTENSION UPDATE&quot;。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：<br>0：不需要自动升级插件；<br>1：恢复写之前升级插件；<br>2：恢复写之后升级插件。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method integer getUpgradeTimeOption() 获取<p>升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：<br>0：自动执行，不需要指定时间窗；<br>1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；<br>2：在实例运维时间窗内执行。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method void setUpgradeTimeOption(integer $UpgradeTimeOption) 设置<p>升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：<br>0：自动执行，不需要指定时间窗；<br>1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；<br>2：在实例运维时间窗内执行。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method string getUpgradeTimeBegin() 获取<p>升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method void setUpgradeTimeBegin(string $UpgradeTimeBegin) 设置<p>升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method string getUpgradeTimeEnd() 获取<p>升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method void setUpgradeTimeEnd(string $UpgradeTimeEnd) 设置<p>升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+ * @method boolean getUpgradeReadOnlyInstance() 获取<p>升级时是否携带RO。开启时在RO重建过程中会存在RO数据延迟现象。</p><p>默认值：false</p>
+ * @method void setUpgradeReadOnlyInstance(boolean $UpgradeReadOnlyInstance) 设置<p>升级时是否携带RO。开启时在RO重建过程中会存在RO数据延迟现象。</p><p>默认值：false</p>
  */
 class UpgradeDBInstanceMajorVersionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @var string <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public $DBInstanceId;
 
     /**
-     * @var string 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
+     * @var string <p>目标内核版本号，可以通过API <a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取可以升级的目标内核版本号。</p>
      */
     public $TargetDBKernelVersion;
 
     /**
-     * @var boolean 是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
+     * @var boolean <p>是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。</p>
      */
     public $UpgradeCheck;
 
     /**
-     * @var boolean 升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
+     * @var boolean <p>升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。</p>
      */
     public $BackupBeforeUpgrade;
 
     /**
-     * @var integer 统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，
-0：不需要收集统计信息；
-1：实例恢复写之前收集统计信息；
-3：实例恢复写之后收集统计信息。
-UpgradeCheck为True时，此参数无效。
+     * @var integer <p>统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，<br>0：不需要收集统计信息；<br>1：实例恢复写之前收集统计信息；<br>3：实例恢复写之后收集统计信息。<br>UpgradeCheck为True时，此参数无效。</p>
      */
     public $StatisticsRefreshOption;
 
     /**
-     * @var integer 插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行"ALTER EXTENSION UPDATE"。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：
-0：不需要自动升级插件；
-1：恢复写之前升级插件；
-2：恢复写之后升级插件。
-UpgradeCheck为True时，此参数无效。
+     * @var integer <p>插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行&quot;ALTER EXTENSION UPDATE&quot;。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：<br>0：不需要自动升级插件；<br>1：恢复写之前升级插件；<br>2：恢复写之后升级插件。<br>UpgradeCheck为True时，此参数无效。</p>
      */
     public $ExtensionUpgradeOption;
 
     /**
-     * @var integer 升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：
-0：自动执行，不需要指定时间窗；
-1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；
-2：在实例运维时间窗内执行。
-UpgradeCheck为True时，此参数无效。
+     * @var integer <p>升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：<br>0：自动执行，不需要指定时间窗；<br>1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；<br>2：在实例运维时间窗内执行。<br>UpgradeCheck为True时，此参数无效。</p>
      */
     public $UpgradeTimeOption;
 
     /**
-     * @var string 升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
+     * @var string <p>升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
      */
     public $UpgradeTimeBegin;
 
     /**
-     * @var string 升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
+     * @var string <p>升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
      */
     public $UpgradeTimeEnd;
 
     /**
-     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param string $TargetDBKernelVersion 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
-     * @param boolean $UpgradeCheck 是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
-     * @param boolean $BackupBeforeUpgrade 升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
-     * @param integer $StatisticsRefreshOption 统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，
-0：不需要收集统计信息；
-1：实例恢复写之前收集统计信息；
-3：实例恢复写之后收集统计信息。
-UpgradeCheck为True时，此参数无效。
-     * @param integer $ExtensionUpgradeOption 插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行"ALTER EXTENSION UPDATE"。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：
-0：不需要自动升级插件；
-1：恢复写之前升级插件；
-2：恢复写之后升级插件。
-UpgradeCheck为True时，此参数无效。
-     * @param integer $UpgradeTimeOption 升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：
-0：自动执行，不需要指定时间窗；
-1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；
-2：在实例运维时间窗内执行。
-UpgradeCheck为True时，此参数无效。
-     * @param string $UpgradeTimeBegin 升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
-     * @param string $UpgradeTimeEnd 升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。
-UpgradeCheck为True时，此参数无效。
+     * @var boolean <p>升级时是否携带RO。开启时在RO重建过程中会存在RO数据延迟现象。</p><p>默认值：false</p>
+     */
+    public $UpgradeReadOnlyInstance;
+
+    /**
+     * @param string $DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param string $TargetDBKernelVersion <p>目标内核版本号，可以通过API <a href="https://cloud.tencent.com/document/product/409/89018">DescribeDBVersions</a>获取可以升级的目标内核版本号。</p>
+     * @param boolean $UpgradeCheck <p>是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。</p>
+     * @param boolean $BackupBeforeUpgrade <p>升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。</p>
+     * @param integer $StatisticsRefreshOption <p>统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，<br>0：不需要收集统计信息；<br>1：实例恢复写之前收集统计信息；<br>3：实例恢复写之后收集统计信息。<br>UpgradeCheck为True时，此参数无效。</p>
+     * @param integer $ExtensionUpgradeOption <p>插件升级选项，pg_upgrade不会升级任何插件，需要在升级完成后在创建过插件的库上执行&quot;ALTER EXTENSION UPDATE&quot;。发起升级实例大版本时可以指定在实例恢复写前/后是否需要升级任务自动升级插件版本。可选值包括：<br>0：不需要自动升级插件；<br>1：恢复写之前升级插件；<br>2：恢复写之后升级插件。<br>UpgradeCheck为True时，此参数无效。</p>
+     * @param integer $UpgradeTimeOption <p>升级时间选项，升级过程中会有一段时间实例只读，并会有一次秒级闪断，发起升级时需要选择这段影响的时间窗。可选值包括：<br>0：自动执行，不需要指定时间窗；<br>1：指定本次升级任务的时间窗，通过参数UpgradeTimeBegin和UpgradeTimeEnd设置；<br>2：在实例运维时间窗内执行。<br>UpgradeCheck为True时，此参数无效。</p>
+     * @param string $UpgradeTimeBegin <p>升级时间窗开始时间，时间格式：HH:MM:SS，例如：01:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+     * @param string $UpgradeTimeEnd <p>升级时间窗截止时间，时间格式：HH:MM:SS，例如：02:00:00。当UpgradeTimeOption为1时，该参数有效。<br>UpgradeCheck为True时，此参数无效。</p>
+     * @param boolean $UpgradeReadOnlyInstance <p>升级时是否携带RO。开启时在RO重建过程中会存在RO数据延迟现象。</p><p>默认值：false</p>
      */
     function __construct()
     {
@@ -200,6 +152,10 @@ UpgradeCheck为True时，此参数无效。
 
         if (array_key_exists("UpgradeTimeEnd",$param) and $param["UpgradeTimeEnd"] !== null) {
             $this->UpgradeTimeEnd = $param["UpgradeTimeEnd"];
+        }
+
+        if (array_key_exists("UpgradeReadOnlyInstance",$param) and $param["UpgradeReadOnlyInstance"] !== null) {
+            $this->UpgradeReadOnlyInstance = $param["UpgradeReadOnlyInstance"];
         }
     }
 }

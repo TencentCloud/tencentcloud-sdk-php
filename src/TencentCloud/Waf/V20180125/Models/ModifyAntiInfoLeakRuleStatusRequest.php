@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getRuleId() 获取规则
  * @method void setRuleId(integer $RuleId) 设置规则
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取防信息泄露规则状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置防信息泄露规则状态，0表示关闭，1表示开启
  */
 class ModifyAntiInfoLeakRuleStatusRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAntiInfoLeakRuleStatusRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var integer 状态
+     * @var integer 防信息泄露规则状态，0表示关闭，1表示开启
      */
     public $Status;
 
     /**
      * @param string $Domain 域名
      * @param integer $RuleId 规则
-     * @param integer $Status 状态
+     * @param integer $Status 防信息泄露规则状态，0表示关闭，1表示开启
      */
     function __construct()
     {

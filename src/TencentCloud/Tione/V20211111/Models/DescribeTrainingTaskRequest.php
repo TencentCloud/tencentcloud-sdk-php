@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTrainingTask请求参数结构体
  *
- * @method string getId() 获取训练任务ID
- * @method void setId(string $Id) 设置训练任务ID
+ * @method string getId() 获取<p>训练任务ID</p>
+ * @method void setId(string $Id) 设置<p>训练任务ID</p>
  * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
- * @method string getInstanceId() 获取训练任务实例ID
- * @method void setInstanceId(string $InstanceId) 设置训练任务实例ID
+ * @method string getInstanceId() 获取<p>训练任务实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>训练任务实例ID</p>
  */
 class DescribeTrainingTaskRequest extends AbstractModel
 {
     /**
-     * @var string 训练任务ID
+     * @var string <p>训练任务ID</p>
      */
     public $Id;
 
@@ -40,14 +40,14 @@ class DescribeTrainingTaskRequest extends AbstractModel
     public $TiProjectId;
 
     /**
-     * @var string 训练任务实例ID
+     * @var string <p>训练任务实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @param string $Id 训练任务ID
+     * @param string $Id <p>训练任务ID</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
-     * @param string $InstanceId 训练任务实例ID
+     * @param string $InstanceId <p>训练任务实例ID</p>
      */
     function __construct()
     {

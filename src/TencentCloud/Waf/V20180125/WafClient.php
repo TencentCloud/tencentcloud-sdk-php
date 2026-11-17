@@ -139,10 +139,12 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
  * @method Models\DescribeLLMContentRuleListResponse DescribeLLMContentRuleList(Models\DescribeLLMContentRuleListRequest $req) 获取LLM大模型内容防护规则
  * @method Models\DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(Models\DescribeLLMContentSecCheckRequest $req) 大模型请求内容和响应内容审核接口
+ * @method Models\DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetail(Models\DescribeLLMHourBillDetailRequest $req) 查询单实例、单日的按小时账单明细，包含账单预估总额、分项费用、分时趋势和分时明细
  * @method Models\DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrary(Models\DescribeLLMKeywordLibraryRequest $req) 查询关键词列表
  * @method Models\DescribeLLMSdkAccessResponse DescribeLLMSdkAccess(Models\DescribeLLMSdkAccessRequest $req) 查询sdk接入配置
  * @method Models\DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRules(Models\DescribeLLMWafDLPRulesRequest $req) 查询 DLP 规则
  * @method Models\DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(Models\DescribeLLMWafProtectRulesRequest $req) 查询 LLM 规则请求
+ * @method Models\DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRules(Models\DescribeLLMWafToolCallRulesRequest $req) 查询 Tool Call 规则
  * @method Models\DescribeLogHistogramResponse DescribeLogHistogram(Models\DescribeLogHistogramRequest $req) 本接口用于构建日志数量直方图
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看CLB/TSE防护对象列表
@@ -240,9 +242,11 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyLLMContentRuleResponse ModifyLLMContentRule(Models\ModifyLLMContentRuleRequest $req) 更新大模型内容安全规则
  * @method Models\ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatus(Models\ModifyLLMContentRuleStatusRequest $req) 切换大模型内容防护规则开关
  * @method Models\ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrary(Models\ModifyLLMKeywordLibraryRequest $req) 用户修改自定义词库
+ * @method Models\ModifyLLMSdkAccessResponse ModifyLLMSdkAccess(Models\ModifyLLMSdkAccessRequest $req) llmwaf-sdk边界接入配置接口
  * @method Models\ModifyLLMStatusResponse ModifyLLMStatus(Models\ModifyLLMStatusRequest $req) 修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
  * @method Models\ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRule(Models\ModifyLLMWafDLPRuleRequest $req) 修改llmwaf DLP 规则
  * @method Models\ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(Models\ModifyLLMWafProtectRuleRequest $req) 修改 LLM 规则
+ * @method Models\ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRule(Models\ModifyLLMWafToolCallRuleRequest $req) 修改 Tool Call 规则
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
  * @method Models\ModifyObjectsResponse ModifyObjects(Models\ModifyObjectsRequest $req) 批量修改防护对象

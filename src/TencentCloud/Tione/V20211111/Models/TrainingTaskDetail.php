@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取<p>地域</p>
  * @method void setRegion(string $Region) 设置<p>地域</p>
- * @method string getFrameworkName() 获取<p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
+ * @method string getFrameworkName() 获取<p>训练框架名称，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrameworkName(string $FrameworkName) 设置<p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
+ * @method void setFrameworkName(string $FrameworkName) 设置<p>训练框架名称，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrameworkVersion() 获取<p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,8 +144,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置<p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
- * @method void setStatus(string $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
+ * @method string getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>SUCCEED： 已完成</li><li>FAILED： 异常</li><li>SUBMIT_FAILED： 提交失败</li></ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>SUCCEED： 已完成</li><li>FAILED： 异常</li><li>SUBMIT_FAILED： 提交失败</li></ul>
  * @method string getCallbackUrl() 获取<p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackUrl(string $CallbackUrl) 设置<p>回调地址</p>
@@ -191,7 +191,7 @@ class TrainingTaskDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var string <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
+     * @var string <p>训练框架名称，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameworkName;
@@ -374,7 +374,7 @@ class TrainingTaskDetail extends AbstractModel
     public $Message;
 
     /**
-     * @var string <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
+     * @var string <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>SUCCEED： 已完成</li><li>FAILED： 异常</li><li>SUBMIT_FAILED： 提交失败</li></ul>
      */
     public $Status;
 
@@ -407,7 +407,7 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $SubUinName <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region <p>地域</p>
-     * @param string $FrameworkName <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
+     * @param string $FrameworkName <p>训练框架名称，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -462,7 +462,7 @@ class TrainingTaskDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>FAILED： 异常</li><li>SUCCEED： 已完成</li><li>SUBMIT_FAILED： 提交失败</li></ul>
+     * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>SUBMITTING： 提交中</li><li>PENDING： 排队中</li><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>SUCCEED： 已完成</li><li>FAILED： 异常</li><li>SUBMIT_FAILED： 提交失败</li></ul>
      * @param string $CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CodeRepos <p>任务关联的代码仓库配置</p>

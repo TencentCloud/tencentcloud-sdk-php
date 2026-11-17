@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSAgent(ResourceProtectStat $COSAgent) 设置<p>COS备份受保护统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceProtectStat getLocalCVMAgent() 获取<p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalCVMAgent(ResourceProtectStat $LocalCVMAgent) 设置<p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceProtectStat getLocalCFSAgent() 获取<p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocalCFSAgent(ResourceProtectStat $LocalCFSAgent) 设置<p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectedResourceOverview extends AbstractModel
 {
@@ -72,6 +80,18 @@ class ProtectedResourceOverview extends AbstractModel
     public $COSAgent;
 
     /**
+     * @var ResourceProtectStat <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalCVMAgent;
+
+    /**
+     * @var ResourceProtectStat <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocalCFSAgent;
+
+    /**
      * @param integer $TotalProtectedCount <p>受保护资源总数</p>
      * @param integer $TotalResourceCount <p>总资源数</p>
      * @param ResourceProtectStat $Cvm <p>CVM整机备份受保护统计</p>
@@ -79,6 +99,10 @@ class ProtectedResourceOverview extends AbstractModel
      * @param ResourceProtectStat $CFSAgent <p>CFS文件备份受保护统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceProtectStat $COSAgent <p>COS备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceProtectStat $LocalCVMAgent <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceProtectStat $LocalCFSAgent <p>非腾讯云文件存储备份受保护统计</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -120,6 +144,16 @@ class ProtectedResourceOverview extends AbstractModel
         if (array_key_exists("COSAgent",$param) and $param["COSAgent"] !== null) {
             $this->COSAgent = new ResourceProtectStat();
             $this->COSAgent->deserialize($param["COSAgent"]);
+        }
+
+        if (array_key_exists("LocalCVMAgent",$param) and $param["LocalCVMAgent"] !== null) {
+            $this->LocalCVMAgent = new ResourceProtectStat();
+            $this->LocalCVMAgent->deserialize($param["LocalCVMAgent"]);
+        }
+
+        if (array_key_exists("LocalCFSAgent",$param) and $param["LocalCFSAgent"] !== null) {
+            $this->LocalCFSAgent = new ResourceProtectStat();
+            $this->LocalCFSAgent->deserialize($param["LocalCFSAgent"]);
         }
     }
 }

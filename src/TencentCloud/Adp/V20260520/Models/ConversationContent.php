@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnterpriseCharts(string $EnterpriseCharts) 设置<p>企业表单</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConversationFileInfo getFile() 获取<p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFile(ConversationFileInfo $File) 设置<p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOptionCardList() 获取<p>选项卡列表</p>
  * @method void setOptionCardList(array $OptionCardList) 设置<p>选项卡列表</p>
  * @method array getOptionCards() 获取<p>选项卡列表</p>
@@ -43,6 +47,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOptionMode() 获取<p>选项卡模式 枚举值: 0-OPTION_MODE_SINGLE(单选), 1-OPTION_MODE_MULTI(多选)</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptionMode(integer $OptionMode) 设置<p>选项卡模式 枚举值: 0-OPTION_MODE_SINGLE(单选), 1-OPTION_MODE_MULTI(多选)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConversationQuestionnaire getQuestionnaire() 获取<p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuestionnaire(ConversationQuestionnaire $Questionnaire) 设置<p>问卷信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuoteInfoList() 获取<p>引用角标信息列表</p>
  * @method void setQuoteInfoList(array $QuoteInfoList) 设置<p>引用角标信息列表</p>
@@ -60,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskList(array $TaskList) 设置<p>智能体任务列表</p>
  * @method array getTasks() 获取<p>智能体任务列表</p>
  * @method void setTasks(array $Tasks) 设置<p>智能体任务列表</p>
+ * @method ConversationWidget getWidget() 获取<p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidget(ConversationWidget $Widget) 设置<p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ConversationWidgetAction getWidgetAction() 获取<p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWidgetAction(ConversationWidgetAction $WidgetAction) 设置<p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkflowInput() 获取<p>工作流输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowInput(string $WorkflowInput) 设置<p>工作流输入参数</p>
@@ -104,6 +120,12 @@ class ConversationContent extends AbstractModel
     public $EnterpriseCharts;
 
     /**
+     * @var ConversationFileInfo <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $File;
+
+    /**
      * @var array <p>选项卡列表</p>
      */
     public $OptionCardList;
@@ -118,6 +140,12 @@ class ConversationContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionMode;
+
+    /**
+     * @var ConversationQuestionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Questionnaire;
 
     /**
      * @var array <p>引用角标信息列表</p>
@@ -156,6 +184,18 @@ class ConversationContent extends AbstractModel
     public $Tasks;
 
     /**
+     * @var ConversationWidget <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Widget;
+
+    /**
+     * @var ConversationWidgetAction <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WidgetAction;
+
+    /**
      * @var string <p>工作流输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -176,9 +216,13 @@ class ConversationContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnterpriseCharts <p>企业表单</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConversationFileInfo $File <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OptionCardList <p>选项卡列表</p>
      * @param array $OptionCards <p>选项卡列表</p>
      * @param integer $OptionMode <p>选项卡模式 枚举值: 0-OPTION_MODE_SINGLE(单选), 1-OPTION_MODE_MULTI(多选)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConversationQuestionnaire $Questionnaire <p>问卷信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QuoteInfoList <p>引用角标信息列表</p>
      * @param array $QuoteInfos <p>引用角标信息列表</p>
@@ -188,6 +232,10 @@ class ConversationContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskList <p>智能体任务列表</p>
      * @param array $Tasks <p>智能体任务列表</p>
+     * @param ConversationWidget $Widget <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConversationWidgetAction $WidgetAction <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkflowInput <p>工作流输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConversationMcpApp $McpApp <p>MCP-APP调用信息</p>
@@ -230,6 +278,11 @@ class ConversationContent extends AbstractModel
             $this->EnterpriseCharts = $param["EnterpriseCharts"];
         }
 
+        if (array_key_exists("File",$param) and $param["File"] !== null) {
+            $this->File = new ConversationFileInfo();
+            $this->File->deserialize($param["File"]);
+        }
+
         if (array_key_exists("OptionCardList",$param) and $param["OptionCardList"] !== null) {
             $this->OptionCardList = $param["OptionCardList"];
         }
@@ -240,6 +293,11 @@ class ConversationContent extends AbstractModel
 
         if (array_key_exists("OptionMode",$param) and $param["OptionMode"] !== null) {
             $this->OptionMode = $param["OptionMode"];
+        }
+
+        if (array_key_exists("Questionnaire",$param) and $param["Questionnaire"] !== null) {
+            $this->Questionnaire = new ConversationQuestionnaire();
+            $this->Questionnaire->deserialize($param["Questionnaire"]);
         }
 
         if (array_key_exists("QuoteInfoList",$param) and $param["QuoteInfoList"] !== null) {
@@ -298,6 +356,16 @@ class ConversationContent extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tasks, $obj);
             }
+        }
+
+        if (array_key_exists("Widget",$param) and $param["Widget"] !== null) {
+            $this->Widget = new ConversationWidget();
+            $this->Widget->deserialize($param["Widget"]);
+        }
+
+        if (array_key_exists("WidgetAction",$param) and $param["WidgetAction"] !== null) {
+            $this->WidgetAction = new ConversationWidgetAction();
+            $this->WidgetAction->deserialize($param["WidgetAction"]);
         }
 
         if (array_key_exists("WorkflowInput",$param) and $param["WorkflowInput"] !== null) {

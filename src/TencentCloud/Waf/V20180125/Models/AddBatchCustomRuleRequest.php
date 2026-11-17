@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionRatio(integer $ActionRatio) 设置<p>动作灰度比例</p>
  * @method array getGroupIds() 获取<p>绑定的防护组ID</p>
  * @method void setGroupIds(array $GroupIds) 设置<p>绑定的防护组ID</p>
+ * @method integer getPreview() 获取自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+ * @method void setPreview(integer $Preview) 设置自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
  */
 class AddBatchCustomRuleRequest extends AbstractModel
 {
@@ -136,6 +148,16 @@ class AddBatchCustomRuleRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var integer 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public $Preview;
+
+    /**
      * @param string $Name <p>规则名称</p>
      * @param integer $ExpireTime <p>如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）</p>
      * @param integer $SortId <p>优先级</p>
@@ -152,6 +174,12 @@ class AddBatchCustomRuleRequest extends AbstractModel
      * @param string $PageId <p>页面ID</p>
      * @param integer $ActionRatio <p>动作灰度比例</p>
      * @param array $GroupIds <p>绑定的防护组ID</p>
+     * @param integer $Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
      */
     function __construct()
     {
@@ -234,6 +262,10 @@ class AddBatchCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

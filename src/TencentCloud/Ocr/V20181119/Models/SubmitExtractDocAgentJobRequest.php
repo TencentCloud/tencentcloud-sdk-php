@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelConfig(string $ModelConfig) 设置<p>model_hunyuan:选择混元底座视觉大模型精调抽取任务  model_youtu：选择优图底座多模态大模型精调抽取任务</p>
  * @method integer getAgentType() 获取<p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
  * @method void setAgentType(integer $AgentType) 设置<p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+ * @method string getQuestionConfigMap() 获取<p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+ * @method void setQuestionConfigMap(string $QuestionConfigMap) 设置<p>输出配置扩展，当key对应为1表示开启配置开关。</p>
  */
 class SubmitExtractDocAgentJobRequest extends AbstractModel
 {
@@ -88,6 +90,11 @@ class SubmitExtractDocAgentJobRequest extends AbstractModel
     public $AgentType;
 
     /**
+     * @var string <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+     */
+    public $QuestionConfigMap;
+
+    /**
      * @param string $ImageBase64 <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      * @param string $ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      * @param integer $PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为前5页。</p>
@@ -97,6 +104,7 @@ class SubmitExtractDocAgentJobRequest extends AbstractModel
      * @param integer $FileEndPageNumber <p>结束页</p>
      * @param string $ModelConfig <p>model_hunyuan:选择混元底座视觉大模型精调抽取任务  model_youtu：选择优图底座多模态大模型精调抽取任务</p>
      * @param integer $AgentType <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+     * @param string $QuestionConfigMap <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class SubmitExtractDocAgentJobRequest extends AbstractModel
 
         if (array_key_exists("AgentType",$param) and $param["AgentType"] !== null) {
             $this->AgentType = $param["AgentType"];
+        }
+
+        if (array_key_exists("QuestionConfigMap",$param) and $param["QuestionConfigMap"] !== null) {
+            $this->QuestionConfigMap = $param["QuestionConfigMap"];
         }
     }
 }

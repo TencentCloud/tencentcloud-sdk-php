@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(string $Compress) 设置<p>压缩模式。支持: &quot;&quot;, &quot;gzip&quot;, &quot;lzop&quot;, &quot;snappy&quot;。</p>
  * @method ExtractRuleInfo getExtractRuleInfo() 获取<p>提取规则，如果设置了ExtractRule，则必须设置LogType</p>
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置<p>提取规则，如果设置了ExtractRule，则必须设置LogType</p>
+ * @method boolean getSQSEnabled() 获取<p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+ * @method void setSQSEnabled(boolean $SQSEnabled) 设置<p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+ * @method string getSQSUrl() 获取<p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+ * @method void setSQSUrl(string $SQSUrl) 设置<p>SQS队列URL。开启开关后仅对增量数据生效。</p>
  */
 class ModifyS3RechargeRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class ModifyS3RechargeRequest extends AbstractModel
     public $ExtractRuleInfo;
 
     /**
+     * @var boolean <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+     */
+    public $SQSEnabled;
+
+    /**
+     * @var string <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+     */
+    public $SQSUrl;
+
+    /**
      * @param string $TaskId <p>导入任务Id</p>
      * @param string $TopicId <p>日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      * @param string $Name <p>s3导入任务名称,最大支持128个字节。</p><p>同一个TopicId下的s3任务Name必须唯一</p>
@@ -136,6 +150,8 @@ class ModifyS3RechargeRequest extends AbstractModel
      * @param string $Prefix <p>s3文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。</p>
      * @param string $Compress <p>压缩模式。支持: &quot;&quot;, &quot;gzip&quot;, &quot;lzop&quot;, &quot;snappy&quot;。</p>
      * @param ExtractRuleInfo $ExtractRuleInfo <p>提取规则，如果设置了ExtractRule，则必须设置LogType</p>
+     * @param boolean $SQSEnabled <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+     * @param string $SQSUrl <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
      */
     function __construct()
     {
@@ -205,6 +221,14 @@ class ModifyS3RechargeRequest extends AbstractModel
         if (array_key_exists("ExtractRuleInfo",$param) and $param["ExtractRuleInfo"] !== null) {
             $this->ExtractRuleInfo = new ExtractRuleInfo();
             $this->ExtractRuleInfo->deserialize($param["ExtractRuleInfo"]);
+        }
+
+        if (array_key_exists("SQSEnabled",$param) and $param["SQSEnabled"] !== null) {
+            $this->SQSEnabled = $param["SQSEnabled"];
+        }
+
+        if (array_key_exists("SQSUrl",$param) and $param["SQSUrl"] !== null) {
+            $this->SQSUrl = $param["SQSUrl"];
         }
     }
 }

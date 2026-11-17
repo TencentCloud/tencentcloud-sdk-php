@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailCount(integer $FailCount) 设置<p>失败批次数</p>
  * @method float getAvgDuration() 获取<p>平均时延，单位毫秒</p>
  * @method void setAvgDuration(float $AvgDuration) 设置<p>平均时延，单位毫秒</p>
+ * @method string getDatetime() 获取<p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+ * @method void setDatetime(string $Datetime) 设置<p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
  */
 class DialTrendPoint extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DialTrendPoint extends AbstractModel
     public $AvgDuration;
 
     /**
+     * @var string <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public $Datetime;
+
+    /**
      * @param string $Time <p>时间桶，格式 yyyy-MM-dd HH:mm:ss</p>
      * @param integer $ExecutionCount <p>执行批次数</p>
      * @param integer $SuccessCount <p>成功批次数</p>
      * @param integer $FailCount <p>失败批次数</p>
      * @param float $AvgDuration <p>平均时延，单位毫秒</p>
+     * @param string $Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DialTrendPoint extends AbstractModel
 
         if (array_key_exists("AvgDuration",$param) and $param["AvgDuration"] !== null) {
             $this->AvgDuration = $param["AvgDuration"];
+        }
+
+        if (array_key_exists("Datetime",$param) and $param["Datetime"] !== null) {
+            $this->Datetime = $param["Datetime"];
         }
     }
 }

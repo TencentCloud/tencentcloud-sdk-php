@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraConf(StorageExtraConf $ExtraConf) 设置<p>额外配置,对应存储实例的额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerPath() 获取<p>挂载数据源时默认填充的容器内路径</p>
+ * @method void setContainerPath(string $ContainerPath) 设置<p>挂载数据源时默认填充的容器内路径</p>
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -125,6 +127,11 @@ class DataSourceInfo extends AbstractModel
     public $ExtraConf;
 
     /**
+     * @var string <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public $ContainerPath;
+
+    /**
      * @param string $Id <p>数据源ID</p>
      * @param string $Name <p>数据源名称</p>
      * @param string $Creator <p>创建者uin</p>
@@ -140,6 +147,7 @@ class DataSourceInfo extends AbstractModel
      * @param array $Tags <p>标签配置</p>
      * @param StorageExtraConf $ExtraConf <p>额外配置,对应存储实例的额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
      */
     function __construct()
     {
@@ -215,6 +223,10 @@ class DataSourceInfo extends AbstractModel
         if (array_key_exists("ExtraConf",$param) and $param["ExtraConf"] !== null) {
             $this->ExtraConf = new StorageExtraConf();
             $this->ExtraConf->deserialize($param["ExtraConf"]);
+        }
+
+        if (array_key_exists("ContainerPath",$param) and $param["ContainerPath"] !== null) {
+            $this->ContainerPath = $param["ContainerPath"];
         }
     }
 }

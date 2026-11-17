@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLoginConfig请求参数结构体
  *
- * @method string getEnvId() 获取环境 ID，用于指定需要修改登录策略的云开发环境。
- * @method void setEnvId(string $EnvId) 设置环境 ID，用于指定需要修改登录策略的云开发环境。
- * @method boolean getPhoneNumberLogin() 获取手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。
- * @method void setPhoneNumberLogin(boolean $PhoneNumberLogin) 设置手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。
- * @method boolean getEmailLogin() 获取邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。
- * @method void setEmailLogin(boolean $EmailLogin) 设置邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。
- * @method boolean getUserNameLogin() 获取用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。
- * @method void setUserNameLogin(boolean $UserNameLogin) 设置用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。
- * @method boolean getAnonymousLogin() 获取匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。
- * @method void setAnonymousLogin(boolean $AnonymousLogin) 设置匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。
- * @method VerificationConfig getSmsVerificationConfig() 获取短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。
- * @method void setSmsVerificationConfig(VerificationConfig $SmsVerificationConfig) 设置短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。
- * @method MFALoginConfig getMfaConfig() 获取MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。
- * @method void setMfaConfig(MFALoginConfig $MfaConfig) 设置MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。
- * @method PasswordUpdateLoginConfig getPwdUpdateStrategy() 获取密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。
- * @method void setPwdUpdateStrategy(PasswordUpdateLoginConfig $PwdUpdateStrategy) 设置密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。
+ * @method string getEnvId() 获取<p>环境 ID，用于指定需要修改登录策略的云开发环境。</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境 ID，用于指定需要修改登录策略的云开发环境。</p>
+ * @method boolean getPhoneNumberLogin() 获取<p>手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。</p>
+ * @method void setPhoneNumberLogin(boolean $PhoneNumberLogin) 设置<p>手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。</p>
+ * @method boolean getEmailLogin() 获取<p>邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。</p>
+ * @method void setEmailLogin(boolean $EmailLogin) 设置<p>邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。</p>
+ * @method boolean getUserNameLogin() 获取<p>用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。</p>
+ * @method void setUserNameLogin(boolean $UserNameLogin) 设置<p>用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。</p>
+ * @method boolean getAnonymousLogin() 获取<p>匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。</p>
+ * @method void setAnonymousLogin(boolean $AnonymousLogin) 设置<p>匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。</p>
+ * @method VerificationConfig getSmsVerificationConfig() 获取<p>短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。</p>
+ * @method void setSmsVerificationConfig(VerificationConfig $SmsVerificationConfig) 设置<p>短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。</p>
+ * @method MFALoginConfig getMfaConfig() 获取<p>MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。</p>
+ * @method void setMfaConfig(MFALoginConfig $MfaConfig) 设置<p>MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。</p>
+ * @method PasswordUpdateLoginConfig getPwdUpdateStrategy() 获取<p>密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。</p>
+ * @method void setPwdUpdateStrategy(PasswordUpdateLoginConfig $PwdUpdateStrategy) 设置<p>密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。</p>
  */
 class ModifyLoginConfigRequest extends AbstractModel
 {
     /**
-     * @var string 环境 ID，用于指定需要修改登录策略的云开发环境。
+     * @var string <p>环境 ID，用于指定需要修改登录策略的云开发环境。</p>
      */
     public $EnvId;
 
     /**
-     * @var boolean 手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。
+     * @var boolean <p>手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。</p>
      */
     public $PhoneNumberLogin;
 
     /**
-     * @var boolean 邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。
+     * @var boolean <p>邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。</p>
      */
     public $EmailLogin;
 
     /**
-     * @var boolean 用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。
+     * @var boolean <p>用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。</p>
      */
     public $UserNameLogin;
 
     /**
-     * @var boolean 匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。
+     * @var boolean <p>匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。</p>
      */
     public $AnonymousLogin;
 
     /**
-     * @var VerificationConfig 短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。
+     * @var VerificationConfig <p>短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。</p>
      */
     public $SmsVerificationConfig;
 
     /**
-     * @var MFALoginConfig MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。
+     * @var MFALoginConfig <p>MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。</p>
      */
     public $MfaConfig;
 
     /**
-     * @var PasswordUpdateLoginConfig 密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。
+     * @var PasswordUpdateLoginConfig <p>密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。</p>
      */
     public $PwdUpdateStrategy;
 
     /**
-     * @param string $EnvId 环境 ID，用于指定需要修改登录策略的云开发环境。
-     * @param boolean $PhoneNumberLogin 手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。
-     * @param boolean $EmailLogin 邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。
-     * @param boolean $UserNameLogin 用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。
-     * @param boolean $AnonymousLogin 匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。
-     * @param VerificationConfig $SmsVerificationConfig 短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。
-     * @param MFALoginConfig $MfaConfig MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。
-     * @param PasswordUpdateLoginConfig $PwdUpdateStrategy 密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。
+     * @param string $EnvId <p>环境 ID，用于指定需要修改登录策略的云开发环境。</p>
+     * @param boolean $PhoneNumberLogin <p>手机号短信登录开关。设置为 true 开启手机号短信登录，允许用户使用手机号和短信验证码进行登录和注册；设置为 false 关闭手机号短信登录。</p>
+     * @param boolean $EmailLogin <p>邮箱登录开关。设置为 true 开启邮箱登录，允许用户使用邮箱和密码进行登录和注册；设置为 false 关闭邮箱登录。</p>
+     * @param boolean $UserNameLogin <p>用户名密码登录开关。设置为 true 开启用户名密码登录，允许用户使用用户名和密码进行登录和注册；设置为 false 关闭用户名密码登录。</p>
+     * @param boolean $AnonymousLogin <p>匿名登录开关。设置为 true 开启匿名登录，允许用户无需注册即可以匿名身份访问应用；设置为 false 关闭匿名登录。</p>
+     * @param VerificationConfig $SmsVerificationConfig <p>短信验证码发送配置，用于设置短信验证码的发送通道类型和日发送限额。不传则不修改当前配置。</p>
+     * @param MFALoginConfig $MfaConfig <p>MFA 多因子认证登录配置，用于设置多因子认证开关及验证方式（短信、邮箱、TOTP、强制绑定手机号）。不传则不修改当前配置。</p>
+     * @param PasswordUpdateLoginConfig $PwdUpdateStrategy <p>密码更新策略配置，用于设置首次登录强制修改密码和定期强制修改密码策略。不传则不修改当前配置。</p>
      */
     function __construct()
     {

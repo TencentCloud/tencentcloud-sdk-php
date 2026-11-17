@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypes(array $Types) 设置<p>catalog类型，参考CatalogType(当前支持：TABLE、MODEL、VOLUME)，可选，不填默认查询所有类型</p>
  * @method array getCatalogSources() 获取<p>数据目录来源筛选，取值参考CatalogSourceEnum(METALAKE/CONNECTION/SETATS)</p>
  * @method void setCatalogSources(array $CatalogSources) 设置<p>数据目录来源筛选，取值参考CatalogSourceEnum(METALAKE/CONNECTION/SETATS)</p>
+ * @method string getConnectionId() 获取数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+ * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
  */
 class ListCatalogNamesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ListCatalogNamesRequest extends AbstractModel
     public $CatalogSources;
 
     /**
+     * @var string 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+     */
+    public $ConnectionId;
+
+    /**
      * @param string $WorkspaceId <p>workspace唯一id，必填</p>
      * @param string $MaxResults <p>最大结果条数，可选，默认10</p>
      * @param string $PageToken <p>分页token信息(base64编码，包含offset、snapshotId等)</p>
      * @param array $Types <p>catalog类型，参考CatalogType(当前支持：TABLE、MODEL、VOLUME)，可选，不填默认查询所有类型</p>
      * @param array $CatalogSources <p>数据目录来源筛选，取值参考CatalogSourceEnum(METALAKE/CONNECTION/SETATS)</p>
+     * @param string $ConnectionId 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ListCatalogNamesRequest extends AbstractModel
 
         if (array_key_exists("CatalogSources",$param) and $param["CatalogSources"] !== null) {
             $this->CatalogSources = $param["CatalogSources"];
+        }
+
+        if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
+            $this->ConnectionId = $param["ConnectionId"];
         }
     }
 }

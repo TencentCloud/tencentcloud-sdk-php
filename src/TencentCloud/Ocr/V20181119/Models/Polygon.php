@@ -21,42 +21,42 @@ use TencentCloud\Common\AbstractModel;
  * 文本的坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值
  *
- * @method Coord getLeftTop() 获取左上顶点坐标
- * @method void setLeftTop(Coord $LeftTop) 设置左上顶点坐标
- * @method Coord getRightTop() 获取右上顶点坐标
- * @method void setRightTop(Coord $RightTop) 设置右上顶点坐标
- * @method Coord getRightBottom() 获取右下顶点坐标
- * @method void setRightBottom(Coord $RightBottom) 设置右下顶点坐标
- * @method Coord getLeftBottom() 获取左下顶点坐标
- * @method void setLeftBottom(Coord $LeftBottom) 设置左下顶点坐标
+ * @method Coord getLeftTop() 获取<p>左上顶点坐标</p>
+ * @method void setLeftTop(Coord $LeftTop) 设置<p>左上顶点坐标</p>
+ * @method Coord getRightTop() 获取<p>右上顶点坐标</p>
+ * @method void setRightTop(Coord $RightTop) 设置<p>右上顶点坐标</p>
+ * @method Coord getRightBottom() 获取<p>右下顶点坐标</p>
+ * @method void setRightBottom(Coord $RightBottom) 设置<p>右下顶点坐标</p>
+ * @method Coord getLeftBottom() 获取<p>左下顶点坐标</p>
+ * @method void setLeftBottom(Coord $LeftBottom) 设置<p>左下顶点坐标</p>
  */
 class Polygon extends AbstractModel
 {
     /**
-     * @var Coord 左上顶点坐标
+     * @var Coord <p>左上顶点坐标</p>
      */
     public $LeftTop;
 
     /**
-     * @var Coord 右上顶点坐标
+     * @var Coord <p>右上顶点坐标</p>
      */
     public $RightTop;
 
     /**
-     * @var Coord 右下顶点坐标
+     * @var Coord <p>右下顶点坐标</p>
      */
     public $RightBottom;
 
     /**
-     * @var Coord 左下顶点坐标
+     * @var Coord <p>左下顶点坐标</p>
      */
     public $LeftBottom;
 
     /**
-     * @param Coord $LeftTop 左上顶点坐标
-     * @param Coord $RightTop 右上顶点坐标
-     * @param Coord $RightBottom 右下顶点坐标
-     * @param Coord $LeftBottom 左下顶点坐标
+     * @param Coord $LeftTop <p>左上顶点坐标</p>
+     * @param Coord $RightTop <p>右上顶点坐标</p>
+     * @param Coord $RightBottom <p>右下顶点坐标</p>
+     * @param Coord $LeftBottom <p>左下顶点坐标</p>
      */
     function __construct()
     {

@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPathsOption(array $PathsOption) 设置路径选项,可配置每个路径的请求方法
  * @method integer getOrder() 获取限流执行顺序，0：默认情况，限流优先，1：安全防护优先
  * @method void setOrder(integer $Order) 设置限流执行顺序，0：默认情况，限流优先，1：安全防护优先
+ * @method array getMatchConditions() 获取统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+ * @method void setMatchConditions(array $MatchConditions) 设置统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+ * @method string getConditionLogic() 获取条件间逻辑：and(默认)/or
+ * @method void setConditionLogic(string $ConditionLogic) 设置条件间逻辑：and(默认)/or
  */
 class CreateRateLimitV2Request extends AbstractModel
 {
@@ -178,6 +182,16 @@ class CreateRateLimitV2Request extends AbstractModel
     public $Order;
 
     /**
+     * @var array 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+     */
+    public $MatchConditions;
+
+    /**
+     * @var string 条件间逻辑：and(默认)/or
+     */
+    public $ConditionLogic;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 规则名
      * @param integer $Priority 规则优先级
@@ -200,6 +214,8 @@ class CreateRateLimitV2Request extends AbstractModel
      * @param boolean $QuotaShare 是否共享配额，只有当对象为URL时有效，false表示URL独享配额，true表示所有URL共享配额
      * @param array $PathsOption 路径选项,可配置每个路径的请求方法
      * @param integer $Order 限流执行顺序，0：默认情况，限流优先，1：安全防护优先
+     * @param array $MatchConditions 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+     * @param string $ConditionLogic 条件间逻辑：and(默认)/or
      */
     function __construct()
     {
@@ -320,6 +336,19 @@ class CreateRateLimitV2Request extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("MatchConditions",$param) and $param["MatchConditions"] !== null) {
+            $this->MatchConditions = [];
+            foreach ($param["MatchConditions"] as $key => $value){
+                $obj = new Strategy();
+                $obj->deserialize($value);
+                array_push($this->MatchConditions, $obj);
+            }
+        }
+
+        if (array_key_exists("ConditionLogic",$param) and $param["ConditionLogic"] !== null) {
+            $this->ConditionLogic = $param["ConditionLogic"];
         }
     }
 }

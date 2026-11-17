@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTiProjectId() 获取<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
  * @method void setTiProjectId(string $TiProjectId) 设置<p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
- * @method string getId() 获取数据源ID
- * @method void setId(string $Id) 设置数据源ID
- * @method string getName() 获取数据源名称
- * @method void setName(string $Name) 设置数据源名称
- * @method string getPermission() 获取数据源权限，取值有RW RO
- * @method void setPermission(string $Permission) 设置数据源权限，取值有RW RO
- * @method MountConfigureInfo getMountConfigure() 获取数据源挂载配置
- * @method void setMountConfigure(MountConfigureInfo $MountConfigure) 设置数据源挂载配置
+ * @method string getId() 获取<p>数据源ID</p>
+ * @method void setId(string $Id) 设置<p>数据源ID</p>
+ * @method string getName() 获取<p>数据源名称</p>
+ * @method void setName(string $Name) 设置<p>数据源名称</p>
+ * @method string getPermission() 获取<p>数据源权限，取值有RW RO</p>
+ * @method void setPermission(string $Permission) 设置<p>数据源权限，取值有RW RO</p>
+ * @method MountConfigureInfo getMountConfigure() 获取<p>数据源挂载配置</p>
+ * @method void setMountConfigure(MountConfigureInfo $MountConfigure) 设置<p>数据源挂载配置</p>
+ * @method string getContainerPath() 获取<p>挂载数据源时默认填充的容器内路径</p>
+ * @method void setContainerPath(string $ContainerPath) 设置<p>挂载数据源时默认填充的容器内路径</p>
  */
 class UpdateDataSourceRequest extends AbstractModel
 {
@@ -39,31 +41,37 @@ class UpdateDataSourceRequest extends AbstractModel
     public $TiProjectId;
 
     /**
-     * @var string 数据源ID
+     * @var string <p>数据源ID</p>
      */
     public $Id;
 
     /**
-     * @var string 数据源名称
+     * @var string <p>数据源名称</p>
      */
     public $Name;
 
     /**
-     * @var string 数据源权限，取值有RW RO
+     * @var string <p>数据源权限，取值有RW RO</p>
      */
     public $Permission;
 
     /**
-     * @var MountConfigureInfo 数据源挂载配置
+     * @var MountConfigureInfo <p>数据源挂载配置</p>
      */
     public $MountConfigure;
 
     /**
+     * @var string <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public $ContainerPath;
+
+    /**
      * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
-     * @param string $Id 数据源ID
-     * @param string $Name 数据源名称
-     * @param string $Permission 数据源权限，取值有RW RO
-     * @param MountConfigureInfo $MountConfigure 数据源挂载配置
+     * @param string $Id <p>数据源ID</p>
+     * @param string $Name <p>数据源名称</p>
+     * @param string $Permission <p>数据源权限，取值有RW RO</p>
+     * @param MountConfigureInfo $MountConfigure <p>数据源挂载配置</p>
+     * @param string $ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class UpdateDataSourceRequest extends AbstractModel
         if (array_key_exists("MountConfigure",$param) and $param["MountConfigure"] !== null) {
             $this->MountConfigure = new MountConfigureInfo();
             $this->MountConfigure->deserialize($param["MountConfigure"]);
+        }
+
+        if (array_key_exists("ContainerPath",$param) and $param["ContainerPath"] !== null) {
+            $this->ContainerPath = $param["ContainerPath"];
         }
     }
 }

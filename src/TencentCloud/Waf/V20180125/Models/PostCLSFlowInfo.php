@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CKafka投递流
  *
- * @method integer getFlowId() 获取投递流唯一ID
- * @method void setFlowId(integer $FlowId) 设置投递流唯一ID
- * @method integer getLogType() 获取1-访问日志 2-攻击日志
- * @method void setLogType(integer $LogType) 设置1-访问日志 2-攻击日志
- * @method integer getStatus() 获取状态 0-为关闭 1-为启用
- * @method void setStatus(integer $Status) 设置状态 0-为关闭 1-为启用
- * @method string getCLSRegion() 获取CLS所在区域
- * @method void setCLSRegion(string $CLSRegion) 设置CLS所在区域
- * @method string getLogsetName() 获取CLS日志集合名称
- * @method void setLogsetName(string $LogsetName) 设置CLS日志集合名称
- * @method string getLogsetID() 获取CLS日志集合ID
- * @method void setLogsetID(string $LogsetID) 设置CLS日志集合ID
- * @method string getLogTopicName() 获取CLS日志主题名称
- * @method void setLogTopicName(string $LogTopicName) 设置CLS日志主题名称
- * @method string getLogTopicID() 获取CLS日志集合ID
- * @method void setLogTopicID(string $LogTopicID) 设置CLS日志集合ID
- * @method FieldWriteConfig getWriteConfig() 获取写配置
- * @method void setWriteConfig(FieldWriteConfig $WriteConfig) 设置写配置
+ * @method integer getFlowId() 获取<p>投递流唯一ID</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>投递流唯一ID</p>
+ * @method integer getLogType() 获取<p>1-访问日志 2-攻击日志</p>
+ * @method void setLogType(integer $LogType) 设置<p>1-访问日志 2-攻击日志</p>
+ * @method integer getStatus() 获取<p>状态 0-为关闭 1-为启用</p>
+ * @method void setStatus(integer $Status) 设置<p>状态 0-为关闭 1-为启用</p>
+ * @method string getCLSRegion() 获取<p>CLS所在区域</p>
+ * @method void setCLSRegion(string $CLSRegion) 设置<p>CLS所在区域</p>
+ * @method string getLogsetName() 获取<p>CLS日志集合名称</p>
+ * @method void setLogsetName(string $LogsetName) 设置<p>CLS日志集合名称</p>
+ * @method string getLogsetID() 获取<p>CLS日志集合ID</p>
+ * @method void setLogsetID(string $LogsetID) 设置<p>CLS日志集合ID</p>
+ * @method string getLogTopicName() 获取<p>CLS日志主题名称</p>
+ * @method void setLogTopicName(string $LogTopicName) 设置<p>CLS日志主题名称</p>
+ * @method string getLogTopicID() 获取<p>CLS日志集合ID</p>
+ * @method void setLogTopicID(string $LogTopicID) 设置<p>CLS日志集合ID</p>
+ * @method FieldWriteConfig getWriteConfig() 获取<p>写配置</p>
+ * @method void setWriteConfig(FieldWriteConfig $WriteConfig) 设置<p>写配置</p>
  */
 class PostCLSFlowInfo extends AbstractModel
 {
     /**
-     * @var integer 投递流唯一ID
+     * @var integer <p>投递流唯一ID</p>
      */
     public $FlowId;
 
     /**
-     * @var integer 1-访问日志 2-攻击日志
+     * @var integer <p>1-访问日志 2-攻击日志</p>
      */
     public $LogType;
 
     /**
-     * @var integer 状态 0-为关闭 1-为启用
+     * @var integer <p>状态 0-为关闭 1-为启用</p>
      */
     public $Status;
 
     /**
-     * @var string CLS所在区域
+     * @var string <p>CLS所在区域</p>
      */
     public $CLSRegion;
 
     /**
-     * @var string CLS日志集合名称
+     * @var string <p>CLS日志集合名称</p>
      */
     public $LogsetName;
 
     /**
-     * @var string CLS日志集合ID
+     * @var string <p>CLS日志集合ID</p>
      */
     public $LogsetID;
 
     /**
-     * @var string CLS日志主题名称
+     * @var string <p>CLS日志主题名称</p>
      */
     public $LogTopicName;
 
     /**
-     * @var string CLS日志集合ID
+     * @var string <p>CLS日志集合ID</p>
      */
     public $LogTopicID;
 
     /**
-     * @var FieldWriteConfig 写配置
+     * @var FieldWriteConfig <p>写配置</p>
      */
     public $WriteConfig;
 
     /**
-     * @param integer $FlowId 投递流唯一ID
-     * @param integer $LogType 1-访问日志 2-攻击日志
-     * @param integer $Status 状态 0-为关闭 1-为启用
-     * @param string $CLSRegion CLS所在区域
-     * @param string $LogsetName CLS日志集合名称
-     * @param string $LogsetID CLS日志集合ID
-     * @param string $LogTopicName CLS日志主题名称
-     * @param string $LogTopicID CLS日志集合ID
-     * @param FieldWriteConfig $WriteConfig 写配置
+     * @param integer $FlowId <p>投递流唯一ID</p>
+     * @param integer $LogType <p>1-访问日志 2-攻击日志</p>
+     * @param integer $Status <p>状态 0-为关闭 1-为启用</p>
+     * @param string $CLSRegion <p>CLS所在区域</p>
+     * @param string $LogsetName <p>CLS日志集合名称</p>
+     * @param string $LogsetID <p>CLS日志集合ID</p>
+     * @param string $LogTopicName <p>CLS日志主题名称</p>
+     * @param string $LogTopicID <p>CLS日志集合ID</p>
+     * @param FieldWriteConfig $WriteConfig <p>写配置</p>
      */
     function __construct()
     {

@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApiKey鉴权配置
  *
- * @method integer getKeyLocation() 获取密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
- * @method void setKeyLocation(integer $KeyLocation) 设置密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
- * @method string getKeyParamName() 获取密钥参数名
- * @method void setKeyParamName(string $KeyParamName) 设置密钥参数名
- * @method string getKeyParamValue() 获取密钥参数值
- * @method void setKeyParamValue(string $KeyParamValue) 设置密钥参数值
+ * @method integer getKeyLocation() 获取<p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
+ * @method void setKeyLocation(integer $KeyLocation) 设置<p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
+ * @method string getKeyParamName() 获取<p>密钥参数名</p>
+ * @method void setKeyParamName(string $KeyParamName) 设置<p>密钥参数名</p>
+ * @method string getKeyParamValue() 获取<p>密钥参数值</p>
+ * @method void setKeyParamValue(string $KeyParamValue) 设置<p>密钥参数值</p>
+ * @method integer getKeyValueUsage() 获取<p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+ * @method void setKeyValueUsage(integer $KeyValueUsage) 设置<p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
  */
 class ApiKeyAuthConfig extends AbstractModel
 {
     /**
-     * @var integer 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
+     * @var integer <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
      */
     public $KeyLocation;
 
     /**
-     * @var string 密钥参数名
+     * @var string <p>密钥参数名</p>
      */
     public $KeyParamName;
 
     /**
-     * @var string 密钥参数值
+     * @var string <p>密钥参数值</p>
      */
     public $KeyParamValue;
 
     /**
-     * @param integer $KeyLocation 密钥位置 HEADER/QUERY
+     * @var integer <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+     */
+    public $KeyValueUsage;
 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
-     * @param string $KeyParamName 密钥参数名
-     * @param string $KeyParamValue 密钥参数值
+    /**
+     * @param integer $KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
+     * @param string $KeyParamName <p>密钥参数名</p>
+     * @param string $KeyParamValue <p>密钥参数值</p>
+     * @param integer $KeyValueUsage <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
      */
     function __construct()
     {
@@ -96,6 +80,10 @@ class ApiKeyAuthConfig extends AbstractModel
 
         if (array_key_exists("KeyParamValue",$param) and $param["KeyParamValue"] !== null) {
             $this->KeyParamValue = $param["KeyParamValue"];
+        }
+
+        if (array_key_exists("KeyValueUsage",$param) and $param["KeyValueUsage"] !== null) {
+            $this->KeyValueUsage = $param["KeyValueUsage"];
         }
     }
 }

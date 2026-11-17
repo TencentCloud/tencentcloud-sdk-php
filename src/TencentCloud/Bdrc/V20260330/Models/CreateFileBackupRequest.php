@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFileBackup请求参数结构体
  *
- * @method string getResourceId() 获取<p>资源ID列表</p>
- * @method void setResourceId(string $ResourceId) 设置<p>资源ID列表</p>
+ * @method string getResourceId() 获取<p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
  * @method string getPlanId() 获取<p>计划ID</p>
  * @method void setPlanId(string $PlanId) 设置<p>计划ID</p>
- * @method array getBackupPaths() 获取<p>备份路径列表，1~20 个</p>
- * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径列表，1~20 个</p>
+ * @method array getBackupPaths() 获取<p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
+ * @method void setBackupPaths(array $BackupPaths) 设置<p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
  * @method array getIncludeFileTypes() 获取<p>包含文件类型，0~20 个</p>
  * @method void setIncludeFileTypes(array $IncludeFileTypes) 设置<p>包含文件类型，0~20 个</p>
  * @method array getExcludePatterns() 获取<p>排除文件路径列表，0~20 个</p>
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupStorageId(string $BackupStorageId) 设置<p>备份库ID，此参数必填。</p>
  * @method string getDeadline() 获取<p>备份到期时间</p>
  * @method void setDeadline(string $Deadline) 设置<p>备份到期时间</p>
- * @method string getBackupName() 获取<p>备份名称</p>
- * @method void setBackupName(string $BackupName) 设置<p>备份名称</p>
+ * @method string getBackupName() 获取<p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
+ * @method void setBackupName(string $BackupName) 设置<p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
  * @method string getResourceType() 获取<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  * @method void setResourceType(string $ResourceType) 设置<p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
  * @method boolean getEnableObjectAcl() 获取<p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateFileBackupRequest extends AbstractModel
 {
     /**
-     * @var string <p>资源ID列表</p>
+     * @var string <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
      */
     public $ResourceId;
 
@@ -58,7 +58,7 @@ class CreateFileBackupRequest extends AbstractModel
     public $PlanId;
 
     /**
-     * @var array <p>备份路径列表，1~20 个</p>
+     * @var array <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
      */
     public $BackupPaths;
 
@@ -88,7 +88,7 @@ class CreateFileBackupRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string <p>备份名称</p>
+     * @var string <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
      */
     public $BackupName;
 
@@ -108,15 +108,15 @@ class CreateFileBackupRequest extends AbstractModel
     public $EnableObjectTags;
 
     /**
-     * @param string $ResourceId <p>资源ID列表</p>
+     * @param string $ResourceId <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
      * @param string $PlanId <p>计划ID</p>
-     * @param array $BackupPaths <p>备份路径列表，1~20 个</p>
+     * @param array $BackupPaths <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
      * @param array $IncludeFileTypes <p>包含文件类型，0~20 个</p>
      * @param array $ExcludePatterns <p>排除文件路径列表，0~20 个</p>
      * @param boolean $ExcludeSystemDirectories <p>是否排除系统目录</p>
      * @param string $BackupStorageId <p>备份库ID，此参数必填。</p>
      * @param string $Deadline <p>备份到期时间</p>
-     * @param string $BackupName <p>备份名称</p>
+     * @param string $BackupName <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
      * @param string $ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
      * @param boolean $EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
      * @param boolean $EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>

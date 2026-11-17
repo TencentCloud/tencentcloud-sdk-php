@@ -20,158 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudNativeAPIGateway请求参数结构体
  *
- * @method string getName() 获取云原生API网关名字, 最多支持60个字符。
- * @method void setName(string $Name) 设置云原生API网关名字, 最多支持60个字符。
- * @method string getType() 获取云原生API网关类型, 目前只支持kong。
- * @method void setType(string $Type) 设置云原生API网关类型, 目前只支持kong。
- * @method string getGatewayVersion() 获取云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
- * @method void setGatewayVersion(string $GatewayVersion) 设置云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
- * @method CloudNativeAPIGatewayNodeConfig getNodeConfig() 获取云原生API网关节点配置。
- * @method void setNodeConfig(CloudNativeAPIGatewayNodeConfig $NodeConfig) 设置云原生API网关节点配置。
- * @method CloudNativeAPIGatewayVpcConfig getVpcConfig() 获取云原生API网关vpc配置。
- * @method void setVpcConfig(CloudNativeAPIGatewayVpcConfig $VpcConfig) 设置云原生API网关vpc配置。
- * @method string getDescription() 获取云原生API网关描述信息, 最多支持120个字符。
- * @method void setDescription(string $Description) 设置云原生API网关描述信息, 最多支持120个字符。
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method boolean getEnableCls() 获取是否开启 CLS 日志。默认值：fasle
- * @method void setEnableCls(boolean $EnableCls) 设置是否开启 CLS 日志。默认值：fasle
- * @method string getFeatureVersion() 获取产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
- * @method void setFeatureVersion(string $FeatureVersion) 设置产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
- * @method integer getInternetMaxBandwidthOut() 获取公网出流量带宽，[1,2048]Mbps
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出流量带宽，[1,2048]Mbps
- * @method string getEngineRegion() 获取实例实际的地域信息，默认值：ap-guangzhou
- * @method void setEngineRegion(string $EngineRegion) 设置实例实际的地域信息，默认值：ap-guangzhou
- * @method string getIngressClassName() 获取ingress Class名称
- * @method void setIngressClassName(string $IngressClassName) 设置ingress Class名称
- * @method integer getTradeType() 获取付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
- * @method void setTradeType(integer $TradeType) 设置付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
- * @method InternetConfig getInternetConfig() 获取公网相关配置
- * @method void setInternetConfig(InternetConfig $InternetConfig) 设置公网相关配置
- * @method string getPromId() 获取关联的prometheus ID
- * @method void setPromId(string $PromId) 设置关联的prometheus ID
+ * @method string getName() 获取<p>云原生API网关名字, 最多支持60个字符。</p>
+ * @method void setName(string $Name) 设置<p>云原生API网关名字, 最多支持60个字符。</p>
+ * @method string getType() 获取<p>云原生API网关类型, 目前只支持kong。</p>
+ * @method void setType(string $Type) 设置<p>云原生API网关类型, 目前只支持kong。</p>
+ * @method string getGatewayVersion() 获取<p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+ * @method void setGatewayVersion(string $GatewayVersion) 设置<p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+ * @method CloudNativeAPIGatewayNodeConfig getNodeConfig() 获取<p>云原生API网关节点配置。</p>
+ * @method void setNodeConfig(CloudNativeAPIGatewayNodeConfig $NodeConfig) 设置<p>云原生API网关节点配置。</p>
+ * @method CloudNativeAPIGatewayVpcConfig getVpcConfig() 获取<p>云原生API网关vpc配置。</p>
+ * @method void setVpcConfig(CloudNativeAPIGatewayVpcConfig $VpcConfig) 设置<p>云原生API网关vpc配置。</p>
+ * @method string getDescription() 获取<p>云原生API网关描述信息, 最多支持120个字符。</p>
+ * @method void setDescription(string $Description) 设置<p>云原生API网关描述信息, 最多支持120个字符。</p>
+ * @method array getTags() 获取<p>标签列表</p>
+ * @method void setTags(array $Tags) 设置<p>标签列表</p>
+ * @method boolean getEnableCls() 获取<p>是否开启 CLS 日志。默认值：fasle</p>
+ * @method void setEnableCls(boolean $EnableCls) 设置<p>是否开启 CLS 日志。默认值：fasle</p>
+ * @method string getFeatureVersion() 获取<p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
+ * @method void setFeatureVersion(string $FeatureVersion) 设置<p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
+ * @method integer getInternetMaxBandwidthOut() 获取<p>公网出流量带宽，[1,2048]Mbps</p>
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置<p>公网出流量带宽，[1,2048]Mbps</p>
+ * @method string getEngineRegion() 获取<p>实例实际的地域信息，默认值：ap-guangzhou</p>
+ * @method void setEngineRegion(string $EngineRegion) 设置<p>实例实际的地域信息，默认值：ap-guangzhou</p>
+ * @method string getIngressClassName() 获取<p>ingress Class名称</p>
+ * @method void setIngressClassName(string $IngressClassName) 设置<p>ingress Class名称</p>
+ * @method integer getTradeType() 获取<p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
+ * @method void setTradeType(integer $TradeType) 设置<p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
+ * @method InternetConfig getInternetConfig() 获取<p>公网相关配置</p>
+ * @method void setInternetConfig(InternetConfig $InternetConfig) 设置<p>公网相关配置</p>
+ * @method string getPromId() 获取<p>关联的prometheus ID</p>
+ * @method void setPromId(string $PromId) 设置<p>关联的prometheus ID</p>
+ * @method boolean getEnableHttpPort() 获取<p>是否开启HTTP 80 端口的访问</p>
+ * @method void setEnableHttpPort(boolean $EnableHttpPort) 设置<p>是否开启HTTP 80 端口的访问</p>
  */
 class CreateCloudNativeAPIGatewayRequest extends AbstractModel
 {
     /**
-     * @var string 云原生API网关名字, 最多支持60个字符。
+     * @var string <p>云原生API网关名字, 最多支持60个字符。</p>
      */
     public $Name;
 
     /**
-     * @var string 云原生API网关类型, 目前只支持kong。
+     * @var string <p>云原生API网关类型, 目前只支持kong。</p>
      */
     public $Type;
 
     /**
-     * @var string 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
+     * @var string <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public $GatewayVersion;
 
     /**
-     * @var CloudNativeAPIGatewayNodeConfig 云原生API网关节点配置。
+     * @var CloudNativeAPIGatewayNodeConfig <p>云原生API网关节点配置。</p>
      */
     public $NodeConfig;
 
     /**
-     * @var CloudNativeAPIGatewayVpcConfig 云原生API网关vpc配置。
+     * @var CloudNativeAPIGatewayVpcConfig <p>云原生API网关vpc配置。</p>
      */
     public $VpcConfig;
 
     /**
-     * @var string 云原生API网关描述信息, 最多支持120个字符。
+     * @var string <p>云原生API网关描述信息, 最多支持120个字符。</p>
      */
     public $Description;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $Tags;
 
     /**
-     * @var boolean 是否开启 CLS 日志。默认值：fasle
+     * @var boolean <p>是否开启 CLS 日志。默认值：fasle</p>
      */
     public $EnableCls;
 
     /**
-     * @var string 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
+     * @var string <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
      */
     public $FeatureVersion;
 
     /**
-     * @var integer 公网出流量带宽，[1,2048]Mbps
+     * @var integer <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 实例实际的地域信息，默认值：ap-guangzhou
+     * @var string <p>实例实际的地域信息，默认值：ap-guangzhou</p>
      */
     public $EngineRegion;
 
     /**
-     * @var string ingress Class名称
+     * @var string <p>ingress Class名称</p>
      */
     public $IngressClassName;
 
     /**
-     * @var integer 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
+     * @var integer <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
      */
     public $TradeType;
 
     /**
-     * @var InternetConfig 公网相关配置
+     * @var InternetConfig <p>公网相关配置</p>
      */
     public $InternetConfig;
 
     /**
-     * @var string 关联的prometheus ID
+     * @var string <p>关联的prometheus ID</p>
      */
     public $PromId;
 
     /**
-     * @param string $Name 云原生API网关名字, 最多支持60个字符。
-     * @param string $Type 云原生API网关类型, 目前只支持kong。
-     * @param string $GatewayVersion 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
-     * @param CloudNativeAPIGatewayNodeConfig $NodeConfig 云原生API网关节点配置。
-     * @param CloudNativeAPIGatewayVpcConfig $VpcConfig 云原生API网关vpc配置。
-     * @param string $Description 云原生API网关描述信息, 最多支持120个字符。
-     * @param array $Tags 标签列表
-     * @param boolean $EnableCls 是否开启 CLS 日志。默认值：fasle
-     * @param string $FeatureVersion 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
-     * @param integer $InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
-     * @param string $EngineRegion 实例实际的地域信息，默认值：ap-guangzhou
-     * @param string $IngressClassName ingress Class名称
-     * @param integer $TradeType 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
-     * @param InternetConfig $InternetConfig 公网相关配置
-     * @param string $PromId 关联的prometheus ID
+     * @var boolean <p>是否开启HTTP 80 端口的访问</p>
+     */
+    public $EnableHttpPort;
+
+    /**
+     * @param string $Name <p>云原生API网关名字, 最多支持60个字符。</p>
+     * @param string $Type <p>云原生API网关类型, 目前只支持kong。</p>
+     * @param string $GatewayVersion <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+     * @param CloudNativeAPIGatewayNodeConfig $NodeConfig <p>云原生API网关节点配置。</p>
+     * @param CloudNativeAPIGatewayVpcConfig $VpcConfig <p>云原生API网关vpc配置。</p>
+     * @param string $Description <p>云原生API网关描述信息, 最多支持120个字符。</p>
+     * @param array $Tags <p>标签列表</p>
+     * @param boolean $EnableCls <p>是否开启 CLS 日志。默认值：fasle</p>
+     * @param string $FeatureVersion <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
+     * @param integer $InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
+     * @param string $EngineRegion <p>实例实际的地域信息，默认值：ap-guangzhou</p>
+     * @param string $IngressClassName <p>ingress Class名称</p>
+     * @param integer $TradeType <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
+     * @param InternetConfig $InternetConfig <p>公网相关配置</p>
+     * @param string $PromId <p>关联的prometheus ID</p>
+     * @param boolean $EnableHttpPort <p>是否开启HTTP 80 端口的访问</p>
      */
     function __construct()
     {
@@ -252,6 +232,10 @@ class CreateCloudNativeAPIGatewayRequest extends AbstractModel
 
         if (array_key_exists("PromId",$param) and $param["PromId"] !== null) {
             $this->PromId = $param["PromId"];
+        }
+
+        if (array_key_exists("EnableHttpPort",$param) and $param["EnableHttpPort"] !== null) {
+            $this->EnableHttpPort = $param["EnableHttpPort"];
         }
     }
 }

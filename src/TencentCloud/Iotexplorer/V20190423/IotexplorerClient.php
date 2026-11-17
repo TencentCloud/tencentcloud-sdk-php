@@ -160,6 +160,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeCsReportCountDataInfoResponse DescribeCsReportCountDataInfo(Models\DescribeCsReportCountDataInfoRequest $req) 获取云存上报统计信息
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 用于查看某个设备的详细信息
  * @method Models\DescribeDeviceBindGatewayResponse DescribeDeviceBindGateway(Models\DescribeDeviceBindGatewayRequest $req) 查询设备绑定的网关设备
+ * @method Models\DescribeDeviceCloudStoragePackagesResponse DescribeDeviceCloudStoragePackages(Models\DescribeDeviceCloudStoragePackagesRequest $req) 查询设备云存套餐
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 根据设备产品ID、设备名称，获取设备上报的属性数据。
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
  * @method Models\DescribeDeviceFirmWareResponse DescribeDeviceFirmWare(Models\DescribeDeviceFirmWareRequest $req) 获取设备固件信息

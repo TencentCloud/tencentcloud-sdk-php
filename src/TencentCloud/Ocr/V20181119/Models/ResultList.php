@@ -46,14 +46,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoord(array $Coord) 设置<p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCoordPageIndex() 获取<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
- * @method void setCoordPageIndex(array $CoordPageIndex) 设置<p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
- * @method string getRightAnswer() 获取<p>返回正确答案内容</p>
- * @method void setRightAnswer(string $RightAnswer) 设置<p>返回正确答案内容</p>
+ * @method array getCoordPageIndex() 获取<p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
+ * @method void setCoordPageIndex(array $CoordPageIndex) 设置<p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
+ * @method string getRightAnswer() 获取<p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
+ * @method void setRightAnswer(string $RightAnswer) 设置<p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
  * @method string getSubject() 获取<p>学科（如语文、数学、英语）</p>
  * @method void setSubject(string $Subject) 设置<p>学科（如语文、数学、英语）</p>
  * @method array getKnowledgePoints() 获取<p>返回题目的知识点内容</p>
  * @method void setKnowledgePoints(array $KnowledgePoints) 设置<p>返回题目的知识点内容</p>
+ * @method string getAnswerAnalysis() 获取<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+ * @method void setAnswerAnalysis(string $AnswerAnalysis) 设置<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+ * @method string getGrade() 获取<p>年级：小学/初中/高中</p>
+ * @method void setGrade(string $Grade) 设置<p>年级：小学/初中/高中</p>
  */
 class ResultList extends AbstractModel
 {
@@ -99,12 +103,12 @@ class ResultList extends AbstractModel
     public $Coord;
 
     /**
-     * @var array <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     * @var array <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
      */
     public $CoordPageIndex;
 
     /**
-     * @var string <p>返回正确答案内容</p>
+     * @var string <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
      */
     public $RightAnswer;
 
@@ -117,6 +121,16 @@ class ResultList extends AbstractModel
      * @var array <p>返回题目的知识点内容</p>
      */
     public $KnowledgePoints;
+
+    /**
+     * @var string <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     */
+    public $AnswerAnalysis;
+
+    /**
+     * @var string <p>年级：小学/初中/高中</p>
+     */
+    public $Grade;
 
     /**
      * @param array $Question <p>题干</p>
@@ -132,10 +146,12 @@ class ResultList extends AbstractModel
      * @param array $Parse <p>解析</p>
      * @param array $Coord <p>整题的坐标，多页单题跨页/单页单题跨栏场景下，存在一道题有多个坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
-     * @param string $RightAnswer <p>返回正确答案内容</p>
+     * @param array $CoordPageIndex <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
+     * @param string $RightAnswer <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
      * @param string $Subject <p>学科（如语文、数学、英语）</p>
      * @param array $KnowledgePoints <p>返回题目的知识点内容</p>
+     * @param string $AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * @param string $Grade <p>年级：小学/初中/高中</p>
      */
     function __construct()
     {
@@ -227,6 +243,14 @@ class ResultList extends AbstractModel
 
         if (array_key_exists("KnowledgePoints",$param) and $param["KnowledgePoints"] !== null) {
             $this->KnowledgePoints = $param["KnowledgePoints"];
+        }
+
+        if (array_key_exists("AnswerAnalysis",$param) and $param["AnswerAnalysis"] !== null) {
+            $this->AnswerAnalysis = $param["AnswerAnalysis"];
+        }
+
+        if (array_key_exists("Grade",$param) and $param["Grade"] !== null) {
+            $this->Grade = $param["Grade"];
         }
     }
 }

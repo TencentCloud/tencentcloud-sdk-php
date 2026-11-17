@@ -28,6 +28,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\AddWorkspaceUsersResponse AddWorkspaceUsers(Models\AddWorkspaceUsersRequest $req) 创建用户组
  * @method Models\CreateCatalogResponse CreateCatalog(Models\CreateCatalogRequest $req) 创建数据目录接口
  * @method Models\CreateConsoleGroupResponse CreateConsoleGroup(Models\CreateConsoleGroupRequest $req) 创建控制台用户组，该接口为控制台级接口，仅支持在中心地域调用：国内站请传入 ap-guangzhou，国际站请传入 ap-singapore；其他地域调用将返回 UnsupportedRegion。
+ * @method Models\CreateExperimentResponse CreateExperiment(Models\CreateExperimentRequest $req) 创建实验。实验是 MLflow 训练跟踪的容器，用于承载训练运行记录与已记录模型。支持 MACHINE_LEARNING/CLASSIFICATION/REGRESSION/FORECASTING/AGENT 五种类型；AutoML 类型（分类/回归/时序预测）需同时传入 AutoMlConf 与 TrainingData。
  * @method Models\CreateFileResponse CreateFile(Models\CreateFileRequest $req) 在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -98,6 +99,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
 | `ResourceNotFound.FileVersionNotFound` | 1030205 | 指定的文件版本不存在 | 请确认 VersionId，或调用 ListFileVersions 获取 |
 | `UnauthorizedOperation.FileReadDenied` | 1030304 | 对该文件无读权限 | 请联系文件负责人或空间管理员授权 |
 | `InternalError` | 1030900 | 服务内部异常 | 请携带 RequestId 联系支持 |
+ * @method Models\GetFileContentResponse GetFileContent(Models\GetFileContentRequest $req) 获取文件内容。第一期：支持 FileId 定位
  * @method Models\GetFolderResponse GetFolder(Models\GetFolderRequest $req) 获取文件夹详情
  * @method Models\GetLocationResponse GetLocation(Models\GetLocationRequest $req) 查询存储位置详情
 使用场景：根据存储位置名获取单个存储位置的详细信息

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 全局域名为：global
  * @method array getIpList() 获取ip参数列表
  * @method void setIpList(array $IpList) 设置ip参数列表
- * @method integer getActionType() 获取42为黑名单，40为白名单
- * @method void setActionType(integer $ActionType) 设置42为黑名单，40为白名单
+ * @method integer getActionType() 获取IP黑白名单类型，40表示白名单，42表示黑名单
+ * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40表示白名单，42表示黑名单
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
  * @method integer getValidTS() 获取valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
@@ -59,7 +59,7 @@ class ModifyIpAccessControlRequest extends AbstractModel
     public $IpList;
 
     /**
-     * @var integer 42为黑名单，40为白名单
+     * @var integer IP黑白名单类型，40表示白名单，42表示黑名单
      */
     public $ActionType;
 
@@ -108,7 +108,7 @@ class ModifyIpAccessControlRequest extends AbstractModel
      * @param string $Domain 具体域名如：test.qcloudwaf.com
 全局域名为：global
      * @param array $IpList ip参数列表
-     * @param integer $ActionType 42为黑名单，40为白名单
+     * @param integer $ActionType IP黑白名单类型，40表示白名单，42表示黑名单
      * @param integer $RuleId 规则ID
      * @param integer $ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param string $InstanceId 实例Id

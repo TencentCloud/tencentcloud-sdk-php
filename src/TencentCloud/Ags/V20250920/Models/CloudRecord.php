@@ -44,18 +44,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLifecycleStatus(string $LifecycleStatus) 设置<p>生命周期状态。ACTIVE：可用；DELETED：软删除墓碑，不再参与常规查询、下发或版本配额。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取<p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置<p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorUin() 获取<p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorUin(string $CreatorUin) 设置<p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatorSubAccountUin() 获取<p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatorSubAccountUin(string $CreatorSubAccountUin) 设置<p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取<p>创建时间，ISO 8601 UTC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，ISO 8601 UTC。</p>
@@ -64,13 +52,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置<p>最近一次更新时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVersionCount() 获取<p>Record 下未删除 Version 数量。</p>
+ * @method integer getAppId() 获取<p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersionCount(integer $VersionCount) 设置<p>Record 下未删除 Version 数量。</p>
+ * @method void setAppId(integer $AppId) 设置<p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabelSet() 获取<p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+ * @method string getCreatorUin() 获取<p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelSet(array $LabelSet) 设置<p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+ * @method void setCreatorUin(string $CreatorUin) 设置<p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorSubAccountUin() 获取<p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorSubAccountUin(string $CreatorSubAccountUin) 设置<p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVersionCount() 获取<p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionCount(integer $VersionCount) 设置<p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabelSet() 获取<p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelSet(array $LabelSet) 设置<p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudRecord extends AbstractModel
@@ -112,24 +112,6 @@ class CloudRecord extends AbstractModel
     public $LifecycleStatus;
 
     /**
-     * @var integer <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AppId;
-
-    /**
-     * @var string <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreatorUin;
-
-    /**
-     * @var string <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CreatorSubAccountUin;
-
-    /**
      * @var string <p>创建时间，ISO 8601 UTC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,13 +124,31 @@ class CloudRecord extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer <p>Record 下未删除 Version 数量。</p>
+     * @var integer <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorUin;
+
+    /**
+     * @var string <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorSubAccountUin;
+
+    /**
+     * @var integer <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionCount;
 
     /**
-     * @var array <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * @var array <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelSet;
@@ -166,19 +166,19 @@ class CloudRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LifecycleStatus <p>生命周期状态。ACTIVE：可用；DELETED：软删除墓碑，不再参与常规查询、下发或版本配额。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorUin <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime <p>创建时间，ISO 8601 UTC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime <p>最近一次更新时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VersionCount <p>Record 下未删除 Version 数量。</p>
+     * @param integer $AppId <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * @param string $CreatorUin <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VersionCount <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -218,6 +218,14 @@ class CloudRecord extends AbstractModel
             $this->LifecycleStatus = $param["LifecycleStatus"];
         }
 
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
         }
@@ -228,14 +236,6 @@ class CloudRecord extends AbstractModel
 
         if (array_key_exists("CreatorSubAccountUin",$param) and $param["CreatorSubAccountUin"] !== null) {
             $this->CreatorSubAccountUin = $param["CreatorSubAccountUin"];
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
         }
 
         if (array_key_exists("VersionCount",$param) and $param["VersionCount"] !== null) {

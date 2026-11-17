@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOverCharSize(string $OverCharSize) 设置<p>超量字符数</p>
  * @method string getUsedCharSize() 获取<p>已用字符数</p>
  * @method void setUsedCharSize(string $UsedCharSize) 设置<p>已用字符数</p>
+ * @method CharacterSize getCharacterSize() 获取<p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCharacterSize(CharacterSize $CharacterSize) 设置<p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ByteCapacity getByteCapacity() 获取<p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setByteCapacity(ByteCapacity $ByteCapacity) 设置<p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCapacityStatus() 获取<p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCapacityStatus(integer $CapacityStatus) 设置<p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KBCapacity extends AbstractModel
 {
@@ -45,9 +57,33 @@ class KBCapacity extends AbstractModel
     public $UsedCharSize;
 
     /**
+     * @var CharacterSize <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CharacterSize;
+
+    /**
+     * @var ByteCapacity <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ByteCapacity;
+
+    /**
+     * @var integer <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CapacityStatus;
+
+    /**
      * @param string $MaxCharSize <p>最大字符数</p>
      * @param string $OverCharSize <p>超量字符数</p>
      * @param string $UsedCharSize <p>已用字符数</p>
+     * @param CharacterSize $CharacterSize <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ByteCapacity $ByteCapacity <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CapacityStatus <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +108,20 @@ class KBCapacity extends AbstractModel
 
         if (array_key_exists("UsedCharSize",$param) and $param["UsedCharSize"] !== null) {
             $this->UsedCharSize = $param["UsedCharSize"];
+        }
+
+        if (array_key_exists("CharacterSize",$param) and $param["CharacterSize"] !== null) {
+            $this->CharacterSize = new CharacterSize();
+            $this->CharacterSize->deserialize($param["CharacterSize"]);
+        }
+
+        if (array_key_exists("ByteCapacity",$param) and $param["ByteCapacity"] !== null) {
+            $this->ByteCapacity = new ByteCapacity();
+            $this->ByteCapacity->deserialize($param["ByteCapacity"]);
+        }
+
+        if (array_key_exists("CapacityStatus",$param) and $param["CapacityStatus"] !== null) {
+            $this->CapacityStatus = $param["CapacityStatus"];
         }
     }
 }

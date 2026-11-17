@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailableRollbackVersion(string $AvailableRollbackVersion) 设置<p>可回退的版本</p>
  * @method boolean getForceHTTPSRedirect() 获取<p>强制跳转HTTPS开关</p>
  * @method void setForceHTTPSRedirect(boolean $ForceHTTPSRedirect) 设置<p>强制跳转HTTPS开关</p>
+ * @method array getPrivateIpAddresses() 获取<p>内网IP地址列表</p>
+ * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置<p>内网IP地址列表</p>
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
@@ -244,6 +246,11 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
     public $ForceHTTPSRedirect;
 
     /**
+     * @var array <p>内网IP地址列表</p>
+     */
+    public $PrivateIpAddresses;
+
+    /**
      * @param string $GatewayId <p>云原生API网关ID。</p>
      * @param string $Status <p>云原生API网关状态。</p>
      * @param string $Name <p>云原生API网关名。</p>
@@ -276,6 +283,7 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
      * @param boolean $AvailableUpgrade <p>是否提示可升级</p>
      * @param string $AvailableRollbackVersion <p>可回退的版本</p>
      * @param boolean $ForceHTTPSRedirect <p>强制跳转HTTPS开关</p>
+     * @param array $PrivateIpAddresses <p>内网IP地址列表</p>
      */
     function __construct()
     {
@@ -420,6 +428,10 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
         if (array_key_exists("ForceHTTPSRedirect",$param) and $param["ForceHTTPSRedirect"] !== null) {
             $this->ForceHTTPSRedirect = $param["ForceHTTPSRedirect"];
+        }
+
+        if (array_key_exists("PrivateIpAddresses",$param) and $param["PrivateIpAddresses"] !== null) {
+            $this->PrivateIpAddresses = $param["PrivateIpAddresses"];
         }
     }
 }

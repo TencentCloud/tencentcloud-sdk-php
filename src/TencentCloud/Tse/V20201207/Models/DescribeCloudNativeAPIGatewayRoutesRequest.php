@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置<p>排序字段</p>
  * @method string getOrderType() 获取<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
  * @method void setOrderType(string $OrderType) 设置<p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+ * @method array getTagIds() 获取<p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+ * @method void setTagIds(array $TagIds) 设置<p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+ * @method array getTagFilters() 获取<p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+ * @method void setTagFilters(array $TagFilters) 设置<p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
  */
 class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
     public $OrderType;
 
     /**
+     * @var array <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+     */
+    public $TagIds;
+
+    /**
+     * @var array <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+     */
+    public $TagFilters;
+
+    /**
      * @param string $GatewayId <p>网关ID</p>
      * @param integer $Limit <p>翻页单页查询限制数量[0,1000], 默认值0</p>
      * @param integer $Offset <p>翻页单页偏移量，默认值0</p>
@@ -104,6 +118,8 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
      * @param boolean $GrayRoutesFirst <p>是否将灰度规则可能带来的路由排在原始路由前</p>
      * @param string $OrderField <p>排序字段</p>
      * @param string $OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     * @param array $TagIds <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+     * @param array $TagFilters <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
      */
     function __construct()
     {
@@ -161,6 +177,19 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
+            $this->TagIds = $param["TagIds"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagKVFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

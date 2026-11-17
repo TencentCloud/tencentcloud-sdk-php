@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableHeaders(integer $EnableHeaders) 设置<p>1:开启 0:不开启</p>
  * @method integer getEnableBody() 获取<p>1:开启 0:不开启</p>
  * @method void setEnableBody(integer $EnableBody) 设置<p>1:开启 0:不开启</p>
+ * @method integer getEnableAttackBody() 获取<p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+ * @method void setEnableAttackBody(integer $EnableAttackBody) 设置<p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
  * @method integer getEnableBot() 获取<p>1:开启 0:不开启</p>
  * @method void setEnableBot(integer $EnableBot) 设置<p>1:开启 0:不开启</p>
  * @method integer getEnableResponse() 获取<p>响应方向body<br>1:开启 0:不开启</p>
@@ -34,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableResponseLength(integer $EnableResponseLength) 设置<p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
  * @method integer getEnableResponseStatusLine() 获取<p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
  * @method void setEnableResponseStatusLine(integer $EnableResponseStatusLine) 设置<p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+ * @method string getLlmItem() 获取<p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+ * @method void setLlmItem(string $LlmItem) 设置<p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+ * @method integer getFilterPlusEnableHeaderFilter() 获取<p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+ * @method void setFilterPlusEnableHeaderFilter(integer $FilterPlusEnableHeaderFilter) 设置<p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
  */
 class FieldWriteConfig extends AbstractModel
 {
@@ -46,6 +52,11 @@ class FieldWriteConfig extends AbstractModel
      * @var integer <p>1:开启 0:不开启</p>
      */
     public $EnableBody;
+
+    /**
+     * @var integer <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+     */
+    public $EnableAttackBody;
 
     /**
      * @var integer <p>1:开启 0:不开启</p>
@@ -73,13 +84,26 @@ class FieldWriteConfig extends AbstractModel
     public $EnableResponseStatusLine;
 
     /**
+     * @var string <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+     */
+    public $LlmItem;
+
+    /**
+     * @var integer <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+     */
+    public $FilterPlusEnableHeaderFilter;
+
+    /**
      * @param integer $EnableHeaders <p>1:开启 0:不开启</p>
      * @param integer $EnableBody <p>1:开启 0:不开启</p>
+     * @param integer $EnableAttackBody <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
      * @param integer $EnableBot <p>1:开启 0:不开启</p>
      * @param integer $EnableResponse <p>响应方向body<br>1:开启 0:不开启</p>
      * @param integer $EnableResponseHeaders <p>是否投递 response_headers（响应头，完整键值对，原样投递不做过滤/脱敏，超过2KB截断）。1:开启 0/不填:不开启。与 EnableResponse（响应体）完全独立，互不影响。</p>
      * @param integer $EnableResponseLength <p>是否投递 response_length（响应包长度，单位字节）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。</p>
      * @param integer $EnableResponseStatusLine <p>是否投递 response_status_line（客户端可见 HTTP 状态行，如 HTTP/1.1 200 OK，超过1KB截断）。1:开启 0/不填:不开启。与 EnableResponse 完全独立，互不影响。拦截/未回源时也会有值，记录的是 WAF 返回给客户端的状态行。</p>
+     * @param string $LlmItem <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+     * @param integer $FilterPlusEnableHeaderFilter <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
      */
     function __construct()
     {
@@ -102,6 +126,10 @@ class FieldWriteConfig extends AbstractModel
             $this->EnableBody = $param["EnableBody"];
         }
 
+        if (array_key_exists("EnableAttackBody",$param) and $param["EnableAttackBody"] !== null) {
+            $this->EnableAttackBody = $param["EnableAttackBody"];
+        }
+
         if (array_key_exists("EnableBot",$param) and $param["EnableBot"] !== null) {
             $this->EnableBot = $param["EnableBot"];
         }
@@ -120,6 +148,14 @@ class FieldWriteConfig extends AbstractModel
 
         if (array_key_exists("EnableResponseStatusLine",$param) and $param["EnableResponseStatusLine"] !== null) {
             $this->EnableResponseStatusLine = $param["EnableResponseStatusLine"];
+        }
+
+        if (array_key_exists("LlmItem",$param) and $param["LlmItem"] !== null) {
+            $this->LlmItem = $param["LlmItem"];
+        }
+
+        if (array_key_exists("FilterPlusEnableHeaderFilter",$param) and $param["FilterPlusEnableHeaderFilter"] !== null) {
+            $this->FilterPlusEnableHeaderFilter = $param["FilterPlusEnableHeaderFilter"];
         }
     }
 }

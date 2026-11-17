@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置<p>提取规则，如果设置了ExtractRule，则必须设置LogType</p>
  * @method integer getTaskType() 获取<p>s3导入任务类型.</p><p>枚举值：</p><ul><li>1： 一次性导入任务</li><li>2： 持续性导入任务</li></ul><p>默认值：1</p>
  * @method void setTaskType(integer $TaskType) 设置<p>s3导入任务类型.</p><p>枚举值：</p><ul><li>1： 一次性导入任务</li><li>2： 持续性导入任务</li></ul><p>默认值：1</p>
+ * @method boolean getSQSEnabled() 获取<p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+ * @method void setSQSEnabled(boolean $SQSEnabled) 设置<p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+ * @method string getSQSUrl() 获取<p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+ * @method void setSQSUrl(string $SQSUrl) 设置<p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
  */
 class CreateS3RechargeRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateS3RechargeRequest extends AbstractModel
     public $TaskType;
 
     /**
+     * @var boolean <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+     */
+    public $SQSEnabled;
+
+    /**
+     * @var string <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+     */
+    public $SQSUrl;
+
+    /**
      * @param string $TopicId <p>日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      * @param string $Name <p>s3导入任务名称,最大支持128个字节。</p><p>同一个TopicId下的s3任务Name必须唯一</p>
      * @param string $Bucket <p>s3存储桶</p>
@@ -120,6 +134,8 @@ class CreateS3RechargeRequest extends AbstractModel
      * @param string $Compress <p>压缩模式。支持: &quot;&quot;, &quot;gzip&quot;, &quot;lzop&quot;, &quot;snappy&quot;。</p><p>默认值：不压缩</p>
      * @param ExtractRuleInfo $ExtractRuleInfo <p>提取规则，如果设置了ExtractRule，则必须设置LogType</p>
      * @param integer $TaskType <p>s3导入任务类型.</p><p>枚举值：</p><ul><li>1： 一次性导入任务</li><li>2： 持续性导入任务</li></ul><p>默认值：1</p>
+     * @param boolean $SQSEnabled <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+     * @param string $SQSUrl <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class CreateS3RechargeRequest extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("SQSEnabled",$param) and $param["SQSEnabled"] !== null) {
+            $this->SQSEnabled = $param["SQSEnabled"];
+        }
+
+        if (array_key_exists("SQSUrl",$param) and $param["SQSUrl"] !== null) {
+            $this->SQSUrl = $param["SQSUrl"];
         }
     }
 }

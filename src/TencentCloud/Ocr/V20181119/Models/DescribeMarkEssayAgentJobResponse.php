@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置<p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
  * @method string getJobStatus() 获取<p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
  * @method void setJobStatus(string $JobStatus) 设置<p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
+ * @method array getQuestionInfo() 获取<p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+ * @method void setQuestionInfo(array $QuestionInfo) 设置<p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+ * @method string getAgentResultJson() 获取<p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+ * @method void setAgentResultJson(string $AgentResultJson) 设置<p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+ * @method string getThoughtContent() 获取<p>扩展字段</p>
+ * @method void setThoughtContent(string $ThoughtContent) 设置<p>扩展字段</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +67,21 @@ class DescribeMarkEssayAgentJobResponse extends AbstractModel
     public $JobStatus;
 
     /**
+     * @var array <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+     */
+    public $QuestionInfo;
+
+    /**
+     * @var string <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     */
+    public $AgentResultJson;
+
+    /**
+     * @var string <p>扩展字段</p>
+     */
+    public $ThoughtContent;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +92,9 @@ class DescribeMarkEssayAgentJobResponse extends AbstractModel
      * @param string $ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      * @param string $ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      * @param string $JobStatus <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
+     * @param array $QuestionInfo <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+     * @param string $AgentResultJson <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     * @param string $ThoughtContent <p>扩展字段</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -109,6 +133,23 @@ class DescribeMarkEssayAgentJobResponse extends AbstractModel
 
         if (array_key_exists("JobStatus",$param) and $param["JobStatus"] !== null) {
             $this->JobStatus = $param["JobStatus"];
+        }
+
+        if (array_key_exists("QuestionInfo",$param) and $param["QuestionInfo"] !== null) {
+            $this->QuestionInfo = [];
+            foreach ($param["QuestionInfo"] as $key => $value){
+                $obj = new QuestionInfo();
+                $obj->deserialize($value);
+                array_push($this->QuestionInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentResultJson",$param) and $param["AgentResultJson"] !== null) {
+            $this->AgentResultJson = $param["AgentResultJson"];
+        }
+
+        if (array_key_exists("ThoughtContent",$param) and $param["ThoughtContent"] !== null) {
+            $this->ThoughtContent = $param["ThoughtContent"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -155,6 +155,9 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCreditsUsageDetailResponse DescribeCreditsUsageDetail(Models\DescribeCreditsUsageDetailRequest $req) 查询资源点模式下的资源点用量及原始用量明细
  * @method Models\DescribeCurveDataResponse DescribeCurveData(Models\DescribeCurveDataRequest $req) 根据指定指标名称，查询某环境在指定时间范围内的监控数据，返回按统计粒度聚合后的时序数据。
  * @method Models\DescribeDatabaseACLResponse DescribeDatabaseACL(Models\DescribeDatabaseACLRequest $req) 本接口（DescribeDatabaseACL）获取文档型数据库权限。
+ * @method Models\DescribeEnvAccessControlResponse DescribeEnvAccessControl(Models\DescribeEnvAccessControlRequest $req) 查询云开发域名访问限制配置，返回指定环境下公网、VPC、办公网三种来源的当前访问策略
+（1）可以通过控制台调用查询域名访问控制。响应  Current 返回各来源（PUBLIC/VPC/WOA）当前生效的配置
+（2）不产生写副作用
  * @method Models\DescribeEnvAccountCircleResponse DescribeEnvAccountCircle(Models\DescribeEnvAccountCircleRequest $req) 查询环境计费周期。
 云开发环境的资源点都是按月结算的，每个月都有一定的抵扣额度。
 
@@ -272,6 +275,11 @@ Id、Secret、CreatedAt、Meta 等字段在该接口中不可修改，当客户�
  * @method Models\ModifyClsTopicResponse ModifyClsTopic(Models\ModifyClsTopicRequest $req) 修改日志主题
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 本接口（ModifyDatabaseACL）用于修改文档型数据库权限。
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息
+ * @method Models\ModifyEnvAccessControlResponse ModifyEnvAccessControl(Models\ModifyEnvAccessControlRequest $req) 云开发域名访问限制配置
+（1）影响指定环境下域名来源访问策略，包含公网与 VPC 白名单
+（2）关闭公网访问后，云开发提供的默认域名在公网访问场景下返回403
+（3）可以通过配置 VPC 白名单指定放通特定 VPC 来源的请求
+（4）可以通过云开发控制台调用修改访问配置，修改后可通过查询接口核对生效配置
  * @method Models\ModifyEnvExtraResponse ModifyEnvExtra(Models\ModifyEnvExtraRequest $req) 修改环境额外配置
  * @method Models\ModifyEnvPlanResponse ModifyEnvPlan(Models\ModifyEnvPlanRequest $req) 本接口用于变更云开发环境套餐。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。

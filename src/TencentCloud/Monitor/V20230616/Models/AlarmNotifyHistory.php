@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverGroups(array $ReceiverGroups) 设置<p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmId() 获取<p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+ * @method void setAlarmId(string $AlarmId) 设置<p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+ * @method string getAlarmName() 获取<p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+ * @method void setAlarmName(string $AlarmName) 设置<p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+ * @method string getAlarmStatus() 获取<p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+ * @method void setAlarmStatus(string $AlarmStatus) 设置<p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+ * @method string getNotifyType() 获取<p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+ * @method void setNotifyType(string $NotifyType) 设置<p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
  */
 class AlarmNotifyHistory extends AbstractModel
 {
@@ -156,6 +164,26 @@ class AlarmNotifyHistory extends AbstractModel
     public $ReceiverGroups;
 
     /**
+     * @var string <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+     */
+    public $AlarmId;
+
+    /**
+     * @var string <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+     */
+    public $AlarmName;
+
+    /**
+     * @var string <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+     */
+    public $AlarmStatus;
+
+    /**
+     * @var string <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+     */
+    public $NotifyType;
+
+    /**
      * @param string $NotifyId <p>通知的唯一ID</p>
      * @param string $PolicyId <p>告警策略ID</p>
      * @param string $SessionId <p>告警周期iD</p>
@@ -176,6 +204,10 @@ class AlarmNotifyHistory extends AbstractModel
      * @param array $Labels <p>告警的lable</p>
      * @param array $ReceiverGroups <p>该条通知实际执行的接收人/组明细。一条元素对应通知模板里的一条渠道发送规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmId <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+     * @param string $AlarmName <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+     * @param string $AlarmStatus <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+     * @param string $NotifyType <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
      */
     function __construct()
     {
@@ -280,6 +312,22 @@ class AlarmNotifyHistory extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ReceiverGroups, $obj);
             }
+        }
+
+        if (array_key_exists("AlarmId",$param) and $param["AlarmId"] !== null) {
+            $this->AlarmId = $param["AlarmId"];
+        }
+
+        if (array_key_exists("AlarmName",$param) and $param["AlarmName"] !== null) {
+            $this->AlarmName = $param["AlarmName"];
+        }
+
+        if (array_key_exists("AlarmStatus",$param) and $param["AlarmStatus"] !== null) {
+            $this->AlarmStatus = $param["AlarmStatus"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
         }
     }
 }

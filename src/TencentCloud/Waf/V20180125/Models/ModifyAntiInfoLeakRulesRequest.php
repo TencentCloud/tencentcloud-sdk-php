@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置规则名称
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getActionType() 获取Action 值
- * @method void setActionType(integer $ActionType) 设置Action 值
+ * @method integer getActionType() 获取防信息泄露动作类型，取值0~4
+ * @method void setActionType(integer $ActionType) 设置防信息泄露动作类型，取值0~4
  * @method array getStrategies() 获取策略数组
  * @method void setStrategies(array $Strategies) 设置策略数组
  */
@@ -49,7 +49,7 @@ class ModifyAntiInfoLeakRulesRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer Action 值
+     * @var integer 防信息泄露动作类型，取值0~4
      */
     public $ActionType;
 
@@ -62,7 +62,7 @@ class ModifyAntiInfoLeakRulesRequest extends AbstractModel
      * @param integer $RuleId 规则ID
      * @param string $Name 规则名称
      * @param string $Domain 域名
-     * @param integer $ActionType Action 值
+     * @param integer $ActionType 防信息泄露动作类型，取值0~4
      * @param array $Strategies 策略数组
      */
     function __construct()

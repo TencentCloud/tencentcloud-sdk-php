@@ -20,58 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RegisterCaCertificate请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method string getCaCertificate() 获取CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
- * @method void setCaCertificate(string $CaCertificate) 设置CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
- * @method string getVerificationCertificate() 获取验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
- * @method void setVerificationCertificate(string $VerificationCertificate) 设置验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
- * @method string getFormat() 获取证书格式，不传默认PEM格式，当前仅支持PEM格式
- * @method void setFormat(string $Format) 设置证书格式，不传默认PEM格式，当前仅支持PEM格式
- * @method string getStatus() 获取证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
- * @method void setStatus(string $Status) 设置证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getCaCertificate() 获取<p>CA证书内容</p>
+ * @method void setCaCertificate(string $CaCertificate) 设置<p>CA证书内容</p>
+ * @method string getVerificationCertificate() 获取<p>验证证书内容</p>
+ * @method void setVerificationCertificate(string $VerificationCertificate) 设置<p>验证证书内容</p>
+ * @method string getFormat() 获取<p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
+ * @method void setFormat(string $Format) 设置<p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
+ * @method string getStatus() 获取<p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
+ * @method void setStatus(string $Status) 设置<p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
  */
 class RegisterCaCertificateRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+     * @var string <p>CA证书内容</p>
      */
     public $CaCertificate;
 
     /**
-     * @var string 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+     * @var string <p>验证证书内容</p>
      */
     public $VerificationCertificate;
 
     /**
-     * @var string 证书格式，不传默认PEM格式，当前仅支持PEM格式
+     * @var string <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
      */
     public $Format;
 
     /**
-     * @var string 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+     * @var string <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
      */
     public $Status;
 
     /**
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param string $CaCertificate CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
-     * @param string $VerificationCertificate 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
-     * @param string $Format 证书格式，不传默认PEM格式，当前仅支持PEM格式
-     * @param string $Status 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $CaCertificate <p>CA证书内容</p>
+     * @param string $VerificationCertificate <p>验证证书内容</p>
+     * @param string $Format <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
+     * @param string $Status <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
      */
     function __construct()
     {

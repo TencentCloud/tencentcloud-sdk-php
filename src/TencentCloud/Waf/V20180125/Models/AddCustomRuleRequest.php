@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置规则来源，判断是不是小程序的
  * @method string getLabel() 获取规则标签，小程序规则用，标识是内置规则还是自定义规则
  * @method void setLabel(string $Label) 设置规则标签，小程序规则用，标识是内置规则还是自定义规则
- * @method integer getStatus() 获取开关状态，小程序风控规则的时候传该值
- * @method void setStatus(integer $Status) 设置开关状态，小程序风控规则的时候传该值
+ * @method integer getStatus() 获取规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
+ * @method void setStatus(integer $Status) 设置规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
  * @method string getPageId() 获取拦截页面id
  * @method void setPageId(string $PageId) 设置拦截页面id
  * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
@@ -78,6 +78,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionRatio(integer $ActionRatio) 设置动作灰度比例，即规则命中后执行动作的流量百分比
 取值范围：1-100
 默认值：100（全量生效）
+ * @method integer getPreview() 获取自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+ * @method void setPreview(integer $Preview) 设置自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
  */
 class AddCustomRuleRequest extends AbstractModel
 {
@@ -160,7 +172,7 @@ class AddCustomRuleRequest extends AbstractModel
     public $Label;
 
     /**
-     * @var integer 开关状态，小程序风控规则的时候传该值
+     * @var integer 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
      */
     public $Status;
 
@@ -184,6 +196,16 @@ class AddCustomRuleRequest extends AbstractModel
     public $ActionRatio;
 
     /**
+     * @var integer 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public $Preview;
+
+    /**
      * @param string $Name 规则名称
 入参限制：1-128个字符，不允许特殊字符
      * @param string $SortId 优先级，0-100的整数，数字越小，代表这条规则的执行优先级越高
@@ -205,7 +227,7 @@ class AddCustomRuleRequest extends AbstractModel
      * @param JobDateTime $JobDateTime 规则执行的时间
      * @param string $Source 规则来源，判断是不是小程序的
      * @param string $Label 规则标签，小程序规则用，标识是内置规则还是自定义规则
-     * @param integer $Status 开关状态，小程序风控规则的时候传该值
+     * @param integer $Status 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
      * @param string $PageId 拦截页面id
      * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
 默认值：and
@@ -213,6 +235,12 @@ class AddCustomRuleRequest extends AbstractModel
      * @param integer $ActionRatio 动作灰度比例，即规则命中后执行动作的流量百分比
 取值范围：1-100
 默认值：100（全量生效）
+     * @param integer $Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
      */
     function __construct()
     {
@@ -303,6 +331,10 @@ class AddCustomRuleRequest extends AbstractModel
 
         if (array_key_exists("ActionRatio",$param) and $param["ActionRatio"] !== null) {
             $this->ActionRatio = $param["ActionRatio"];
+        }
+
+        if (array_key_exists("Preview",$param) and $param["Preview"] !== null) {
+            $this->Preview = $param["Preview"];
         }
     }
 }

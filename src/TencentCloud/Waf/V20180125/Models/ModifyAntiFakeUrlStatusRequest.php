@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取防篡改规则状态，0表示关闭，1表示开启
+ * @method void setStatus(integer $Status) 设置防篡改规则状态，0表示关闭，1表示开启
  * @method array getIds() 获取Id列表
  * @method void setIds(array $Ids) 设置Id列表
  */
@@ -35,7 +35,7 @@ class ModifyAntiFakeUrlStatusRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 状态
+     * @var integer 防篡改规则状态，0表示关闭，1表示开启
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class ModifyAntiFakeUrlStatusRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $Status 状态
+     * @param integer $Status 防篡改规则状态，0表示关闭，1表示开启
      * @param array $Ids Id列表
      */
     function __construct()

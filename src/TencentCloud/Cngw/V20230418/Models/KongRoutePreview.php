@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryStringParameters(array $QueryStringParameters) 设置<p>querystring参数</p>
  * @method string getRouteSource() 获取<p>路由来源</p>
  * @method void setRouteSource(string $RouteSource) 设置<p>路由来源</p>
+ * @method array getTags() 获取<p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+ * @method void setTags(array $Tags) 设置<p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+ * @method integer getTimeout() 获取<p>超时时间，单位ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeout(integer $Timeout) 设置<p>超时时间，单位ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimeoutSource() 获取<p>路由超时配置的来源。</p>
+ * @method void setTimeoutSource(string $TimeoutSource) 设置<p>路由超时配置的来源。</p>
  */
 class KongRoutePreview extends AbstractModel
 {
@@ -177,6 +185,22 @@ class KongRoutePreview extends AbstractModel
     public $RouteSource;
 
     /**
+     * @var array <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+     */
+    public $Tags;
+
+    /**
+     * @var integer <p>超时时间，单位ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Timeout;
+
+    /**
+     * @var string <p>路由超时配置的来源。</p>
+     */
+    public $TimeoutSource;
+
+    /**
      * @param string $ID <p>服务ID</p>
      * @param string $Name <p>服务名字</p>
      * @param array $Methods <p>请求方法列表</p>
@@ -201,6 +225,10 @@ class KongRoutePreview extends AbstractModel
      * @param integer $RegexPriority <p>正则优先级</p>
      * @param array $QueryStringParameters <p>querystring参数</p>
      * @param string $RouteSource <p>路由来源</p>
+     * @param array $Tags <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+     * @param integer $Timeout <p>超时时间，单位ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeoutSource <p>路由超时配置的来源。</p>
      */
     function __construct()
     {
@@ -303,6 +331,23 @@ class KongRoutePreview extends AbstractModel
 
         if (array_key_exists("RouteSource",$param) and $param["RouteSource"] !== null) {
             $this->RouteSource = $param["RouteSource"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new KongUserTagKV();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("TimeoutSource",$param) and $param["TimeoutSource"] !== null) {
+            $this->TimeoutSource = $param["TimeoutSource"];
         }
     }
 }

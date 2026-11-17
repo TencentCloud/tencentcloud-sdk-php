@@ -200,7 +200,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\ModifyGovernanceServicesResponse ModifyGovernanceServices(Models\ModifyGovernanceServicesRequest $req) 修改治理中心服务
  * @method Models\ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(Models\ModifyNativeGatewayServerGroupRequest $req) 修改云原生API网关实例分组基础信息
  * @method Models\ModifyNativeGatewayServiceSourceResponse ModifyNativeGatewayServiceSource(Models\ModifyNativeGatewayServiceSourceRequest $req) 修改网关服务来源
- * @method Models\ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(Models\ModifyNetworkAccessStrategyRequest $req) 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。
+ * @method Models\ModifyNetworkAccessStrategyResponse ModifyNetworkAccessStrategy(Models\ModifyNetworkAccessStrategyRequest $req) 修改云原生API网关实例Kong访问策略，支持白名单或者黑名单。 支持 AccessControlSource=reference 引用实例基础配置，与自定义 CIDR 互斥。
  * @method Models\ModifyNetworkBasicInfoResponse ModifyNetworkBasicInfo(Models\ModifyNetworkBasicInfoRequest $req) 修改云原生API网关实例网络基本信息，例如带宽以及描述、规格升级，只支持修改客户端公网/内网的信息。
  * @method Models\ModifyUpstreamNodeStatusResponse ModifyUpstreamNodeStatus(Models\ModifyUpstreamNodeStatusRequest $req) 修改云原生网关上游实例节点健康状态
  * @method Models\OpenWafProtectionResponse OpenWafProtection(Models\OpenWafProtectionRequest $req) 开启 WAF 防护

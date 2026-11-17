@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务建模Pod信息
  *
- * @method string getName() 获取pod名
+ * @method string getName() 获取<p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置pod名
+ * @method void setName(string $Name) 设置<p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIP() 获取pod的IP
+ * @method string getIP() 获取<p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIP(string $IP) 设置pod的IP
+ * @method void setIP(string $IP) 设置<p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+ * @method string getStatus() 获取<p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+ * @method void setStatus(string $Status) 设置<p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStartTime() 获取pod启动时间
+ * @method string getStartTime() 获取<p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(string $StartTime) 设置pod启动时间
+ * @method void setStartTime(string $StartTime) 设置<p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEndTime() 获取pod结束时间
+ * @method string getEndTime() 获取<p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(string $EndTime) 设置pod结束时间
+ * @method void setEndTime(string $EndTime) 设置<p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ResourceConfigInfo getResourceConfigInfo() 获取pod资源配置
+ * @method ResourceConfigInfo getResourceConfigInfo() 获取<p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置pod资源配置
+ * @method void setResourceConfigInfo(ResourceConfigInfo $ResourceConfigInfo) 设置<p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubUin() 获取Pod所属任务的SubUin信息
+ * @method string getSubUin() 获取<p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubUin(string $SubUin) 设置Pod所属任务的SubUin信息
+ * @method void setSubUin(string $SubUin) 设置<p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodInfo extends AbstractModel
 {
     /**
-     * @var string pod名
+     * @var string <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string pod的IP
+     * @var string <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
-     * @var string pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * @var string <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string pod启动时间
+     * @var string <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var string pod结束时间
+     * @var string <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var ResourceConfigInfo pod资源配置
+     * @var ResourceConfigInfo <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceConfigInfo;
 
     /**
-     * @var string Pod所属任务的SubUin信息
+     * @var string <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubUin;
 
     /**
-     * @param string $Name pod名
+     * @param string $Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IP pod的IP
+     * @param string $IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * @param string $Status <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StartTime pod启动时间
+     * @param string $StartTime <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime pod结束时间
+     * @param string $EndTime <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceConfigInfo $ResourceConfigInfo pod资源配置
+     * @param ResourceConfigInfo $ResourceConfigInfo <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubUin Pod所属任务的SubUin信息
+     * @param string $SubUin <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

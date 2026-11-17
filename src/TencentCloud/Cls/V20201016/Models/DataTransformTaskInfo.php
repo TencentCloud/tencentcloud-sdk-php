@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataTransformSqlDataSources(array $DataTransformSqlDataSources) 设置<p>sql数据源信息</p>
  * @method array getEnvInfos() 获取<p>环境变量</p>
  * @method void setEnvInfos(array $EnvInfos) 设置<p>环境变量</p>
+ * @method string getDescribe() 获取<p>前置加工任务源主题、目标主题说明</p>
+ * @method void setDescribe(string $Describe) 设置<p>前置加工任务源主题、目标主题说明</p>
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -192,6 +194,11 @@ class DataTransformTaskInfo extends AbstractModel
     public $EnvInfos;
 
     /**
+     * @var string <p>前置加工任务源主题、目标主题说明</p>
+     */
+    public $Describe;
+
+    /**
      * @param string $Name <p>数据加工任务名称</p>
      * @param string $TaskId <p>数据加工任务id</p>
      * @param integer $EnableFlag <p>任务启用状态，默认为1，正常开启,  2关闭</p>
@@ -216,6 +223,7 @@ class DataTransformTaskInfo extends AbstractModel
      * @param integer $ProcessToTimestamp <p>指定加工数据的结束时间，秒级时间戳。</p><ol><li>不可指定未来的时间</li><li>不填则表示持续执行</li></ol>
      * @param array $DataTransformSqlDataSources <p>sql数据源信息</p>
      * @param array $EnvInfos <p>环境变量</p>
+     * @param string $Describe <p>前置加工任务源主题、目标主题说明</p>
      */
     function __construct()
     {
@@ -339,6 +347,10 @@ class DataTransformTaskInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EnvInfos, $obj);
             }
+        }
+
+        if (array_key_exists("Describe",$param) and $param["Describe"] !== null) {
+            $this->Describe = $param["Describe"];
         }
     }
 }

@@ -199,6 +199,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
    1. 可以查询最近365天内的AIGC统计数据。
    2. 查询时间跨度不超过90天。
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+ * @method Models\DescribeAigcWhitelistResponse DescribeAigcWhitelist(Models\DescribeAigcWhitelistRequest $req) 查询AIGC白名单配置
  * @method Models\DescribeAllClassResponse DescribeAllClass(Models\DescribeAllClassRequest $req) * 获得用户的所有分类信息。
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
  * @method Models\DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(Models\DescribeBlindWatermarkTemplatesRequest $req) 查询用户自定义数字水印模板。
@@ -595,6 +596,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 - （不推荐：应使用 CreateTime 替代）指定单个结尾创建时间 EndTime 进行搜索。
  * @method Models\SearchMediaBySemanticsResponse SearchMediaBySemantics(Models\SearchMediaBySemanticsRequest $req) 使用自然语言对媒体进行语义搜索。
 仅支持文搜视频、文搜图、图搜图，图搜视频请使用SearchMediaBySemanticsAsync.
+ * @method Models\SetAigcWhitelistResponse SetAigcWhitelist(Models\SetAigcWhitelistRequest $req) 修改AIGC白名单设置
  * @method Models\SetCLSPushTargetResponse SetCLSPushTarget(Models\SetCLSPushTargetRequest $req) 为点播域名设置投递 CLS 的目标。
  * @method Models\SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfo(Models\SetDrmKeyProviderInfoRequest $req) 设置 DRM 密钥提供商信息。
  * @method Models\SetVodDomainCertificateResponse SetVodDomainCertificate(Models\SetVodDomainCertificateRequest $req) 设置点播域名 HTTPS 证书。

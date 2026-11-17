@@ -29,10 +29,13 @@ use TencentCloud\Keewidb\V20220308\Models as Models;
  * @method Models\ClearInstanceResponse ClearInstance(Models\ClearInstanceRequest $req) 本接口（ClearInstance）用于清空实例数据。
 > **说明**：在清空数据流程中，系统将自动进行数据备份，耗时较长，请您耐心等待并提前做好时间规划。
  * @method Models\CreateBackupManuallyResponse CreateBackupManually(Models\CreateBackupManuallyRequest $req) 手动发起备份
+ * @method Models\CreateInstanceAccountResponse CreateInstanceAccount(Models\CreateInstanceAccountRequest $req) 本接口（CreateInstanceAccount）用于自定义访问实例的账号。
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 创建数据库实例
+ * @method Models\DeleteInstanceAccountResponse DeleteInstanceAccount(Models\DeleteInstanceAccountRequest $req) 本接口（DeleteInstanceAccount）用于删除实例自定义账号。
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 本接口（DescribeAutoBackupConfig）用于获取自动备份配置。
  * @method Models\DescribeConnectionConfigResponse DescribeConnectionConfig(Models\DescribeConnectionConfigRequest $req) 本接口（DescribeConnectionConfig）用于查询实例连接配置，包括出流量和入流量带宽、最大连接数限制。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+ * @method Models\DescribeInstanceAccountResponse DescribeInstanceAccount(Models\DescribeInstanceAccountRequest $req) 本接口（DescribeInstanceAccount）用于查看实例账号信息。
  * @method Models\DescribeInstanceBackupsResponse DescribeInstanceBackups(Models\DescribeInstanceBackupsRequest $req) 本接口（DescribeInstanceBackups）用于查询实例全量备份列表。
  * @method Models\DescribeInstanceBinlogsResponse DescribeInstanceBinlogs(Models\DescribeInstanceBinlogsRequest $req) 本接口（DescribeInstanceBinlogs）用于查询增量备份列表。
  * @method Models\DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(Models\DescribeInstanceDealDetailRequest $req) 本接口（DescribeInstanceDealDetail）用于查询预付费订单信息。
@@ -55,6 +58,7 @@ use TencentCloud\Keewidb\V20220308\Models as Models;
  * @method Models\ModifyConnectionConfigResponse ModifyConnectionConfig(Models\ModifyConnectionConfigRequest $req) 本接口（ModifyConnectionConfig）用于修改实例的连接配置，包括带宽和最大连接数。
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 本接口（ModifyInstance）用于修改实例相关信息。
+ * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) 本接口（ModifyInstanceAccount）用于修改实例账号。
  * @method Models\ModifyInstanceParamsResponse ModifyInstanceParams(Models\ModifyInstanceParamsRequest $req) 本接口（ModifyInstanceParams）用于修改实例参数配置。
  * @method Models\ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(Models\ModifyMaintenanceWindowRequest $req) 本接口（ModifyMaintenanceWindow）修改实例维护时间窗时间。
  * @method Models\ModifyNetworkConfigResponse ModifyNetworkConfig(Models\ModifyNetworkConfigRequest $req) 本接口（ModifyNetworkConfig）用于修改实例网络配置。

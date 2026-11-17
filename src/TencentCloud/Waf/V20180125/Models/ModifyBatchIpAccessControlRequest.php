@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
- * @method integer getActionType() 获取42为黑名单，40为白名单
- * @method void setActionType(integer $ActionType) 设置42为黑名单，40为白名单
+ * @method integer getActionType() 获取IP黑白名单类型，40表示白名单，42表示黑名单
+ * @method void setActionType(integer $ActionType) 设置IP黑白名单类型，40表示白名单，42表示黑名单
  * @method array getGroupIds() 获取防护对象组ID列表，如果绑定的是防护对象组，和Domains参数二选一
  * @method void setGroupIds(array $GroupIds) 设置防护对象组ID列表，如果绑定的是防护对象组，和Domains参数二选一
  * @method array getDomains() 获取域名列表，如果绑定的是批量域名，和GroupIds参数二选一
@@ -60,7 +60,7 @@ class ModifyBatchIpAccessControlRequest extends AbstractModel
     public $JobDateTime;
 
     /**
-     * @var integer 42为黑名单，40为白名单
+     * @var integer IP黑白名单类型，40表示白名单，42表示黑名单
      */
     public $ActionType;
 
@@ -84,7 +84,7 @@ class ModifyBatchIpAccessControlRequest extends AbstractModel
      * @param array $IpList IP参数列表
      * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
-     * @param integer $ActionType 42为黑名单，40为白名单
+     * @param integer $ActionType IP黑白名单类型，40表示白名单，42表示黑名单
      * @param array $GroupIds 防护对象组ID列表，如果绑定的是防护对象组，和Domains参数二选一
      * @param array $Domains 域名列表，如果绑定的是批量域名，和GroupIds参数二选一
      * @param string $Note 备注

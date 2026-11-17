@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSLStatus返回参数结构体
  *
- * @method string getStatus() 获取是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
- * @method void setStatus(string $Status) 设置是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
- * @method string getUrl() 获取证书下载链接。
- * @method void setUrl(string $Url) 设置证书下载链接。
+ * @method string getStatus() 获取<p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
+ * @method void setStatus(string $Status) 设置<p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
+ * @method string getUrl() 获取<p>证书下载链接。</p>
+ * @method void setUrl(string $Url) 设置<p>证书下载链接。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSSLStatusResponse extends AbstractModel
 {
     /**
-     * @var string 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
+     * @var string <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
      */
     public $Status;
 
     /**
-     * @var string 证书下载链接。
+     * @var string <p>证书下载链接。</p>
      */
     public $Url;
 
@@ -45,8 +45,8 @@ class DescribeSSLStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
-     * @param string $Url 证书下载链接。
+     * @param string $Status <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
+     * @param string $Url <p>证书下载链接。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

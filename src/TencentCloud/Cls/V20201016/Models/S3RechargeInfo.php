@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间</p><p>单位：秒</p><p>秒级时间戳</p>
  * @method integer getUpdateTime() 获取<p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
  * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
+ * @method boolean getSQSEnabled() 获取<p>是否启用SQS。</p>
+ * @method void setSQSEnabled(boolean $SQSEnabled) 设置<p>是否启用SQS。</p>
+ * @method string getSQSUrl() 获取<p>SQS队列URL。</p>
+ * @method void setSQSUrl(string $SQSUrl) 设置<p>SQS队列URL。</p>
  */
 class S3RechargeInfo extends AbstractModel
 {
@@ -157,6 +161,16 @@ class S3RechargeInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var boolean <p>是否启用SQS。</p>
+     */
+    public $SQSEnabled;
+
+    /**
+     * @var string <p>SQS队列URL。</p>
+     */
+    public $SQSUrl;
+
+    /**
      * @param string $TaskId <p>导入任务Id</p>
      * @param string $TopicId <p>日志主题Id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      * @param string $LogsetId <p>日志集Id。通过 <a href="https://cloud.tencent.com/document/product/614/58624">获取日志集列表</a>获取日志集Id。</p>
@@ -176,6 +190,8 @@ class S3RechargeInfo extends AbstractModel
      * @param integer $Progress <p>进度条百分值</p>
      * @param integer $CreateTime <p>创建时间</p><p>单位：秒</p><p>秒级时间戳</p>
      * @param integer $UpdateTime <p>更新时间</p><p>单位：秒</p><p>秒级时间戳</p>
+     * @param boolean $SQSEnabled <p>是否启用SQS。</p>
+     * @param string $SQSUrl <p>SQS队列URL。</p>
      */
     function __construct()
     {
@@ -265,6 +281,14 @@ class S3RechargeInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SQSEnabled",$param) and $param["SQSEnabled"] !== null) {
+            $this->SQSEnabled = $param["SQSEnabled"];
+        }
+
+        if (array_key_exists("SQSUrl",$param) and $param["SQSUrl"] !== null) {
+            $this->SQSUrl = $param["SQSUrl"];
         }
     }
 }

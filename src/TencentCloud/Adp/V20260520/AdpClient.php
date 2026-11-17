@@ -136,6 +136,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifyDocListResponse ModifyDocList(Models\ModifyDocListRequest $req) 批量修改文档
  * @method Models\ModifyKBResponse ModifyKB(Models\ModifyKBRequest $req) 修改知识库
  * @method Models\ModifyLabelResponse ModifyLabel(Models\ModifyLabelRequest $req) 修改标签
+ * @method Models\ModifyMessageRecordFeedbackResponse ModifyMessageRecordFeedback(Models\ModifyMessageRecordFeedbackRequest $req) 修改消息记录反馈
  * @method Models\ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(Models\ModifyMsgRecordCategoryRequest $req) 修改指定消息记录分类的名称
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件
  * @method Models\ModifyQAResponse ModifyQA(Models\ModifyQARequest $req) 修改单个 QA

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getEdition() 获取clb-waf或者saas-waf
- * @method void setEdition(string $Edition) 设置clb-waf或者saas-waf
+ * @method string getEdition() 获取clb-waf或者sparta-waf
+ * @method void setEdition(string $Edition) 设置clb-waf或者sparta-waf
  */
 class DescribePolicyStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribePolicyStatusRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string clb-waf或者saas-waf
+     * @var string clb-waf或者sparta-waf
      */
     public $Edition;
 
     /**
      * @param string $Domain 域名
-     * @param string $Edition clb-waf或者saas-waf
+     * @param string $Edition clb-waf或者sparta-waf
      */
     function __construct()
     {

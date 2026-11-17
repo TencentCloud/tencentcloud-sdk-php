@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLLMWafDLPRule请求参数结构体
  *
- * @method string getServiceId() 获取<p>服务ID</p>
- * @method void setServiceId(string $ServiceId) 设置<p>服务ID</p>
  * @method array getRuleIds() 获取<p>要修改的规则id列表</p>
  * @method void setRuleIds(array $RuleIds) 设置<p>要修改的规则id列表</p>
+ * @method string getServiceId() 获取<p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
  * @method string getRuleAction() 获取<p>动作</p>
  * @method void setRuleAction(string $RuleAction) 设置<p>动作</p>
  * @method integer getStatus() 获取<p>开关</p>
@@ -32,18 +32,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>实例id</p>
  * @method integer getDirection() 获取<p>检测方向：1是入向，2是出向，3是入向和出向都检测</p>
  * @method void setDirection(integer $Direction) 设置<p>检测方向：1是入向，2是出向，3是入向和出向都检测</p>
+ * @method string getDomain() 获取<p>域名模式传 Domain（与 ServiceId 二选一）</p>
+ * @method void setDomain(string $Domain) 设置<p>域名模式传 Domain（与 ServiceId 二选一）</p>
  */
 class ModifyLLMWafDLPRuleRequest extends AbstractModel
 {
     /**
-     * @var string <p>服务ID</p>
-     */
-    public $ServiceId;
-
-    /**
      * @var array <p>要修改的规则id列表</p>
      */
     public $RuleIds;
+
+    /**
+     * @var string <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     */
+    public $ServiceId;
 
     /**
      * @var string <p>动作</p>
@@ -66,12 +68,18 @@ class ModifyLLMWafDLPRuleRequest extends AbstractModel
     public $Direction;
 
     /**
-     * @param string $ServiceId <p>服务ID</p>
+     * @var string <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public $Domain;
+
+    /**
      * @param array $RuleIds <p>要修改的规则id列表</p>
+     * @param string $ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
      * @param string $RuleAction <p>动作</p>
      * @param integer $Status <p>开关</p>
      * @param string $InstanceId <p>实例id</p>
      * @param integer $Direction <p>检测方向：1是入向，2是出向，3是入向和出向都检测</p>
+     * @param string $Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
      */
     function __construct()
     {
@@ -86,12 +94,12 @@ class ModifyLLMWafDLPRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
-            $this->ServiceId = $param["ServiceId"];
-        }
-
         if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
             $this->RuleIds = $param["RuleIds"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
 
         if (array_key_exists("RuleAction",$param) and $param["RuleAction"] !== null) {
@@ -108,6 +116,10 @@ class ModifyLLMWafDLPRuleRequest extends AbstractModel
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

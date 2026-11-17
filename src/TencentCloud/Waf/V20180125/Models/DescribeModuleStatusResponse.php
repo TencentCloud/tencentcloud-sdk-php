@@ -20,64 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModuleStatus返回参数结构体
  *
- * @method integer getWebSecurity() 获取WEB安全规则是否开启
- * @method void setWebSecurity(integer $WebSecurity) 设置WEB安全规则是否开启
- * @method integer getAccessControl() 获取访问控制规则是否开启
- * @method void setAccessControl(integer $AccessControl) 设置访问控制规则是否开启
- * @method integer getCcProtection() 获取CC防护是否开启
- * @method void setCcProtection(integer $CcProtection) 设置CC防护是否开启
- * @method integer getAntiTamper() 获取网页防篡改是否开启
- * @method void setAntiTamper(integer $AntiTamper) 设置网页防篡改是否开启
- * @method integer getAntiLeakage() 获取信息防泄漏是否开启
- * @method void setAntiLeakage(integer $AntiLeakage) 设置信息防泄漏是否开启
- * @method integer getApiProtection() 获取API安全是否开启
- * @method void setApiProtection(integer $ApiProtection) 设置API安全是否开启
- * @method integer getRateLimit() 获取限流模块开关
- * @method void setRateLimit(integer $RateLimit) 设置限流模块开关
- * @method integer getGzipAnalysis() 获取gzip 开关
- * @method void setGzipAnalysis(integer $GzipAnalysis) 设置gzip 开关
+ * @method integer getWebSecurity() 获取<p>WEB安全规则是否开启</p>
+ * @method void setWebSecurity(integer $WebSecurity) 设置<p>WEB安全规则是否开启</p>
+ * @method integer getAccessControl() 获取<p>访问控制规则是否开启</p>
+ * @method void setAccessControl(integer $AccessControl) 设置<p>访问控制规则是否开启</p>
+ * @method integer getCcProtection() 获取<p>CC防护是否开启</p>
+ * @method void setCcProtection(integer $CcProtection) 设置<p>CC防护是否开启</p>
+ * @method integer getAntiTamper() 获取<p>网页防篡改是否开启</p>
+ * @method void setAntiTamper(integer $AntiTamper) 设置<p>网页防篡改是否开启</p>
+ * @method integer getAntiLeakage() 获取<p>信息防泄漏是否开启</p>
+ * @method void setAntiLeakage(integer $AntiLeakage) 设置<p>信息防泄漏是否开启</p>
+ * @method integer getApiProtection() 获取<p>API安全是否开启</p>
+ * @method void setApiProtection(integer $ApiProtection) 设置<p>API安全是否开启</p>
+ * @method integer getApiDetect() 获取<p>API安全检测开关是否开启</p>
+ * @method void setApiDetect(integer $ApiDetect) 设置<p>API安全检测开关是否开启</p>
+ * @method integer getRateLimit() 获取<p>限流模块开关，0表示关闭，1表示开启</p>
+ * @method void setRateLimit(integer $RateLimit) 设置<p>限流模块开关，0表示关闭，1表示开启</p>
+ * @method integer getGzipAnalysis() 获取<p>gzip 开关</p>
+ * @method void setGzipAnalysis(integer $GzipAnalysis) 设置<p>gzip 开关</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeModuleStatusResponse extends AbstractModel
 {
     /**
-     * @var integer WEB安全规则是否开启
+     * @var integer <p>WEB安全规则是否开启</p>
      */
     public $WebSecurity;
 
     /**
-     * @var integer 访问控制规则是否开启
+     * @var integer <p>访问控制规则是否开启</p>
      */
     public $AccessControl;
 
     /**
-     * @var integer CC防护是否开启
+     * @var integer <p>CC防护是否开启</p>
      */
     public $CcProtection;
 
     /**
-     * @var integer 网页防篡改是否开启
+     * @var integer <p>网页防篡改是否开启</p>
      */
     public $AntiTamper;
 
     /**
-     * @var integer 信息防泄漏是否开启
+     * @var integer <p>信息防泄漏是否开启</p>
      */
     public $AntiLeakage;
 
     /**
-     * @var integer API安全是否开启
+     * @var integer <p>API安全是否开启</p>
      */
     public $ApiProtection;
 
     /**
-     * @var integer 限流模块开关
+     * @var integer <p>API安全检测开关是否开启</p>
+     */
+    public $ApiDetect;
+
+    /**
+     * @var integer <p>限流模块开关，0表示关闭，1表示开启</p>
      */
     public $RateLimit;
 
     /**
-     * @var integer gzip 开关
+     * @var integer <p>gzip 开关</p>
      */
     public $GzipAnalysis;
 
@@ -87,14 +94,15 @@ class DescribeModuleStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $WebSecurity WEB安全规则是否开启
-     * @param integer $AccessControl 访问控制规则是否开启
-     * @param integer $CcProtection CC防护是否开启
-     * @param integer $AntiTamper 网页防篡改是否开启
-     * @param integer $AntiLeakage 信息防泄漏是否开启
-     * @param integer $ApiProtection API安全是否开启
-     * @param integer $RateLimit 限流模块开关
-     * @param integer $GzipAnalysis gzip 开关
+     * @param integer $WebSecurity <p>WEB安全规则是否开启</p>
+     * @param integer $AccessControl <p>访问控制规则是否开启</p>
+     * @param integer $CcProtection <p>CC防护是否开启</p>
+     * @param integer $AntiTamper <p>网页防篡改是否开启</p>
+     * @param integer $AntiLeakage <p>信息防泄漏是否开启</p>
+     * @param integer $ApiProtection <p>API安全是否开启</p>
+     * @param integer $ApiDetect <p>API安全检测开关是否开启</p>
+     * @param integer $RateLimit <p>限流模块开关，0表示关闭，1表示开启</p>
+     * @param integer $GzipAnalysis <p>gzip 开关</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -132,6 +140,10 @@ class DescribeModuleStatusResponse extends AbstractModel
 
         if (array_key_exists("ApiProtection",$param) and $param["ApiProtection"] !== null) {
             $this->ApiProtection = $param["ApiProtection"];
+        }
+
+        if (array_key_exists("ApiDetect",$param) and $param["ApiDetect"] !== null) {
+            $this->ApiDetect = $param["ApiDetect"];
         }
 
         if (array_key_exists("RateLimit",$param) and $param["RateLimit"] !== null) {

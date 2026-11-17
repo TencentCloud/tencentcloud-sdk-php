@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) 设置需要创建备份组的云硬盘ID列表。
  * @method string getBackupGroupName() 获取备份组的名称
  * @method void setBackupGroupName(string $BackupGroupName) 设置备份组的名称
- * @method string getDeadline() 获取指定备份组到期时间，如果未传入该参数，默认为永久保留。
- * @method void setDeadline(string $Deadline) 设置指定备份组到期时间，如果未传入该参数，默认为永久保留。
+ * @method string getDeadline() 获取指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
+ * @method void setDeadline(string $Deadline) 设置指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
  */
 class CreateBackupGroupRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateBackupGroupRequest extends AbstractModel
     public $BackupGroupName;
 
     /**
-     * @var string 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+     * @var string 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
      */
     public $Deadline;
 
     /**
      * @param array $DiskIds 需要创建备份组的云硬盘ID列表。
      * @param string $BackupGroupName 备份组的名称
-     * @param string $Deadline 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+     * @param string $Deadline 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置<p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
  * @method ExtraInfo getExtraInfo() 获取<p>返回额外信息（包括命中模板的详细信息）。</p>
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置<p>返回额外信息（包括命中模板的详细信息）。</p>
+ * @method ExtraRiskResult getExtraRiskResult() 获取<p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraRiskResult(ExtraRiskResult $ExtraRiskResult) 设置<p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +51,12 @@ class DetectAIFakeFacesResponse extends AbstractModel
     public $ExtraInfo;
 
     /**
+     * @var ExtraRiskResult <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraRiskResult;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +65,8 @@ class DetectAIFakeFacesResponse extends AbstractModel
      * @param string $AttackRiskLevel <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p>
      * @param array $AttackRiskDetailList <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
      * @param ExtraInfo $ExtraInfo <p>返回额外信息（包括命中模板的详细信息）。</p>
+     * @param ExtraRiskResult $ExtraRiskResult <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,6 +98,11 @@ class DetectAIFakeFacesResponse extends AbstractModel
         if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
             $this->ExtraInfo = new ExtraInfo();
             $this->ExtraInfo->deserialize($param["ExtraInfo"]);
+        }
+
+        if (array_key_exists("ExtraRiskResult",$param) and $param["ExtraRiskResult"] !== null) {
+            $this->ExtraRiskResult = new ExtraRiskResult();
+            $this->ExtraRiskResult->deserialize($param["ExtraRiskResult"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

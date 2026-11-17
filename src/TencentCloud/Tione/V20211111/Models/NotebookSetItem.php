@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method OperatorInfo getLatestOperatorInfo() 获取<p>操作者信息</p>
  * @method void setLatestOperatorInfo(OperatorInfo $LatestOperatorInfo) 设置<p>操作者信息</p>
+ * @method string getResourceGroupInstanceId() 获取<p>预付费专用资源组</p>
+ * @method void setResourceGroupInstanceId(string $ResourceGroupInstanceId) 设置<p>预付费专用资源组</p>
  */
 class NotebookSetItem extends AbstractModel
 {
@@ -321,6 +323,11 @@ class NotebookSetItem extends AbstractModel
     public $LatestOperatorInfo;
 
     /**
+     * @var string <p>预付费专用资源组</p>
+     */
+    public $ResourceGroupInstanceId;
+
+    /**
      * @param string $Id <p>notebook ID</p>
      * @param string $Name <p>notebook 名称</p>
      * @param string $ChargeType <p>计费模式</p>
@@ -376,6 +383,7 @@ class NotebookSetItem extends AbstractModel
      * @param string $Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorInfo $LatestOperatorInfo <p>操作者信息</p>
+     * @param string $ResourceGroupInstanceId <p>预付费专用资源组</p>
      */
     function __construct()
     {
@@ -531,6 +539,10 @@ class NotebookSetItem extends AbstractModel
         if (array_key_exists("LatestOperatorInfo",$param) and $param["LatestOperatorInfo"] !== null) {
             $this->LatestOperatorInfo = new OperatorInfo();
             $this->LatestOperatorInfo->deserialize($param["LatestOperatorInfo"]);
+        }
+
+        if (array_key_exists("ResourceGroupInstanceId",$param) and $param["ResourceGroupInstanceId"] !== null) {
+            $this->ResourceGroupInstanceId = $param["ResourceGroupInstanceId"];
         }
     }
 }

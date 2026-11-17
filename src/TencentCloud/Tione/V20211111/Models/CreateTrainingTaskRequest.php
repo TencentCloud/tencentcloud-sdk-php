@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTrainingTask请求参数结构体
  *
- * @method string getName() 获取<p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
- * @method void setName(string $Name) 设置<p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+ * @method string getName() 获取<p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+ * @method void setName(string $Name) 设置<p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
  * @method string getChargeType() 获取<p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
  * @method void setChargeType(string $ChargeType) 设置<p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
  * @method array getResourceConfigInfos() 获取<p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置<p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
  * @method string getTrainingMode() 获取<p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
  * @method void setTrainingMode(string $TrainingMode) 设置<p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
- * @method array getDataConfigs() 获取<p>数据配置，依赖DataSource字段，数量不超过10个</p>
- * @method void setDataConfigs(array $DataConfigs) 设置<p>数据配置，依赖DataSource字段，数量不超过10个</p>
+ * @method array getDataConfigs() 获取<p>数据配置，数量不超过10个</p>
+ * @method void setDataConfigs(array $DataConfigs) 设置<p>数据配置，数量不超过10个</p>
  * @method string getVpcId() 获取<p>VPC Id</p>
  * @method void setVpcId(string $VpcId) 设置<p>VPC Id</p>
  * @method string getSubnetId() 获取<p>子网Id</p>
@@ -84,7 +84,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTrainingTaskRequest extends AbstractModel
 {
     /**
-     * @var string <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @var string <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public $Name;
 
@@ -149,7 +149,7 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $TrainingMode;
 
     /**
-     * @var array <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+     * @var array <p>数据配置，数量不超过10个</p>
      */
     public $DataConfigs;
 
@@ -234,7 +234,7 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $Queues;
 
     /**
-     * @param string $Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @param string $Name <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      * @param string $ChargeType <p>计费模式，eg：PREPAID 包年包月（资源组）;<br>POSTPAID_BY_HOUR 按量计费</p>
      * @param array $ResourceConfigInfos <p>资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{&quot;Role&quot;:&quot;WORKER&quot;, &quot;InstanceType&quot;: &quot;TI.S.MEDIUM.POST&quot;, &quot;InstanceNum&quot;: 1}]</p>
      * @param string $TiProjectId <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p>
@@ -247,7 +247,7 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @param CosPathInfo $CodePackagePath <p>COS代码包路径</p>
      * @param StartCmdInfo $StartCmdInfo <p>任务的启动命令，按任务训练模式输入，如遇特殊字符导致配置失败，可使用EncodedStartCmdInfo参数</p>
      * @param string $TrainingMode <p>训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
-     * @param array $DataConfigs <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+     * @param array $DataConfigs <p>数据配置，数量不超过10个</p>
      * @param string $VpcId <p>VPC Id</p>
      * @param string $SubnetId <p>子网Id</p>
      * @param CosPathInfo $Output <p>COS训练输出路径</p>

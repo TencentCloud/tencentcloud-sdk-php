@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCPUCores(float $CPUCores) 设置<p>暂停实例配额或当前用量。目前只在主账号中返回</p><p>单位：核</p>
  * @method float getMemoryGiB() 获取<p>内存配额或当前用量</p><p>单位：GiB</p>
  * @method void setMemoryGiB(float $MemoryGiB) 设置<p>内存配额或当前用量</p><p>单位：GiB</p>
+ * @method integer getPreCacheImageConcurrency() 获取<p>最大镜像预热并发处理数量</p><p>单位：个</p>
+ * @method void setPreCacheImageConcurrency(integer $PreCacheImageConcurrency) 设置<p>最大镜像预热并发处理数量</p><p>单位：个</p>
  */
 class QuotaResourceInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class QuotaResourceInfo extends AbstractModel
     public $MemoryGiB;
 
     /**
+     * @var integer <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+     */
+    public $PreCacheImageConcurrency;
+
+    /**
      * @param integer $SandboxTools <p>沙箱工具配额或当前用量</p><p>单位：个</p>
      * @param integer $SandboxInstances <p>沙箱实例配额或当前用量</p><p>单位：个</p>
      * @param integer $PausedInstances <p>暂停实例配额或当前用量</p><p>单位：个</p>
      * @param float $CPUCores <p>暂停实例配额或当前用量。目前只在主账号中返回</p><p>单位：核</p>
      * @param float $MemoryGiB <p>内存配额或当前用量</p><p>单位：GiB</p>
+     * @param integer $PreCacheImageConcurrency <p>最大镜像预热并发处理数量</p><p>单位：个</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class QuotaResourceInfo extends AbstractModel
 
         if (array_key_exists("MemoryGiB",$param) and $param["MemoryGiB"] !== null) {
             $this->MemoryGiB = $param["MemoryGiB"];
+        }
+
+        if (array_key_exists("PreCacheImageConcurrency",$param) and $param["PreCacheImageConcurrency"] !== null) {
+            $this->PreCacheImageConcurrency = $param["PreCacheImageConcurrency"];
         }
     }
 }

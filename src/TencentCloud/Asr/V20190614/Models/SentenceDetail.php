@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLangType(string $LangType) 设置<p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
  * @method string getSpeakerRoleName() 获取<p>说话人角色名称</p>
  * @method void setSpeakerRoleName(string $SpeakerRoleName) 设置<p>说话人角色名称</p>
+ * @method string getSpeakerVoicePrintId() 获取<p>说话人的声纹 ID</p>
+ * @method void setSpeakerVoicePrintId(string $SpeakerVoicePrintId) 设置<p>说话人的声纹 ID</p>
  */
 class SentenceDetail extends AbstractModel
 {
@@ -168,6 +170,11 @@ class SentenceDetail extends AbstractModel
     public $SpeakerRoleName;
 
     /**
+     * @var string <p>说话人的声纹 ID</p>
+     */
+    public $SpeakerVoicePrintId;
+
+    /**
      * @param string $FinalSentence <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence <p>单句中间识别结果，使用空格拆分为多个词</p>
@@ -196,6 +203,7 @@ class SentenceDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LangType <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
      * @param string $SpeakerRoleName <p>说话人角色名称</p>
+     * @param string $SpeakerVoicePrintId <p>说话人的声纹 ID</p>
      */
     function __construct()
     {
@@ -278,6 +286,10 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("SpeakerRoleName",$param) and $param["SpeakerRoleName"] !== null) {
             $this->SpeakerRoleName = $param["SpeakerRoleName"];
+        }
+
+        if (array_key_exists("SpeakerVoicePrintId",$param) and $param["SpeakerVoicePrintId"] !== null) {
+            $this->SpeakerVoicePrintId = $param["SpeakerVoicePrintId"];
         }
     }
 }

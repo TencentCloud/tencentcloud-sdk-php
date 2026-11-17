@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFetchOption(FetchOption $FetchOption) 设置<p>数据获取选项，可选，控制是否返回权限信息及按权限过滤</p>
  * @method array getCatalogSources() 获取数据目录来源筛选（融合版新增字段），取值参考 CatalogSourceEnum。空数组或不传→只查tclake；["METALAKE"]→只查tclake；["CONNECTION"]→只查分析版ana_catalog；["METALAKE","CONNECTION"]→合并返回
  * @method void setCatalogSources(array $CatalogSources) 设置数据目录来源筛选（融合版新增字段），取值参考 CatalogSourceEnum。空数组或不传→只查tclake；["METALAKE"]→只查tclake；["CONNECTION"]→只查分析版ana_catalog；["METALAKE","CONNECTION"]→合并返回
+ * @method string getConnectionId() 获取数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+ * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
  */
 class ListCatalogsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ListCatalogsRequest extends AbstractModel
     public $CatalogSources;
 
     /**
+     * @var string 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+     */
+    public $ConnectionId;
+
+    /**
      * @param string $WorkspaceId <p>工作空间唯一id</p>
      * @param integer $MaxResults <p>最大结果条数</p>
      * @param string $PageToken <p>分页token</p>
@@ -80,6 +87,7 @@ class ListCatalogsRequest extends AbstractModel
      * @param boolean $CurrentWorkspaceOnly <p>是否只返回当前工作空间有权限的，false时会额外返回当前用户有权限管理的catalog</p>
      * @param FetchOption $FetchOption <p>数据获取选项，可选，控制是否返回权限信息及按权限过滤</p>
      * @param array $CatalogSources 数据目录来源筛选（融合版新增字段），取值参考 CatalogSourceEnum。空数组或不传→只查tclake；["METALAKE"]→只查tclake；["CONNECTION"]→只查分析版ana_catalog；["METALAKE","CONNECTION"]→合并返回
+     * @param string $ConnectionId 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class ListCatalogsRequest extends AbstractModel
 
         if (array_key_exists("CatalogSources",$param) and $param["CatalogSources"] !== null) {
             $this->CatalogSources = $param["CatalogSources"];
+        }
+
+        if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
+            $this->ConnectionId = $param["ConnectionId"];
         }
     }
 }

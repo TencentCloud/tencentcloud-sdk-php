@@ -20,82 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kong Upstream中的Target
  *
- * @method string getHost() 获取Host
- * @method void setHost(string $Host) 设置Host
- * @method integer getPort() 获取端口
- * @method void setPort(integer $Port) 设置端口
- * @method integer getWeight() 获取权重
- * @method void setWeight(integer $Weight) 设置权重
- * @method string getHealth() 获取健康状态
- * @method void setHealth(string $Health) 设置健康状态
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getSource() 获取Target的来源
- * @method void setSource(string $Source) 设置Target的来源
- * @method string getCvmInstanceId() 获取CVM实例ID
- * @method void setCvmInstanceId(string $CvmInstanceId) 设置CVM实例ID
- * @method string getCvmInstanceName() 获取CVM实例名称
- * @method void setCvmInstanceName(string $CvmInstanceName) 设置CVM实例名称
- * @method array getTags() 获取target标签
- * @method void setTags(array $Tags) 设置target标签
+ * @method string getHost() 获取<p>Host</p>
+ * @method void setHost(string $Host) 设置<p>Host</p>
+ * @method integer getPort() 获取<p>端口</p>
+ * @method void setPort(integer $Port) 设置<p>端口</p>
+ * @method integer getWeight() 获取<p>权重</p>
+ * @method void setWeight(integer $Weight) 设置<p>权重</p>
+ * @method string getCreatedTime() 获取<p>创建时间</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>创建时间</p>
+ * @method string getCvmInstanceId() 获取<p>CVM实例ID</p>
+ * @method void setCvmInstanceId(string $CvmInstanceId) 设置<p>CVM实例ID</p>
+ * @method string getCvmInstanceName() 获取<p>CVM实例名称</p>
+ * @method void setCvmInstanceName(string $CvmInstanceName) 设置<p>CVM实例名称</p>
+ * @method string getHealth() 获取<p>健康状态</p>
+ * @method void setHealth(string $Health) 设置<p>健康状态</p>
+ * @method string getId() 获取<p>Target ID</p>
+ * @method void setId(string $Id) 设置<p>Target ID</p>
+ * @method string getSource() 获取<p>Target的来源</p>
+ * @method void setSource(string $Source) 设置<p>Target的来源</p>
+ * @method array getTags() 获取<p>target标签</p>
+ * @method void setTags(array $Tags) 设置<p>target标签</p>
  */
 class KongTarget extends AbstractModel
 {
     /**
-     * @var string Host
+     * @var string <p>Host</p>
      */
     public $Host;
 
     /**
-     * @var integer 端口
+     * @var integer <p>端口</p>
      */
     public $Port;
 
     /**
-     * @var integer 权重
+     * @var integer <p>权重</p>
      */
     public $Weight;
 
     /**
-     * @var string 健康状态
-     */
-    public $Health;
-
-    /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreatedTime;
 
     /**
-     * @var string Target的来源
-     */
-    public $Source;
-
-    /**
-     * @var string CVM实例ID
+     * @var string <p>CVM实例ID</p>
      */
     public $CvmInstanceId;
 
     /**
-     * @var string CVM实例名称
+     * @var string <p>CVM实例名称</p>
      */
     public $CvmInstanceName;
 
     /**
-     * @var array target标签
+     * @var string <p>健康状态</p>
+     */
+    public $Health;
+
+    /**
+     * @var string <p>Target ID</p>
+     */
+    public $Id;
+
+    /**
+     * @var string <p>Target的来源</p>
+     */
+    public $Source;
+
+    /**
+     * @var array <p>target标签</p>
      */
     public $Tags;
 
     /**
-     * @param string $Host Host
-     * @param integer $Port 端口
-     * @param integer $Weight 权重
-     * @param string $Health 健康状态
-     * @param string $CreatedTime 创建时间
-     * @param string $Source Target的来源
-     * @param string $CvmInstanceId CVM实例ID
-     * @param string $CvmInstanceName CVM实例名称
-     * @param array $Tags target标签
+     * @param string $Host <p>Host</p>
+     * @param integer $Port <p>端口</p>
+     * @param integer $Weight <p>权重</p>
+     * @param string $CreatedTime <p>创建时间</p>
+     * @param string $CvmInstanceId <p>CVM实例ID</p>
+     * @param string $CvmInstanceName <p>CVM实例名称</p>
+     * @param string $Health <p>健康状态</p>
+     * @param string $Id <p>Target ID</p>
+     * @param string $Source <p>Target的来源</p>
+     * @param array $Tags <p>target标签</p>
      */
     function __construct()
     {
@@ -122,16 +130,8 @@ class KongTarget extends AbstractModel
             $this->Weight = $param["Weight"];
         }
 
-        if (array_key_exists("Health",$param) and $param["Health"] !== null) {
-            $this->Health = $param["Health"];
-        }
-
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
-        }
-
-        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
-            $this->Source = $param["Source"];
         }
 
         if (array_key_exists("CvmInstanceId",$param) and $param["CvmInstanceId"] !== null) {
@@ -140,6 +140,18 @@ class KongTarget extends AbstractModel
 
         if (array_key_exists("CvmInstanceName",$param) and $param["CvmInstanceName"] !== null) {
             $this->CvmInstanceName = $param["CvmInstanceName"];
+        }
+
+        if (array_key_exists("Health",$param) and $param["Health"] !== null) {
+            $this->Health = $param["Health"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

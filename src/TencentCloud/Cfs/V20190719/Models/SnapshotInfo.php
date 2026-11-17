@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotTime(string $SnapshotTime) 设置<p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFinishTime() 获取<p>快照完成时间</p>
+ * @method void setFinishTime(string $FinishTime) 设置<p>快照完成时间</p>
  */
 class SnapshotInfo extends AbstractModel
 {
@@ -135,6 +137,11 @@ class SnapshotInfo extends AbstractModel
     public $SnapshotTime;
 
     /**
+     * @var string <p>快照完成时间</p>
+     */
+    public $FinishTime;
+
+    /**
      * @param string $CreationTime <p>创建快照时间</p>
      * @param string $SnapshotName <p>快照名称</p>
      * @param string $SnapshotId <p>快照ID</p>
@@ -152,6 +159,7 @@ class SnapshotInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotTime <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FinishTime <p>快照完成时间</p>
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class SnapshotInfo extends AbstractModel
 
         if (array_key_exists("SnapshotTime",$param) and $param["SnapshotTime"] !== null) {
             $this->SnapshotTime = $param["SnapshotTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

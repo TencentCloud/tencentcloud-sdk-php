@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取<p>TCLAKE Catalog取值：（注册中0，待测试1，连接成功2，连接失败3，删除中4，已删除5）<br>SETATS Catalog取值：（Creating=30, Available=31, Deleted=32, Scaling=33, Isolated=34, Failed=35，未知=0）</p>
  * @method void setStatus(string $Status) 设置<p>TCLAKE Catalog取值：（注册中0，待测试1，连接成功2，连接失败3，删除中4，已删除5）<br>SETATS Catalog取值：（Creating=30, Available=31, Deleted=32, Scaling=33, Isolated=34, Failed=35，未知=0）</p>
+ * @method string getConnectionId() 获取数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectionId(string $ConnectionId) 设置数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConnectionName() 获取数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectionName(string $ConnectionName) 设置数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NameIdentifier extends AbstractModel
 {
@@ -61,6 +69,18 @@ class NameIdentifier extends AbstractModel
     public $Status;
 
     /**
+     * @var string 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectionId;
+
+    /**
+     * @var string 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectionName;
+
+    /**
      * @param string $Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Namespace <p>命名空间</p>
@@ -68,6 +88,10 @@ class NameIdentifier extends AbstractModel
      * @param string $CatalogSource <p>元数据来源，取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。响应体始终返回具体来源值，不会返回CATALOG_SOURCE_ALL。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status <p>TCLAKE Catalog取值：（注册中0，待测试1，连接成功2，连接失败3，删除中4，已删除5）<br>SETATS Catalog取值：（Creating=30, Available=31, Deleted=32, Scaling=33, Isolated=34, Failed=35，未知=0）</p>
+     * @param string $ConnectionId 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConnectionName 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class NameIdentifier extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ConnectionId",$param) and $param["ConnectionId"] !== null) {
+            $this->ConnectionId = $param["ConnectionId"];
+        }
+
+        if (array_key_exists("ConnectionName",$param) and $param["ConnectionName"] !== null) {
+            $this->ConnectionName = $param["ConnectionName"];
         }
     }
 }

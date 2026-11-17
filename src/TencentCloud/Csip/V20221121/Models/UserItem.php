@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShareFromAppID(integer $ShareFromAppID) 设置<p>被共享时为共享方appid，自购或无配额时为0</p>
  * @method string getShareFromUser() 获取<p>配额共享方账号</p>
  * @method void setShareFromUser(string $ShareFromUser) 设置<p>配额共享方账号</p>
+ * @method integer getIsTrialOrder() 获取<p>是否试用订单</p>
+ * @method void setIsTrialOrder(integer $IsTrialOrder) 设置<p>是否试用订单</p>
  */
 class UserItem extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UserItem extends AbstractModel
     public $ShareFromUser;
 
     /**
+     * @var integer <p>是否试用订单</p>
+     */
+    public $IsTrialOrder;
+
+    /**
      * @param integer $AppID <p>登录用户appid</p>
      * @param integer $AccountType <p>用户类型</p>
      * @param integer $PayType <p>用户付费类型</p>
@@ -112,6 +119,7 @@ class UserItem extends AbstractModel
      * @param integer $QuotaSource <p>购买类型</p>
      * @param integer $ShareFromAppID <p>被共享时为共享方appid，自购或无配额时为0</p>
      * @param string $ShareFromUser <p>配额共享方账号</p>
+     * @param integer $IsTrialOrder <p>是否试用订单</p>
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class UserItem extends AbstractModel
 
         if (array_key_exists("ShareFromUser",$param) and $param["ShareFromUser"] !== null) {
             $this->ShareFromUser = $param["ShareFromUser"];
+        }
+
+        if (array_key_exists("IsTrialOrder",$param) and $param["IsTrialOrder"] !== null) {
+            $this->IsTrialOrder = $param["IsTrialOrder"];
         }
     }
 }

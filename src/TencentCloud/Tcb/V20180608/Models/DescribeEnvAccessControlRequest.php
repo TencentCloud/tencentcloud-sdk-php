@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvAccessControl请求参数结构体
  *
-
+ * @method string getEnvId() 获取<p>环境id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境id</p>
  */
 class DescribeEnvAccessControlRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>环境id</p>
+     */
+    public $EnvId;
 
     /**
-
+     * @param string $EnvId <p>环境id</p>
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeEnvAccessControlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
     }
 }

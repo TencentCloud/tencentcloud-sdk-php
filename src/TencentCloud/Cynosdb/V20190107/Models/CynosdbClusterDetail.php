@@ -142,6 +142,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageOverUse(string $StorageOverUse) 设置<p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
  * @method string getStorageAutoExpand() 获取<p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
  * @method void setStorageAutoExpand(string $StorageAutoExpand) 设置<p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+ * @method boolean getIsInInstantRollbackChain() 获取<p>是否在秒级回档链路中</p>
+ * @method void setIsInInstantRollbackChain(boolean $IsInInstantRollbackChain) 设置<p>是否在秒级回档链路中</p>
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -451,6 +453,11 @@ class CynosdbClusterDetail extends AbstractModel
     public $StorageAutoExpand;
 
     /**
+     * @var boolean <p>是否在秒级回档链路中</p>
+     */
+    public $IsInInstantRollbackChain;
+
+    /**
      * @param string $ClusterId <p>集群ID</p>
      * @param string $ClusterName <p>集群名称</p>
      * @param string $Region <p>地域</p>
@@ -512,6 +519,7 @@ class CynosdbClusterDetail extends AbstractModel
      * @param string $RealZone <p>实例当前所在可用区</p>
      * @param string $StorageOverUse <p>超限开启状态</p><p>枚举值：</p><ul><li>yes： 超限开启</li><li>no： 超限关闭</li></ul><p>默认值：no</p>
      * @param string $StorageAutoExpand <p>自动扩容开启状态</p><p>枚举值：</p><ul><li>yes： 已开启</li><li>no： 关闭</li></ul><p>默认值：no</p>
+     * @param boolean $IsInInstantRollbackChain <p>是否在秒级回档链路中</p>
      */
     function __construct()
     {
@@ -799,6 +807,10 @@ class CynosdbClusterDetail extends AbstractModel
 
         if (array_key_exists("StorageAutoExpand",$param) and $param["StorageAutoExpand"] !== null) {
             $this->StorageAutoExpand = $param["StorageAutoExpand"];
+        }
+
+        if (array_key_exists("IsInInstantRollbackChain",$param) and $param["IsInInstantRollbackChain"] !== null) {
+            $this->IsInInstantRollbackChain = $param["IsInInstantRollbackChain"];
         }
     }
 }

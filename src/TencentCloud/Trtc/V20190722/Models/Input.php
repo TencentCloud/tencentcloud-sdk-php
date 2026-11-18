@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) 设置<p>显式协议</p><p>枚举值：</p><ul><li>rtmp： rtmp协议</li></ul>
  * @method AgoraParam getAgoraParam() 获取<p>声网拉流进房参数</p>
  * @method void setAgoraParam(AgoraParam $AgoraParam) 设置<p>声网拉流进房参数</p>
+ * @method NeteaseParam getNeteaseParam() 获取<p>网易云信(NERTC)频道拉流参数</p>
+ * @method void setNeteaseParam(NeteaseParam $NeteaseParam) 设置<p>网易云信(NERTC)频道拉流参数</p>
+ * @method VolcParam getVolcParam() 获取<p>火山(Volc)房间拉流参数</p>
+ * @method void setVolcParam(VolcParam $VolcParam) 设置<p>火山(Volc)房间拉流参数</p>
  */
 class Input extends AbstractModel
 {
@@ -45,9 +49,21 @@ class Input extends AbstractModel
     public $AgoraParam;
 
     /**
+     * @var NeteaseParam <p>网易云信(NERTC)频道拉流参数</p>
+     */
+    public $NeteaseParam;
+
+    /**
+     * @var VolcParam <p>火山(Volc)房间拉流参数</p>
+     */
+    public $VolcParam;
+
+    /**
      * @param string $Url <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p>
      * @param string $Format <p>显式协议</p><p>枚举值：</p><ul><li>rtmp： rtmp协议</li></ul>
      * @param AgoraParam $AgoraParam <p>声网拉流进房参数</p>
+     * @param NeteaseParam $NeteaseParam <p>网易云信(NERTC)频道拉流参数</p>
+     * @param VolcParam $VolcParam <p>火山(Volc)房间拉流参数</p>
      */
     function __construct()
     {
@@ -73,6 +89,16 @@ class Input extends AbstractModel
         if (array_key_exists("AgoraParam",$param) and $param["AgoraParam"] !== null) {
             $this->AgoraParam = new AgoraParam();
             $this->AgoraParam->deserialize($param["AgoraParam"]);
+        }
+
+        if (array_key_exists("NeteaseParam",$param) and $param["NeteaseParam"] !== null) {
+            $this->NeteaseParam = new NeteaseParam();
+            $this->NeteaseParam->deserialize($param["NeteaseParam"]);
+        }
+
+        if (array_key_exists("VolcParam",$param) and $param["VolcParam"] !== null) {
+            $this->VolcParam = new VolcParam();
+            $this->VolcParam->deserialize($param["VolcParam"]);
         }
     }
 }

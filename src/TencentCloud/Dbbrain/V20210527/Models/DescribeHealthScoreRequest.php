@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
  * @method string getTime() 获取<p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
  * @method void setTime(string $Time) 设置<p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
- * @method string getProduct() 获取<p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
- * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+ * @method string getProduct() 获取<p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+ * @method void setProduct(string $Product) 设置<p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
  */
 class DescribeHealthScoreRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeHealthScoreRequest extends AbstractModel
     public $Time;
 
     /**
-     * @var string <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * @var string <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public $Product;
 
     /**
      * @param string $InstanceId <p>需要获取健康得分的实例ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。如果是dcdb(TDSQL MySQL)，请使用 <code>{ClusterId}&amp;{InstanceId}</code> 拼接结果代替入参</p>
      * @param string $Time <p>获取健康得分的时间，时间格式如：2019-09-10 12:13:14。</p>
-     * @param string $Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * @param string $Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     function __construct()
     {

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyId(string $PolicyId) 设置<p>查询某个策略的通知历史</p>
  * @method string getNotifyId() 获取<p>详情页展示所需id</p>
  * @method void setNotifyId(string $NotifyId) 设置<p>详情页展示所需id</p>
+ * @method array getChannelNames() 获取<p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+ * @method void setChannelNames(array $ChannelNames) 设置<p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+ * @method array getPolicyIds() 获取<p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+ * @method void setPolicyIds(array $PolicyIds) 设置<p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+ * @method array getNoticeIds() 获取<p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+ * @method void setNoticeIds(array $NoticeIds) 设置<p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
  */
 class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
 {
@@ -80,6 +86,21 @@ class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
     public $NotifyId;
 
     /**
+     * @var array <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+     */
+    public $ChannelNames;
+
+    /**
+     * @var array <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+     */
+    public $PolicyIds;
+
+    /**
+     * @var array <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+     */
+    public $NoticeIds;
+
+    /**
      * @param string $MonitorType <p>监控类型</p>
      * @param integer $QueryBaseTime <p>起始时间点，unix秒级时间戳</p>
      * @param integer $QueryBeforeSeconds <p>从 QueryBaseTime 开始，需要查询往前多久的时间，单位秒</p>
@@ -88,6 +109,9 @@ class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
      * @param string $ModelName <p>当监控类型为 MT_QCE 时候需要填写， 告警策略类型</p>
      * @param string $PolicyId <p>查询某个策略的通知历史</p>
      * @param string $NotifyId <p>详情页展示所需id</p>
+     * @param array $ChannelNames <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+     * @param array $PolicyIds <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+     * @param array $NoticeIds <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
      */
     function __construct()
     {
@@ -133,6 +157,18 @@ class DescribeAlarmNotifyHistoriesRequest extends AbstractModel
 
         if (array_key_exists("NotifyId",$param) and $param["NotifyId"] !== null) {
             $this->NotifyId = $param["NotifyId"];
+        }
+
+        if (array_key_exists("ChannelNames",$param) and $param["ChannelNames"] !== null) {
+            $this->ChannelNames = $param["ChannelNames"];
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
+            $this->NoticeIds = $param["NoticeIds"];
         }
     }
 }

@@ -26,6 +26,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicy(Models\ApplyPathLifecyclePolicyRequest $req) 配置生命周期策略关联到的目录列表
  * @method Models\BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(Models\BindAutoSnapshotPolicyRequest $req) 文件系统绑定快照策略，可以同时绑定多个fs，一个fs 只能跟一个策略绑定
  * @method Models\CreateAccessCertResponse CreateAccessCert(Models\CreateAccessCertRequest $req) 创建用于访问文件系统的凭证
+ * @method Models\CreateAutoDeletePolicyResponse CreateAutoDeletePolicy(Models\CreateAutoDeletePolicyRequest $req) 为指定 CFS 文件系统创建一条数据自动删除策略
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) 创建定期快照策略
  * @method Models\CreateCfsFileSystemResponse CreateCfsFileSystem(Models\CreateCfsFileSystemRequest $req) 用于添加新文件系统
  * @method Models\CreateCfsPGroupResponse CreateCfsPGroup(Models\CreateCfsPGroupRequest $req) 本接口（CreateCfsPGroup）用于创建权限组
@@ -37,6 +38,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\CreateLifecyclePolicyResponse CreateLifecyclePolicy(Models\CreateLifecyclePolicyRequest $req) 创建文件存储生命周期策略
  * @method Models\CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(Models\CreateLifecyclePolicyDownloadTaskRequest $req) 下载生命周期任务中文件列表
  * @method Models\CreateMigrationTaskResponse CreateMigrationTask(Models\CreateMigrationTaskRequest $req) 用于创建迁移任务。
+ * @method Models\DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicy(Models\DeleteAutoDeletePolicyRequest $req) 删除指定自动删除策略
  * @method Models\DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(Models\DeleteAutoSnapshotPolicyRequest $req) 删除快照定期策略
  * @method Models\DeleteCfsFileSystemResponse DeleteCfsFileSystem(Models\DeleteCfsFileSystemRequest $req) 用于删除文件系统
  * @method Models\DeleteCfsPGroupResponse DeleteCfsPGroup(Models\DeleteCfsPGroupRequest $req) 本接口（DeleteCfsPGroup）用于删除权限组，只有未绑定文件系统的权限组才能够被此接口删除。
@@ -49,6 +51,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(Models\DeleteLifecyclePolicyRequest $req) 删除生命周期管理策略
  * @method Models\DeleteMigrationTaskResponse DeleteMigrationTask(Models\DeleteMigrationTaskRequest $req) 用于删除迁移任务。不支持删除等待中、创建中、运行中、取消中、终止中状态的任务。
  * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 指定条件删除文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
+ * @method Models\DescribeAutoDeletePoliciesResponse DescribeAutoDeletePolicies(Models\DescribeAutoDeletePoliciesRequest $req) 查询数据自动删除策略列表
  * @method Models\DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(Models\DescribeAutoSnapshotPoliciesRequest $req) 查询文件系统快照定期策略列表信息
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) 本接口（DescribeAvailableZoneInfo）用于查询区域的可用情况。
  * @method Models\DescribeBucketListResponse DescribeBucketList(Models\DescribeBucketListRequest $req) 用于获取数据源桶列表。
@@ -72,6 +75,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 查询快照操作日志
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\DoDirectoryOperationResponse DoDirectoryOperation(Models\DoDirectoryOperationRequest $req) 文件系统目录操作接口。当前仅 Turbo 系列文件系统支持调用此接口进行目录操作，通用系列文件系统（含增强型）不支持调用。
+ * @method Models\ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicy(Models\ModifyAutoDeletePolicyRequest $req) 修改自动删除策略名称或清理路径
  * @method Models\ModifyDataFlowResponse ModifyDataFlow(Models\ModifyDataFlowRequest $req) 修改数据流动相关参数
  * @method Models\ModifyDataRetrievalResponse ModifyDataRetrieval(Models\ModifyDataRetrievalRequest $req) 修改数据检索
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，该接口只支持turbo文件系统

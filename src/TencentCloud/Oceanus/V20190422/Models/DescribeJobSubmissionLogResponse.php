@@ -20,64 +20,71 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobSubmissionLog返回参数结构体
  *
- * @method string getCursor() 获取日志搜索的游标，需要搜索更多时透传这个值
- * @method void setCursor(string $Cursor) 设置日志搜索的游标，需要搜索更多时透传这个值
- * @method boolean getListOver() 获取是否返回了所有的日志记录
- * @method void setListOver(boolean $ListOver) 设置是否返回了所有的日志记录
- * @method string getJobRequestId() 获取作业启动的requestId
+ * @method string getCursor() 获取<p>日志搜索的游标，需要搜索更多时透传这个值</p>
+ * @method void setCursor(string $Cursor) 设置<p>日志搜索的游标，需要搜索更多时透传这个值</p>
+ * @method boolean getListOver() 获取<p>是否返回了所有的日志记录</p>
+ * @method void setListOver(boolean $ListOver) 设置<p>是否返回了所有的日志记录</p>
+ * @method string getJobRequestId() 获取<p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobRequestId(string $JobRequestId) 设置作业启动的requestId
+ * @method void setJobRequestId(string $JobRequestId) 设置<p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getJobInstanceList() 获取该时间段内符合关键字的所有的作业实例列表
+ * @method array getJobInstanceList() 获取<p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobInstanceList(array $JobInstanceList) 设置该时间段内符合关键字的所有的作业实例列表
+ * @method void setJobInstanceList(array $JobInstanceList) 设置<p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLogList() 获取废弃，请使用LogContentList
+ * @method array getLogList() 获取<p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogList(array $LogList) 设置废弃，请使用LogContentList
+ * @method void setLogList(array $LogList) 设置<p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLogContentList() 获取日志列表
+ * @method array getLogContentList() 获取<p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogContentList(array $LogContentList) 设置日志列表
+ * @method void setLogContentList(array $LogContentList) 设置<p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeJobSubmissionLogResponse extends AbstractModel
 {
     /**
-     * @var string 日志搜索的游标，需要搜索更多时透传这个值
+     * @var string <p>日志搜索的游标，需要搜索更多时透传这个值</p>
      */
     public $Cursor;
 
     /**
-     * @var boolean 是否返回了所有的日志记录
+     * @var boolean <p>是否返回了所有的日志记录</p>
      */
     public $ListOver;
 
     /**
-     * @var string 作业启动的requestId
+     * @var string <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobRequestId;
 
     /**
-     * @var array 该时间段内符合关键字的所有的作业实例列表
+     * @var array <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobInstanceList;
 
     /**
-     * @var array 废弃，请使用LogContentList
+     * @var array <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogList;
 
     /**
-     * @var array 日志列表
+     * @var array <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogContentList;
+
+    /**
+     * @var integer <p>分页偏移</p>
+     */
+    public $Offset;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -85,16 +92,17 @@ class DescribeJobSubmissionLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Cursor 日志搜索的游标，需要搜索更多时透传这个值
-     * @param boolean $ListOver 是否返回了所有的日志记录
-     * @param string $JobRequestId 作业启动的requestId
+     * @param string $Cursor <p>日志搜索的游标，需要搜索更多时透传这个值</p>
+     * @param boolean $ListOver <p>是否返回了所有的日志记录</p>
+     * @param string $JobRequestId <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $JobInstanceList 该时间段内符合关键字的所有的作业实例列表
+     * @param array $JobInstanceList <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LogList 废弃，请使用LogContentList
+     * @param array $LogList <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LogContentList 日志列表
+     * @param array $LogContentList <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Offset <p>分页偏移</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -142,6 +150,10 @@ class DescribeJobSubmissionLogResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LogContentList, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

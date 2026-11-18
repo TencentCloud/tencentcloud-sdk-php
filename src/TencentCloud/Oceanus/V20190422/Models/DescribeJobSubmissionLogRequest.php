@@ -20,74 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeJobSubmissionLog请求参数结构体
  *
- * @method string getJobId() 获取作业ID，例如：cql-6v1jkxrn
- * @method void setJobId(string $JobId) 设置作业ID，例如：cql-6v1jkxrn
- * @method integer getStartTime() 获取起始时间，unix时间戳，毫秒级，例如：1611754219108
- * @method void setStartTime(integer $StartTime) 设置起始时间，unix时间戳，毫秒级，例如：1611754219108
- * @method integer getEndTime() 获取结束时间，unix时间戳，毫秒级，例如：1611754219108
- * @method void setEndTime(integer $EndTime) 设置结束时间，unix时间戳，毫秒级，例如：1611754219108
- * @method integer getRunningOrderId() 获取作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
- * @method void setRunningOrderId(integer $RunningOrderId) 设置作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
- * @method string getKeyword() 获取日志搜索的关键词，默认为空
- * @method void setKeyword(string $Keyword) 设置日志搜索的关键词，默认为空
- * @method string getCursor() 获取日志搜索的游标，可透传上次返回的值，默认为空
- * @method void setCursor(string $Cursor) 设置日志搜索的游标，可透传上次返回的值，默认为空
- * @method string getOrderType() 获取时间戳排序规则，asc - 升序，desc - 降序。默认为升序
- * @method void setOrderType(string $OrderType) 设置时间戳排序规则，asc - 升序，desc - 降序。默认为升序
- * @method integer getLimit() 获取搜索的日志条数上限值，最大为100
- * @method void setLimit(integer $Limit) 设置搜索的日志条数上限值，最大为100
+ * @method string getJobId() 获取<p>作业ID，例如：cql-6v1jkxrn</p>
+ * @method void setJobId(string $JobId) 设置<p>作业ID，例如：cql-6v1jkxrn</p>
+ * @method integer getStartTime() 获取<p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
+ * @method integer getEndTime() 获取<p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
+ * @method integer getRunningOrderId() 获取<p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
+ * @method void setRunningOrderId(integer $RunningOrderId) 设置<p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
+ * @method string getKeyword() 获取<p>日志搜索的关键词，默认为空</p>
+ * @method void setKeyword(string $Keyword) 设置<p>日志搜索的关键词，默认为空</p>
+ * @method string getCursor() 获取<p>日志搜索的游标，可透传上次返回的值，默认为空</p>
+ * @method void setCursor(string $Cursor) 设置<p>日志搜索的游标，可透传上次返回的值，默认为空</p>
+ * @method string getOrderType() 获取<p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
+ * @method void setOrderType(string $OrderType) 设置<p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
+ * @method integer getLimit() 获取<p>搜索的日志条数上限值，最大为100</p>
+ * @method void setLimit(integer $Limit) 设置<p>搜索的日志条数上限值，最大为100</p>
+ * @method integer getOffset() 获取<p>分页偏移</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移</p>
+ * @method array getFilters() 获取<p>过滤</p>
+ * @method void setFilters(array $Filters) 设置<p>过滤</p>
  */
 class DescribeJobSubmissionLogRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID，例如：cql-6v1jkxrn
+     * @var string <p>作业ID，例如：cql-6v1jkxrn</p>
      */
     public $JobId;
 
     /**
-     * @var integer 起始时间，unix时间戳，毫秒级，例如：1611754219108
+     * @var integer <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间，unix时间戳，毫秒级，例如：1611754219108
+     * @var integer <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
+     * @var integer <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
      */
     public $RunningOrderId;
 
     /**
-     * @var string 日志搜索的关键词，默认为空
+     * @var string <p>日志搜索的关键词，默认为空</p>
      */
     public $Keyword;
 
     /**
-     * @var string 日志搜索的游标，可透传上次返回的值，默认为空
+     * @var string <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
      */
     public $Cursor;
 
     /**
-     * @var string 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
+     * @var string <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
      */
     public $OrderType;
 
     /**
-     * @var integer 搜索的日志条数上限值，最大为100
+     * @var integer <p>搜索的日志条数上限值，最大为100</p>
      */
     public $Limit;
 
     /**
-     * @param string $JobId 作业ID，例如：cql-6v1jkxrn
-     * @param integer $StartTime 起始时间，unix时间戳，毫秒级，例如：1611754219108
-     * @param integer $EndTime 结束时间，unix时间戳，毫秒级，例如：1611754219108
-     * @param integer $RunningOrderId 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
-     * @param string $Keyword 日志搜索的关键词，默认为空
-     * @param string $Cursor 日志搜索的游标，可透传上次返回的值，默认为空
-     * @param string $OrderType 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
-     * @param integer $Limit 搜索的日志条数上限值，最大为100
+     * @var integer <p>分页偏移</p>
+     */
+    public $Offset;
+
+    /**
+     * @var array <p>过滤</p>
+     */
+    public $Filters;
+
+    /**
+     * @param string $JobId <p>作业ID，例如：cql-6v1jkxrn</p>
+     * @param integer $StartTime <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
+     * @param integer $EndTime <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
+     * @param integer $RunningOrderId <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
+     * @param string $Keyword <p>日志搜索的关键词，默认为空</p>
+     * @param string $Cursor <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
+     * @param string $OrderType <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
+     * @param integer $Limit <p>搜索的日志条数上限值，最大为100</p>
+     * @param integer $Offset <p>分页偏移</p>
+     * @param array $Filters <p>过滤</p>
      */
     function __construct()
     {
@@ -132,6 +148,19 @@ class DescribeJobSubmissionLogRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

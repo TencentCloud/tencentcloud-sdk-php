@@ -77,6 +77,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeHealthScoreTimeSeriesResponse DescribeHealthScoreTimeSeries(Models\DescribeHealthScoreTimeSeriesRequest $req) 获取指定时间段内的健康得分趋势
  * @method Models\DescribeIndexRecommendAggregationSlowLogsResponse DescribeIndexRecommendAggregationSlowLogs(Models\DescribeIndexRecommendAggregationSlowLogsRequest $req) 查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
  * @method Models\DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfo(Models\DescribeIndexRecommendInfoRequest $req) 查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
+ * @method Models\DescribeInterfaceEncryptKeyV2Response DescribeInterfaceEncryptKeyV2(Models\DescribeInterfaceEncryptKeyV2Request $req) 查询接口加密 RSA 公钥，前端用于加密敏感数据。
  * @method Models\DescribeMailProfileResponse DescribeMailProfile(Models\DescribeMailProfileRequest $req) 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
  * @method Models\DescribeMetricTopProxiesResponse DescribeMetricTopProxies(Models\DescribeMetricTopProxiesRequest $req) 获取指定时间段内Redis Proxy 指标
  * @method Models\DescribeMongoDBProcessListResponse DescribeMongoDBProcessList(Models\DescribeMongoDBProcessListRequest $req) 查询MongoDB实时会话列表

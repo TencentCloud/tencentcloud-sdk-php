@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnvAccessControl请求参数结构体
  *
-
+ * @method string getEnvId() 获取<p>环境id</p>
+ * @method void setEnvId(string $EnvId) 设置<p>环境id</p>
+ * @method array getSources() 获取<p>本次要设置的来源集合</p><p>入参限制：SourceType = PUBLIC 时，标识操作公网开关<br>SourceType = VPC 时，通过配置 VPCWhiteList，开启/关闭 VPC 白名单<br>SourceType = WOA 时，通过配置 WOAAuth，开启/关闭鉴权校验，开启鉴权时，AuthToken 字段为填</p>
+ * @method void setSources(array $Sources) 设置<p>本次要设置的来源集合</p><p>入参限制：SourceType = PUBLIC 时，标识操作公网开关<br>SourceType = VPC 时，通过配置 VPCWhiteList，开启/关闭 VPC 白名单<br>SourceType = WOA 时，通过配置 WOAAuth，开启/关闭鉴权校验，开启鉴权时，AuthToken 字段为填</p>
  */
 class ModifyEnvAccessControlRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>环境id</p>
+     */
+    public $EnvId;
 
     /**
+     * @var array <p>本次要设置的来源集合</p><p>入参限制：SourceType = PUBLIC 时，标识操作公网开关<br>SourceType = VPC 时，通过配置 VPCWhiteList，开启/关闭 VPC 白名单<br>SourceType = WOA 时，通过配置 WOAAuth，开启/关闭鉴权校验，开启鉴权时，AuthToken 字段为填</p>
+     */
+    public $Sources;
 
+    /**
+     * @param string $EnvId <p>环境id</p>
+     * @param array $Sources <p>本次要设置的来源集合</p><p>入参限制：SourceType = PUBLIC 时，标识操作公网开关<br>SourceType = VPC 时，通过配置 VPCWhiteList，开启/关闭 VPC 白名单<br>SourceType = WOA 时，通过配置 WOAAuth，开启/关闭鉴权校验，开启鉴权时，AuthToken 字段为填</p>
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class ModifyEnvAccessControlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
+            $this->EnvId = $param["EnvId"];
+        }
 
+        if (array_key_exists("Sources",$param) and $param["Sources"] !== null) {
+            $this->Sources = [];
+            foreach ($param["Sources"] as $key => $value){
+                $obj = new AccessSourceSetting();
+                $obj->deserialize($value);
+                array_push($this->Sources, $obj);
+            }
+        }
     }
 }

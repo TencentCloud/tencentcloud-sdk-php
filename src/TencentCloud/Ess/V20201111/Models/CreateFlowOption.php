@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedFlowDraft(boolean $NeedFlowDraft) 设置<p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
  * @method integer getCcInfoVisibility() 获取<p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
  * @method void setCcInfoVisibility(integer $CcInfoVisibility) 设置<p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+ * @method array getSignComponentLimits() 获取<p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+ * @method void setSignComponentLimits(array $SignComponentLimits) 设置<p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -200,6 +202,11 @@ class CreateFlowOption extends AbstractModel
     public $CcInfoVisibility;
 
     /**
+     * @var array <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public $SignComponentLimits;
+
+    /**
      * @param boolean $CanEditFlow <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
      * @param boolean $CanEditFormField <p>是否允许编辑模板控件<br><br>true:允许编辑模板控件信息<br><br>false:不允许编辑模板控件信息（默认值）<br><br></p>
      * @param boolean $HideShowFlowName <p>发起页面隐藏合同名称展示<br><br>true:发起页面隐藏合同名称展示<br><br>false:发起页面不隐藏合同名称展示（默认值）<br><br></p>
@@ -225,6 +232,7 @@ class CreateFlowOption extends AbstractModel
      * @param boolean $SignAfterStart <p>发起成功之后是否签署合同，仅当前经办人作为签署人时生效 <ul><li>（默认） false -否</li> <li> true - 展示签署按钮</li></ul></p>
      * @param boolean $NeedFlowDraft <p>发起过程中是否展示“保存草稿”按钮<br><img src="https://qcloudimg.tencent-cloud.cn/raw/9e863549f7f53c8bab2fa3c4b43c1715.png" alt="image"></p><ol><li>点击保存后，可以通过CreatePrepareFlow返回的DraftId保存草稿id</li><li>可以用于二次发起合同： <a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow/">CreatePrepareFlow</a>，ResourceType    =3 //草稿</li></ol>
      * @param integer $CcInfoVisibility <p>若指定了合同抄送人，此参数用来控制操作人能否在嵌入式页面看见或编辑（修改、增加、删除）抄送人信息。</p><p>枚举值：</p><ul><li>0： 不可见不可编辑</li><li>1： 可见不可编辑</li><li>2： 可见可编辑</li></ul><p>默认值：0</p>
+     * @param array $SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
      */
     function __construct()
     {
@@ -343,6 +351,15 @@ class CreateFlowOption extends AbstractModel
 
         if (array_key_exists("CcInfoVisibility",$param) and $param["CcInfoVisibility"] !== null) {
             $this->CcInfoVisibility = $param["CcInfoVisibility"];
+        }
+
+        if (array_key_exists("SignComponentLimits",$param) and $param["SignComponentLimits"] !== null) {
+            $this->SignComponentLimits = [];
+            foreach ($param["SignComponentLimits"] as $key => $value){
+                $obj = new EmbedSignComponentLimit();
+                $obj->deserialize($value);
+                array_push($this->SignComponentLimits, $obj);
+            }
         }
     }
 }

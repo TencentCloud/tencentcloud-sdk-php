@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSecretVersion请求参数结构体
  *
- * @method string getSecretName() 获取指定凭据名称。
- * @method void setSecretName(string $SecretName) 设置指定凭据名称。
- * @method string getVersionId() 获取指定该名称下需要删除的凭据的版本号。
- * @method void setVersionId(string $VersionId) 设置指定该名称下需要删除的凭据的版本号。
+ * @method string getSecretName() 获取<p>指定凭据名称。</p>
+ * @method void setSecretName(string $SecretName) 设置<p>指定凭据名称。</p>
+ * @method string getVersionId() 获取<p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
+ * @method void setVersionId(string $VersionId) 设置<p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
  */
 class DeleteSecretVersionRequest extends AbstractModel
 {
     /**
-     * @var string 指定凭据名称。
+     * @var string <p>指定凭据名称。</p>
      */
     public $SecretName;
 
     /**
-     * @var string 指定该名称下需要删除的凭据的版本号。
+     * @var string <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
      */
     public $VersionId;
 
     /**
-     * @param string $SecretName 指定凭据名称。
-     * @param string $VersionId 指定该名称下需要删除的凭据的版本号。
+     * @param string $SecretName <p>指定凭据名称。</p>
+     * @param string $VersionId <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
      */
     function __construct()
     {

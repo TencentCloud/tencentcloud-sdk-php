@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlow返回参数结构体
  *
- * @method string getPrepareFlowUrl() 获取发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
- * @method void setPrepareFlowUrl(string $PrepareFlowUrl) 设置发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
- * @method string getPreviewFlowUrl() 获取合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
- * @method void setPreviewFlowUrl(string $PreviewFlowUrl) 设置合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
- * @method string getFlowId() 获取发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
- * @method void setFlowId(string $FlowId) 设置发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
- * @method string getDraftId() 获取临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
- * @method void setDraftId(string $DraftId) 设置临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+ * @method string getPrepareFlowUrl() 获取<p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
+ * @method void setPrepareFlowUrl(string $PrepareFlowUrl) 设置<p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
+ * @method string getPreviewFlowUrl() 获取<p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
+ * @method void setPreviewFlowUrl(string $PreviewFlowUrl) 设置<p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
+ * @method string getFlowId() 获取<p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
+ * @method void setFlowId(string $FlowId) 设置<p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
+ * @method string getDraftId() 获取<p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
+ * @method void setDraftId(string $DraftId) 设置<p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreatePrepareFlowResponse extends AbstractModel
 {
     /**
-     * @var string 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+     * @var string <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
      */
     public $PrepareFlowUrl;
 
     /**
-     * @var string 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+     * @var string <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
      */
     public $PreviewFlowUrl;
 
     /**
-     * @var string 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     * @var string <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
      */
     public $FlowId;
 
     /**
-     * @var string 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * @var string <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      */
     public $DraftId;
 
@@ -59,10 +59,10 @@ class ChannelCreatePrepareFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $PrepareFlowUrl 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
-     * @param string $PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
-     * @param string $FlowId 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
-     * @param string $DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * @param string $PrepareFlowUrl <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
+     * @param string $PreviewFlowUrl <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
+     * @param string $FlowId <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
+     * @param string $DraftId <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

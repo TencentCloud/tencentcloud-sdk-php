@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置<p>文档的结束页码。用来指定识别的结束页码，识别的页码包含当前值，不填时默认解析到文档最后一页。本参数与 FileStartPageNumber 可分开填写，也可只填其中一个。</p>
  * @method integer getTaskType() 获取<p>任务类型，默认为 0。取值：</p><ul><li>0：默认</li><li>1：Free OCR</li><li>2：OCR</li><li>3：表格识别</li><li>4：代码识别</li></ul>
  * @method void setTaskType(integer $TaskType) 设置<p>任务类型，默认为 0。取值：</p><ul><li>0：默认</li><li>1：Free OCR</li><li>2：OCR</li><li>3：表格识别</li><li>4：代码识别</li></ul>
+ * @method boolean getEnableTableCellCoord() 获取<p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+ * @method void setEnableTableCellCoord(boolean $EnableTableCellCoord) 设置<p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
  */
 class SubmitMultimodalDocParseJobRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class SubmitMultimodalDocParseJobRequest extends AbstractModel
     public $TaskType;
 
     /**
+     * @var boolean <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     */
+    public $EnableTableCellCoord;
+
+    /**
      * @param integer $FileType <p>支持解析的文件类型。取值：</p><ul><li>1：PDF 文档</li><li>2：Word 文档（.doc/.docx）</li><li>3：PPT 演示文稿（.ppt/.pptx）</li><li>4：Excel 表格（.xls/.xlsx）</li><li>5：Markdown 文档（.md）</li><li>6：纯文本文件（.txt）</li><li>7：图片文件（.png/.jpg/.jpeg 等）</li><li>8：WPS 文档<br>支持的文件大小：PDF/WORD/PPT 支持 500M 且 300 页。</li></ul>
      * @param string $FileUrl <p>文件的 Url 地址，支持 FileType 参数对应的文件格式及大小。文件下载时间不超过 30 秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      * @param string $FileBase64 <p>文件的 Base64 值。支持 FileType 参数对应的文件格式，支持的文件大小不超过 8M。文件下载时间不超过 30 秒。<br>文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。</p>
@@ -88,6 +95,7 @@ class SubmitMultimodalDocParseJobRequest extends AbstractModel
      * @param integer $FileStartPageNumber <p>文档的起始页码。用来指定识别的起始页码，识别的页码包含当前值，不填时默认从文档第一页开始解析。本参数与 FileEndPageNumber 可分开填写，也可只填其中一个。</p>
      * @param integer $FileEndPageNumber <p>文档的结束页码。用来指定识别的结束页码，识别的页码包含当前值，不填时默认解析到文档最后一页。本参数与 FileStartPageNumber 可分开填写，也可只填其中一个。</p>
      * @param integer $TaskType <p>任务类型，默认为 0。取值：</p><ul><li>0：默认</li><li>1：Free OCR</li><li>2：OCR</li><li>3：表格识别</li><li>4：代码识别</li></ul>
+     * @param boolean $EnableTableCellCoord <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class SubmitMultimodalDocParseJobRequest extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("EnableTableCellCoord",$param) and $param["EnableTableCellCoord"] !== null) {
+            $this->EnableTableCellCoord = $param["EnableTableCellCoord"];
         }
     }
 }

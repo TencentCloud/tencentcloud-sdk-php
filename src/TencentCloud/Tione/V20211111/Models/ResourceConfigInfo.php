@@ -20,221 +20,85 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源配置
  *
- * @method string getRole() 获取角色，eg：PS、WORKER、DRIVER、EXECUTOR
- * @method void setRole(string $Role) 设置角色，eg：PS、WORKER、DRIVER、EXECUTOR
- * @method integer getCpu() 获取cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
- * @method void setCpu(integer $Cpu) 设置cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
- * @method integer getMemory() 获取内存，使用资源组时需配置。单位为MB
- * @method void setMemory(integer $Memory) 设置内存，使用资源组时需配置。单位为MB
- * @method string getGpuType() 获取gpu卡类型，使用资源组时需配置
- * @method void setGpuType(string $GpuType) 设置gpu卡类型，使用资源组时需配置
- * @method integer getGpu() 获取gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
- * @method void setGpu(integer $Gpu) 设置gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
- * @method string getInstanceType() 获取算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
- * @method void setInstanceType(string $InstanceType) 设置算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
- * @method integer getInstanceNum() 获取计算节点数
- * @method void setInstanceNum(integer $InstanceNum) 设置计算节点数
- * @method string getInstanceTypeAlias() 获取算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
- * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
- * @method RDMAConfig getRDMAConfig() 获取RDMA配置
+ * @method string getRole() 获取<p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
+ * @method void setRole(string $Role) 设置<p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
+ * @method integer getCpu() 获取<p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
+ * @method void setCpu(integer $Cpu) 设置<p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
+ * @method integer getMemory() 获取<p>内存，使用资源组时需配置。单位为MB</p>
+ * @method void setMemory(integer $Memory) 设置<p>内存，使用资源组时需配置。单位为MB</p>
+ * @method string getGpuType() 获取<p>gpu卡类型，使用资源组时需配置</p>
+ * @method void setGpuType(string $GpuType) 设置<p>gpu卡类型，使用资源组时需配置</p>
+ * @method integer getGpu() 获取<p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
+ * @method void setGpu(integer $Gpu) 设置<p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
+ * @method string getInstanceType() 获取<p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
+ * @method void setInstanceType(string $InstanceType) 设置<p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
+ * @method integer getInstanceNum() 获取<p>计算节点数</p>
+ * @method void setInstanceNum(integer $InstanceNum) 设置<p>计算节点数</p>
+ * @method string getInstanceTypeAlias() 获取<p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
+ * @method void setInstanceTypeAlias(string $InstanceTypeAlias) 设置<p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
+ * @method RDMAConfig getRDMAConfig() 获取<p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRDMAConfig(RDMAConfig $RDMAConfig) 设置RDMA配置
+ * @method void setRDMAConfig(RDMAConfig $RDMAConfig) 设置<p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceConfigInfo extends AbstractModel
 {
     /**
-     * @var string 角色，eg：PS、WORKER、DRIVER、EXECUTOR
+     * @var string <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
      */
     public $Role;
 
     /**
-     * @var integer cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+     * @var integer <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存，使用资源组时需配置。单位为MB
+     * @var integer <p>内存，使用资源组时需配置。单位为MB</p>
      */
     public $Memory;
 
     /**
-     * @var string gpu卡类型，使用资源组时需配置
+     * @var string <p>gpu卡类型，使用资源组时需配置</p>
      */
     public $GpuType;
 
     /**
-     * @var integer gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+     * @var integer <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
      */
     public $Gpu;
 
     /**
-     * @var string 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
+     * @var string <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
      */
     public $InstanceType;
 
     /**
-     * @var integer 计算节点数
+     * @var integer <p>计算节点数</p>
      */
     public $InstanceNum;
 
     /**
-     * @var string 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
+     * @var string <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
      */
     public $InstanceTypeAlias;
 
     /**
-     * @var RDMAConfig RDMA配置
+     * @var RDMAConfig <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RDMAConfig;
 
     /**
-     * @param string $Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
-     * @param integer $Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
-     * @param integer $Memory 内存，使用资源组时需配置。单位为MB
-     * @param string $GpuType gpu卡类型，使用资源组时需配置
-     * @param integer $Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
-     * @param string $InstanceType 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
-     * @param integer $InstanceNum 计算节点数
-     * @param string $InstanceTypeAlias 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
-     * @param RDMAConfig $RDMAConfig RDMA配置
+     * @param string $Role <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
+     * @param integer $Cpu <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
+     * @param integer $Memory <p>内存，使用资源组时需配置。单位为MB</p>
+     * @param string $GpuType <p>gpu卡类型，使用资源组时需配置</p>
+     * @param integer $Gpu <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
+     * @param string $InstanceType <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
+     * @param integer $InstanceNum <p>计算节点数</p>
+     * @param string $InstanceTypeAlias <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
+     * @param RDMAConfig $RDMAConfig <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

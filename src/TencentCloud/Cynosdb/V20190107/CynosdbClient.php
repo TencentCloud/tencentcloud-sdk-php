@@ -59,6 +59,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 本接口（CreateParamTemplate）用于创建参数模板。
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于开启集群的数据库代理。
  * @method Models\CreateProxyEndPointResponse CreateProxyEndPoint(Models\CreateProxyEndPointRequest $req) 本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
+ * @method Models\CreateProxyEndPointsResponse CreateProxyEndPoints(Models\CreateProxyEndPointsRequest $req) 本接口（CreateProxyEndPoints）用于批量创建数据库代理连接点。
  * @method Models\CreateResourcePackageResponse CreateResourcePackage(Models\CreateResourcePackageRequest $req) 本接口（CreateResourcePackage）用于新购资源包。
  * @method Models\CreateVaultResponse CreateVault(Models\CreateVaultRequest $req) 创建备份保险箱
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 本接口（DeleteAccounts）用于删除用户账号。

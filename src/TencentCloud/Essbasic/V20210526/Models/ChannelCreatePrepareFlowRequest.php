@@ -20,191 +20,103 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreatePrepareFlow请求参数结构体
  *
- * @method integer getResourceType() 获取资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
- * @method void setResourceType(integer $ResourceType) 设置资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
- * @method BaseFlowInfo getFlowInfo() 获取要创建的合同信息
- * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置要创建的合同信息
- * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
- * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
- * @method string getResourceId() 获取资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
- * @method void setResourceId(string $ResourceId) 设置资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
- * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
- * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
- * @method array getFlowApproverList() 获取已废弃，请用FlowInfo.Approvers
- * @method void setFlowApproverList(array $FlowApproverList) 设置已废弃，请用FlowInfo.Approvers
- * @method string getFlowId() 获取合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
- * @method void setFlowId(string $FlowId) 设置合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
- * @method boolean getNeedPreview() 获取该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
- * @method void setNeedPreview(boolean $NeedPreview) 设置该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
- * @method OrganizationInfo getOrganization() 获取企业机构信息，不用传
- * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息，不用传
- * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
- * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息，不用传
- * @method SignComponentConfig getSignComponentConfig() 获取<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
- * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+ * @method integer getResourceType() 获取<p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
+ * @method void setResourceType(integer $ResourceType) 设置<p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
+ * @method BaseFlowInfo getFlowInfo() 获取<p>要创建的合同信息</p>
+ * @method void setFlowInfo(BaseFlowInfo $FlowInfo) 设置<p>要创建的合同信息</p>
+ * @method Agent getAgent() 获取<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+ * @method void setAgent(Agent $Agent) 设置<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+ * @method string getResourceId() 获取<p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
+ * @method void setResourceId(string $ResourceId) 设置<p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
+ * @method CreateFlowOption getFlowOption() 获取<p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
+ * @method void setFlowOption(CreateFlowOption $FlowOption) 设置<p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
+ * @method array getFlowApproverList() 获取<p>已废弃，请用FlowInfo.Approvers</p>
+ * @method void setFlowApproverList(array $FlowApproverList) 设置<p>已废弃，请用FlowInfo.Approvers</p>
+ * @method string getFlowId() 获取<p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
+ * @method void setFlowId(string $FlowId) 设置<p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
+ * @method boolean getNeedPreview() 获取<p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
+ * @method void setNeedPreview(boolean $NeedPreview) 设置<p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
+ * @method OrganizationInfo getOrganization() 获取<p>企业机构信息，不用传</p>
+ * @method void setOrganization(OrganizationInfo $Organization) 设置<p>企业机构信息，不用传</p>
+ * @method UserInfo getOperator() 获取<p>操作人（用户）信息，不用传</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>操作人（用户）信息，不用传</p>
+ * @method SignComponentConfig getSignComponentConfig() 获取<p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置<p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
  */
 class ChannelCreatePrepareFlowRequest extends AbstractModel
 {
     /**
-     * @var integer 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
+     * @var integer <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
      */
     public $ResourceType;
 
     /**
-     * @var BaseFlowInfo 要创建的合同信息
+     * @var BaseFlowInfo <p>要创建的合同信息</p>
      */
     public $FlowInfo;
 
     /**
-     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+     * @var Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
     public $Agent;
 
     /**
-     * @var string 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
+     * @var string <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public $ResourceId;
 
     /**
-     * @var CreateFlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+     * @var CreateFlowOption <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
      */
     public $FlowOption;
 
     /**
-     * @var array 已废弃，请用FlowInfo.Approvers
+     * @var array <p>已废弃，请用FlowInfo.Approvers</p>
      * @deprecated
      */
     public $FlowApproverList;
 
     /**
-     * @var string 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+     * @var string <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
      */
     public $FlowId;
 
     /**
-     * @var boolean 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @var boolean <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
      * @deprecated
      */
     public $NeedPreview;
 
     /**
-     * @var OrganizationInfo 企业机构信息，不用传
+     * @var OrganizationInfo <p>企业机构信息，不用传</p>
      * @deprecated
      */
     public $Organization;
 
     /**
-     * @var UserInfo 操作人（用户）信息，不用传
+     * @var UserInfo <p>操作人（用户）信息，不用传</p>
      * @deprecated
      */
     public $Operator;
 
     /**
-     * @var SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+     * @var SignComponentConfig <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
      * @deprecated
      */
     public $SignComponentConfig;
 
     /**
-     * @param integer $ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
-     * @param BaseFlowInfo $FlowInfo 要创建的合同信息
-     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
-     * @param string $ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
-     * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
-     * @param array $FlowApproverList 已废弃，请用FlowInfo.Approvers
-     * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
-     * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
-     * @param OrganizationInfo $Organization 企业机构信息，不用传
-     * @param UserInfo $Operator 操作人（用户）信息，不用传
-     * @param SignComponentConfig $SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+     * @param integer $ResourceType <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
+     * @param BaseFlowInfo $FlowInfo <p>要创建的合同信息</p>
+     * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+     * @param string $ResourceId <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
+     * @param CreateFlowOption $FlowOption <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
+     * @param array $FlowApproverList <p>已废弃，请用FlowInfo.Approvers</p>
+     * @param string $FlowId <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
+     * @param boolean $NeedPreview <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
+     * @param OrganizationInfo $Organization <p>企业机构信息，不用传</p>
+     * @param UserInfo $Operator <p>操作人（用户）信息，不用传</p>
+     * @param SignComponentConfig $SignComponentConfig <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
      */
     function __construct()
     {

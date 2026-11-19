@@ -129,6 +129,7 @@ use TencentCloud\Databuddy\V20260715\Models as Models;
  * @method Models\ListLocationsResponse ListLocations(Models\ListLocationsRequest $req) 分页查询存储位置列表
 使用场景：分页查询数据湖仓库中的存储位置详情列表，支持模式匹配和快照分页
  * @method Models\ListModelsResponse ListModels(Models\ListModelsRequest $req) 分页获取模型信息
+ * @method Models\ListScheduledTasksResponse ListScheduledTasks(Models\ListScheduledTasksRequest $req) 分页查询工作空间下的定时任务列表；支持按 SessionType、AnalysisSpaceId、TaskName 过滤。返回内容包含任务的完整详情，含 SkillIds 与 MCPIds。
  * @method Models\ListSchemaNamesResponse ListSchemaNames(Models\ListSchemaNamesRequest $req) 分页查询数据库名称列表
  * @method Models\ListSchemasResponse ListSchemas(Models\ListSchemasRequest $req) 获取schema列表
  * @method Models\ListTableNamesResponse ListTableNames(Models\ListTableNamesRequest $req) 分页查询数据表名称列表

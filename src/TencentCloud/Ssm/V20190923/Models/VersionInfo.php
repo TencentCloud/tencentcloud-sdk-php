@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭据版本号列表信息
  *
- * @method string getVersionId() 获取版本号
- * @method void setVersionId(string $VersionId) 设置版本号
- * @method integer getCreateTime() 获取创建时间，unix时间戳。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，unix时间戳。
+ * @method string getVersionId() 获取<p>版本号</p>
+ * @method void setVersionId(string $VersionId) 设置<p>版本号</p>
+ * @method integer getCreateTime() 获取<p>创建时间，unix时间戳。</p>
+ * @method void setCreateTime(integer $CreateTime) 设置<p>创建时间，unix时间戳。</p>
+ * @method array getVersionStages() 获取<p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+ * @method void setVersionStages(array $VersionStages) 设置<p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
  */
 class VersionInfo extends AbstractModel
 {
     /**
-     * @var string 版本号
+     * @var string <p>版本号</p>
      */
     public $VersionId;
 
     /**
-     * @var integer 创建时间，unix时间戳。
+     * @var integer <p>创建时间，unix时间戳。</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $VersionId 版本号
-     * @param integer $CreateTime 创建时间，unix时间戳。
+     * @var array <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+     */
+    public $VersionStages;
+
+    /**
+     * @param string $VersionId <p>版本号</p>
+     * @param integer $CreateTime <p>创建时间，unix时间戳。</p>
+     * @param array $VersionStages <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class VersionInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("VersionStages",$param) and $param["VersionStages"] !== null) {
+            $this->VersionStages = $param["VersionStages"];
         }
     }
 }

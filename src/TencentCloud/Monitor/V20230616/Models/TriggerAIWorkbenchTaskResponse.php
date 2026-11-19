@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionId(string $ExecutionId) 设置<p>执行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionId() 获取<p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置<p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunId() 获取<p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunId(string $RunId) 设置<p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +44,28 @@ class TriggerAIWorkbenchTaskResponse extends AbstractModel
     public $ExecutionId;
 
     /**
+     * @var string <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var string <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ExecutionId <p>执行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionId <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunId <p>运行 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -60,6 +84,14 @@ class TriggerAIWorkbenchTaskResponse extends AbstractModel
         }
         if (array_key_exists("ExecutionId",$param) and $param["ExecutionId"] !== null) {
             $this->ExecutionId = $param["ExecutionId"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("RunId",$param) and $param["RunId"] !== null) {
+            $this->RunId = $param["RunId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

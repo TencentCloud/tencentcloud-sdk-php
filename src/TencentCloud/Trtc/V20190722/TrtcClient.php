@@ -101,6 +101,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
  * @method Models\DescribeCloudSliceTaskResponse DescribeCloudSliceTask(Models\DescribeCloudSliceTaskRequest $req) 成功开启切片后，可以使用此接口来查询切片任务状态。仅在任务进行时有效，任务退出后查询将会返回错误。
  * @method Models\DescribeCloudTranscriptionResponse DescribeCloudTranscription(Models\DescribeCloudTranscriptionRequest $req) 成功开启转录后，可以使用此接口来查询录制状态。仅在转录任务进行时有效，转录退出后查询将会返回错误。
+ * @method Models\DescribeFinanceCloudRoomUsageResponse DescribeFinanceCloudRoomUsage(Models\DescribeFinanceCloudRoomUsageRequest $req) 本接口（DescribeFinanceCloudRoomUsage）用于查询金融云 TRTC 房间维度用量。
  * @method Models\DescribeLiveStreamModerationResponse DescribeLiveStreamModeration(Models\DescribeLiveStreamModerationRequest $req) 成功开启直播流AI 内容理解任务后，可以使用此接口来查询AI 内容理解任务状态，仅在任务进行时有效，任务退出后查询将会返回错误。
  * @method Models\DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(Models\DescribeMixTranscodingUsageRequest $req) 获取TRTC混流转码的用量明细。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。

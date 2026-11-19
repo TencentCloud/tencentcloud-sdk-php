@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignAfterStart(boolean $SignAfterStart) 设置<p>发起成功后是否签署合同,仅当前经办人为签署人时生效 true-展示签署 false-否(默认)</p>
  * @method boolean getPreviewAfterStart() 获取<p>发起成功后是否预览合同 true-展示预览按钮 false-否(默认)</p>
  * @method void setPreviewAfterStart(boolean $PreviewAfterStart) 设置<p>发起成功后是否预览合同 true-展示预览按钮 false-否(默认)</p>
+ * @method array getSignComponentLimits() 获取<p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+ * @method void setSignComponentLimits(array $SignComponentLimits) 设置<p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+ * @method array getHideOperationSteps() 获取<p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+ * @method void setHideOperationSteps(array $HideOperationSteps) 设置<p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
  */
 class FlowGroupOptions extends AbstractModel
 {
@@ -94,6 +98,16 @@ class FlowGroupOptions extends AbstractModel
     public $PreviewAfterStart;
 
     /**
+     * @var array <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public $SignComponentLimits;
+
+    /**
+     * @var array <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     */
+    public $HideOperationSteps;
+
+    /**
      * @param boolean $SelfOrganizationApproverSignEach <p>发起方企业经办人（即签署人为发起方企业员工）是否需要对子合同进行独立的意愿确认</p><ul><li>**false**（默认）：发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li><li>**true**：发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      * @param boolean $OtherApproverSignEach <p>非发起方企业经办人（即：签署人为个人或者不为发起方企业的员工）是否需要对子合同进行独立的意愿确认</p><ul><li>**false**（默认）：非发起方企业经办人签署时对所有子合同进行统一的意愿确认。</li><li>**true**：非发起方企业经办人签署时需要对子合同进行独立的意愿确认。</li></ul>
      * @param boolean $NoEditFlowName <p>是否不可编辑合同名称 true-不可编辑 false-可编辑(默认)</p>
@@ -104,6 +118,8 @@ class FlowGroupOptions extends AbstractModel
      * @param boolean $HideSignCodeAfterStart <p>发起成功后是否隐藏签署码 true-隐藏 false-否(默认)</p>
      * @param boolean $SignAfterStart <p>发起成功后是否签署合同,仅当前经办人为签署人时生效 true-展示签署 false-否(默认)</p>
      * @param boolean $PreviewAfterStart <p>发起成功后是否预览合同 true-展示预览按钮 false-否(默认)</p>
+     * @param array $SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     * @param array $HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
      */
     function __construct()
     {
@@ -157,6 +173,19 @@ class FlowGroupOptions extends AbstractModel
 
         if (array_key_exists("PreviewAfterStart",$param) and $param["PreviewAfterStart"] !== null) {
             $this->PreviewAfterStart = $param["PreviewAfterStart"];
+        }
+
+        if (array_key_exists("SignComponentLimits",$param) and $param["SignComponentLimits"] !== null) {
+            $this->SignComponentLimits = [];
+            foreach ($param["SignComponentLimits"] as $key => $value){
+                $obj = new EmbedSignComponentLimit();
+                $obj->deserialize($value);
+                array_push($this->SignComponentLimits, $obj);
+            }
+        }
+
+        if (array_key_exists("HideOperationSteps",$param) and $param["HideOperationSteps"] !== null) {
+            $this->HideOperationSteps = $param["HideOperationSteps"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomConfiguration(CustomConfiguration $CustomConfiguration) 设置<p>沙箱工具自定义配置</p>
  * @method ComputerConfiguration getComputerConfiguration() 获取<p>桌面电脑环境类沙箱配置</p>
  * @method void setComputerConfiguration(ComputerConfiguration $ComputerConfiguration) 设置<p>桌面电脑环境类沙箱配置</p>
+ * @method array getStorageMounts() 获取<p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+ * @method void setStorageMounts(array $StorageMounts) 设置<p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
  */
 class UpdateSandboxToolRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class UpdateSandboxToolRequest extends AbstractModel
     public $ComputerConfiguration;
 
     /**
+     * @var array <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+     */
+    public $StorageMounts;
+
+    /**
      * @param string $ToolId <p>沙箱工具ID</p>
      * @param string $Description <p>沙箱工具描述，最大长度200字符</p>
      * @param NetworkConfiguration $NetworkConfiguration <p>网络配置</p>
      * @param array $Tags <p>标签</p>
      * @param CustomConfiguration $CustomConfiguration <p>沙箱工具自定义配置</p>
      * @param ComputerConfiguration $ComputerConfiguration <p>桌面电脑环境类沙箱配置</p>
+     * @param array $StorageMounts <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
      */
     function __construct()
     {
@@ -116,6 +124,15 @@ class UpdateSandboxToolRequest extends AbstractModel
         if (array_key_exists("ComputerConfiguration",$param) and $param["ComputerConfiguration"] !== null) {
             $this->ComputerConfiguration = new ComputerConfiguration();
             $this->ComputerConfiguration->deserialize($param["ComputerConfiguration"]);
+        }
+
+        if (array_key_exists("StorageMounts",$param) and $param["StorageMounts"] !== null) {
+            $this->StorageMounts = [];
+            foreach ($param["StorageMounts"] as $key => $value){
+                $obj = new StorageMount();
+                $obj->deserialize($value);
+                array_push($this->StorageMounts, $obj);
+            }
         }
     }
 }

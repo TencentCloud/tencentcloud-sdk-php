@@ -33,6 +33,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\CancelRegistryRecordResponse CancelRegistryRecord(Models\CancelRegistryRecordRequest $req) PREPARING/PENDING_APPROVAL → CANCELED。Comment 必填。
  * @method Models\CreateAPIKeyResponse CreateAPIKey(Models\CreateAPIKeyRequest $req) 创建新的API密钥，用于调用Agent Sandbox接口。相较于腾讯云Secret ID Secret Key支持调用所有接口使用，仅有部分接口支持使用API密钥调用。
  * @method Models\CreateDeploymentResponse CreateDeployment(Models\CreateDeploymentRequest $req) 创建 Deployment
+ * @method Models\CreatePreCacheImageCleanupPolicyResponse CreatePreCacheImageCleanupPolicy(Models\CreatePreCacheImageCleanupPolicyRequest $req) 创建镜像预热自动清理策略
  * @method Models\CreatePreCacheImageTaskResponse CreatePreCacheImageTask(Models\CreatePreCacheImageTaskRequest $req) 创建镜像预热任务
  * @method Models\CreateRegistryResponse CreateRegistry(Models\CreateRegistryRequest $req) 创建 Agent Registry（注册中心）。
  * @method Models\CreateRegistryRecordResponse CreateRegistryRecord(Models\CreateRegistryRecordRequest $req) 统一创建 Registry Record（含 revision 1）。MCPSource / AgentSource / SkillSource / CustomDescriptors / FileSource 五选一，必须与 DescriptorType 对应。PLUGIN 使用 FileSource.Type=FILE 上传通用文件，Registry 不校验插件内容格式和语义，运行端负责解析和加载。SupportedHarnessVersions 为该版本支持的 HarnessVersionReference 对象列表，每项同时包含 HarnessEngine 和 HarnessEngineVersion，原样使用 DescribeHarnessEngineList 返回的选项；Metadata 为 Name/Value 字符串数组，Name 非空、小写且唯一，服务内部保存 map[string]string；两项属性省略时均保存空列表，不继承其他版本。不接受 RecordId 或 ChangeLog；同名 Record 返回冲突，不隐式追加 Version。追加 Version 请使用 UpdateRegistryRecord。
@@ -48,6 +49,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DeleteDeploymentResponse DeleteDeployment(Models\DeleteDeploymentRequest $req) 删除 Deployment
  * @method Models\DeleteGPUResourceGroupResponse DeleteGPUResourceGroup(Models\DeleteGPUResourceGroupRequest $req) 同步删除当前租户的空 GPU 资源组。资源组内不能存在交付中、已生效、已隔离、销毁中或其他未完成清理的 GPU 实例，也不能有剩余占用绑定或未删除的关联沙箱工具，否则返回 ResourceInUse。已销毁或补偿清理完成的历史记录不阻止删除。同租户重复删除已删除的资源组返回成功；资源组不存在或不属于当前租户时返回 ResourceNotFound。本接口仅软删除资源组，不执行退订退款、停止沙箱或释放底层 VM，历史计费记录保留。
  * @method Models\DeletePreCacheImageResponse DeletePreCacheImage(Models\DeletePreCacheImageRequest $req) 删除预热镜像
+ * @method Models\DeletePreCacheImageCleanupPolicyResponse DeletePreCacheImageCleanupPolicy(Models\DeletePreCacheImageCleanupPolicyRequest $req) 删除镜像预热自动卸载策略
  * @method Models\DeleteRegistryResponse DeleteRegistry(Models\DeleteRegistryRequest $req) 删除 Registry。
  * @method Models\DeleteRegistryRecordResponse DeleteRegistryRecord(Models\DeleteRegistryRecordRequest $req) 删除 Registry Record 或指定 Version。省略 VersionId 时对整个 Record 进行软删除；传入 VersionId 时只删除指定 Version（Stable 指向的 Version 不允许删除；仅剩一个 Approved Version 时不允许删除）。取代原 DeleteRegistryRecordVersion。
  * @method Models\DeleteSandboxSnapshotResponse DeleteSandboxSnapshot(Models\DeleteSandboxSnapshotRequest $req) 删除沙箱快照
@@ -66,6 +68,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\DescribeGPUResourceGroupsResponse DescribeGPUResourceGroups(Models\DescribeGPUResourceGroupsRequest $req) 查询当前地域、当前租户的 GPU 资源组及统计。通过 resource-group-id 精确过滤可查询组详情，仍返回数组；无匹配项返回空数组。资源组可以为空，商业期限和续费标记逐台保存。
  * @method Models\DescribeGPUResourceSpecsResponse DescribeGPUResourceSpecs(Models\DescribeGPUResourceSpecsRequest $req) 查询当前地域可售 GPU 规格与当前租户可购买额度。GPUType、CPU、Memory、GPUNum 必须同时提供或同时省略；精确过滤时按四项匹配。不返回底层机型、资源池或计费标签。总显存为单台全部 GPU 的显存之和。
  * @method Models\DescribeGPUResourcesResponse DescribeGPUResources(Models\DescribeGPUResourcesRequest $req) 查询当前地域、当前租户的逐台 GPU 商业资源及占用状态。仅展示当前资源，不展示已销毁或补偿完成的失败资源；先筛选（含占用状态）再统计和分页。
+ * @method Models\DescribePreCacheImageCleanupPolicyListResponse DescribePreCacheImageCleanupPolicyList(Models\DescribePreCacheImageCleanupPolicyListRequest $req) 查询镜像预热自动卸载策略
  * @method Models\DescribePreCacheImageListResponse DescribePreCacheImageList(Models\DescribePreCacheImageListRequest $req) 查询镜像预热列表
  * @method Models\DescribePreCacheImageTaskResponse DescribePreCacheImageTask(Models\DescribePreCacheImageTaskRequest $req) 查询镜像预热任务信息
  * @method Models\DescribeQuotaOverviewResponse DescribeQuotaOverview(Models\DescribeQuotaOverviewRequest $req) 查询当前调用账号的资源配额和当前总用量，以及账号下各配额组的资源配额和当前用量
@@ -101,6 +104,7 @@ use TencentCloud\Ags\V20250920\Models as Models;
  * @method Models\StartSandboxInstanceResponse StartSandboxInstance(Models\StartSandboxInstanceRequest $req) 启动沙箱实例
  * @method Models\StopSandboxInstanceResponse StopSandboxInstance(Models\StopSandboxInstanceRequest $req) 停止沙箱实例
  * @method Models\SyncRegistryRecordResponse SyncRegistryRecord(Models\SyncRegistryRecordRequest $req) 触发一次从远端拉取描述符 / 元数据的同步。可通过互斥的 VersionId 或 Label 指定来源 Version，均省略时默认使用 Stable。有变化时创建新 Version 并移动 Latest；来源必须 SourceType=URL_IMPORT，否则返回 UnsupportedOperation.SourceType。
+ * @method Models\UpdatePreCacheImageCleanupPolicyResponse UpdatePreCacheImageCleanupPolicy(Models\UpdatePreCacheImageCleanupPolicyRequest $req) 更新镜像预热自动卸载策略
  * @method Models\UpdateRegistryResponse UpdateRegistry(Models\UpdateRegistryRequest $req) 更新 Registry 的可变元数据。
  * @method Models\UpdateRegistryRecordResponse UpdateRegistryRecord(Models\UpdateRegistryRecordRequest $req) 更新 Registry Record。两种互斥模式：①Record 更新模式：不提交任何 Source / CustomDescriptors，可通过 Description、LabelMutations 修改元数据与 Label（至少提交一项）；②Version 创建模式：提交且仅提交一种与现有 DescriptorType 匹配的内容输入，可选 VersionName / ChangeLog / SupportedHarnessVersions / Metadata，禁止 Description / LabelMutations，服务端创建下一个 Revision。PLUGIN 使用 FileSource.Type=FILE 上传原始文件；FileSource.Type=VERSION 可为 Skill 或 Plugin 复用同一 Record 下未删除且 READY 的文件版本，填写 SourceVersionId，不复制来源版本的 Metadata 或 SupportedHarnessVersions。Metadata 以 Name/Value 字符串数组传输，所有层级 key 必须小写；两项版本属性省略时分别为空对象和空列表，不继承上一版本。取代原 ChangeRegistryRecordStableVersion / RollbackRegistryRecordVersion / Create*RegistryRecordVersion。
  * @method Models\UpdateSandboxInstanceResponse UpdateSandboxInstance(Models\UpdateSandboxInstanceRequest $req) 更新沙箱实例

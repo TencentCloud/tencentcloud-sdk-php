@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthMode(string $AuthMode) 设置<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即TOKEN认证</li><li>TOKEN： Token认证，即所有端口访问都需携带Token</li><li>NONE： 免认证，即所有端口访问无需携带Token</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带Token，其他端口无需携带Token</li></ul><p>默认值：DEFAULT</p>
  * @method array getMetadata() 获取<p>沙箱元数据</p>
  * @method void setMetadata(array $Metadata) 设置<p>沙箱元数据</p>
+ * @method array getStorageMounts() 获取<p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+ * @method void setStorageMounts(array $StorageMounts) 设置<p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
  * @method string getStartMode() 获取<p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
  * @method void setStartMode(string $StartMode) 设置<p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
  */
@@ -96,6 +98,11 @@ class StartSandboxInstanceRequest extends AbstractModel
     public $Metadata;
 
     /**
+     * @var array <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+     */
+    public $StorageMounts;
+
+    /**
      * @var string <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
      */
     public $StartMode;
@@ -111,6 +118,7 @@ class StartSandboxInstanceRequest extends AbstractModel
      * @param CustomConfiguration $CustomConfiguration <p>沙箱实例自定义配置</p>
      * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即TOKEN认证</li><li>TOKEN： Token认证，即所有端口访问都需携带Token</li><li>NONE： 免认证，即所有端口访问无需携带Token</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带Token，其他端口无需携带Token</li></ul><p>默认值：DEFAULT</p>
      * @param array $Metadata <p>沙箱元数据</p>
+     * @param array $StorageMounts <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
      * @param string $StartMode <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
      */
     function __construct()
@@ -174,6 +182,15 @@ class StartSandboxInstanceRequest extends AbstractModel
                 $obj = new MetadataVar();
                 $obj->deserialize($value);
                 array_push($this->Metadata, $obj);
+            }
+        }
+
+        if (array_key_exists("StorageMounts",$param) and $param["StorageMounts"] !== null) {
+            $this->StorageMounts = [];
+            foreach ($param["StorageMounts"] as $key => $value){
+                $obj = new StorageMount();
+                $obj->deserialize($value);
+                array_push($this->StorageMounts, $obj);
             }
         }
 

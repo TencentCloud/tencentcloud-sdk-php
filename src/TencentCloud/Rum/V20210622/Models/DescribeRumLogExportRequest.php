@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogExport请求参数结构体
  *
- * @method string getName() 获取导出标识name
- * @method void setName(string $Name) 设置导出标识name
- * @method string getStartTime() 获取开始时间（必填）
- * @method void setStartTime(string $StartTime) 设置开始时间（必填）
- * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096（必填）
- * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096（必填）
- * @method string getEndTime() 获取结束时间（必填）
- * @method void setEndTime(string $EndTime) 设置结束时间（必填）
- * @method integer getID() 获取项目ID（必填）
- * @method void setID(integer $ID) 设置项目ID（必填）
- * @method array getFields() 获取field条件
- * @method void setFields(array $Fields) 设置field条件
+ * @method string getName() 获取<p>导出标识name</p>
+ * @method void setName(string $Name) 设置<p>导出标识name</p>
+ * @method string getStartTime() 获取<p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+ * @method string getQuery() 获取<p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+ * @method void setQuery(string $Query) 设置<p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+ * @method string getEndTime() 获取<p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+ * @method integer getID() 获取<p>项目ID（必填）</p>
+ * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
+ * @method array getFields() 获取<p>field条件</p>
+ * @method void setFields(array $Fields) 设置<p>field条件</p>
  */
 class DescribeRumLogExportRequest extends AbstractModel
 {
     /**
-     * @var string 导出标识name
+     * @var string <p>导出标识name</p>
      */
     public $Name;
 
     /**
-     * @var string 开始时间（必填）
+     * @var string <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * @var string <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public $Query;
 
     /**
-     * @var string 结束时间（必填）
+     * @var string <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID（必填）
+     * @var integer <p>项目ID（必填）</p>
      */
     public $ID;
 
     /**
-     * @var array field条件
+     * @var array <p>field条件</p>
      */
     public $Fields;
 
     /**
-     * @param string $Name 导出标识name
-     * @param string $StartTime 开始时间（必填）
-     * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param string $EndTime 结束时间（必填）
-     * @param integer $ID 项目ID（必填）
-     * @param array $Fields field条件
+     * @param string $Name <p>导出标识name</p>
+     * @param string $StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+     * @param string $Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+     * @param string $EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+     * @param integer $ID <p>项目ID（必填）</p>
+     * @param array $Fields <p>field条件</p>
      */
     function __construct()
     {

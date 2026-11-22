@@ -70,10 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutomationService(boolean $AutomationService) 设置<p>原生节点池安装节点自动化助手开关</p>
  * @method string getPassword() 获取<p>原生节点池密码</p>
  * @method void setPassword(string $Password) 设置<p>原生节点池密码</p>
+ * @method RegistryConfig getRegistry() 获取<p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+ * @method void setRegistry(RegistryConfig $Registry) 设置<p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
  * @method string getCustomImage() 获取<p>自定义镜像 ID</p>
  * @method void setCustomImage(string $CustomImage) 设置<p>自定义镜像 ID</p>
- * @method string getRuntimeVersion() 获取原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
- * @method void setRuntimeVersion(string $RuntimeVersion) 设置原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+ * @method string getRuntimeVersion() 获取<p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置<p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
@@ -203,12 +205,17 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $Password;
 
     /**
+     * @var RegistryConfig <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+     */
+    public $Registry;
+
+    /**
      * @var string <p>自定义镜像 ID</p>
      */
     public $CustomImage;
 
     /**
-     * @var string 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     * @var string <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
      */
     public $RuntimeVersion;
 
@@ -238,8 +245,9 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param string $MachineType <p>节点池类型</p>
      * @param boolean $AutomationService <p>原生节点池安装节点自动化助手开关</p>
      * @param string $Password <p>原生节点池密码</p>
+     * @param RegistryConfig $Registry <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
      * @param string $CustomImage <p>自定义镜像 ID</p>
-     * @param string $RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     * @param string $RuntimeVersion <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
      */
     function __construct()
     {
@@ -369,6 +377,11 @@ class CreateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("Registry",$param) and $param["Registry"] !== null) {
+            $this->Registry = new RegistryConfig();
+            $this->Registry->deserialize($param["Registry"]);
         }
 
         if (array_key_exists("CustomImage",$param) and $param["CustomImage"] !== null) {

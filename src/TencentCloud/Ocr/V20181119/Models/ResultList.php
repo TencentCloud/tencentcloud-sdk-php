@@ -54,10 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubject(string $Subject) 设置<p>学科（如语文、数学、英语）</p>
  * @method array getKnowledgePoints() 获取<p>返回题目的知识点内容</p>
  * @method void setKnowledgePoints(array $KnowledgePoints) 设置<p>返回题目的知识点内容</p>
- * @method string getAnswerAnalysis() 获取<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
- * @method void setAnswerAnalysis(string $AnswerAnalysis) 设置<p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+ * @method string getAnswerAnalysis() 获取<p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
+ * @method void setAnswerAnalysis(string $AnswerAnalysis) 设置<p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
  * @method string getGrade() 获取<p>年级：小学/初中/高中</p>
  * @method void setGrade(string $Grade) 设置<p>年级：小学/初中/高中</p>
+ * @method integer getConfidence() 获取<p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+ * @method void setConfidence(integer $Confidence) 设置<p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
  */
 class ResultList extends AbstractModel
 {
@@ -123,7 +125,7 @@ class ResultList extends AbstractModel
     public $KnowledgePoints;
 
     /**
-     * @var string <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * @var string <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
      */
     public $AnswerAnalysis;
 
@@ -131,6 +133,11 @@ class ResultList extends AbstractModel
      * @var string <p>年级：小学/初中/高中</p>
      */
     public $Grade;
+
+    /**
+     * @var integer <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+     */
+    public $Confidence;
 
     /**
      * @param array $Question <p>题干</p>
@@ -150,8 +157,9 @@ class ResultList extends AbstractModel
      * @param string $RightAnswer <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
      * @param string $Subject <p>学科（如语文、数学、英语）</p>
      * @param array $KnowledgePoints <p>返回题目的知识点内容</p>
-     * @param string $AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * @param string $AnswerAnalysis <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
      * @param string $Grade <p>年级：小学/初中/高中</p>
+     * @param integer $Confidence <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
      */
     function __construct()
     {
@@ -251,6 +259,10 @@ class ResultList extends AbstractModel
 
         if (array_key_exists("Grade",$param) and $param["Grade"] !== null) {
             $this->Grade = $param["Grade"];
+        }
+
+        if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
+            $this->Confidence = $param["Confidence"];
         }
     }
 }

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageBase64(string $ImageBase64) 设置<p>废弃字段</p>
  * @method string getReturnImageUrl() 获取<p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
  * @method void setReturnImageUrl(string $ReturnImageUrl) 设置<p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
- * @method string getClassName() 获取<p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
- * @method void setClassName(string $ClassName) 设置<p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+ * @method string getClassName() 获取<p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 且快速模式下生效。其他模型类型不支持该能力。</p>
+ * @method void setClassName(string $ClassName) 设置<p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 且快速模式下生效。其他模型类型不支持该能力。</p>
  * @method integer getPageIndex() 获取<p>文档所在页</p>
  * @method void setPageIndex(integer $PageIndex) 设置<p>文档所在页</p>
  */
@@ -87,7 +87,7 @@ class QuestionInfo extends AbstractModel
     public $ReturnImageUrl;
 
     /**
-     * @var string <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+     * @var string <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 且快速模式下生效。其他模型类型不支持该能力。</p>
      */
     public $ClassName;
 
@@ -106,7 +106,7 @@ class QuestionInfo extends AbstractModel
      * @param integer $OrgWidth <p>输入图片宽度</p><p>单位：px</p>
      * @param string $ImageBase64 <p>废弃字段</p>
      * @param string $ReturnImageUrl <p>预处理后的图片URL,如果开启了图像切边矫正，后续的坐标都是基于当前图片返回的坐标</p>
-     * @param string $ClassName <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+     * @param string $ClassName <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 且快速模式下生效。其他模型类型不支持该能力。</p>
      * @param integer $PageIndex <p>文档所在页</p>
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultActions(array $DefaultActions) 设置<p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
  * @method integer getListenerPort() 获取<p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
  * @method void setListenerPort(integer $ListenerPort) 设置<p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
- * @method string getListenerProtocol() 获取<p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
- * @method void setListenerProtocol(string $ListenerProtocol) 设置<p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+ * @method string getListenerProtocol() 获取<p>监听协议。  取值：HTTP、HTTPS。</p>
+ * @method void setListenerProtocol(string $ListenerProtocol) 设置<p>监听协议。  取值：HTTP、HTTPS。</p>
  * @method string getLoadBalancerId() 获取<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置<p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
  * @method array getCaCertificateIds() 获取<p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
@@ -66,7 +66,7 @@ class CreateListenerRequest extends AbstractModel
     public $ListenerPort;
 
     /**
-     * @var string <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * @var string <p>监听协议。  取值：HTTP、HTTPS。</p>
      */
     public $ListenerProtocol;
 
@@ -138,7 +138,7 @@ class CreateListenerRequest extends AbstractModel
     /**
      * @param array $DefaultActions <p>默认转发规则动作列表。目前监听器仅支持添加 1 个默认转发规则动作。</p>
      * @param integer $ListenerPort <p>负载均衡实例前端使用的端口。  取值：1~65535。</p>
-     * @param string $ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * @param string $ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS。</p>
      * @param string $LoadBalancerId <p>负载均衡实例 ID，格式为 alb- 后接 8 位字母数字。</p>
      * @param array $CaCertificateIds <p>监听器配置的CA证书ID列表。目前监听器仅支持添加 1 个 CA 证书。<br>当 CaEnabled 参数取值为 true 时，此参数必填。</p>
      * @param boolean $CaEnabled <p>是否开启双向认证。<br>取值：<br>true：开启。<br>false（默认值）：不开启。</p>

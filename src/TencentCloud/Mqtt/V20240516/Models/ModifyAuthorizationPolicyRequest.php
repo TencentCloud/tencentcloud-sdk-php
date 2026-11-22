@@ -20,174 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuthorizationPolicy请求参数结构体
  *
- * @method integer getId() 获取授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
- * @method void setId(integer $Id) 设置授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
- * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-
- * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-
- * @method string getPolicyName() 获取策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
- * @method void setPolicyName(string $PolicyName) 设置策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
- * @method integer getPolicyVersion() 获取策略版本,默认为1，当前仅支持1
- * @method void setPolicyVersion(integer $PolicyVersion) 设置策略版本,默认为1，当前仅支持1
- * @method integer getPriority() 获取策略优先级，越小越优先，不能重复
- * @method void setPriority(integer $Priority) 设置策略优先级，越小越优先，不能重复
- * @method string getEffect() 获取决策：
-allow 允许
-deny 拒绝
- * @method void setEffect(string $Effect) 设置决策：
-allow 允许
-deny 拒绝
- * @method string getActions() 获取操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
- * @method void setActions(string $Actions) 设置操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
- * @method string getResources() 获取资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
- * @method void setResources(string $Resources) 设置资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
- * @method string getUsername() 获取条件-用户名
- * @method void setUsername(string $Username) 设置条件-用户名
- * @method integer getRetain() 获取条件-保留消息
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
- * @method void setRetain(integer $Retain) 设置条件-保留消息
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
- * @method string getClientId() 获取条件：客户端ID，支持正则
- * @method void setClientId(string $ClientId) 设置条件：客户端ID，支持正则
- * @method string getIp() 获取条件：客户端IP地址，支持IP或者CIDR
- * @method void setIp(string $Ip) 设置条件：客户端IP地址，支持IP或者CIDR
- * @method string getQos() 获取条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
- * @method void setQos(string $Qos) 设置条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
- * @method string getRemark() 获取备注信息，最长 128 字符
- * @method void setRemark(string $Remark) 设置备注信息，最长 128 字符
+ * @method integer getId() 获取<p>授权策略ID，从 <a href="https://cloud.tencent.com/document/product/1778/111074">查询授权策略</a> 接口获取</p>
+ * @method void setId(integer $Id) 设置<p>授权策略ID，从 <a href="https://cloud.tencent.com/document/product/1778/111074">查询授权策略</a> 接口获取</p>
+ * @method string getInstanceId() 获取<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+ * @method string getPolicyName() 获取<p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
+ * @method integer getPolicyVersion() 获取<p>策略版本,默认为1，当前仅支持1</p>
+ * @method void setPolicyVersion(integer $PolicyVersion) 设置<p>策略版本,默认为1，当前仅支持1</p>
+ * @method integer getPriority() 获取<p>策略优先级，越小越优先，不能重复</p>
+ * @method void setPriority(integer $Priority) 设置<p>策略优先级，越小越优先，不能重复</p>
+ * @method string getEffect() 获取<p>决策：<br>allow 允许<br>deny 拒绝</p>
+ * @method void setEffect(string $Effect) 设置<p>决策：<br>allow 允许<br>deny 拒绝</p>
+ * @method string getActions() 获取<p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
+ * @method void setActions(string $Actions) 设置<p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
+ * @method string getResources() 获取<p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setResources(string $Resources) 设置<p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getUsername() 获取<p>条件-用户名</p>
+ * @method void setUsername(string $Username) 设置<p>条件-用户名</p>
+ * @method integer getRetain() 获取<p>条件-保留消息<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
+ * @method void setRetain(integer $Retain) 设置<p>条件-保留消息<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
+ * @method string getClientId() 获取<p>条件：客户端ID，支持正则</p>
+ * @method void setClientId(string $ClientId) 设置<p>条件：客户端ID，支持正则</p>
+ * @method string getIp() 获取<p>条件：客户端IP地址，支持IP或者CIDR</p>
+ * @method void setIp(string $Ip) 设置<p>条件：客户端IP地址，支持IP或者CIDR</p>
+ * @method string getQos() 获取<p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次</p>
+ * @method void setQos(string $Qos) 设置<p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次</p>
+ * @method string getRemark() 获取<p>备注信息，最长 128 字符</p>
+ * @method void setRemark(string $Remark) 设置<p>备注信息，最长 128 字符</p>
+ * @method array getResourceItems() 获取<p>授权资源列表，支持函数表达式</p>
+ * @method void setResourceItems(array $ResourceItems) 设置<p>授权资源列表，支持函数表达式</p>
  */
 class ModifyAuthorizationPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+     * @var integer <p>授权策略ID，从 <a href="https://cloud.tencent.com/document/product/1778/111074">查询授权策略</a> 接口获取</p>
      */
     public $Id;
 
     /**
-     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-
+     * @var string <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+     * @var string <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
      */
     public $PolicyName;
 
     /**
-     * @var integer 策略版本,默认为1，当前仅支持1
+     * @var integer <p>策略版本,默认为1，当前仅支持1</p>
      */
     public $PolicyVersion;
 
     /**
-     * @var integer 策略优先级，越小越优先，不能重复
+     * @var integer <p>策略优先级，越小越优先，不能重复</p>
      */
     public $Priority;
 
     /**
-     * @var string 决策：
-allow 允许
-deny 拒绝
+     * @var string <p>决策：<br>allow 允许<br>deny 拒绝</p>
      */
     public $Effect;
 
     /**
-     * @var string 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
+     * @var string <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
      */
     public $Actions;
 
     /**
-     * @var string 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
+     * @var string <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Resources;
 
     /**
-     * @var string 条件-用户名
+     * @var string <p>条件-用户名</p>
      */
     public $Username;
 
     /**
-     * @var integer 条件-保留消息
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
+     * @var integer <p>条件-保留消息<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
      */
     public $Retain;
 
     /**
-     * @var string 条件：客户端ID，支持正则
+     * @var string <p>条件：客户端ID，支持正则</p>
      */
     public $ClientId;
 
     /**
-     * @var string 条件：客户端IP地址，支持IP或者CIDR
+     * @var string <p>条件：客户端IP地址，支持IP或者CIDR</p>
      */
     public $Ip;
 
     /**
-     * @var string 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
+     * @var string <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次</p>
      */
     public $Qos;
 
     /**
-     * @var string 备注信息，最长 128 字符
+     * @var string <p>备注信息，最长 128 字符</p>
      */
     public $Remark;
 
     /**
-     * @param integer $Id 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
-     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @var array <p>授权资源列表，支持函数表达式</p>
+     */
+    public $ResourceItems;
 
-     * @param string $PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
-     * @param integer $PolicyVersion 策略版本,默认为1，当前仅支持1
-     * @param integer $Priority 策略优先级，越小越优先，不能重复
-     * @param string $Effect 决策：
-allow 允许
-deny 拒绝
-     * @param string $Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
-     * @param string $Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
-     * @param string $Username 条件-用户名
-     * @param integer $Retain 条件-保留消息
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
-     * @param string $ClientId 条件：客户端ID，支持正则
-     * @param string $Ip 条件：客户端IP地址，支持IP或者CIDR
-     * @param string $Qos 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-     * @param string $Remark 备注信息，最长 128 字符
+    /**
+     * @param integer $Id <p>授权策略ID，从 <a href="https://cloud.tencent.com/document/product/1778/111074">查询授权策略</a> 接口获取</p>
+     * @param string $InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param string $PolicyName <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
+     * @param integer $PolicyVersion <p>策略版本,默认为1，当前仅支持1</p>
+     * @param integer $Priority <p>策略优先级，越小越优先，不能重复</p>
+     * @param string $Effect <p>决策：<br>allow 允许<br>deny 拒绝</p>
+     * @param string $Actions <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
+     * @param string $Resources <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Username <p>条件-用户名</p>
+     * @param integer $Retain <p>条件-保留消息<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
+     * @param string $ClientId <p>条件：客户端ID，支持正则</p>
+     * @param string $Ip <p>条件：客户端IP地址，支持IP或者CIDR</p>
+     * @param string $Qos <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次</p>
+     * @param string $Remark <p>备注信息，最长 128 字符</p>
+     * @param array $ResourceItems <p>授权资源列表，支持函数表达式</p>
      */
     function __construct()
     {
@@ -256,6 +212,10 @@ sub：订阅
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ResourceItems",$param) and $param["ResourceItems"] !== null) {
+            $this->ResourceItems = $param["ResourceItems"];
         }
     }
 }

@@ -78,6 +78,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
  * @method Models\DescribeAIGWCustomGuardrailPolicyListResponse DescribeAIGWCustomGuardrailPolicyList(Models\DescribeAIGWCustomGuardrailPolicyListRequest $req) 按网关分页查询策略；Limit 必填，范围 1～100，Offset 默认 0。支持名称/描述搜索及配置过滤；同项多值 OR，不同过滤项 AND。Result.DataList 为策略数组。
 
 本产品为 cngw，版本为 2023-04-18。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+ * @method Models\DescribeAIGWLLMModelAPIIPRestrictionResponse DescribeAIGWLLMModelAPIIPRestriction(Models\DescribeAIGWLLMModelAPIIPRestrictionRequest $req) 查询指定模型 API 的 IP 黑白名单配置。
  * @method Models\DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutes(Models\DescribeCNGWServicesWithRoutesRequest $req) 查询云原生网关服务和路由列表
  * @method Models\DescribeCloudNativeAPIGatewayAIQuotaResponse DescribeCloudNativeAPIGatewayAIQuota(Models\DescribeCloudNativeAPIGatewayAIQuotaRequest $req) 查询AI网关配额
 
@@ -126,6 +127,7 @@ use TencentCloud\Cngw\V20230418\Models as Models;
 本产品为 cngw，版本为 2023-04-18。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
 
 输入约束：新配置只接受 field_mapping，不再默认为 standard_v2。创建时鉴权和检测行为必须完整填写；修改为 PATCH，省略保留，显式空值不补默认值。存量 standard_v2 策略仍可查询、删除或直接停用；修改其判定配置或重新启用前需迁移到 field_mapping。条件必填由后端按完整配置校验，非法配置不写库、不下发。
+ * @method Models\ModifyAIGWLLMModelAPIIPRestrictionResponse ModifyAIGWLLMModelAPIIPRestriction(Models\ModifyAIGWLLMModelAPIIPRestrictionRequest $req) 创建或整体覆盖指定模型 API 的 IP 黑白名单配置。PUT 覆盖语义（每次以请求值为最终态）。
  * @method Models\ModifyCloudNativeAPIGatewayAIServiceSourceResponse ModifyCloudNativeAPIGatewayAIServiceSource(Models\ModifyCloudNativeAPIGatewayAIServiceSourceRequest $req) 修改云原生网关AI服务来源
  * @method Models\ModifyCloudNativeAPIGatewayConsumerResponse ModifyCloudNativeAPIGatewayConsumer(Models\ModifyCloudNativeAPIGatewayConsumerRequest $req) 修改AI网关消费者
  * @method Models\ModifyCloudNativeAPIGatewayConsumerGroupResponse ModifyCloudNativeAPIGatewayConsumerGroup(Models\ModifyCloudNativeAPIGatewayConsumerGroupRequest $req) 修改消费者组。

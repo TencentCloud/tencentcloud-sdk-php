@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWorkloadGroupStatus请求参数结构体
  *
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
- * @method string getOperationType() 获取是否开启资源组：open-开启、close-关闭
- * @method void setOperationType(string $OperationType) 设置是否开启资源组：open-开启、close-关闭
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
+ * @method string getOperationType() 获取<p>是否开启资源组：open-开启、close-关闭</p>
+ * @method void setOperationType(string $OperationType) 设置<p>是否开启资源组：open-开启、close-关闭</p>
+ * @method string getRestartType() 获取<p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+ * @method void setRestartType(string $RestartType) 设置<p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
  */
 class ModifyWorkloadGroupStatusRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 是否开启资源组：open-开启、close-关闭
+     * @var string <p>是否开启资源组：open-开启、close-关闭</p>
      */
     public $OperationType;
 
     /**
-     * @param string $InstanceId 集群id
-     * @param string $OperationType 是否开启资源组：open-开启、close-关闭
+     * @var string <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+     */
+    public $RestartType;
+
+    /**
+     * @param string $InstanceId <p>集群id</p>
+     * @param string $OperationType <p>是否开启资源组：open-开启、close-关闭</p>
+     * @param string $RestartType <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyWorkloadGroupStatusRequest extends AbstractModel
 
         if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
             $this->OperationType = $param["OperationType"];
+        }
+
+        if (array_key_exists("RestartType",$param) and $param["RestartType"] !== null) {
+            $this->RestartType = $param["RestartType"];
         }
     }
 }

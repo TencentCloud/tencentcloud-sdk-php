@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCacheDiskSize(string $CacheDiskSize) 设置<p>缓存盘大小</p>
  * @method integer getCacheDataDiskSize() 获取<p>缓存盘大小</p>
  * @method void setCacheDataDiskSize(integer $CacheDataDiskSize) 设置<p>缓存盘大小</p>
+ * @method string getCacheDiskType() 获取<p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+ * @method void setCacheDiskType(string $CacheDiskType) 设置<p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
  * @method integer getDiskEncrypt() 获取<p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
  * @method void setDiskEncrypt(integer $DiskEncrypt) 设置<p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
  */
@@ -168,6 +170,11 @@ class CreateInstanceNewRequest extends AbstractModel
     public $CacheDataDiskSize;
 
     /**
+     * @var string <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+     */
+    public $CacheDiskType;
+
+    /**
      * @var integer <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     public $DiskEncrypt;
@@ -193,6 +200,7 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param integer $SSCCU <p>CU数</p>
      * @param string $CacheDiskSize <p>缓存盘大小</p>
      * @param integer $CacheDataDiskSize <p>缓存盘大小</p>
+     * @param string $CacheDiskType <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
      * @param integer $DiskEncrypt <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
     function __construct()
@@ -300,6 +308,10 @@ class CreateInstanceNewRequest extends AbstractModel
 
         if (array_key_exists("CacheDataDiskSize",$param) and $param["CacheDataDiskSize"] !== null) {
             $this->CacheDataDiskSize = $param["CacheDataDiskSize"];
+        }
+
+        if (array_key_exists("CacheDiskType",$param) and $param["CacheDiskType"] !== null) {
+            $this->CacheDiskType = $param["CacheDiskType"];
         }
 
         if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {

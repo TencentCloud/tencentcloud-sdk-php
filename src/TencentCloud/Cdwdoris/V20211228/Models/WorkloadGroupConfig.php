@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMemoryOverCommit(boolean $EnableMemoryOverCommit) 设置<p>是否允许超配分配</p>
  * @method string getCpuHardLimit() 获取<p>cpu硬限制</p>
  * @method void setCpuHardLimit(string $CpuHardLimit) 设置<p>cpu硬限制</p>
+ * @method string getComputeGroup() 获取<p>资源组归属的计算组ID</p>
+ * @method void setComputeGroup(string $ComputeGroup) 设置<p>资源组归属的计算组ID</p>
  * @method integer getMinCpuPercent() 获取<p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
  * @method void setMinCpuPercent(integer $MinCpuPercent) 设置<p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
  * @method integer getMinMemoryPercent() 获取<p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
@@ -69,6 +71,11 @@ class WorkloadGroupConfig extends AbstractModel
     public $CpuHardLimit;
 
     /**
+     * @var string <p>资源组归属的计算组ID</p>
+     */
+    public $ComputeGroup;
+
+    /**
      * @var integer <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
      */
     public $MinCpuPercent;
@@ -99,6 +106,7 @@ class WorkloadGroupConfig extends AbstractModel
      * @param integer $MemoryLimit <p>内存限制，所有资源组的内存限制值之和应该小于等于100</p>
      * @param boolean $EnableMemoryOverCommit <p>是否允许超配分配</p>
      * @param string $CpuHardLimit <p>cpu硬限制</p>
+     * @param string $ComputeGroup <p>资源组归属的计算组ID</p>
      * @param integer $MinCpuPercent <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
      * @param integer $MinMemoryPercent <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
      * @param integer $MaxConcurrencyNum <p>2.1+ 新增；不传走内核默认（Integer.MAX_VALUE=2147483647），建议按业务并发量配置</p>
@@ -136,6 +144,10 @@ class WorkloadGroupConfig extends AbstractModel
 
         if (array_key_exists("CpuHardLimit",$param) and $param["CpuHardLimit"] !== null) {
             $this->CpuHardLimit = $param["CpuHardLimit"];
+        }
+
+        if (array_key_exists("ComputeGroup",$param) and $param["ComputeGroup"] !== null) {
+            $this->ComputeGroup = $param["ComputeGroup"];
         }
 
         if (array_key_exists("MinCpuPercent",$param) and $param["MinCpuPercent"] !== null) {

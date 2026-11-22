@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuthorizationPolicy返回参数结构体
  *
- * @method string getInstanceId() 获取集群Id
- * @method void setInstanceId(string $InstanceId) 设置集群Id
- * @method integer getId() 获取策略id
- * @method void setId(integer $Id) 设置策略id
+ * @method string getInstanceId() 获取<p>集群Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群Id</p>
+ * @method integer getId() 获取<p>策略id</p>
+ * @method void setId(integer $Id) 设置<p>策略id</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAuthorizationPolicyResponse extends AbstractModel
 {
     /**
-     * @var string 集群Id
+     * @var string <p>集群Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 策略id
+     * @var integer <p>策略id</p>
      */
     public $Id;
 
@@ -45,8 +45,8 @@ class CreateAuthorizationPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 集群Id
-     * @param integer $Id 策略id
+     * @param string $InstanceId <p>集群Id</p>
+     * @param integer $Id <p>策略id</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

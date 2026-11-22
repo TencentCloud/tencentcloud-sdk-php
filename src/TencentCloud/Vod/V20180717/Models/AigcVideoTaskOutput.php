@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileInfos(array $FileInfos) 设置<p>AIGC 生视频任务的输出文件信息。</p>
  * @method array getProcedureTaskIds() 获取<p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
  * @method void setProcedureTaskIds(array $ProcedureTaskIds) 设置<p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+ * @method integer getTotalInputVideoDuration() 获取<p>输入视频时长。</p>
+ * @method void setTotalInputVideoDuration(integer $TotalInputVideoDuration) 设置<p>输入视频时长。</p>
  * @method AigcVideoTaskUsage getUsage() 获取<p>AIGC 生视频任务的用量信息。</p>
  * @method void setUsage(AigcVideoTaskUsage $Usage) 设置<p>AIGC 生视频任务的用量信息。</p>
  */
@@ -40,6 +42,11 @@ class AigcVideoTaskOutput extends AbstractModel
     public $ProcedureTaskIds;
 
     /**
+     * @var integer <p>输入视频时长。</p>
+     */
+    public $TotalInputVideoDuration;
+
+    /**
      * @var AigcVideoTaskUsage <p>AIGC 生视频任务的用量信息。</p>
      */
     public $Usage;
@@ -47,6 +54,7 @@ class AigcVideoTaskOutput extends AbstractModel
     /**
      * @param array $FileInfos <p>AIGC 生视频任务的输出文件信息。</p>
      * @param array $ProcedureTaskIds <p>任务类型为 Procedure 的任务 ID。若发起<a href="https://cloud.tencent.com/document/product/266/126239">创建 AIGC 生视频任务</a>时指定了任务流模板(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。</p>
+     * @param integer $TotalInputVideoDuration <p>输入视频时长。</p>
      * @param AigcVideoTaskUsage $Usage <p>AIGC 生视频任务的用量信息。</p>
      */
     function __construct()
@@ -73,6 +81,10 @@ class AigcVideoTaskOutput extends AbstractModel
 
         if (array_key_exists("ProcedureTaskIds",$param) and $param["ProcedureTaskIds"] !== null) {
             $this->ProcedureTaskIds = $param["ProcedureTaskIds"];
+        }
+
+        if (array_key_exists("TotalInputVideoDuration",$param) and $param["TotalInputVideoDuration"] !== null) {
+            $this->TotalInputVideoDuration = $param["TotalInputVideoDuration"];
         }
 
         if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {

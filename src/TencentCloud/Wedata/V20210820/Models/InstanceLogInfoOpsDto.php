@@ -20,134 +20,147 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例日志信息详情
  *
- * @method string getLogInfo() 获取实例运行日志
+ * @method string getLogInfo() 获取<p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogInfo(string $LogInfo) 设置实例运行日志
+ * @method void setLogInfo(string $LogInfo) 设置<p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getYarnLogInfo() 获取实例运行提交的yarn日志地址
+ * @method array getYarnLogInfo() 获取<p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setYarnLogInfo(array $YarnLogInfo) 设置实例运行提交的yarn日志地址
+ * @method void setYarnLogInfo(array $YarnLogInfo) 设置<p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataLogInfo() 获取实例运行产生的datax日志
+ * @method string getDataLogInfo() 获取<p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataLogInfo(string $DataLogInfo) 设置实例运行产生的datax日志
+ * @method void setDataLogInfo(string $DataLogInfo) 设置<p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getThirdTaskRunLogInfo() 获取第三方任务运行日志
+ * @method string getThirdTaskRunLogInfo() 获取<p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThirdTaskRunLogInfo(string $ThirdTaskRunLogInfo) 设置第三方任务运行日志
+ * @method void setThirdTaskRunLogInfo(string $ThirdTaskRunLogInfo) 设置<p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getThirdTaskLogUrlDesc() 获取第三方任务日志链接描述
+ * @method string getThirdTaskLogUrlDesc() 获取<p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThirdTaskLogUrlDesc(string $ThirdTaskLogUrlDesc) 设置第三方任务日志链接描述
+ * @method void setThirdTaskLogUrlDesc(string $ThirdTaskLogUrlDesc) 设置<p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLineCount() 获取日志行数
+ * @method integer getLineCount() 获取<p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLineCount(integer $LineCount) 设置日志行数
+ * @method void setLineCount(integer $LineCount) 设置<p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtInfo() 获取统一执行平台日志分页查询参数
+ * @method string getExtInfo() 获取<p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtInfo(string $ExtInfo) 设置统一执行平台日志分页查询参数
+ * @method void setExtInfo(string $ExtInfo) 设置<p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsEnd() 获取日志分页查询，是否最后一页
+ * @method boolean getIsEnd() 获取<p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsEnd(boolean $IsEnd) 设置日志分页查询，是否最后一页
+ * @method void setIsEnd(boolean $IsEnd) 设置<p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileSize() 获取文件大小
+ * @method string getFileSize() 获取<p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSize(string $FileSize) 设置文件大小
+ * @method void setFileSize(string $FileSize) 设置<p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMatchedBrokerIp() 获取日志匹配节点信息
- * @method void setMatchedBrokerIp(string $MatchedBrokerIp) 设置日志匹配节点信息
- * @method array getExecutionExtendedProps() 获取执行平台通用协议
- * @method void setExecutionExtendedProps(array $ExecutionExtendedProps) 设置执行平台通用协议
+ * @method string getMatchedBrokerIp() 获取<p>日志匹配节点信息</p>
+ * @method void setMatchedBrokerIp(string $MatchedBrokerIp) 设置<p>日志匹配节点信息</p>
+ * @method array getExecutionExtendedProps() 获取<p>执行平台通用协议</p>
+ * @method void setExecutionExtendedProps(array $ExecutionExtendedProps) 设置<p>执行平台通用协议</p>
+ * @method LogDiagnosisRules getLogDiagnosisRules() 获取<p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogDiagnosisRules(LogDiagnosisRules $LogDiagnosisRules) 设置<p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogInfoOpsDto extends AbstractModel
 {
     /**
-     * @var string 实例运行日志
+     * @var string <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogInfo;
 
     /**
-     * @var array 实例运行提交的yarn日志地址
+     * @var array <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $YarnLogInfo;
 
     /**
-     * @var string 实例运行产生的datax日志
+     * @var string <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataLogInfo;
 
     /**
-     * @var string 第三方任务运行日志
+     * @var string <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThirdTaskRunLogInfo;
 
     /**
-     * @var string 第三方任务日志链接描述
+     * @var string <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThirdTaskLogUrlDesc;
 
     /**
-     * @var integer 日志行数
+     * @var integer <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineCount;
 
     /**
-     * @var string 统一执行平台日志分页查询参数
+     * @var string <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtInfo;
 
     /**
-     * @var boolean 日志分页查询，是否最后一页
+     * @var boolean <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEnd;
 
     /**
-     * @var string 文件大小
+     * @var string <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
-     * @var string 日志匹配节点信息
+     * @var string <p>日志匹配节点信息</p>
      */
     public $MatchedBrokerIp;
 
     /**
-     * @var array 执行平台通用协议
+     * @var array <p>执行平台通用协议</p>
      */
     public $ExecutionExtendedProps;
 
     /**
-     * @param string $LogInfo 实例运行日志
+     * @var LogDiagnosisRules <p>日志诊断规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $YarnLogInfo 实例运行提交的yarn日志地址
+     * @deprecated
+     */
+    public $LogDiagnosisRules;
+
+    /**
+     * @param string $LogInfo <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataLogInfo 实例运行产生的datax日志
+     * @param array $YarnLogInfo <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ThirdTaskRunLogInfo 第三方任务运行日志
+     * @param string $DataLogInfo <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ThirdTaskLogUrlDesc 第三方任务日志链接描述
+     * @param string $ThirdTaskRunLogInfo <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LineCount 日志行数
+     * @param string $ThirdTaskLogUrlDesc <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExtInfo 统一执行平台日志分页查询参数
+     * @param integer $LineCount <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsEnd 日志分页查询，是否最后一页
+     * @param string $ExtInfo <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileSize 文件大小
+     * @param boolean $IsEnd <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MatchedBrokerIp 日志匹配节点信息
-     * @param array $ExecutionExtendedProps 执行平台通用协议
+     * @param string $FileSize <p>文件大小</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchedBrokerIp <p>日志匹配节点信息</p>
+     * @param array $ExecutionExtendedProps <p>执行平台通用协议</p>
+     * @param LogDiagnosisRules $LogDiagnosisRules <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -209,6 +222,11 @@ class InstanceLogInfoOpsDto extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExecutionExtendedProps, $obj);
             }
+        }
+
+        if (array_key_exists("LogDiagnosisRules",$param) and $param["LogDiagnosisRules"] !== null) {
+            $this->LogDiagnosisRules = new LogDiagnosisRules();
+            $this->LogDiagnosisRules->deserialize($param["LogDiagnosisRules"]);
         }
     }
 }

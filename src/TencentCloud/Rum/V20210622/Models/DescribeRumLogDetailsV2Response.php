@@ -20,17 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumLogDetailsV2返回参数结构体
  *
- * @method string getResult() 获取<p>日志明细</p>
- * @method void setResult(string $Result) 设置<p>日志明细</p>
+ * @method string getResult() 获取<p>日志明细JSON字符串，内部Result数组结构不变。CLS路径row_id为0，ts为毫秒精度但单位仍为纳秒，字符串字段完整。</p>
+ * @method void setResult(string $Result) 设置<p>日志明细JSON字符串，内部Result数组结构不变。CLS路径row_id为0，ts为毫秒精度但单位仍为纳秒，字符串字段完整。</p>
+ * @method string getContext() 获取<p>CLS续读令牌；ListOver为true时为空。仅CLS路径返回，可缺省。</p>
+ * @method void setContext(string $Context) 设置<p>CLS续读令牌；ListOver为true时为空。仅CLS路径返回，可缺省。</p>
+ * @method boolean getListOver() 获取<p>当前条件的日志是否全部返回；预算短页不表示结束。仅CLS路径返回，可缺省。</p>
+ * @method void setListOver(boolean $ListOver) 设置<p>当前条件的日志是否全部返回；预算短页不表示结束。仅CLS路径返回，可缺省。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRumLogDetailsV2Response extends AbstractModel
 {
     /**
-     * @var string <p>日志明细</p>
+     * @var string <p>日志明细JSON字符串，内部Result数组结构不变。CLS路径row_id为0，ts为毫秒精度但单位仍为纳秒，字符串字段完整。</p>
      */
     public $Result;
+
+    /**
+     * @var string <p>CLS续读令牌；ListOver为true时为空。仅CLS路径返回，可缺省。</p>
+     */
+    public $Context;
+
+    /**
+     * @var boolean <p>当前条件的日志是否全部返回；预算短页不表示结束。仅CLS路径返回，可缺省。</p>
+     */
+    public $ListOver;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DescribeRumLogDetailsV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result <p>日志明细</p>
+     * @param string $Result <p>日志明细JSON字符串，内部Result数组结构不变。CLS路径row_id为0，ts为毫秒精度但单位仍为纳秒，字符串字段完整。</p>
+     * @param string $Context <p>CLS续读令牌；ListOver为true时为空。仅CLS路径返回，可缺省。</p>
+     * @param boolean $ListOver <p>当前条件的日志是否全部返回；预算短页不表示结束。仅CLS路径返回，可缺省。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +72,14 @@ class DescribeRumLogDetailsV2Response extends AbstractModel
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = $param["Context"];
+        }
+
+        if (array_key_exists("ListOver",$param) and $param["ListOver"] !== null) {
+            $this->ListOver = $param["ListOver"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

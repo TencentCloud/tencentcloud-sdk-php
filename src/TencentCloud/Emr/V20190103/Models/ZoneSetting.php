@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 可用区配置描述。
  *
- * @method string getZone() 获取可用区名称
- * @method void setZone(string $Zone) 设置可用区名称
- * @method VPCSettings getVPCSettings() 获取可用区VPC和子网
- * @method void setVPCSettings(VPCSettings $VPCSettings) 设置可用区VPC和子网
  * @method integer getNodeNum() 获取可用区节点数量
  * @method void setNodeNum(integer $NodeNum) 设置可用区节点数量
+ * @method VPCSettings getVPCSettings() 获取可用区VPC和子网
+ * @method void setVPCSettings(VPCSettings $VPCSettings) 设置可用区VPC和子网
+ * @method string getZone() 获取可用区名称
+ * @method void setZone(string $Zone) 设置可用区名称
  */
 class ZoneSetting extends AbstractModel
 {
     /**
-     * @var string 可用区名称
+     * @var integer 可用区节点数量
      */
-    public $Zone;
+    public $NodeNum;
 
     /**
      * @var VPCSettings 可用区VPC和子网
@@ -40,14 +40,14 @@ class ZoneSetting extends AbstractModel
     public $VPCSettings;
 
     /**
-     * @var integer 可用区节点数量
+     * @var string 可用区名称
      */
-    public $NodeNum;
+    public $Zone;
 
     /**
-     * @param string $Zone 可用区名称
-     * @param VPCSettings $VPCSettings 可用区VPC和子网
      * @param integer $NodeNum 可用区节点数量
+     * @param VPCSettings $VPCSettings 可用区VPC和子网
+     * @param string $Zone 可用区名称
      */
     function __construct()
     {
@@ -62,8 +62,8 @@ class ZoneSetting extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
         }
 
         if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
@@ -71,8 +71,8 @@ class ZoneSetting extends AbstractModel
             $this->VPCSettings->deserialize($param["VPCSettings"]);
         }
 
-        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
-            $this->NodeNum = $param["NodeNum"];
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

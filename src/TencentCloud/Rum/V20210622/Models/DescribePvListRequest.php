@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePvList请求参数结构体
  *
- * @method integer getProjectId() 获取ID
- * @method void setProjectId(integer $ProjectId) 设置ID
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getDimension() 获取对PV指标的查询维度。获取day：d，   获取min则不填。
- * @method void setDimension(string $Dimension) 设置对PV指标的查询维度。获取day：d，   获取min则不填。
+ * @method integer getProjectId() 获取<p>ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>ID</p>
+ * @method string getEndTime() 获取<p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+ * @method string getStartTime() 获取<p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+ * @method string getDimension() 获取<p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
+ * @method void setDimension(string $Dimension) 设置<p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
  */
 class DescribePvListRequest extends AbstractModel
 {
     /**
-     * @var integer ID
+     * @var integer <p>ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string 结束时间
+     * @var string <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public $EndTime;
 
     /**
-     * @var string 开始时间
+     * @var string <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 对PV指标的查询维度。获取day：d，   获取min则不填。
+     * @var string <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
      */
     public $Dimension;
 
     /**
-     * @param integer $ProjectId ID
-     * @param string $EndTime 结束时间
-     * @param string $StartTime 开始时间
-     * @param string $Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
+     * @param integer $ProjectId <p>ID</p>
+     * @param string $EndTime <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+     * @param string $StartTime <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+     * @param string $Dimension <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
      */
     function __construct()
     {

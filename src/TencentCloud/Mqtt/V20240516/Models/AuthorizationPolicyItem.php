@@ -20,178 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AuthorizationPolicyItem
  *
- * @method integer getId() 获取策略规则ID
- * @method void setId(integer $Id) 设置策略规则ID
- * @method string getInstanceId() 获取MQTT集群ID
- * @method void setInstanceId(string $InstanceId) 设置MQTT集群ID
- * @method string getPolicyName() 获取策略规则名
- * @method void setPolicyName(string $PolicyName) 设置策略规则名
- * @method integer getVersion() 获取规则语法版本，当前仅支持1，默认为1
- * @method void setVersion(integer $Version) 设置规则语法版本，当前仅支持1，默认为1
- * @method integer getPriority() 获取策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setPriority(integer $Priority) 设置策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getEffect() 获取决策
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setEffect(string $Effect) 设置决策
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getActions() 获取操作
-connect：连接
-pub：发布mqtt消息
-sub：订阅mqtt消息
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setActions(string $Actions) 设置操作
-connect：连接
-pub：发布mqtt消息
-sub：订阅mqtt消息
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getResources() 获取资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setResources(string $Resources) 设置资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getClientId() 获取条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setClientId(string $ClientId) 设置条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getUsername() 获取条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setUsername(string $Username) 设置条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getIp() 获取条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setIp(string $Ip) 设置条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method string getQos() 获取条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method void setQos(string $Qos) 设置条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- * @method integer getRetain() 获取条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1：表示匹配retain消息
-2：表示匹配非retain消息
-3：表示匹配retain和非retain消息
- * @method void setRetain(integer $Retain) 设置条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1：表示匹配retain消息
-2：表示匹配非retain消息
-3：表示匹配retain和非retain消息
- * @method string getRemark() 获取备注，长度不超过128个字符。
- * @method void setRemark(string $Remark) 设置备注，长度不超过128个字符。
- * @method integer getCreatedTime() 获取创建时间。毫秒级时间戳 。
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间。毫秒级时间戳 。
- * @method integer getUpdateTime() 获取更新时间。毫秒级时间戳 。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间。毫秒级时间戳 。
+ * @method integer getId() 获取<p>策略规则ID</p>
+ * @method void setId(integer $Id) 设置<p>策略规则ID</p>
+ * @method string getInstanceId() 获取<p>MQTT集群ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>MQTT集群ID</p>
+ * @method string getPolicyName() 获取<p>策略规则名</p>
+ * @method void setPolicyName(string $PolicyName) 设置<p>策略规则名</p>
+ * @method integer getVersion() 获取<p>规则语法版本，当前仅支持1，默认为1</p>
+ * @method void setVersion(integer $Version) 设置<p>规则语法版本，当前仅支持1，默认为1</p>
+ * @method integer getPriority() 获取<p>策略优先级，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setPriority(integer $Priority) 设置<p>策略优先级，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getEffect() 获取<p>决策<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setEffect(string $Effect) 设置<p>决策<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getActions() 获取<p>操作<br>connect：连接<br>pub：发布mqtt消息<br>sub：订阅mqtt消息<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setActions(string $Actions) 设置<p>操作<br>connect：连接<br>pub：发布mqtt消息<br>sub：订阅mqtt消息<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getResources() 获取<p>资源，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setResources(string $Resources) 设置<p>资源，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getClientId() 获取<p>条件-连接设备ID，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setClientId(string $ClientId) 设置<p>条件-连接设备ID，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method array getResourceItems() 获取<p>授权资源，支持函数表达式</p>
+ * @method void setResourceItems(array $ResourceItems) 设置<p>授权资源，支持函数表达式</p>
+ * @method string getUsername() 获取<p>条件-用户名，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setUsername(string $Username) 设置<p>条件-用户名，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getIp() 获取<p>条件-客户端IP地址，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setIp(string $Ip) 设置<p>条件-客户端IP地址，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method string getQos() 获取<p>条件-服务质量，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method void setQos(string $Qos) 设置<p>条件-服务质量，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+ * @method integer getRetain() 获取<p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1：表示匹配retain消息<br>2：表示匹配非retain消息<br>3：表示匹配retain和非retain消息</p>
+ * @method void setRetain(integer $Retain) 设置<p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1：表示匹配retain消息<br>2：表示匹配非retain消息<br>3：表示匹配retain和非retain消息</p>
+ * @method string getRemark() 获取<p>备注，长度不超过128个字符。</p>
+ * @method void setRemark(string $Remark) 设置<p>备注，长度不超过128个字符。</p>
+ * @method integer getCreatedTime() 获取<p>创建时间。毫秒级时间戳 。</p>
+ * @method void setCreatedTime(integer $CreatedTime) 设置<p>创建时间。毫秒级时间戳 。</p>
+ * @method integer getUpdateTime() 获取<p>更新时间。毫秒级时间戳 。</p>
+ * @method void setUpdateTime(integer $UpdateTime) 设置<p>更新时间。毫秒级时间戳 。</p>
  */
 class AuthorizationPolicyItem extends AbstractModel
 {
     /**
-     * @var integer 策略规则ID
+     * @var integer <p>策略规则ID</p>
      */
     public $Id;
 
     /**
-     * @var string MQTT集群ID
+     * @var string <p>MQTT集群ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 策略规则名
+     * @var string <p>策略规则名</p>
      */
     public $PolicyName;
 
     /**
-     * @var integer 规则语法版本，当前仅支持1，默认为1
+     * @var integer <p>规则语法版本，当前仅支持1，默认为1</p>
      */
     public $Version;
 
     /**
-     * @var integer 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var integer <p>策略优先级，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Priority;
 
     /**
-     * @var string 决策
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>决策<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Effect;
 
     /**
-     * @var string 操作
-connect：连接
-pub：发布mqtt消息
-sub：订阅mqtt消息
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>操作<br>connect：连接<br>pub：发布mqtt消息<br>sub：订阅mqtt消息<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Actions;
 
     /**
-     * @var string 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>资源，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Resources;
 
     /**
-     * @var string 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>条件-连接设备ID，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $ClientId;
 
     /**
-     * @var string 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var array <p>授权资源，支持函数表达式</p>
+     */
+    public $ResourceItems;
+
+    /**
+     * @var string <p>条件-用户名，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Username;
 
     /**
-     * @var string 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>条件-客户端IP地址，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Ip;
 
     /**
-     * @var string 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @var string <p>条件-服务质量，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public $Qos;
 
     /**
-     * @var integer 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1：表示匹配retain消息
-2：表示匹配非retain消息
-3：表示匹配retain和非retain消息
+     * @var integer <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1：表示匹配retain消息<br>2：表示匹配非retain消息<br>3：表示匹配retain和非retain消息</p>
      */
     public $Retain;
 
     /**
-     * @var string 备注，长度不超过128个字符。
+     * @var string <p>备注，长度不超过128个字符。</p>
      */
     public $Remark;
 
     /**
-     * @var integer 创建时间。毫秒级时间戳 。
+     * @var integer <p>创建时间。毫秒级时间戳 。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var integer 更新时间。毫秒级时间戳 。
+     * @var integer <p>更新时间。毫秒级时间戳 。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Id 策略规则ID
-     * @param string $InstanceId MQTT集群ID
-     * @param string $PolicyName 策略规则名
-     * @param integer $Version 规则语法版本，当前仅支持1，默认为1
-     * @param integer $Priority 策略优先级，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Effect 决策
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Actions 操作
-connect：连接
-pub：发布mqtt消息
-sub：订阅mqtt消息
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Resources 资源，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $ClientId 条件-连接设备ID，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Username 条件-用户名，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Ip 条件-客户端IP地址，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param string $Qos 条件-服务质量，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param integer $Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1：表示匹配retain消息
-2：表示匹配非retain消息
-3：表示匹配retain和非retain消息
-     * @param string $Remark 备注，长度不超过128个字符。
-     * @param integer $CreatedTime 创建时间。毫秒级时间戳 。
-     * @param integer $UpdateTime 更新时间。毫秒级时间戳 。
+     * @param integer $Id <p>策略规则ID</p>
+     * @param string $InstanceId <p>MQTT集群ID</p>
+     * @param string $PolicyName <p>策略规则名</p>
+     * @param integer $Version <p>规则语法版本，当前仅支持1，默认为1</p>
+     * @param integer $Priority <p>策略优先级，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Effect <p>决策<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Actions <p>操作<br>connect：连接<br>pub：发布mqtt消息<br>sub：订阅mqtt消息<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Resources <p>资源，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $ClientId <p>条件-连接设备ID，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param array $ResourceItems <p>授权资源，支持函数表达式</p>
+     * @param string $Username <p>条件-用户名，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Ip <p>条件-客户端IP地址，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param string $Qos <p>条件-服务质量，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param integer $Retain <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1：表示匹配retain消息<br>2：表示匹配非retain消息<br>3：表示匹配retain和非retain消息</p>
+     * @param string $Remark <p>备注，长度不超过128个字符。</p>
+     * @param integer $CreatedTime <p>创建时间。毫秒级时间戳 。</p>
+     * @param integer $UpdateTime <p>更新时间。毫秒级时间戳 。</p>
      */
     function __construct()
     {
@@ -240,6 +208,10 @@ sub：订阅mqtt消息
 
         if (array_key_exists("ClientId",$param) and $param["ClientId"] !== null) {
             $this->ClientId = $param["ClientId"];
+        }
+
+        if (array_key_exists("ResourceItems",$param) and $param["ResourceItems"] !== null) {
+            $this->ResourceItems = $param["ResourceItems"];
         }
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {

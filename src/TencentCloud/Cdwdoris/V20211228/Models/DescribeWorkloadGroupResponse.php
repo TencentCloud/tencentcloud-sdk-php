@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkloadGroups(array $WorkloadGroups) 设置<p>资源组信息</p>
  * @method string getStatus() 获取<p>是否开启资源组：开启-open、关闭-close</p>
  * @method void setStatus(string $Status) 设置<p>是否开启资源组：开启-open、关闭-close</p>
+ * @method boolean getNeedPodRebuild() 获取<p>是否需要重建</p>
+ * @method void setNeedPodRebuild(boolean $NeedPodRebuild) 设置<p>是否需要重建</p>
  * @method string getErrorMsg() 获取<p>错误信息</p>
  * @method void setErrorMsg(string $ErrorMsg) 设置<p>错误信息</p>
  * @method integer getMonitorStatus() 获取<p>是否开启监控，0：未开启，1：开启</p>
@@ -44,6 +46,11 @@ class DescribeWorkloadGroupResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean <p>是否需要重建</p>
+     */
+    public $NeedPodRebuild;
+
+    /**
      * @var string <p>错误信息</p>
      */
     public $ErrorMsg;
@@ -61,6 +68,7 @@ class DescribeWorkloadGroupResponse extends AbstractModel
     /**
      * @param array $WorkloadGroups <p>资源组信息</p>
      * @param string $Status <p>是否开启资源组：开启-open、关闭-close</p>
+     * @param boolean $NeedPodRebuild <p>是否需要重建</p>
      * @param string $ErrorMsg <p>错误信息</p>
      * @param integer $MonitorStatus <p>是否开启监控，0：未开启，1：开启</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -89,6 +97,10 @@ class DescribeWorkloadGroupResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("NeedPodRebuild",$param) and $param["NeedPodRebuild"] !== null) {
+            $this->NeedPodRebuild = $param["NeedPodRebuild"];
         }
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {

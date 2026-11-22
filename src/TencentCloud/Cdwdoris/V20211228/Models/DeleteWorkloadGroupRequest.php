@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWorkloadGroup请求参数结构体
  *
- * @method string getInstanceId() 获取集群id
- * @method void setInstanceId(string $InstanceId) 设置集群id
- * @method string getWorkloadGroupName() 获取需要删除的资源组名称
- * @method void setWorkloadGroupName(string $WorkloadGroupName) 设置需要删除的资源组名称
+ * @method string getInstanceId() 获取<p>集群id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>集群id</p>
+ * @method string getWorkloadGroupName() 获取<p>需要删除的资源组名称</p>
+ * @method void setWorkloadGroupName(string $WorkloadGroupName) 设置<p>需要删除的资源组名称</p>
+ * @method string getComputeGroup() 获取<p>资源组归属的计算组ID</p>
+ * @method void setComputeGroup(string $ComputeGroup) 设置<p>资源组归属的计算组ID</p>
  */
 class DeleteWorkloadGroupRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string <p>集群id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 需要删除的资源组名称
+     * @var string <p>需要删除的资源组名称</p>
      */
     public $WorkloadGroupName;
 
     /**
-     * @param string $InstanceId 集群id
-     * @param string $WorkloadGroupName 需要删除的资源组名称
+     * @var string <p>资源组归属的计算组ID</p>
+     */
+    public $ComputeGroup;
+
+    /**
+     * @param string $InstanceId <p>集群id</p>
+     * @param string $WorkloadGroupName <p>需要删除的资源组名称</p>
+     * @param string $ComputeGroup <p>资源组归属的计算组ID</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteWorkloadGroupRequest extends AbstractModel
 
         if (array_key_exists("WorkloadGroupName",$param) and $param["WorkloadGroupName"] !== null) {
             $this->WorkloadGroupName = $param["WorkloadGroupName"];
+        }
+
+        if (array_key_exists("ComputeGroup",$param) and $param["ComputeGroup"] !== null) {
+            $this->ComputeGroup = $param["ComputeGroup"];
         }
     }
 }

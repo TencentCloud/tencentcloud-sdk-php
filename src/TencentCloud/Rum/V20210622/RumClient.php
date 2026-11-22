@@ -124,9 +124,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeRumGroupLogV2Response DescribeRumGroupLogV2(Models\DescribeRumGroupLogV2Request $req) 根据label 聚合分析日志
  * @method Models\DescribeRumLogDetailsV2Response DescribeRumLogDetailsV2(Models\DescribeRumLogDetailsV2Request $req) 查询日志明细
  * @method Models\DescribeRumLogExportResponse DescribeRumLogExport(Models\DescribeRumLogExportRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
- * @method Models\DescribeRumLogExportV2Response DescribeRumLogExportV2(Models\DescribeRumLogExportV2Request $req) 创建日志导出
  * @method Models\DescribeRumLogExportsResponse DescribeRumLogExports(Models\DescribeRumLogExportsRequest $req) 获取项目下的日志导出列表
- * @method Models\DescribeRumLogExportsV2Response DescribeRumLogExportsV2(Models\DescribeRumLogExportsV2Request $req) 获取日志导出列表
  * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
  * @method Models\DescribeRumLogTotalV2Response DescribeRumLogTotalV2(Models\DescribeRumLogTotalV2Request $req) 查询原始日志总量
  * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) 获取项目下的日志列表，分钟级

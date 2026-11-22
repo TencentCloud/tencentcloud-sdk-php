@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRumStatsLogList请求参数结构体
  *
- * @method string getStartTime() 获取开始时间（必填）
- * @method void setStartTime(string $StartTime) 设置开始时间（必填）
- * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
- * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
- * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096（必填）
- * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096（必填）
- * @method string getEndTime() 获取结束时间（必填）
- * @method void setEndTime(string $EndTime) 设置结束时间（必填）
- * @method integer getID() 获取项目ID（必填）
- * @method void setID(integer $ID) 设置项目ID（必填）
+ * @method string getStartTime() 获取<p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+ * @method integer getLimit() 获取<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method void setLimit(integer $Limit) 设置<p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+ * @method string getQuery() 获取<p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+ * @method void setQuery(string $Query) 设置<p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+ * @method string getEndTime() 获取<p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+ * @method integer getID() 获取<p>项目ID（必填）</p>
+ * @method void setID(integer $ID) 设置<p>项目ID（必填）</p>
  */
 class DescribeRumStatsLogListRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间（必填）
+     * @var string <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public $StartTime;
 
     /**
-     * @var integer 单次查询返回的原始日志条数，最大值为100（必填）
+     * @var integer <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public $Limit;
 
     /**
-     * @var string 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * @var string <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public $Query;
 
     /**
-     * @var string 结束时间（必填）
+     * @var string <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID（必填）
+     * @var integer <p>项目ID（必填）</p>
      */
     public $ID;
 
     /**
-     * @param string $StartTime 开始时间（必填）
-     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param string $EndTime 结束时间（必填）
-     * @param integer $ID 项目ID（必填）
+     * @param string $StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param integer $Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param string $Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+     * @param string $EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param integer $ID <p>项目ID（必填）</p>
      */
     function __construct()
     {

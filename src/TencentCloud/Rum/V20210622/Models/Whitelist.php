@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 白名单
  *
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method string getInstanceID() 获取实例ID
- * @method void setInstanceID(string $InstanceID) 设置实例ID
- * @method string getTtl() 获取截止时间
- * @method void setTtl(string $Ttl) 设置截止时间
- * @method string getID() 获取白名单自增ID
- * @method void setID(string $ID) 设置白名单自增ID
- * @method string getWhitelistUin() 获取业务唯一标识
- * @method void setWhitelistUin(string $WhitelistUin) 设置业务唯一标识
- * @method string getCreateUser() 获取创建者ID
- * @method void setCreateUser(string $CreateUser) 设置创建者ID
- * @method string getAid() 获取aid标识
- * @method void setAid(string $Aid) 设置aid标识
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getRemark() 获取<p>备注</p>
+ * @method void setRemark(string $Remark) 设置<p>备注</p>
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getTtl() 获取<p>截止时间</p>
+ * @method void setTtl(string $Ttl) 设置<p>截止时间</p>
+ * @method string getID() 获取<p>白名单自增ID</p>
+ * @method void setID(string $ID) 设置<p>白名单自增ID</p>
+ * @method string getWhitelistUin() 获取<p>业务唯一标识</p>
+ * @method void setWhitelistUin(string $WhitelistUin) 设置<p>业务唯一标识</p>
+ * @method string getCreateUser() 获取<p>创建者ID</p>
+ * @method void setCreateUser(string $CreateUser) 设置<p>创建者ID</p>
+ * @method string getAid() 获取<p>aid标识</p>
+ * @method void setAid(string $Aid) 设置<p>aid标识</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getCreateDatetime() 获取<p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+ * @method void setCreateDatetime(string $CreateDatetime) 设置<p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
  */
 class Whitelist extends AbstractModel
 {
     /**
-     * @var string 备注
+     * @var string <p>备注</p>
      */
     public $Remark;
 
     /**
-     * @var string 实例ID
+     * @var string <p>实例ID</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 截止时间
+     * @var string <p>截止时间</p>
      */
     public $Ttl;
 
     /**
-     * @var string 白名单自增ID
+     * @var string <p>白名单自增ID</p>
      */
     public $ID;
 
     /**
-     * @var string 业务唯一标识
+     * @var string <p>业务唯一标识</p>
      */
     public $WhitelistUin;
 
     /**
-     * @var string 创建者ID
+     * @var string <p>创建者ID</p>
      */
     public $CreateUser;
 
     /**
-     * @var string aid标识
+     * @var string <p>aid标识</p>
      */
     public $Aid;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param string $Remark 备注
-     * @param string $InstanceID 实例ID
-     * @param string $Ttl 截止时间
-     * @param string $ID 白名单自增ID
-     * @param string $WhitelistUin 业务唯一标识
-     * @param string $CreateUser 创建者ID
-     * @param string $Aid aid标识
-     * @param string $CreateTime 创建时间
+     * @var string <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+     */
+    public $CreateDatetime;
+
+    /**
+     * @param string $Remark <p>备注</p>
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $Ttl <p>截止时间</p>
+     * @param string $ID <p>白名单自增ID</p>
+     * @param string $WhitelistUin <p>业务唯一标识</p>
+     * @param string $CreateUser <p>创建者ID</p>
+     * @param string $Aid <p>aid标识</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $CreateDatetime <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class Whitelist extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CreateDatetime",$param) and $param["CreateDatetime"] !== null) {
+            $this->CreateDatetime = $param["CreateDatetime"];
         }
     }
 }

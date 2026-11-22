@@ -18,7 +18,7 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * video配置。
+ * image配置。
  *
  * @method string getRoutingStrategy() 获取<p>模型内路由策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumRetries(integer $NumRetries) 设置<p>同一模型请求重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWaitSeconds() 获取<p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
- * @method void setWaitSeconds(integer $WaitSeconds) 设置<p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+ * @method integer getWaitSeconds() 获取<p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
+ * @method void setWaitSeconds(integer $WaitSeconds) 设置<p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
  */
 class ImageConfig extends AbstractModel
 {
@@ -56,7 +56,7 @@ class ImageConfig extends AbstractModel
     public $NumRetries;
 
     /**
-     * @var integer <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+     * @var integer <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public $WaitSeconds;
 
@@ -67,7 +67,7 @@ class ImageConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumRetries <p>同一模型请求重试次数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+     * @param integer $WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
      */
     function __construct()
     {

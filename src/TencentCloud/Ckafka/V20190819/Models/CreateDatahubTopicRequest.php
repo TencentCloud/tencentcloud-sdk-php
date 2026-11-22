@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTopic请求参数结构体
  *
- * @method string getName() 获取<p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
- * @method void setName(string $Name) 设置<p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+ * @method string getName() 获取<p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
+ * @method void setName(string $Name) 设置<p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
  * @method integer getPartitionNum() 获取<p>Partition个数，最大值为500，大于0</p>
  * @method void setPartitionNum(integer $PartitionNum) 设置<p>Partition个数，最大值为500，大于0</p>
  * @method integer getRetentionMs() 获取<p>消息保留时间，单位ms，当前最小值为60000ms</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * @var string <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
      */
     public $Name;
 
@@ -59,7 +59,7 @@ class CreateDatahubTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * @param string $Name <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
      * @param integer $PartitionNum <p>Partition个数，最大值为500，大于0</p>
      * @param integer $RetentionMs <p>消息保留时间，单位ms，当前最小值为60000ms</p>
      * @param string $Note <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>

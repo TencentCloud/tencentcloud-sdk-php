@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVoiceId() 获取<p>克隆出的音色ID，可以用此id进行语音合成</p>
  * @method void setVoiceId(string $VoiceId) 设置<p>克隆出的音色ID，可以用此id进行语音合成</p>
+ * @method string getPreviewUrl() 获取<p>试听音频url,请于24小时内尽快下载</p>
+ * @method void setPreviewUrl(string $PreviewUrl) 设置<p>试听音频url,请于24小时内尽快下载</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class VoiceCloneResponse extends AbstractModel
     public $VoiceId;
 
     /**
+     * @var string <p>试听音频url,请于24小时内尽快下载</p>
+     */
+    public $PreviewUrl;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $VoiceId <p>克隆出的音色ID，可以用此id进行语音合成</p>
+     * @param string $PreviewUrl <p>试听音频url,请于24小时内尽快下载</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class VoiceCloneResponse extends AbstractModel
         }
         if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
             $this->VoiceId = $param["VoiceId"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,15 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Serverless HBase 预付费设置
  *
+ * @method integer getAutoRenewFlag() 获取自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
  * @method Period getPeriod() 获取时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(Period $Period) 设置时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAutoRenewFlag() 获取自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
  */
 class PrePaySetting extends AbstractModel
 {
+    /**
+     * @var integer 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+     */
+    public $AutoRenewFlag;
+
     /**
      * @var Period 时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,14 +41,9 @@ class PrePaySetting extends AbstractModel
     public $Period;
 
     /**
-     * @var integer 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-     */
-    public $AutoRenewFlag;
-
-    /**
+     * @param integer $AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
      * @param Period $Period 时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
      */
     function __construct()
     {
@@ -58,13 +58,13 @@ class PrePaySetting extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = new Period();
             $this->Period->deserialize($param["Period"]);
-        }
-
-        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
-            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

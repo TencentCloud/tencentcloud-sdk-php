@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Cngw\V20230418\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRumLogExportsV2返回参数结构体
+ * ModifyAIGWLLMModelAPIIPRestriction返回参数结构体
  *
- * @method string getResult() 获取<p>日志导出列表</p>
- * @method void setResult(string $Result) 设置<p>日志导出列表</p>
+ * @method boolean getResult() 获取<p>结果</p>
+ * @method void setResult(boolean $Result) 设置<p>结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRumLogExportsV2Response extends AbstractModel
+class ModifyAIGWLLMModelAPIIPRestrictionResponse extends AbstractModel
 {
     /**
-     * @var string <p>日志导出列表</p>
+     * @var boolean <p>结果</p>
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeRumLogExportsV2Response extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result <p>日志导出列表</p>
+     * @param boolean $Result <p>结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

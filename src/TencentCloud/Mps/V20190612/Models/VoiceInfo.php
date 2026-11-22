@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScenes(array $Scenes) 设置<p>推荐场景</p><p>如：教育</p>
  * @method string getEngine() 获取<p>音色所属引擎</p>
  * @method void setEngine(string $Engine) 设置<p>音色所属引擎</p>
+ * @method string getCreatedAt() 获取<p>音色创建时间</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>音色创建时间</p>
+ * @method string getUpdatedAt() 获取<p>音色信息更新时间</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>音色信息更新时间</p>
  */
 class VoiceInfo extends AbstractModel
 {
@@ -101,6 +105,16 @@ class VoiceInfo extends AbstractModel
     public $Engine;
 
     /**
+     * @var string <p>音色创建时间</p>
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string <p>音色信息更新时间</p>
+     */
+    public $UpdatedAt;
+
+    /**
      * @param string $VoiceId <p>音色ID</p>
      * @param string $Name <p>音色名</p>
      * @param string $Description <p>音色描述信息</p>
@@ -112,6 +126,8 @@ class VoiceInfo extends AbstractModel
      * @param array $Labels <p>标签列表</p><p>如：温柔</p>
      * @param array $Scenes <p>推荐场景</p><p>如：教育</p>
      * @param string $Engine <p>音色所属引擎</p>
+     * @param string $CreatedAt <p>音色创建时间</p>
+     * @param string $UpdatedAt <p>音色信息更新时间</p>
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class VoiceInfo extends AbstractModel
 
         if (array_key_exists("Engine",$param) and $param["Engine"] !== null) {
             $this->Engine = $param["Engine"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
+            $this->UpdatedAt = $param["UpdatedAt"];
         }
     }
 }

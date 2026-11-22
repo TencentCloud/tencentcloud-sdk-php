@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPC 参数
  *
- * @method string getVpcId() 获取VPC ID
- * @method void setVpcId(string $VpcId) 设置VPC ID
  * @method string getSubnetId() 获取Subnet ID
  * @method void setSubnetId(string $SubnetId) 设置Subnet ID
+ * @method string getVpcId() 获取VPC ID
+ * @method void setVpcId(string $VpcId) 设置VPC ID
  */
 class VPCSettings extends AbstractModel
 {
-    /**
-     * @var string VPC ID
-     */
-    public $VpcId;
-
     /**
      * @var string Subnet ID
      */
     public $SubnetId;
 
     /**
-     * @param string $VpcId VPC ID
+     * @var string VPC ID
+     */
+    public $VpcId;
+
+    /**
      * @param string $SubnetId Subnet ID
+     * @param string $VpcId VPC ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class VPCSettings extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

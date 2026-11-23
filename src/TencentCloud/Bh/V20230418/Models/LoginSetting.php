@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInactiveUserLock(integer $InactiveUserLock) 设置<p>用户多少天不活跃，账号自动锁定</p>
  * @method integer getEnableSingleLogin() 获取<p>运维账号单点登录开关：0-关闭，1-开启</p>
  * @method void setEnableSingleLogin(integer $EnableSingleLogin) 设置<p>运维账号单点登录开关：0-关闭，1-开启</p>
+ * @method integer getEnableDeviceFingerprintVerify() 获取<p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+ * @method void setEnableDeviceFingerprintVerify(integer $EnableDeviceFingerprintVerify) 设置<p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
  */
 class LoginSetting extends AbstractModel
 {
@@ -59,11 +61,17 @@ class LoginSetting extends AbstractModel
     public $EnableSingleLogin;
 
     /**
+     * @var integer <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public $EnableDeviceFingerprintVerify;
+
+    /**
      * @param integer $TimeOut <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
      * @param integer $LockThreshold <p>连续密码错误次数，超过锁定账号，3-5</p>
      * @param integer $LockTime <p>账号锁定时长，10分钟，20分钟，30分钟</p>
      * @param integer $InactiveUserLock <p>用户多少天不活跃，账号自动锁定</p>
      * @param integer $EnableSingleLogin <p>运维账号单点登录开关：0-关闭，1-开启</p>
+     * @param integer $EnableDeviceFingerprintVerify <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class LoginSetting extends AbstractModel
 
         if (array_key_exists("EnableSingleLogin",$param) and $param["EnableSingleLogin"] !== null) {
             $this->EnableSingleLogin = $param["EnableSingleLogin"];
+        }
+
+        if (array_key_exists("EnableDeviceFingerprintVerify",$param) and $param["EnableDeviceFingerprintVerify"] !== null) {
+            $this->EnableDeviceFingerprintVerify = $param["EnableDeviceFingerprintVerify"];
         }
     }
 }

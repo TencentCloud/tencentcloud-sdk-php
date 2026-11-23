@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置<p>项目id，用户自定义，默认为0。</p>
  * @method integer getModelType() 获取<p>模型类型，1-默认模型。</p>
  * @method void setModelType(integer $ModelType) 设置<p>模型类型，1-默认模型。</p>
- * @method integer getVoiceType() 获取<p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
- * @method void setVoiceType(integer $VoiceType) 设置<p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
+ * @method integer getVoiceType() 获取<p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻1.0(EngineType=WXZL)，请填入固定值“200000000”；<br>若使用一句话版声音复刻2.0(EngineType=YTLX_V2)，请填入固定值“200000400”。</p>
+ * @method void setVoiceType(integer $VoiceType) 设置<p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻1.0(EngineType=WXZL)，请填入固定值“200000000”；<br>若使用一句话版声音复刻2.0(EngineType=YTLX_V2)，请填入固定值“200000400”。</p>
  * @method string getFastVoiceType() 获取<p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
  * @method void setFastVoiceType(string $FastVoiceType) 设置<p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
  * @method integer getPrimaryLanguage() 获取<p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
@@ -86,7 +86,7 @@ class TextToVoiceRequest extends AbstractModel
     public $ModelType;
 
     /**
-     * @var integer <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
+     * @var integer <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻1.0(EngineType=WXZL)，请填入固定值“200000000”；<br>若使用一句话版声音复刻2.0(EngineType=YTLX_V2)，请填入固定值“200000400”。</p>
      */
     public $VoiceType;
 
@@ -142,7 +142,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param float $Speed <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p>
      * @param integer $ProjectId <p>项目id，用户自定义，默认为0。</p>
      * @param integer $ModelType <p>模型类型，1-默认模型。</p>
-     * @param integer $VoiceType <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
+     * @param integer $VoiceType <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻1.0(EngineType=WXZL)，请填入固定值“200000000”；<br>若使用一句话版声音复刻2.0(EngineType=YTLX_V2)，请填入固定值“200000400”。</p>
      * @param string $FastVoiceType <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
      * @param integer $PrimaryLanguage <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
      * @param integer $SampleRate <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li>

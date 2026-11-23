@@ -36,6 +36,7 @@ use TencentCloud\Tcbr\V20220217\Models as Models;
  * @method Models\DescribeEnvBaseInfoResponse DescribeEnvBaseInfo(Models\DescribeEnvBaseInfoRequest $req) 查询环境基础信息
  * @method Models\DescribeReleaseOrderResponse DescribeReleaseOrder(Models\DescribeReleaseOrderRequest $req) 查询发布单
  * @method Models\DescribeServerManageTaskResponse DescribeServerManageTask(Models\DescribeServerManageTaskRequest $req) 查询服务管理任务信息
+ * @method Models\DescribeStableIPTaskResponse DescribeStableIPTask(Models\DescribeStableIPTaskRequest $req) 本接口 DescribeStableIPTask 用于修改固定 IP 任务状态
  * @method Models\DescribeVersionDetailResponse DescribeVersionDetail(Models\DescribeVersionDetailRequest $req) 查询版本详情
  * @method Models\InitializeCloudRunResourceResponse InitializeCloudRunResource(Models\InitializeCloudRunResourceRequest $req) 创建云托管环境，并开通资源。
  * @method Models\ModifyStableIPStatusResponse ModifyStableIPStatus(Models\ModifyStableIPStatusRequest $req) 本接口 ModifyStableIPStatus 用于修改固定 IP 状态

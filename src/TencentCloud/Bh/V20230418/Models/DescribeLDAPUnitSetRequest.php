@@ -20,98 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLDAPUnitSet请求参数结构体
  *
- * @method boolean getEnable() 获取是否开启LDAP认证，true-开启
- * @method void setEnable(boolean $Enable) 设置是否开启LDAP认证，true-开启
- * @method string getIp() 获取服务器地址
- * @method void setIp(string $Ip) 设置服务器地址
- * @method integer getPort() 获取服务端口
- * @method void setPort(integer $Port) 设置服务端口
- * @method boolean getEnableSSL() 获取是否开启SSL，false-不开启，true-开启
- * @method void setEnableSSL(boolean $EnableSSL) 设置是否开启SSL，false-不开启，true-开启
- * @method string getBaseDN() 获取Base DN
- * @method void setBaseDN(string $BaseDN) 设置Base DN
- * @method string getAdminAccount() 获取管理员账号
- * @method void setAdminAccount(string $AdminAccount) 设置管理员账号
- * @method string getAdminPassword() 获取管理员密码
- * @method void setAdminPassword(string $AdminPassword) 设置管理员密码
- * @method string getAttributeUserName() 获取用户名映射属性
- * @method void setAttributeUserName(string $AttributeUserName) 设置用户名映射属性
- * @method string getAttributeUnit() 获取部门过滤
- * @method void setAttributeUnit(string $AttributeUnit) 设置部门过滤
- * @method string getIpBackup() 获取备用服务器地址
- * @method void setIpBackup(string $IpBackup) 设置备用服务器地址
- * @method string getDomainId() 获取网络域Id
- * @method void setDomainId(string $DomainId) 设置网络域Id
+ * @method boolean getEnable() 获取<p>是否开启LDAP认证，true-开启</p>
+ * @method void setEnable(boolean $Enable) 设置<p>是否开启LDAP认证，true-开启</p>
+ * @method string getIp() 获取<p>服务器地址</p>
+ * @method void setIp(string $Ip) 设置<p>服务器地址</p>
+ * @method integer getPort() 获取<p>服务端口</p>
+ * @method void setPort(integer $Port) 设置<p>服务端口</p>
+ * @method boolean getEnableSSL() 获取<p>是否开启SSL，false-不开启，true-开启</p>
+ * @method void setEnableSSL(boolean $EnableSSL) 设置<p>是否开启SSL，false-不开启，true-开启</p>
+ * @method string getBaseDN() 获取<p>Base DN</p>
+ * @method void setBaseDN(string $BaseDN) 设置<p>Base DN</p>
+ * @method string getAdminAccount() 获取<p>管理员账号</p>
+ * @method void setAdminAccount(string $AdminAccount) 设置<p>管理员账号</p>
+ * @method string getAdminPassword() 获取<p>管理员密码</p>
+ * @method void setAdminPassword(string $AdminPassword) 设置<p>管理员密码</p>
+ * @method string getAttributeUserName() 获取<p>用户名映射属性</p>
+ * @method void setAttributeUserName(string $AttributeUserName) 设置<p>用户名映射属性</p>
+ * @method string getAttributeUnit() 获取<p>部门过滤</p>
+ * @method void setAttributeUnit(string $AttributeUnit) 设置<p>部门过滤</p>
+ * @method string getIpBackup() 获取<p>备用服务器地址</p>
+ * @method void setIpBackup(string $IpBackup) 设置<p>备用服务器地址</p>
+ * @method string getDomainId() 获取<p>网络域Id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>网络域Id</p>
+ * @method string getResourceId() 获取<p>堡垒机实例ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>堡垒机实例ID</p>
  */
 class DescribeLDAPUnitSetRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否开启LDAP认证，true-开启
+     * @var boolean <p>是否开启LDAP认证，true-开启</p>
      */
     public $Enable;
 
     /**
-     * @var string 服务器地址
+     * @var string <p>服务器地址</p>
      */
     public $Ip;
 
     /**
-     * @var integer 服务端口
+     * @var integer <p>服务端口</p>
      */
     public $Port;
 
     /**
-     * @var boolean 是否开启SSL，false-不开启，true-开启
+     * @var boolean <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public $EnableSSL;
 
     /**
-     * @var string Base DN
+     * @var string <p>Base DN</p>
      */
     public $BaseDN;
 
     /**
-     * @var string 管理员账号
+     * @var string <p>管理员账号</p>
      */
     public $AdminAccount;
 
     /**
-     * @var string 管理员密码
+     * @var string <p>管理员密码</p>
      */
     public $AdminPassword;
 
     /**
-     * @var string 用户名映射属性
+     * @var string <p>用户名映射属性</p>
      */
     public $AttributeUserName;
 
     /**
-     * @var string 部门过滤
+     * @var string <p>部门过滤</p>
      */
     public $AttributeUnit;
 
     /**
-     * @var string 备用服务器地址
+     * @var string <p>备用服务器地址</p>
      */
     public $IpBackup;
 
     /**
-     * @var string 网络域Id
+     * @var string <p>网络域Id</p>
      */
     public $DomainId;
 
     /**
-     * @param boolean $Enable 是否开启LDAP认证，true-开启
-     * @param string $Ip 服务器地址
-     * @param integer $Port 服务端口
-     * @param boolean $EnableSSL 是否开启SSL，false-不开启，true-开启
-     * @param string $BaseDN Base DN
-     * @param string $AdminAccount 管理员账号
-     * @param string $AdminPassword 管理员密码
-     * @param string $AttributeUserName 用户名映射属性
-     * @param string $AttributeUnit 部门过滤
-     * @param string $IpBackup 备用服务器地址
-     * @param string $DomainId 网络域Id
+     * @var string <p>堡垒机实例ID</p>
+     */
+    public $ResourceId;
+
+    /**
+     * @param boolean $Enable <p>是否开启LDAP认证，true-开启</p>
+     * @param string $Ip <p>服务器地址</p>
+     * @param integer $Port <p>服务端口</p>
+     * @param boolean $EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
+     * @param string $BaseDN <p>Base DN</p>
+     * @param string $AdminAccount <p>管理员账号</p>
+     * @param string $AdminPassword <p>管理员密码</p>
+     * @param string $AttributeUserName <p>用户名映射属性</p>
+     * @param string $AttributeUnit <p>部门过滤</p>
+     * @param string $IpBackup <p>备用服务器地址</p>
+     * @param string $DomainId <p>网络域Id</p>
+     * @param string $ResourceId <p>堡垒机实例ID</p>
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeLDAPUnitSetRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

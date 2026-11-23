@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableKibanaPublicAccess(string $EnableKibanaPublicAccess) 设置<p>是否开启kibana公网访问，不传默认开启</p>
  * @method array getAlarmPolicyIds() 获取<p>已有的云监控告警策略 ID</p>
  * @method void setAlarmPolicyIds(array $AlarmPolicyIds) 设置<p>已有的云监控告警策略 ID</p>
+ * @method integer getEnableLvm() 获取<p>LVM 控制台开关，0/不开，1/显式开启</p>
+ * @method void setEnableLvm(integer $EnableLvm) 设置<p>LVM 控制台开关，0/不开，1/显式开启</p>
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -332,6 +334,11 @@ class CreateInstanceRequest extends AbstractModel
     public $AlarmPolicyIds;
 
     /**
+     * @var integer <p>LVM 控制台开关，0/不开，1/显式开启</p>
+     */
+    public $EnableLvm;
+
+    /**
      * @param string $Zone <p>可用区</p>
      * @param string $EsVersion <p>实例版本（支持&quot;5.6.4&quot;、&quot;6.4.3&quot;、&quot;6.8.2&quot;、&quot;7.5.1&quot;、&quot;7.10.1&quot;）</p>
      * @param string $VpcId <p>私有网络ID</p>
@@ -376,6 +383,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param array $AutoScaleDiskInfoList <p>自动扩盘参数列表</p>
      * @param string $EnableKibanaPublicAccess <p>是否开启kibana公网访问，不传默认开启</p>
      * @param array $AlarmPolicyIds <p>已有的云监控告警策略 ID</p>
+     * @param integer $EnableLvm <p>LVM 控制台开关，0/不开，1/显式开启</p>
      */
     function __construct()
     {
@@ -587,6 +595,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("AlarmPolicyIds",$param) and $param["AlarmPolicyIds"] !== null) {
             $this->AlarmPolicyIds = $param["AlarmPolicyIds"];
+        }
+
+        if (array_key_exists("EnableLvm",$param) and $param["EnableLvm"] !== null) {
+            $this->EnableLvm = $param["EnableLvm"];
         }
     }
 }

@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigFileReleaseHistories请求参数结构体
  *
- * @method string getInstanceId() 获取TSE实例id
- * @method void setInstanceId(string $InstanceId) 设置TSE实例id
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
- * @method string getGroup() 获取组
- * @method void setGroup(string $Group) 设置组
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method integer getEndId() 获取发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
- * @method void setEndId(integer $EndId) 设置发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
- * @method string getConfigFileId() 获取配置文件ID
- * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。	
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。	
- * @method integer getOffset() 获取偏移量，默认为0。	
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。	
+ * @method string getInstanceId() 获取<p>TSE实例id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>TSE实例id</p>
+ * @method string getNamespace() 获取<p>命名空间</p>
+ * @method void setNamespace(string $Namespace) 设置<p>命名空间</p>
+ * @method string getGroup() 获取<p>组</p>
+ * @method void setGroup(string $Group) 设置<p>组</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method integer getEndId() 获取<p>发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续</p>
+ * @method void setEndId(integer $EndId) 设置<p>发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续</p>
+ * @method string getConfigFileId() 获取<p>配置文件ID</p>
+ * @method void setConfigFileId(string $ConfigFileId) 设置<p>配置文件ID</p>
+ * @method integer getLimit() 获取<p>返回数量，默认为20，最大值为100。</p>
+ * @method void setLimit(integer $Limit) 设置<p>返回数量，默认为20，最大值为100。</p>
+ * @method integer getOffset() 获取<p>偏移量，默认为0。</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为0。</p>
  */
 class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel
 {
     /**
-     * @var string TSE实例id
+     * @var string <p>TSE实例id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 命名空间
+     * @var string <p>命名空间</p>
      */
     public $Namespace;
 
     /**
-     * @var string 组
+     * @var string <p>组</p>
      */
     public $Group;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var integer 发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
+     * @var integer <p>发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续</p>
      */
     public $EndId;
 
     /**
-     * @var string 配置文件ID
+     * @var string <p>配置文件ID</p>
      */
     public $ConfigFileId;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100。	
+     * @var integer <p>返回数量，默认为20，最大值为100。</p>
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。	
+     * @var integer <p>偏移量，默认为0。</p>
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId TSE实例id
-     * @param string $Namespace 命名空间
-     * @param string $Group 组
-     * @param string $Name 名称
-     * @param integer $EndId 发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
-     * @param string $ConfigFileId 配置文件ID
-     * @param integer $Limit 返回数量，默认为20，最大值为100。	
-     * @param integer $Offset 偏移量，默认为0。	
+     * @param string $InstanceId <p>TSE实例id</p>
+     * @param string $Namespace <p>命名空间</p>
+     * @param string $Group <p>组</p>
+     * @param string $Name <p>名称</p>
+     * @param integer $EndId <p>发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续</p>
+     * @param string $ConfigFileId <p>配置文件ID</p>
+     * @param integer $Limit <p>返回数量，默认为20，最大值为100。</p>
+     * @param integer $Offset <p>偏移量，默认为0。</p>
      */
     function __construct()
     {

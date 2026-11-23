@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUseGpu() 获取<p>是否使用 GPU (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
  * @method void setUseGpu(string $UseGpu) 设置<p>是否使用 GPU (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
+ * @method EnvironmentOut getEnvironment() 获取<p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironment(EnvironmentOut $Environment) 设置<p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodeResult() 获取<p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
  * @method void setCodeResult(string $CodeResult) 设置<p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
  * @method integer getErrNo() 获取<p>代码错误码</p>
@@ -62,11 +66,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstallDependency(string $InstallDependency) 设置<p>是否自动安装依赖 (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
  * @method string getStatus() 获取<p>函数状态 (&quot;Active&quot;, &quot;Inactive&quot; 等)</p>
  * @method void setStatus(string $Status) 设置<p>函数状态 (&quot;Active&quot;, &quot;Inactive&quot; 等)</p>
+ * @method string getClsLogsetId() 获取<p>CLS 日志集 ID</p>
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置<p>CLS 日志集 ID</p>
+ * @method string getClsTopicId() 获取<p>CLS Topic ID</p>
+ * @method void setClsTopicId(string $ClsTopicId) 设置<p>CLS Topic ID</p>
  * @method string getFunctionId() 获取<p>函数 ID</p>
  * @method void setFunctionId(string $FunctionId) 设置<p>函数 ID</p>
  * @method array getTags() 获取<p>标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置<p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EipOutConfig getEipConfig() 获取<p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEipConfig(EipOutConfig $EipConfig) 设置<p>EIP 配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取<p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
  * @method void setType(string $Type) 设置<p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
@@ -163,6 +175,12 @@ class GetFunctionResponse extends AbstractModel
     public $UseGpu;
 
     /**
+     * @var EnvironmentOut <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Environment;
+
+    /**
      * @var string <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
      */
     public $CodeResult;
@@ -193,6 +211,16 @@ class GetFunctionResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string <p>CLS 日志集 ID</p>
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string <p>CLS Topic ID</p>
+     */
+    public $ClsTopicId;
+
+    /**
      * @var string <p>函数 ID</p>
      */
     public $FunctionId;
@@ -202,6 +230,12 @@ class GetFunctionResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var EipOutConfig <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EipConfig;
 
     /**
      * @var string <p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
@@ -275,14 +309,20 @@ class GetFunctionResponse extends AbstractModel
      * @param FunctionVpcConfig $VpcConfig <p>VPC 配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UseGpu <p>是否使用 GPU (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
+     * @param EnvironmentOut $Environment <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodeResult <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
      * @param integer $ErrNo <p>代码错误码</p>
      * @param string $Namespace <p>命名空间</p>
      * @param string $Role <p>角色</p>
      * @param string $InstallDependency <p>是否自动安装依赖 (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
      * @param string $Status <p>函数状态 (&quot;Active&quot;, &quot;Inactive&quot; 等)</p>
+     * @param string $ClsLogsetId <p>CLS 日志集 ID</p>
+     * @param string $ClsTopicId <p>CLS Topic ID</p>
      * @param string $FunctionId <p>函数 ID</p>
      * @param array $Tags <p>标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EipOutConfig $EipConfig <p>EIP 配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type <p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
      * @param string $L5Enable <p>是否启用 L5 (&quot;TRUE&quot;/&quot;FALSE&quot;)</p>
@@ -368,6 +408,11 @@ class GetFunctionResponse extends AbstractModel
             $this->UseGpu = $param["UseGpu"];
         }
 
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = new EnvironmentOut();
+            $this->Environment->deserialize($param["Environment"]);
+        }
+
         if (array_key_exists("CodeResult",$param) and $param["CodeResult"] !== null) {
             $this->CodeResult = $param["CodeResult"];
         }
@@ -392,6 +437,14 @@ class GetFunctionResponse extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
         if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
             $this->FunctionId = $param["FunctionId"];
         }
@@ -403,6 +456,11 @@ class GetFunctionResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EipConfig",$param) and $param["EipConfig"] !== null) {
+            $this->EipConfig = new EipOutConfig();
+            $this->EipConfig->deserialize($param["EipConfig"]);
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

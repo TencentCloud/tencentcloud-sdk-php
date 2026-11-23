@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserInfo(User $UserInfo) 设置<p>编辑者账号信息</p>
  * @method Guild getGuild() 获取<p>公会信息</p>
  * @method void setGuild(Guild $Guild) 设置<p>公会信息</p>
+ * @method array getCust() 获取<p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+ * @method void setCust(array $Cust) 设置<p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
  */
 class ModifyGuildEvent extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyGuildEvent extends AbstractModel
     public $Guild;
 
     /**
+     * @var array <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public $Cust;
+
+    /**
      * @param string $GuildNameAfter <p>修改后的公会名，允许空串</p>
      * @param string $GuildSignatureAfter <p>修改后的公会签名，允许空串</p>
      * @param string $ServerId <p>所属服务器ID，允许空串</p>
      * @param User $UserInfo <p>编辑者账号信息</p>
      * @param Guild $Guild <p>公会信息</p>
+     * @param array $Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
      */
     function __construct()
     {
@@ -98,6 +106,15 @@ class ModifyGuildEvent extends AbstractModel
         if (array_key_exists("Guild",$param) and $param["Guild"] !== null) {
             $this->Guild = new Guild();
             $this->Guild->deserialize($param["Guild"]);
+        }
+
+        if (array_key_exists("Cust",$param) and $param["Cust"] !== null) {
+            $this->Cust = [];
+            foreach ($param["Cust"] as $key => $value){
+                $obj = new Cust();
+                $obj->deserialize($value);
+                array_push($this->Cust, $obj);
+            }
         }
     }
 }

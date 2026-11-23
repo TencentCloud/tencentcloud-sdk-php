@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricNameRule(string $MetricNameRule) 设置<p>客户定义的命中指标名规则。</p>
  * @method boolean getAppendResourceAttributes() 获取<p>是否追加资源属性</p>
  * @method void setAppendResourceAttributes(boolean $AppendResourceAttributes) 设置<p>是否追加资源属性</p>
+ * @method integer getAssociationId() 获取修改归属目标 ID，0 或不传表示不改变原归属
+ * @method void setAssociationId(integer $AssociationId) 设置修改归属目标 ID，0 或不传表示不改变原归属
  */
 class ModifyApmPrometheusRuleRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyApmPrometheusRuleRequest extends AbstractModel
     public $AppendResourceAttributes;
 
     /**
+     * @var integer 修改归属目标 ID，0 或不传表示不改变原归属
+     */
+    public $AssociationId;
+
+    /**
      * @param integer $Id <p>规则ID</p>
      * @param string $InstanceId <p>业务系统ID</p>
      * @param string $Name <p>所要修改的规则名</p>
@@ -88,6 +95,7 @@ class ModifyApmPrometheusRuleRequest extends AbstractModel
      * @param integer $MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配（这个如果不修改也要传旧的规则）</p>
      * @param string $MetricNameRule <p>客户定义的命中指标名规则。</p>
      * @param boolean $AppendResourceAttributes <p>是否追加资源属性</p>
+     * @param integer $AssociationId 修改归属目标 ID，0 或不传表示不改变原归属
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyApmPrometheusRuleRequest extends AbstractModel
 
         if (array_key_exists("AppendResourceAttributes",$param) and $param["AppendResourceAttributes"] !== null) {
             $this->AppendResourceAttributes = $param["AppendResourceAttributes"];
+        }
+
+        if (array_key_exists("AssociationId",$param) and $param["AssociationId"] !== null) {
+            $this->AssociationId = $param["AssociationId"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityGroup请求参数结构体
  *
- * @method string getGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
- * @method void setGroupName(string $GroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
- * @method string getGroupDescription() 获取安全组备注，最多100个字符。
- * @method void setGroupDescription(string $GroupDescription) 设置安全组备注，最多100个字符。
- * @method string getProjectId() 获取项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
- * @method void setProjectId(string $ProjectId) 设置项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
- * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
- * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method string getGroupName() 获取<p>安全组名称，可任意命名，但不得超过60个字符。</p>
+ * @method void setGroupName(string $GroupName) 设置<p>安全组名称，可任意命名，但不得超过60个字符。</p>
+ * @method string getGroupDescription() 获取<p>安全组备注，最多100个字符。</p>
+ * @method void setGroupDescription(string $GroupDescription) 设置<p>安全组备注，最多100个字符。</p>
+ * @method string getProjectId() 获取<p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
+ * @method array getTags() 获取<p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
+ * @method void setTags(array $Tags) 设置<p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
  */
 class CreateSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var string 安全组名称，可任意命名，但不得超过60个字符。
+     * @var string <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public $GroupName;
 
     /**
-     * @var string 安全组备注，最多100个字符。
+     * @var string <p>安全组备注，最多100个字符。</p>
      */
     public $GroupDescription;
 
     /**
-     * @var string 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+     * @var string <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
      */
     public $ProjectId;
 
     /**
-     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @var array <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
      */
     public $Tags;
 
     /**
-     * @param string $GroupName 安全组名称，可任意命名，但不得超过60个字符。
-     * @param string $GroupDescription 安全组备注，最多100个字符。
-     * @param string $ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
-     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param string $GroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
+     * @param string $GroupDescription <p>安全组备注，最多100个字符。</p>
+     * @param string $ProjectId <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
+     * @param array $Tags <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
      */
     function __construct()
     {

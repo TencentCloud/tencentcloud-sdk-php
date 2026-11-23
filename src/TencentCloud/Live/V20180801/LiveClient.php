@@ -412,6 +412,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StartLiveAvatarRoomResponse StartLiveAvatarRoom(Models\StartLiveAvatarRoomRequest $req) 调用该接口，用于启动数字人（包括AIGC数字人）直播间。
  * @method Models\StartLivePadStreamResponse StartLivePadStream(Models\StartLivePadStreamRequest $req) 使用该接口将直播流开始切入垫片。
  * @method Models\StartLiveStreamMonitorResponse StartLiveStreamMonitor(Models\StartLiveStreamMonitorRequest $req) 该接口用来启动直播流监播任务。
+ * @method Models\StartLiveSubtitleResponse StartLiveSubtitle(Models\StartLiveSubtitleRequest $req) 使用该接口启动直播字幕。
  * @method Models\StopAvatarEditingLiveResponse StopAvatarEditingLive(Models\StopAvatarEditingLiveRequest $req) 调用该接口，用于停止数字人直播间。
  * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
@@ -420,6 +421,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StopLivePadStreamResponse StopLivePadStream(Models\StopLivePadStreamRequest $req) 使用该接口将直播流停止切入垫片。
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。
+ * @method Models\StopLiveSubtitleResponse StopLiveSubtitle(Models\StopLiveSubtitleRequest $req) 使用该接口将停止直播字幕。
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，中止运行中的录制任务并生成录制文件。任务被成功终止后，本次任务将不再启动。
  * @method Models\StopScreenshotTaskResponse StopScreenshotTask(Models\StopScreenshotTaskRequest $req) 提前结束截图，中止运行中的截图任务。任务被成功终止后，本次任务将不再启动。
  * @method Models\SwitchAvatarEditingSceneResponse SwitchAvatarEditingScene(Models\SwitchAvatarEditingSceneRequest $req) 调用该接口，用于临时驱动数字人播报。

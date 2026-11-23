@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionArtifactList返回参数结构体
  *
+ * @method integer getTotalCount() 获取<p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+ * @method array getArtifactSet() 获取<p>返回的物料集合</p>
+ * @method void setArtifactSet(array $ArtifactSet) 设置<p>返回的物料集合</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSessionArtifactListResponse extends AbstractModel
 {
     /**
+     * @var integer <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+     */
+    public $TotalCount;
+
+    /**
+     * @var array <p>返回的物料集合</p>
+     */
+    public $ArtifactSet;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+     * @param array $ArtifactSet <p>返回的物料集合</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeSessionArtifactListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ArtifactSet",$param) and $param["ArtifactSet"] !== null) {
+            $this->ArtifactSet = [];
+            foreach ($param["ArtifactSet"] as $key => $value){
+                $obj = new SessionArtifactDetail();
+                $obj->deserialize($value);
+                array_push($this->ArtifactSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

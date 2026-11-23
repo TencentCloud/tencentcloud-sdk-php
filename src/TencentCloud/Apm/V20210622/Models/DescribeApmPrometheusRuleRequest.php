@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取业务系统ID
  * @method void setInstanceId(string $InstanceId) 设置业务系统ID
+ * @method integer getAssociationId() 获取按有效关联过滤，0 或不传表示不过滤
+ * @method void setAssociationId(integer $AssociationId) 设置按有效关联过滤，0 或不传表示不过滤
  */
 class DescribeApmPrometheusRuleRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeApmPrometheusRuleRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 按有效关联过滤，0 或不传表示不过滤
+     */
+    public $AssociationId;
+
+    /**
      * @param string $InstanceId 业务系统ID
+     * @param integer $AssociationId 按有效关联过滤，0 或不传表示不过滤
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeApmPrometheusRuleRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AssociationId",$param) and $param["AssociationId"] !== null) {
+            $this->AssociationId = $param["AssociationId"];
         }
     }
 }

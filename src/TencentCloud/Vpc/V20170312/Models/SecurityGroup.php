@@ -20,74 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组对象
  *
- * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
- * @method string getSecurityGroupName() 获取安全组名称，可任意命名，但不得超过60个字符。
- * @method void setSecurityGroupName(string $SecurityGroupName) 设置安全组名称，可任意命名，但不得超过60个字符。
- * @method string getSecurityGroupDesc() 获取安全组备注，最多100个字符。
- * @method void setSecurityGroupDesc(string $SecurityGroupDesc) 设置安全组备注，最多100个字符。
- * @method string getProjectId() 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method void setProjectId(string $ProjectId) 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
- * @method boolean getIsDefault() 获取是否是默认安全组，默认安全组不支持删除。
- * @method void setIsDefault(boolean $IsDefault) 设置是否是默认安全组，默认安全组不支持删除。
- * @method string getCreatedTime() 获取安全组创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置安全组创建时间。
- * @method array getTagSet() 获取标签键值对。
- * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method string getUpdateTime() 获取安全组更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置安全组更新时间。
+ * @method string getSecurityGroupId() 获取<p>安全组实例ID，例如：sg-ohuuioma。</p>
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置<p>安全组实例ID，例如：sg-ohuuioma。</p>
+ * @method string getSecurityGroupName() 获取<p>安全组名称，可任意命名，但不得超过60个字符。</p>
+ * @method void setSecurityGroupName(string $SecurityGroupName) 设置<p>安全组名称，可任意命名，但不得超过60个字符。</p>
+ * @method string getSecurityGroupDesc() 获取<p>安全组备注，最多100个字符。</p>
+ * @method void setSecurityGroupDesc(string $SecurityGroupDesc) 设置<p>安全组备注，最多100个字符。</p>
+ * @method string getProjectId() 获取<p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
+ * @method void setProjectId(string $ProjectId) 设置<p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
+ * @method boolean getIsDefault() 获取<p>是否是默认安全组，默认安全组不支持删除。</p>
+ * @method void setIsDefault(boolean $IsDefault) 设置<p>是否是默认安全组，默认安全组不支持删除。</p>
+ * @method string getCreatedTime() 获取<p>安全组创建时间。</p>
+ * @method void setCreatedTime(string $CreatedTime) 设置<p>安全组创建时间。</p>
+ * @method array getTagSet() 获取<p>标签键值对。</p>
+ * @method void setTagSet(array $TagSet) 设置<p>标签键值对。</p>
+ * @method string getUpdateTime() 获取<p>安全组更新时间。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>安全组更新时间。</p>
+ * @method boolean getServiceManaged() 获取<p>是否为托管安全组</p>
+ * @method void setServiceManaged(boolean $ServiceManaged) 设置<p>是否为托管安全组</p>
  */
 class SecurityGroup extends AbstractModel
 {
     /**
-     * @var string 安全组实例ID，例如：sg-ohuuioma。
+     * @var string <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public $SecurityGroupId;
 
     /**
-     * @var string 安全组名称，可任意命名，但不得超过60个字符。
+     * @var string <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public $SecurityGroupName;
 
     /**
-     * @var string 安全组备注，最多100个字符。
+     * @var string <p>安全组备注，最多100个字符。</p>
      */
     public $SecurityGroupDesc;
 
     /**
-     * @var string 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * @var string <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
      */
     public $ProjectId;
 
     /**
-     * @var boolean 是否是默认安全组，默认安全组不支持删除。
+     * @var boolean <p>是否是默认安全组，默认安全组不支持删除。</p>
      */
     public $IsDefault;
 
     /**
-     * @var string 安全组创建时间。
+     * @var string <p>安全组创建时间。</p>
      */
     public $CreatedTime;
 
     /**
-     * @var array 标签键值对。
+     * @var array <p>标签键值对。</p>
      */
     public $TagSet;
 
     /**
-     * @var string 安全组更新时间。
+     * @var string <p>安全组更新时间。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
-     * @param string $SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
-     * @param string $SecurityGroupDesc 安全组备注，最多100个字符。
-     * @param string $ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param boolean $IsDefault 是否是默认安全组，默认安全组不支持删除。
-     * @param string $CreatedTime 安全组创建时间。
-     * @param array $TagSet 标签键值对。
-     * @param string $UpdateTime 安全组更新时间。
+     * @var boolean <p>是否为托管安全组</p>
+     */
+    public $ServiceManaged;
+
+    /**
+     * @param string $SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
+     * @param string $SecurityGroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
+     * @param string $SecurityGroupDesc <p>安全组备注，最多100个字符。</p>
+     * @param string $ProjectId <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
+     * @param boolean $IsDefault <p>是否是默认安全组，默认安全组不支持删除。</p>
+     * @param string $CreatedTime <p>安全组创建时间。</p>
+     * @param array $TagSet <p>标签键值对。</p>
+     * @param string $UpdateTime <p>安全组更新时间。</p>
+     * @param boolean $ServiceManaged <p>是否为托管安全组</p>
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class SecurityGroup extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ServiceManaged",$param) and $param["ServiceManaged"] !== null) {
+            $this->ServiceManaged = $param["ServiceManaged"];
         }
     }
 }

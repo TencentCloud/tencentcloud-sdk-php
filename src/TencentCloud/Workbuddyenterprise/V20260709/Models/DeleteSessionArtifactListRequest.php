@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSessionArtifactList请求参数结构体
  *
-
+ * @method string getSessionId() 获取<p>会话ID</p>
+ * @method void setSessionId(string $SessionId) 设置<p>会话ID</p>
+ * @method array getArtifactIds() 获取<p>需要删除的物料ID集合</p>
+ * @method void setArtifactIds(array $ArtifactIds) 设置<p>需要删除的物料ID集合</p>
  */
 class DeleteSessionArtifactListRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>会话ID</p>
+     */
+    public $SessionId;
 
     /**
+     * @var array <p>需要删除的物料ID集合</p>
+     */
+    public $ArtifactIds;
 
+    /**
+     * @param string $SessionId <p>会话ID</p>
+     * @param array $ArtifactIds <p>需要删除的物料ID集合</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DeleteSessionArtifactListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
 
+        if (array_key_exists("ArtifactIds",$param) and $param["ArtifactIds"] !== null) {
+            $this->ArtifactIds = $param["ArtifactIds"];
+        }
     }
 }

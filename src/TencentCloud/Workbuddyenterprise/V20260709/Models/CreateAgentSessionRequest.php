@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentId(string $AgentId) 设置<p>Agent 业务 ID</p>
  * @method string getVersionId() 获取<p>指定版本 ID（可选）。非空且合法时固定使用该版本，跳过 routing_config 权重挑选；指定版本需归属同一 Agent 且未被废弃</p>
  * @method void setVersionId(string $VersionId) 设置<p>指定版本 ID（可选）。非空且合法时固定使用该版本，跳过 routing_config 权重挑选；指定版本需归属同一 Agent 且未被废弃</p>
+ * @method string getMetricEntry() 获取<p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+ * @method void setMetricEntry(string $MetricEntry) 设置<p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
  */
 class CreateAgentSessionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAgentSessionRequest extends AbstractModel
     public $VersionId;
 
     /**
+     * @var string <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+     */
+    public $MetricEntry;
+
+    /**
      * @param string $AgentId <p>Agent 业务 ID</p>
      * @param string $VersionId <p>指定版本 ID（可选）。非空且合法时固定使用该版本，跳过 routing_config 权重挑选；指定版本需归属同一 Agent 且未被废弃</p>
+     * @param string $MetricEntry <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAgentSessionRequest extends AbstractModel
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("MetricEntry",$param) and $param["MetricEntry"] !== null) {
+            $this->MetricEntry = $param["MetricEntry"];
         }
     }
 }

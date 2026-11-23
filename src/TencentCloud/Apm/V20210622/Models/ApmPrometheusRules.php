@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAppendResourceAttributes() 获取<p>是否追加资源属性</p>
  * @method void setAppendResourceAttributes(boolean $AppendResourceAttributes) 设置<p>是否追加资源属性</p>
+ * @method integer getAssociationId() 获取实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssociationId(integer $AssociationId) 设置实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmPrometheusRules extends AbstractModel
 {
@@ -88,6 +92,12 @@ class ApmPrometheusRules extends AbstractModel
     public $AppendResourceAttributes;
 
     /**
+     * @var integer 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssociationId;
+
+    /**
      * @param integer $Id <p>指标匹配规则ID</p>
      * @param string $Name <p>指标匹配规则名</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,6 +110,8 @@ class ApmPrometheusRules extends AbstractModel
      * @param integer $MetricMatchType <p>匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AppendResourceAttributes <p>是否追加资源属性</p>
+     * @param integer $AssociationId 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +152,10 @@ class ApmPrometheusRules extends AbstractModel
 
         if (array_key_exists("AppendResourceAttributes",$param) and $param["AppendResourceAttributes"] !== null) {
             $this->AppendResourceAttributes = $param["AppendResourceAttributes"];
+        }
+
+        if (array_key_exists("AssociationId",$param) and $param["AssociationId"] !== null) {
+            $this->AssociationId = $param["AssociationId"];
         }
     }
 }

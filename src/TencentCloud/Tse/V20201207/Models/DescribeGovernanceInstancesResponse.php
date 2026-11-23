@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGovernanceInstances返回参数结构体
  *
- * @method integer getTotalCount() 获取服务实例总数量。
- * @method void setTotalCount(integer $TotalCount) 设置服务实例总数量。
- * @method array getContent() 获取服务里实例列表。
- * @method void setContent(array $Content) 设置服务里实例列表。
- * @method Location getLocation() 获取地域
- * @method void setLocation(Location $Location) 设置地域
+ * @method integer getTotalCount() 获取<p>服务实例总数量。</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>服务实例总数量。</p>
+ * @method array getContent() 获取<p>服务里实例列表。</p>
+ * @method void setContent(array $Content) 设置<p>服务里实例列表。</p>
+ * @method Location getLocation() 获取<p>地域</p>
+ * @method void setLocation(Location $Location) 设置<p>地域</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGovernanceInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 服务实例总数量。
+     * @var integer <p>服务实例总数量。</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 服务里实例列表。
+     * @var array <p>服务里实例列表。</p>
      */
     public $Content;
 
     /**
-     * @var Location 地域
+     * @var Location <p>地域</p>
      */
     public $Location;
 
@@ -52,9 +52,9 @@ class DescribeGovernanceInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 服务实例总数量。
-     * @param array $Content 服务里实例列表。
-     * @param Location $Location 地域
+     * @param integer $TotalCount <p>服务实例总数量。</p>
+     * @param array $Content <p>服务里实例列表。</p>
+     * @param Location $Location <p>地域</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

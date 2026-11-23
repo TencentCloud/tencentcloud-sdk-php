@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0
  * @method integer getLimit() 获取返回结果集数量，默认值是10000，最大值为10000，根据该资源的个数限制条件，该资源的个数不会超过10000，所以如果不输入该字段，默认获取全量数据
  * @method void setLimit(integer $Limit) 设置返回结果集数量，默认值是10000，最大值为10000，根据该资源的个数限制条件，该资源的个数不会超过10000，所以如果不输入该字段，默认获取全量数据
+ * @method array getFilters() 获取过滤条件（Id:分类id,Name:分类名称）
+ * @method void setFilters(array $Filters) 设置过滤条件（Id:分类id,Name:分类名称）
+ * @method string getKeyword() 获取关键字
+ * @method void setKeyword(string $Keyword) 设置关键字
  */
 class DescribeDSPACategoriesRequest extends AbstractModel
 {
@@ -40,11 +44,13 @@ class DescribeDSPACategoriesRequest extends AbstractModel
 
     /**
      * @var integer 数据分类ID
+     * @deprecated
      */
     public $CategoryId;
 
     /**
      * @var string 敏感数据分类名称
+     * @deprecated
      */
     public $Name;
 
@@ -59,11 +65,23 @@ class DescribeDSPACategoriesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 过滤条件（Id:分类id,Name:分类名称）
+     */
+    public $Filters;
+
+    /**
+     * @var string 关键字
+     */
+    public $Keyword;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $CategoryId 数据分类ID
      * @param string $Name 敏感数据分类名称
      * @param integer $Offset 偏移量，默认值为0
      * @param integer $Limit 返回结果集数量，默认值是10000，最大值为10000，根据该资源的个数限制条件，该资源的个数不会超过10000，所以如果不输入该字段，默认获取全量数据
+     * @param array $Filters 过滤条件（Id:分类id,Name:分类名称）
+     * @param string $Keyword 关键字
      */
     function __construct()
     {
@@ -96,6 +114,19 @@ class DescribeDSPACategoriesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

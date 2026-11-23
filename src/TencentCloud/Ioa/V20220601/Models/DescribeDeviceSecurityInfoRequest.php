@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMid() 获取<p>设备唯一标识符</p>
  * @method void setMid(string $Mid) 设置<p>设备唯一标识符</p>
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  */
 class DescribeDeviceSecurityInfoRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDeviceSecurityInfoRequest extends AbstractModel
     public $Mid;
 
     /**
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
+    /**
      * @param string $Mid <p>设备唯一标识符</p>
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDeviceSecurityInfoRequest extends AbstractModel
         }
         if (array_key_exists("Mid",$param) and $param["Mid"] !== null) {
             $this->Mid = $param["Mid"];
+        }
+
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
         }
     }
 }

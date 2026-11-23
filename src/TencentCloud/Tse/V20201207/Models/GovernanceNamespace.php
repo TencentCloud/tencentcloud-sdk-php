@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 治理中心命名空间
  *
- * @method string getName() 获取命名空间名称。
- * @method void setName(string $Name) 设置命名空间名称。
- * @method string getComment() 获取命名空间描述信息。
- * @method void setComment(string $Comment) 设置命名空间描述信息。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getModifyTime() 获取修改时间。
- * @method void setModifyTime(string $ModifyTime) 设置修改时间。
- * @method integer getTotalServiceCount() 获取命名空间下总服务数据量
- * @method void setTotalServiceCount(integer $TotalServiceCount) 设置命名空间下总服务数据量
- * @method integer getTotalHealthInstanceCount() 获取命名空间下总健康实例数量
- * @method void setTotalHealthInstanceCount(integer $TotalHealthInstanceCount) 设置命名空间下总健康实例数量
- * @method integer getTotalInstanceCount() 获取命名空间下总实例数量
- * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置命名空间下总实例数量
- * @method string getId() 获取命名空间ID
- * @method void setId(string $Id) 设置命名空间ID
- * @method boolean getEditable() 获取是否可以编辑
- * @method void setEditable(boolean $Editable) 设置是否可以编辑
- * @method array getUserIds() 获取可以操作此命名空间的用户ID列表
- * @method void setUserIds(array $UserIds) 设置可以操作此命名空间的用户ID列表
- * @method array getGroupIds() 获取可以操作此命名空间的用户组ID列表
- * @method void setGroupIds(array $GroupIds) 设置可以操作此命名空间的用户组ID列表
- * @method array getRemoveUserIds() 获取移除可以操作此命名空间的用户ID列表
- * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以操作此命名空间的用户ID列表
- * @method array getRemoveGroupIds() 获取移除可以操作此命名空间的用户组ID列表
- * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以操作此命名空间的用户组ID列表
- * @method array getServiceExportTo() 获取该命名空间下的服务对哪些命名空间可见
- * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间可见
- * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
- * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
- * @method array getMetadatas() 获取元数据
- * @method void setMetadatas(array $Metadatas) 设置元数据
+ * @method string getName() 获取<p>命名空间名称。</p>
+ * @method void setName(string $Name) 设置<p>命名空间名称。</p>
+ * @method string getComment() 获取<p>命名空间描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>命名空间描述信息。</p>
+ * @method string getCreateTime() 获取<p>创建时间。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间。</p>
+ * @method string getModifyTime() 获取<p>修改时间。</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>修改时间。</p>
+ * @method integer getTotalServiceCount() 获取<p>命名空间下总服务数据量</p>
+ * @method void setTotalServiceCount(integer $TotalServiceCount) 设置<p>命名空间下总服务数据量</p>
+ * @method integer getTotalHealthInstanceCount() 获取<p>命名空间下总健康实例数量</p>
+ * @method void setTotalHealthInstanceCount(integer $TotalHealthInstanceCount) 设置<p>命名空间下总健康实例数量</p>
+ * @method integer getTotalInstanceCount() 获取<p>命名空间下总实例数量</p>
+ * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置<p>命名空间下总实例数量</p>
+ * @method string getId() 获取<p>命名空间ID</p>
+ * @method void setId(string $Id) 设置<p>命名空间ID</p>
+ * @method boolean getEditable() 获取<p>是否可以编辑</p>
+ * @method void setEditable(boolean $Editable) 设置<p>是否可以编辑</p>
+ * @method array getUserIds() 获取<p>可以操作此命名空间的用户ID列表</p>
+ * @method void setUserIds(array $UserIds) 设置<p>可以操作此命名空间的用户ID列表</p>
+ * @method array getGroupIds() 获取<p>可以操作此命名空间的用户组ID列表</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>可以操作此命名空间的用户组ID列表</p>
+ * @method array getRemoveUserIds() 获取<p>移除可以操作此命名空间的用户ID列表</p>
+ * @method void setRemoveUserIds(array $RemoveUserIds) 设置<p>移除可以操作此命名空间的用户ID列表</p>
+ * @method array getRemoveGroupIds() 获取<p>移除可以操作此命名空间的用户组ID列表</p>
+ * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置<p>移除可以操作此命名空间的用户组ID列表</p>
+ * @method array getServiceExportTo() 获取<p>该命名空间下的服务对哪些命名空间可见</p>
+ * @method void setServiceExportTo(array $ServiceExportTo) 设置<p>该命名空间下的服务对哪些命名空间可见</p>
+ * @method boolean getSyncToGlobalRegistry() 获取<p>是否开启同步到全局注册中心</p>
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
+ * @method array getMetadatas() 获取<p>元数据</p>
+ * @method void setMetadatas(array $Metadatas) 设置<p>元数据</p>
  */
 class GovernanceNamespace extends AbstractModel
 {
     /**
-     * @var string 命名空间名称。
+     * @var string <p>命名空间名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 命名空间描述信息。
+     * @var string <p>命名空间描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 修改时间。
+     * @var string <p>修改时间。</p>
      */
     public $ModifyTime;
 
     /**
-     * @var integer 命名空间下总服务数据量
+     * @var integer <p>命名空间下总服务数据量</p>
      */
     public $TotalServiceCount;
 
     /**
-     * @var integer 命名空间下总健康实例数量
+     * @var integer <p>命名空间下总健康实例数量</p>
      */
     public $TotalHealthInstanceCount;
 
     /**
-     * @var integer 命名空间下总实例数量
+     * @var integer <p>命名空间下总实例数量</p>
      */
     public $TotalInstanceCount;
 
     /**
-     * @var string 命名空间ID
+     * @var string <p>命名空间ID</p>
      */
     public $Id;
 
     /**
-     * @var boolean 是否可以编辑
+     * @var boolean <p>是否可以编辑</p>
      */
     public $Editable;
 
     /**
-     * @var array 可以操作此命名空间的用户ID列表
+     * @var array <p>可以操作此命名空间的用户ID列表</p>
      */
     public $UserIds;
 
     /**
-     * @var array 可以操作此命名空间的用户组ID列表
+     * @var array <p>可以操作此命名空间的用户组ID列表</p>
      */
     public $GroupIds;
 
     /**
-     * @var array 移除可以操作此命名空间的用户ID列表
+     * @var array <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public $RemoveUserIds;
 
     /**
-     * @var array 移除可以操作此命名空间的用户组ID列表
+     * @var array <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public $RemoveGroupIds;
 
     /**
-     * @var array 该命名空间下的服务对哪些命名空间可见
+     * @var array <p>该命名空间下的服务对哪些命名空间可见</p>
      */
     public $ServiceExportTo;
 
     /**
-     * @var boolean 是否开启同步到全局注册中心	
+     * @var boolean <p>是否开启同步到全局注册中心</p>
      */
     public $SyncToGlobalRegistry;
 
     /**
-     * @var array 元数据
+     * @var array <p>元数据</p>
      */
     public $Metadatas;
 
     /**
-     * @param string $Name 命名空间名称。
-     * @param string $Comment 命名空间描述信息。
-     * @param string $CreateTime 创建时间。
-     * @param string $ModifyTime 修改时间。
-     * @param integer $TotalServiceCount 命名空间下总服务数据量
-     * @param integer $TotalHealthInstanceCount 命名空间下总健康实例数量
-     * @param integer $TotalInstanceCount 命名空间下总实例数量
-     * @param string $Id 命名空间ID
-     * @param boolean $Editable 是否可以编辑
-     * @param array $UserIds 可以操作此命名空间的用户ID列表
-     * @param array $GroupIds 可以操作此命名空间的用户组ID列表
-     * @param array $RemoveUserIds 移除可以操作此命名空间的用户ID列表
-     * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
-     * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间可见
-     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心	
-     * @param array $Metadatas 元数据
+     * @param string $Name <p>命名空间名称。</p>
+     * @param string $Comment <p>命名空间描述信息。</p>
+     * @param string $CreateTime <p>创建时间。</p>
+     * @param string $ModifyTime <p>修改时间。</p>
+     * @param integer $TotalServiceCount <p>命名空间下总服务数据量</p>
+     * @param integer $TotalHealthInstanceCount <p>命名空间下总健康实例数量</p>
+     * @param integer $TotalInstanceCount <p>命名空间下总实例数量</p>
+     * @param string $Id <p>命名空间ID</p>
+     * @param boolean $Editable <p>是否可以编辑</p>
+     * @param array $UserIds <p>可以操作此命名空间的用户ID列表</p>
+     * @param array $GroupIds <p>可以操作此命名空间的用户组ID列表</p>
+     * @param array $RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
+     * @param array $RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
+     * @param array $ServiceExportTo <p>该命名空间下的服务对哪些命名空间可见</p>
+     * @param boolean $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
+     * @param array $Metadatas <p>元数据</p>
      */
     function __construct()
     {

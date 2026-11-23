@@ -20,82 +20,82 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置文件模板
  *
- * @method integer getId() 获取配置文件模板id
- * @method void setId(integer $Id) 设置配置文件模板id
- * @method string getName() 获取配置文件模板名称
- * @method void setName(string $Name) 设置配置文件模板名称
- * @method string getContent() 获取配置文件模板内容
- * @method void setContent(string $Content) 设置配置文件模板内容
- * @method string getFormat() 获取配置文件模板格式
- * @method void setFormat(string $Format) 设置配置文件模板格式
- * @method string getComment() 获取配置文件模板注释
- * @method void setComment(string $Comment) 设置配置文件模板注释
- * @method string getCreateTime() 获取配置文件模板创建时间
- * @method void setCreateTime(string $CreateTime) 设置配置文件模板创建时间
- * @method string getCreateBy() 获取配置文件模板创建者
- * @method void setCreateBy(string $CreateBy) 设置配置文件模板创建者
- * @method string getModifyTime() 获取配置文件模板修改时间
- * @method void setModifyTime(string $ModifyTime) 设置配置文件模板修改时间
- * @method string getModifyBy() 获取配置文件模板修改者
- * @method void setModifyBy(string $ModifyBy) 设置配置文件模板修改者
+ * @method integer getId() 获取<p>配置文件模板id</p>
+ * @method void setId(integer $Id) 设置<p>配置文件模板id</p>
+ * @method string getName() 获取<p>配置文件模板名称</p>
+ * @method void setName(string $Name) 设置<p>配置文件模板名称</p>
+ * @method string getContent() 获取<p>配置文件模板内容</p>
+ * @method void setContent(string $Content) 设置<p>配置文件模板内容</p>
+ * @method string getFormat() 获取<p>配置文件模板格式</p>
+ * @method void setFormat(string $Format) 设置<p>配置文件模板格式</p>
+ * @method string getComment() 获取<p>配置文件模板注释</p>
+ * @method void setComment(string $Comment) 设置<p>配置文件模板注释</p>
+ * @method string getCreateTime() 获取<p>配置文件模板创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>配置文件模板创建时间</p>
+ * @method string getCreateBy() 获取<p>配置文件模板创建者</p>
+ * @method void setCreateBy(string $CreateBy) 设置<p>配置文件模板创建者</p>
+ * @method string getModifyTime() 获取<p>配置文件模板修改时间</p>
+ * @method void setModifyTime(string $ModifyTime) 设置<p>配置文件模板修改时间</p>
+ * @method string getModifyBy() 获取<p>配置文件模板修改者</p>
+ * @method void setModifyBy(string $ModifyBy) 设置<p>配置文件模板修改者</p>
  */
 class ConfigFileTemplate extends AbstractModel
 {
     /**
-     * @var integer 配置文件模板id
+     * @var integer <p>配置文件模板id</p>
      */
     public $Id;
 
     /**
-     * @var string 配置文件模板名称
+     * @var string <p>配置文件模板名称</p>
      */
     public $Name;
 
     /**
-     * @var string 配置文件模板内容
+     * @var string <p>配置文件模板内容</p>
      */
     public $Content;
 
     /**
-     * @var string 配置文件模板格式
+     * @var string <p>配置文件模板格式</p>
      */
     public $Format;
 
     /**
-     * @var string 配置文件模板注释
+     * @var string <p>配置文件模板注释</p>
      */
     public $Comment;
 
     /**
-     * @var string 配置文件模板创建时间
+     * @var string <p>配置文件模板创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 配置文件模板创建者
+     * @var string <p>配置文件模板创建者</p>
      */
     public $CreateBy;
 
     /**
-     * @var string 配置文件模板修改时间
+     * @var string <p>配置文件模板修改时间</p>
      */
     public $ModifyTime;
 
     /**
-     * @var string 配置文件模板修改者
+     * @var string <p>配置文件模板修改者</p>
      */
     public $ModifyBy;
 
     /**
-     * @param integer $Id 配置文件模板id
-     * @param string $Name 配置文件模板名称
-     * @param string $Content 配置文件模板内容
-     * @param string $Format 配置文件模板格式
-     * @param string $Comment 配置文件模板注释
-     * @param string $CreateTime 配置文件模板创建时间
-     * @param string $CreateBy 配置文件模板创建者
-     * @param string $ModifyTime 配置文件模板修改时间
-     * @param string $ModifyBy 配置文件模板修改者
+     * @param integer $Id <p>配置文件模板id</p>
+     * @param string $Name <p>配置文件模板名称</p>
+     * @param string $Content <p>配置文件模板内容</p>
+     * @param string $Format <p>配置文件模板格式</p>
+     * @param string $Comment <p>配置文件模板注释</p>
+     * @param string $CreateTime <p>配置文件模板创建时间</p>
+     * @param string $CreateBy <p>配置文件模板创建者</p>
+     * @param string $ModifyTime <p>配置文件模板修改时间</p>
+     * @param string $ModifyBy <p>配置文件模板修改者</p>
      */
     function __construct()
     {

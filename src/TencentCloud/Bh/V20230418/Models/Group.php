@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 组信息，用于用户组、主机组
  *
- * @method integer getId() 获取组ID
- * @method void setId(integer $Id) 设置组ID
- * @method string getName() 获取组名称
- * @method void setName(string $Name) 设置组名称
- * @method Department getDepartment() 获取所属部门信息
- * @method void setDepartment(Department $Department) 设置所属部门信息
- * @method integer getCount() 获取个数
- * @method void setCount(integer $Count) 设置个数
+ * @method integer getId() 获取<p>组ID</p>
+ * @method void setId(integer $Id) 设置<p>组ID</p>
+ * @method string getName() 获取<p>组名称</p>
+ * @method void setName(string $Name) 设置<p>组名称</p>
+ * @method Department getDepartment() 获取<p>所属部门信息</p>
+ * @method void setDepartment(Department $Department) 设置<p>所属部门信息</p>
+ * @method integer getCount() 获取<p>个数</p>
+ * @method void setCount(integer $Count) 设置<p>个数</p>
  */
 class Group extends AbstractModel
 {
     /**
-     * @var integer 组ID
+     * @var integer <p>组ID</p>
      */
     public $Id;
 
     /**
-     * @var string 组名称
+     * @var string <p>组名称</p>
      */
     public $Name;
 
     /**
-     * @var Department 所属部门信息
+     * @var Department <p>所属部门信息</p>
      */
     public $Department;
 
     /**
-     * @var integer 个数
+     * @var integer <p>个数</p>
      */
     public $Count;
 
     /**
-     * @param integer $Id 组ID
-     * @param string $Name 组名称
-     * @param Department $Department 所属部门信息
-     * @param integer $Count 个数
+     * @param integer $Id <p>组ID</p>
+     * @param string $Name <p>组名称</p>
+     * @param Department $Department <p>所属部门信息</p>
+     * @param integer $Count <p>个数</p>
      */
     function __construct()
     {

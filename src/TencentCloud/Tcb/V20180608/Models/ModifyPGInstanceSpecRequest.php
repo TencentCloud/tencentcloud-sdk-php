@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchEndTime(string $SwitchEndTime) 设置<p>SwitchTag=1 时结束时间</p><p>参数格式：YYYY-MM-dd HH:mm:ss</p>
  * @method boolean getDryRun() 获取<p>预检</p>
  * @method void setDryRun(boolean $DryRun) 设置<p>预检</p>
+ * @method float getCpuCores() 获取<p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+ * @method void setCpuCores(float $CpuCores) 设置<p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
  */
 class ModifyPGInstanceSpecRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyPGInstanceSpecRequest extends AbstractModel
     public $DryRun;
 
     /**
+     * @var float <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+     */
+    public $CpuCores;
+
+    /**
      * @param string $EnvId <p>环境 id</p>
      * @param integer $Cpu <p>cpu 核数</p><p>单位：核数</p>
      * @param integer $Memory <p>内存容量</p><p>单位：GB</p>
@@ -88,6 +95,7 @@ class ModifyPGInstanceSpecRequest extends AbstractModel
      * @param string $SwitchStartTime <p>SwitchTag=1 时，启动时间</p><p>参数格式：YYYY-MM-dd HH:mm:ss</p>
      * @param string $SwitchEndTime <p>SwitchTag=1 时结束时间</p><p>参数格式：YYYY-MM-dd HH:mm:ss</p>
      * @param boolean $DryRun <p>预检</p>
+     * @param float $CpuCores <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyPGInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("CpuCores",$param) and $param["CpuCores"] !== null) {
+            $this->CpuCores = $param["CpuCores"];
         }
     }
 }

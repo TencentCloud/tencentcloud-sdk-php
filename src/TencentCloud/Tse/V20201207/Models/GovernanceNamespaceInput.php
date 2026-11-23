@@ -20,86 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 治理中心命名空间输入参数
  *
- * @method string getName() 获取命名空间名。
- * @method void setName(string $Name) 设置命名空间名。
- * @method string getComment() 获取描述信息。
- * @method void setComment(string $Comment) 设置描述信息。
- * @method array getUserIds() 获取新增的可以操作此命名空间的用户ID列表
- * @method void setUserIds(array $UserIds) 设置新增的可以操作此命名空间的用户ID列表
- * @method array getGroupIds() 获取新增的可以操作此命名空间的用户组ID列表
- * @method void setGroupIds(array $GroupIds) 设置新增的可以操作此命名空间的用户组ID列表
- * @method array getRemoveUserIds() 获取移除可以操作此命名空间的用户ID列表
- * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以操作此命名空间的用户ID列表
- * @method array getRemoveGroupIds() 获取移除可以操作此命名空间的用户组ID列表
- * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以操作此命名空间的用户组ID列表
- * @method array getServiceExportTo() 获取该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
- * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
- * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
- * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
+ * @method string getName() 获取<p>命名空间名。</p>
+ * @method void setName(string $Name) 设置<p>命名空间名。</p>
+ * @method string getComment() 获取<p>描述信息。</p>
+ * @method void setComment(string $Comment) 设置<p>描述信息。</p>
+ * @method array getUserIds() 获取<p>新增的可以操作此命名空间的用户ID列表</p>
+ * @method void setUserIds(array $UserIds) 设置<p>新增的可以操作此命名空间的用户ID列表</p>
+ * @method array getGroupIds() 获取<p>新增的可以操作此命名空间的用户组ID列表</p>
+ * @method void setGroupIds(array $GroupIds) 设置<p>新增的可以操作此命名空间的用户组ID列表</p>
+ * @method array getRemoveUserIds() 获取<p>移除可以操作此命名空间的用户ID列表</p>
+ * @method void setRemoveUserIds(array $RemoveUserIds) 设置<p>移除可以操作此命名空间的用户ID列表</p>
+ * @method array getRemoveGroupIds() 获取<p>移除可以操作此命名空间的用户组ID列表</p>
+ * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置<p>移除可以操作此命名空间的用户组ID列表</p>
+ * @method array getServiceExportTo() 获取<p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
+ * @method void setServiceExportTo(array $ServiceExportTo) 设置<p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
+ * @method boolean getSyncToGlobalRegistry() 获取<p>是否开启同步到全局注册中心</p>
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置<p>是否开启同步到全局注册中心</p>
  */
 class GovernanceNamespaceInput extends AbstractModel
 {
     /**
-     * @var string 命名空间名。
+     * @var string <p>命名空间名。</p>
      */
     public $Name;
 
     /**
-     * @var string 描述信息。
+     * @var string <p>描述信息。</p>
      */
     public $Comment;
 
     /**
-     * @var array 新增的可以操作此命名空间的用户ID列表
+     * @var array <p>新增的可以操作此命名空间的用户ID列表</p>
      */
     public $UserIds;
 
     /**
-     * @var array 新增的可以操作此命名空间的用户组ID列表
+     * @var array <p>新增的可以操作此命名空间的用户组ID列表</p>
      */
     public $GroupIds;
 
     /**
-     * @var array 移除可以操作此命名空间的用户ID列表
+     * @var array <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public $RemoveUserIds;
 
     /**
-     * @var array 移除可以操作此命名空间的用户组ID列表
+     * @var array <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public $RemoveGroupIds;
 
     /**
-     * @var array 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     * @var array <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
      */
     public $ServiceExportTo;
 
     /**
-     * @var boolean 是否开启同步到全局注册中心
+     * @var boolean <p>是否开启同步到全局注册中心</p>
      */
     public $SyncToGlobalRegistry;
 
     /**
-     * @param string $Name 命名空间名。
-     * @param string $Comment 描述信息。
-     * @param array $UserIds 新增的可以操作此命名空间的用户ID列表
-     * @param array $GroupIds 新增的可以操作此命名空间的用户组ID列表
-     * @param array $RemoveUserIds 移除可以操作此命名空间的用户ID列表
-     * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
-     * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
-     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * @param string $Name <p>命名空间名。</p>
+     * @param string $Comment <p>描述信息。</p>
+     * @param array $UserIds <p>新增的可以操作此命名空间的用户ID列表</p>
+     * @param array $GroupIds <p>新增的可以操作此命名空间的用户组ID列表</p>
+     * @param array $RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
+     * @param array $RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
+     * @param array $ServiceExportTo <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
+     * @param boolean $SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     function __construct()
     {

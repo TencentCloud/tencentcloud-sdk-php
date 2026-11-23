@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewMCPToken请求参数结构体
  *
-
+ * @method string getTokenId() 获取<p>TokenId</p>
+ * @method void setTokenId(string $TokenId) 设置<p>TokenId</p>
+ * @method integer getExpireSeconds() 获取<p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+ * @method void setExpireSeconds(integer $ExpireSeconds) 设置<p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
  */
 class RenewMCPTokenRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>TokenId</p>
+     */
+    public $TokenId;
 
     /**
+     * @var integer <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+     */
+    public $ExpireSeconds;
 
+    /**
+     * @param string $TokenId <p>TokenId</p>
+     * @param integer $ExpireSeconds <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RenewMCPTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TokenId",$param) and $param["TokenId"] !== null) {
+            $this->TokenId = $param["TokenId"];
+        }
 
+        if (array_key_exists("ExpireSeconds",$param) and $param["ExpireSeconds"] !== null) {
+            $this->ExpireSeconds = $param["ExpireSeconds"];
+        }
     }
 }

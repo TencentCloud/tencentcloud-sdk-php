@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGovernanceInstances请求参数结构体
  *
- * @method string getInstanceId() 获取tse实例id。
- * @method void setInstanceId(string $InstanceId) 设置tse实例id。
- * @method array getGovernanceInstances() 获取服务实例信息。
- * @method void setGovernanceInstances(array $GovernanceInstances) 设置服务实例信息。
+ * @method string getInstanceId() 获取<p>tse实例id。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>tse实例id。</p>
+ * @method array getGovernanceInstances() 获取<p>服务实例信息。</p>
+ * @method void setGovernanceInstances(array $GovernanceInstances) 设置<p>服务实例信息。</p>
  */
 class CreateGovernanceInstancesRequest extends AbstractModel
 {
     /**
-     * @var string tse实例id。
+     * @var string <p>tse实例id。</p>
      */
     public $InstanceId;
 
     /**
-     * @var array 服务实例信息。
+     * @var array <p>服务实例信息。</p>
      */
     public $GovernanceInstances;
 
     /**
-     * @param string $InstanceId tse实例id。
-     * @param array $GovernanceInstances 服务实例信息。
+     * @param string $InstanceId <p>tse实例id。</p>
+     * @param array $GovernanceInstances <p>服务实例信息。</p>
      */
     function __construct()
     {

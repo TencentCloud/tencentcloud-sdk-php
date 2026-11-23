@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 部门信息
  *
- * @method string getId() 获取部门ID
- * @method void setId(string $Id) 设置部门ID
- * @method string getName() 获取部门名称，1 - 256个字符
- * @method void setName(string $Name) 设置部门名称，1 - 256个字符
- * @method array getManagers() 获取部门管理员账号ID
- * @method void setManagers(array $Managers) 设置部门管理员账号ID
- * @method array getManagerUsers() 获取管理员用户
- * @method void setManagerUsers(array $ManagerUsers) 设置管理员用户
+ * @method string getId() 获取<p>部门ID</p>
+ * @method void setId(string $Id) 设置<p>部门ID</p>
+ * @method string getName() 获取<p>部门名称，1 - 256个字符</p>
+ * @method void setName(string $Name) 设置<p>部门名称，1 - 256个字符</p>
+ * @method array getManagers() 获取<p>部门管理员账号ID</p>
+ * @method void setManagers(array $Managers) 设置<p>部门管理员账号ID</p>
+ * @method array getManagerUsers() 获取<p>管理员用户</p>
+ * @method void setManagerUsers(array $ManagerUsers) 设置<p>管理员用户</p>
  */
 class Department extends AbstractModel
 {
     /**
-     * @var string 部门ID
+     * @var string <p>部门ID</p>
      */
     public $Id;
 
     /**
-     * @var string 部门名称，1 - 256个字符
+     * @var string <p>部门名称，1 - 256个字符</p>
      */
     public $Name;
 
     /**
-     * @var array 部门管理员账号ID
+     * @var array <p>部门管理员账号ID</p>
      */
     public $Managers;
 
     /**
-     * @var array 管理员用户
+     * @var array <p>管理员用户</p>
      */
     public $ManagerUsers;
 
     /**
-     * @param string $Id 部门ID
-     * @param string $Name 部门名称，1 - 256个字符
-     * @param array $Managers 部门管理员账号ID
-     * @param array $ManagerUsers 管理员用户
+     * @param string $Id <p>部门ID</p>
+     * @param string $Name <p>部门名称，1 - 256个字符</p>
+     * @param array $Managers <p>部门管理员账号ID</p>
+     * @param array $ManagerUsers <p>管理员用户</p>
      */
     function __construct()
     {

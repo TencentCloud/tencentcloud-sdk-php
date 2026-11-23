@@ -20,170 +20,178 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLDAPSetting请求参数结构体
  *
- * @method boolean getEnable() 获取是否开启LDAP认证，false-不开启，true-开启
- * @method void setEnable(boolean $Enable) 设置是否开启LDAP认证，false-不开启，true-开启
- * @method string getIp() 获取服务器地址
- * @method void setIp(string $Ip) 设置服务器地址
- * @method string getIpBackup() 获取备用服务器地址
- * @method void setIpBackup(string $IpBackup) 设置备用服务器地址
- * @method integer getPort() 获取服务端口
- * @method void setPort(integer $Port) 设置服务端口
- * @method boolean getEnableSSL() 获取是否开启SSL，false-不开启，true-开启
- * @method void setEnableSSL(boolean $EnableSSL) 设置是否开启SSL，false-不开启，true-开启
- * @method string getBaseDN() 获取Base DN
- * @method void setBaseDN(string $BaseDN) 设置Base DN
- * @method string getAdminAccount() 获取管理员账号
- * @method void setAdminAccount(string $AdminAccount) 设置管理员账号
- * @method string getAdminPassword() 获取管理员密码
- * @method void setAdminPassword(string $AdminPassword) 设置管理员密码
- * @method string getAttributeUser() 获取用户属性
- * @method void setAttributeUser(string $AttributeUser) 设置用户属性
- * @method string getAttributeUserName() 获取用户名属性
- * @method void setAttributeUserName(string $AttributeUserName) 设置用户名属性
- * @method boolean getAutoSync() 获取自动同步，false-不开启，true-开启
- * @method void setAutoSync(boolean $AutoSync) 设置自动同步，false-不开启，true-开启
- * @method boolean getOverwrite() 获取覆盖用户信息，false-不开启，true-开启
- * @method void setOverwrite(boolean $Overwrite) 设置覆盖用户信息，false-不开启，true-开启
- * @method integer getSyncPeriod() 获取同步周期，30～60000之间的整数
- * @method void setSyncPeriod(integer $SyncPeriod) 设置同步周期，30～60000之间的整数
- * @method boolean getSyncAll() 获取是否同步全部，false-不开启，true-开启
- * @method void setSyncAll(boolean $SyncAll) 设置是否同步全部，false-不开启，true-开启
- * @method array getSyncUnitSet() 获取同步OU列表，SyncAll为false时必传
- * @method void setSyncUnitSet(array $SyncUnitSet) 设置同步OU列表，SyncAll为false时必传
- * @method string getAttributeUnit() 获取组织单元属性
- * @method void setAttributeUnit(string $AttributeUnit) 设置组织单元属性
- * @method string getAttributeRealName() 获取用户姓名属性
- * @method void setAttributeRealName(string $AttributeRealName) 设置用户姓名属性
- * @method string getAttributePhone() 获取手机号属性
- * @method void setAttributePhone(string $AttributePhone) 设置手机号属性
- * @method string getAttributeEmail() 获取邮箱属性
- * @method void setAttributeEmail(string $AttributeEmail) 设置邮箱属性
- * @method string getDomainId() 获取网络域Id
- * @method void setDomainId(string $DomainId) 设置网络域Id
+ * @method boolean getEnable() 获取<p>是否开启LDAP认证，false-不开启，true-开启</p>
+ * @method void setEnable(boolean $Enable) 设置<p>是否开启LDAP认证，false-不开启，true-开启</p>
+ * @method string getIp() 获取<p>服务器地址</p>
+ * @method void setIp(string $Ip) 设置<p>服务器地址</p>
+ * @method string getIpBackup() 获取<p>备用服务器地址</p>
+ * @method void setIpBackup(string $IpBackup) 设置<p>备用服务器地址</p>
+ * @method integer getPort() 获取<p>服务端口</p>
+ * @method void setPort(integer $Port) 设置<p>服务端口</p>
+ * @method boolean getEnableSSL() 获取<p>是否开启SSL，false-不开启，true-开启</p>
+ * @method void setEnableSSL(boolean $EnableSSL) 设置<p>是否开启SSL，false-不开启，true-开启</p>
+ * @method string getBaseDN() 获取<p>Base DN</p>
+ * @method void setBaseDN(string $BaseDN) 设置<p>Base DN</p>
+ * @method string getAdminAccount() 获取<p>管理员账号</p>
+ * @method void setAdminAccount(string $AdminAccount) 设置<p>管理员账号</p>
+ * @method string getAdminPassword() 获取<p>管理员密码</p>
+ * @method void setAdminPassword(string $AdminPassword) 设置<p>管理员密码</p>
+ * @method string getAttributeUser() 获取<p>用户属性</p>
+ * @method void setAttributeUser(string $AttributeUser) 设置<p>用户属性</p>
+ * @method string getAttributeUserName() 获取<p>用户名属性</p>
+ * @method void setAttributeUserName(string $AttributeUserName) 设置<p>用户名属性</p>
+ * @method boolean getAutoSync() 获取<p>自动同步，false-不开启，true-开启</p>
+ * @method void setAutoSync(boolean $AutoSync) 设置<p>自动同步，false-不开启，true-开启</p>
+ * @method boolean getOverwrite() 获取<p>覆盖用户信息，false-不开启，true-开启</p>
+ * @method void setOverwrite(boolean $Overwrite) 设置<p>覆盖用户信息，false-不开启，true-开启</p>
+ * @method integer getSyncPeriod() 获取<p>同步周期，30～60000之间的整数</p>
+ * @method void setSyncPeriod(integer $SyncPeriod) 设置<p>同步周期，30～60000之间的整数</p>
+ * @method boolean getSyncAll() 获取<p>是否同步全部，false-不开启，true-开启</p>
+ * @method void setSyncAll(boolean $SyncAll) 设置<p>是否同步全部，false-不开启，true-开启</p>
+ * @method array getSyncUnitSet() 获取<p>同步OU列表，SyncAll为false时必传</p>
+ * @method void setSyncUnitSet(array $SyncUnitSet) 设置<p>同步OU列表，SyncAll为false时必传</p>
+ * @method string getAttributeUnit() 获取<p>组织单元属性</p>
+ * @method void setAttributeUnit(string $AttributeUnit) 设置<p>组织单元属性</p>
+ * @method string getAttributeRealName() 获取<p>用户姓名属性</p>
+ * @method void setAttributeRealName(string $AttributeRealName) 设置<p>用户姓名属性</p>
+ * @method string getAttributePhone() 获取<p>手机号属性</p>
+ * @method void setAttributePhone(string $AttributePhone) 设置<p>手机号属性</p>
+ * @method string getAttributeEmail() 获取<p>邮箱属性</p>
+ * @method void setAttributeEmail(string $AttributeEmail) 设置<p>邮箱属性</p>
+ * @method string getDomainId() 获取<p>网络域Id</p>
+ * @method void setDomainId(string $DomainId) 设置<p>网络域Id</p>
+ * @method string getResourceId() 获取<p>堡垒机实例ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>堡垒机实例ID</p>
  */
 class ModifyLDAPSettingRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否开启LDAP认证，false-不开启，true-开启
+     * @var boolean <p>是否开启LDAP认证，false-不开启，true-开启</p>
      */
     public $Enable;
 
     /**
-     * @var string 服务器地址
+     * @var string <p>服务器地址</p>
      */
     public $Ip;
 
     /**
-     * @var string 备用服务器地址
+     * @var string <p>备用服务器地址</p>
      */
     public $IpBackup;
 
     /**
-     * @var integer 服务端口
+     * @var integer <p>服务端口</p>
      */
     public $Port;
 
     /**
-     * @var boolean 是否开启SSL，false-不开启，true-开启
+     * @var boolean <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public $EnableSSL;
 
     /**
-     * @var string Base DN
+     * @var string <p>Base DN</p>
      */
     public $BaseDN;
 
     /**
-     * @var string 管理员账号
+     * @var string <p>管理员账号</p>
      */
     public $AdminAccount;
 
     /**
-     * @var string 管理员密码
+     * @var string <p>管理员密码</p>
      */
     public $AdminPassword;
 
     /**
-     * @var string 用户属性
+     * @var string <p>用户属性</p>
      */
     public $AttributeUser;
 
     /**
-     * @var string 用户名属性
+     * @var string <p>用户名属性</p>
      */
     public $AttributeUserName;
 
     /**
-     * @var boolean 自动同步，false-不开启，true-开启
+     * @var boolean <p>自动同步，false-不开启，true-开启</p>
      */
     public $AutoSync;
 
     /**
-     * @var boolean 覆盖用户信息，false-不开启，true-开启
+     * @var boolean <p>覆盖用户信息，false-不开启，true-开启</p>
      */
     public $Overwrite;
 
     /**
-     * @var integer 同步周期，30～60000之间的整数
+     * @var integer <p>同步周期，30～60000之间的整数</p>
      */
     public $SyncPeriod;
 
     /**
-     * @var boolean 是否同步全部，false-不开启，true-开启
+     * @var boolean <p>是否同步全部，false-不开启，true-开启</p>
      */
     public $SyncAll;
 
     /**
-     * @var array 同步OU列表，SyncAll为false时必传
+     * @var array <p>同步OU列表，SyncAll为false时必传</p>
      */
     public $SyncUnitSet;
 
     /**
-     * @var string 组织单元属性
+     * @var string <p>组织单元属性</p>
      */
     public $AttributeUnit;
 
     /**
-     * @var string 用户姓名属性
+     * @var string <p>用户姓名属性</p>
      */
     public $AttributeRealName;
 
     /**
-     * @var string 手机号属性
+     * @var string <p>手机号属性</p>
      */
     public $AttributePhone;
 
     /**
-     * @var string 邮箱属性
+     * @var string <p>邮箱属性</p>
      */
     public $AttributeEmail;
 
     /**
-     * @var string 网络域Id
+     * @var string <p>网络域Id</p>
      */
     public $DomainId;
 
     /**
-     * @param boolean $Enable 是否开启LDAP认证，false-不开启，true-开启
-     * @param string $Ip 服务器地址
-     * @param string $IpBackup 备用服务器地址
-     * @param integer $Port 服务端口
-     * @param boolean $EnableSSL 是否开启SSL，false-不开启，true-开启
-     * @param string $BaseDN Base DN
-     * @param string $AdminAccount 管理员账号
-     * @param string $AdminPassword 管理员密码
-     * @param string $AttributeUser 用户属性
-     * @param string $AttributeUserName 用户名属性
-     * @param boolean $AutoSync 自动同步，false-不开启，true-开启
-     * @param boolean $Overwrite 覆盖用户信息，false-不开启，true-开启
-     * @param integer $SyncPeriod 同步周期，30～60000之间的整数
-     * @param boolean $SyncAll 是否同步全部，false-不开启，true-开启
-     * @param array $SyncUnitSet 同步OU列表，SyncAll为false时必传
-     * @param string $AttributeUnit 组织单元属性
-     * @param string $AttributeRealName 用户姓名属性
-     * @param string $AttributePhone 手机号属性
-     * @param string $AttributeEmail 邮箱属性
-     * @param string $DomainId 网络域Id
+     * @var string <p>堡垒机实例ID</p>
+     */
+    public $ResourceId;
+
+    /**
+     * @param boolean $Enable <p>是否开启LDAP认证，false-不开启，true-开启</p>
+     * @param string $Ip <p>服务器地址</p>
+     * @param string $IpBackup <p>备用服务器地址</p>
+     * @param integer $Port <p>服务端口</p>
+     * @param boolean $EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
+     * @param string $BaseDN <p>Base DN</p>
+     * @param string $AdminAccount <p>管理员账号</p>
+     * @param string $AdminPassword <p>管理员密码</p>
+     * @param string $AttributeUser <p>用户属性</p>
+     * @param string $AttributeUserName <p>用户名属性</p>
+     * @param boolean $AutoSync <p>自动同步，false-不开启，true-开启</p>
+     * @param boolean $Overwrite <p>覆盖用户信息，false-不开启，true-开启</p>
+     * @param integer $SyncPeriod <p>同步周期，30～60000之间的整数</p>
+     * @param boolean $SyncAll <p>是否同步全部，false-不开启，true-开启</p>
+     * @param array $SyncUnitSet <p>同步OU列表，SyncAll为false时必传</p>
+     * @param string $AttributeUnit <p>组织单元属性</p>
+     * @param string $AttributeRealName <p>用户姓名属性</p>
+     * @param string $AttributePhone <p>手机号属性</p>
+     * @param string $AttributeEmail <p>邮箱属性</p>
+     * @param string $DomainId <p>网络域Id</p>
+     * @param string $ResourceId <p>堡垒机实例ID</p>
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class ModifyLDAPSettingRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

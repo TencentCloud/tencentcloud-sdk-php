@@ -54,6 +54,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateCLSIndexResponse CreateCLSIndex(Models\CreateCLSIndexRequest $req) 针对指定实时日志投递任务（task-id），在对应的腾讯云 CLS 日志主题中创建投递日志字段对应的键值索引。如果您在腾讯云 CLS 已经创建索引，本接口将采用合并的方式追加索引。
  * @method Models\CreateConfigGroupVersionResponse CreateConfigGroupVersion(Models\CreateConfigGroupVersionRequest $req) 在版本管理模式下，用于创建指定配置组的新版本。
  * @method Models\CreateContentIdentifierResponse CreateContentIdentifier(Models\CreateContentIdentifierRequest $req) 创建内容标识符，可以设置描述、标签等信息，同时需要绑定企业版套餐用于统计计费数据；一个内容标识符只能绑定一个计费套餐，一个计费套餐可以绑定多个内容标识符。该功能仅限白名单开放。
+ * @method Models\CreateCustomGroupResponse CreateCustomGroup(Models\CreateCustomGroupRequest $req) 创建自定义组。自定义组用于集中管理一组可复用的匹配条目，例如可以将多个 JA3/JA4 TLS 指纹保存为一个 TLS 指纹组，并在安全规则中直接引用该组，从而避免在多条规则中重复维护相同的指纹列表。
  * @method Models\CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(Models\CreateCustomizeErrorPageRequest $req) 创建自定义响应页面。
  * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
  * @method Models\CreateEdgeKVNamespaceResponse CreateEdgeKVNamespace(Models\CreateEdgeKVNamespaceRequest $req) 本接口用于在指定站点下创建 KV 命名空间。
@@ -126,6 +127,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(Models\DeleteApplicationProxyRuleRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [删除四层代理转发规则](https://cloud.tencent.com/document/product/1552/103414) 。
  * @method Models\DeleteContentIdentifierResponse DeleteContentIdentifier(Models\DeleteContentIdentifierRequest $req) 删除指定的内容标识符。该功能仅白名单开放。
  * @method Models\DeleteCustomErrorPageResponse DeleteCustomErrorPage(Models\DeleteCustomErrorPageRequest $req) 删除自定义响应页面。
+ * @method Models\DeleteCustomGroupResponse DeleteCustomGroup(Models\DeleteCustomGroupRequest $req) 删除指定自定义组。若该组已被规则引用，则不允许删除，请先解除引用关系。
  * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) 您可以用本接口批量删除 DNS 记录。
  * @method Models\DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespace(Models\DeleteEdgeKVNamespaceRequest $req) 本接口用于删除指定的 KV 命名空间。删除后命名空间内的所有键值对数据将被清空且不可恢复。若命名空间正被边缘函数引用，需先解除绑定关系后方可删除。
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除边缘函数，删除后函数无法恢复，关联的触发规则，环境变量和副本会一并删除。
@@ -181,6 +183,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeContentIdentifiersResponse DescribeContentIdentifiers(Models\DescribeContentIdentifiersRequest $req) 批量查询内容标识符，可以根据 ID、描述、状态或者标签过滤。按照状态查询被删除的内容标识符仅保留三个月。该功能仅白名单开放。
  * @method Models\DescribeContentQuotaResponse DescribeContentQuota(Models\DescribeContentQuotaRequest $req) 查询内容管理接口配额
  * @method Models\DescribeCustomErrorPagesResponse DescribeCustomErrorPages(Models\DescribeCustomErrorPagesRequest $req) 查询自定义错误页列表。
+ * @method Models\DescribeCustomGroupResponse DescribeCustomGroup(Models\DescribeCustomGroupRequest $req) 查询单个自定义组的详细信息，包含组内全量条目（通过 Limit/Offset 分页返回）。DescribeCustomGroups 列表接口每组最多返回前 500 个条目，如需获取全量条目，请使用本接口。GroupId 可通过 CreateCustomGroup 创建时返回或 DescribeCustomGroups 查询获取。
+ * @method Models\DescribeCustomGroupReferencesResponse DescribeCustomGroupReferences(Models\DescribeCustomGroupReferencesRequest $req) 获取使用自定义组的安全策略配置。
+ * @method Models\DescribeCustomGroupsResponse DescribeCustomGroups(Models\DescribeCustomGroupsRequest $req) 查询指定站点下的自定义组列表。本接口只返回每个自定义组前 500 个条目，如需查询组内完整条目请使用 DescribeSecurityCustomGroup 接口查询。
  * @method Models\DescribeDDoSAttackDataResponse DescribeDDoSAttackData(Models\DescribeDDoSAttackDataRequest $req) 本接口（DescribeDDoSAttackData）用于查询DDoS攻击时序数据。
  * @method Models\DescribeDDoSAttackEventResponse DescribeDDoSAttackEvent(Models\DescribeDDoSAttackEventRequest $req) 本接口（DescribeDDoSAttackEvent）用于查询DDoS攻击事件列表。
  * @method Models\DescribeDDoSAttackTopDataResponse DescribeDDoSAttackTopData(Models\DescribeDDoSAttackTopDataRequest $req) 本接口（DescribeDDoSAttackTopData）用于查询DDoS攻击Top数据。
@@ -318,6 +323,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(Models\ModifyApplicationProxyStatusRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例状态](https://cloud.tencent.com/document/product/1552/103408) 。
  * @method Models\ModifyContentIdentifierResponse ModifyContentIdentifier(Models\ModifyContentIdentifierRequest $req) 修改内容标识符，仅支持修改描述。该功能仅白名单开放。
  * @method Models\ModifyCustomErrorPageResponse ModifyCustomErrorPage(Models\ModifyCustomErrorPageRequest $req) 修改自定义响应页面。
+ * @method Models\ModifyCustomGroupResponse ModifyCustomGroup(Models\ModifyCustomGroupRequest $req) 修改自定义组内容。GroupType 创建后不可修改，修改组内条目时，可通过 GroupItemOperation 指定替换、追加或移除操作。
  * @method Models\ModifyDDoSProtectionResponse ModifyDDoSProtection(Models\ModifyDDoSProtectionRequest $req) 修改站点的独立 DDoS 防护。
  * @method Models\ModifyDnsRecordsResponse ModifyDnsRecords(Models\ModifyDnsRecordsRequest $req) 您可以通过本接口批量修改 DNS 记录。
  * @method Models\ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(Models\ModifyDnsRecordsStatusRequest $req) 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。

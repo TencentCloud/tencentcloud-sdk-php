@@ -354,6 +354,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOldEsPrivateTcpUrl(string $OldEsPrivateTcpUrl) 设置<p>集群待迁移的TCP地址</p>
  * @method boolean getNeedOfflineOldNodesNotify() 获取<p>是否需要从VIP下线旧节点</p>
  * @method void setNeedOfflineOldNodesNotify(boolean $NeedOfflineOldNodesNotify) 设置<p>是否需要从VIP下线旧节点</p>
+ * @method integer getLvmStatus() 获取<p>0 未开启 / 1 已开启 / 2 切换中</p>
+ * @method void setLvmStatus(integer $LvmStatus) 设置<p>0 未开启 / 1 已开启 / 2 切换中</p>
+ * @method integer getLvmSwitchFlowId() 获取<p>仅 LvmStatus=2 时返回，值为流程id</p>
+ * @method void setLvmSwitchFlowId(integer $LvmSwitchFlowId) 设置<p>仅 LvmStatus=2 时返回，值为流程id</p>
  */
 class InstanceInfo extends AbstractModel
 {
@@ -957,6 +961,16 @@ class InstanceInfo extends AbstractModel
     public $NeedOfflineOldNodesNotify;
 
     /**
+     * @var integer <p>0 未开启 / 1 已开启 / 2 切换中</p>
+     */
+    public $LvmStatus;
+
+    /**
+     * @var integer <p>仅 LvmStatus=2 时返回，值为流程id</p>
+     */
+    public $LvmSwitchFlowId;
+
+    /**
      * @param string $InstanceId <p>实例ID</p>
      * @param string $InstanceName <p>实例名称</p>
      * @param string $Region <p>地域</p>
@@ -1124,6 +1138,8 @@ class InstanceInfo extends AbstractModel
      * @param string $OldEsVip <p>集群待迁移的VIP</p>
      * @param string $OldEsPrivateTcpUrl <p>集群待迁移的TCP地址</p>
      * @param boolean $NeedOfflineOldNodesNotify <p>是否需要从VIP下线旧节点</p>
+     * @param integer $LvmStatus <p>0 未开启 / 1 已开启 / 2 切换中</p>
+     * @param integer $LvmSwitchFlowId <p>仅 LvmStatus=2 时返回，值为流程id</p>
      */
     function __construct()
     {
@@ -1607,6 +1623,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("NeedOfflineOldNodesNotify",$param) and $param["NeedOfflineOldNodesNotify"] !== null) {
             $this->NeedOfflineOldNodesNotify = $param["NeedOfflineOldNodesNotify"];
+        }
+
+        if (array_key_exists("LvmStatus",$param) and $param["LvmStatus"] !== null) {
+            $this->LvmStatus = $param["LvmStatus"];
+        }
+
+        if (array_key_exists("LvmSwitchFlowId",$param) and $param["LvmSwitchFlowId"] !== null) {
+            $this->LvmSwitchFlowId = $param["LvmSwitchFlowId"];
         }
     }
 }

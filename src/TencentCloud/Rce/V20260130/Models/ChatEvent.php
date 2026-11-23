@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSender(Sender $Sender) 设置<p>发送者信息</p>
  * @method Receiver getReceiver() 获取<p>接收者信息</p>
  * @method void setReceiver(Receiver $Receiver) 设置<p>接收者信息</p>
+ * @method array getCust() 获取<p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+ * @method void setCust(array $Cust) 设置<p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
  */
 class ChatEvent extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ChatEvent extends AbstractModel
     public $Receiver;
 
     /**
+     * @var array <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public $Cust;
+
+    /**
      * @param Chat $ChatInfo <p>聊天信息</p>
      * @param string $ServerId <p>所属服务器ID，允许空串</p>
      * @param Sender $Sender <p>发送者信息</p>
      * @param Receiver $Receiver <p>接收者信息</p>
+     * @param array $Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
      */
     function __construct()
     {
@@ -87,6 +95,15 @@ class ChatEvent extends AbstractModel
         if (array_key_exists("Receiver",$param) and $param["Receiver"] !== null) {
             $this->Receiver = new Receiver();
             $this->Receiver->deserialize($param["Receiver"]);
+        }
+
+        if (array_key_exists("Cust",$param) and $param["Cust"] !== null) {
+            $this->Cust = [];
+            foreach ($param["Cust"] as $key => $value){
+                $obj = new Cust();
+                $obj->deserialize($value);
+                array_push($this->Cust, $obj);
+            }
         }
     }
 }

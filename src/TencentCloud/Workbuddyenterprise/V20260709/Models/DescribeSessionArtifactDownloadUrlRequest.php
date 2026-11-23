@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSessionArtifactDownloadUrl请求参数结构体
  *
-
+ * @method string getArtifactId() 获取<p>物料ID</p>
+ * @method void setArtifactId(string $ArtifactId) 设置<p>物料ID</p>
+ * @method integer getExpiredSeconds() 获取<p>产物过期时间</p><p>单位：s</p>
+ * @method void setExpiredSeconds(integer $ExpiredSeconds) 设置<p>产物过期时间</p><p>单位：s</p>
  */
 class DescribeSessionArtifactDownloadUrlRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>物料ID</p>
+     */
+    public $ArtifactId;
 
     /**
+     * @var integer <p>产物过期时间</p><p>单位：s</p>
+     */
+    public $ExpiredSeconds;
 
+    /**
+     * @param string $ArtifactId <p>物料ID</p>
+     * @param integer $ExpiredSeconds <p>产物过期时间</p><p>单位：s</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeSessionArtifactDownloadUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ArtifactId",$param) and $param["ArtifactId"] !== null) {
+            $this->ArtifactId = $param["ArtifactId"];
+        }
 
+        if (array_key_exists("ExpiredSeconds",$param) and $param["ExpiredSeconds"] !== null) {
+            $this->ExpiredSeconds = $param["ExpiredSeconds"];
+        }
     }
 }

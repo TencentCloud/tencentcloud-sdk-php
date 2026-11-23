@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置<p>业务系统ID</p>
  * @method boolean getAppendResourceAttributes() 获取<p>是否追加资源属性</p>
  * @method void setAppendResourceAttributes(boolean $AppendResourceAttributes) 设置<p>是否追加资源属性</p>
+ * @method integer getAssociationId() 获取归属的关联记录 ID，0 或不传表示跟随默认关联
+ * @method void setAssociationId(integer $AssociationId) 设置归属的关联记录 ID，0 或不传表示跟随默认关联
  */
 class CreateApmPrometheusRuleRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateApmPrometheusRuleRequest extends AbstractModel
     public $AppendResourceAttributes;
 
     /**
+     * @var integer 归属的关联记录 ID，0 或不传表示跟随默认关联
+     */
+    public $AssociationId;
+
+    /**
      * @param string $Name <p>指标匹配规则名</p>
      * @param string $ServiceName <p>规则生效的应用。作用全部应用就传空字符串</p>
      * @param integer $MetricMatchType <p>指标匹配类型：0精准匹配，1前缀匹配，2后缀匹配</p>
      * @param string $MetricNameRule <p>客户定义的命中指标名规则。</p>
      * @param string $InstanceId <p>业务系统ID</p>
      * @param boolean $AppendResourceAttributes <p>是否追加资源属性</p>
+     * @param integer $AssociationId 归属的关联记录 ID，0 或不传表示跟随默认关联
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateApmPrometheusRuleRequest extends AbstractModel
 
         if (array_key_exists("AppendResourceAttributes",$param) and $param["AppendResourceAttributes"] !== null) {
             $this->AppendResourceAttributes = $param["AppendResourceAttributes"];
+        }
+
+        if (array_key_exists("AssociationId",$param) and $param["AssociationId"] !== null) {
+            $this->AssociationId = $param["AssociationId"];
         }
     }
 }

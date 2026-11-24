@@ -703,7 +703,10 @@ abstract class AbstractClient
     private function getPrivateMethod($obj, $methodName) {
         $objReflectClass = new ReflectionClass(get_class($obj));
         $method = $objReflectClass->getMethod($methodName);
-        $method->setAccessible(true);
+        // no effect since PHP 8.1, deprecated since PHP 8.5
+        if (PHP_VERSION_ID < 80100) {
+            $method->setAccessible(true);
+        }
         return $method;
     }
 

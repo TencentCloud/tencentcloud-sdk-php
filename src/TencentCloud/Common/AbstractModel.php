@@ -41,7 +41,10 @@ abstract class AbstractModel
         foreach ($memberList as $x => $member)
         {
             $name = ucfirst($member->getName());
-            $member->setAccessible(true);
+            // no effect since PHP 8.1, deprecated since PHP 8.5
+            if (PHP_VERSION_ID < 80100) {
+                $member->setAccessible(true);
+            }
             $value = $member->getValue($obj);
             if ($value === null) {
                 continue;

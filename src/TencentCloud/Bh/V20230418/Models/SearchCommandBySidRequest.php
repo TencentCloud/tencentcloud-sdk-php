@@ -20,62 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchCommandBySid请求参数结构体
  *
- * @method string getSid() 获取会话Id
- * @method void setSid(string $Sid) 设置会话Id
- * @method string getCmd() 获取命令，可模糊搜索
- * @method void setCmd(string $Cmd) 设置命令，可模糊搜索
- * @method integer getEncoding() 获取Cmd字段是前端传值是否进行base64.
-0:否，1：是
- * @method void setEncoding(integer $Encoding) 设置Cmd字段是前端传值是否进行base64.
-0:否，1：是
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取每页容量，默认20，最大200
- * @method void setLimit(integer $Limit) 设置每页容量，默认20，最大200
- * @method array getAuditAction() 获取根据拦截状态进行过滤
- * @method void setAuditAction(array $AuditAction) 设置根据拦截状态进行过滤
+ * @method string getSid() 获取<p>会话Id</p>
+ * @method void setSid(string $Sid) 设置<p>会话Id</p>
+ * @method string getCmd() 获取<p>命令，可模糊搜索</p>
+ * @method void setCmd(string $Cmd) 设置<p>命令，可模糊搜索</p>
+ * @method integer getEncoding() 获取<p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+ * @method void setEncoding(integer $Encoding) 设置<p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+ * @method integer getOffset() 获取<p>偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>偏移量</p>
+ * @method integer getLimit() 获取<p>每页容量，默认20，最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页容量，默认20，最大200</p>
+ * @method array getAuditAction() 获取<p>根据拦截状态进行过滤，1-已放行，2-已阻断，3-复核</p>
+ * @method void setAuditAction(array $AuditAction) 设置<p>根据拦截状态进行过滤，1-已放行，2-已阻断，3-复核</p>
  */
 class SearchCommandBySidRequest extends AbstractModel
 {
     /**
-     * @var string 会话Id
+     * @var string <p>会话Id</p>
      */
     public $Sid;
 
     /**
-     * @var string 命令，可模糊搜索
+     * @var string <p>命令，可模糊搜索</p>
      */
     public $Cmd;
 
     /**
-     * @var integer Cmd字段是前端传值是否进行base64.
-0:否，1：是
+     * @var integer <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
      */
     public $Encoding;
 
     /**
-     * @var integer 偏移量
+     * @var integer <p>偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 每页容量，默认20，最大200
+     * @var integer <p>每页容量，默认20，最大200</p>
      */
     public $Limit;
 
     /**
-     * @var array 根据拦截状态进行过滤
+     * @var array <p>根据拦截状态进行过滤，1-已放行，2-已阻断，3-复核</p>
      */
     public $AuditAction;
 
     /**
-     * @param string $Sid 会话Id
-     * @param string $Cmd 命令，可模糊搜索
-     * @param integer $Encoding Cmd字段是前端传值是否进行base64.
-0:否，1：是
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 每页容量，默认20，最大200
-     * @param array $AuditAction 根据拦截状态进行过滤
+     * @param string $Sid <p>会话Id</p>
+     * @param string $Cmd <p>命令，可模糊搜索</p>
+     * @param integer $Encoding <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+     * @param integer $Offset <p>偏移量</p>
+     * @param integer $Limit <p>每页容量，默认20，最大200</p>
+     * @param array $AuditAction <p>根据拦截状态进行过滤，1-已放行，2-已阻断，3-复核</p>
      */
     function __construct()
     {

@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参数限流的规则
  *
+ * @method array getAccurateQpsThresholds() 获取精确限流阈值
+ * @method void setAccurateQpsThresholds(array $AccurateQpsThresholds) 设置精确限流阈值
  * @method array getFilters() 获取请求匹配条件
  * @method void setFilters(array $Filters) 设置请求匹配条件
  * @method array getLimitBy() 获取参数限流依据组合
  * @method void setLimitBy(array $LimitBy) 设置参数限流依据组合
  * @method array getQpsThresholds() 获取限流阈值
  * @method void setQpsThresholds(array $QpsThresholds) 设置限流阈值
- * @method array getAccurateQpsThresholds() 获取精确限流阈值
- * @method void setAccurateQpsThresholds(array $AccurateQpsThresholds) 设置精确限流阈值
+ * @method boolean getEnabled() 获取是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
+ * @method void setEnabled(boolean $Enabled) 设置是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
  */
 class LimitRule extends AbstractModel
 {
+    /**
+     * @var array 精确限流阈值
+     */
+    public $AccurateQpsThresholds;
+
     /**
      * @var array 请求匹配条件
      */
@@ -47,15 +54,16 @@ class LimitRule extends AbstractModel
     public $QpsThresholds;
 
     /**
-     * @var array 精确限流阈值
+     * @var boolean 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
      */
-    public $AccurateQpsThresholds;
+    public $Enabled;
 
     /**
+     * @param array $AccurateQpsThresholds 精确限流阈值
      * @param array $Filters 请求匹配条件
      * @param array $LimitBy 参数限流依据组合
      * @param array $QpsThresholds 限流阈值
-     * @param array $AccurateQpsThresholds 精确限流阈值
+     * @param boolean $Enabled 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
      */
     function __construct()
     {
@@ -70,6 +78,15 @@ class LimitRule extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AccurateQpsThresholds",$param) and $param["AccurateQpsThresholds"] !== null) {
+            $this->AccurateQpsThresholds = [];
+            foreach ($param["AccurateQpsThresholds"] as $key => $value){
+                $obj = new AccurateQpsThreshold();
+                $obj->deserialize($value);
+                array_push($this->AccurateQpsThresholds, $obj);
+            }
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -97,13 +114,8 @@ class LimitRule extends AbstractModel
             }
         }
 
-        if (array_key_exists("AccurateQpsThresholds",$param) and $param["AccurateQpsThresholds"] !== null) {
-            $this->AccurateQpsThresholds = [];
-            foreach ($param["AccurateQpsThresholds"] as $key => $value){
-                $obj = new AccurateQpsThreshold();
-                $obj->deserialize($value);
-                array_push($this->AccurateQpsThresholds, $obj);
-            }
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

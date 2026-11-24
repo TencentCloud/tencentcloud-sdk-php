@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModerationSupplierParam(ModerationSupplierParam $ModerationSupplierParam) 设置<p>第三方内容理解供应商需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化</p>
  * @method integer getSaveModerationFile() 获取<p>是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件</p>
  * @method void setSaveModerationFile(integer $SaveModerationFile) 设置<p>是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件</p>
- * @method integer getCallbackAllResults() 获取<p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
- * @method void setCallbackAllResults(integer $CallbackAllResults) 设置<p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+ * @method integer getCallbackAllResults() 获取<p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
+ * @method void setCallbackAllResults(integer $CallbackAllResults) 设置<p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
  * @method SubscribeModerationUserIds getSubscribeStreamUserIds() 获取<p>指定订阅流白名单或者黑名单。</p>
  * @method void setSubscribeStreamUserIds(SubscribeModerationUserIds $SubscribeStreamUserIds) 设置<p>指定订阅流白名单或者黑名单。</p>
  */
@@ -77,7 +77,7 @@ class ModerationParams extends AbstractModel
     public $SaveModerationFile;
 
     /**
-     * @var integer <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+     * @var integer <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
      */
     public $CallbackAllResults;
 
@@ -94,7 +94,7 @@ class ModerationParams extends AbstractModel
      * @param string $ModerationSupplier <p>供应商枚举，<br>trtc : trtc内容理解</p>
      * @param ModerationSupplierParam $ModerationSupplierParam <p>第三方内容理解供应商需要配置信息, ModerationSupplier为trtc时，这个参数可以不需要初始化</p>
      * @param integer $SaveModerationFile <p>是否保存文件:  0不保存文件 1保存所有文件 2仅保存命中文件</p>
-     * @param integer $CallbackAllResults <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+     * @param integer $CallbackAllResults <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
      * @param SubscribeModerationUserIds $SubscribeStreamUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     function __construct()

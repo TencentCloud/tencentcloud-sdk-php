@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 命令集合
  *
- * @method string getCmd() 获取命令
- * @method void setCmd(string $Cmd) 设置命令
- * @method string getTime() 获取命令输入的时间
- * @method void setTime(string $Time) 设置命令输入的时间
- * @method integer getTimeOffset() 获取命令执行时间相对于所属会话开始时间的偏移量，单位ms
- * @method void setTimeOffset(integer $TimeOffset) 设置命令执行时间相对于所属会话开始时间的偏移量，单位ms
- * @method integer getAction() 获取命令执行情况，1--允许，2--拒绝，3--确认
- * @method void setAction(integer $Action) 设置命令执行情况，1--允许，2--拒绝，3--确认
- * @method string getSid() 获取会话id
- * @method void setSid(string $Sid) 设置会话id
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getAccount() 获取设备account
- * @method void setAccount(string $Account) 设置设备account
- * @method string getInstanceId() 获取设备ip
- * @method void setInstanceId(string $InstanceId) 设置设备ip
- * @method string getFromIp() 获取source ip
- * @method void setFromIp(string $FromIp) 设置source ip
- * @method string getSessTime() 获取该命令所属会话的会话开始时间
- * @method void setSessTime(string $SessTime) 设置该命令所属会话的会话开始时间
- * @method string getSessionTime() 获取该命令所属会话的会话开始时间
- * @method void setSessionTime(string $SessionTime) 设置该命令所属会话的会话开始时间
- * @method string getConfirmTime() 获取复核时间
- * @method void setConfirmTime(string $ConfirmTime) 设置复核时间
- * @method string getUserDepartmentId() 获取用户部门id
- * @method void setUserDepartmentId(string $UserDepartmentId) 设置用户部门id
- * @method string getUserDepartmentName() 获取用户部门name
- * @method void setUserDepartmentName(string $UserDepartmentName) 设置用户部门name
- * @method string getDeviceDepartmentId() 获取设备部门id
- * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置设备部门id
- * @method string getDeviceDepartmentName() 获取设备部门name
- * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门name
- * @method integer getSize() 获取会话大小
- * @method void setSize(integer $Size) 设置会话大小
- * @method string getSignValue() 获取签名值
- * @method void setSignValue(string $SignValue) 设置签名值
- * @method string getDeviceKind() 获取资产类型
- * @method void setDeviceKind(string $DeviceKind) 设置资产类型
+ * @method string getCmd() 获取<p>命令</p>
+ * @method void setCmd(string $Cmd) 设置<p>命令</p>
+ * @method string getTime() 获取<p>命令输入的时间</p>
+ * @method void setTime(string $Time) 设置<p>命令输入的时间</p>
+ * @method integer getTimeOffset() 获取<p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
+ * @method void setTimeOffset(integer $TimeOffset) 设置<p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
+ * @method integer getAction() 获取<p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
+ * @method void setAction(integer $Action) 设置<p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
+ * @method string getSid() 获取<p>会话id</p>
+ * @method void setSid(string $Sid) 设置<p>会话id</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getAccount() 获取<p>设备account</p>
+ * @method void setAccount(string $Account) 设置<p>设备account</p>
+ * @method string getInstanceId() 获取<p>设备ip</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>设备ip</p>
+ * @method string getFromIp() 获取<p>source ip</p>
+ * @method void setFromIp(string $FromIp) 设置<p>source ip</p>
+ * @method string getSessTime() 获取<p>该命令所属会话的会话开始时间</p>
+ * @method void setSessTime(string $SessTime) 设置<p>该命令所属会话的会话开始时间</p>
+ * @method string getSessionTime() 获取<p>该命令所属会话的会话开始时间</p>
+ * @method void setSessionTime(string $SessionTime) 设置<p>该命令所属会话的会话开始时间</p>
+ * @method string getConfirmTime() 获取<p>复核时间</p>
+ * @method void setConfirmTime(string $ConfirmTime) 设置<p>复核时间</p>
+ * @method string getUserDepartmentId() 获取<p>用户部门id</p>
+ * @method void setUserDepartmentId(string $UserDepartmentId) 设置<p>用户部门id</p>
+ * @method string getUserDepartmentName() 获取<p>用户部门name</p>
+ * @method void setUserDepartmentName(string $UserDepartmentName) 设置<p>用户部门name</p>
+ * @method string getDeviceDepartmentId() 获取<p>设备部门id</p>
+ * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置<p>设备部门id</p>
+ * @method string getDeviceDepartmentName() 获取<p>设备部门name</p>
+ * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置<p>设备部门name</p>
+ * @method integer getSize() 获取<p>会话大小</p>
+ * @method void setSize(integer $Size) 设置<p>会话大小</p>
+ * @method string getSignValue() 获取<p>签名值</p>
+ * @method void setSignValue(string $SignValue) 设置<p>签名值</p>
+ * @method string getDeviceKind() 获取<p>资产类型</p>
+ * @method void setDeviceKind(string $DeviceKind) 设置<p>资产类型</p>
  */
 class Command extends AbstractModel
 {
     /**
-     * @var string 命令
+     * @var string <p>命令</p>
      */
     public $Cmd;
 
     /**
-     * @var string 命令输入的时间
+     * @var string <p>命令输入的时间</p>
      */
     public $Time;
 
     /**
-     * @var integer 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+     * @var integer <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
      */
     public $TimeOffset;
 
     /**
-     * @var integer 命令执行情况，1--允许，2--拒绝，3--确认
+     * @var integer <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
      */
     public $Action;
 
     /**
-     * @var string 会话id
+     * @var string <p>会话id</p>
      */
     public $Sid;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 设备account
+     * @var string <p>设备account</p>
      */
     public $Account;
 
     /**
-     * @var string 设备ip
+     * @var string <p>设备ip</p>
      */
     public $InstanceId;
 
     /**
-     * @var string source ip
+     * @var string <p>source ip</p>
      */
     public $FromIp;
 
     /**
-     * @var string 该命令所属会话的会话开始时间
+     * @var string <p>该命令所属会话的会话开始时间</p>
      */
     public $SessTime;
 
     /**
-     * @var string 该命令所属会话的会话开始时间
+     * @var string <p>该命令所属会话的会话开始时间</p>
      */
     public $SessionTime;
 
     /**
-     * @var string 复核时间
+     * @var string <p>复核时间</p>
      */
     public $ConfirmTime;
 
     /**
-     * @var string 用户部门id
+     * @var string <p>用户部门id</p>
      */
     public $UserDepartmentId;
 
     /**
-     * @var string 用户部门name
+     * @var string <p>用户部门name</p>
      */
     public $UserDepartmentName;
 
     /**
-     * @var string 设备部门id
+     * @var string <p>设备部门id</p>
      */
     public $DeviceDepartmentId;
 
     /**
-     * @var string 设备部门name
+     * @var string <p>设备部门name</p>
      */
     public $DeviceDepartmentName;
 
     /**
-     * @var integer 会话大小
+     * @var integer <p>会话大小</p>
      */
     public $Size;
 
     /**
-     * @var string 签名值
+     * @var string <p>签名值</p>
      */
     public $SignValue;
 
     /**
-     * @var string 资产类型
+     * @var string <p>资产类型</p>
      */
     public $DeviceKind;
 
     /**
-     * @param string $Cmd 命令
-     * @param string $Time 命令输入的时间
-     * @param integer $TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
-     * @param integer $Action 命令执行情况，1--允许，2--拒绝，3--确认
-     * @param string $Sid 会话id
-     * @param string $UserName 用户名
-     * @param string $Account 设备account
-     * @param string $InstanceId 设备ip
-     * @param string $FromIp source ip
-     * @param string $SessTime 该命令所属会话的会话开始时间
-     * @param string $SessionTime 该命令所属会话的会话开始时间
-     * @param string $ConfirmTime 复核时间
-     * @param string $UserDepartmentId 用户部门id
-     * @param string $UserDepartmentName 用户部门name
-     * @param string $DeviceDepartmentId 设备部门id
-     * @param string $DeviceDepartmentName 设备部门name
-     * @param integer $Size 会话大小
-     * @param string $SignValue 签名值
-     * @param string $DeviceKind 资产类型
+     * @param string $Cmd <p>命令</p>
+     * @param string $Time <p>命令输入的时间</p>
+     * @param integer $TimeOffset <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
+     * @param integer $Action <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
+     * @param string $Sid <p>会话id</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $Account <p>设备account</p>
+     * @param string $InstanceId <p>设备ip</p>
+     * @param string $FromIp <p>source ip</p>
+     * @param string $SessTime <p>该命令所属会话的会话开始时间</p>
+     * @param string $SessionTime <p>该命令所属会话的会话开始时间</p>
+     * @param string $ConfirmTime <p>复核时间</p>
+     * @param string $UserDepartmentId <p>用户部门id</p>
+     * @param string $UserDepartmentName <p>用户部门name</p>
+     * @param string $DeviceDepartmentId <p>设备部门id</p>
+     * @param string $DeviceDepartmentName <p>设备部门name</p>
+     * @param integer $Size <p>会话大小</p>
+     * @param string $SignValue <p>签名值</p>
+     * @param string $DeviceKind <p>资产类型</p>
      */
     function __construct()
     {

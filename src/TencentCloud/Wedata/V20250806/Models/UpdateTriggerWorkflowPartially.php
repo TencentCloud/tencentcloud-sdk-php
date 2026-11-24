@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式：定时触发：TIME_TRIGGER ，文件到达：FILE_ARRIVAL。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
  * @method string getExecuteUserUin() 获取<p>运行账号ID</p>
  * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
+ * @method array getWorkflowLabels() 获取<p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+ * @method void setWorkflowLabels(array $WorkflowLabels) 设置<p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
  */
 class UpdateTriggerWorkflowPartially extends AbstractModel
 {
@@ -108,6 +110,11 @@ class UpdateTriggerWorkflowPartially extends AbstractModel
     public $ExecuteUserUin;
 
     /**
+     * @var array <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+     */
+    public $WorkflowLabels;
+
+    /**
      * @param string $WorkflowName <p>工作流名称</p>
      * @param string $OwnerUin <p>责任人ID</p>
      * @param array $WorkflowParams <p>工作流参数数组</p>
@@ -120,6 +127,7 @@ class UpdateTriggerWorkflowPartially extends AbstractModel
      * @param string $SchedulerStatus <p>Trigger 状态 启动ACTIVE，暂停PAUSED。配置完之后，内部的Trigger状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>ACTIVE： 启动</li><li>PAUSED： 暂停</li></ul>
      * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER ，文件到达：FILE_ARRIVAL。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
      * @param string $ExecuteUserUin <p>运行账号ID</p>
+     * @param array $WorkflowLabels <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
      */
     function __construct()
     {
@@ -196,6 +204,15 @@ class UpdateTriggerWorkflowPartially extends AbstractModel
 
         if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
             $this->ExecuteUserUin = $param["ExecuteUserUin"];
+        }
+
+        if (array_key_exists("WorkflowLabels",$param) and $param["WorkflowLabels"] !== null) {
+            $this->WorkflowLabels = [];
+            foreach ($param["WorkflowLabels"] as $key => $value){
+                $obj = new WorkflowLabel();
+                $obj->deserialize($value);
+                array_push($this->WorkflowLabels, $obj);
+            }
         }
     }
 }

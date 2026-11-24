@@ -1,0 +1,105 @@
+<?php
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Wedata\V20250806\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 工作流标签（K-V），标签字典与数据资产标签一致
+ *
+ * @method integer getLabelId() 获取<p>标签ID，入参时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelId(integer $LabelId) 设置<p>标签ID，入参时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabelName() 获取<p>标签名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelName(string $LabelName) 设置<p>标签名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLabelValueId() 获取<p>标签值ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelValueId(integer $LabelValueId) 设置<p>标签值ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabelValue() 获取<p>标签值名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelValue(string $LabelValue) 设置<p>标签值名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ */
+class WorkflowLabel extends AbstractModel
+{
+    /**
+     * @var integer <p>标签ID，入参时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelId;
+
+    /**
+     * @var string <p>标签名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelName;
+
+    /**
+     * @var integer <p>标签值ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelValueId;
+
+    /**
+     * @var string <p>标签值名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelValue;
+
+    /**
+     * @param integer $LabelId <p>标签ID，入参时必填</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LabelName <p>标签名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LabelValueId <p>标签值ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LabelValue <p>标签值名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("LabelId",$param) and $param["LabelId"] !== null) {
+            $this->LabelId = $param["LabelId"];
+        }
+
+        if (array_key_exists("LabelName",$param) and $param["LabelName"] !== null) {
+            $this->LabelName = $param["LabelName"];
+        }
+
+        if (array_key_exists("LabelValueId",$param) and $param["LabelValueId"] !== null) {
+            $this->LabelValueId = $param["LabelValueId"];
+        }
+
+        if (array_key_exists("LabelValue",$param) and $param["LabelValue"] !== null) {
+            $this->LabelValue = $param["LabelValue"];
+        }
+    }
+}

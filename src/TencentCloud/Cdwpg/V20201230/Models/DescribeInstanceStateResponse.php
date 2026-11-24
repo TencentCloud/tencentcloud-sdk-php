@@ -36,10 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceState(string $InstanceState) 设置<p>集群状态，例如：Serving</p>
  * @method string getInstanceStateDesc() 获取<p>集群状态描述，例如：运行中</p>
  * @method void setInstanceStateDesc(string $InstanceStateDesc) 设置<p>集群状态描述，例如：运行中</p>
- * @method string getProcessName() 获取<p>当前步骤的名称，例如：”购买资源中“</p>
- * @method void setProcessName(string $ProcessName) 设置<p>当前步骤的名称，例如：”购买资源中“</p>
  * @method array getInstanceStates() 获取<p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
  * @method void setInstanceStates(array $InstanceStates) 设置<p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+ * @method string getProcessName() 获取<p>当前步骤的名称，例如：”购买资源中“</p>
+ * @method void setProcessName(string $ProcessName) 设置<p>当前步骤的名称，例如：”购买资源中“</p>
+ * @method string getRecoveryState() 获取<p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
+ * @method void setRecoveryState(string $RecoveryState) 设置<p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,14 +88,19 @@ class DescribeInstanceStateResponse extends AbstractModel
     public $InstanceStateDesc;
 
     /**
+     * @var array <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public $InstanceStates;
+
+    /**
      * @var string <p>当前步骤的名称，例如：”购买资源中“</p>
      */
     public $ProcessName;
 
     /**
-     * @var array <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * @var string <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
      */
-    public $InstanceStates;
+    public $RecoveryState;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -109,8 +116,9 @@ class DescribeInstanceStateResponse extends AbstractModel
      * @param float $FlowProgress <p>集群操作进度</p>
      * @param string $InstanceState <p>集群状态，例如：Serving</p>
      * @param string $InstanceStateDesc <p>集群状态描述，例如：运行中</p>
-     * @param string $ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
      * @param array $InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * @param string $ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
+     * @param string $RecoveryState <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -158,10 +166,6 @@ class DescribeInstanceStateResponse extends AbstractModel
             $this->InstanceStateDesc = $param["InstanceStateDesc"];
         }
 
-        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
-            $this->ProcessName = $param["ProcessName"];
-        }
-
         if (array_key_exists("InstanceStates",$param) and $param["InstanceStates"] !== null) {
             $this->InstanceStates = [];
             foreach ($param["InstanceStates"] as $key => $value){
@@ -169,6 +173,14 @@ class DescribeInstanceStateResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceStates, $obj);
             }
+        }
+
+        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
+            $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("RecoveryState",$param) and $param["RecoveryState"] !== null) {
+            $this->RecoveryState = $param["RecoveryState"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

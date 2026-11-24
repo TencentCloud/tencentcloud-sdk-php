@@ -37,6 +37,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\CreateLabelResponse CreateLabel(Models\CreateLabelRequest $req) 创建标签
  * @method Models\CreateMsgRecordCategoryResponse CreateMsgRecordCategory(Models\CreateMsgRecordCategoryRequest $req) 创建一条消息记录分类，支持指定分类名称与父分类（ParentId 为 0 时表示一级分类）
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 获取插件详情
+ * @method Models\CreatePromptTemplateResponse CreatePromptTemplate(Models\CreatePromptTemplateRequest $req) 创建提示词模板
+ * @method Models\CreatePromptTemplateLabelResponse CreatePromptTemplateLabel(Models\CreatePromptTemplateLabelRequest $req) 创建提示词模板标签
  * @method Models\CreateQAGenerationTaskResponse CreateQAGenerationTask(Models\CreateQAGenerationTaskRequest $req) 创建 QA 生成任务
  * @method Models\CreateQAListResponse CreateQAList(Models\CreateQAListRequest $req) 批量创建 QA
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 新增发布任务
@@ -61,6 +63,8 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DeleteLabelListResponse DeleteLabelList(Models\DeleteLabelListRequest $req) 批量删除标签
  * @method Models\DeleteMsgRecordCategoryResponse DeleteMsgRecordCategory(Models\DeleteMsgRecordCategoryRequest $req) 删除指定的消息记录分类
  * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 修改插件
+ * @method Models\DeletePromptTemplateResponse DeletePromptTemplate(Models\DeletePromptTemplateRequest $req) 删除提示词模板
+ * @method Models\DeletePromptTemplateLabelResponse DeletePromptTemplateLabel(Models\DeletePromptTemplateLabelRequest $req) 删除提示词模板标签
  * @method Models\DeleteQAListResponse DeleteQAList(Models\DeleteQAListRequest $req) 批量删除 QA
  * @method Models\DeleteSkillResponse DeleteSkill(Models\DeleteSkillRequest $req) 删除自定义 Skill  鉴权：创建者 ∨ (编辑权限 ∧ 删除权限） 拒绝场景：非 Custom 类型 / 已共享 / 安全检测中 / 上架审批中 / 下架审批中
  * @method Models\DeleteSkillShareResponse DeleteSkillShare(Models\DeleteSkillShareRequest $req) 提交共享 Skill 下架审批（v2，两段式：提交→审批→回调下架共享 Skill） 鉴权：删除权 拒绝场景：未共享 / 上架审批中 / 下架审批中
@@ -104,6 +108,10 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeNodeRunDetailResponse DescribeNodeRunDetail(Models\DescribeNodeRunDetailRequest $req) 查看工作流节点运行详情
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 获取插件详情
  * @method Models\DescribePluginSummaryListResponse DescribePluginSummaryList(Models\DescribePluginSummaryListRequest $req) 获取插件列表
+ * @method Models\DescribePromptTemplateResponse DescribePromptTemplate(Models\DescribePromptTemplateRequest $req) 查询提示词模板详情
+ * @method Models\DescribePromptTemplateCategoryListResponse DescribePromptTemplateCategoryList(Models\DescribePromptTemplateCategoryListRequest $req) 查询提示词模板分类列表
+ * @method Models\DescribePromptTemplateLabelListResponse DescribePromptTemplateLabelList(Models\DescribePromptTemplateLabelListRequest $req) 查询提示词模板标签列表
+ * @method Models\DescribePromptTemplateSummaryListResponse DescribePromptTemplateSummaryList(Models\DescribePromptTemplateSummaryListRequest $req) 查询提示词模板摘要列表
  * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) 查询 QA 详情
  * @method Models\DescribeQASummaryListResponse DescribeQASummaryList(Models\DescribeQASummaryListRequest $req) 查询 QA 列表
  * @method Models\DescribeReleaseListResponse DescribeReleaseList(Models\DescribeReleaseListRequest $req) 发布记录列表
@@ -123,6 +131,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\DescribeWorkflowRunSummaryListResponse DescribeWorkflowRunSummaryList(Models\DescribeWorkflowRunSummaryListRequest $req) 查询工作流运行实例列表
  * @method Models\ExportQAResponse ExportQA(Models\ExportQARequest $req) 异步导出 QA
  * @method Models\FavoritePluginResponse FavoritePlugin(Models\FavoritePluginRequest $req) 收藏插件
+ * @method Models\FavoritePromptTemplateResponse FavoritePromptTemplate(Models\FavoritePromptTemplateRequest $req) 收藏提示词模板
  * @method Models\FavoriteSkillResponse FavoriteSkill(Models\FavoriteSkillRequest $req) 收藏skill
  * @method Models\ImportDocListResponse ImportDocList(Models\ImportDocListRequest $req) 批量导入文档
  * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent配置信息
@@ -139,6 +148,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\ModifyMessageRecordFeedbackResponse ModifyMessageRecordFeedback(Models\ModifyMessageRecordFeedbackRequest $req) 修改消息记录反馈
  * @method Models\ModifyMsgRecordCategoryResponse ModifyMsgRecordCategory(Models\ModifyMsgRecordCategoryRequest $req) 修改指定消息记录分类的名称
  * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改插件
+ * @method Models\ModifyPromptTemplateResponse ModifyPromptTemplate(Models\ModifyPromptTemplateRequest $req) 修改提示词模板
  * @method Models\ModifyQAResponse ModifyQA(Models\ModifyQARequest $req) 修改单个 QA
  * @method Models\ModifyQAListResponse ModifyQAList(Models\ModifyQAListRequest $req) 批量修改 QA
  * @method Models\ModifySkillResponse ModifySkill(Models\ModifySkillRequest $req) Skill修改
@@ -158,6 +168,7 @@ use TencentCloud\Adp\V20260520\Models as Models;
  * @method Models\SearchKnowledgeResponse SearchKnowledge(Models\SearchKnowledgeRequest $req) 知识检索
  * @method Models\StopWorkflowRunListResponse StopWorkflowRunList(Models\StopWorkflowRunListRequest $req) 批量停止正在进行的工作流运行实例。
  * @method Models\UnfavoritePluginResponse UnfavoritePlugin(Models\UnfavoritePluginRequest $req) 取消收藏插件
+ * @method Models\UnfavoritePromptTemplateResponse UnfavoritePromptTemplate(Models\UnfavoritePromptTemplateRequest $req) 取消收藏提示词模板
  * @method Models\UnfavoriteSkillResponse UnfavoriteSkill(Models\UnfavoriteSkillRequest $req) 取消收藏skill
  */
 

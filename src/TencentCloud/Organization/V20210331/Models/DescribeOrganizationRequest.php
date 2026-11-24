@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganization请求参数结构体
  *
- * @method string getLang() 获取国际站：en，国内站：zh
- * @method void setLang(string $Lang) 设置国际站：en，国内站：zh
- * @method string getProduct() 获取可信服务产品简称。查询是否该可信服务管理员时必须指定
- * @method void setProduct(string $Product) 设置可信服务产品简称。查询是否该可信服务管理员时必须指定
+ * @method string getLang() 获取<p>国际站：en，国内站：zh</p>
+ * @method void setLang(string $Lang) 设置<p>国际站：en，国内站：zh</p>
+ * @method string getProduct() 获取<p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
+ * @method void setProduct(string $Product) 设置<p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
  */
 class DescribeOrganizationRequest extends AbstractModel
 {
     /**
-     * @var string 国际站：en，国内站：zh
+     * @var string <p>国际站：en，国内站：zh</p>
      */
     public $Lang;
 
     /**
-     * @var string 可信服务产品简称。查询是否该可信服务管理员时必须指定
+     * @var string <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
      */
     public $Product;
 
     /**
-     * @param string $Lang 国际站：en，国内站：zh
-     * @param string $Product 可信服务产品简称。查询是否该可信服务管理员时必须指定
+     * @param string $Lang <p>国际站：en，国内站：zh</p>
+     * @param string $Product <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
      */
     function __construct()
     {

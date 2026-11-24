@@ -18,20 +18,20 @@ namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 解析失败的页数
+ * 解析失败的页码
  *
- * @method integer getPageNumber() 获取<p>解析失败页数。</p>
- * @method void setPageNumber(integer $PageNumber) 设置<p>解析失败页数。</p>
+ * @method integer getPageNumber() 获取<p>解析失败页码。</p>
+ * @method void setPageNumber(integer $PageNumber) 设置<p>解析失败页码。</p>
  */
 class ReconstructDocumentFailedPage extends AbstractModel
 {
     /**
-     * @var integer <p>解析失败页数。</p>
+     * @var integer <p>解析失败页码。</p>
      */
     public $PageNumber;
 
     /**
-     * @param integer $PageNumber <p>解析失败页数。</p>
+     * @param integer $PageNumber <p>解析失败页码。</p>
      */
     function __construct()
     {

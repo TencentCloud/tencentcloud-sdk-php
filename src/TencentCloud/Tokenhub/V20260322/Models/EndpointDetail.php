@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEndpointId() 获取<p>推理服务 ID。</p>
  * @method void setEndpointId(string $EndpointId) 设置<p>推理服务 ID。</p>
+ * @method string getWorkspaceId() 获取<p>所属企业空间 ID。</p>
+ * @method void setWorkspaceId(string $WorkspaceId) 设置<p>所属企业空间 ID。</p>
+ * @method string getOriginEndpointId() 获取<p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+ * @method void setOriginEndpointId(string $OriginEndpointId) 设置<p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
  * @method string getEndpointName() 获取<p>服务名称。</p>
  * @method void setEndpointName(string $EndpointName) 设置<p>服务名称。</p>
  * @method string getModelName() 获取<p>模型名称。</p>
@@ -48,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRPM(integer $RPM) 设置<p>RPM（每分钟请求数限流）。当推理服务未单独设置时，回退为关联模型的默认 RPM 值。</p>
  * @method string getModelStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
  * @method void setModelStatus(string $ModelStatus) 设置<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+ * @method boolean getNightDiscountEnabled() 获取<p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+ * @method void setNightDiscountEnabled(boolean $NightDiscountEnabled) 设置<p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
  */
 class EndpointDetail extends AbstractModel
 {
@@ -55,6 +61,16 @@ class EndpointDetail extends AbstractModel
      * @var string <p>推理服务 ID。</p>
      */
     public $EndpointId;
+
+    /**
+     * @var string <p>所属企业空间 ID。</p>
+     */
+    public $WorkspaceId;
+
+    /**
+     * @var string <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+     */
+    public $OriginEndpointId;
 
     /**
      * @var string <p>服务名称。</p>
@@ -122,7 +138,14 @@ class EndpointDetail extends AbstractModel
     public $ModelStatus;
 
     /**
+     * @var boolean <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public $NightDiscountEnabled;
+
+    /**
      * @param string $EndpointId <p>推理服务 ID。</p>
+     * @param string $WorkspaceId <p>所属企业空间 ID。</p>
+     * @param string $OriginEndpointId <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
      * @param string $EndpointName <p>服务名称。</p>
      * @param string $ModelName <p>模型名称。</p>
      * @param string $ModelId <p>模型 ID。</p>
@@ -136,6 +159,7 @@ class EndpointDetail extends AbstractModel
      * @param integer $AutoAdjustQuota <p>自动调整配额</p>
      * @param integer $RPM <p>RPM（每分钟请求数限流）。当推理服务未单独设置时，回退为关联模型的默认 RPM 值。</p>
      * @param string $ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护</li><li>offline： 下线</li></ul>
+     * @param boolean $NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
      */
     function __construct()
     {
@@ -152,6 +176,14 @@ class EndpointDetail extends AbstractModel
         }
         if (array_key_exists("EndpointId",$param) and $param["EndpointId"] !== null) {
             $this->EndpointId = $param["EndpointId"];
+        }
+
+        if (array_key_exists("WorkspaceId",$param) and $param["WorkspaceId"] !== null) {
+            $this->WorkspaceId = $param["WorkspaceId"];
+        }
+
+        if (array_key_exists("OriginEndpointId",$param) and $param["OriginEndpointId"] !== null) {
+            $this->OriginEndpointId = $param["OriginEndpointId"];
         }
 
         if (array_key_exists("EndpointName",$param) and $param["EndpointName"] !== null) {
@@ -204,6 +236,10 @@ class EndpointDetail extends AbstractModel
 
         if (array_key_exists("ModelStatus",$param) and $param["ModelStatus"] !== null) {
             $this->ModelStatus = $param["ModelStatus"];
+        }
+
+        if (array_key_exists("NightDiscountEnabled",$param) and $param["NightDiscountEnabled"] !== null) {
+            $this->NightDiscountEnabled = $param["NightDiscountEnabled"];
         }
     }
 }

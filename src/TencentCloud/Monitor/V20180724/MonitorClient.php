@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Monitor\V20180724\Models as Models;
 
 /**
+ * @method Models\AddSubnetToManagedClusterResponse AddSubnetToManagedCluster(Models\AddSubnetToManagedClusterRequest $req) 添加子网到 Prometheus 的托管集群
  * @method Models\BindPrometheusManagedGrafanaResponse BindPrometheusManagedGrafana(Models\BindPrometheusManagedGrafanaRequest $req) 绑定 Grafana 可视化服务实例
  * @method Models\BindingPolicyObjectResponse BindingPolicyObject(Models\BindingPolicyObjectRequest $req) 将告警策略绑定到特定对象
  * @method Models\BindingPolicyTagResponse BindingPolicyTag(Models\BindingPolicyTagRequest $req) 策略绑定标签

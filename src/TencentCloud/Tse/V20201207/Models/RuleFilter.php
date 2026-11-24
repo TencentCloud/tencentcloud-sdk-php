@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKey() 获取限流条件的Key
  * @method void setKey(string $Key) 设置限流条件的Key
- * @method array getValues() 获取限流条件的Values
- * @method void setValues(array $Values) 设置限流条件的Values
- * @method string getOperator() 获取操作符
- * @method void setOperator(string $Operator) 设置操作符
  * @method string getName() 获取header或query对应的name
  * @method void setName(string $Name) 设置header或query对应的name
+ * @method string getOperator() 获取操作符
+ * @method void setOperator(string $Operator) 设置操作符
+ * @method array getValues() 获取限流条件的Values
+ * @method void setValues(array $Values) 设置限流条件的Values
  */
 class RuleFilter extends AbstractModel
 {
@@ -37,9 +37,9 @@ class RuleFilter extends AbstractModel
     public $Key;
 
     /**
-     * @var array 限流条件的Values
+     * @var string header或query对应的name
      */
-    public $Values;
+    public $Name;
 
     /**
      * @var string 操作符
@@ -47,15 +47,15 @@ class RuleFilter extends AbstractModel
     public $Operator;
 
     /**
-     * @var string header或query对应的name
+     * @var array 限流条件的Values
      */
-    public $Name;
+    public $Values;
 
     /**
      * @param string $Key 限流条件的Key
-     * @param array $Values 限流条件的Values
-     * @param string $Operator 操作符
      * @param string $Name header或query对应的name
+     * @param string $Operator 操作符
+     * @param array $Values 限流条件的Values
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class RuleFilter extends AbstractModel
             $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

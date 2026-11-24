@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建推理服务返回的详情信息
  *
- * @method string getPreResourceId() 获取预付费包 id
- * @method void setPreResourceId(string $PreResourceId) 设置预付费包 id
+ * @method string getPreResourceId() 获取<p>预付费包 id</p>
+ * @method void setPreResourceId(string $PreResourceId) 设置<p>预付费包 id</p>
  */
 class EndpointCreateDetail extends AbstractModel
 {
     /**
-     * @var string 预付费包 id
+     * @var string <p>预付费包 id</p>
      */
     public $PreResourceId;
 
     /**
-     * @param string $PreResourceId 预付费包 id
+     * @param string $PreResourceId <p>预付费包 id</p>
      */
     function __construct()
     {

@@ -20,78 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateChannelTemplate返回参数结构体
  *
- * @method string getAppId() 获取第三方应用平台的应用ID
- * @method void setAppId(string $AppId) 设置第三方应用平台的应用ID
- * @method string getTemplateId() 获取合同模板ID
- * @method void setTemplateId(string $TemplateId) 设置合同模板ID
- * @method string getOperateResult() 获取描述模板可见性更改的结果。
-<ul>
-<li>all-success: 全部成功</li>
-<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
-<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-</ul>
- * @method void setOperateResult(string $OperateResult) 设置描述模板可见性更改的结果。
-<ul>
-<li>all-success: 全部成功</li>
-<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
-<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-</ul>
- * @method string getAuthTag() 获取模板可见范围:
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
- * @method void setAuthTag(string $AuthTag) 设置模板可见范围:
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
- * @method array getProxyOrganizationOpenIds() 获取第三方平台子客企业标识列表，仅在select 模式下返回
- * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置第三方平台子客企业标识列表，仅在select 模式下返回
- * @method array getFailMessageList() 获取操作失败信息数组
- * @method void setFailMessageList(array $FailMessageList) 设置操作失败信息数组
- * @method integer getTotal() 获取授权的平台子企业数量，OperateType 为select 时返回。
- * @method void setTotal(integer $Total) 设置授权的平台子企业数量，OperateType 为select 时返回。
+ * @method string getAppId() 获取<p>第三方应用平台的应用ID</p>
+ * @method void setAppId(string $AppId) 设置<p>第三方应用平台的应用ID</p>
+ * @method string getTemplateId() 获取<p>合同模板ID</p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>合同模板ID</p>
+ * @method string getOperateResult() 获取<p>描述模板可见性更改的结果。</p><ul><li>all-success: 全部成功</li><li>part-success: 部分成功,失败的会在FailMessageList中展示</li><li>fail:全部失败, 失败的会在FailMessageList中展示</li></ul>
+ * @method void setOperateResult(string $OperateResult) 设置<p>描述模板可见性更改的结果。</p><ul><li>all-success: 全部成功</li><li>part-success: 部分成功,失败的会在FailMessageList中展示</li><li>fail:全部失败, 失败的会在FailMessageList中展示</li></ul>
+ * @method string getAuthTag() 获取<p>模板可见范围:<br><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p>
+ * @method void setAuthTag(string $AuthTag) 设置<p>模板可见范围:<br><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p>
+ * @method array getProxyOrganizationOpenIds() 获取<p>第三方平台子客企业标识列表，仅在select 模式下返回</p>
+ * @method void setProxyOrganizationOpenIds(array $ProxyOrganizationOpenIds) 设置<p>第三方平台子客企业标识列表，仅在select 模式下返回</p>
+ * @method array getFailMessageList() 获取<p>操作失败信息数组</p>
+ * @method void setFailMessageList(array $FailMessageList) 设置<p>操作失败信息数组</p>
+ * @method integer getTotal() 获取<p>授权的平台子企业数量，OperateType 为select 时返回。</p>
+ * @method void setTotal(integer $Total) 设置<p>授权的平台子企业数量，OperateType 为select 时返回。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class OperateChannelTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 第三方应用平台的应用ID
+     * @var string <p>第三方应用平台的应用ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 合同模板ID
+     * @var string <p>合同模板ID</p>
      */
     public $TemplateId;
 
     /**
-     * @var string 描述模板可见性更改的结果。
-<ul>
-<li>all-success: 全部成功</li>
-<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
-<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-</ul>
+     * @var string <p>描述模板可见性更改的结果。</p><ul><li>all-success: 全部成功</li><li>part-success: 部分成功,失败的会在FailMessageList中展示</li><li>fail:全部失败, 失败的会在FailMessageList中展示</li></ul>
      */
     public $OperateResult;
 
     /**
-     * @var string 模板可见范围:
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
+     * @var string <p>模板可见范围:<br><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p>
      */
     public $AuthTag;
 
     /**
-     * @var array 第三方平台子客企业标识列表，仅在select 模式下返回
+     * @var array <p>第三方平台子客企业标识列表，仅在select 模式下返回</p>
      */
     public $ProxyOrganizationOpenIds;
 
     /**
-     * @var array 操作失败信息数组
+     * @var array <p>操作失败信息数组</p>
      */
     public $FailMessageList;
 
     /**
-     * @var integer 授权的平台子企业数量，OperateType 为select 时返回。
+     * @var integer <p>授权的平台子企业数量，OperateType 为select 时返回。</p>
      */
     public $Total;
 
@@ -101,20 +80,13 @@ class OperateChannelTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AppId 第三方应用平台的应用ID
-     * @param string $TemplateId 合同模板ID
-     * @param string $OperateResult 描述模板可见性更改的结果。
-<ul>
-<li>all-success: 全部成功</li>
-<li>part-success: 部分成功,失败的会在FailMessageList中展示</li>
-<li>fail:全部失败, 失败的会在FailMessageList中展示</li>
-</ul>
-     * @param string $AuthTag 模板可见范围:
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-     * @param array $ProxyOrganizationOpenIds 第三方平台子客企业标识列表，仅在select 模式下返回
-     * @param array $FailMessageList 操作失败信息数组
-     * @param integer $Total 授权的平台子企业数量，OperateType 为select 时返回。
+     * @param string $AppId <p>第三方应用平台的应用ID</p>
+     * @param string $TemplateId <p>合同模板ID</p>
+     * @param string $OperateResult <p>描述模板可见性更改的结果。</p><ul><li>all-success: 全部成功</li><li>part-success: 部分成功,失败的会在FailMessageList中展示</li><li>fail:全部失败, 失败的会在FailMessageList中展示</li></ul>
+     * @param string $AuthTag <p>模板可见范围:<br><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p>
+     * @param array $ProxyOrganizationOpenIds <p>第三方平台子客企业标识列表，仅在select 模式下返回</p>
+     * @param array $FailMessageList <p>操作失败信息数组</p>
+     * @param integer $Total <p>授权的平台子企业数量，OperateType 为select 时返回。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

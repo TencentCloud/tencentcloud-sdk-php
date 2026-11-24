@@ -18,7 +18,7 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+ * 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。支持9轮问答。
  *
  * @method string getQuestion() 获取当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
  * @method void setQuestion(string $Question) 设置当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。

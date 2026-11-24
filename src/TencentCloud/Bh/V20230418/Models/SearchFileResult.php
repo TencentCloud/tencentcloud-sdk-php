@@ -20,186 +20,186 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件传输检索结果
  *
- * @method string getTime() 获取文件传输的时间
- * @method void setTime(string $Time) 设置文件传输的时间
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getRealName() 获取姓名
- * @method void setRealName(string $RealName) 设置姓名
- * @method string getInstanceId() 获取资产ID
- * @method void setInstanceId(string $InstanceId) 设置资产ID
- * @method string getDeviceName() 获取资产名称
- * @method void setDeviceName(string $DeviceName) 设置资产名称
- * @method string getPublicIp() 获取资产公网IP
- * @method void setPublicIp(string $PublicIp) 设置资产公网IP
- * @method string getPrivateIp() 获取资产内网IP
- * @method void setPrivateIp(string $PrivateIp) 设置资产内网IP
- * @method integer getAction() 获取操作结果：1 - 已执行，2 - 已阻断
- * @method void setAction(integer $Action) 设置操作结果：1 - 已执行，2 - 已阻断
- * @method integer getMethod() 获取操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
- * @method void setMethod(integer $Method) 设置操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
- * @method string getFileCurr() 获取下载的文件（夹）路径及名称
- * @method void setFileCurr(string $FileCurr) 设置下载的文件（夹）路径及名称
- * @method string getFileNew() 获取上传或新建文件（夹）路径及名称
- * @method void setFileNew(string $FileNew) 设置上传或新建文件（夹）路径及名称
- * @method string getSid() 获取会话id
- * @method void setSid(string $Sid) 设置会话id
- * @method string getAccount() 获取账号
- * @method void setAccount(string $Account) 设置账号
- * @method string getFromIp() 获取来源id
- * @method void setFromIp(string $FromIp) 设置来源id
- * @method string getProtocol() 获取协议
- * @method void setProtocol(string $Protocol) 设置协议
- * @method integer getSize() 获取文件大小
- * @method void setSize(integer $Size) 设置文件大小
- * @method string getConfirmTime() 获取复核时间
- * @method void setConfirmTime(string $ConfirmTime) 设置复核时间
- * @method string getUserDepartmentId() 获取用户部门id
- * @method void setUserDepartmentId(string $UserDepartmentId) 设置用户部门id
- * @method string getUserDepartmentName() 获取用户部门name
- * @method void setUserDepartmentName(string $UserDepartmentName) 设置用户部门name
- * @method string getDeviceDepartmentId() 获取设备部门id
- * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置设备部门id
- * @method string getDeviceDepartmentName() 获取设备部门name	
- * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门name	
- * @method string getSignValue() 获取签名值
- * @method void setSignValue(string $SignValue) 设置签名值
+ * @method string getTime() 获取<p>文件传输的时间</p>
+ * @method void setTime(string $Time) 设置<p>文件传输的时间</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getRealName() 获取<p>姓名</p>
+ * @method void setRealName(string $RealName) 设置<p>姓名</p>
+ * @method string getInstanceId() 获取<p>资产ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>资产ID</p>
+ * @method string getDeviceName() 获取<p>资产名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>资产名称</p>
+ * @method string getPublicIp() 获取<p>资产公网IP</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>资产公网IP</p>
+ * @method string getPrivateIp() 获取<p>资产内网IP</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>资产内网IP</p>
+ * @method integer getAction() 获取<p>操作结果：1 - 已放行，2 - 已阻断</p>
+ * @method void setAction(integer $Action) 设置<p>操作结果：1 - 已放行，2 - 已阻断</p>
+ * @method integer getMethod() 获取<p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+ * @method void setMethod(integer $Method) 设置<p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+ * @method string getFileCurr() 获取<p>下载的文件（夹）路径及名称</p>
+ * @method void setFileCurr(string $FileCurr) 设置<p>下载的文件（夹）路径及名称</p>
+ * @method string getFileNew() 获取<p>上传或新建文件（夹）路径及名称</p>
+ * @method void setFileNew(string $FileNew) 设置<p>上传或新建文件（夹）路径及名称</p>
+ * @method string getSid() 获取<p>会话id</p>
+ * @method void setSid(string $Sid) 设置<p>会话id</p>
+ * @method string getAccount() 获取<p>账号</p>
+ * @method void setAccount(string $Account) 设置<p>账号</p>
+ * @method string getFromIp() 获取<p>来源id</p>
+ * @method void setFromIp(string $FromIp) 设置<p>来源id</p>
+ * @method string getProtocol() 获取<p>协议</p>
+ * @method void setProtocol(string $Protocol) 设置<p>协议</p>
+ * @method integer getSize() 获取<p>文件大小</p>
+ * @method void setSize(integer $Size) 设置<p>文件大小</p>
+ * @method string getConfirmTime() 获取<p>复核时间</p>
+ * @method void setConfirmTime(string $ConfirmTime) 设置<p>复核时间</p>
+ * @method string getUserDepartmentId() 获取<p>用户部门id</p>
+ * @method void setUserDepartmentId(string $UserDepartmentId) 设置<p>用户部门id</p>
+ * @method string getUserDepartmentName() 获取<p>用户部门name</p>
+ * @method void setUserDepartmentName(string $UserDepartmentName) 设置<p>用户部门name</p>
+ * @method string getDeviceDepartmentId() 获取<p>设备部门id</p>
+ * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置<p>设备部门id</p>
+ * @method string getDeviceDepartmentName() 获取<p>设备部门name</p>
+ * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置<p>设备部门name</p>
+ * @method string getSignValue() 获取<p>签名值</p>
+ * @method void setSignValue(string $SignValue) 设置<p>签名值</p>
  */
 class SearchFileResult extends AbstractModel
 {
     /**
-     * @var string 文件传输的时间
+     * @var string <p>文件传输的时间</p>
      */
     public $Time;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 姓名
+     * @var string <p>姓名</p>
      */
     public $RealName;
 
     /**
-     * @var string 资产ID
+     * @var string <p>资产ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产名称
+     * @var string <p>资产名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 资产公网IP
+     * @var string <p>资产公网IP</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 资产内网IP
+     * @var string <p>资产内网IP</p>
      */
     public $PrivateIp;
 
     /**
-     * @var integer 操作结果：1 - 已执行，2 - 已阻断
+     * @var integer <p>操作结果：1 - 已放行，2 - 已阻断</p>
      */
     public $Action;
 
     /**
-     * @var integer 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * @var integer <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public $Method;
 
     /**
-     * @var string 下载的文件（夹）路径及名称
+     * @var string <p>下载的文件（夹）路径及名称</p>
      */
     public $FileCurr;
 
     /**
-     * @var string 上传或新建文件（夹）路径及名称
+     * @var string <p>上传或新建文件（夹）路径及名称</p>
      */
     public $FileNew;
 
     /**
-     * @var string 会话id
+     * @var string <p>会话id</p>
      */
     public $Sid;
 
     /**
-     * @var string 账号
+     * @var string <p>账号</p>
      */
     public $Account;
 
     /**
-     * @var string 来源id
+     * @var string <p>来源id</p>
      */
     public $FromIp;
 
     /**
-     * @var string 协议
+     * @var string <p>协议</p>
      */
     public $Protocol;
 
     /**
-     * @var integer 文件大小
+     * @var integer <p>文件大小</p>
      */
     public $Size;
 
     /**
-     * @var string 复核时间
+     * @var string <p>复核时间</p>
      */
     public $ConfirmTime;
 
     /**
-     * @var string 用户部门id
+     * @var string <p>用户部门id</p>
      */
     public $UserDepartmentId;
 
     /**
-     * @var string 用户部门name
+     * @var string <p>用户部门name</p>
      */
     public $UserDepartmentName;
 
     /**
-     * @var string 设备部门id
+     * @var string <p>设备部门id</p>
      */
     public $DeviceDepartmentId;
 
     /**
-     * @var string 设备部门name	
+     * @var string <p>设备部门name</p>
      */
     public $DeviceDepartmentName;
 
     /**
-     * @var string 签名值
+     * @var string <p>签名值</p>
      */
     public $SignValue;
 
     /**
-     * @param string $Time 文件传输的时间
-     * @param string $UserName 用户名
-     * @param string $RealName 姓名
-     * @param string $InstanceId 资产ID
-     * @param string $DeviceName 资产名称
-     * @param string $PublicIp 资产公网IP
-     * @param string $PrivateIp 资产内网IP
-     * @param integer $Action 操作结果：1 - 已执行，2 - 已阻断
-     * @param integer $Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
-     * @param string $FileCurr 下载的文件（夹）路径及名称
-     * @param string $FileNew 上传或新建文件（夹）路径及名称
-     * @param string $Sid 会话id
-     * @param string $Account 账号
-     * @param string $FromIp 来源id
-     * @param string $Protocol 协议
-     * @param integer $Size 文件大小
-     * @param string $ConfirmTime 复核时间
-     * @param string $UserDepartmentId 用户部门id
-     * @param string $UserDepartmentName 用户部门name
-     * @param string $DeviceDepartmentId 设备部门id
-     * @param string $DeviceDepartmentName 设备部门name	
-     * @param string $SignValue 签名值
+     * @param string $Time <p>文件传输的时间</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $RealName <p>姓名</p>
+     * @param string $InstanceId <p>资产ID</p>
+     * @param string $DeviceName <p>资产名称</p>
+     * @param string $PublicIp <p>资产公网IP</p>
+     * @param string $PrivateIp <p>资产内网IP</p>
+     * @param integer $Action <p>操作结果：1 - 已放行，2 - 已阻断</p>
+     * @param integer $Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+     * @param string $FileCurr <p>下载的文件（夹）路径及名称</p>
+     * @param string $FileNew <p>上传或新建文件（夹）路径及名称</p>
+     * @param string $Sid <p>会话id</p>
+     * @param string $Account <p>账号</p>
+     * @param string $FromIp <p>来源id</p>
+     * @param string $Protocol <p>协议</p>
+     * @param integer $Size <p>文件大小</p>
+     * @param string $ConfirmTime <p>复核时间</p>
+     * @param string $UserDepartmentId <p>用户部门id</p>
+     * @param string $UserDepartmentName <p>用户部门name</p>
+     * @param string $DeviceDepartmentId <p>设备部门id</p>
+     * @param string $DeviceDepartmentName <p>设备部门name</p>
+     * @param string $SignValue <p>签名值</p>
      */
     function __construct()
     {

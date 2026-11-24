@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivilege(string $Privilege) 设置<p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWorkflowLabels() 获取<p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowLabels(array $WorkflowLabels) 设置<p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowDsDTO extends AbstractModel
 {
@@ -234,6 +238,12 @@ class WorkflowDsDTO extends AbstractModel
     public $Privilege;
 
     /**
+     * @var array <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowLabels;
+
+    /**
      * @param string $WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner <p>责任人</p>
@@ -275,6 +285,8 @@ class WorkflowDsDTO extends AbstractModel
      * @param string $ExecuteUserName <p>运行账号名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privilege <p>用户对该资源的最高权限</p><p>枚举值：</p><ul><li>NO_PERMISSIONS： 无权限</li><li>CAN_VIEW： 只读权限</li><li>CAN_MANAGE： 管理权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WorkflowLabels <p>工作流标签列表，仅工作流调度模式返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -387,6 +399,15 @@ class WorkflowDsDTO extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("WorkflowLabels",$param) and $param["WorkflowLabels"] !== null) {
+            $this->WorkflowLabels = [];
+            foreach ($param["WorkflowLabels"] as $key => $value){
+                $obj = new WorkflowLabel();
+                $obj->deserialize($value);
+                array_push($this->WorkflowLabels, $obj);
+            }
         }
     }
 }

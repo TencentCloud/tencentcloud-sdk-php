@@ -20,114 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchFile请求参数结构体
  *
- * @method string getStartTime() 获取查询开始时间
- * @method void setStartTime(string $StartTime) 设置查询开始时间
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getRealName() 获取姓名
- * @method void setRealName(string $RealName) 设置姓名
- * @method string getInstanceId() 获取资产ID
- * @method void setInstanceId(string $InstanceId) 设置资产ID
- * @method string getDeviceName() 获取资产名称
- * @method void setDeviceName(string $DeviceName) 设置资产名称
- * @method string getPublicIp() 获取资产公网IP
- * @method void setPublicIp(string $PublicIp) 设置资产公网IP
- * @method string getPrivateIp() 获取资产内网IP
- * @method void setPrivateIp(string $PrivateIp) 设置资产内网IP
- * @method array getMethod() 获取操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
- * @method void setMethod(array $Method) 设置操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
- * @method string getFileName() 获取可填写路径名或文件（夹）名
- * @method void setFileName(string $FileName) 设置可填写路径名或文件（夹）名
- * @method array getAuditAction() 获取1-已执行，  2-被阻断
- * @method void setAuditAction(array $AuditAction) 设置1-已执行，  2-被阻断
- * @method integer getLimit() 获取分页的页内记录数，默认为20，最大200
- * @method void setLimit(integer $Limit) 设置分页的页内记录数，默认为20，最大200
- * @method integer getOffset() 获取分页偏移位置，默认值为0
- * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
+ * @method string getStartTime() 获取<p>查询开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>查询开始时间</p>
+ * @method string getEndTime() 获取<p>查询结束时间</p>
+ * @method void setEndTime(string $EndTime) 设置<p>查询结束时间</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getRealName() 获取<p>姓名</p>
+ * @method void setRealName(string $RealName) 设置<p>姓名</p>
+ * @method string getInstanceId() 获取<p>资产ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>资产ID</p>
+ * @method string getDeviceName() 获取<p>资产名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>资产名称</p>
+ * @method string getPublicIp() 获取<p>资产公网IP</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>资产公网IP</p>
+ * @method string getPrivateIp() 获取<p>资产内网IP</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>资产内网IP</p>
+ * @method array getMethod() 获取<p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+ * @method void setMethod(array $Method) 设置<p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+ * @method string getFileName() 获取<p>可填写路径名或文件（夹）名</p>
+ * @method void setFileName(string $FileName) 设置<p>可填写路径名或文件（夹）名</p>
+ * @method array getAuditAction() 获取<p>1-已放行，  2-已阻断</p>
+ * @method void setAuditAction(array $AuditAction) 设置<p>1-已放行，  2-已阻断</p>
+ * @method integer getLimit() 获取<p>分页的页内记录数，默认为20，最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页的页内记录数，默认为20，最大200</p>
+ * @method integer getOffset() 获取<p>分页偏移位置，默认值为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移位置，默认值为0</p>
  */
 class SearchFileRequest extends AbstractModel
 {
     /**
-     * @var string 查询开始时间
+     * @var string <p>查询开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 查询结束时间
+     * @var string <p>查询结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 姓名
+     * @var string <p>姓名</p>
      */
     public $RealName;
 
     /**
-     * @var string 资产ID
+     * @var string <p>资产ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产名称
+     * @var string <p>资产名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 资产公网IP
+     * @var string <p>资产公网IP</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 资产内网IP
+     * @var string <p>资产内网IP</p>
      */
     public $PrivateIp;
 
     /**
-     * @var array 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * @var array <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public $Method;
 
     /**
-     * @var string 可填写路径名或文件（夹）名
+     * @var string <p>可填写路径名或文件（夹）名</p>
      */
     public $FileName;
 
     /**
-     * @var array 1-已执行，  2-被阻断
+     * @var array <p>1-已放行，  2-已阻断</p>
      */
     public $AuditAction;
 
     /**
-     * @var integer 分页的页内记录数，默认为20，最大200
+     * @var integer <p>分页的页内记录数，默认为20，最大200</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移位置，默认值为0
+     * @var integer <p>分页偏移位置，默认值为0</p>
      */
     public $Offset;
 
     /**
-     * @param string $StartTime 查询开始时间
-     * @param string $EndTime 查询结束时间
-     * @param string $UserName 用户名
-     * @param string $RealName 姓名
-     * @param string $InstanceId 资产ID
-     * @param string $DeviceName 资产名称
-     * @param string $PublicIp 资产公网IP
-     * @param string $PrivateIp 资产内网IP
-     * @param array $Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
-     * @param string $FileName 可填写路径名或文件（夹）名
-     * @param array $AuditAction 1-已执行，  2-被阻断
-     * @param integer $Limit 分页的页内记录数，默认为20，最大200
-     * @param integer $Offset 分页偏移位置，默认值为0
+     * @param string $StartTime <p>查询开始时间</p>
+     * @param string $EndTime <p>查询结束时间</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $RealName <p>姓名</p>
+     * @param string $InstanceId <p>资产ID</p>
+     * @param string $DeviceName <p>资产名称</p>
+     * @param string $PublicIp <p>资产公网IP</p>
+     * @param string $PrivateIp <p>资产内网IP</p>
+     * @param array $Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+     * @param string $FileName <p>可填写路径名或文件（夹）名</p>
+     * @param array $AuditAction <p>1-已放行，  2-已阻断</p>
+     * @param integer $Limit <p>分页的页内记录数，默认为20，最大200</p>
+     * @param integer $Offset <p>分页偏移位置，默认值为0</p>
      */
     function __construct()
     {

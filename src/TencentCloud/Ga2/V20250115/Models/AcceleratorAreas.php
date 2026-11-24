@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccelerateRegion() 获取<p>加速地域。</p>
  * @method void setAccelerateRegion(string $AccelerateRegion) 设置<p>加速地域。</p>
+ * @method string getAccelerateRegionName() 获取<p>加速地域名称。</p>
+ * @method void setAccelerateRegionName(string $AccelerateRegionName) 设置<p>加速地域名称。</p>
  * @method integer getBandwidth() 获取<p>带宽。</p>
  * @method void setBandwidth(integer $Bandwidth) 设置<p>带宽。</p>
  * @method string getIspType() 获取<p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
@@ -43,6 +45,11 @@ class AcceleratorAreas extends AbstractModel
      * @var string <p>加速地域。</p>
      */
     public $AccelerateRegion;
+
+    /**
+     * @var string <p>加速地域名称。</p>
+     */
+    public $AccelerateRegionName;
 
     /**
      * @var integer <p>带宽。</p>
@@ -77,6 +84,7 @@ class AcceleratorAreas extends AbstractModel
 
     /**
      * @param string $AccelerateRegion <p>加速地域。</p>
+     * @param string $AccelerateRegionName <p>加速地域名称。</p>
      * @param integer $Bandwidth <p>带宽。</p>
      * @param string $IspType <p>支持&#39;BGP&#39;, &#39;QUALITY_BGP&#39;, &#39;STATIC_IP&#39;，默认BGP。</p><p>枚举值：</p><ul><li>BGP： BGP</li><li>STATIC_IP： 三网</li><li>QUALITY_BGP： 精品BGP</li></ul>
      * @param string $IpVersion <p>仅支持IPv4，默认是IPv4。</p>
@@ -100,6 +108,10 @@ class AcceleratorAreas extends AbstractModel
         }
         if (array_key_exists("AccelerateRegion",$param) and $param["AccelerateRegion"] !== null) {
             $this->AccelerateRegion = $param["AccelerateRegion"];
+        }
+
+        if (array_key_exists("AccelerateRegionName",$param) and $param["AccelerateRegionName"] !== null) {
+            $this->AccelerateRegionName = $param["AccelerateRegionName"];
         }
 
         if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {

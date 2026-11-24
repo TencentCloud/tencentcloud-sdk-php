@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AppTrigger
  *
+ * @method string getAgentId() 获取<p>Agent ID，scope=USER 时可选。</p>
+ * @method void setAgentId(string $AgentId) 设置<p>Agent ID，scope=USER 时可选。</p>
  * @method string getAppId() 获取<p>应用ID</p>
  * @method void setAppId(string $AppId) 设置<p>应用ID</p>
  * @method ExecuteConfig getExecuteConfig() 获取<p>执行配置</p>
@@ -51,6 +53,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class AppTrigger extends AbstractModel
 {
+    /**
+     * @var string <p>Agent ID，scope=USER 时可选。</p>
+     */
+    public $AgentId;
+
     /**
      * @var string <p>应用ID</p>
      */
@@ -122,6 +129,7 @@ class AppTrigger extends AbstractModel
     public $UserId;
 
     /**
+     * @param string $AgentId <p>Agent ID，scope=USER 时可选。</p>
      * @param string $AppId <p>应用ID</p>
      * @param ExecuteConfig $ExecuteConfig <p>执行配置</p>
      * @param integer $ExecuteType <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_PROMPT</td><td>1</td><td>指令执行</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_WORKFLOW</td><td>2</td><td>工作流执行</td></tr></tbody></table>
@@ -150,6 +158,10 @@ class AppTrigger extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
+        }
+
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
         }

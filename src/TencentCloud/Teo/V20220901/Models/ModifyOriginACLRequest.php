@@ -20,62 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyOriginACL请求参数结构体
  *
- * @method string getZoneId() 获取站点 ID。
- * @method void setZoneId(string $ZoneId) 设置站点 ID。
- * @method array getOriginACLEntities() 获取需要启用/关闭特定回源 IP 网段回源的实例。
- * @method void setOriginACLEntities(array $OriginACLEntities) 设置需要启用/关闭特定回源 IP 网段回源的实例。
- * @method string getOriginACLFamily() 获取源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
-具体取值说明如下：
-<li>gaz：标准全球可用区控制域；</li>
-<li>mlc：标准中国大陆可用区控制域；</li>
-<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
-<li>plat-gaz：精简全球可用区控制域；</li>
-<li>plat-mlc：精简中国大陆可用区控制域；</li>
-<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
- * @method void setOriginACLFamily(string $OriginACLFamily) 设置源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
-具体取值说明如下：
-<li>gaz：标准全球可用区控制域；</li>
-<li>mlc：标准中国大陆可用区控制域；</li>
-<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
-<li>plat-gaz：精简全球可用区控制域；</li>
-<li>plat-mlc：精简中国大陆可用区控制域；</li>
-<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+ * @method string getZoneId() 获取<p>站点 ID。</p>
+ * @method void setZoneId(string $ZoneId) 设置<p>站点 ID。</p>
+ * @method string getL7EnableMode() 获取<p>七层加速域名源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有七层加速域名将自动加入到源站防护列表中，包含后续新增的七层加速域名；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的七层加速域名（通过 L7Hosts 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L7Hosts 请保留为空；当站点下七层加速域名数量超过 200 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+ * @method void setL7EnableMode(string $L7EnableMode) 设置<p>七层加速域名源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有七层加速域名将自动加入到源站防护列表中，包含后续新增的七层加速域名；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的七层加速域名（通过 L7Hosts 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L7Hosts 请保留为空；当站点下七层加速域名数量超过 200 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+ * @method string getL4EnableMode() 获取<p>四层代理实例源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有四层代理实例将自动加入到源站防护列表中，包含后续新增的四层代理实例资源；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的四层代理实例（通过 L4ProxyIds 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L4ProxyIds 请保留为空；当站点下四层代理实例数量超过 100 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+ * @method void setL4EnableMode(string $L4EnableMode) 设置<p>四层代理实例源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有四层代理实例将自动加入到源站防护列表中，包含后续新增的四层代理实例资源；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的四层代理实例（通过 L4ProxyIds 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L4ProxyIds 请保留为空；当站点下四层代理实例数量超过 100 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+ * @method array getOriginACLEntities() 获取<p>需要启用/关闭特定回源 IP 网段回源的实例。<br>注意：本参数仅适用于 <strong>指定加入防护模式</strong> 下的资源调整；当对应层级的源站防护模式为 all 时，该类型的资源列表由系统自动维护，本参数中请勿包含该类型的资源，如需手动调整，请先通过 L7EnableMode/L4EnableMode 将对应层级切换为 specific。</p>
+ * @method void setOriginACLEntities(array $OriginACLEntities) 设置<p>需要启用/关闭特定回源 IP 网段回源的实例。<br>注意：本参数仅适用于 <strong>指定加入防护模式</strong> 下的资源调整；当对应层级的源站防护模式为 all 时，该类型的资源列表由系统自动维护，本参数中请勿包含该类型的资源，如需手动调整，请先通过 L7EnableMode/L4EnableMode 将对应层级切换为 specific。</p>
+ * @method string getOriginACLFamily() 获取<p>源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。<br>具体取值说明如下：</p><li>gaz：标准全球可用区控制域；</li><li>mlc：标准中国大陆可用区控制域；</li><li>emc：标准全球(不含中国大陆)可用区控制域；</li><li>plat-gaz：精简全球可用区控制域；</li><li>plat-mlc：精简中国大陆可用区控制域；</li><li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+ * @method void setOriginACLFamily(string $OriginACLFamily) 设置<p>源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。<br>具体取值说明如下：</p><li>gaz：标准全球可用区控制域；</li><li>mlc：标准中国大陆可用区控制域；</li><li>emc：标准全球(不含中国大陆)可用区控制域；</li><li>plat-gaz：精简全球可用区控制域；</li><li>plat-mlc：精简中国大陆可用区控制域；</li><li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
  */
 class ModifyOriginACLRequest extends AbstractModel
 {
     /**
-     * @var string 站点 ID。
+     * @var string <p>站点 ID。</p>
      */
     public $ZoneId;
 
     /**
-     * @var array 需要启用/关闭特定回源 IP 网段回源的实例。
+     * @var string <p>七层加速域名源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有七层加速域名将自动加入到源站防护列表中，包含后续新增的七层加速域名；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的七层加速域名（通过 L7Hosts 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L7Hosts 请保留为空；当站点下七层加速域名数量超过 200 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+     */
+    public $L7EnableMode;
+
+    /**
+     * @var string <p>四层代理实例源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有四层代理实例将自动加入到源站防护列表中，包含后续新增的四层代理实例资源；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的四层代理实例（通过 L4ProxyIds 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L4ProxyIds 请保留为空；当站点下四层代理实例数量超过 100 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+     */
+    public $L4EnableMode;
+
+    /**
+     * @var array <p>需要启用/关闭特定回源 IP 网段回源的实例。<br>注意：本参数仅适用于 <strong>指定加入防护模式</strong> 下的资源调整；当对应层级的源站防护模式为 all 时，该类型的资源列表由系统自动维护，本参数中请勿包含该类型的资源，如需手动调整，请先通过 L7EnableMode/L4EnableMode 将对应层级切换为 specific。</p>
      */
     public $OriginACLEntities;
 
     /**
-     * @var string 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
-具体取值说明如下：
-<li>gaz：标准全球可用区控制域；</li>
-<li>mlc：标准中国大陆可用区控制域；</li>
-<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
-<li>plat-gaz：精简全球可用区控制域；</li>
-<li>plat-mlc：精简中国大陆可用区控制域；</li>
-<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+     * @var string <p>源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。<br>具体取值说明如下：</p><li>gaz：标准全球可用区控制域；</li><li>mlc：标准中国大陆可用区控制域；</li><li>emc：标准全球(不含中国大陆)可用区控制域；</li><li>plat-gaz：精简全球可用区控制域；</li><li>plat-mlc：精简中国大陆可用区控制域；</li><li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
      */
     public $OriginACLFamily;
 
     /**
-     * @param string $ZoneId 站点 ID。
-     * @param array $OriginACLEntities 需要启用/关闭特定回源 IP 网段回源的实例。
-     * @param string $OriginACLFamily 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
-具体取值说明如下：
-<li>gaz：标准全球可用区控制域；</li>
-<li>mlc：标准中国大陆可用区控制域；</li>
-<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
-<li>plat-gaz：精简全球可用区控制域；</li>
-<li>plat-mlc：精简中国大陆可用区控制域；</li>
-<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+     * @param string $ZoneId <p>站点 ID。</p>
+     * @param string $L7EnableMode <p>七层加速域名源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有七层加速域名将自动加入到源站防护列表中，包含后续新增的七层加速域名；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的七层加速域名（通过 L7Hosts 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L7Hosts 请保留为空；当站点下七层加速域名数量超过 200 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+     * @param string $L4EnableMode <p>四层代理实例源站防护模式，默认值: specific。<li>all：<strong>自动纳入防护模式</strong>，站点内所有四层代理实例将自动加入到源站防护列表中，包含后续新增的四层代理实例资源；</li><li>specific：<strong>指定加入防护模式</strong>，需要人工指定期望加入到源站防护的四层代理实例（通过 L4ProxyIds 参数指定），未指定的资源不会加入到源站防护列表中，后续的防护资源调整可通过 ModifyOriginACL 接口进行。</li>注意：取值为 all 时，L4ProxyIds 请保留为空；当站点下四层代理实例数量超过 100 时，请先通过 specific 模式启用，剩余资源通过 ModifyOriginACL 接口启用后，再通过 ModifyOriginACL 接口切换为 all。</p>
+     * @param array $OriginACLEntities <p>需要启用/关闭特定回源 IP 网段回源的实例。<br>注意：本参数仅适用于 <strong>指定加入防护模式</strong> 下的资源调整；当对应层级的源站防护模式为 all 时，该类型的资源列表由系统自动维护，本参数中请勿包含该类型的资源，如需手动调整，请先通过 L7EnableMode/L4EnableMode 将对应层级切换为 specific。</p>
+     * @param string $OriginACLFamily <p>源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。<br>具体取值说明如下：</p><li>gaz：标准全球可用区控制域；</li><li>mlc：标准中国大陆可用区控制域；</li><li>emc：标准全球(不含中国大陆)可用区控制域；</li><li>plat-gaz：精简全球可用区控制域；</li><li>plat-mlc：精简中国大陆可用区控制域；</li><li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
      */
     function __construct()
     {
@@ -92,6 +80,14 @@ class ModifyOriginACLRequest extends AbstractModel
         }
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("L7EnableMode",$param) and $param["L7EnableMode"] !== null) {
+            $this->L7EnableMode = $param["L7EnableMode"];
+        }
+
+        if (array_key_exists("L4EnableMode",$param) and $param["L4EnableMode"] !== null) {
+            $this->L4EnableMode = $param["L4EnableMode"];
         }
 
         if (array_key_exists("OriginACLEntities",$param) and $param["OriginACLEntities"] !== null) {

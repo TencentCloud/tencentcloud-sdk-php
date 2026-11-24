@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置<p>翻页单页查询限制数量[0,1000], 默认值0</p>
  * @method integer getOffset() 获取<p>翻页单页偏移量，默认值0</p>
  * @method void setOffset(integer $Offset) 设置<p>翻页单页偏移量，默认值0</p>
+ * @method string getServiceId() 获取<p>按服务 ID 查询路由。</p>
+ * @method void setServiceId(string $ServiceId) 设置<p>按服务 ID 查询路由。</p>
  * @method string getServiceName() 获取<p>服务的名字，精确匹配</p>
  * @method void setServiceName(string $ServiceName) 设置<p>服务的名字，精确匹配</p>
  * @method string getRouteName() 获取<p>路由的名字，精确匹配</p>
@@ -61,6 +63,11 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
      * @var integer <p>翻页单页偏移量，默认值0</p>
      */
     public $Offset;
+
+    /**
+     * @var string <p>按服务 ID 查询路由。</p>
+     */
+    public $ServiceId;
 
     /**
      * @var string <p>服务的名字，精确匹配</p>
@@ -111,6 +118,7 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
      * @param string $GatewayId <p>网关ID</p>
      * @param integer $Limit <p>翻页单页查询限制数量[0,1000], 默认值0</p>
      * @param integer $Offset <p>翻页单页偏移量，默认值0</p>
+     * @param string $ServiceId <p>按服务 ID 查询路由。</p>
      * @param string $ServiceName <p>服务的名字，精确匹配</p>
      * @param string $RouteName <p>路由的名字，精确匹配</p>
      * @param array $Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 name, path, host, method, service, protocol</p>
@@ -144,6 +152,10 @@ class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {

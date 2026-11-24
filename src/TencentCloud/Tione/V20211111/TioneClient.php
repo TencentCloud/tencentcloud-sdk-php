@@ -360,6 +360,7 @@ X-TC-ProjectId: 123456
  * @method Models\ModifyRoleAccessRulesResponse ModifyRoleAccessRules(Models\ModifyRoleAccessRulesRequest $req) 修改自定义角色的权限规则
  * @method Models\ModifyRoleUserGrantResponse ModifyRoleUserGrant(Models\ModifyRoleUserGrantRequest $req) 修改角色下用户的授权状态
  * @method Models\ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(Models\ModifyServiceGroupWeightsRequest $req) 更新推理服务组流量分配
+ * @method Models\ModifyTrainingTaskSchedulingPolicyResponse ModifyTrainingTaskSchedulingPolicy(Models\ModifyTrainingTaskSchedulingPolicyRequest $req) 更新训练任务的调度策略
  * @method Models\ModifyUserGrantResponse ModifyUserGrant(Models\ModifyUserGrantRequest $req) 更新用户授权
  * @method Models\ModifyWorkspaceMembersResponse ModifyWorkspaceMembers(Models\ModifyWorkspaceMembersRequest $req) 更新空间用户列表
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnreadRunLogCount(string $UnreadRunLogCount) 设置<p>未读日志的数量</p>
  * @method string getUserId() 获取<p>访客ID</p>
  * @method void setUserId(string $UserId) 设置<p>访客ID</p>
+ * @method integer getWebhookProvider() 获取Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+ * @method void setWebhookProvider(integer $WebhookProvider) 设置Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
  */
 class AppTriggerSummary extends AbstractModel
 {
@@ -115,6 +117,11 @@ class AppTriggerSummary extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public $WebhookProvider;
+
+    /**
      * @param string $AppId <p>应用ID</p>
      * @param integer $ExecuteType <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_PROMPT</td><td>1</td><td>指令执行</td></tr><tr><td>APP_TRIGGER_EXECUTE_TYPE_WORKFLOW</td><td>2</td><td>工作流执行</td></tr></tbody></table>
      * @param string $FailedCount <p>失败次数</p>
@@ -128,6 +135,7 @@ class AppTriggerSummary extends AbstractModel
      * @param integer $TriggerType <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>APP_TRIGGER_TYPE_UNSPECIFIED</td><td>0</td><td>未指定</td></tr><tr><td>APP_TRIGGER_TYPE_SCHEDULED</td><td>1</td><td>定时触发</td></tr><tr><td>APP_TRIGGER_TYPE_WEBHOOK</td><td>2</td><td>Webhook 触发</td></tr></tbody></table>
      * @param string $UnreadRunLogCount <p>未读日志的数量</p>
      * @param string $UserId <p>访客ID</p>
+     * @param integer $WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class AppTriggerSummary extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("WebhookProvider",$param) and $param["WebhookProvider"] !== null) {
+            $this->WebhookProvider = $param["WebhookProvider"];
         }
     }
 }

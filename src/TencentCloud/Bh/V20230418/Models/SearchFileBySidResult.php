@@ -20,154 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文件操作搜索结果
  *
- * @method string getSid() 获取会话Id
- * @method void setSid(string $Sid) 设置会话Id
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getAccount() 获取资产账号
- * @method void setAccount(string $Account) 设置资产账号
- * @method string getFromIp() 获取来源Ip
- * @method void setFromIp(string $FromIp) 设置来源Ip
- * @method string getTime() 获取文件操作时间
- * @method void setTime(string $Time) 设置文件操作时间
- * @method integer getMethod() 获取1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
- * @method void setMethod(integer $Method) 设置1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
- * @method string getProtocol() 获取文件传输协议
- * @method void setProtocol(string $Protocol) 设置文件传输协议
- * @method string getFileCurr() 获取method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
- * @method void setFileCurr(string $FileCurr) 设置method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
- * @method string getFileNew() 获取method为重命名、移动文件时代表移动后的新位置.其他情况为null
- * @method void setFileNew(string $FileNew) 设置method为重命名、移动文件时代表移动后的新位置.其他情况为null
- * @method integer getSize() 获取method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
- * @method void setSize(integer $Size) 设置method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
- * @method integer getAction() 获取堡垒机拦截情况, 1-已执行，  2-被阻断
- * @method void setAction(integer $Action) 设置堡垒机拦截情况, 1-已执行，  2-被阻断
- * @method string getConfirmTime() 获取复核时间，当Action是3时，需有复核时间
- * @method void setConfirmTime(string $ConfirmTime) 设置复核时间，当Action是3时，需有复核时间
- * @method string getUserDepartmentId() 获取用户部门Id
- * @method void setUserDepartmentId(string $UserDepartmentId) 设置用户部门Id
- * @method string getUserDepartmentName() 获取用户部门name
- * @method void setUserDepartmentName(string $UserDepartmentName) 设置用户部门name
- * @method string getDeviceDepartmentId() 获取设备部门id
- * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置设备部门id
- * @method string getDeviceDepartmentName() 获取设备部门name
- * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置设备部门name
- * @method string getSignValue() 获取签名值
- * @method void setSignValue(string $SignValue) 设置签名值
+ * @method string getSid() 获取<p>会话Id</p>
+ * @method void setSid(string $Sid) 设置<p>会话Id</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getInstanceId() 获取<p>实例Id</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例Id</p>
+ * @method string getAccount() 获取<p>资产账号</p>
+ * @method void setAccount(string $Account) 设置<p>资产账号</p>
+ * @method string getFromIp() 获取<p>来源Ip</p>
+ * @method void setFromIp(string $FromIp) 设置<p>来源Ip</p>
+ * @method string getTime() 获取<p>文件操作时间</p>
+ * @method void setTime(string $Time) 设置<p>文件操作时间</p>
+ * @method integer getMethod() 获取<p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
+ * @method void setMethod(integer $Method) 设置<p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
+ * @method string getProtocol() 获取<p>文件传输协议</p>
+ * @method void setProtocol(string $Protocol) 设置<p>文件传输协议</p>
+ * @method string getFileCurr() 获取<p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
+ * @method void setFileCurr(string $FileCurr) 设置<p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
+ * @method string getFileNew() 获取<p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
+ * @method void setFileNew(string $FileNew) 设置<p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
+ * @method integer getSize() 获取<p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
+ * @method void setSize(integer $Size) 设置<p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
+ * @method integer getAction() 获取<p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
+ * @method void setAction(integer $Action) 设置<p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
+ * @method string getConfirmTime() 获取<p>复核时间，当Action是3时，需有复核时间</p>
+ * @method void setConfirmTime(string $ConfirmTime) 设置<p>复核时间，当Action是3时，需有复核时间</p>
+ * @method string getUserDepartmentId() 获取<p>用户部门Id</p>
+ * @method void setUserDepartmentId(string $UserDepartmentId) 设置<p>用户部门Id</p>
+ * @method string getUserDepartmentName() 获取<p>用户部门name</p>
+ * @method void setUserDepartmentName(string $UserDepartmentName) 设置<p>用户部门name</p>
+ * @method string getDeviceDepartmentId() 获取<p>设备部门id</p>
+ * @method void setDeviceDepartmentId(string $DeviceDepartmentId) 设置<p>设备部门id</p>
+ * @method string getDeviceDepartmentName() 获取<p>设备部门name</p>
+ * @method void setDeviceDepartmentName(string $DeviceDepartmentName) 设置<p>设备部门name</p>
+ * @method string getSignValue() 获取<p>签名值</p>
+ * @method void setSignValue(string $SignValue) 设置<p>签名值</p>
  */
 class SearchFileBySidResult extends AbstractModel
 {
     /**
-     * @var string 会话Id
+     * @var string <p>会话Id</p>
      */
     public $Sid;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 实例Id
+     * @var string <p>实例Id</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产账号
+     * @var string <p>资产账号</p>
      */
     public $Account;
 
     /**
-     * @var string 来源Ip
+     * @var string <p>来源Ip</p>
      */
     public $FromIp;
 
     /**
-     * @var string 文件操作时间
+     * @var string <p>文件操作时间</p>
      */
     public $Time;
 
     /**
-     * @var integer 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
+     * @var integer <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
      */
     public $Method;
 
     /**
-     * @var string 文件传输协议
+     * @var string <p>文件传输协议</p>
      */
     public $Protocol;
 
     /**
-     * @var string method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
+     * @var string <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
      */
     public $FileCurr;
 
     /**
-     * @var string method为重命名、移动文件时代表移动后的新位置.其他情况为null
+     * @var string <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
      */
     public $FileNew;
 
     /**
-     * @var integer method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
+     * @var integer <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
      */
     public $Size;
 
     /**
-     * @var integer 堡垒机拦截情况, 1-已执行，  2-被阻断
+     * @var integer <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
      */
     public $Action;
 
     /**
-     * @var string 复核时间，当Action是3时，需有复核时间
+     * @var string <p>复核时间，当Action是3时，需有复核时间</p>
      */
     public $ConfirmTime;
 
     /**
-     * @var string 用户部门Id
+     * @var string <p>用户部门Id</p>
      */
     public $UserDepartmentId;
 
     /**
-     * @var string 用户部门name
+     * @var string <p>用户部门name</p>
      */
     public $UserDepartmentName;
 
     /**
-     * @var string 设备部门id
+     * @var string <p>设备部门id</p>
      */
     public $DeviceDepartmentId;
 
     /**
-     * @var string 设备部门name
+     * @var string <p>设备部门name</p>
      */
     public $DeviceDepartmentName;
 
     /**
-     * @var string 签名值
+     * @var string <p>签名值</p>
      */
     public $SignValue;
 
     /**
-     * @param string $Sid 会话Id
-     * @param string $UserName 用户名
-     * @param string $InstanceId 实例Id
-     * @param string $Account 资产账号
-     * @param string $FromIp 来源Ip
-     * @param string $Time 文件操作时间
-     * @param integer $Method 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
-     * @param string $Protocol 文件传输协议
-     * @param string $FileCurr method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
-     * @param string $FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
-     * @param integer $Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-     * @param integer $Action 堡垒机拦截情况, 1-已执行，  2-被阻断
-     * @param string $ConfirmTime 复核时间，当Action是3时，需有复核时间
-     * @param string $UserDepartmentId 用户部门Id
-     * @param string $UserDepartmentName 用户部门name
-     * @param string $DeviceDepartmentId 设备部门id
-     * @param string $DeviceDepartmentName 设备部门name
-     * @param string $SignValue 签名值
+     * @param string $Sid <p>会话Id</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $InstanceId <p>实例Id</p>
+     * @param string $Account <p>资产账号</p>
+     * @param string $FromIp <p>来源Ip</p>
+     * @param string $Time <p>文件操作时间</p>
+     * @param integer $Method <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
+     * @param string $Protocol <p>文件传输协议</p>
+     * @param string $FileCurr <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
+     * @param string $FileNew <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
+     * @param integer $Size <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
+     * @param integer $Action <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
+     * @param string $ConfirmTime <p>复核时间，当Action是3时，需有复核时间</p>
+     * @param string $UserDepartmentId <p>用户部门Id</p>
+     * @param string $UserDepartmentName <p>用户部门name</p>
+     * @param string $DeviceDepartmentId <p>设备部门id</p>
+     * @param string $DeviceDepartmentName <p>设备部门name</p>
+     * @param string $SignValue <p>签名值</p>
      */
     function __construct()
     {

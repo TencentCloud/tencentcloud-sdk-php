@@ -26,6 +26,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\AccessDevicesResponse AccessDevices(Models\AccessDevicesRequest $req) 外部客户访问资产
  * @method Models\AddDeviceGroupMembersResponse AddDeviceGroupMembers(Models\AddDeviceGroupMembersRequest $req) 添加资产组成员
  * @method Models\AddUserGroupMembersResponse AddUserGroupMembers(Models\AddUserGroupMembersRequest $req) 添加用户组成员
+ * @method Models\ApproveTicketResponse ApproveTicket(Models\ApproveTicketRequest $req) 审批工单
  * @method Models\BindDeviceAccountKubeconfigResponse BindDeviceAccountKubeconfig(Models\BindDeviceAccountKubeconfigRequest $req) 绑定容器账号凭据
  * @method Models\BindDeviceAccountPasswordResponse BindDeviceAccountPassword(Models\BindDeviceAccountPasswordRequest $req) 绑定主机账号密码
  * @method Models\BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKey(Models\BindDeviceAccountPrivateKeyRequest $req) 绑定主机账号私钥
@@ -81,6 +82,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
  * @method Models\DescribeSecuritySettingResponse DescribeSecuritySetting(Models\DescribeSecuritySettingRequest $req) 查询安全配置信息
  * @method Models\DescribeSourceTypesResponse DescribeSourceTypes(Models\DescribeSourceTypesRequest $req) 获取认证源信息
+ * @method Models\DescribeTicketsResponse DescribeTickets(Models\DescribeTicketsRequest $req) 查询运维工单列表
  * @method Models\DescribeUserDirectoryResponse DescribeUserDirectory(Models\DescribeUserDirectoryRequest $req) 获取用户目录
  * @method Models\DescribeUserGroupMembersResponse DescribeUserGroupMembers(Models\DescribeUserGroupMembersRequest $req) 查询用户组成员列表
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表

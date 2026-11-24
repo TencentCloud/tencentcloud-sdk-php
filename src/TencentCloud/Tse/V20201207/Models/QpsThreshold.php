@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生网关限流插件Qps阈值
  *
- * @method string getUnit() 获取qps阈值控制维度,包含:second、minute、hour、day、month、year
- * @method void setUnit(string $Unit) 设置qps阈值控制维度,包含:second、minute、hour、day、month、year
  * @method integer getMax() 获取阈值
  * @method void setMax(integer $Max) 设置阈值
+ * @method string getUnit() 获取qps阈值控制维度,包含:second、minute、hour、day、month、year
+ * @method void setUnit(string $Unit) 设置qps阈值控制维度,包含:second、minute、hour、day、month、year
  */
 class QpsThreshold extends AbstractModel
 {
-    /**
-     * @var string qps阈值控制维度,包含:second、minute、hour、day、month、year
-     */
-    public $Unit;
-
     /**
      * @var integer 阈值
      */
     public $Max;
 
     /**
-     * @param string $Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
+     * @var string qps阈值控制维度,包含:second、minute、hour、day、month、year
+     */
+    public $Unit;
+
+    /**
      * @param integer $Max 阈值
+     * @param string $Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class QpsThreshold extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
-        }
-
         if (array_key_exists("Max",$param) and $param["Max"] !== null) {
             $this->Max = $param["Max"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
     }
 }

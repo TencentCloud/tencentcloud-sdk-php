@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatformId(string $PlatformId) 设置<p>套餐池标识</p>
  * @method string getReqKey() 获取<p>幂等键</p>
  * @method void setReqKey(string $ReqKey) 设置<p>幂等键</p>
+ * @method PGConfig getPGConfig() 获取<p>postgresql可选参数配置，不传默认发货1c2g独享pg</p>
+ * @method void setPGConfig(PGConfig $PGConfig) 设置<p>postgresql可选参数配置，不传默认发货1c2g独享pg</p>
  */
 class CreatePlatformEnvRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreatePlatformEnvRequest extends AbstractModel
     public $ReqKey;
 
     /**
+     * @var PGConfig <p>postgresql可选参数配置，不传默认发货1c2g独享pg</p>
+     */
+    public $PGConfig;
+
+    /**
      * @param string $Alias <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
      * @param string $PlatformId <p>套餐池标识</p>
      * @param string $ReqKey <p>幂等键</p>
+     * @param PGConfig $PGConfig <p>postgresql可选参数配置，不传默认发货1c2g独享pg</p>
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class CreatePlatformEnvRequest extends AbstractModel
 
         if (array_key_exists("ReqKey",$param) and $param["ReqKey"] !== null) {
             $this->ReqKey = $param["ReqKey"];
+        }
+
+        if (array_key_exists("PGConfig",$param) and $param["PGConfig"] !== null) {
+            $this->PGConfig = new PGConfig();
+            $this->PGConfig->deserialize($param["PGConfig"]);
         }
     }
 }

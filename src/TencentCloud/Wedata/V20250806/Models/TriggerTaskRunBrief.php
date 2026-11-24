@@ -260,6 +260,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivilege(string $Privilege) 设置<p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTriggerTableUpdateRecords() 获取<p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerTableUpdateRecords(array $TriggerTableUpdateRecords) 设置<p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerTaskRunBrief extends AbstractModel
 {
@@ -624,6 +628,12 @@ class TriggerTaskRunBrief extends AbstractModel
     public $Privilege;
 
     /**
+     * @var array <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerTableUpdateRecords;
+
+    /**
      * @param string $ExecutionId <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionState <p>执行状态，运行失败:FAILED、运行成功:SUCCESS、等待中:PENDING、跳过运行:SKIP、运行中:RUNNING</p>
@@ -743,6 +753,8 @@ class TriggerTaskRunBrief extends AbstractModel
      * @param string $ScheduleRunType <p>调度执行类型</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li><li>2： 用户驱动，手动触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privilege <p>权限</p><p>枚举值：</p><ul><li>CAN_MANAGE： 可管理</li><li>CAN_VIEW： 可见</li><li>NO_PERMISSION： 无权限</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TriggerTableUpdateRecords <p>所属工作流运行中本次触发涉及的表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -996,6 +1008,15 @@ class TriggerTaskRunBrief extends AbstractModel
 
         if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
             $this->Privilege = $param["Privilege"];
+        }
+
+        if (array_key_exists("TriggerTableUpdateRecords",$param) and $param["TriggerTableUpdateRecords"] !== null) {
+            $this->TriggerTableUpdateRecords = [];
+            foreach ($param["TriggerTableUpdateRecords"] as $key => $value){
+                $obj = new TriggerTableUpdateRecord();
+                $obj->deserialize($value);
+                array_push($this->TriggerTableUpdateRecords, $obj);
+            }
         }
     }
 }

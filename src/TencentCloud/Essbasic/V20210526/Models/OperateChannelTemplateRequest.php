@@ -20,199 +20,83 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateChannelTemplate请求参数结构体
  *
- * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
- * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
- * @method string getOperateType() 获取操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
- * @method void setOperateType(string $OperateType) 设置操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
- * @method string getTemplateId() 获取合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
- * @method void setTemplateId(string $TemplateId) 设置合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
- * @method string getProxyOrganizationOpenIds() 获取第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
- * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
- * @method string getAuthTag() 获取模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
- * @method void setAuthTag(string $AuthTag) 设置模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
- * @method integer getAvailable() 获取当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
- * @method void setAvailable(integer $Available) 设置当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
- * @method UserInfo getOperator() 获取暂未开放
- * @method void setOperator(UserInfo $Operator) 设置暂未开放
- * @method integer getLimit() 获取指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
- * @method void setLimit(integer $Limit) 设置指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
- * @method integer getOffset() 获取分页查询偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为0
+ * @method Agent getAgent() 获取<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
+ * @method void setAgent(Agent $Agent) 设置<p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
+ * @method string getOperateType() 获取<p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
+ * @method void setOperateType(string $OperateType) 设置<p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
+ * @method string getTemplateId() 获取<p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
+ * @method void setTemplateId(string $TemplateId) 设置<p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
+ * @method string getProxyOrganizationOpenIds() 获取<p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
+ * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置<p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
+ * @method string getAuthTag() 获取<p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
+ * @method void setAuthTag(string $AuthTag) 设置<p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
+ * @method integer getAvailable() 获取<p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
+ * @method void setAvailable(integer $Available) 设置<p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
+ * @method UserInfo getOperator() 获取<p>暂未开放</p>
+ * @method void setOperator(UserInfo $Operator) 设置<p>暂未开放</p>
+ * @method integer getLimit() 获取<p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
+ * @method void setLimit(integer $Limit) 设置<p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
+ * @method integer getOffset() 获取<p>分页查询偏移量，默认为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页查询偏移量，默认为0</p>
  */
 class OperateChannelTemplateRequest extends AbstractModel
 {
     /**
-     * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
+     * @var Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
      */
     public $Agent;
 
     /**
-     * @var string 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
+     * @var string <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
      */
     public $OperateType;
 
     /**
-     * @var string 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
+     * @var string <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
      */
     public $TemplateId;
 
     /**
-     * @var string 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
+     * @var string <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
      */
     public $ProxyOrganizationOpenIds;
 
     /**
-     * @var string 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
+     * @var string <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
      */
     public $AuthTag;
 
     /**
-     * @var integer 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
+     * @var integer <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
      */
     public $Available;
 
     /**
-     * @var UserInfo 暂未开放
+     * @var UserInfo <p>暂未开放</p>
      * @deprecated
      */
     public $Operator;
 
     /**
-     * @var integer 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
+     * @var integer <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页查询偏移量，默认为0
+     * @var integer <p>分页查询偏移量，默认为0</p>
      */
     public $Offset;
 
     /**
-     * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
-     * @param string $OperateType 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
-     * @param string $TemplateId 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
-     * @param string $ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
-     * @param string $AuthTag 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
-     * @param integer $Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
-     * @param UserInfo $Operator 暂未开放
-     * @param integer $Limit 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
-     * @param integer $Offset 分页查询偏移量，默认为0
+     * @param Agent $Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
+     * @param string $OperateType <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
+     * @param string $TemplateId <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
+     * @param string $ProxyOrganizationOpenIds <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
+     * @param string $AuthTag <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
+     * @param integer $Available <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
+     * @param UserInfo $Operator <p>暂未开放</p>
+     * @param integer $Limit <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
+     * @param integer $Offset <p>分页查询偏移量，默认为0</p>
      */
     function __construct()
     {

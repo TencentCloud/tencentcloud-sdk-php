@@ -20,102 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTokenPlanApiKey请求参数结构体
  *
- * @method string getApiKeyId() 获取API Key ID。
- * @method void setApiKeyId(string $ApiKeyId) 设置API Key ID。
- * @method array getAllowedModels() 获取可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
- * @method void setAllowedModels(array $AllowedModels) 设置可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
- * @method integer getExclusiveQuota() 获取独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setExclusiveQuota(integer $ExclusiveQuota) 设置独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method integer getTotalQuota() 获取总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method void setTotalQuota(integer $TotalQuota) 设置总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
- * @method string getUseStatus() 获取是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
- * @method void setUseStatus(string $UseStatus) 设置是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
- * @method integer getTPM() 获取TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
- * @method void setTPM(integer $TPM) 设置TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+ * @method string getApiKeyId() 获取<p>API Key ID。</p>
+ * @method void setApiKeyId(string $ApiKeyId) 设置<p>API Key ID。</p>
+ * @method array getAllowedModels() 获取<p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
+ * @method void setAllowedModels(array $AllowedModels) 设置<p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
+ * @method integer getExclusiveQuota() 获取<p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setExclusiveQuota(integer $ExclusiveQuota) 设置<p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method integer getTotalQuota() 获取<p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method void setTotalQuota(integer $TotalQuota) 设置<p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+ * @method string getUseStatus() 获取<p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
+ * @method void setUseStatus(string $UseStatus) 设置<p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
+ * @method integer getTPM() 获取<p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
+ * @method void setTPM(integer $TPM) 设置<p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
+ * @method array getIpWhitelist() 获取<p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+ * @method void setIpWhitelist(array $IpWhitelist) 设置<p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
  */
 class ModifyTokenPlanApiKeyRequest extends AbstractModel
 {
     /**
-     * @var string API Key ID。
+     * @var string <p>API Key ID。</p>
      */
     public $ApiKeyId;
 
     /**
-     * @var array 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
+     * @var array <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
      */
     public $AllowedModels;
 
     /**
-     * @var integer 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var integer <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $ExclusiveQuota;
 
     /**
-     * @var integer 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * @var integer <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public $TotalQuota;
 
     /**
-     * @var string 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
+     * @var string <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
      */
     public $UseStatus;
 
     /**
-     * @var integer TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+     * @var integer <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
      */
     public $TPM;
 
     /**
-     * @param string $ApiKeyId API Key ID。
-     * @param array $AllowedModels 可用模型列表。不传则不修改。
+     * @var array <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+     */
+    public $IpWhitelist;
 
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
-     * @param integer $ExclusiveQuota 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param integer $TotalQuota 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param string $UseStatus 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
-     * @param integer $TPM TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+    /**
+     * @param string $ApiKeyId <p>API Key ID。</p>
+     * @param array $AllowedModels <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
+     * @param integer $ExclusiveQuota <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param integer $TotalQuota <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param string $UseStatus <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
+     * @param integer $TPM <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
+     * @param array $IpWhitelist <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
      */
     function __construct()
     {
@@ -152,6 +116,10 @@ class ModifyTokenPlanApiKeyRequest extends AbstractModel
 
         if (array_key_exists("TPM",$param) and $param["TPM"] !== null) {
             $this->TPM = $param["TPM"];
+        }
+
+        if (array_key_exists("IpWhitelist",$param) and $param["IpWhitelist"] !== null) {
+            $this->IpWhitelist = $param["IpWhitelist"];
         }
     }
 }

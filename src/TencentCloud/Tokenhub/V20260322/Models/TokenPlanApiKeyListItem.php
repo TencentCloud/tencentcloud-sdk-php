@@ -20,146 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Token Plan API Key 列表项
  *
- * @method string getApiKeyId() 获取API Key ID。
- * @method void setApiKeyId(string $ApiKeyId) 设置API Key ID。
- * @method string getApiKey() 获取API Key 密钥值（脱敏）。
- * @method void setApiKey(string $ApiKey) 设置API Key 密钥值（脱敏）。
- * @method string getName() 获取API Key 名称。
- * @method void setName(string $Name) 设置API Key 名称。
- * @method string getTeamId() 获取所属套餐 ID。
- * @method void setTeamId(string $TeamId) 设置所属套餐 ID。
- * @method string getAppId() 获取账号APP ID。
- * @method void setAppId(string $AppId) 设置账号APP ID。
- * @method string getUin() 获取主账号 UIN。最大 128 字符。
- * @method void setUin(string $Uin) 设置主账号 UIN。最大 128 字符。
- * @method string getAllowedModels() 获取API Key 可用模型列表（JSON 数组字符串）。
- * @method void setAllowedModels(string $AllowedModels) 设置API Key 可用模型列表（JSON 数组字符串）。
- * @method string getStatus() 获取API Key 是否可用。取值：enable（启用）、disable（停用）。
- * @method void setStatus(string $Status) 设置API Key 是否可用。取值：enable（启用）、disable（停用）。
- * @method string getStopReason() 获取API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
- * @method void setStopReason(string $StopReason) 设置API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
- * @method string getUseStatus() 获取用户侧开关。取值：enable（启用）、disable（停用）。
- * @method void setUseStatus(string $UseStatus) 设置用户侧开关。取值：enable（启用）、disable（停用）。
- * @method integer getKeyVersion() 获取密钥版本号。
- * @method void setKeyVersion(integer $KeyVersion) 设置密钥版本号。
- * @method string getLastRotatedAt() 获取最近一次重置时间。（ISO 8601）
- * @method void setLastRotatedAt(string $LastRotatedAt) 设置最近一次重置时间。（ISO 8601）
- * @method string getCreator() 获取创建人，如果是子账号创建，则该值为子账号UIN。
- * @method void setCreator(string $Creator) 设置创建人，如果是子账号创建，则该值为子账号UIN。
- * @method string getCreatedAt() 获取创建时间。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间。
- * @method string getUpdatedAt() 获取更新时间。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间。
- * @method SubPackageBalance getBalance() 获取API Key 额度用量信息
- * @method void setBalance(SubPackageBalance $Balance) 设置API Key 额度用量信息
- * @method string getProductType() 获取套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
- * @method void setProductType(string $ProductType) 设置套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+ * @method string getApiKeyId() 获取<p>API Key ID。</p>
+ * @method void setApiKeyId(string $ApiKeyId) 设置<p>API Key ID。</p>
+ * @method string getApiKey() 获取<p>API Key 密钥值（脱敏）。</p>
+ * @method void setApiKey(string $ApiKey) 设置<p>API Key 密钥值（脱敏）。</p>
+ * @method string getName() 获取<p>API Key 名称。</p>
+ * @method void setName(string $Name) 设置<p>API Key 名称。</p>
+ * @method string getTeamId() 获取<p>所属套餐 ID。</p>
+ * @method void setTeamId(string $TeamId) 设置<p>所属套餐 ID。</p>
+ * @method string getAppId() 获取<p>账号APP ID。</p>
+ * @method void setAppId(string $AppId) 设置<p>账号APP ID。</p>
+ * @method string getUin() 获取<p>主账号 UIN。最大 128 字符。</p>
+ * @method void setUin(string $Uin) 设置<p>主账号 UIN。最大 128 字符。</p>
+ * @method string getAllowedModels() 获取<p>API Key 可用模型列表（JSON 数组字符串）。</p>
+ * @method void setAllowedModels(string $AllowedModels) 设置<p>API Key 可用模型列表（JSON 数组字符串）。</p>
+ * @method string getStatus() 获取<p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
+ * @method void setStatus(string $Status) 设置<p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
+ * @method string getStopReason() 获取<p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
+ * @method void setStopReason(string $StopReason) 设置<p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
+ * @method string getUseStatus() 获取<p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
+ * @method void setUseStatus(string $UseStatus) 设置<p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
+ * @method integer getKeyVersion() 获取<p>密钥版本号。</p>
+ * @method void setKeyVersion(integer $KeyVersion) 设置<p>密钥版本号。</p>
+ * @method string getLastRotatedAt() 获取<p>最近一次重置时间。（ISO 8601）</p>
+ * @method void setLastRotatedAt(string $LastRotatedAt) 设置<p>最近一次重置时间。（ISO 8601）</p>
+ * @method string getCreator() 获取<p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
+ * @method void setCreator(string $Creator) 设置<p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
+ * @method string getCreatedAt() 获取<p>创建时间。</p>
+ * @method void setCreatedAt(string $CreatedAt) 设置<p>创建时间。</p>
+ * @method string getUpdatedAt() 获取<p>更新时间。</p>
+ * @method void setUpdatedAt(string $UpdatedAt) 设置<p>更新时间。</p>
+ * @method SubPackageBalance getBalance() 获取<p>API Key 额度用量信息</p>
+ * @method void setBalance(SubPackageBalance $Balance) 设置<p>API Key 额度用量信息</p>
+ * @method string getProductType() 获取<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+ * @method void setProductType(string $ProductType) 设置<p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+ * @method array getIpWhitelist() 获取<p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+ * @method void setIpWhitelist(array $IpWhitelist) 设置<p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+ * @method boolean getOverageEnabled() 获取<p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+ * @method void setOverageEnabled(boolean $OverageEnabled) 设置<p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
  */
 class TokenPlanApiKeyListItem extends AbstractModel
 {
     /**
-     * @var string API Key ID。
+     * @var string <p>API Key ID。</p>
      */
     public $ApiKeyId;
 
     /**
-     * @var string API Key 密钥值（脱敏）。
+     * @var string <p>API Key 密钥值（脱敏）。</p>
      */
     public $ApiKey;
 
     /**
-     * @var string API Key 名称。
+     * @var string <p>API Key 名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 所属套餐 ID。
+     * @var string <p>所属套餐 ID。</p>
      */
     public $TeamId;
 
     /**
-     * @var string 账号APP ID。
+     * @var string <p>账号APP ID。</p>
      */
     public $AppId;
 
     /**
-     * @var string 主账号 UIN。最大 128 字符。
+     * @var string <p>主账号 UIN。最大 128 字符。</p>
      */
     public $Uin;
 
     /**
-     * @var string API Key 可用模型列表（JSON 数组字符串）。
+     * @var string <p>API Key 可用模型列表（JSON 数组字符串）。</p>
      */
     public $AllowedModels;
 
     /**
-     * @var string API Key 是否可用。取值：enable（启用）、disable（停用）。
+     * @var string <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
      */
     public $Status;
 
     /**
-     * @var string API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
+     * @var string <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
      */
     public $StopReason;
 
     /**
-     * @var string 用户侧开关。取值：enable（启用）、disable（停用）。
+     * @var string <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
      */
     public $UseStatus;
 
     /**
-     * @var integer 密钥版本号。
+     * @var integer <p>密钥版本号。</p>
      */
     public $KeyVersion;
 
     /**
-     * @var string 最近一次重置时间。（ISO 8601）
+     * @var string <p>最近一次重置时间。（ISO 8601）</p>
      */
     public $LastRotatedAt;
 
     /**
-     * @var string 创建人，如果是子账号创建，则该值为子账号UIN。
+     * @var string <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
      */
     public $Creator;
 
     /**
-     * @var string 创建时间。
+     * @var string <p>创建时间。</p>
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间。
+     * @var string <p>更新时间。</p>
      */
     public $UpdatedAt;
 
     /**
-     * @var SubPackageBalance API Key 额度用量信息
+     * @var SubPackageBalance <p>API Key 额度用量信息</p>
      */
     public $Balance;
 
     /**
-     * @var string 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * @var string <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public $ProductType;
 
     /**
-     * @param string $ApiKeyId API Key ID。
-     * @param string $ApiKey API Key 密钥值（脱敏）。
-     * @param string $Name API Key 名称。
-     * @param string $TeamId 所属套餐 ID。
-     * @param string $AppId 账号APP ID。
-     * @param string $Uin 主账号 UIN。最大 128 字符。
-     * @param string $AllowedModels API Key 可用模型列表（JSON 数组字符串）。
-     * @param string $Status API Key 是否可用。取值：enable（启用）、disable（停用）。
-     * @param string $StopReason API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
-     * @param string $UseStatus 用户侧开关。取值：enable（启用）、disable（停用）。
-     * @param integer $KeyVersion 密钥版本号。
-     * @param string $LastRotatedAt 最近一次重置时间。（ISO 8601）
-     * @param string $Creator 创建人，如果是子账号创建，则该值为子账号UIN。
-     * @param string $CreatedAt 创建时间。
-     * @param string $UpdatedAt 更新时间。
-     * @param SubPackageBalance $Balance API Key 额度用量信息
-     * @param string $ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * @var array <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+     */
+    public $IpWhitelist;
+
+    /**
+     * @var boolean <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+     */
+    public $OverageEnabled;
+
+    /**
+     * @param string $ApiKeyId <p>API Key ID。</p>
+     * @param string $ApiKey <p>API Key 密钥值（脱敏）。</p>
+     * @param string $Name <p>API Key 名称。</p>
+     * @param string $TeamId <p>所属套餐 ID。</p>
+     * @param string $AppId <p>账号APP ID。</p>
+     * @param string $Uin <p>主账号 UIN。最大 128 字符。</p>
+     * @param string $AllowedModels <p>API Key 可用模型列表（JSON 数组字符串）。</p>
+     * @param string $Status <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
+     * @param string $StopReason <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
+     * @param string $UseStatus <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
+     * @param integer $KeyVersion <p>密钥版本号。</p>
+     * @param string $LastRotatedAt <p>最近一次重置时间。（ISO 8601）</p>
+     * @param string $Creator <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
+     * @param string $CreatedAt <p>创建时间。</p>
+     * @param string $UpdatedAt <p>更新时间。</p>
+     * @param SubPackageBalance $Balance <p>API Key 额度用量信息</p>
+     * @param string $ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+     * @param array $IpWhitelist <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+     * @param boolean $OverageEnabled <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
      */
     function __construct()
     {
@@ -241,6 +257,14 @@ class TokenPlanApiKeyListItem extends AbstractModel
 
         if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
             $this->ProductType = $param["ProductType"];
+        }
+
+        if (array_key_exists("IpWhitelist",$param) and $param["IpWhitelist"] !== null) {
+            $this->IpWhitelist = $param["IpWhitelist"];
+        }
+
+        if (array_key_exists("OverageEnabled",$param) and $param["OverageEnabled"] !== null) {
+            $this->OverageEnabled = $param["OverageEnabled"];
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作流调度配置
  *
- * @method string getTriggerMode() 获取<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+ * @method string getTriggerMode() 获取<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>表更新：TABLE_UPDATE</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li><li>TABLE_UPDATE 模式下，TriggerMinimumIntervalSecond、TriggerWaitTimeSecond、tableQualifiers、triggerPolicy 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li><li>TABLE_UPDATE： 表更新</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+ * @method void setTriggerMode(string $TriggerMode) 设置<p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>表更新：TABLE_UPDATE</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li><li>TABLE_UPDATE 模式下，TriggerMinimumIntervalSecond、TriggerWaitTimeSecond、tableQualifiers、triggerPolicy 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li><li>TABLE_UPDATE： 表更新</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInfo() 获取<p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,27 +72,35 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecursive(integer $Recursive) 设置<p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerMinimumInterval() 获取<p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+ * @method integer getTriggerMinimumInterval() 获取<p>文件到达、表更新 模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p><p>默认值：5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMinimumInterval(integer $TriggerMinimumInterval) 设置<p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+ * @method void setTriggerMinimumInterval(integer $TriggerMinimumInterval) 设置<p>文件到达、表更新 模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p><p>默认值：5</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerWaitTime() 获取<p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+ * @method integer getTriggerWaitTime() 获取<p>文件到达、表更新 模式下 批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerWaitTime(integer $TriggerWaitTime) 设置<p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+ * @method void setTriggerWaitTime(integer $TriggerWaitTime) 设置<p>文件到达、表更新 模式下 批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+ * @method integer getTriggerMinimumIntervalSecond() 获取<p>文件到达、表更新 模式下，触发最短间隔时间</p><p>取值范围：[60, 86400]</p><p>单位：秒</p><p>默认值：300</p><p>只需填TriggerMinimumIntervalSecond，不用填TriggerMinimumInterval；两者都填取TriggerMinimumIntervalSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+ * @method void setTriggerMinimumIntervalSecond(integer $TriggerMinimumIntervalSecond) 设置<p>文件到达、表更新 模式下，触发最短间隔时间</p><p>取值范围：[60, 86400]</p><p>单位：秒</p><p>默认值：300</p><p>只需填TriggerMinimumIntervalSecond，不用填TriggerMinimumInterval；两者都填取TriggerMinimumIntervalSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+ * @method integer getTriggerWaitTimeSecond() 获取<p>文件到达、表更新 模式下，触发等待时间</p><p>取值范围：[60, 3600]</p><p>单位：秒</p><p>默认值：120</p><p>只需填TriggerWaitTimeSecond，不用填TriggerWaitTime；两者都填取TriggerWaitTimeSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+ * @method void setTriggerWaitTimeSecond(integer $TriggerWaitTimeSecond) 设置<p>文件到达、表更新 模式下，触发等待时间</p><p>取值范围：[60, 3600]</p><p>单位：秒</p><p>默认值：120</p><p>只需填TriggerWaitTimeSecond，不用填TriggerWaitTime；两者都填取TriggerWaitTimeSecond；</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTableQualifiers() 获取<p>表更新 模式下，触发表列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableQualifiers(array $TableQualifiers) 设置<p>表更新 模式下，触发表列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerPolicy() 获取<p>表更新模式下，触发条件</p><p>枚举值：</p><ul><li>ALL： 所有表更新</li><li>ANY： 任一表更新</li></ul><p>默认值：ANY</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerPolicy(string $TriggerPolicy) 设置<p>表更新模式下，触发条件</p><p>枚举值：</p><ul><li>ALL： 所有表更新</li><li>ANY： 任一表更新</li></ul><p>默认值：ANY</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTriggerConfig extends AbstractModel
 {
     /**
-     * @var string <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+     * @var string <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>表更新：TABLE_UPDATE</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li><li>TABLE_UPDATE 模式下，TriggerMinimumIntervalSecond、TriggerWaitTimeSecond、tableQualifiers、triggerPolicy 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li><li>TABLE_UPDATE： 表更新</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMode;
@@ -170,31 +178,43 @@ class WorkflowTriggerConfig extends AbstractModel
     public $Recursive;
 
     /**
-     * @var integer <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+     * @var integer <p>文件到达、表更新 模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p><p>默认值：5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMinimumInterval;
 
     /**
-     * @var integer <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+     * @var integer <p>文件到达、表更新 模式下 批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerWaitTime;
 
     /**
-     * @var integer <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+     * @var integer <p>文件到达、表更新 模式下，触发最短间隔时间</p><p>取值范围：[60, 86400]</p><p>单位：秒</p><p>默认值：300</p><p>只需填TriggerMinimumIntervalSecond，不用填TriggerMinimumInterval；两者都填取TriggerMinimumIntervalSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerMinimumIntervalSecond;
 
     /**
-     * @var integer <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+     * @var integer <p>文件到达、表更新 模式下，触发等待时间</p><p>取值范围：[60, 3600]</p><p>单位：秒</p><p>默认值：120</p><p>只需填TriggerWaitTimeSecond，不用填TriggerWaitTime；两者都填取TriggerWaitTimeSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerWaitTimeSecond;
 
     /**
-     * @param string $TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li></ul>
+     * @var array <p>表更新 模式下，触发表列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableQualifiers;
+
+    /**
+     * @var string <p>表更新模式下，触发条件</p><p>枚举值：</p><ul><li>ALL： 所有表更新</li><li>ANY： 任一表更新</li></ul><p>默认值：ANY</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerPolicy;
+
+    /**
+     * @param string $TriggerMode <p>触发方式，非必填，外部结构的TriggerMode字段优先级比当前字段高</p><ul><li>定时触发：TIME_TRIGGER</li><li>文件到达：FILE_ARRIVAL</li><li>表更新：TABLE_UPDATE</li><li>持续运行：CONTINUE_RUN（暂不支持）</li></ul><p>注意：</p><ul><li>TIME_TRIGGER 和 CONTINUE_RUN 模式下，SchedulerStatus、SchedulerTimeZone、StartTime、EndTime、ConfigMode、CycleType、CrontabExpression 必填；</li><li>FILE_ARRIVAL 模式下，FileArrivalPath、TriggerMinimumIntervalSecond、TriggerWaitTimeSecond 必填；</li><li>TABLE_UPDATE 模式下，TriggerMinimumIntervalSecond、TriggerWaitTimeSecond、tableQualifiers、triggerPolicy 必填；</li></ul><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件到达</li><li>TABLE_UPDATE： 表更新</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInfo <p>WorkflowTriggerConfig转换成Json格式，对账使用</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -220,13 +240,17 @@ class WorkflowTriggerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Recursive <p>文件到达模式下 是否递归检测子目录</p><p>取值范围：[0, 1]</p><p>默认值：1</p><p>默认 1（开启） 0 （关闭）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerMinimumInterval <p>文件到达模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p>
+     * @param integer $TriggerMinimumInterval <p>文件到达、表更新 模式下 最小触发间隔</p><p>取值范围：[1, 1440]</p><p>单位：分钟</p><p>默认值：5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerWaitTime <p>文件到达模式下 文件批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p>
+     * @param integer $TriggerWaitTime <p>文件到达、表更新 模式下 批次等待时间</p><p>取值范围：[1, 60]</p><p>单位：分钟</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerMinimumIntervalSecond <p>文件到达模式下    触发最短间隔时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+     * @param integer $TriggerMinimumIntervalSecond <p>文件到达、表更新 模式下，触发最短间隔时间</p><p>取值范围：[60, 86400]</p><p>单位：秒</p><p>默认值：300</p><p>只需填TriggerMinimumIntervalSecond，不用填TriggerMinimumInterval；两者都填取TriggerMinimumIntervalSecond；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerWaitTimeSecond <p>文件到达模式下    触发等待时间</p><p>单位：秒</p><p>后续废弃 勿用</p>
+     * @param integer $TriggerWaitTimeSecond <p>文件到达、表更新 模式下，触发等待时间</p><p>取值范围：[60, 3600]</p><p>单位：秒</p><p>默认值：120</p><p>只需填TriggerWaitTimeSecond，不用填TriggerWaitTime；两者都填取TriggerWaitTimeSecond；</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TableQualifiers <p>表更新 模式下，触发表列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerPolicy <p>表更新模式下，触发条件</p><p>枚举值：</p><ul><li>ALL： 所有表更新</li><li>ANY： 任一表更新</li></ul><p>默认值：ANY</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +332,14 @@ class WorkflowTriggerConfig extends AbstractModel
 
         if (array_key_exists("TriggerWaitTimeSecond",$param) and $param["TriggerWaitTimeSecond"] !== null) {
             $this->TriggerWaitTimeSecond = $param["TriggerWaitTimeSecond"];
+        }
+
+        if (array_key_exists("TableQualifiers",$param) and $param["TableQualifiers"] !== null) {
+            $this->TableQualifiers = $param["TableQualifiers"];
+        }
+
+        if (array_key_exists("TriggerPolicy",$param) and $param["TriggerPolicy"] !== null) {
+            $this->TriggerPolicy = $param["TriggerPolicy"];
         }
     }
 }

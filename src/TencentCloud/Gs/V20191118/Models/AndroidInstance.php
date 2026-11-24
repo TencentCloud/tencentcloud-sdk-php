@@ -20,170 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安卓实例信息
  *
- * @method string getAndroidInstanceId() 获取实例 ID
- * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置实例 ID
- * @method string getAndroidInstanceRegion() 获取实例所在区域
- * @method void setAndroidInstanceRegion(string $AndroidInstanceRegion) 设置实例所在区域
- * @method string getAndroidInstanceZone() 获取实例可用区
- * @method void setAndroidInstanceZone(string $AndroidInstanceZone) 设置实例可用区
- * @method string getState() 获取实例状态：INITIALIZING，NORMAL，PROCESSING
- * @method void setState(string $State) 设置实例状态：INITIALIZING，NORMAL，PROCESSING
- * @method string getAndroidInstanceType() 获取实例规格
- * @method void setAndroidInstanceType(string $AndroidInstanceType) 设置实例规格
- * @method string getAndroidInstanceImageId() 获取实例镜像 ID
- * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置实例镜像 ID
- * @method integer getWidth() 获取分辨率宽度
- * @method void setWidth(integer $Width) 设置分辨率宽度
- * @method integer getHeight() 获取分辨率高度
- * @method void setHeight(integer $Height) 设置分辨率高度
- * @method string getHostSerialNumber() 获取宿主机 ID
- * @method void setHostSerialNumber(string $HostSerialNumber) 设置宿主机 ID
- * @method string getAndroidInstanceGroupId() 获取分组 ID
- * @method void setAndroidInstanceGroupId(string $AndroidInstanceGroupId) 设置分组 ID
- * @method array getAndroidInstanceLabels() 获取标签列表
- * @method void setAndroidInstanceLabels(array $AndroidInstanceLabels) 设置标签列表
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method string getPrivateIP() 获取内网 IP
- * @method void setPrivateIP(string $PrivateIP) 设置内网 IP
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getHostServerSerialNumber() 获取机箱 ID
- * @method void setHostServerSerialNumber(string $HostServerSerialNumber) 设置机箱 ID
- * @method string getServiceStatus() 获取服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
- * @method void setServiceStatus(string $ServiceStatus) 设置服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
- * @method string getAndroidInstanceModel() 获取安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
- * @method void setAndroidInstanceModel(string $AndroidInstanceModel) 设置安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+ * @method string getAndroidInstanceId() 获取<p>实例 ID</p>
+ * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置<p>实例 ID</p>
+ * @method string getAndroidInstanceRegion() 获取<p>实例所在区域</p>
+ * @method void setAndroidInstanceRegion(string $AndroidInstanceRegion) 设置<p>实例所在区域</p>
+ * @method string getAndroidInstanceZone() 获取<p>实例可用区</p>
+ * @method void setAndroidInstanceZone(string $AndroidInstanceZone) 设置<p>实例可用区</p>
+ * @method string getState() 获取<p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
+ * @method void setState(string $State) 设置<p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
+ * @method string getAndroidInstanceType() 获取<p>实例规格</p>
+ * @method void setAndroidInstanceType(string $AndroidInstanceType) 设置<p>实例规格</p>
+ * @method string getAndroidInstanceImageId() 获取<p>实例镜像 ID</p>
+ * @method void setAndroidInstanceImageId(string $AndroidInstanceImageId) 设置<p>实例镜像 ID</p>
+ * @method integer getWidth() 获取<p>分辨率宽度</p>
+ * @method void setWidth(integer $Width) 设置<p>分辨率宽度</p>
+ * @method integer getHeight() 获取<p>分辨率高度</p>
+ * @method void setHeight(integer $Height) 设置<p>分辨率高度</p>
+ * @method integer getDPI() 获取<p>每英寸像素点。</p>
+ * @method void setDPI(integer $DPI) 设置<p>每英寸像素点。</p>
+ * @method integer getFPS() 获取<p>帧率</p>
+ * @method void setFPS(integer $FPS) 设置<p>帧率</p>
+ * @method string getHostSerialNumber() 获取<p>宿主机 ID</p>
+ * @method void setHostSerialNumber(string $HostSerialNumber) 设置<p>宿主机 ID</p>
+ * @method string getAndroidInstanceGroupId() 获取<p>分组 ID</p>
+ * @method void setAndroidInstanceGroupId(string $AndroidInstanceGroupId) 设置<p>分组 ID</p>
+ * @method array getAndroidInstanceLabels() 获取<p>标签列表</p>
+ * @method void setAndroidInstanceLabels(array $AndroidInstanceLabels) 设置<p>标签列表</p>
+ * @method string getName() 获取<p>名称</p>
+ * @method void setName(string $Name) 设置<p>名称</p>
+ * @method string getUserId() 获取<p>用户ID</p>
+ * @method void setUserId(string $UserId) 设置<p>用户ID</p>
+ * @method string getPrivateIP() 获取<p>内网 IP</p>
+ * @method void setPrivateIP(string $PrivateIP) 设置<p>内网 IP</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
+ * @method string getHostServerSerialNumber() 获取<p>机箱 ID</p>
+ * @method void setHostServerSerialNumber(string $HostServerSerialNumber) 设置<p>机箱 ID</p>
+ * @method string getServiceStatus() 获取<p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
+ * @method void setServiceStatus(string $ServiceStatus) 设置<p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
+ * @method string getAndroidInstanceModel() 获取<p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
+ * @method void setAndroidInstanceModel(string $AndroidInstanceModel) 设置<p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
  */
 class AndroidInstance extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string <p>实例 ID</p>
      */
     public $AndroidInstanceId;
 
     /**
-     * @var string 实例所在区域
+     * @var string <p>实例所在区域</p>
      */
     public $AndroidInstanceRegion;
 
     /**
-     * @var string 实例可用区
+     * @var string <p>实例可用区</p>
      */
     public $AndroidInstanceZone;
 
     /**
-     * @var string 实例状态：INITIALIZING，NORMAL，PROCESSING
+     * @var string <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
      */
     public $State;
 
     /**
-     * @var string 实例规格
+     * @var string <p>实例规格</p>
      */
     public $AndroidInstanceType;
 
     /**
-     * @var string 实例镜像 ID
+     * @var string <p>实例镜像 ID</p>
      */
     public $AndroidInstanceImageId;
 
     /**
-     * @var integer 分辨率宽度
+     * @var integer <p>分辨率宽度</p>
      */
     public $Width;
 
     /**
-     * @var integer 分辨率高度
+     * @var integer <p>分辨率高度</p>
      */
     public $Height;
 
     /**
-     * @var string 宿主机 ID
+     * @var integer <p>每英寸像素点。</p>
+     */
+    public $DPI;
+
+    /**
+     * @var integer <p>帧率</p>
+     */
+    public $FPS;
+
+    /**
+     * @var string <p>宿主机 ID</p>
      */
     public $HostSerialNumber;
 
     /**
-     * @var string 分组 ID
+     * @var string <p>分组 ID</p>
      */
     public $AndroidInstanceGroupId;
 
     /**
-     * @var array 标签列表
+     * @var array <p>标签列表</p>
      */
     public $AndroidInstanceLabels;
 
     /**
-     * @var string 名称
+     * @var string <p>名称</p>
      */
     public $Name;
 
     /**
-     * @var string 用户ID
+     * @var string <p>用户ID</p>
      */
     public $UserId;
 
     /**
-     * @var string 内网 IP
+     * @var string <p>内网 IP</p>
      */
     public $PrivateIP;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 机箱 ID
+     * @var string <p>机箱 ID</p>
      */
     public $HostServerSerialNumber;
 
     /**
-     * @var string 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
+     * @var string <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
      */
     public $ServiceStatus;
 
     /**
-     * @var string 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+     * @var string <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
      */
     public $AndroidInstanceModel;
 
     /**
-     * @param string $AndroidInstanceId 实例 ID
-     * @param string $AndroidInstanceRegion 实例所在区域
-     * @param string $AndroidInstanceZone 实例可用区
-     * @param string $State 实例状态：INITIALIZING，NORMAL，PROCESSING
-     * @param string $AndroidInstanceType 实例规格
-     * @param string $AndroidInstanceImageId 实例镜像 ID
-     * @param integer $Width 分辨率宽度
-     * @param integer $Height 分辨率高度
-     * @param string $HostSerialNumber 宿主机 ID
-     * @param string $AndroidInstanceGroupId 分组 ID
-     * @param array $AndroidInstanceLabels 标签列表
-     * @param string $Name 名称
-     * @param string $UserId 用户ID
-     * @param string $PrivateIP 内网 IP
-     * @param string $CreateTime 创建时间
-     * @param string $HostServerSerialNumber 机箱 ID
-     * @param string $ServiceStatus 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
-     * @param string $AndroidInstanceModel 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+     * @param string $AndroidInstanceId <p>实例 ID</p>
+     * @param string $AndroidInstanceRegion <p>实例所在区域</p>
+     * @param string $AndroidInstanceZone <p>实例可用区</p>
+     * @param string $State <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
+     * @param string $AndroidInstanceType <p>实例规格</p>
+     * @param string $AndroidInstanceImageId <p>实例镜像 ID</p>
+     * @param integer $Width <p>分辨率宽度</p>
+     * @param integer $Height <p>分辨率高度</p>
+     * @param integer $DPI <p>每英寸像素点。</p>
+     * @param integer $FPS <p>帧率</p>
+     * @param string $HostSerialNumber <p>宿主机 ID</p>
+     * @param string $AndroidInstanceGroupId <p>分组 ID</p>
+     * @param array $AndroidInstanceLabels <p>标签列表</p>
+     * @param string $Name <p>名称</p>
+     * @param string $UserId <p>用户ID</p>
+     * @param string $PrivateIP <p>内网 IP</p>
+     * @param string $CreateTime <p>创建时间</p>
+     * @param string $HostServerSerialNumber <p>机箱 ID</p>
+     * @param string $ServiceStatus <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
+     * @param string $AndroidInstanceModel <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
      */
     function __construct()
     {
@@ -228,6 +228,14 @@ GC0、GC1、GC2：三种性能型云手机
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("DPI",$param) and $param["DPI"] !== null) {
+            $this->DPI = $param["DPI"];
+        }
+
+        if (array_key_exists("FPS",$param) and $param["FPS"] !== null) {
+            $this->FPS = $param["FPS"];
         }
 
         if (array_key_exists("HostSerialNumber",$param) and $param["HostSerialNumber"] !== null) {

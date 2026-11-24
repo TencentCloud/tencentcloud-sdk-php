@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchFileBySid请求参数结构体
  *
- * @method string getSid() 获取若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
- * @method void setSid(string $Sid) 设置若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
- * @method boolean getAuditLog() 获取是否创建审计日志,通过查看按钮调用时为true,其他为false
- * @method void setAuditLog(boolean $AuditLog) 设置是否创建审计日志,通过查看按钮调用时为true,其他为false
- * @method integer getLimit() 获取分页的页内记录数，默认为20，最大200
- * @method void setLimit(integer $Limit) 设置分页的页内记录数，默认为20，最大200
- * @method string getFileName() 获取可填写路径名或文件名
- * @method void setFileName(string $FileName) 设置可填写路径名或文件名
- * @method integer getOffset() 获取分页用偏移量
- * @method void setOffset(integer $Offset) 设置分页用偏移量
- * @method integer getAuditAction() 获取1-已执行，  2-被阻断
- * @method void setAuditAction(integer $AuditAction) 设置1-已执行，  2-被阻断
- * @method array getAuditActionSet() 获取1-已执行，  2-被阻断
- * @method void setAuditActionSet(array $AuditActionSet) 设置1-已执行，  2-被阻断
- * @method array getTypeFilters() 获取以Protocol和Method为条件查询
- * @method void setTypeFilters(array $TypeFilters) 设置以Protocol和Method为条件查询
+ * @method string getSid() 获取<p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
+ * @method void setSid(string $Sid) 设置<p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
+ * @method boolean getAuditLog() 获取<p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
+ * @method void setAuditLog(boolean $AuditLog) 设置<p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
+ * @method integer getLimit() 获取<p>分页的页内记录数，默认为20，最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页的页内记录数，默认为20，最大200</p>
+ * @method string getFileName() 获取<p>可填写路径名或文件名</p>
+ * @method void setFileName(string $FileName) 设置<p>可填写路径名或文件名</p>
+ * @method integer getOffset() 获取<p>分页用偏移量</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页用偏移量</p>
+ * @method integer getAuditAction() 获取<p>1-已放行，  2-已阻断</p>
+ * @method void setAuditAction(integer $AuditAction) 设置<p>1-已放行，  2-已阻断</p>
+ * @method array getAuditActionSet() 获取<p>1-已放行，  2-已阻断</p>
+ * @method void setAuditActionSet(array $AuditActionSet) 设置<p>1-已放行，  2-已阻断</p>
+ * @method array getTypeFilters() 获取<p>以Protocol和Method为条件查询</p>
+ * @method void setTypeFilters(array $TypeFilters) 设置<p>以Protocol和Method为条件查询</p>
  */
 class SearchFileBySidRequest extends AbstractModel
 {
     /**
-     * @var string 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+     * @var string <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
      */
     public $Sid;
 
     /**
-     * @var boolean 是否创建审计日志,通过查看按钮调用时为true,其他为false
+     * @var boolean <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
      */
     public $AuditLog;
 
     /**
-     * @var integer 分页的页内记录数，默认为20，最大200
+     * @var integer <p>分页的页内记录数，默认为20，最大200</p>
      */
     public $Limit;
 
     /**
-     * @var string 可填写路径名或文件名
+     * @var string <p>可填写路径名或文件名</p>
      */
     public $FileName;
 
     /**
-     * @var integer 分页用偏移量
+     * @var integer <p>分页用偏移量</p>
      */
     public $Offset;
 
     /**
-     * @var integer 1-已执行，  2-被阻断
+     * @var integer <p>1-已放行，  2-已阻断</p>
      */
     public $AuditAction;
 
     /**
-     * @var array 1-已执行，  2-被阻断
+     * @var array <p>1-已放行，  2-已阻断</p>
      */
     public $AuditActionSet;
 
     /**
-     * @var array 以Protocol和Method为条件查询
+     * @var array <p>以Protocol和Method为条件查询</p>
      */
     public $TypeFilters;
 
     /**
-     * @param string $Sid 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
-     * @param boolean $AuditLog 是否创建审计日志,通过查看按钮调用时为true,其他为false
-     * @param integer $Limit 分页的页内记录数，默认为20，最大200
-     * @param string $FileName 可填写路径名或文件名
-     * @param integer $Offset 分页用偏移量
-     * @param integer $AuditAction 1-已执行，  2-被阻断
-     * @param array $AuditActionSet 1-已执行，  2-被阻断
-     * @param array $TypeFilters 以Protocol和Method为条件查询
+     * @param string $Sid <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
+     * @param boolean $AuditLog <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
+     * @param integer $Limit <p>分页的页内记录数，默认为20，最大200</p>
+     * @param string $FileName <p>可填写路径名或文件名</p>
+     * @param integer $Offset <p>分页用偏移量</p>
+     * @param integer $AuditAction <p>1-已放行，  2-已阻断</p>
+     * @param array $AuditActionSet <p>1-已放行，  2-已阻断</p>
+     * @param array $TypeFilters <p>以Protocol和Method为条件查询</p>
      */
     function __construct()
     {

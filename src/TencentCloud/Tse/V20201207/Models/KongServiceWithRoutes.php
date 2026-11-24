@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回kong的服务和路由列表
  *
- * @method array getServiceList() 获取
- * @method void setServiceList(array $ServiceList) 设置
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getServiceList() 获取<p>服务及路由列表</p>
+ * @method void setServiceList(array $ServiceList) 设置<p>服务及路由列表</p>
+ * @method integer getTotalCount() 获取<p>总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>总数</p>
  */
 class KongServiceWithRoutes extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array <p>服务及路由列表</p>
      */
     public $ServiceList;
 
     /**
-     * @var integer 总数
+     * @var integer <p>总数</p>
      */
     public $TotalCount;
 
     /**
-     * @param array $ServiceList 
-     * @param integer $TotalCount 总数
+     * @param array $ServiceList <p>服务及路由列表</p>
+     * @param integer $TotalCount <p>总数</p>
      */
     function __construct()
     {

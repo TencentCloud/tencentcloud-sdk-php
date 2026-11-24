@@ -296,9 +296,15 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\EdgeKVGetResponse EdgeKVGet(Models\EdgeKVGetRequest $req) 本接口用于从指定命名空间中批量读取键的值，支持一次查询最多 20 个键。
  * @method Models\EdgeKVListResponse EdgeKVList(Models\EdgeKVListRequest $req) 本接口用于列出指定命名空间下的所有键名，支持前缀过滤。通过 Cursor 实现游标遍历，返回下一个游标用于继续查询。适用于遍历命名空间中的所有键。
  * @method Models\EdgeKVPutResponse EdgeKVPut(Models\EdgeKVPutRequest $req) 本接口用于向指定命名空间写入键值对数据，支持设置过期时间。若键已存在则覆盖原有值，若不存在则创建新键值对。
- * @method Models\EnableOriginACLResponse EnableOriginACL(Models\EnableOriginACLRequest $req) 本接口用于站点首次开启源站防护，启用后 EdgeOne 将会使用特定的回源 IP 网段为七层加速域名/四层代理实例回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需要启用超过 200 个资源，可先通过指定资源的方式以最大数量启用，剩余资源通过 ModifyOriginACL 接口启用。后续新增七层加速域名/四层代理实例均请通过 ModifyOriginACL 接口配置。同时开启的时候对开白的账户支持选择其他回源 IP 网段版本，例如精简版，来达到使用更少的 IP 网段回源效果。
+ * @method Models\EnableOriginACLResponse EnableOriginACL(Models\EnableOriginACLRequest $req) 本接口用于站点首次开启源站防护，启用后 EdgeOne 将会使用特定的回源 IP 网段为七层加速域名/四层代理实例回源。
+本接口支持两种模式：**自动纳入防护模式** 和 **指定加入防护模式** 。<li>当使用 **自动纳入防护模式** 时（L7EnableMode/L4EnableMode 取值为 all），会实时的将站点下的加速域名列表和四层代理实例自动加入到源站防护列表中，无需人工干预；</li><li>当使用 **指定加入防护模式** 时（L7EnableMode/L4EnableMode 取值为 specific），需要人工指定期望加入到源站防护的资源，未指定的资源不会加入到源站防护列表中。如果有资源调整的需求，需要通过主动调用 ModifyOriginACL 接口来进行调整。</li>
+
+指定加入防护模式使用说明：
+<li>单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200;</li>
+<li>当需要启用超过 200 个资源时，需要先通过本接口配置第一个分片的资源，再通过 ModifyOriginACL 接口进行分片配置。例如：需要加入 500 个七层加速域名，先使用本接口设置 200 个域名，再通过 ModifyOriginACL 接口分两次配置剩余的 300 个域名，每次上限不超过 200 个。</li>
 
 注意：
+- 开启的时候对开白的账户支持选择其他回源 IP 网段版本，例如精简版，来达到使用更少的 IP 网段回源效果。
 - 调用本接口视为同意 [源站防护启用特别约定](https://cloud.tencent.com/document/product/1552/120141)；
 - 回源 IP 网段会不定期变更，EdgeOne 将在回源 IP 网段变更前 14 天、前 7 天、前 3 天和前 1 天分别通过站内信、短信、邮件等一种或多种方式发起通知，为了能正常收到回源 IP 网段的变更通知，请务必确保您在 [腾讯云消息中心控制台](https://console.cloud.tencent.com/message)内，已勾选边缘安全加速平台 EO 的产品服务相关消息通知，并配置正确的消息接收人。配置方式请参考 [消息订阅管理](https://cloud.tencent.com/document/product/567/43476)。
  * @method Models\ExportZoneConfigResponse ExportZoneConfig(Models\ExportZoneConfigRequest $req) 导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。
@@ -349,7 +355,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLine(Models\ModifyMultiPathGatewayLineRequest $req) 通过本接口修改接入多通道安全加速网关的线路，包括 EdgeOne 四层代理线路、自定义线路。
  * @method Models\ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(Models\ModifyMultiPathGatewaySecretKeyRequest $req) 通过本接口修改接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关，修改后原密钥失效。
  * @method Models\ModifyMultiPathGatewayStatusResponse ModifyMultiPathGatewayStatus(Models\ModifyMultiPathGatewayStatusRequest $req) 更新多通道安全网关状态。
- * @method Models\ModifyOriginACLResponse ModifyOriginACL(Models\ModifyOriginACLRequest $req) 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。同时对于开白的客户支持切换到其他可用的源站防护 IP 网段版本，例如精简版，可以减少回源 IP 网段。
+ * @method Models\ModifyOriginACLResponse ModifyOriginACL(Models\ModifyOriginACLRequest $req) 本接口用于修改站点的源站防护配置，支持以下操作：<li>**资源增删**：对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源，适用于 **指定加入防护模式** 下的资源调整，未指定的资源不会发生变化；</li><li>**模式切换**：调整七层加速域名/四层代理实例的源站防护模式。切换为 all 后，会实时的将站点下的加速域名列表或四层代理实例自动加入到源站防护列表中，且后续的资源发生变化时也会自动进行调整，无需人工干预；切换为 specific 后，仅变更模式，已纳入防护的资源保持不变；</li><li>**网段版本切换**：对于开白的客户，支持切换到其他可用的源站防护 IP 网段版本，例如精简版，可以减少回源 IP 网段。</li>
+
+指定加入防护模式使用说明：
+<li>单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200;</li>
+<li>当需要变更超过 200 个资源时，请通过本接口分批提交。例如：需要加入 500 个七层加速域名，先通过本接口提交 200 个域名，再分两次提交剩余的 300 个域名，每次不超过 200 个。</li>
  * @method Models\ModifyOriginGroupResponse ModifyOriginGroup(Models\ModifyOriginGroupRequest $req) 修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
  * @method Models\ModifyPlanResponse ModifyPlan(Models\ModifyPlanRequest $req) 修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
  * @method Models\ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimit(Models\ModifyPrefetchOriginLimitRequest $req) 本接口用于配置回源限速限制，该功能白名单内测中。

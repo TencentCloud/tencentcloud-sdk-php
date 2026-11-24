@@ -25,6 +25,7 @@ use TencentCloud\Cdz\V20221123\Models as Models;
 /**
  * @method Models\DescribeCloudDedicatedZoneHostsResponse DescribeCloudDedicatedZoneHosts(Models\DescribeCloudDedicatedZoneHostsRequest $req) 查询可用区的Host和Host上部署的实例
  * @method Models\DescribeCloudDedicatedZoneResourceSummaryResponse DescribeCloudDedicatedZoneResourceSummary(Models\DescribeCloudDedicatedZoneResourceSummaryRequest $req) 查询专属可用区各个垂直产品的资源使用情况
+ * @method Models\DescribeUserAvailableCloudDedicatedZonesResponse DescribeUserAvailableCloudDedicatedZones(Models\DescribeUserAvailableCloudDedicatedZonesRequest $req) 查询用户可使用的专属可用区列表
  */
 
 class CdzClient extends AbstractClient

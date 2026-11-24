@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云原生网关限流插件参数限流的精确Qps阈值
  *
- * @method string getUnit() 获取qps阈值控制维度,包含:second、minute、hour、day、month、year
- * @method void setUnit(string $Unit) 设置qps阈值控制维度,包含:second、minute、hour、day、month、year
  * @method string getGlobalConfigId() 获取全局配置ID
  * @method void setGlobalConfigId(string $GlobalConfigId) 设置全局配置ID
+ * @method string getUnit() 获取qps阈值控制维度,包含:second、minute、hour、day、month、year
+ * @method void setUnit(string $Unit) 设置qps阈值控制维度,包含:second、minute、hour、day、month、year
  */
 class AccurateQpsThreshold extends AbstractModel
 {
-    /**
-     * @var string qps阈值控制维度,包含:second、minute、hour、day、month、year
-     */
-    public $Unit;
-
     /**
      * @var string 全局配置ID
      */
     public $GlobalConfigId;
 
     /**
-     * @param string $Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
+     * @var string qps阈值控制维度,包含:second、minute、hour、day、month、year
+     */
+    public $Unit;
+
+    /**
      * @param string $GlobalConfigId 全局配置ID
+     * @param string $Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AccurateQpsThreshold extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
-            $this->Unit = $param["Unit"];
-        }
-
         if (array_key_exists("GlobalConfigId",$param) and $param["GlobalConfigId"] !== null) {
             $this->GlobalConfigId = $param["GlobalConfigId"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
     }
 }

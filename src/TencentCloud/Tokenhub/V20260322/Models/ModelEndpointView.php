@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置<p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
  * @method string getModelStatus() 获取<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
  * @method void setModelStatus(string $ModelStatus) 设置<p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+ * @method string getModelChargeUnit() 获取<p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+ * @method void setModelChargeUnit(string $ModelChargeUnit) 设置<p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
  * @method string getServiceType() 获取<p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
  * @method void setServiceType(string $ServiceType) 设置<p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
  * @method string getChargeType() 获取<p>计费方式。取值：FREE（免费体验）、TOKEN（按 Token 计费）。未激活时为空。</p>
@@ -48,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRPM(integer $RPM) 设置<p>推理服务的 rpm 限制，没设置就按模型维度 rpm 限制展示</p>
  * @method integer getTPM() 获取<p>推理服务的tpm 限制，没设置就按模型维度 tpm 限制展示</p>
  * @method void setTPM(integer $TPM) 设置<p>推理服务的tpm 限制，没设置就按模型维度 tpm 限制展示</p>
+ * @method ModelImage getModelImage() 获取<p>模型图标。</p>
+ * @method void setModelImage(ModelImage $ModelImage) 设置<p>模型图标。</p>
+ * @method string getOfflineAt() 获取<p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+ * @method void setOfflineAt(string $OfflineAt) 设置<p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+ * @method string getDiscontinuedAt() 获取<p>停止新购时间</p>
+ * @method void setDiscontinuedAt(string $DiscontinuedAt) 设置<p>停止新购时间</p>
+ * @method boolean getNightDiscountEnabled() 获取<p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+ * @method void setNightDiscountEnabled(boolean $NightDiscountEnabled) 设置<p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
  */
 class ModelEndpointView extends AbstractModel
 {
@@ -87,6 +97,11 @@ class ModelEndpointView extends AbstractModel
     public $ModelStatus;
 
     /**
+     * @var string <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+     */
+    public $ModelChargeUnit;
+
+    /**
      * @var string <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
      */
     public $ServiceType;
@@ -122,6 +137,26 @@ class ModelEndpointView extends AbstractModel
     public $TPM;
 
     /**
+     * @var ModelImage <p>模型图标。</p>
+     */
+    public $ModelImage;
+
+    /**
+     * @var string <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     */
+    public $OfflineAt;
+
+    /**
+     * @var string <p>停止新购时间</p>
+     */
+    public $DiscontinuedAt;
+
+    /**
+     * @var boolean <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public $NightDiscountEnabled;
+
+    /**
      * @param string $EndpointId <p>推理服务 ID。网关默认创建的 id 与模型 id 相同；控制台自定义推理服务以 ep- 开头。</p>
      * @param string $EndpointName <p>推理服务名称。未激活时与 ModelId 相同。</p>
      * @param string $ModelId <p>模型 ID。</p>
@@ -129,6 +164,7 @@ class ModelEndpointView extends AbstractModel
      * @param string $ModelName <p>模型名称。</p>
      * @param string $Status <p>状态。取值：ACTIVE（运行中）、INACTIVE（已停止）。</p>
      * @param string $ModelStatus <p>模型状态</p><p>枚举值：</p><ul><li>online： 在线</li><li>pre-offline： 预下线</li><li>discontinued： 停止新购</li><li>maintenance： 维护中</li><li>offline： 下线</li></ul>
+     * @param string $ModelChargeUnit <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
      * @param string $ServiceType <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
      * @param string $ChargeType <p>计费方式。取值：FREE（免费体验）、TOKEN（按 Token 计费）。未激活时为空。</p>
      * @param boolean $PaymentEnabled <p>是否已开启后付费。true 表示已开启，false 表示未开启。未激活时为 false。</p>
@@ -136,6 +172,10 @@ class ModelEndpointView extends AbstractModel
      * @param string $StopReason <p>停止原因。当状态为 INACTIVE 时返回。取值：FREE_QUOTA_EXHAUSTED（免费额度已用尽）、NO_FREE_PACKAGE（无可用免费包）、INSUFFICIENT_BALANCE（余额不足）、BILLING_ISOLATED（账户欠费隔离）、INTERNAL_ERROR（内部错误）。</p>
      * @param integer $RPM <p>推理服务的 rpm 限制，没设置就按模型维度 rpm 限制展示</p>
      * @param integer $TPM <p>推理服务的tpm 限制，没设置就按模型维度 tpm 限制展示</p>
+     * @param ModelImage $ModelImage <p>模型图标。</p>
+     * @param string $OfflineAt <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     * @param string $DiscontinuedAt <p>停止新购时间</p>
+     * @param boolean $NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
      */
     function __construct()
     {
@@ -178,6 +218,10 @@ class ModelEndpointView extends AbstractModel
             $this->ModelStatus = $param["ModelStatus"];
         }
 
+        if (array_key_exists("ModelChargeUnit",$param) and $param["ModelChargeUnit"] !== null) {
+            $this->ModelChargeUnit = $param["ModelChargeUnit"];
+        }
+
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
         }
@@ -204,6 +248,23 @@ class ModelEndpointView extends AbstractModel
 
         if (array_key_exists("TPM",$param) and $param["TPM"] !== null) {
             $this->TPM = $param["TPM"];
+        }
+
+        if (array_key_exists("ModelImage",$param) and $param["ModelImage"] !== null) {
+            $this->ModelImage = new ModelImage();
+            $this->ModelImage->deserialize($param["ModelImage"]);
+        }
+
+        if (array_key_exists("OfflineAt",$param) and $param["OfflineAt"] !== null) {
+            $this->OfflineAt = $param["OfflineAt"];
+        }
+
+        if (array_key_exists("DiscontinuedAt",$param) and $param["DiscontinuedAt"] !== null) {
+            $this->DiscontinuedAt = $param["DiscontinuedAt"];
+        }
+
+        if (array_key_exists("NightDiscountEnabled",$param) and $param["NightDiscountEnabled"] !== null) {
+            $this->NightDiscountEnabled = $param["NightDiscountEnabled"];
         }
     }
 }

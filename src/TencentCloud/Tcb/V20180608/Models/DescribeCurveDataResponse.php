@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置<p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
  * @method array getValues() 获取<p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
  * @method void setValues(array $Values) 设置<p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
- * @method array getTime() 获取<p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
- * @method void setTime(array $Time) 设置<p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+ * @method array getTime() 获取<p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
+ * @method void setTime(array $Time) 设置<p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
  * @method array getNewValues() 获取<p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
  * @method void setNewValues(array $NewValues) 设置<p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
- * @method string getStatistics() 获取<p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
- * @method void setStatistics(string $Statistics) 设置<p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+ * @method string getStatistics() 获取<p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+ * @method void setStatistics(string $Statistics) 设置<p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,7 +67,7 @@ class DescribeCurveDataResponse extends AbstractModel
     public $Values;
 
     /**
-     * @var array <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+     * @var array <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
      */
     public $Time;
 
@@ -77,7 +77,7 @@ class DescribeCurveDataResponse extends AbstractModel
     public $NewValues;
 
     /**
-     * @var string <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * @var string <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      */
     public $Statistics;
 
@@ -92,9 +92,9 @@ class DescribeCurveDataResponse extends AbstractModel
      * @param string $MetricName <p>指标名</p>
      * @param integer $Period <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
      * @param array $Values <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
-     * @param array $Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+     * @param array $Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
      * @param array $NewValues <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
-     * @param string $Statistics <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * @param string $Statistics <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

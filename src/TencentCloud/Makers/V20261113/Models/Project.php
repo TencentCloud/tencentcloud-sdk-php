@@ -136,6 +136,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedOn(string $ModifiedOn) 设置<p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBuildMachine() 获取<p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+ * @method void setBuildMachine(string $BuildMachine) 设置<p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
  */
 class Project extends AbstractModel
 {
@@ -314,6 +316,11 @@ class Project extends AbstractModel
     public $ModifiedOn;
 
     /**
+     * @var string <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+     */
+    public $BuildMachine;
+
+    /**
      * @param string $ProjectId <p>项目 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>项目名称</p>
@@ -372,6 +379,7 @@ class Project extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedOn <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BuildMachine <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
      */
     function __construct()
     {
@@ -512,6 +520,10 @@ class Project extends AbstractModel
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("BuildMachine",$param) and $param["BuildMachine"] !== null) {
+            $this->BuildMachine = $param["BuildMachine"];
         }
     }
 }

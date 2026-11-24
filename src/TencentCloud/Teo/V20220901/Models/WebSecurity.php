@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 序列化的安全结构
  *
- * @method SecurityPolicy getZoneDefaultPolicy() 获取站点级策略的配置详情。
- * @method void setZoneDefaultPolicy(SecurityPolicy $ZoneDefaultPolicy) 设置站点级策略的配置详情。
- * @method HostPolicy getHostPolicy() 获取域名级策略的配置详情。
- * @method void setHostPolicy(HostPolicy $HostPolicy) 设置域名级策略的配置详情。
- * @method WebSecurityTemplates getTemplates() 获取策略模板的配置详情。
- * @method void setTemplates(WebSecurityTemplates $Templates) 设置策略模板的配置详情。
+ * @method SecurityPolicy getZoneDefaultPolicy() 获取<p>站点级策略的配置详情。</p>
+ * @method void setZoneDefaultPolicy(SecurityPolicy $ZoneDefaultPolicy) 设置<p>站点级策略的配置详情。</p>
+ * @method array getHostPolicy() 获取<p>域名级策略的配置详情。</p>
+ * @method void setHostPolicy(array $HostPolicy) 设置<p>域名级策略的配置详情。</p>
+ * @method array getTemplates() 获取<p>策略模板的配置详情。</p>
+ * @method void setTemplates(array $Templates) 设置<p>策略模板的配置详情。</p>
  */
 class WebSecurity extends AbstractModel
 {
     /**
-     * @var SecurityPolicy 站点级策略的配置详情。
+     * @var SecurityPolicy <p>站点级策略的配置详情。</p>
      */
     public $ZoneDefaultPolicy;
 
     /**
-     * @var HostPolicy 域名级策略的配置详情。
+     * @var array <p>域名级策略的配置详情。</p>
      */
     public $HostPolicy;
 
     /**
-     * @var WebSecurityTemplates 策略模板的配置详情。
+     * @var array <p>策略模板的配置详情。</p>
      */
     public $Templates;
 
     /**
-     * @param SecurityPolicy $ZoneDefaultPolicy 站点级策略的配置详情。
-     * @param HostPolicy $HostPolicy 域名级策略的配置详情。
-     * @param WebSecurityTemplates $Templates 策略模板的配置详情。
+     * @param SecurityPolicy $ZoneDefaultPolicy <p>站点级策略的配置详情。</p>
+     * @param array $HostPolicy <p>域名级策略的配置详情。</p>
+     * @param array $Templates <p>策略模板的配置详情。</p>
      */
     function __construct()
     {
@@ -68,13 +68,21 @@ class WebSecurity extends AbstractModel
         }
 
         if (array_key_exists("HostPolicy",$param) and $param["HostPolicy"] !== null) {
-            $this->HostPolicy = new HostPolicy();
-            $this->HostPolicy->deserialize($param["HostPolicy"]);
+            $this->HostPolicy = [];
+            foreach ($param["HostPolicy"] as $key => $value){
+                $obj = new HostPolicy();
+                $obj->deserialize($value);
+                array_push($this->HostPolicy, $obj);
+            }
         }
 
         if (array_key_exists("Templates",$param) and $param["Templates"] !== null) {
-            $this->Templates = new WebSecurityTemplates();
-            $this->Templates->deserialize($param["Templates"]);
+            $this->Templates = [];
+            foreach ($param["Templates"] as $key => $value){
+                $obj = new WebSecurityTemplates();
+                $obj->deserialize($value);
+                array_push($this->Templates, $obj);
+            }
         }
     }
 }

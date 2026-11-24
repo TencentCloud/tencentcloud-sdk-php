@@ -20,93 +20,117 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模型配置
  *
- * @method AIOptimizeModel getAiOptimizeModel() 获取AI一键优化模型
+ * @method AIOptimizeModel getAiOptimizeModel() 获取<p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiOptimizeModel(AIOptimizeModel $AiOptimizeModel) 设置AI一键优化模型
+ * @method void setAiOptimizeModel(AIOptimizeModel $AiOptimizeModel) 设置<p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method FileParseModel getFileParseModel() 获取实时文件解析模型
+ * @method FileParseModel getFileParseModel() 获取<p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileParseModel(FileParseModel $FileParseModel) 设置实时文件解析模型
+ * @method void setFileParseModel(FileParseModel $FileParseModel) 设置<p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method GenerateModel getGenerateModel() 获取生成模型配置
+ * @method GenerateModel getGenerateModel() 获取<p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGenerateModel(GenerateModel $GenerateModel) 设置生成模型配置
+ * @method void setGenerateModel(GenerateModel $GenerateModel) 设置<p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MultiModalQAModel getMultiModalQaModel() 获取多模态问答模型
+ * @method MultiModalQAModel getMultiModalQaModel() 获取<p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiModalQaModel(MultiModalQAModel $MultiModalQaModel) 设置多模态问答模型
+ * @method void setMultiModalQaModel(MultiModalQAModel $MultiModalQaModel) 设置<p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MultiModalUnderstandingModel getMultiModalUnderstandingModel() 获取多模态理解模型
+ * @method MultiModalUnderstandingModel getMultiModalUnderstandingModel() 获取<p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiModalUnderstandingModel(MultiModalUnderstandingModel $MultiModalUnderstandingModel) 设置多模态理解模型
+ * @method void setMultiModalUnderstandingModel(MultiModalUnderstandingModel $MultiModalUnderstandingModel) 设置<p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PromptRewriteModel getPromptRewriteModel() 获取Prompt改写模型
+ * @method PromptRewriteModel getPromptRewriteModel() 获取<p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPromptRewriteModel(PromptRewriteModel $PromptRewriteModel) 设置Prompt改写模型
+ * @method void setPromptRewriteModel(PromptRewriteModel $PromptRewriteModel) 设置<p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ThinkModel getThinkModel() 获取思考模型配置
+ * @method ThinkModel getThinkModel() 获取<p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThinkModel(ThinkModel $ThinkModel) 设置思考模型配置
+ * @method void setThinkModel(ThinkModel $ThinkModel) 设置<p>思考模型配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method FileSplitModel getFileSplitModel() 获取<p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSplitModel(FileSplitModel $FileSplitModel) 设置<p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method HeaderExtractModel getHeaderExtractModel() 获取<p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeaderExtractModel(HeaderExtractModel $HeaderExtractModel) 设置<p>表头拆分模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppModelConfig extends AbstractModel
 {
     /**
-     * @var AIOptimizeModel AI一键优化模型
+     * @var AIOptimizeModel <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiOptimizeModel;
 
     /**
-     * @var FileParseModel 实时文件解析模型
+     * @var FileParseModel <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileParseModel;
 
     /**
-     * @var GenerateModel 生成模型配置
+     * @var GenerateModel <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GenerateModel;
 
     /**
-     * @var MultiModalQAModel 多模态问答模型
+     * @var MultiModalQAModel <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiModalQaModel;
 
     /**
-     * @var MultiModalUnderstandingModel 多模态理解模型
+     * @var MultiModalUnderstandingModel <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiModalUnderstandingModel;
 
     /**
-     * @var PromptRewriteModel Prompt改写模型
+     * @var PromptRewriteModel <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PromptRewriteModel;
 
     /**
-     * @var ThinkModel 思考模型配置
+     * @var ThinkModel <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThinkModel;
 
     /**
-     * @param AIOptimizeModel $AiOptimizeModel AI一键优化模型
+     * @var FileSplitModel <p>实时文档切分模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileParseModel $FileParseModel 实时文件解析模型
+     */
+    public $FileSplitModel;
+
+    /**
+     * @var HeaderExtractModel <p>表头拆分模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GenerateModel $GenerateModel 生成模型配置
+     */
+    public $HeaderExtractModel;
+
+    /**
+     * @param AIOptimizeModel $AiOptimizeModel <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiModalQAModel $MultiModalQaModel 多模态问答模型
+     * @param FileParseModel $FileParseModel <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiModalUnderstandingModel $MultiModalUnderstandingModel 多模态理解模型
+     * @param GenerateModel $GenerateModel <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptRewriteModel $PromptRewriteModel Prompt改写模型
+     * @param MultiModalQAModel $MultiModalQaModel <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThinkModel $ThinkModel 思考模型配置
+     * @param MultiModalUnderstandingModel $MultiModalUnderstandingModel <p>多模态理解模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptRewriteModel $PromptRewriteModel <p>Prompt改写模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThinkModel $ThinkModel <p>思考模型配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSplitModel $FileSplitModel <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeaderExtractModel $HeaderExtractModel <p>表头拆分模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -155,6 +179,16 @@ class AppModelConfig extends AbstractModel
         if (array_key_exists("ThinkModel",$param) and $param["ThinkModel"] !== null) {
             $this->ThinkModel = new ThinkModel();
             $this->ThinkModel->deserialize($param["ThinkModel"]);
+        }
+
+        if (array_key_exists("FileSplitModel",$param) and $param["FileSplitModel"] !== null) {
+            $this->FileSplitModel = new FileSplitModel();
+            $this->FileSplitModel->deserialize($param["FileSplitModel"]);
+        }
+
+        if (array_key_exists("HeaderExtractModel",$param) and $param["HeaderExtractModel"] !== null) {
+            $this->HeaderExtractModel = new HeaderExtractModel();
+            $this->HeaderExtractModel->deserialize($param["HeaderExtractModel"]);
         }
     }
 }

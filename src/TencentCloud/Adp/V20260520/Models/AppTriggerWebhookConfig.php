@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AppTriggerWebhookParamSchemaConfig getParamSchemaConfig() 获取<p>触发器webhook参数配置</p>
  * @method void setParamSchemaConfig(AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig) 设置<p>触发器webhook参数配置</p>
+ * @method AppTriggerWebhookConfigExt getWebhookConfigExt() 获取Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebhookConfigExt(AppTriggerWebhookConfigExt $WebhookConfigExt) 设置Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebhookKey() 获取<p>webhook的key</p>
  * @method void setWebhookKey(string $WebhookKey) 设置<p>webhook的key</p>
+ * @method integer getWebhookProvider() 获取Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+ * @method void setWebhookProvider(integer $WebhookProvider) 设置Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
  * @method string getWebhookToken() 获取<p>webhook的密钥</p>
  * @method void setWebhookToken(string $WebhookToken) 设置<p>webhook的密钥</p>
  * @method string getWebhookUrl() 获取<p>webhook的地址</p>
@@ -37,9 +43,20 @@ class AppTriggerWebhookConfig extends AbstractModel
     public $ParamSchemaConfig;
 
     /**
+     * @var AppTriggerWebhookConfigExt Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebhookConfigExt;
+
+    /**
      * @var string <p>webhook的key</p>
      */
     public $WebhookKey;
+
+    /**
+     * @var integer Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public $WebhookProvider;
 
     /**
      * @var string <p>webhook的密钥</p>
@@ -53,7 +70,10 @@ class AppTriggerWebhookConfig extends AbstractModel
 
     /**
      * @param AppTriggerWebhookParamSchemaConfig $ParamSchemaConfig <p>触发器webhook参数配置</p>
+     * @param AppTriggerWebhookConfigExt $WebhookConfigExt Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WebhookKey <p>webhook的key</p>
+     * @param integer $WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
      * @param string $WebhookToken <p>webhook的密钥</p>
      * @param string $WebhookUrl <p>webhook的地址</p>
      */
@@ -75,8 +95,17 @@ class AppTriggerWebhookConfig extends AbstractModel
             $this->ParamSchemaConfig->deserialize($param["ParamSchemaConfig"]);
         }
 
+        if (array_key_exists("WebhookConfigExt",$param) and $param["WebhookConfigExt"] !== null) {
+            $this->WebhookConfigExt = new AppTriggerWebhookConfigExt();
+            $this->WebhookConfigExt->deserialize($param["WebhookConfigExt"]);
+        }
+
         if (array_key_exists("WebhookKey",$param) and $param["WebhookKey"] !== null) {
             $this->WebhookKey = $param["WebhookKey"];
+        }
+
+        if (array_key_exists("WebhookProvider",$param) and $param["WebhookProvider"] !== null) {
+            $this->WebhookProvider = $param["WebhookProvider"];
         }
 
         if (array_key_exists("WebhookToken",$param) and $param["WebhookToken"] !== null) {

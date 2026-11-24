@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteUserUin(string $ExecuteUserUin) 设置<p>运行账号ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWorkflowLabels() 获取<p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowLabels(array $WorkflowLabels) 设置<p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerWorkflowDetail extends AbstractModel
 {
@@ -164,6 +168,12 @@ class TriggerWorkflowDetail extends AbstractModel
     public $ExecuteUserUin;
 
     /**
+     * @var array <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowLabels;
+
+    /**
      * @param string $WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin <p>责任人ID</p>
@@ -191,6 +201,8 @@ class TriggerWorkflowDetail extends AbstractModel
      * @param string $TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。这里配置之后，内部的触发方式可不填，否则需要保持一致</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteUserUin <p>运行账号ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WorkflowLabels <p>工作流标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,15 @@ class TriggerWorkflowDetail extends AbstractModel
 
         if (array_key_exists("ExecuteUserUin",$param) and $param["ExecuteUserUin"] !== null) {
             $this->ExecuteUserUin = $param["ExecuteUserUin"];
+        }
+
+        if (array_key_exists("WorkflowLabels",$param) and $param["WorkflowLabels"] !== null) {
+            $this->WorkflowLabels = [];
+            foreach ($param["WorkflowLabels"] as $key => $value){
+                $obj = new WorkflowLabel();
+                $obj->deserialize($value);
+                array_push($this->WorkflowLabels, $obj);
+            }
         }
     }
 }

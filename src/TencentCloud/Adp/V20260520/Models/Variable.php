@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBuiltin(boolean $IsBuiltin) 设置<p>是否内置变量</p>
  * @method boolean getEnableSandbox() 获取<p>是否可注入到沙箱环境</p>
  * @method void setEnableSandbox(boolean $EnableSandbox) 设置<p>是否可注入到沙箱环境</p>
+ * @method integer getValueScope() 获取<p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+ * @method void setValueScope(integer $ValueScope) 设置<p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
  */
 class Variable extends AbstractModel
 {
@@ -101,6 +103,11 @@ class Variable extends AbstractModel
     public $EnableSandbox;
 
     /**
+     * @var integer <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+     */
+    public $ValueScope;
+
+    /**
      * @param string $DefaultFileName <p>默认文件名称</p>
      * @param string $DefaultValue <p>默认值</p>
      * @param string $Description <p>变量描述</p>
@@ -112,6 +119,7 @@ class Variable extends AbstractModel
      * @param array $EndpointList <p>网络策略列表(支持: 精确域名、*.通配子域名、可带协议/端口/路径前缀)</p>
      * @param boolean $IsBuiltin <p>是否内置变量</p>
      * @param boolean $EnableSandbox <p>是否可注入到沙箱环境</p>
+     * @param integer $ValueScope <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class Variable extends AbstractModel
 
         if (array_key_exists("EnableSandbox",$param) and $param["EnableSandbox"] !== null) {
             $this->EnableSandbox = $param["EnableSandbox"];
+        }
+
+        if (array_key_exists("ValueScope",$param) and $param["ValueScope"] !== null) {
+            $this->ValueScope = $param["ValueScope"];
         }
     }
 }

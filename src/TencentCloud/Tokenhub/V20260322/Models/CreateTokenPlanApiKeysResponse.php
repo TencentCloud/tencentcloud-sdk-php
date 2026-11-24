@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTokenPlanApiKeys返回参数结构体
  *
- * @method array getItems() 获取成功创建的项列表。
- * @method void setItems(array $Items) 设置成功创建的项列表。
- * @method array getFailedItems() 获取创建失败的项列表。
- * @method void setFailedItems(array $FailedItems) 设置创建失败的项列表。
+ * @method array getItems() 获取<p>成功创建的项列表。</p>
+ * @method void setItems(array $Items) 设置<p>成功创建的项列表。</p>
+ * @method array getFailedItems() 获取<p>创建失败的项列表。</p>
+ * @method void setFailedItems(array $FailedItems) 设置<p>创建失败的项列表。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateTokenPlanApiKeysResponse extends AbstractModel
 {
     /**
-     * @var array 成功创建的项列表。
+     * @var array <p>成功创建的项列表。</p>
      */
     public $Items;
 
     /**
-     * @var array 创建失败的项列表。
+     * @var array <p>创建失败的项列表。</p>
      */
     public $FailedItems;
 
@@ -45,8 +45,8 @@ class CreateTokenPlanApiKeysResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Items 成功创建的项列表。
-     * @param array $FailedItems 创建失败的项列表。
+     * @param array $Items <p>成功创建的项列表。</p>
+     * @param array $FailedItems <p>创建失败的项列表。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

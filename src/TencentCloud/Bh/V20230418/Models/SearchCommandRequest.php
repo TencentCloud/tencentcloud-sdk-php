@@ -20,118 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchCommand请求参数结构体
  *
- * @method string getStartTime() 获取搜索区间的开始时间
- * @method void setStartTime(string $StartTime) 设置搜索区间的开始时间
- * @method string getEndTime() 获取搜索区间的结束时间，不填默认为开始时间到现在为止
- * @method void setEndTime(string $EndTime) 设置搜索区间的结束时间，不填默认为开始时间到现在为止
- * @method string getUserName() 获取用户名
- * @method void setUserName(string $UserName) 设置用户名
- * @method string getRealName() 获取姓名
- * @method void setRealName(string $RealName) 设置姓名
- * @method string getInstanceId() 获取资产实例ID
- * @method void setInstanceId(string $InstanceId) 设置资产实例ID
- * @method string getDeviceName() 获取资产名称
- * @method void setDeviceName(string $DeviceName) 设置资产名称
- * @method string getPublicIp() 获取资产的公网IP
- * @method void setPublicIp(string $PublicIp) 设置资产的公网IP
- * @method string getPrivateIp() 获取资产的内网IP
- * @method void setPrivateIp(string $PrivateIp) 设置资产的内网IP
- * @method string getCmd() 获取执行的命令
- * @method void setCmd(string $Cmd) 设置执行的命令
- * @method integer getEncoding() 获取Cmd字段是前端传值是否进行base64.
-0:否，1：是
- * @method void setEncoding(integer $Encoding) 设置Cmd字段是前端传值是否进行base64.
-0:否，1：是
- * @method array getAuditAction() 获取根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
- * @method void setAuditAction(array $AuditAction) 设置根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
- * @method integer getLimit() 获取每页容量，默认20，最大200
- * @method void setLimit(integer $Limit) 设置每页容量，默认20，最大200
- * @method integer getOffset() 获取分页偏移位置，默认值为0
- * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
+ * @method string getStartTime() 获取<p>搜索区间的开始时间</p>
+ * @method void setStartTime(string $StartTime) 设置<p>搜索区间的开始时间</p>
+ * @method string getEndTime() 获取<p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
+ * @method void setEndTime(string $EndTime) 设置<p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
+ * @method string getUserName() 获取<p>用户名</p>
+ * @method void setUserName(string $UserName) 设置<p>用户名</p>
+ * @method string getRealName() 获取<p>姓名</p>
+ * @method void setRealName(string $RealName) 设置<p>姓名</p>
+ * @method string getInstanceId() 获取<p>资产实例ID</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>资产实例ID</p>
+ * @method string getDeviceName() 获取<p>资产名称</p>
+ * @method void setDeviceName(string $DeviceName) 设置<p>资产名称</p>
+ * @method string getPublicIp() 获取<p>资产的公网IP</p>
+ * @method void setPublicIp(string $PublicIp) 设置<p>资产的公网IP</p>
+ * @method string getPrivateIp() 获取<p>资产的内网IP</p>
+ * @method void setPrivateIp(string $PrivateIp) 设置<p>资产的内网IP</p>
+ * @method string getCmd() 获取<p>执行的命令</p>
+ * @method void setCmd(string $Cmd) 设置<p>执行的命令</p>
+ * @method integer getEncoding() 获取<p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+ * @method void setEncoding(integer $Encoding) 设置<p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+ * @method array getAuditAction() 获取<p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
+ * @method void setAuditAction(array $AuditAction) 设置<p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
+ * @method integer getLimit() 获取<p>每页容量，默认20，最大200</p>
+ * @method void setLimit(integer $Limit) 设置<p>每页容量，默认20，最大200</p>
+ * @method integer getOffset() 获取<p>分页偏移位置，默认值为0</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页偏移位置，默认值为0</p>
  */
 class SearchCommandRequest extends AbstractModel
 {
     /**
-     * @var string 搜索区间的开始时间
+     * @var string <p>搜索区间的开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string 搜索区间的结束时间，不填默认为开始时间到现在为止
+     * @var string <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
      */
     public $EndTime;
 
     /**
-     * @var string 用户名
+     * @var string <p>用户名</p>
      */
     public $UserName;
 
     /**
-     * @var string 姓名
+     * @var string <p>姓名</p>
      */
     public $RealName;
 
     /**
-     * @var string 资产实例ID
+     * @var string <p>资产实例ID</p>
      */
     public $InstanceId;
 
     /**
-     * @var string 资产名称
+     * @var string <p>资产名称</p>
      */
     public $DeviceName;
 
     /**
-     * @var string 资产的公网IP
+     * @var string <p>资产的公网IP</p>
      */
     public $PublicIp;
 
     /**
-     * @var string 资产的内网IP
+     * @var string <p>资产的内网IP</p>
      */
     public $PrivateIp;
 
     /**
-     * @var string 执行的命令
+     * @var string <p>执行的命令</p>
      */
     public $Cmd;
 
     /**
-     * @var integer Cmd字段是前端传值是否进行base64.
-0:否，1：是
+     * @var integer <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
      */
     public $Encoding;
 
     /**
-     * @var array 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
+     * @var array <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
      */
     public $AuditAction;
 
     /**
-     * @var integer 每页容量，默认20，最大200
+     * @var integer <p>每页容量，默认20，最大200</p>
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移位置，默认值为0
+     * @var integer <p>分页偏移位置，默认值为0</p>
      */
     public $Offset;
 
     /**
-     * @param string $StartTime 搜索区间的开始时间
-     * @param string $EndTime 搜索区间的结束时间，不填默认为开始时间到现在为止
-     * @param string $UserName 用户名
-     * @param string $RealName 姓名
-     * @param string $InstanceId 资产实例ID
-     * @param string $DeviceName 资产名称
-     * @param string $PublicIp 资产的公网IP
-     * @param string $PrivateIp 资产的内网IP
-     * @param string $Cmd 执行的命令
-     * @param integer $Encoding Cmd字段是前端传值是否进行base64.
-0:否，1：是
-     * @param array $AuditAction 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
-     * @param integer $Limit 每页容量，默认20，最大200
-     * @param integer $Offset 分页偏移位置，默认值为0
+     * @param string $StartTime <p>搜索区间的开始时间</p>
+     * @param string $EndTime <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
+     * @param string $UserName <p>用户名</p>
+     * @param string $RealName <p>姓名</p>
+     * @param string $InstanceId <p>资产实例ID</p>
+     * @param string $DeviceName <p>资产名称</p>
+     * @param string $PublicIp <p>资产的公网IP</p>
+     * @param string $PrivateIp <p>资产的内网IP</p>
+     * @param string $Cmd <p>执行的命令</p>
+     * @param integer $Encoding <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+     * @param array $AuditAction <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
+     * @param integer $Limit <p>每页容量，默认20，最大200</p>
+     * @param integer $Offset <p>分页偏移位置，默认值为0</p>
      */
     function __construct()
     {

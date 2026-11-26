@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getFlag() 获取<p>手动设置的flag标志，true表示售罄，false表示可售。</p>
  * @method void setFlag(boolean $Flag) 设置<p>手动设置的flag标志，true表示售罄，false表示可售。</p>
- * @method string getVersion() 获取<p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
- * @method void setVersion(string $Version) 设置<p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+ * @method string getVersion() 获取<p>ckafka版本号(1.1.1/2.4.2/0.10.2/3.9.2)</p>
+ * @method void setVersion(string $Version) 设置<p>ckafka版本号(1.1.1/2.4.2/0.10.2/3.9.2)</p>
  * @method string getPlatform() 获取<p>专业版、标准版标志</p>
  * @method void setPlatform(string $Platform) 设置<p>专业版、标准版标志</p>
  * @method boolean getSoldOut() 获取<p>售罄标志：true售罄</p>
@@ -37,7 +37,7 @@ class SaleInfo extends AbstractModel
     public $Flag;
 
     /**
-     * @var string <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+     * @var string <p>ckafka版本号(1.1.1/2.4.2/0.10.2/3.9.2)</p>
      */
     public $Version;
 
@@ -53,7 +53,7 @@ class SaleInfo extends AbstractModel
 
     /**
      * @param boolean $Flag <p>手动设置的flag标志，true表示售罄，false表示可售。</p>
-     * @param string $Version <p>ckafka版本号(1.1.1/2.4.2/0.10.2)</p>
+     * @param string $Version <p>ckafka版本号(1.1.1/2.4.2/0.10.2/3.9.2)</p>
      * @param string $Platform <p>专业版、标准版标志</p>
      * @param boolean $SoldOut <p>售罄标志：true售罄</p>
      */

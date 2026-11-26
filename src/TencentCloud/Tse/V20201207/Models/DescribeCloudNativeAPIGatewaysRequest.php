@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>偏移量，默认为 0。</p>
  * @method array getFilters() 获取<p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
  * @method void setFilters(array $Filters) 设置<p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
+ * @method boolean getEnableRegionFilter() 获取<p>是否按照地域进行过滤</p>
+ * @method void setEnableRegionFilter(boolean $EnableRegionFilter) 设置<p>是否按照地域进行过滤</p>
  */
 class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean <p>是否按照地域进行过滤</p>
+     */
+    public $EnableRegionFilter;
+
+    /**
      * @param integer $Limit <p>返回数量，默认为 20，最大值为 100。</p>
      * @param integer $Offset <p>偏移量，默认为 0。</p>
      * @param array $Filters <p>请求过滤参数，支持按照实例名称、ID和标签键值（Name、GatewayId、Tag）筛选</p>
+     * @param boolean $EnableRegionFilter <p>是否按照地域进行过滤</p>
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("EnableRegionFilter",$param) and $param["EnableRegionFilter"] !== null) {
+            $this->EnableRegionFilter = $param["EnableRegionFilter"];
         }
     }
 }

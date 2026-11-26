@@ -35,6 +35,11 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
  * @method Models\EncryptedPhoneVerificationResponse EncryptedPhoneVerification(Models\EncryptedPhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
  * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。
+ * @method Models\GetAttackDetailResponse GetAttackDetail(Models\GetAttackDetailRequest $req) 根据 AI 人脸防护盾接口返回的 SeqId，查询本次检测命中的攻击区域坐标与攻击描述信息。常用于在 AttackRiskLevel 为 High 或 Mid 时，对原始图片/视频帧进行可视化标注与人工复核。
+
+检测结果默认保留 3 天，超过保留期后无法再查询。
+
+默认接口请求频率限制：10次/秒。
  * @method Models\GetDetectInfoResponse GetDetectInfo(Models\GetDetectInfoRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetDetectInfoEnhancedResponse GetDetectInfoEnhanced(Models\GetDetectInfoEnhancedRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetEidResultResponse GetEidResult(Models\GetEidResultRequest $req) 完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。

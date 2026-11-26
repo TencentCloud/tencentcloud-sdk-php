@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 独享版集群
  *
- * @method string getHsmClusterId() 获取独享集群Id
- * @method void setHsmClusterId(string $HsmClusterId) 设置独享集群Id
- * @method string getHsmClusterName() 获取独享集群名称
- * @method void setHsmClusterName(string $HsmClusterName) 设置独享集群名称
+ * @method string getHsmClusterId() 获取<p>独享集群Id</p>
+ * @method void setHsmClusterId(string $HsmClusterId) 设置<p>独享集群Id</p>
+ * @method string getHsmClusterName() 获取<p>独享集群名称</p>
+ * @method void setHsmClusterName(string $HsmClusterName) 设置<p>独享集群名称</p>
+ * @method integer getCmkUserCount() 获取<p>根密钥的使用量</p><p>单位：个</p>
+ * @method void setCmkUserCount(integer $CmkUserCount) 设置<p>根密钥的使用量</p><p>单位：个</p>
+ * @method integer getCmkLimit() 获取<p>根密钥的额度</p><p>单位：个</p>
+ * @method void setCmkLimit(integer $CmkLimit) 设置<p>根密钥的额度</p><p>单位：个</p>
  */
 class ExclusiveHSM extends AbstractModel
 {
     /**
-     * @var string 独享集群Id
+     * @var string <p>独享集群Id</p>
      */
     public $HsmClusterId;
 
     /**
-     * @var string 独享集群名称
+     * @var string <p>独享集群名称</p>
      */
     public $HsmClusterName;
 
     /**
-     * @param string $HsmClusterId 独享集群Id
-     * @param string $HsmClusterName 独享集群名称
+     * @var integer <p>根密钥的使用量</p><p>单位：个</p>
+     */
+    public $CmkUserCount;
+
+    /**
+     * @var integer <p>根密钥的额度</p><p>单位：个</p>
+     */
+    public $CmkLimit;
+
+    /**
+     * @param string $HsmClusterId <p>独享集群Id</p>
+     * @param string $HsmClusterName <p>独享集群名称</p>
+     * @param integer $CmkUserCount <p>根密钥的使用量</p><p>单位：个</p>
+     * @param integer $CmkLimit <p>根密钥的额度</p><p>单位：个</p>
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ExclusiveHSM extends AbstractModel
 
         if (array_key_exists("HsmClusterName",$param) and $param["HsmClusterName"] !== null) {
             $this->HsmClusterName = $param["HsmClusterName"];
+        }
+
+        if (array_key_exists("CmkUserCount",$param) and $param["CmkUserCount"] !== null) {
+            $this->CmkUserCount = $param["CmkUserCount"];
+        }
+
+        if (array_key_exists("CmkLimit",$param) and $param["CmkLimit"] !== null) {
+            $this->CmkLimit = $param["CmkLimit"];
         }
     }
 }

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateInstance返回参数结构体
  *
- * @method integer getFlowId() 获取任务流id
- * @method void setFlowId(integer $FlowId) 设置任务流id
- * @method array getDealNames() 获取隔离实例的订单id（预付费实例）
+ * @method integer getFlowId() 获取<p>任务流id</p>
+ * @method void setFlowId(integer $FlowId) 设置<p>任务流id</p>
+ * @method array getDealNames() 获取<p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDealNames(array $DealNames) 设置隔离实例的订单id（预付费实例）
+ * @method void setDealNames(array $DealNames) 设置<p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class IsolateInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 任务流id
+     * @var integer <p>任务流id</p>
      */
     public $FlowId;
 
     /**
-     * @var array 隔离实例的订单id（预付费实例）
+     * @var array <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
@@ -48,8 +48,8 @@ class IsolateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 任务流id
-     * @param array $DealNames 隔离实例的订单id（预付费实例）
+     * @param integer $FlowId <p>任务流id</p>
+     * @param array $DealNames <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

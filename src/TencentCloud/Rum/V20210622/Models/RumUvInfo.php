@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RumUv 访问量
  *
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method string getUv() 获取uv访问量
- * @method void setUv(string $Uv) 设置uv访问量
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method integer getProjectId() 获取<p>项目ID</p>
+ * @method void setProjectId(integer $ProjectId) 设置<p>项目ID</p>
+ * @method string getUv() 获取<p>uv访问量</p>
+ * @method void setUv(string $Uv) 设置<p>uv访问量</p>
+ * @method string getCreateTime() 获取<p>创建时间</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间</p>
  */
 class RumUvInfo extends AbstractModel
 {
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ProjectId;
 
     /**
-     * @var string uv访问量
+     * @var string <p>uv访问量</p>
      */
     public $Uv;
 
     /**
-     * @var string 创建时间
+     * @var string <p>创建时间</p>
      */
     public $CreateTime;
 
     /**
-     * @param integer $ProjectId 项目ID
-     * @param string $Uv uv访问量
-     * @param string $CreateTime 创建时间
+     * @param integer $ProjectId <p>项目ID</p>
+     * @param string $Uv <p>uv访问量</p>
+     * @param string $CreateTime <p>创建时间</p>
      */
     function __construct()
     {

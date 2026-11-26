@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoice(Voice $Voice) 设置<p>文本转语音的声音配置</p>
  * @method integer getSdkAppId() 获取<p>TRTC的SdkAppId</p>
  * @method void setSdkAppId(integer $SdkAppId) 设置<p>TRTC的SdkAppId</p>
+ * @method array getTextSegments() 获取<p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+ * @method void setTextSegments(array $TextSegments) 设置<p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
  * @method AudioFormat getAudioFormat() 获取<p>文本转语音的输出音频的格式</p>
  * @method void setAudioFormat(AudioFormat $AudioFormat) 设置<p>文本转语音的输出音频的格式</p>
  * @method string getModel() 获取<p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
@@ -53,6 +55,11 @@ class AsyncTextToSpeechRequest extends AbstractModel
      * @var integer <p>TRTC的SdkAppId</p>
      */
     public $SdkAppId;
+
+    /**
+     * @var array <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+     */
+    public $TextSegments;
 
     /**
      * @var AudioFormat <p>文本转语音的输出音频的格式</p>
@@ -83,6 +90,7 @@ class AsyncTextToSpeechRequest extends AbstractModel
      * @param string $Text <p>需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符</p>
      * @param Voice $Voice <p>文本转语音的声音配置</p>
      * @param integer $SdkAppId <p>TRTC的SdkAppId</p>
+     * @param array $TextSegments <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
      * @param AudioFormat $AudioFormat <p>文本转语音的输出音频的格式</p>
      * @param string $Model <p>TTS的模型，当前固定为：flow_02_turbo</p><p>枚举值：</p><ul><li>flow_02_turbo： flow_02_turbo</li></ul>
      * @param array $PronunciationDict <p>多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。</p>
@@ -113,6 +121,15 @@ class AsyncTextToSpeechRequest extends AbstractModel
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("TextSegments",$param) and $param["TextSegments"] !== null) {
+            $this->TextSegments = [];
+            foreach ($param["TextSegments"] as $key => $value){
+                $obj = new AsyncTTSTextSegment();
+                $obj->deserialize($value);
+                array_push($this->TextSegments, $obj);
+            }
         }
 
         if (array_key_exists("AudioFormat",$param) and $param["AudioFormat"] !== null) {

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTawAreas请求参数结构体
  *
- * @method array getAreaIds() 获取片区Id
- * @method void setAreaIds(array $AreaIds) 设置片区Id
- * @method array getAreaKeys() 获取片区Key
- * @method void setAreaKeys(array $AreaKeys) 设置片区Key
- * @method integer getLimit() 获取分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
- * @method void setLimit(integer $Limit) 设置分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
- * @method array getAreaStatuses() 获取片区状态(1=有效，2=无效)
- * @method void setAreaStatuses(array $AreaStatuses) 设置片区状态(1=有效，2=无效)
- * @method integer getOffset() 获取分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
- * @method void setOffset(integer $Offset) 设置分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+ * @method array getAreaIds() 获取<p>片区Id</p>
+ * @method void setAreaIds(array $AreaIds) 设置<p>片区Id</p>
+ * @method array getAreaKeys() 获取<p>片区Key</p>
+ * @method void setAreaKeys(array $AreaKeys) 设置<p>片区Key</p>
+ * @method integer getLimit() 获取<p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+ * @method void setLimit(integer $Limit) 设置<p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+ * @method array getAreaStatuses() 获取<p>片区状态(1=有效，2=无效)</p>
+ * @method void setAreaStatuses(array $AreaStatuses) 设置<p>片区状态(1=有效，2=无效)</p>
+ * @method integer getOffset() 获取<p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+ * @method void setOffset(integer $Offset) 设置<p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
  */
 class DescribeTawAreasRequest extends AbstractModel
 {
     /**
-     * @var array 片区Id
+     * @var array <p>片区Id</p>
      */
     public $AreaIds;
 
     /**
-     * @var array 片区Key
+     * @var array <p>片区Key</p>
      */
     public $AreaKeys;
 
     /**
-     * @var integer 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * @var integer <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public $Limit;
 
     /**
-     * @var array 片区状态(1=有效，2=无效)
+     * @var array <p>片区状态(1=有效，2=无效)</p>
      */
     public $AreaStatuses;
 
     /**
-     * @var integer 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * @var integer <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public $Offset;
 
     /**
-     * @param array $AreaIds 片区Id
-     * @param array $AreaKeys 片区Key
-     * @param integer $Limit 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
-     * @param array $AreaStatuses 片区状态(1=有效，2=无效)
-     * @param integer $Offset 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * @param array $AreaIds <p>片区Id</p>
+     * @param array $AreaKeys <p>片区Key</p>
+     * @param integer $Limit <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+     * @param array $AreaStatuses <p>片区状态(1=有效，2=无效)</p>
+     * @param integer $Offset <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     function __construct()
     {

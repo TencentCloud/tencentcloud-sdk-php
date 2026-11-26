@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup返回实体
  *
- * @method string getGroup() 获取消费分组名称
- * @method void setGroup(string $Group) 设置消费分组名称
- * @method string getProtocol() 获取该 group 使用的协议。
- * @method void setProtocol(string $Protocol) 设置该 group 使用的协议。
+ * @method string getGroup() 获取<p>消费分组名称</p>
+ * @method void setGroup(string $Group) 设置<p>消费分组名称</p>
+ * @method string getProtocol() 获取<p>该 group 使用的协议。</p>
+ * @method void setProtocol(string $Protocol) 设置<p>该 group 使用的协议。</p>
  */
 class DescribeGroup extends AbstractModel
 {
     /**
-     * @var string 消费分组名称
+     * @var string <p>消费分组名称</p>
      */
     public $Group;
 
     /**
-     * @var string 该 group 使用的协议。
+     * @var string <p>该 group 使用的协议。</p>
      */
     public $Protocol;
 
     /**
-     * @param string $Group 消费分组名称
-     * @param string $Protocol 该 group 使用的协议。
+     * @param string $Group <p>消费分组名称</p>
+     * @param string $Protocol <p>该 group 使用的协议。</p>
      */
     function __construct()
     {

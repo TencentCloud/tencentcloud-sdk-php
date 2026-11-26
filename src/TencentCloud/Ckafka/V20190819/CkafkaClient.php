@@ -62,7 +62,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) 删除路由
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) 修改删除路由延迟触发时间
  * @method Models\DeleteThrottleRuleResponse DeleteThrottleRule(Models\DeleteThrottleRuleRequest $req) 删除实例限流规则
- * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除ckafka主题
+ * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 异步删除 Ckafka 实例主题（Topic）。接口被调用后 Topic 会先进入删除中状态，之后由后台异步删。
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) 枚举ACL
  * @method Models\DescribeAccessPolicyResponse DescribeAccessPolicy(Models\DescribeAccessPolicyRequest $req) 查询实例公网IP白名单列表接口

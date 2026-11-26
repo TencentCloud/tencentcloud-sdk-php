@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AI 网关模型服务单次请求输入字符长度限制。只拒绝超限输入，不做截断。计量为整个请求 JSON 的 Unicode 字符数。
  *
- * @method boolean getEnableInputLimit() 获取<p>是否开启输入限制</p>
- * @method void setEnableInputLimit(boolean $EnableInputLimit) 设置<p>是否开启输入限制</p>
- * @method integer getMaxInputChars() 获取<p>最大输入字符数</p>
- * @method void setMaxInputChars(integer $MaxInputChars) 设置<p>最大输入字符数</p>
+ * @method boolean getEnableInputLimit() 获取<p>是否开启输入长度限制</p>
+ * @method void setEnableInputLimit(boolean $EnableInputLimit) 设置<p>是否开启输入长度限制</p>
+ * @method integer getMaxInputChars() 获取<p>最大输入长度字符数</p>
+ * @method void setMaxInputChars(integer $MaxInputChars) 设置<p>最大输入长度字符数</p>
  */
 class AIGWLengthLimitConfig extends AbstractModel
 {
     /**
-     * @var boolean <p>是否开启输入限制</p>
+     * @var boolean <p>是否开启输入长度限制</p>
      */
     public $EnableInputLimit;
 
     /**
-     * @var integer <p>最大输入字符数</p>
+     * @var integer <p>最大输入长度字符数</p>
      */
     public $MaxInputChars;
 
     /**
-     * @param boolean $EnableInputLimit <p>是否开启输入限制</p>
-     * @param integer $MaxInputChars <p>最大输入字符数</p>
+     * @param boolean $EnableInputLimit <p>是否开启输入长度限制</p>
+     * @param integer $MaxInputChars <p>最大输入长度字符数</p>
      */
     function __construct()
     {

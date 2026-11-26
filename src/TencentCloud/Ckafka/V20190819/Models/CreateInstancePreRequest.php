@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(integer $ClusterId) 设置<p>创建实例时可以选择集群Id, 该入参表示集群Id</p>
  * @method integer getRenewFlag() 获取<p>预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
  * @method void setRenewFlag(integer $RenewFlag) 设置<p>预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
- * @method string getKafkaVersion() 获取<p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
- * @method void setKafkaVersion(string $KafkaVersion) 设置<p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+ * @method string getKafkaVersion() 获取<p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+ * @method void setKafkaVersion(string $KafkaVersion) 设置<p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
  * @method string getSpecificationsType() 获取<p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
  * @method void setSpecificationsType(string $SpecificationsType) 设置<p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
  * @method integer getDiskSize() 获取<p>磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562</p>
@@ -117,7 +117,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+     * @var string <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
      */
     public $KafkaVersion;
 
@@ -201,7 +201,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $MsgRetentionTime <p>可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。</p>
      * @param integer $ClusterId <p>创建实例时可以选择集群Id, 该入参表示集群Id</p>
      * @param integer $RenewFlag <p>预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
-     * @param string $KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+     * @param string $KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
      * @param string $SpecificationsType <p>实例类型: [标准版实例]填写 &quot;standard&quot; (默认), [专业版实例]填写 &quot;profession&quot;,[高级版实例]填写&quot;premium&quot;</p>
      * @param integer $DiskSize <p>磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562</p>
      * @param integer $BandWidth <p>实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745</p>

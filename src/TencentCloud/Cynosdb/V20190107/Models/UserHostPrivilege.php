@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户主机权限
  *
- * @method string getDbUserName() 获取授权用户
- * @method void setDbUserName(string $DbUserName) 设置授权用户
- * @method string getDbHost() 获取客户端ip
- * @method void setDbHost(string $DbHost) 设置客户端ip
- * @method string getDbPrivilege() 获取用户权限
- * @method void setDbPrivilege(string $DbPrivilege) 设置用户权限
+ * @method string getDbUserName() 获取<p>授权用户</p>
+ * @method void setDbUserName(string $DbUserName) 设置<p>授权用户</p>
+ * @method string getDbHost() 获取<p>客户端ip</p>
+ * @method void setDbHost(string $DbHost) 设置<p>客户端ip</p>
+ * @method string getDbPrivilege() 获取<p>用户权限</p>
+ * @method void setDbPrivilege(string $DbPrivilege) 设置<p>用户权限</p>
+ * @method array getPrivilegeList() 获取<p>权限明细列表</p>
+ * @method void setPrivilegeList(array $PrivilegeList) 设置<p>权限明细列表</p>
  */
 class UserHostPrivilege extends AbstractModel
 {
     /**
-     * @var string 授权用户
+     * @var string <p>授权用户</p>
      */
     public $DbUserName;
 
     /**
-     * @var string 客户端ip
+     * @var string <p>客户端ip</p>
      */
     public $DbHost;
 
     /**
-     * @var string 用户权限
+     * @var string <p>用户权限</p>
      */
     public $DbPrivilege;
 
     /**
-     * @param string $DbUserName 授权用户
-     * @param string $DbHost 客户端ip
-     * @param string $DbPrivilege 用户权限
+     * @var array <p>权限明细列表</p>
+     */
+    public $PrivilegeList;
+
+    /**
+     * @param string $DbUserName <p>授权用户</p>
+     * @param string $DbHost <p>客户端ip</p>
+     * @param string $DbPrivilege <p>用户权限</p>
+     * @param array $PrivilegeList <p>权限明细列表</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UserHostPrivilege extends AbstractModel
 
         if (array_key_exists("DbPrivilege",$param) and $param["DbPrivilege"] !== null) {
             $this->DbPrivilege = $param["DbPrivilege"];
+        }
+
+        if (array_key_exists("PrivilegeList",$param) and $param["PrivilegeList"] !== null) {
+            $this->PrivilegeList = $param["PrivilegeList"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 负载均衡配置，仅服务来源（ServiceSource，SourceId 非空）场景生效。
  *
- * @method string getAlgorithm() 获取<p>负载均衡算法</p>
- * @method void setAlgorithm(string $Algorithm) 设置<p>负载均衡算法</p>
+ * @method string getAlgorithm() 获取<p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
+ * @method void setAlgorithm(string $Algorithm) 设置<p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
  */
 class AIGWLoadBalanceConfig extends AbstractModel
 {
     /**
-     * @var string <p>负载均衡算法</p>
+     * @var string <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
      */
     public $Algorithm;
 
     /**
-     * @param string $Algorithm <p>负载均衡算法</p>
+     * @param string $Algorithm <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
      */
     function __construct()
     {

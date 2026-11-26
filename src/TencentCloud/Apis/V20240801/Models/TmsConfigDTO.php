@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextScope(string $ContextScope) 设置<p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCheckTargets() 获取<p>检测内容类型</p>
+ * @method void setCheckTargets(array $CheckTargets) 设置<p>检测内容类型</p>
  */
 class TmsConfigDTO extends AbstractModel
 {
@@ -94,6 +96,11 @@ class TmsConfigDTO extends AbstractModel
     public $ContextScope;
 
     /**
+     * @var array <p>检测内容类型</p>
+     */
+    public $CheckTargets;
+
+    /**
      * @param array $Scope <p>检测范围,请求/响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mode <p>检测形式</p>
@@ -108,6 +115,7 @@ class TmsConfigDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextScope <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CheckTargets <p>检测内容类型</p>
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class TmsConfigDTO extends AbstractModel
 
         if (array_key_exists("ContextScope",$param) and $param["ContextScope"] !== null) {
             $this->ContextScope = $param["ContextScope"];
+        }
+
+        if (array_key_exists("CheckTargets",$param) and $param["CheckTargets"] !== null) {
+            $this->CheckTargets = $param["CheckTargets"];
         }
     }
 }

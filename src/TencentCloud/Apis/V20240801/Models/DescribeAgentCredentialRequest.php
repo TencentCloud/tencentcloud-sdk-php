@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAgentCredential请求参数结构体
  *
-
+ * @method string getInstanceID() 获取<p>实例ID</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID</p>
+ * @method string getID() 获取<p>app id</p>
+ * @method void setID(string $ID) 设置<p>app id</p>
  */
 class DescribeAgentCredentialRequest extends AbstractModel
 {
-
+    /**
+     * @var string <p>实例ID</p>
+     */
+    public $InstanceID;
 
     /**
+     * @var string <p>app id</p>
+     */
+    public $ID;
 
+    /**
+     * @param string $InstanceID <p>实例ID</p>
+     * @param string $ID <p>app id</p>
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeAgentCredentialRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
+        }
 
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
     }
 }

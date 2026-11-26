@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAudioUrl() 获取<p>参考音频URL信息。需外网可访问。</p>
  * @method void setAudioUrl(string $AudioUrl) 设置<p>参考音频URL信息。需外网可访问。</p>
+ * @method string getReferenceType() 获取<p>参考类型。</p>
+ * @method void setReferenceType(string $ReferenceType) 设置<p>参考类型。</p>
  */
 class AigcAudioReferenceAudioInfo extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AigcAudioReferenceAudioInfo extends AbstractModel
     public $AudioUrl;
 
     /**
+     * @var string <p>参考类型。</p>
+     */
+    public $ReferenceType;
+
+    /**
      * @param string $AudioUrl <p>参考音频URL信息。需外网可访问。</p>
+     * @param string $ReferenceType <p>参考类型。</p>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AigcAudioReferenceAudioInfo extends AbstractModel
         }
         if (array_key_exists("AudioUrl",$param) and $param["AudioUrl"] !== null) {
             $this->AudioUrl = $param["AudioUrl"];
+        }
+
+        if (array_key_exists("ReferenceType",$param) and $param["ReferenceType"] !== null) {
+            $this->ReferenceType = $param["ReferenceType"];
         }
     }
 }

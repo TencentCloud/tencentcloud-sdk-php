@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWhitelist返回参数结构体
  *
- * @method string getMsg() 获取消息
- * @method void setMsg(string $Msg) 设置消息
- * @method integer getID() 获取白名单ID
- * @method void setID(integer $ID) 设置白名单ID
+ * @method string getMsg() 获取<p>消息</p>
+ * @method void setMsg(string $Msg) 设置<p>消息</p>
+ * @method integer getID() 获取<p>白名单ID</p>
+ * @method void setID(integer $ID) 设置<p>白名单ID</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateWhitelistResponse extends AbstractModel
 {
     /**
-     * @var string 消息
+     * @var string <p>消息</p>
      */
     public $Msg;
 
     /**
-     * @var integer 白名单ID
+     * @var integer <p>白名单ID</p>
      */
     public $ID;
 
@@ -45,8 +45,8 @@ class CreateWhitelistResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Msg 消息
-     * @param integer $ID 白名单ID
+     * @param string $Msg <p>消息</p>
+     * @param integer $ID <p>白名单ID</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

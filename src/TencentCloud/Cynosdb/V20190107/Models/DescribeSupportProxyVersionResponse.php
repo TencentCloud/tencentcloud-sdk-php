@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSupportProxyVersion返回参数结构体
  *
- * @method array getSupportProxyVersions() 获取支持的数据库代理版本集合
- * @method void setSupportProxyVersions(array $SupportProxyVersions) 设置支持的数据库代理版本集合
- * @method string getCurrentProxyVersion() 获取当前proxy版本号
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前proxy版本号
- * @method array getSupportProxyVersionDetail() 获取代理版本详情
- * @method void setSupportProxyVersionDetail(array $SupportProxyVersionDetail) 设置代理版本详情
+ * @method array getSupportProxyVersions() 获取<p>支持的数据库代理版本集合</p>
+ * @method void setSupportProxyVersions(array $SupportProxyVersions) 设置<p>支持的数据库代理版本集合</p>
+ * @method string getCurrentProxyVersion() 获取<p>当前proxy版本号</p>
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置<p>当前proxy版本号</p>
+ * @method array getSupportProxyVersionDetail() 获取<p>代理版本详情</p>
+ * @method void setSupportProxyVersionDetail(array $SupportProxyVersionDetail) 设置<p>代理版本详情</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSupportProxyVersionResponse extends AbstractModel
 {
     /**
-     * @var array 支持的数据库代理版本集合
+     * @var array <p>支持的数据库代理版本集合</p>
      */
     public $SupportProxyVersions;
 
     /**
-     * @var string 当前proxy版本号
+     * @var string <p>当前proxy版本号</p>
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var array 代理版本详情
+     * @var array <p>代理版本详情</p>
      */
     public $SupportProxyVersionDetail;
 
@@ -52,9 +52,9 @@ class DescribeSupportProxyVersionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SupportProxyVersions 支持的数据库代理版本集合
-     * @param string $CurrentProxyVersion 当前proxy版本号
-     * @param array $SupportProxyVersionDetail 代理版本详情
+     * @param array $SupportProxyVersions <p>支持的数据库代理版本集合</p>
+     * @param string $CurrentProxyVersion <p>当前proxy版本号</p>
+     * @param array $SupportProxyVersionDetail <p>代理版本详情</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

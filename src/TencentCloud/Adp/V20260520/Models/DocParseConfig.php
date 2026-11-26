@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentFilter(ContentFilter $ContentFilter) 设置<p>内容过滤配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getParseStrategy() 获取<p>文档解析策略：1=OCR解析 2=智能解析 3=MLLM解析；不传默认智能解析<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>DOC_PARSE_STRATEGY_UNKNOWN</td><td>0</td><td>未指定，走服务端默认（智能解析）</td></tr><tr><td>DOC_PARSE_STRATEGY_OCR</td><td>1</td><td>OCR 解析</td></tr><tr><td>DOC_PARSE_STRATEGY_SMART</td><td>2</td><td>智能解析（按图片类型自动选择：数据图/思维导图/架构图/流程图用 MLLM，其他图片用 OCR）</td></tr><tr><td>DOC_PARSE_STRATEGY_MLLM</td><td>3</td><td>MLLM 解析</td></tr></tbody></table></p>
+ * @method void setParseStrategy(integer $ParseStrategy) 设置<p>文档解析策略：1=OCR解析 2=智能解析 3=MLLM解析；不传默认智能解析<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>DOC_PARSE_STRATEGY_UNKNOWN</td><td>0</td><td>未指定，走服务端默认（智能解析）</td></tr><tr><td>DOC_PARSE_STRATEGY_OCR</td><td>1</td><td>OCR 解析</td></tr><tr><td>DOC_PARSE_STRATEGY_SMART</td><td>2</td><td>智能解析（按图片类型自动选择：数据图/思维导图/架构图/流程图用 MLLM，其他图片用 OCR）</td></tr><tr><td>DOC_PARSE_STRATEGY_MLLM</td><td>3</td><td>MLLM 解析</td></tr></tbody></table></p>
  * @method string getSplitRule() 获取<p>分割规则</p>
  * @method void setSplitRule(string $SplitRule) 设置<p>分割规则</p>
  */
@@ -36,6 +38,11 @@ class DocParseConfig extends AbstractModel
     public $ContentFilter;
 
     /**
+     * @var integer <p>文档解析策略：1=OCR解析 2=智能解析 3=MLLM解析；不传默认智能解析<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>DOC_PARSE_STRATEGY_UNKNOWN</td><td>0</td><td>未指定，走服务端默认（智能解析）</td></tr><tr><td>DOC_PARSE_STRATEGY_OCR</td><td>1</td><td>OCR 解析</td></tr><tr><td>DOC_PARSE_STRATEGY_SMART</td><td>2</td><td>智能解析（按图片类型自动选择：数据图/思维导图/架构图/流程图用 MLLM，其他图片用 OCR）</td></tr><tr><td>DOC_PARSE_STRATEGY_MLLM</td><td>3</td><td>MLLM 解析</td></tr></tbody></table></p>
+     */
+    public $ParseStrategy;
+
+    /**
      * @var string <p>分割规则</p>
      */
     public $SplitRule;
@@ -43,6 +50,7 @@ class DocParseConfig extends AbstractModel
     /**
      * @param ContentFilter $ContentFilter <p>内容过滤配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ParseStrategy <p>文档解析策略：1=OCR解析 2=智能解析 3=MLLM解析；不传默认智能解析<table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>DOC_PARSE_STRATEGY_UNKNOWN</td><td>0</td><td>未指定，走服务端默认（智能解析）</td></tr><tr><td>DOC_PARSE_STRATEGY_OCR</td><td>1</td><td>OCR 解析</td></tr><tr><td>DOC_PARSE_STRATEGY_SMART</td><td>2</td><td>智能解析（按图片类型自动选择：数据图/思维导图/架构图/流程图用 MLLM，其他图片用 OCR）</td></tr><tr><td>DOC_PARSE_STRATEGY_MLLM</td><td>3</td><td>MLLM 解析</td></tr></tbody></table></p>
      * @param string $SplitRule <p>分割规则</p>
      */
     function __construct()
@@ -61,6 +69,10 @@ class DocParseConfig extends AbstractModel
         if (array_key_exists("ContentFilter",$param) and $param["ContentFilter"] !== null) {
             $this->ContentFilter = new ContentFilter();
             $this->ContentFilter->deserialize($param["ContentFilter"]);
+        }
+
+        if (array_key_exists("ParseStrategy",$param) and $param["ParseStrategy"] !== null) {
+            $this->ParseStrategy = $param["ParseStrategy"];
         }
 
         if (array_key_exists("SplitRule",$param) and $param["SplitRule"] !== null) {

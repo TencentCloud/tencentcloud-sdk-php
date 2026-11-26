@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTopic请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka 实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka 实例Id
- * @method string getTopicName() 获取ckafka 主题名称
- * @method void setTopicName(string $TopicName) 设置ckafka 主题名称
+ * @method string getInstanceId() 获取<p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+ * @method string getTopicName() 获取<p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+ * @method void setTopicName(string $TopicName) 设置<p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
  */
 class DeleteTopicRequest extends AbstractModel
 {
     /**
-     * @var string ckafka 实例Id
+     * @var string <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public $InstanceId;
 
     /**
-     * @var string ckafka 主题名称
+     * @var string <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public $TopicName;
 
     /**
-     * @param string $InstanceId ckafka 实例Id
-     * @param string $TopicName ckafka 主题名称
+     * @param string $InstanceId <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param string $TopicName <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     function __construct()
     {

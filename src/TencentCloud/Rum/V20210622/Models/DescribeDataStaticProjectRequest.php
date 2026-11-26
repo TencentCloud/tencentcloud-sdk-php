@@ -20,194 +20,194 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDataStaticProject请求参数结构体
  *
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
- * @method void setType(string $Type) 设置allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getID() 获取项目ID
- * @method void setID(integer $ID) 设置项目ID
- * @method string getExtSecond() 获取自定义2
- * @method void setExtSecond(string $ExtSecond) 设置自定义2
- * @method string getEngine() 获取浏览器引擎
- * @method void setEngine(string $Engine) 设置浏览器引擎
- * @method string getIsp() 获取运营商
- * @method void setIsp(string $Isp) 设置运营商
- * @method string getFrom() 获取来源页面
- * @method void setFrom(string $From) 设置来源页面
- * @method string getLevel() 获取日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
- * @method void setLevel(string $Level) 设置日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
- * @method string getBrand() 获取品牌
- * @method void setBrand(string $Brand) 设置品牌
- * @method string getArea() 获取地区
- * @method void setArea(string $Area) 设置地区
- * @method string getVersionNum() 获取版本
- * @method void setVersionNum(string $VersionNum) 设置版本
- * @method string getPlatform() 获取平台
- * @method void setPlatform(string $Platform) 设置平台
- * @method string getExtThird() 获取自定义3
- * @method void setExtThird(string $ExtThird) 设置自定义3
- * @method string getExtFirst() 获取自定义1
- * @method void setExtFirst(string $ExtFirst) 设置自定义1
- * @method string getNetType() 获取网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
- * @method void setNetType(string $NetType) 设置网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
- * @method string getDevice() 获取机型
- * @method void setDevice(string $Device) 设置机型
- * @method string getIsAbroad() 获取显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
- * @method void setIsAbroad(string $IsAbroad) 设置显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
- * @method string getOs() 获取操作系统
- * @method void setOs(string $Os) 设置操作系统
- * @method string getBrowser() 获取浏览器
- * @method void setBrowser(string $Browser) 设置浏览器
- * @method string getCostType() 获取耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
- * @method void setCostType(string $CostType) 设置耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
- * @method array getUrl() 获取来源
- * @method void setUrl(array $Url) 设置来源
- * @method string getEnv() 获取环境
- * @method void setEnv(string $Env) 设置环境
+ * @method integer getStartTime() 获取<p>开始时间</p>
+ * @method void setStartTime(integer $StartTime) 设置<p>开始时间</p>
+ * @method string getType() 获取<p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
+ * @method void setType(string $Type) 设置<p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
+ * @method integer getEndTime() 获取<p>结束时间</p>
+ * @method void setEndTime(integer $EndTime) 设置<p>结束时间</p>
+ * @method integer getID() 获取<p>项目ID</p>
+ * @method void setID(integer $ID) 设置<p>项目ID</p>
+ * @method string getExtSecond() 获取<p>自定义2</p>
+ * @method void setExtSecond(string $ExtSecond) 设置<p>自定义2</p>
+ * @method string getEngine() 获取<p>浏览器引擎</p>
+ * @method void setEngine(string $Engine) 设置<p>浏览器引擎</p>
+ * @method string getIsp() 获取<p>运营商</p>
+ * @method void setIsp(string $Isp) 设置<p>运营商</p>
+ * @method string getFrom() 获取<p>来源页面</p>
+ * @method void setFrom(string $From) 设置<p>来源页面</p>
+ * @method string getLevel() 获取<p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
+ * @method void setLevel(string $Level) 设置<p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
+ * @method string getBrand() 获取<p>品牌</p>
+ * @method void setBrand(string $Brand) 设置<p>品牌</p>
+ * @method string getArea() 获取<p>地区</p>
+ * @method void setArea(string $Area) 设置<p>地区</p>
+ * @method string getVersionNum() 获取<p>版本</p>
+ * @method void setVersionNum(string $VersionNum) 设置<p>版本</p>
+ * @method string getPlatform() 获取<p>平台</p>
+ * @method void setPlatform(string $Platform) 设置<p>平台</p>
+ * @method string getExtThird() 获取<p>自定义3</p>
+ * @method void setExtThird(string $ExtThird) 设置<p>自定义3</p>
+ * @method string getExtFirst() 获取<p>自定义1</p>
+ * @method void setExtFirst(string $ExtFirst) 设置<p>自定义1</p>
+ * @method string getNetType() 获取<p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
+ * @method void setNetType(string $NetType) 设置<p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
+ * @method string getDevice() 获取<p>机型</p>
+ * @method void setDevice(string $Device) 设置<p>机型</p>
+ * @method string getIsAbroad() 获取<p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+ * @method void setIsAbroad(string $IsAbroad) 设置<p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+ * @method string getOs() 获取<p>操作系统</p>
+ * @method void setOs(string $Os) 设置<p>操作系统</p>
+ * @method string getBrowser() 获取<p>浏览器</p>
+ * @method void setBrowser(string $Browser) 设置<p>浏览器</p>
+ * @method string getCostType() 获取<p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
+ * @method void setCostType(string $CostType) 设置<p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
+ * @method array getUrl() 获取<p>来源</p>
+ * @method void setUrl(array $Url) 设置<p>来源</p>
+ * @method string getEnv() 获取<p>环境</p>
+ * @method void setEnv(string $Env) 设置<p>环境</p>
  */
 class DescribeDataStaticProjectRequest extends AbstractModel
 {
     /**
-     * @var integer 开始时间
+     * @var integer <p>开始时间</p>
      */
     public $StartTime;
 
     /**
-     * @var string allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+     * @var string <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
      */
     public $Type;
 
     /**
-     * @var integer 结束时间
+     * @var integer <p>结束时间</p>
      */
     public $EndTime;
 
     /**
-     * @var integer 项目ID
+     * @var integer <p>项目ID</p>
      */
     public $ID;
 
     /**
-     * @var string 自定义2
+     * @var string <p>自定义2</p>
      */
     public $ExtSecond;
 
     /**
-     * @var string 浏览器引擎
+     * @var string <p>浏览器引擎</p>
      */
     public $Engine;
 
     /**
-     * @var string 运营商
+     * @var string <p>运营商</p>
      */
     public $Isp;
 
     /**
-     * @var string 来源页面
+     * @var string <p>来源页面</p>
      */
     public $From;
 
     /**
-     * @var string 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
+     * @var string <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
      */
     public $Level;
 
     /**
-     * @var string 品牌
+     * @var string <p>品牌</p>
      */
     public $Brand;
 
     /**
-     * @var string 地区
+     * @var string <p>地区</p>
      */
     public $Area;
 
     /**
-     * @var string 版本
+     * @var string <p>版本</p>
      */
     public $VersionNum;
 
     /**
-     * @var string 平台
+     * @var string <p>平台</p>
      */
     public $Platform;
 
     /**
-     * @var string 自定义3
+     * @var string <p>自定义3</p>
      */
     public $ExtThird;
 
     /**
-     * @var string 自定义1
+     * @var string <p>自定义1</p>
      */
     public $ExtFirst;
 
     /**
-     * @var string 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
+     * @var string <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
      */
     public $NetType;
 
     /**
-     * @var string 机型
+     * @var string <p>机型</p>
      */
     public $Device;
 
     /**
-     * @var string 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+     * @var string <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
      */
     public $IsAbroad;
 
     /**
-     * @var string 操作系统
+     * @var string <p>操作系统</p>
      */
     public $Os;
 
     /**
-     * @var string 浏览器
+     * @var string <p>浏览器</p>
      */
     public $Browser;
 
     /**
-     * @var string 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * @var string <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
      */
     public $CostType;
 
     /**
-     * @var array 来源
+     * @var array <p>来源</p>
      */
     public $Url;
 
     /**
-     * @var string 环境
+     * @var string <p>环境</p>
      */
     public $Env;
 
     /**
-     * @param integer $StartTime 开始时间
-     * @param string $Type allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
-     * @param integer $EndTime 结束时间
-     * @param integer $ID 项目ID
-     * @param string $ExtSecond 自定义2
-     * @param string $Engine 浏览器引擎
-     * @param string $Isp 运营商
-     * @param string $From 来源页面
-     * @param string $Level 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
-     * @param string $Brand 品牌
-     * @param string $Area 地区
-     * @param string $VersionNum 版本
-     * @param string $Platform 平台
-     * @param string $ExtThird 自定义3
-     * @param string $ExtFirst 自定义1
-     * @param string $NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
-     * @param string $Device 机型
-     * @param string $IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
-     * @param string $Os 操作系统
-     * @param string $Browser 浏览器
-     * @param string $CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
-     * @param array $Url 来源
-     * @param string $Env 环境
+     * @param integer $StartTime <p>开始时间</p>
+     * @param string $Type <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
+     * @param integer $EndTime <p>结束时间</p>
+     * @param integer $ID <p>项目ID</p>
+     * @param string $ExtSecond <p>自定义2</p>
+     * @param string $Engine <p>浏览器引擎</p>
+     * @param string $Isp <p>运营商</p>
+     * @param string $From <p>来源页面</p>
+     * @param string $Level <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
+     * @param string $Brand <p>品牌</p>
+     * @param string $Area <p>地区</p>
+     * @param string $VersionNum <p>版本</p>
+     * @param string $Platform <p>平台</p>
+     * @param string $ExtThird <p>自定义3</p>
+     * @param string $ExtFirst <p>自定义1</p>
+     * @param string $NetType <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
+     * @param string $Device <p>机型</p>
+     * @param string $IsAbroad <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+     * @param string $Os <p>操作系统</p>
+     * @param string $Browser <p>浏览器</p>
+     * @param string $CostType <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
+     * @param array $Url <p>来源</p>
+     * @param string $Env <p>环境</p>
      */
     function __construct()
     {

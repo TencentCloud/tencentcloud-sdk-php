@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadyTime(string $ReadyTime) 设置<p>镜像预热完成时间</p>
  * @method string getLastUsedTime() 获取<p>该预热镜像最近一次被沙箱实例使用时间</p>
  * @method void setLastUsedTime(string $LastUsedTime) 设置<p>该预热镜像最近一次被沙箱实例使用时间</p>
+ * @method string getIdleTTL() 获取<p>镜像预热闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul>
+ * @method void setIdleTTL(string $IdleTTL) 设置<p>镜像预热闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul>
+ * @method string getExpireTime() 获取<p>预计过期清理时间</p>
+ * @method void setExpireTime(string $ExpireTime) 设置<p>预计过期清理时间</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +107,16 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
     public $LastUsedTime;
 
     /**
+     * @var string <p>镜像预热闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul>
+     */
+    public $IdleTTL;
+
+    /**
+     * @var string <p>预计过期清理时间</p>
+     */
+    public $ExpireTime;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +133,8 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
      * @param integer $CachedImageSizeBytes <p>镜像预热存储大小</p><p>单位：Byte</p>
      * @param string $ReadyTime <p>镜像预热完成时间</p>
      * @param string $LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
+     * @param string $IdleTTL <p>镜像预热闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul>
+     * @param string $ExpireTime <p>预计过期清理时间</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +192,14 @@ class DescribePreCacheImageTaskResponse extends AbstractModel
 
         if (array_key_exists("LastUsedTime",$param) and $param["LastUsedTime"] !== null) {
             $this->LastUsedTime = $param["LastUsedTime"];
+        }
+
+        if (array_key_exists("IdleTTL",$param) and $param["IdleTTL"] !== null) {
+            $this->IdleTTL = $param["IdleTTL"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

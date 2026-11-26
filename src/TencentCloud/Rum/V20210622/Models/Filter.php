@@ -23,26 +23,26 @@ use TencentCloud\Common\AbstractModel;
 · 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
 · 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
  *
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+ * @method array getValues() 获取<p>一个或者多个过滤值。</p>
+ * @method void setValues(array $Values) 设置<p>一个或者多个过滤值。</p>
+ * @method string getName() 获取<p>过滤键的名称。</p>
+ * @method void setName(string $Name) 设置<p>过滤键的名称。</p>
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var array 一个或者多个过滤值。
+     * @var array <p>一个或者多个过滤值。</p>
      */
     public $Values;
 
     /**
-     * @var string 过滤键的名称。
+     * @var string <p>过滤键的名称。</p>
      */
     public $Name;
 
     /**
-     * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
+     * @param array $Values <p>一个或者多个过滤值。</p>
+     * @param string $Name <p>过滤键的名称。</p>
      */
     function __construct()
     {

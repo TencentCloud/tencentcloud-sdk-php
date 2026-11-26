@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Makers\V20261113\Models as Models;
 
 /**
+ * @method Models\BlockProjectResponse BlockProject(Models\BlockProjectRequest $req) 封禁或解封当前账号指定站点下的项目及域名。Status 支持 Ban或Normal。
  * @method Models\CreateDeploymentResponse CreateDeployment(Models\CreateDeploymentRequest $req) 创建部署。上传制品时 ViaMeta 和 Provider 传 Upload，TempBucketPath 传已上传对象的路径。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目。上传制品时 Provider 传 Upload，Channel 传 Custom。
  * @method Models\CreateZoneCustomDomainResponse CreateZoneCustomDomain(Models\CreateZoneCustomDomainRequest $req) 把一个自定义域名绑到项目的指定环境。

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置<p>描述说明</p>
  * @method array getProxyZones() 获取<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
  * @method void setProxyZones(array $ProxyZones) 设置<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+ * @method string getProxyVersion() 获取<p>proxy版本号</p>
+ * @method void setProxyVersion(string $ProxyVersion) 设置<p>proxy版本号</p>
  */
 class ProxyConfig extends AbstractModel
 {
@@ -81,6 +83,11 @@ class ProxyConfig extends AbstractModel
     public $ProxyZones;
 
     /**
+     * @var string <p>proxy版本号</p>
+     */
+    public $ProxyVersion;
+
+    /**
      * @param integer $ProxyCount <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
      * @param integer $Cpu <p>cpu核数</p>
      * @param integer $Mem <p>内存</p>
@@ -89,6 +96,7 @@ class ProxyConfig extends AbstractModel
      * @param integer $ConnectionPoolTimeOut <p>连接池阈值:单位（秒）</p>
      * @param string $Description <p>描述说明</p>
      * @param array $ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+     * @param string $ProxyVersion <p>proxy版本号</p>
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class ProxyConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyZones, $obj);
             }
+        }
+
+        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
+            $this->ProxyVersion = $param["ProxyVersion"];
         }
     }
 }

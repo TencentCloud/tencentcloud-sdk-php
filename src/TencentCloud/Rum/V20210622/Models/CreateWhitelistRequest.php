@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWhitelist请求参数结构体
  *
- * @method string getInstanceID() 获取实例ID：taw-123
- * @method void setInstanceID(string $InstanceID) 设置实例ID：taw-123
- * @method string getRemark() 获取备注（暂未作字节数限制）
- * @method void setRemark(string $Remark) 设置备注（暂未作字节数限制）
- * @method string getWhitelistUin() 获取uin：业务方标识
- * @method void setWhitelistUin(string $WhitelistUin) 设置uin：业务方标识
- * @method string getAid() 获取业务方标识
- * @method void setAid(string $Aid) 设置业务方标识
+ * @method string getInstanceID() 获取<p>实例ID：taw-123</p>
+ * @method void setInstanceID(string $InstanceID) 设置<p>实例ID：taw-123</p>
+ * @method string getRemark() 获取<p>备注（暂未作字节数限制）</p>
+ * @method void setRemark(string $Remark) 设置<p>备注（暂未作字节数限制）</p>
+ * @method string getWhitelistUin() 获取<p>uin：业务方标识</p>
+ * @method void setWhitelistUin(string $WhitelistUin) 设置<p>uin：业务方标识</p>
+ * @method string getAid() 获取<p>业务方标识</p>
+ * @method void setAid(string $Aid) 设置<p>业务方标识</p>
  */
 class CreateWhitelistRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID：taw-123
+     * @var string <p>实例ID：taw-123</p>
      */
     public $InstanceID;
 
     /**
-     * @var string 备注（暂未作字节数限制）
+     * @var string <p>备注（暂未作字节数限制）</p>
      */
     public $Remark;
 
     /**
-     * @var string uin：业务方标识
+     * @var string <p>uin：业务方标识</p>
      */
     public $WhitelistUin;
 
     /**
-     * @var string 业务方标识
+     * @var string <p>业务方标识</p>
      */
     public $Aid;
 
     /**
-     * @param string $InstanceID 实例ID：taw-123
-     * @param string $Remark 备注（暂未作字节数限制）
-     * @param string $WhitelistUin uin：业务方标识
-     * @param string $Aid 业务方标识
+     * @param string $InstanceID <p>实例ID：taw-123</p>
+     * @param string $Remark <p>备注（暂未作字节数限制）</p>
+     * @param string $WhitelistUin <p>uin：业务方标识</p>
+     * @param string $Aid <p>业务方标识</p>
      */
     function __construct()
     {

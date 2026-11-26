@@ -20,46 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 开启注册节点池支持配置信息
  *
- * @method string getNetworkType() 获取容器网络类型，支持：HostNetwork、CiliumBGP
- * @method void setNetworkType(string $NetworkType) 设置容器网络类型，支持：HostNetwork、CiliumBGP
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method string getClusterCIDR() 获取集群CIDR，网络模式HostNetwork 时无需填写
+ * @method string getNetworkType() 获取<p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
+ * @method void setNetworkType(string $NetworkType) 设置<p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
+ * @method string getSubnetId() 获取<p>子网ID</p>
+ * @method void setSubnetId(string $SubnetId) 设置<p>子网ID</p>
+ * @method string getClusterCIDR() 获取<p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterCIDR(string $ClusterCIDR) 设置集群CIDR，网络模式HostNetwork 时无需填写
+ * @method void setClusterCIDR(string $ClusterCIDR) 设置<p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnabled() 获取【已废弃】是否开启专线连接能力
- * @method void setEnabled(boolean $Enabled) 设置【已废弃】是否开启专线连接能力
+ * @method boolean getEnabled() 获取<p>【已废弃】是否开启专线连接能力</p>
+ * @method void setEnabled(boolean $Enabled) 设置<p>【已废弃】是否开启专线连接能力</p>
+ * @method string getProxyCLBMode() 获取<p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+ * @method void setProxyCLBMode(string $ProxyCLBMode) 设置<p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
  */
 class ClusterExternalConfig extends AbstractModel
 {
     /**
-     * @var string 容器网络类型，支持：HostNetwork、CiliumBGP
+     * @var string <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
      */
     public $NetworkType;
 
     /**
-     * @var string 子网ID
+     * @var string <p>子网ID</p>
      */
     public $SubnetId;
 
     /**
-     * @var string 集群CIDR，网络模式HostNetwork 时无需填写
+     * @var string <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterCIDR;
 
     /**
-     * @var boolean 【已废弃】是否开启专线连接能力
+     * @var boolean <p>【已废弃】是否开启专线连接能力</p>
      */
     public $Enabled;
 
     /**
-     * @param string $NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
-     * @param string $SubnetId 子网ID
-     * @param string $ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
+     * @var string <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+     */
+    public $ProxyCLBMode;
+
+    /**
+     * @param string $NetworkType <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
+     * @param string $SubnetId <p>子网ID</p>
+     * @param string $ClusterCIDR <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Enabled 【已废弃】是否开启专线连接能力
+     * @param boolean $Enabled <p>【已废弃】是否开启专线连接能力</p>
+     * @param string $ProxyCLBMode <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class ClusterExternalConfig extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("ProxyCLBMode",$param) and $param["ProxyCLBMode"] !== null) {
+            $this->ProxyCLBMode = $param["ProxyCLBMode"];
         }
     }
 }

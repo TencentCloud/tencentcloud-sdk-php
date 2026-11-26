@@ -296,6 +296,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestProtocolType(string $RequestProtocolType) 设置<p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceSecurityRules() 获取<p>安全规则</p>
+ * @method void setServiceSecurityRules(array $ServiceSecurityRules) 设置<p>安全规则</p>
+ * @method array getServiceSecurityRulesVO() 获取<p>安全规则</p>
+ * @method void setServiceSecurityRulesVO(array $ServiceSecurityRulesVO) 设置<p>安全规则</p>
  */
 class ServiceVO extends AbstractModel
 {
@@ -729,6 +733,16 @@ class ServiceVO extends AbstractModel
     public $RequestProtocolType;
 
     /**
+     * @var array <p>安全规则</p>
+     */
+    public $ServiceSecurityRules;
+
+    /**
+     * @var array <p>安全规则</p>
+     */
+    public $ServiceSecurityRulesVO;
+
+    /**
      * @param string $InstanceID <p>实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name <p>名称</p>
@@ -867,6 +881,8 @@ class ServiceVO extends AbstractModel
      * @param string $CredentialName <p>凭据名称</p>
      * @param string $RequestProtocolType <p>访问协议</p><p>枚举值：</p><ul><li>http： http</li><li>https： https</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceSecurityRules <p>安全规则</p>
+     * @param array $ServiceSecurityRulesVO <p>安全规则</p>
      */
     function __construct()
     {
@@ -1203,6 +1219,24 @@ class ServiceVO extends AbstractModel
 
         if (array_key_exists("RequestProtocolType",$param) and $param["RequestProtocolType"] !== null) {
             $this->RequestProtocolType = $param["RequestProtocolType"];
+        }
+
+        if (array_key_exists("ServiceSecurityRules",$param) and $param["ServiceSecurityRules"] !== null) {
+            $this->ServiceSecurityRules = [];
+            foreach ($param["ServiceSecurityRules"] as $key => $value){
+                $obj = new BindMcpSecurityRuleDTO();
+                $obj->deserialize($value);
+                array_push($this->ServiceSecurityRules, $obj);
+            }
+        }
+
+        if (array_key_exists("ServiceSecurityRulesVO",$param) and $param["ServiceSecurityRulesVO"] !== null) {
+            $this->ServiceSecurityRulesVO = [];
+            foreach ($param["ServiceSecurityRulesVO"] as $key => $value){
+                $obj = new McpSecurityRulesVO();
+                $obj->deserialize($value);
+                array_push($this->ServiceSecurityRulesVO, $obj);
+            }
         }
     }
 }

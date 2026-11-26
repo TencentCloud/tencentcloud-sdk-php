@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) 设置<p>操作者uin</p>
  * @method string getOutput() 获取<p>任务输出信息</p>
  * @method void setOutput(string $Output) 设置<p>任务输出信息</p>
- * @method string getStatus() 获取<p>任务状态</p>
- * @method void setStatus(string $Status) 设置<p>任务状态</p>
+ * @method string getStatus() 获取<p>任务状态</p><p>枚举值：</p><ul><li>waiting： 等待执行</li><li>processing： 执行中</li><li>success： 执行成功</li><li>fail： 任务失败</li><li>paused： 任务暂停（存量任务状态）</li><li>undoing： 回滚中</li><li>undoed： 任务已回滚</li></ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><p>枚举值：</p><ul><li>waiting： 等待执行</li><li>processing： 执行中</li><li>success： 执行成功</li><li>fail： 任务失败</li><li>paused： 任务暂停（存量任务状态）</li><li>undoing： 回滚中</li><li>undoed： 任务已回滚</li></ul>
  * @method string getTaskType() 获取<p>任务类型</p>
  * @method void setTaskType(string $TaskType) 设置<p>任务类型</p>
  * @method integer getTriggerTaskId() 获取<p>触发本任务的父任务ID</p>
@@ -195,7 +195,7 @@ class BizTaskInfo extends AbstractModel
     public $Output;
 
     /**
-     * @var string <p>任务状态</p>
+     * @var string <p>任务状态</p><p>枚举值：</p><ul><li>waiting： 等待执行</li><li>processing： 执行中</li><li>success： 执行成功</li><li>fail： 任务失败</li><li>paused： 任务暂停（存量任务状态）</li><li>undoing： 回滚中</li><li>undoed： 任务已回滚</li></ul>
      */
     public $Status;
 
@@ -341,7 +341,7 @@ class BizTaskInfo extends AbstractModel
      * @param string $ObjectType <p>任务操作对象类型</p>
      * @param string $Operator <p>操作者uin</p>
      * @param string $Output <p>任务输出信息</p>
-     * @param string $Status <p>任务状态</p>
+     * @param string $Status <p>任务状态</p><p>枚举值：</p><ul><li>waiting： 等待执行</li><li>processing： 执行中</li><li>success： 执行成功</li><li>fail： 任务失败</li><li>paused： 任务暂停（存量任务状态）</li><li>undoing： 回滚中</li><li>undoed： 任务已回滚</li></ul>
      * @param string $TaskType <p>任务类型</p>
      * @param integer $TriggerTaskId <p>触发本任务的父任务ID</p>
      * @param string $UpdateTime <p>更新时间</p>

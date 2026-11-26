@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageRegistryType(string $ImageRegistryType) 设置<p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
  * @method string getPreCacheType() 获取<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
  * @method void setPreCacheType(string $PreCacheType) 设置<p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+ * @method string getIdleTTL() 获取<p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+ * @method void setIdleTTL(string $IdleTTL) 设置<p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
  */
 class CreatePreCacheImageTaskRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreatePreCacheImageTaskRequest extends AbstractModel
     public $PreCacheType;
 
     /**
+     * @var string <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+     */
+    public $IdleTTL;
+
+    /**
      * @param string $Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      * @param string $ImageRegistryType <p>镜像仓库类型：<code>enterprise</code>、<code>personal</code>、<code>custom</code></p><p>枚举值：</p><ul><li>enterprise： tcr 企业容器镜像服务</li><li>personal： ccr 个人容器镜像服务</li></ul>
      * @param string $PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     * @param string $IdleTTL <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreatePreCacheImageTaskRequest extends AbstractModel
 
         if (array_key_exists("PreCacheType",$param) and $param["PreCacheType"] !== null) {
             $this->PreCacheType = $param["PreCacheType"];
+        }
+
+        if (array_key_exists("IdleTTL",$param) and $param["IdleTTL"] !== null) {
+            $this->IdleTTL = $param["IdleTTL"];
         }
     }
 }

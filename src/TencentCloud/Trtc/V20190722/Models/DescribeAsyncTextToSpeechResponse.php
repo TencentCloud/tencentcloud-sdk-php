@@ -20,50 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncTextToSpeech返回参数结构体
  *
- * @method string getStatus() 获取任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
- * @method void setStatus(string $Status) 设置任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
- * @method string getAudioDownloadUrl() 获取音频下载url
- * @method void setAudioDownloadUrl(string $AudioDownloadUrl) 设置音频下载url
- * @method string getSubtitleDownloadUrl() 获取字幕下载url
- * @method void setSubtitleDownloadUrl(string $SubtitleDownloadUrl) 设置字幕下载url
- * @method integer getTotalDurationMs() 获取音频时长
- * @method void setTotalDurationMs(integer $TotalDurationMs) 设置音频时长
+ * @method string getStatus() 获取<p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
+ * @method void setStatus(string $Status) 设置<p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
+ * @method string getAudioDownloadUrl() 获取<p>音频下载url</p>
+ * @method void setAudioDownloadUrl(string $AudioDownloadUrl) 设置<p>音频下载url</p>
+ * @method string getSubtitleDownloadUrl() 获取<p>字幕下载url</p>
+ * @method void setSubtitleDownloadUrl(string $SubtitleDownloadUrl) 设置<p>字幕下载url</p>
+ * @method integer getTotalDurationMs() 获取<p>音频时长</p>
+ * @method void setTotalDurationMs(integer $TotalDurationMs) 设置<p>音频时长</p>
+ * @method array getSegmentResults() 获取<p>分段文本对应的结果</p>
+ * @method void setSegmentResults(array $SegmentResults) 设置<p>分段文本对应的结果</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAsyncTextToSpeechResponse extends AbstractModel
 {
     /**
-     * @var string 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
+     * @var string <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 音频下载url
+     * @var string <p>音频下载url</p>
      */
     public $AudioDownloadUrl;
 
     /**
-     * @var string 字幕下载url
+     * @var string <p>字幕下载url</p>
      */
     public $SubtitleDownloadUrl;
 
     /**
-     * @var integer 音频时长
+     * @var integer <p>音频时长</p>
      */
     public $TotalDurationMs;
+
+    /**
+     * @var array <p>分段文本对应的结果</p>
+     */
+    public $SegmentResults;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,14 +66,11 @@ class DescribeAsyncTextToSpeechResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
-     * @param string $AudioDownloadUrl 音频下载url
-     * @param string $SubtitleDownloadUrl 字幕下载url
-     * @param integer $TotalDurationMs 音频时长
+     * @param string $Status <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
+     * @param string $AudioDownloadUrl <p>音频下载url</p>
+     * @param string $SubtitleDownloadUrl <p>字幕下载url</p>
+     * @param integer $TotalDurationMs <p>音频时长</p>
+     * @param array $SegmentResults <p>分段文本对应的结果</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -108,6 +100,15 @@ class DescribeAsyncTextToSpeechResponse extends AbstractModel
 
         if (array_key_exists("TotalDurationMs",$param) and $param["TotalDurationMs"] !== null) {
             $this->TotalDurationMs = $param["TotalDurationMs"];
+        }
+
+        if (array_key_exists("SegmentResults",$param) and $param["SegmentResults"] !== null) {
+            $this->SegmentResults = [];
+            foreach ($param["SegmentResults"] as $key => $value){
+                $obj = new AsyncTTSSegmentResult();
+                $obj->deserialize($value);
+                array_push($this->SegmentResults, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

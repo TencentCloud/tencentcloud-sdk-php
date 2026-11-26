@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextScope(string $ContextScope) 设置<p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCheckTargets() 获取<p>检测内容类型</p>
+ * @method void setCheckTargets(array $CheckTargets) 设置<p>检测内容类型</p>
  */
 class PromptModerateConfigDTO extends AbstractModel
 {
@@ -54,12 +56,18 @@ class PromptModerateConfigDTO extends AbstractModel
     public $ContextScope;
 
     /**
+     * @var array <p>检测内容类型</p>
+     */
+    public $CheckTargets;
+
+    /**
      * @param string $Action <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InterceptMessage <p>响应拦截内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextScope <p>检测上下文</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CheckTargets <p>检测内容类型</p>
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class PromptModerateConfigDTO extends AbstractModel
 
         if (array_key_exists("ContextScope",$param) and $param["ContextScope"] !== null) {
             $this->ContextScope = $param["ContextScope"];
+        }
+
+        if (array_key_exists("CheckTargets",$param) and $param["CheckTargets"] !== null) {
+            $this->CheckTargets = $param["CheckTargets"];
         }
     }
 }

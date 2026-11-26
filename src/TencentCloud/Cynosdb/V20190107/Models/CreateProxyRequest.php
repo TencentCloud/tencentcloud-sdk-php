@@ -20,106 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxy请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getCpu() 获取cpu核数
- * @method void setCpu(integer $Cpu) 设置cpu核数
- * @method integer getMem() 获取内存
- * @method void setMem(integer $Mem) 设置内存
- * @method string getUniqueVpcId() 获取私有网络ID，默认与集群私有网络ID保持一致
- * @method void setUniqueVpcId(string $UniqueVpcId) 设置私有网络ID，默认与集群私有网络ID保持一致
- * @method string getUniqueSubnetId() 获取私有网络子网ID，默认与集群子网ID保持一致
- * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置私有网络子网ID，默认与集群子网ID保持一致
- * @method integer getProxyCount() 获取数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
- * @method void setProxyCount(integer $ProxyCount) 设置数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
- * @method string getConnectionPoolType() 获取连接池类型：SessionConnectionPool(会话级别连接池 )
- * @method void setConnectionPoolType(string $ConnectionPoolType) 设置连接池类型：SessionConnectionPool(会话级别连接池 )
- * @method string getOpenConnectionPool() 获取是否开启连接池,yes-开启，no-不开启
- * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置是否开启连接池,yes-开启，no-不开启
- * @method integer getConnectionPoolTimeOut() 获取连接池阈值：单位（秒）
- * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置连接池阈值：单位（秒）
- * @method array getSecurityGroupIds() 获取安全组ID数组
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID数组
- * @method string getDescription() 获取描述说明
- * @method void setDescription(string $Description) 设置描述说明
- * @method array getProxyZones() 获取数据库节点信息（该参数与ProxyCount需要任选一个输入）
- * @method void setProxyZones(array $ProxyZones) 设置数据库节点信息（该参数与ProxyCount需要任选一个输入）
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method integer getCpu() 获取<p>cpu核数</p>
+ * @method void setCpu(integer $Cpu) 设置<p>cpu核数</p>
+ * @method integer getMem() 获取<p>内存</p>
+ * @method void setMem(integer $Mem) 设置<p>内存</p>
+ * @method string getProxyVersion() 获取<p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+ * @method void setProxyVersion(string $ProxyVersion) 设置<p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+ * @method string getUniqueVpcId() 获取<p>私有网络ID，默认与集群私有网络ID保持一致</p>
+ * @method void setUniqueVpcId(string $UniqueVpcId) 设置<p>私有网络ID，默认与集群私有网络ID保持一致</p>
+ * @method string getUniqueSubnetId() 获取<p>私有网络子网ID，默认与集群子网ID保持一致</p>
+ * @method void setUniqueSubnetId(string $UniqueSubnetId) 设置<p>私有网络子网ID，默认与集群子网ID保持一致</p>
+ * @method integer getProxyCount() 获取<p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
+ * @method void setProxyCount(integer $ProxyCount) 设置<p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
+ * @method string getConnectionPoolType() 获取<p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
+ * @method void setConnectionPoolType(string $ConnectionPoolType) 设置<p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
+ * @method string getOpenConnectionPool() 获取<p>是否开启连接池,yes-开启，no-不开启</p>
+ * @method void setOpenConnectionPool(string $OpenConnectionPool) 设置<p>是否开启连接池,yes-开启，no-不开启</p>
+ * @method integer getConnectionPoolTimeOut() 获取<p>连接池阈值：单位（秒）</p>
+ * @method void setConnectionPoolTimeOut(integer $ConnectionPoolTimeOut) 设置<p>连接池阈值：单位（秒）</p>
+ * @method array getSecurityGroupIds() 获取<p>安全组ID数组</p>
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置<p>安全组ID数组</p>
+ * @method string getDescription() 获取<p>描述说明</p>
+ * @method void setDescription(string $Description) 设置<p>描述说明</p>
+ * @method array getProxyZones() 获取<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+ * @method void setProxyZones(array $ProxyZones) 设置<p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
  */
 class CreateProxyRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var integer cpu核数
+     * @var integer <p>cpu核数</p>
      */
     public $Cpu;
 
     /**
-     * @var integer 内存
+     * @var integer <p>内存</p>
      */
     public $Mem;
 
     /**
-     * @var string 私有网络ID，默认与集群私有网络ID保持一致
+     * @var string <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+     */
+    public $ProxyVersion;
+
+    /**
+     * @var string <p>私有网络ID，默认与集群私有网络ID保持一致</p>
      */
     public $UniqueVpcId;
 
     /**
-     * @var string 私有网络子网ID，默认与集群子网ID保持一致
+     * @var string <p>私有网络子网ID，默认与集群子网ID保持一致</p>
      */
     public $UniqueSubnetId;
 
     /**
-     * @var integer 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * @var integer <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
      */
     public $ProxyCount;
 
     /**
-     * @var string 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * @var string <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
      */
     public $ConnectionPoolType;
 
     /**
-     * @var string 是否开启连接池,yes-开启，no-不开启
+     * @var string <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public $OpenConnectionPool;
 
     /**
-     * @var integer 连接池阈值：单位（秒）
+     * @var integer <p>连接池阈值：单位（秒）</p>
      */
     public $ConnectionPoolTimeOut;
 
     /**
-     * @var array 安全组ID数组
+     * @var array <p>安全组ID数组</p>
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string 描述说明
+     * @var string <p>描述说明</p>
      */
     public $Description;
 
     /**
-     * @var array 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * @var array <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public $ProxyZones;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param integer $Cpu cpu核数
-     * @param integer $Mem 内存
-     * @param string $UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
-     * @param string $UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
-     * @param integer $ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
-     * @param string $ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
-     * @param string $OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
-     * @param integer $ConnectionPoolTimeOut 连接池阈值：单位（秒）
-     * @param array $SecurityGroupIds 安全组ID数组
-     * @param string $Description 描述说明
-     * @param array $ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * @param string $ClusterId <p>集群ID</p>
+     * @param integer $Cpu <p>cpu核数</p>
+     * @param integer $Mem <p>内存</p>
+     * @param string $ProxyVersion <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+     * @param string $UniqueVpcId <p>私有网络ID，默认与集群私有网络ID保持一致</p>
+     * @param string $UniqueSubnetId <p>私有网络子网ID，默认与集群子网ID保持一致</p>
+     * @param integer $ProxyCount <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
+     * @param string $ConnectionPoolType <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
+     * @param string $OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
+     * @param integer $ConnectionPoolTimeOut <p>连接池阈值：单位（秒）</p>
+     * @param array $SecurityGroupIds <p>安全组ID数组</p>
+     * @param string $Description <p>描述说明</p>
+     * @param array $ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateProxyRequest extends AbstractModel
 
         if (array_key_exists("Mem",$param) and $param["Mem"] !== null) {
             $this->Mem = $param["Mem"];
+        }
+
+        if (array_key_exists("ProxyVersion",$param) and $param["ProxyVersion"] !== null) {
+            $this->ProxyVersion = $param["ProxyVersion"];
         }
 
         if (array_key_exists("UniqueVpcId",$param) and $param["UniqueVpcId"] !== null) {

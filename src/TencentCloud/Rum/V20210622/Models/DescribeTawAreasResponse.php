@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTawAreas返回参数结构体
  *
- * @method integer getTotalCount() 获取片区总数
- * @method void setTotalCount(integer $TotalCount) 设置片区总数
- * @method array getAreaSet() 获取片区列表
- * @method void setAreaSet(array $AreaSet) 设置片区列表
+ * @method integer getTotalCount() 获取<p>片区总数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>片区总数</p>
+ * @method array getAreaSet() 获取<p>片区列表</p>
+ * @method void setAreaSet(array $AreaSet) 设置<p>片区列表</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTawAreasResponse extends AbstractModel
 {
     /**
-     * @var integer 片区总数
+     * @var integer <p>片区总数</p>
      */
     public $TotalCount;
 
     /**
-     * @var array 片区列表
+     * @var array <p>片区列表</p>
      */
     public $AreaSet;
 
@@ -45,8 +45,8 @@ class DescribeTawAreasResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 片区总数
-     * @param array $AreaSet 片区列表
+     * @param integer $TotalCount <p>片区总数</p>
+     * @param array $AreaSet <p>片区列表</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

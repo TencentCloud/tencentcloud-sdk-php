@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateCluster请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getDbType() 获取该参数已废用
- * @method void setDbType(string $DbType) 设置该参数已废用
- * @method array getIsolateReasonTypes() 获取实例退还原因类型
- * @method void setIsolateReasonTypes(array $IsolateReasonTypes) 设置实例退还原因类型
- * @method string getIsolateReason() 获取实例退还原因补充
- * @method void setIsolateReason(string $IsolateReason) 设置实例退还原因补充
- * @method boolean getSaveBackup() 获取保留备份,true-保留（会产生费用）
- * @method void setSaveBackup(boolean $SaveBackup) 设置保留备份,true-保留（会产生费用）
+ * @method string getClusterId() 获取<p>集群ID</p>
+ * @method void setClusterId(string $ClusterId) 设置<p>集群ID</p>
+ * @method string getDbType() 获取<p>该参数已废用</p>
+ * @method void setDbType(string $DbType) 设置<p>该参数已废用</p>
+ * @method array getIsolateReasonTypes() 获取<p>实例退还原因类型</p>
+ * @method void setIsolateReasonTypes(array $IsolateReasonTypes) 设置<p>实例退还原因类型</p>
+ * @method string getIsolateReason() 获取<p>实例退还原因补充</p>
+ * @method void setIsolateReason(string $IsolateReason) 设置<p>实例退还原因补充</p>
+ * @method boolean getSaveBackup() 获取<p>保留备份,true-保留（会产生费用）</p>
+ * @method void setSaveBackup(boolean $SaveBackup) 设置<p>保留备份,true-保留（会产生费用）</p>
+ * @method boolean getImmediateRecycleRo() 获取<p>立即彻底删除RO实例</p>
+ * @method void setImmediateRecycleRo(boolean $ImmediateRecycleRo) 设置<p>立即彻底删除RO实例</p>
  */
 class IsolateClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string <p>集群ID</p>
      */
     public $ClusterId;
 
     /**
-     * @var string 该参数已废用
+     * @var string <p>该参数已废用</p>
      */
     public $DbType;
 
     /**
-     * @var array 实例退还原因类型
+     * @var array <p>实例退还原因类型</p>
      */
     public $IsolateReasonTypes;
 
     /**
-     * @var string 实例退还原因补充
+     * @var string <p>实例退还原因补充</p>
      */
     public $IsolateReason;
 
     /**
-     * @var boolean 保留备份,true-保留（会产生费用）
+     * @var boolean <p>保留备份,true-保留（会产生费用）</p>
      */
     public $SaveBackup;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $DbType 该参数已废用
-     * @param array $IsolateReasonTypes 实例退还原因类型
-     * @param string $IsolateReason 实例退还原因补充
-     * @param boolean $SaveBackup 保留备份,true-保留（会产生费用）
+     * @var boolean <p>立即彻底删除RO实例</p>
+     */
+    public $ImmediateRecycleRo;
+
+    /**
+     * @param string $ClusterId <p>集群ID</p>
+     * @param string $DbType <p>该参数已废用</p>
+     * @param array $IsolateReasonTypes <p>实例退还原因类型</p>
+     * @param string $IsolateReason <p>实例退还原因补充</p>
+     * @param boolean $SaveBackup <p>保留备份,true-保留（会产生费用）</p>
+     * @param boolean $ImmediateRecycleRo <p>立即彻底删除RO实例</p>
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class IsolateClusterRequest extends AbstractModel
 
         if (array_key_exists("SaveBackup",$param) and $param["SaveBackup"] !== null) {
             $this->SaveBackup = $param["SaveBackup"];
+        }
+
+        if (array_key_exists("ImmediateRecycleRo",$param) and $param["ImmediateRecycleRo"] !== null) {
+            $this->ImmediateRecycleRo = $param["ImmediateRecycleRo"];
         }
     }
 }

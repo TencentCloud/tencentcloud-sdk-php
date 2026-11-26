@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置<p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
  * @method integer getUncleanLeaderElectionEnable() 获取<p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置<p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
- * @method integer getRetentionMs() 获取<p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
- * @method void setRetentionMs(integer $RetentionMs) 设置<p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+ * @method integer getRetentionMs() 获取<p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+ * @method void setRetentionMs(integer $RetentionMs) 设置<p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
  * @method integer getMaxMessageBytes() 获取<p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置<p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
  * @method integer getSegmentMs() 获取<p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
  * @method void setSegmentMs(integer $SegmentMs) 设置<p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
- * @method string getCleanUpPolicy() 获取<p>消息删除策略，可以选择delete 或者compact</p>
- * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置<p>消息删除策略，可以选择delete 或者compact</p>
+ * @method string getCleanUpPolicy() 获取<p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
+ * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置<p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
  * @method array getIpWhiteList() 获取<p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
  * @method void setIpWhiteList(array $IpWhiteList) 设置<p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
  * @method integer getEnableAclRule() 获取<p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
@@ -92,7 +92,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @var integer <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public $RetentionMs;
 
@@ -107,7 +107,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $SegmentMs;
 
     /**
-     * @var string <p>消息删除策略，可以选择delete 或者compact</p>
+     * @var string <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
      */
     public $CleanUpPolicy;
 
@@ -163,10 +163,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $EnableWhiteList <p>IP 白名单开关，1：打开；0：关闭。</p>
      * @param integer $MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      * @param integer $UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
-     * @param integer $RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @param integer $RetentionMs <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      * @param integer $MaxMessageBytes <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
      * @param integer $SegmentMs <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
-     * @param string $CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
+     * @param string $CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
      * @param array $IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      * @param integer $EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      * @param string $AclRuleName <p>ACL规则名</p>

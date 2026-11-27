@@ -20,62 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillDownloadUrl请求参数结构体
  *
- * @method string getFileType() 获取账单类型，枚举值
-billOverview=L0-PDF账单
-billSummary=L1-汇总账单	
-billResource=L2-资源账单	
-billDetail=L3-明细账单	
-billPack=账单包
- * @method void setFileType(string $FileType) 设置账单类型，枚举值
-billOverview=L0-PDF账单
-billSummary=L1-汇总账单	
-billResource=L2-资源账单	
-billDetail=L3-明细账单	
-billPack=账单包
- * @method string getMonth() 获取账单月份
-支持的最早开始月份为2021-01
-L0-PDF&账单包不支持当月下载，当月账单请在次月1号19:00出账后下载
- * @method void setMonth(string $Month) 设置账单月份
-支持的最早开始月份为2021-01
-L0-PDF&账单包不支持当月下载，当月账单请在次月1号19:00出账后下载
- * @method array getChildUin() 获取下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN
- * @method void setChildUin(array $ChildUin) 设置下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN
+ * @method string getFileType() 获取<p>账单类型，枚举值<br>billOverview=L0-PDF账单<br>billSummary=L1-汇总账单<br>billResource=L2-资源账单<br>billDetail=L3-明细账单<br>billPack=账单包</p>
+ * @method void setFileType(string $FileType) 设置<p>账单类型，枚举值<br>billOverview=L0-PDF账单<br>billSummary=L1-汇总账单<br>billResource=L2-资源账单<br>billDetail=L3-明细账单<br>billPack=账单包</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+ * @method array getChildUin() 获取<p>下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN</p>
+ * @method void setChildUin(array $ChildUin) 设置<p>下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN</p>
  */
 class DescribeBillDownloadUrlRequest extends AbstractModel
 {
     /**
-     * @var string 账单类型，枚举值
-billOverview=L0-PDF账单
-billSummary=L1-汇总账单	
-billResource=L2-资源账单	
-billDetail=L3-明细账单	
-billPack=账单包
+     * @var string <p>账单类型，枚举值<br>billOverview=L0-PDF账单<br>billSummary=L1-汇总账单<br>billResource=L2-资源账单<br>billDetail=L3-明细账单<br>billPack=账单包</p>
      */
     public $FileType;
 
     /**
-     * @var string 账单月份
-支持的最早开始月份为2021-01
-L0-PDF&账单包不支持当月下载，当月账单请在次月1号19:00出账后下载
+     * @var string <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public $Month;
 
     /**
-     * @var array 下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN
+     * @var array <p>下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN</p>
      */
     public $ChildUin;
 
     /**
-     * @param string $FileType 账单类型，枚举值
-billOverview=L0-PDF账单
-billSummary=L1-汇总账单	
-billResource=L2-资源账单	
-billDetail=L3-明细账单	
-billPack=账单包
-     * @param string $Month 账单月份
-支持的最早开始月份为2021-01
-L0-PDF&账单包不支持当月下载，当月账单请在次月1号19:00出账后下载
-     * @param array $ChildUin 下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN
+     * @param string $FileType <p>账单类型，枚举值<br>billOverview=L0-PDF账单<br>billSummary=L1-汇总账单<br>billResource=L2-资源账单<br>billDetail=L3-明细账单<br>billPack=账单包</p>
+     * @param string $Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+     * @param array $ChildUin <p>下载的账号 ID列表，默认查询本账号账单，如集团管理账号需下载成员账号自付的账单，该字段需入参成员账号UIN</p>
      */
     function __construct()
     {

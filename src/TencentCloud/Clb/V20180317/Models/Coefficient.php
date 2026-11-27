@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputVideoSecondCoefficient(float $OutputVideoSecondCoefficient) 设置<p>输出视频每秒系数</p>
  * @method float getOutputImageCoefficient() 获取<p>输出图片系数</p>
  * @method void setOutputImageCoefficient(float $OutputImageCoefficient) 设置<p>输出图片系数</p>
+ * @method float getInputAudioTokenCoefficient() 获取<p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method void setInputAudioTokenCoefficient(float $InputAudioTokenCoefficient) 设置<p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method float getInputCachedAudioTokenCoefficient() 获取<p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method void setInputCachedAudioTokenCoefficient(float $InputCachedAudioTokenCoefficient) 设置<p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method float getInputImageTokenCoefficient() 获取<p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method void setInputImageTokenCoefficient(float $InputImageTokenCoefficient) 设置<p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method float getInputCachedImageTokenCoefficient() 获取<p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method void setInputCachedImageTokenCoefficient(float $InputCachedImageTokenCoefficient) 设置<p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method float getOutputAudioTokenCoefficient() 获取<p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+ * @method void setOutputAudioTokenCoefficient(float $OutputAudioTokenCoefficient) 设置<p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
  */
 class Coefficient extends AbstractModel
 {
@@ -80,6 +90,31 @@ class Coefficient extends AbstractModel
     public $OutputImageCoefficient;
 
     /**
+     * @var float <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public $InputAudioTokenCoefficient;
+
+    /**
+     * @var float <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public $InputCachedAudioTokenCoefficient;
+
+    /**
+     * @var float <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public $InputImageTokenCoefficient;
+
+    /**
+     * @var float <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public $InputCachedImageTokenCoefficient;
+
+    /**
+     * @var float <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public $OutputAudioTokenCoefficient;
+
+    /**
      * @param float $InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
      * @param float $InputCacheCreationCoefficient <p>缓存创建积分系数</p>
      * @param float $InputCoefficient <p>输入积分系数。</p><p>取值范围：[1, 5000]</p><p>默认值：25</p>
@@ -88,6 +123,11 @@ class Coefficient extends AbstractModel
      * @param float $InputVideoSecondCoefficient <p>输入视频每秒系数</p>
      * @param float $OutputVideoSecondCoefficient <p>输出视频每秒系数</p>
      * @param float $OutputImageCoefficient <p>输出图片系数</p>
+     * @param float $InputAudioTokenCoefficient <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param float $InputCachedAudioTokenCoefficient <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param float $InputImageTokenCoefficient <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param float $InputCachedImageTokenCoefficient <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param float $OutputAudioTokenCoefficient <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class Coefficient extends AbstractModel
 
         if (array_key_exists("OutputImageCoefficient",$param) and $param["OutputImageCoefficient"] !== null) {
             $this->OutputImageCoefficient = $param["OutputImageCoefficient"];
+        }
+
+        if (array_key_exists("InputAudioTokenCoefficient",$param) and $param["InputAudioTokenCoefficient"] !== null) {
+            $this->InputAudioTokenCoefficient = $param["InputAudioTokenCoefficient"];
+        }
+
+        if (array_key_exists("InputCachedAudioTokenCoefficient",$param) and $param["InputCachedAudioTokenCoefficient"] !== null) {
+            $this->InputCachedAudioTokenCoefficient = $param["InputCachedAudioTokenCoefficient"];
+        }
+
+        if (array_key_exists("InputImageTokenCoefficient",$param) and $param["InputImageTokenCoefficient"] !== null) {
+            $this->InputImageTokenCoefficient = $param["InputImageTokenCoefficient"];
+        }
+
+        if (array_key_exists("InputCachedImageTokenCoefficient",$param) and $param["InputCachedImageTokenCoefficient"] !== null) {
+            $this->InputCachedImageTokenCoefficient = $param["InputCachedImageTokenCoefficient"];
+        }
+
+        if (array_key_exists("OutputAudioTokenCoefficient",$param) and $param["OutputAudioTokenCoefficient"] !== null) {
+            $this->OutputAudioTokenCoefficient = $param["OutputAudioTokenCoefficient"];
         }
     }
 }

@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiAccountLimit(integer $MultiAccountLimit) 设置<p>多账号开通额度</p><p>单位：个数</p>
  * @method integer getMultiAccountUsedCount() 获取<p>多账号启用个数</p><p>单位：个数</p>
  * @method void setMultiAccountUsedCount(integer $MultiAccountUsedCount) 设置<p>多账号启用个数</p><p>单位：个数</p>
+ * @method integer getCmkExtPackCount() 获取<p>根密钥的扩展包数量</p><p>单位：个</p>
+ * @method void setCmkExtPackCount(integer $CmkExtPackCount) 设置<p>根密钥的扩展包数量</p><p>单位：个</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -201,6 +203,11 @@ class GetServiceStatusResponse extends AbstractModel
     public $MultiAccountUsedCount;
 
     /**
+     * @var integer <p>根密钥的扩展包数量</p><p>单位：个</p>
+     */
+    public $CmkExtPackCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -231,6 +238,7 @@ class GetServiceStatusResponse extends AbstractModel
      * @param integer $ResourceRegion <p>资源的地域可用区信息</p>
      * @param integer $MultiAccountLimit <p>多账号开通额度</p><p>单位：个数</p>
      * @param integer $MultiAccountUsedCount <p>多账号启用个数</p><p>单位：个数</p>
+     * @param integer $CmkExtPackCount <p>根密钥的扩展包数量</p><p>单位：个</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -359,6 +367,10 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("MultiAccountUsedCount",$param) and $param["MultiAccountUsedCount"] !== null) {
             $this->MultiAccountUsedCount = $param["MultiAccountUsedCount"];
+        }
+
+        if (array_key_exists("CmkExtPackCount",$param) and $param["CmkExtPackCount"] !== null) {
+            $this->CmkExtPackCount = $param["CmkExtPackCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

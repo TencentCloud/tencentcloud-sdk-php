@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLiveDomainCertBindings返回参数结构体
  *
- * @method array getMismatchedDomainNames() 获取DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
- * @method void setMismatchedDomainNames(array $MismatchedDomainNames) 设置DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
- * @method array getErrors() 获取操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
- * @method void setErrors(array $Errors) 设置操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+ * @method array getMismatchedDomainNames() 获取<p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
+ * @method void setMismatchedDomainNames(array $MismatchedDomainNames) 设置<p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
+ * @method array getErrors() 获取<p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
+ * @method void setErrors(array $Errors) 设置<p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyLiveDomainCertBindingsResponse extends AbstractModel
 {
     /**
-     * @var array DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
+     * @var array <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
      */
     public $MismatchedDomainNames;
 
     /**
-     * @var array 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+     * @var array <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
      */
     public $Errors;
 
@@ -45,8 +45,8 @@ class ModifyLiveDomainCertBindingsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MismatchedDomainNames DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
-     * @param array $Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+     * @param array $MismatchedDomainNames <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
+     * @param array $Errors <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByTag请求参数结构体
  *
- * @method string getBeginTime() 获取目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method void setBeginTime(string $BeginTime) 设置目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method string getEndTime() 获取目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method void setEndTime(string $EndTime) 设置目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method string getTagKey() 获取分账标签键，用户自定义
- * @method void setTagKey(string $TagKey) 设置分账标签键，用户自定义
- * @method string getPayerUin() 获取查询账单数据的用户UIN
- * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
- * @method string getTagValue() 获取分账标签值
- * @method void setTagValue(string $TagValue) 设置分账标签值
+ * @method string getBeginTime() 获取<p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method string getEndTime() 获取<p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method void setEndTime(string $EndTime) 设置<p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method string getTagKey() 获取<p>分账标签键，用户自定义</p>
+ * @method void setTagKey(string $TagKey) 设置<p>分账标签键，用户自定义</p>
+ * @method string getPayerUin() 获取<p>查询账单数据的用户UIN</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>查询账单数据的用户UIN</p>
+ * @method string getTagValue() 获取<p>分账标签值</p>
+ * @method void setTagValue(string $TagValue) 设置<p>分账标签值</p>
  */
 class DescribeBillSummaryByTagRequest extends AbstractModel
 {
     /**
-     * @var string 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @var string <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @var string <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
      */
     public $EndTime;
 
     /**
-     * @var string 分账标签键，用户自定义
+     * @var string <p>分账标签键，用户自定义</p>
      */
     public $TagKey;
 
     /**
-     * @var string 查询账单数据的用户UIN
+     * @var string <p>查询账单数据的用户UIN</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 分账标签值
+     * @var string <p>分账标签值</p>
      */
     public $TagValue;
 
     /**
-     * @param string $BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param string $EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param string $TagKey 分账标签键，用户自定义
-     * @param string $PayerUin 查询账单数据的用户UIN
-     * @param string $TagValue 分账标签值
+     * @param string $BeginTime <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+     * @param string $EndTime <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+     * @param string $TagKey <p>分账标签键，用户自定义</p>
+     * @param string $PayerUin <p>查询账单数据的用户UIN</p>
+     * @param string $TagValue <p>分账标签值</p>
      */
     function __construct()
     {

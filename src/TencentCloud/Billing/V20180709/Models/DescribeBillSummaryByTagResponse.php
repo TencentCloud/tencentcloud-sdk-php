@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByTag返回参数结构体
  *
- * @method integer getReady() 获取数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method void setReady(integer $Ready) 设置数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method array getSummaryOverview() 获取各标签值花费分布详情
+ * @method integer getReady() 获取<p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+ * @method void setReady(integer $Ready) 设置<p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+ * @method array getSummaryOverview() 获取<p>各标签值花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryOverview(array $SummaryOverview) 设置各标签值花费分布详情
+ * @method void setSummaryOverview(array $SummaryOverview) 设置<p>各标签值花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SummaryTotal getSummaryTotal() 获取总数
+ * @method SummaryTotal getSummaryTotal() 获取<p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryTotal(SummaryTotal $SummaryTotal) 设置总数
+ * @method void setSummaryTotal(SummaryTotal $SummaryTotal) 设置<p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillSummaryByTagResponse extends AbstractModel
 {
     /**
-     * @var integer 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * @var integer <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public $Ready;
 
     /**
-     * @var array 各标签值花费分布详情
+     * @var array <p>各标签值花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SummaryOverview;
 
     /**
-     * @var SummaryTotal 总数
+     * @var SummaryTotal <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SummaryTotal;
@@ -58,10 +58,10 @@ class DescribeBillSummaryByTagResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     * @param array $SummaryOverview 各标签值花费分布详情
+     * @param integer $Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+     * @param array $SummaryOverview <p>各标签值花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SummaryTotal $SummaryTotal 总数
+     * @param SummaryTotal $SummaryTotal <p>总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

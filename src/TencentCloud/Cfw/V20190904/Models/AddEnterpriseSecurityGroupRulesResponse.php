@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddEnterpriseSecurityGroupRules返回参数结构体
  *
- * @method array getRules() 获取新增规则的摘要列表。
- * @method void setRules(array $Rules) 设置新增规则的摘要列表。
- * @method integer getStatus() 获取处理状态：0 表示成功。
- * @method void setStatus(integer $Status) 设置处理状态：0 表示成功。
+ * @method array getRules() 获取<p>添加成功的规则详情</p>
+ * @method void setRules(array $Rules) 设置<p>添加成功的规则详情</p>
+ * @method integer getStatus() 获取<p>状态值，0：添加成功，非0：添加失败</p>
+ * @method void setStatus(integer $Status) 设置<p>状态值，0：添加成功，非0：添加失败</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel
 {
     /**
-     * @var array 新增规则的摘要列表。
+     * @var array <p>添加成功的规则详情</p>
      */
     public $Rules;
 
     /**
-     * @var integer 处理状态：0 表示成功。
+     * @var integer <p>状态值，0：添加成功，非0：添加失败</p>
      */
     public $Status;
 
@@ -45,8 +45,8 @@ class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Rules 新增规则的摘要列表。
-     * @param integer $Status 处理状态：0 表示成功。
+     * @param array $Rules <p>添加成功的规则详情</p>
+     * @param integer $Status <p>状态值，0：添加成功，非0：添加失败</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

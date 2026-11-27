@@ -20,146 +20,146 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节省计划覆盖率数据
  *
- * @method string getResourceId() 获取资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
- * @method void setResourceId(string $ResourceId) 设置资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
- * @method integer getRegionId() 获取地域ID
- * @method void setRegionId(integer $RegionId) 设置地域ID
- * @method string getProductCode() 获取产品编码
- * @method void setProductCode(string $ProductCode) 设置产品编码
- * @method string getSubProductCode() 获取子产品编码
- * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
- * @method string getStartDate() 获取费用起始日期，格式yyyy-MM-dd
- * @method void setStartDate(string $StartDate) 设置费用起始日期，格式yyyy-MM-dd
- * @method string getEndDate() 获取费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
- * @method void setEndDate(string $EndDate) 设置费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
- * @method float getSpCoveredAmount() 获取节省计划覆盖金额（即节省计划支付金额）
- * @method void setSpCoveredAmount(float $SpCoveredAmount) 设置节省计划覆盖金额（即节省计划支付金额）
- * @method float getSpUncoveredAmount() 获取节省计划未覆盖金额（即优惠后总价）
- * @method void setSpUncoveredAmount(float $SpUncoveredAmount) 设置节省计划未覆盖金额（即优惠后总价）
- * @method float getTotalRealAmount() 获取总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
- * @method void setTotalRealAmount(float $TotalRealAmount) 设置总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
- * @method float getExpectedAmount() 获取按量计费预期金额（即折前价 * 折扣）
- * @method void setExpectedAmount(float $ExpectedAmount) 设置按量计费预期金额（即折前价 * 折扣）
- * @method float getSpCoverage() 获取覆盖率结果，取值[0, 100]
- * @method void setSpCoverage(float $SpCoverage) 设置覆盖率结果，取值[0, 100]
- * @method string getPayerUinName() 获取支付者昵称
- * @method void setPayerUinName(string $PayerUinName) 设置支付者昵称
- * @method string getOwnerUinName() 获取使用者昵称
- * @method void setOwnerUinName(string $OwnerUinName) 设置使用者昵称
- * @method string getPayerUin() 获取支付者uin
- * @method void setPayerUin(string $PayerUin) 设置支付者uin
- * @method string getSubBillingItemName() 获取计费项名称
- * @method void setSubBillingItemName(string $SubBillingItemName) 设置计费项名称
- * @method string getBillingItemName() 获取计费细项名称
- * @method void setBillingItemName(string $BillingItemName) 设置计费细项名称
- * @method string getSubProductName() 获取子产品名称
- * @method void setSubProductName(string $SubProductName) 设置子产品名称
+ * @method string getResourceId() 获取<p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+ * @method void setResourceId(string $ResourceId) 设置<p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+ * @method integer getRegionId() 获取<p>地域ID</p>
+ * @method void setRegionId(integer $RegionId) 设置<p>地域ID</p>
+ * @method string getProductCode() 获取<p>产品编码</p>
+ * @method void setProductCode(string $ProductCode) 设置<p>产品编码</p>
+ * @method string getSubProductCode() 获取<p>子产品编码</p>
+ * @method void setSubProductCode(string $SubProductCode) 设置<p>子产品编码</p>
+ * @method string getStartDate() 获取<p>费用起始日期，格式yyyy-MM-dd</p>
+ * @method void setStartDate(string $StartDate) 设置<p>费用起始日期，格式yyyy-MM-dd</p>
+ * @method string getEndDate() 获取<p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
+ * @method void setEndDate(string $EndDate) 设置<p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
+ * @method float getSpCoveredAmount() 获取<p>节省计划覆盖金额（即节省计划支付金额）</p>
+ * @method void setSpCoveredAmount(float $SpCoveredAmount) 设置<p>节省计划覆盖金额（即节省计划支付金额）</p>
+ * @method float getSpUncoveredAmount() 获取<p>节省计划未覆盖金额（即优惠后总价）</p>
+ * @method void setSpUncoveredAmount(float $SpUncoveredAmount) 设置<p>节省计划未覆盖金额（即优惠后总价）</p>
+ * @method float getTotalRealAmount() 获取<p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
+ * @method void setTotalRealAmount(float $TotalRealAmount) 设置<p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
+ * @method float getExpectedAmount() 获取<p>按量计费预期金额（即折前价 * 折扣）</p>
+ * @method void setExpectedAmount(float $ExpectedAmount) 设置<p>按量计费预期金额（即折前价 * 折扣）</p>
+ * @method float getSpCoverage() 获取<p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
+ * @method void setSpCoverage(float $SpCoverage) 设置<p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
+ * @method string getPayerUinName() 获取<p>支付者昵称</p>
+ * @method void setPayerUinName(string $PayerUinName) 设置<p>支付者昵称</p>
+ * @method string getOwnerUinName() 获取<p>使用者昵称</p>
+ * @method void setOwnerUinName(string $OwnerUinName) 设置<p>使用者昵称</p>
+ * @method string getPayerUin() 获取<p>支付者uin</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>支付者uin</p>
+ * @method string getSubBillingItemName() 获取<p>计费项名称</p>
+ * @method void setSubBillingItemName(string $SubBillingItemName) 设置<p>计费项名称</p>
+ * @method string getBillingItemName() 获取<p>计费细项名称</p>
+ * @method void setBillingItemName(string $BillingItemName) 设置<p>计费细项名称</p>
+ * @method string getSubProductName() 获取<p>子产品名称</p>
+ * @method void setSubProductName(string $SubProductName) 设置<p>子产品名称</p>
  */
 class SavingPlanCoverageDetail extends AbstractModel
 {
     /**
-     * @var string 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @var string <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public $ResourceId;
 
     /**
-     * @var integer 地域ID
+     * @var integer <p>地域ID</p>
      */
     public $RegionId;
 
     /**
-     * @var string 产品编码
+     * @var string <p>产品编码</p>
      */
     public $ProductCode;
 
     /**
-     * @var string 子产品编码
+     * @var string <p>子产品编码</p>
      */
     public $SubProductCode;
 
     /**
-     * @var string 费用起始日期，格式yyyy-MM-dd
+     * @var string <p>费用起始日期，格式yyyy-MM-dd</p>
      */
     public $StartDate;
 
     /**
-     * @var string 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
+     * @var string <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
      */
     public $EndDate;
 
     /**
-     * @var float 节省计划覆盖金额（即节省计划支付金额）
+     * @var float <p>节省计划覆盖金额（即节省计划支付金额）</p>
      */
     public $SpCoveredAmount;
 
     /**
-     * @var float 节省计划未覆盖金额（即优惠后总价）
+     * @var float <p>节省计划未覆盖金额（即优惠后总价）</p>
      */
     public $SpUncoveredAmount;
 
     /**
-     * @var float 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
+     * @var float <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
      */
     public $TotalRealAmount;
 
     /**
-     * @var float 按量计费预期金额（即折前价 * 折扣）
+     * @var float <p>按量计费预期金额（即折前价 * 折扣）</p>
      */
     public $ExpectedAmount;
 
     /**
-     * @var float 覆盖率结果，取值[0, 100]
+     * @var float <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
      */
     public $SpCoverage;
 
     /**
-     * @var string 支付者昵称
+     * @var string <p>支付者昵称</p>
      */
     public $PayerUinName;
 
     /**
-     * @var string 使用者昵称
+     * @var string <p>使用者昵称</p>
      */
     public $OwnerUinName;
 
     /**
-     * @var string 支付者uin
+     * @var string <p>支付者uin</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 计费项名称
+     * @var string <p>计费项名称</p>
      */
     public $SubBillingItemName;
 
     /**
-     * @var string 计费细项名称
+     * @var string <p>计费细项名称</p>
      */
     public $BillingItemName;
 
     /**
-     * @var string 子产品名称
+     * @var string <p>子产品名称</p>
      */
     public $SubProductName;
 
     /**
-     * @param string $ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
-     * @param integer $RegionId 地域ID
-     * @param string $ProductCode 产品编码
-     * @param string $SubProductCode 子产品编码
-     * @param string $StartDate 费用起始日期，格式yyyy-MM-dd
-     * @param string $EndDate 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
-     * @param float $SpCoveredAmount 节省计划覆盖金额（即节省计划支付金额）
-     * @param float $SpUncoveredAmount 节省计划未覆盖金额（即优惠后总价）
-     * @param float $TotalRealAmount 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
-     * @param float $ExpectedAmount 按量计费预期金额（即折前价 * 折扣）
-     * @param float $SpCoverage 覆盖率结果，取值[0, 100]
-     * @param string $PayerUinName 支付者昵称
-     * @param string $OwnerUinName 使用者昵称
-     * @param string $PayerUin 支付者uin
-     * @param string $SubBillingItemName 计费项名称
-     * @param string $BillingItemName 计费细项名称
-     * @param string $SubProductName 子产品名称
+     * @param string $ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+     * @param integer $RegionId <p>地域ID</p>
+     * @param string $ProductCode <p>产品编码</p>
+     * @param string $SubProductCode <p>子产品编码</p>
+     * @param string $StartDate <p>费用起始日期，格式yyyy-MM-dd</p>
+     * @param string $EndDate <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
+     * @param float $SpCoveredAmount <p>节省计划覆盖金额（即节省计划支付金额）</p>
+     * @param float $SpUncoveredAmount <p>节省计划未覆盖金额（即优惠后总价）</p>
+     * @param float $TotalRealAmount <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
+     * @param float $ExpectedAmount <p>按量计费预期金额（即折前价 * 折扣）</p>
+     * @param float $SpCoverage <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
+     * @param string $PayerUinName <p>支付者昵称</p>
+     * @param string $OwnerUinName <p>使用者昵称</p>
+     * @param string $PayerUin <p>支付者uin</p>
+     * @param string $SubBillingItemName <p>计费项名称</p>
+     * @param string $BillingItemName <p>计费细项名称</p>
+     * @param string $SubProductName <p>子产品名称</p>
      */
     function __construct()
     {

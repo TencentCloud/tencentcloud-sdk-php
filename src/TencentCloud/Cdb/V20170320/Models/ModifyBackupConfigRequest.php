@@ -20,186 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getExpireDays() 获取数据备份文件的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
-2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
- * @method void setExpireDays(integer $ExpireDays) 设置数据备份文件的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
-2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
- * @method string getStartTime() 获取(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
- * @method void setStartTime(string $StartTime) 设置(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
- * @method string getBackupMethod() 获取自动备份方式，仅支持：physical - 物理冷备
- * @method void setBackupMethod(string $BackupMethod) 设置自动备份方式，仅支持：physical - 物理冷备
- * @method integer getBinlogExpireDays() 获取binlog 的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
-2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
- * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置binlog 的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
-2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
- * @method CommonTimeWindow getBackupTimeWindow() 获取备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
- * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
- * @method string getEnableBackupPeriodSave() 获取定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
- * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
- * @method string getEnableBackupPeriodLongTermSave() 获取长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
- * @method void setEnableBackupPeriodLongTermSave(string $EnableBackupPeriodLongTermSave) 设置长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
- * @method integer getBackupPeriodSaveDays() 获取定期保留最长天数，最小值：90，最大值：3650，默认值：1080
- * @method void setBackupPeriodSaveDays(integer $BackupPeriodSaveDays) 设置定期保留最长天数，最小值：90，最大值：3650，默认值：1080
- * @method string getBackupPeriodSaveInterval() 获取定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
- * @method void setBackupPeriodSaveInterval(string $BackupPeriodSaveInterval) 设置定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
- * @method integer getBackupPeriodSaveCount() 获取定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
- * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) 设置定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
- * @method string getStartBackupPeriodSaveDate() 获取定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
- * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) 设置定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
- * @method string getEnableBackupArchive() 获取是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method void setEnableBackupArchive(string $EnableBackupArchive) 设置是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method integer getBackupArchiveDays() 获取数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
- * @method void setBackupArchiveDays(integer $BackupArchiveDays) 设置数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
- * @method integer getBinlogArchiveDays() 获取日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
- * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) 设置日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
- * @method string getEnableBinlogArchive() 获取是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method void setEnableBinlogArchive(string $EnableBinlogArchive) 设置是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method string getEnableBackupStandby() 获取是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method void setEnableBackupStandby(string $EnableBackupStandby) 设置是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method integer getBackupStandbyDays() 获取数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method void setBackupStandbyDays(integer $BackupStandbyDays) 设置数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method string getEnableBinlogStandby() 获取是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method void setEnableBinlogStandby(string $EnableBinlogStandby) 设置是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
- * @method integer getBinlogStandbyDays() 获取日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) 设置日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+ * @method string getInstanceId() 获取<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method void setInstanceId(string $InstanceId) 设置<p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+ * @method integer getExpireDays() 获取<p>数据备份文件的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。</li><li>MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。</li></ol>
+ * @method void setExpireDays(integer $ExpireDays) 设置<p>数据备份文件的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。</li><li>MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。</li></ol>
+ * @method string getStartTime() 获取<p>(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。</p>
+ * @method void setStartTime(string $StartTime) 设置<p>(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。</p>
+ * @method string getBackupMethod() 获取<p>自动备份方式，仅支持：physical - 物理冷备</p>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>自动备份方式，仅支持：physical - 物理冷备</p>
+ * @method integer getBinlogExpireDays() 获取<p>binlog 的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。</li><li>MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。</li></ol>
+ * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置<p>binlog 的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。</li><li>MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。</li></ol>
+ * @method CommonTimeWindow getBackupTimeWindow() 获取<p>备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{&quot;Monday&quot;: &quot;&quot;, &quot;Tuesday&quot;: &quot;10:00-14:00&quot;, &quot;Wednesday&quot;: &quot;&quot;, &quot;Thursday&quot;: &quot;&quot;, &quot;Friday&quot;: &quot;&quot;, &quot;Saturday&quot;: &quot;&quot;, &quot;Sunday&quot;: &quot;10:00-14:00&quot;}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）</p>
+ * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置<p>备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{&quot;Monday&quot;: &quot;&quot;, &quot;Tuesday&quot;: &quot;10:00-14:00&quot;, &quot;Wednesday&quot;: &quot;&quot;, &quot;Thursday&quot;: &quot;&quot;, &quot;Friday&quot;: &quot;&quot;, &quot;Saturday&quot;: &quot;&quot;, &quot;Sunday&quot;: &quot;10:00-14:00&quot;}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）</p>
+ * @method string getEnableBackupPeriodSave() 获取<p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。</p>
+ * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置<p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。</p>
+ * @method string getEnableBackupPeriodLongTermSave() 获取<p>长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效</p>
+ * @method void setEnableBackupPeriodLongTermSave(string $EnableBackupPeriodLongTermSave) 设置<p>长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效</p>
+ * @method integer getBackupPeriodSaveDays() 获取<p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+ * @method void setBackupPeriodSaveDays(integer $BackupPeriodSaveDays) 设置<p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+ * @method string getBackupPeriodSaveInterval() 获取<p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+ * @method void setBackupPeriodSaveInterval(string $BackupPeriodSaveInterval) 设置<p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+ * @method integer getBackupPeriodSaveCount() 获取<p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+ * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) 设置<p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+ * @method string getStartBackupPeriodSaveDate() 获取<p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+ * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) 设置<p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+ * @method string getEnableBackupArchive() 获取<p>是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method void setEnableBackupArchive(string $EnableBackupArchive) 设置<p>是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method integer getBackupArchiveDays() 获取<p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+ * @method void setBackupArchiveDays(integer $BackupArchiveDays) 设置<p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+ * @method integer getBinlogArchiveDays() 获取<p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+ * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) 设置<p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+ * @method string getEnableBinlogArchive() 获取<p>是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method void setEnableBinlogArchive(string $EnableBinlogArchive) 设置<p>是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method string getEnableBackupStandby() 获取<p>是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method void setEnableBackupStandby(string $EnableBackupStandby) 设置<p>是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method integer getBackupStandbyDays() 获取<p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method void setBackupStandbyDays(integer $BackupStandbyDays) 设置<p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method string getEnableBinlogStandby() 获取<p>是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method void setEnableBinlogStandby(string $EnableBinlogStandby) 设置<p>是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+ * @method integer getBinlogStandbyDays() 获取<p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) 设置<p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public $InstanceId;
 
     /**
-     * @var integer 数据备份文件的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
-2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
+     * @var integer <p>数据备份文件的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。</li><li>MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。</li></ol>
      */
     public $ExpireDays;
 
     /**
-     * @var string (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     * @var string <p>(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。</p>
      */
     public $StartTime;
 
     /**
-     * @var string 自动备份方式，仅支持：physical - 物理冷备
+     * @var string <p>自动备份方式，仅支持：physical - 物理冷备</p>
      */
     public $BackupMethod;
 
     /**
-     * @var integer binlog 的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
-2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
+     * @var integer <p>binlog 的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。</li><li>MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。</li></ol>
      */
     public $BinlogExpireDays;
 
     /**
-     * @var CommonTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+     * @var CommonTimeWindow <p>备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{&quot;Monday&quot;: &quot;&quot;, &quot;Tuesday&quot;: &quot;10:00-14:00&quot;, &quot;Wednesday&quot;: &quot;&quot;, &quot;Thursday&quot;: &quot;&quot;, &quot;Friday&quot;: &quot;&quot;, &quot;Saturday&quot;: &quot;&quot;, &quot;Sunday&quot;: &quot;10:00-14:00&quot;}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）</p>
      */
     public $BackupTimeWindow;
 
     /**
-     * @var string 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
+     * @var string <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。</p>
      */
     public $EnableBackupPeriodSave;
 
     /**
-     * @var string 长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
+     * @var string <p>长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效</p>
      */
     public $EnableBackupPeriodLongTermSave;
 
     /**
-     * @var integer 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+     * @var integer <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
      */
     public $BackupPeriodSaveDays;
 
     /**
-     * @var string 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+     * @var string <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
      */
     public $BackupPeriodSaveInterval;
 
     /**
-     * @var integer 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+     * @var integer <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
      */
     public $BackupPeriodSaveCount;
 
     /**
-     * @var string 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+     * @var string <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
      */
     public $StartBackupPeriodSaveDate;
 
     /**
-     * @var string 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @var string <p>是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
      */
     public $EnableBackupArchive;
 
     /**
-     * @var integer 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     * @var integer <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
      */
     public $BackupArchiveDays;
 
     /**
-     * @var integer 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     * @var integer <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
      */
     public $BinlogArchiveDays;
 
     /**
-     * @var string 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @var string <p>是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
      */
     public $EnableBinlogArchive;
 
     /**
-     * @var string 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @var string <p>是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
      */
     public $EnableBackupStandby;
 
     /**
-     * @var integer 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @var integer <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public $BackupStandbyDays;
 
     /**
-     * @var string 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
+     * @var string <p>是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
      */
     public $EnableBinlogStandby;
 
     /**
-     * @var integer 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @var integer <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public $BinlogStandbyDays;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $ExpireDays 数据备份文件的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。
-2. MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。
-     * @param string $StartTime (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
-     * @param string $BackupMethod 自动备份方式，仅支持：physical - 物理冷备
-     * @param integer $BinlogExpireDays binlog 的保留时间，单位为天。
-1. MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。
-2. MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。
-     * @param CommonTimeWindow $BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
-     * @param string $EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。
-     * @param string $EnableBackupPeriodLongTermSave 长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
-     * @param integer $BackupPeriodSaveDays 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
-     * @param string $BackupPeriodSaveInterval 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
-     * @param integer $BackupPeriodSaveCount 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
-     * @param string $StartBackupPeriodSaveDate 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
-     * @param string $EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
-     * @param integer $BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
-     * @param integer $BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
-     * @param string $EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
-     * @param string $EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
-     * @param integer $BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
-     * @param string $EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。
-     * @param integer $BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @param string $InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param integer $ExpireDays <p>数据备份文件的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版数据备份文件可以保留7天 - 1830天。</li><li>MySQL 单节点（云盘）数据备份文件可以保留7天 - 30天。</li></ol>
+     * @param string $StartTime <p>(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。</p>
+     * @param string $BackupMethod <p>自动备份方式，仅支持：physical - 物理冷备</p>
+     * @param integer $BinlogExpireDays <p>binlog 的保留时间，单位为天。</p><ol><li>MySQL 双节点、三节点、云盘版日志备份文件可以保留7天 - 3650天。</li><li>MySQL 单节点（云盘）日志备份文件可以保留7天 - 30天。</li></ol>
+     * @param CommonTimeWindow $BackupTimeWindow <p>备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{&quot;Monday&quot;: &quot;&quot;, &quot;Tuesday&quot;: &quot;10:00-14:00&quot;, &quot;Wednesday&quot;: &quot;&quot;, &quot;Thursday&quot;: &quot;&quot;, &quot;Friday&quot;: &quot;&quot;, &quot;Saturday&quot;: &quot;&quot;, &quot;Sunday&quot;: &quot;10:00-14:00&quot;}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）</p>
+     * @param string $EnableBackupPeriodSave <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。</p>
+     * @param string $EnableBackupPeriodLongTermSave <p>长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效</p>
+     * @param integer $BackupPeriodSaveDays <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+     * @param string $BackupPeriodSaveInterval <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+     * @param integer $BackupPeriodSaveCount <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+     * @param string $StartBackupPeriodSaveDate <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+     * @param string $EnableBackupArchive <p>是否开启数据备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+     * @param integer $BackupArchiveDays <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+     * @param integer $BinlogArchiveDays <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+     * @param string $EnableBinlogArchive <p>是否开启日志备份归档策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+     * @param string $EnableBackupStandby <p>是否开启数据备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+     * @param integer $BackupStandbyDays <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+     * @param string $EnableBinlogStandby <p>是否开启日志备份标准存储策略，off-关闭，on-打开，如果不指定该入参， 则保持不变。</p>
+     * @param integer $BinlogStandbyDays <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     function __construct()
     {

@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNodes(integer $InstanceNodes) 设置<p>节点数</p>
  * @method array getTagList() 获取<p>标签列表</p>
  * @method void setTagList(array $TagList) 设置<p>标签列表</p>
+ * @method string getCageId() 获取<p>金融围拢 ID 。</p>
+ * @method void setCageId(string $CageId) 设置<p>金融围拢 ID 。</p>
  * @method string getEngineType() 获取<p>引擎类型</p>
  * @method void setEngineType(string $EngineType) 设置<p>引擎类型</p>
  * @method integer getMaxDelayTime() 获取<p>最大延迟阈值</p>
@@ -349,6 +351,11 @@ class InstanceInfo extends AbstractModel
     public $TagList;
 
     /**
+     * @var string <p>金融围拢 ID 。</p>
+     */
+    public $CageId;
+
+    /**
      * @var string <p>引擎类型</p>
      */
     public $EngineType;
@@ -448,6 +455,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $ZoneId <p>可用区 ID</p>
      * @param integer $InstanceNodes <p>节点数</p>
      * @param array $TagList <p>标签列表</p>
+     * @param string $CageId <p>金融围拢 ID 。</p>
      * @param string $EngineType <p>引擎类型</p>
      * @param integer $MaxDelayTime <p>最大延迟阈值</p>
      * @param string $DiskType <p>实例磁盘类型，仅云盘版和单节点（云盘）实例才会返回有效值。<br>说明：</p><ol><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_HSSD&quot;，则表示该实例磁盘类型为增强型 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;CLOUD_SSD&quot;，则表示该实例磁盘类型为 SSD 云硬盘。</li><li>若返回：&quot;DiskType&quot;: &quot;&quot;，且参数 DeviceType 值为 UNIVERSAL 或 EXCLUSIVE，则表示该实例采用的是本地 SSD 盘。</li></ol>
@@ -662,6 +670,10 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
+            $this->CageId = $param["CageId"];
         }
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {

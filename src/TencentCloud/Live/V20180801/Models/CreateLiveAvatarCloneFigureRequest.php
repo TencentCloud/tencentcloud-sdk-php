@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFigureName(string $FigureName) 设置<p>克隆的形象的名字</p>
  * @method string getMaterialUrl() 获取<p>克隆的形象的url</p>
  * @method void setMaterialUrl(string $MaterialUrl) 设置<p>克隆的形象的url</p>
- * @method string getGender() 获取<p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNHNOWN： 不知道</li></ul>
- * @method void setGender(string $Gender) 设置<p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNHNOWN： 不知道</li></ul>
+ * @method string getGender() 获取<p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNKNOWN： 不知道</li></ul>
+ * @method void setGender(string $Gender) 设置<p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNKNOWN： 不知道</li></ul>
  * @method string getIdentityWrittenUrl() 获取<p>授权pdf</p>
  * @method void setIdentityWrittenUrl(string $IdentityWrittenUrl) 设置<p>授权pdf</p>
  * @method string getIdentityVideoUrl() 获取<p>授权视频</p>
@@ -53,7 +53,7 @@ class CreateLiveAvatarCloneFigureRequest extends AbstractModel
     public $MaterialUrl;
 
     /**
-     * @var string <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNHNOWN： 不知道</li></ul>
+     * @var string <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNKNOWN： 不知道</li></ul>
      */
     public $Gender;
 
@@ -76,7 +76,7 @@ class CreateLiveAvatarCloneFigureRequest extends AbstractModel
      * @param string $SceneType <p>形象克隆场景类型</p><p>枚举值：</p><ul><li>PHOTO： 图生数字人</li><li>GREEN_SCREEN： 绿幕数字人</li><li>REAL_SHOT： 实景数字人</li></ul>
      * @param string $FigureName <p>克隆的形象的名字</p>
      * @param string $MaterialUrl <p>克隆的形象的url</p>
-     * @param string $Gender <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNHNOWN： 不知道</li></ul>
+     * @param string $Gender <p>克隆的形象的性别</p><p>枚举值：</p><ul><li>MALE： 男</li><li>FEMALE： 女</li><li>UNKNOWN： 不知道</li></ul>
      * @param string $IdentityWrittenUrl <p>授权pdf</p>
      * @param string $IdentityVideoUrl <p>授权视频</p>
      * @param integer $PhotoVersion <p>图生视频时，动作训练幅度大小</p><p>枚举值：</p><ul><li>0： 只有头部轻微动</li><li>1： 头部跟身体均动</li></ul>

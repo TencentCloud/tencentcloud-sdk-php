@@ -20,143 +20,143 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupConfig返回参数结构体
  *
- * @method integer getStartTimeMin() 获取自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
- * @method void setStartTimeMin(integer $StartTimeMin) 设置自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
- * @method integer getStartTimeMax() 获取自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
- * @method void setStartTimeMax(integer $StartTimeMax) 设置自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
- * @method integer getBackupExpireDays() 获取备份文件保留时间，单位为天。
- * @method void setBackupExpireDays(integer $BackupExpireDays) 设置备份文件保留时间，单位为天。
- * @method string getBackupMethod() 获取备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
- * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
- * @method integer getBinlogExpireDays() 获取Binlog 文件保留时间，单位为天。
- * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置Binlog 文件保留时间，单位为天。
- * @method CommonTimeWindow getBackupTimeWindow() 获取实例自动备份的时间窗。
- * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置实例自动备份的时间窗。
- * @method string getEnableBackupPeriodSave() 获取定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
- * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
- * @method integer getBackupPeriodSaveDays() 获取定期保留最长天数，最小值：90，最大值：3650，默认值：1080
- * @method void setBackupPeriodSaveDays(integer $BackupPeriodSaveDays) 设置定期保留最长天数，最小值：90，最大值：3650，默认值：1080
- * @method string getBackupPeriodSaveInterval() 获取定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
- * @method void setBackupPeriodSaveInterval(string $BackupPeriodSaveInterval) 设置定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
- * @method integer getBackupPeriodSaveCount() 获取定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
- * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) 设置定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
- * @method string getStartBackupPeriodSaveDate() 获取定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
- * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) 设置定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
- * @method string getEnableBackupArchive() 获取是否开启数据备份归档策略，off-关闭，on-打开，默认为off
- * @method void setEnableBackupArchive(string $EnableBackupArchive) 设置是否开启数据备份归档策略，off-关闭，on-打开，默认为off
- * @method integer getBackupArchiveDays() 获取数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
- * @method void setBackupArchiveDays(integer $BackupArchiveDays) 设置数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
- * @method string getEnableBinlogArchive() 获取是否开启日志备份归档策略，off-关闭，on-打开，默认为off
- * @method void setEnableBinlogArchive(string $EnableBinlogArchive) 设置是否开启日志备份归档策略，off-关闭，on-打开，默认为off
- * @method integer getBinlogArchiveDays() 获取日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
- * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) 设置日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
- * @method string getEnableBackupStandby() 获取是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
- * @method void setEnableBackupStandby(string $EnableBackupStandby) 设置是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
- * @method integer getBackupStandbyDays() 获取数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method void setBackupStandbyDays(integer $BackupStandbyDays) 设置数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method string getEnableBinlogStandby() 获取是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
- * @method void setEnableBinlogStandby(string $EnableBinlogStandby) 设置是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
- * @method integer getBinlogStandbyDays() 获取日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
- * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) 设置日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+ * @method integer getStartTimeMin() 获取<p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+ * @method void setStartTimeMin(integer $StartTimeMin) 设置<p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+ * @method integer getStartTimeMax() 获取<p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+ * @method void setStartTimeMax(integer $StartTimeMax) 设置<p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+ * @method integer getBackupExpireDays() 获取<p>备份文件保留时间，单位为天。</p>
+ * @method void setBackupExpireDays(integer $BackupExpireDays) 设置<p>备份文件保留时间，单位为天。</p>
+ * @method string getBackupMethod() 获取<p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
+ * @method void setBackupMethod(string $BackupMethod) 设置<p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
+ * @method integer getBinlogExpireDays() 获取<p>Binlog 文件保留时间，单位为天。</p>
+ * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置<p>Binlog 文件保留时间，单位为天。</p>
+ * @method CommonTimeWindow getBackupTimeWindow() 获取<p>实例自动备份的时间窗。</p>
+ * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置<p>实例自动备份的时间窗。</p>
+ * @method string getEnableBackupPeriodSave() 获取<p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
+ * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置<p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
+ * @method integer getBackupPeriodSaveDays() 获取<p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+ * @method void setBackupPeriodSaveDays(integer $BackupPeriodSaveDays) 设置<p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+ * @method string getBackupPeriodSaveInterval() 获取<p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+ * @method void setBackupPeriodSaveInterval(string $BackupPeriodSaveInterval) 设置<p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+ * @method integer getBackupPeriodSaveCount() 获取<p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+ * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) 设置<p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+ * @method string getStartBackupPeriodSaveDate() 获取<p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+ * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) 设置<p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+ * @method string getEnableBackupArchive() 获取<p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
+ * @method void setEnableBackupArchive(string $EnableBackupArchive) 设置<p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
+ * @method integer getBackupArchiveDays() 获取<p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+ * @method void setBackupArchiveDays(integer $BackupArchiveDays) 设置<p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+ * @method string getEnableBinlogArchive() 获取<p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
+ * @method void setEnableBinlogArchive(string $EnableBinlogArchive) 设置<p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
+ * @method integer getBinlogArchiveDays() 获取<p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+ * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) 设置<p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+ * @method string getEnableBackupStandby() 获取<p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
+ * @method void setEnableBackupStandby(string $EnableBackupStandby) 设置<p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
+ * @method integer getBackupStandbyDays() 获取<p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method void setBackupStandbyDays(integer $BackupStandbyDays) 设置<p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method string getEnableBinlogStandby() 获取<p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
+ * @method void setEnableBinlogStandby(string $EnableBinlogStandby) 设置<p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
+ * @method integer getBinlogStandbyDays() 获取<p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+ * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) 设置<p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @var integer <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     public $StartTimeMin;
 
     /**
-     * @var integer 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @var integer <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     public $StartTimeMax;
 
     /**
-     * @var integer 备份文件保留时间，单位为天。
+     * @var integer <p>备份文件保留时间，单位为天。</p>
      */
     public $BackupExpireDays;
 
     /**
-     * @var string 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+     * @var string <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
      */
     public $BackupMethod;
 
     /**
-     * @var integer Binlog 文件保留时间，单位为天。
+     * @var integer <p>Binlog 文件保留时间，单位为天。</p>
      */
     public $BinlogExpireDays;
 
     /**
-     * @var CommonTimeWindow 实例自动备份的时间窗。
+     * @var CommonTimeWindow <p>实例自动备份的时间窗。</p>
      */
     public $BackupTimeWindow;
 
     /**
-     * @var string 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * @var string <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
      */
     public $EnableBackupPeriodSave;
 
     /**
-     * @var integer 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+     * @var integer <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
      */
     public $BackupPeriodSaveDays;
 
     /**
-     * @var string 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+     * @var string <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
      */
     public $BackupPeriodSaveInterval;
 
     /**
-     * @var integer 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+     * @var integer <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
      */
     public $BackupPeriodSaveCount;
 
     /**
-     * @var string 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+     * @var string <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
      */
     public $StartBackupPeriodSaveDate;
 
     /**
-     * @var string 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * @var string <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public $EnableBackupArchive;
 
     /**
-     * @var integer 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     * @var integer <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
      */
     public $BackupArchiveDays;
 
     /**
-     * @var string 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * @var string <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public $EnableBinlogArchive;
 
     /**
-     * @var integer 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     * @var integer <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
      */
     public $BinlogArchiveDays;
 
     /**
-     * @var string 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * @var string <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public $EnableBackupStandby;
 
     /**
-     * @var integer 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @var integer <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public $BackupStandbyDays;
 
     /**
-     * @var string 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * @var string <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public $EnableBinlogStandby;
 
     /**
-     * @var integer 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @var integer <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public $BinlogStandbyDays;
 
@@ -166,25 +166,25 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
-     * @param integer $StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
-     * @param integer $BackupExpireDays 备份文件保留时间，单位为天。
-     * @param string $BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
-     * @param integer $BinlogExpireDays Binlog 文件保留时间，单位为天。
-     * @param CommonTimeWindow $BackupTimeWindow 实例自动备份的时间窗。
-     * @param string $EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
-     * @param integer $BackupPeriodSaveDays 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
-     * @param string $BackupPeriodSaveInterval 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
-     * @param integer $BackupPeriodSaveCount 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
-     * @param string $StartBackupPeriodSaveDate 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
-     * @param string $EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
-     * @param integer $BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
-     * @param string $EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
-     * @param integer $BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
-     * @param string $EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param integer $BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
-     * @param string $EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param integer $BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @param integer $StartTimeMin <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+     * @param integer $StartTimeMax <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+     * @param integer $BackupExpireDays <p>备份文件保留时间，单位为天。</p>
+     * @param string $BackupMethod <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
+     * @param integer $BinlogExpireDays <p>Binlog 文件保留时间，单位为天。</p>
+     * @param CommonTimeWindow $BackupTimeWindow <p>实例自动备份的时间窗。</p>
+     * @param string $EnableBackupPeriodSave <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
+     * @param integer $BackupPeriodSaveDays <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+     * @param string $BackupPeriodSaveInterval <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+     * @param integer $BackupPeriodSaveCount <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+     * @param string $StartBackupPeriodSaveDate <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+     * @param string $EnableBackupArchive <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
+     * @param integer $BackupArchiveDays <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+     * @param string $EnableBinlogArchive <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
+     * @param integer $BinlogArchiveDays <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+     * @param string $EnableBackupStandby <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
+     * @param integer $BackupStandbyDays <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+     * @param string $EnableBinlogStandby <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
+     * @param integer $BinlogStandbyDays <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

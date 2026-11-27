@@ -20,114 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveTimeShiftTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method void setTemplateName(string $TemplateName) 设置模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
- * @method integer getDuration() 获取时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
- * @method void setDuration(integer $Duration) 设置时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
- * @method string getDescription() 获取描述信息。
-仅支持中文、英文、数字、_、-。
- * @method void setDescription(string $Description) 设置描述信息。
-仅支持中文、英文、数字、_、-。
- * @method string getArea() 获取地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
- * @method void setArea(string $Area) 设置地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
- * @method integer getItemDuration() 获取分片时长。
-可取3-10。
-单位：s。
-默认值：5。
- * @method void setItemDuration(integer $ItemDuration) 设置分片时长。
-可取3-10。
-单位：s。
-默认值：5。
- * @method boolean getRemoveWatermark() 获取是否去除水印。
-传true则将录制原始流。
-默认值：false。
- * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印。
-传true则将录制原始流。
-默认值：false。
- * @method array getTranscodeTemplateIds() 获取转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
- * @method void setTranscodeTemplateIds(array $TranscodeTemplateIds) 设置转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+ * @method string getTemplateName() 获取<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method integer getDuration() 获取<p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
+ * @method void setDuration(integer $Duration) 设置<p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
+ * @method string getDescription() 获取<p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
+ * @method string getArea() 获取<p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
+ * @method void setArea(string $Area) 设置<p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
+ * @method integer getItemDuration() 获取<p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
+ * @method void setItemDuration(integer $ItemDuration) 设置<p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
+ * @method boolean getRemoveWatermark() 获取<p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
+ * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置<p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
+ * @method array getTranscodeTemplateIds() 获取<p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
+ * @method void setTranscodeTemplateIds(array $TranscodeTemplateIds) 设置<p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
  */
 class CreateLiveTimeShiftTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $TemplateName;
 
     /**
-     * @var integer 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+     * @var integer <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
      */
     public $Duration;
 
     /**
-     * @var string 描述信息。
-仅支持中文、英文、数字、_、-。
+     * @var string <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public $Description;
 
     /**
-     * @var string 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
+     * @var string <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
      */
     public $Area;
 
     /**
-     * @var integer 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
+     * @var integer <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
      */
     public $ItemDuration;
 
     /**
-     * @var boolean 是否去除水印。
-传true则将录制原始流。
-默认值：false。
+     * @var boolean <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
      */
     public $RemoveWatermark;
 
     /**
-     * @var array 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+     * @var array <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
      */
     public $TranscodeTemplateIds;
 
     /**
-     * @param string $TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
-     * @param integer $Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
-     * @param string $Description 描述信息。
-仅支持中文、英文、数字、_、-。
-     * @param string $Area 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
-     * @param integer $ItemDuration 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
-     * @param boolean $RemoveWatermark 是否去除水印。
-传true则将录制原始流。
-默认值：false。
-     * @param array $TranscodeTemplateIds 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+     * @param string $TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param integer $Duration <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
+     * @param string $Description <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param string $Area <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
+     * @param integer $ItemDuration <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
+     * @param boolean $RemoveWatermark <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
+     * @param array $TranscodeTemplateIds <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
      */
     function __construct()
     {

@@ -20,34 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyEnterpriseSecurityDispatchStatus请求参数结构体
  *
- * @method integer getStatus() 获取0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
- * @method void setStatus(integer $Status) 设置0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+ * @method integer getStatus() 获取<p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
+ * @method void setStatus(integer $Status) 设置<p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
+ * @method integer getBindFallbackOnce() 获取<p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+ * @method void setBindFallbackOnce(integer $BindFallbackOnce) 设置<p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
  */
 class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+     * @var integer <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
      */
     public $Status;
 
     /**
-     * @param integer $Status 0：打开立即下发开关；
+     * @var integer <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+     */
+    public $BindFallbackOnce;
 
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+    /**
+     * @param integer $Status <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
+     * @param integer $BindFallbackOnce <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
      */
     function __construct()
     {
@@ -64,6 +56,10 @@ class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BindFallbackOnce",$param) and $param["BindFallbackOnce"] !== null) {
+            $this->BindFallbackOnce = $param["BindFallbackOnce"];
         }
     }
 }

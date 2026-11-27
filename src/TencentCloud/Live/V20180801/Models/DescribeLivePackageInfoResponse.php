@@ -20,108 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLivePackageInfo返回参数结构体
  *
- * @method array getLivePackageInfoList() 获取套餐包信息。
- * @method void setLivePackageInfoList(array $LivePackageInfoList) 设置套餐包信息。
- * @method integer getPackageBillMode() 获取套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
- * @method void setPackageBillMode(integer $PackageBillMode) 设置套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
- * @method integer getTotalPage() 获取总页数。
+ * @method array getLivePackageInfoList() 获取<p>套餐包信息。</p>
+ * @method void setLivePackageInfoList(array $LivePackageInfoList) 设置<p>套餐包信息。</p>
+ * @method integer getPackageBillMode() 获取<p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
+ * @method void setPackageBillMode(integer $PackageBillMode) 设置<p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
+ * @method integer getTotalPage() 获取<p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalPage(integer $TotalPage) 设置总页数。
+ * @method void setTotalPage(integer $TotalPage) 设置<p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalNum() 获取数据总条数。
+ * @method integer getTotalNum() 获取<p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalNum(integer $TotalNum) 设置数据总条数。
+ * @method void setTotalNum(integer $TotalNum) 设置<p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNum() 获取当前页数。
+ * @method integer getPageNum() 获取<p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNum(integer $PageNum) 设置当前页数。
+ * @method void setPageNum(integer $PageNum) 设置<p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取当前每页数量。
+ * @method integer getPageSize() 获取<p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置当前每页数量。
+ * @method void setPageSize(integer $PageSize) 设置<p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFluxPackageBillMode() 获取当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
- * @method void setFluxPackageBillMode(string $FluxPackageBillMode) 设置当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+ * @method string getFluxPackageBillMode() 获取<p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
+ * @method void setFluxPackageBillMode(string $FluxPackageBillMode) 设置<p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLivePackageInfoResponse extends AbstractModel
 {
     /**
-     * @var array 套餐包信息。
+     * @var array <p>套餐包信息。</p>
      */
     public $LivePackageInfoList;
 
     /**
-     * @var integer 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
+     * @var integer <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
      */
     public $PackageBillMode;
 
     /**
-     * @var integer 总页数。
+     * @var integer <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPage;
 
     /**
-     * @var integer 数据总条数。
+     * @var integer <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalNum;
 
     /**
-     * @var integer 当前页数。
+     * @var integer <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNum;
 
     /**
-     * @var integer 当前每页数量。
+     * @var integer <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
-     * @var string 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+     * @var string <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
      */
     public $FluxPackageBillMode;
 
@@ -131,30 +92,17 @@ class DescribeLivePackageInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LivePackageInfoList 套餐包信息。
-     * @param integer $PackageBillMode 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
-     * @param integer $TotalPage 总页数。
+     * @param array $LivePackageInfoList <p>套餐包信息。</p>
+     * @param integer $PackageBillMode <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
+     * @param integer $TotalPage <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalNum 数据总条数。
+     * @param integer $TotalNum <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNum 当前页数。
+     * @param integer $PageNum <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 当前每页数量。
+     * @param integer $PageSize <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+     * @param string $FluxPackageBillMode <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

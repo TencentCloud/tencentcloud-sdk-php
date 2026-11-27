@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 伴生转录TTS参数
  *
- * @method string getModel() 获取<p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
- * @method void setModel(string $Model) 设置<p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+ * @method string getModel() 获取<p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
+ * @method void setModel(string $Model) 设置<p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
  * @method string getLanguage() 获取<p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
  * @method void setLanguage(string $Language) 设置<p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
  * @method TranscriptionUserInfoParams getTargetUser() 获取<p>需要TTS播报的主播用户，该主播用户必须在订阅白名单里并且不在订阅黑名单里。</p>
@@ -30,11 +30,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTTSRobotUser(TranscriptionUserInfoParams $TTSRobotUser) 设置<p>TTS 音频回推到房间的机器人用户。</p>
  * @method TTSVoice getVoice() 获取<p>TTS的声音配置参数。</p>
  * @method void setVoice(TTSVoice $Voice) 设置<p>TTS的声音配置参数。</p>
+ * @method string getExtraParams() 获取<p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+ * @method void setExtraParams(string $ExtraParams) 设置<p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
  */
 class TTSParam extends AbstractModel
 {
     /**
-     * @var string <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+     * @var string <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public $Model;
 
@@ -59,11 +61,17 @@ class TTSParam extends AbstractModel
     public $Voice;
 
     /**
-     * @param string $Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+     * @var string <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+     */
+    public $ExtraParams;
+
+    /**
+     * @param string $Model <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
      * @param string $Language <p>tts语言，必须在TranslationParam 的TargetLang列表中。</p>
      * @param TranscriptionUserInfoParams $TargetUser <p>需要TTS播报的主播用户，该主播用户必须在订阅白名单里并且不在订阅黑名单里。</p>
      * @param TranscriptionUserInfoParams $TTSRobotUser <p>TTS 音频回推到房间的机器人用户。</p>
      * @param TTSVoice $Voice <p>TTS的声音配置参数。</p>
+     * @param string $ExtraParams <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
      */
     function __construct()
     {
@@ -99,6 +107,10 @@ class TTSParam extends AbstractModel
         if (array_key_exists("Voice",$param) and $param["Voice"] !== null) {
             $this->Voice = new TTSVoice();
             $this->Voice->deserialize($param["Voice"]);
+        }
+
+        if (array_key_exists("ExtraParams",$param) and $param["ExtraParams"] !== null) {
+            $this->ExtraParams = $param["ExtraParams"];
         }
     }
 }

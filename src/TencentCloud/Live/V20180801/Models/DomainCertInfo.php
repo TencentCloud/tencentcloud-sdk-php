@@ -20,118 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 域名证书信息
  *
- * @method integer getCertId() 获取证书Id。
- * @method void setCertId(integer $CertId) 设置证书Id。
- * @method string getCertName() 获取证书名称。
- * @method void setCertName(string $CertName) 设置证书名称。
- * @method string getDescription() 获取描述信息。
- * @method void setDescription(string $Description) 设置描述信息。
- * @method string getCreateTime() 获取创建时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method string getHttpsCrt() 获取证书内容。
- * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容。
- * @method integer getCertType() 获取证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
- * @method void setCertType(integer $CertType) 设置证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
- * @method string getCertExpireTime() 获取证书过期时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method string getDomainName() 获取使用此证书的域名名称。
- * @method void setDomainName(string $DomainName) 设置使用此证书的域名名称。
- * @method integer getStatus() 获取证书状态。
- * @method void setStatus(integer $Status) 设置证书状态。
- * @method array getCertDomains() 获取证书本身标识的域名列表。
-比如: ["*.x.com"]
- * @method void setCertDomains(array $CertDomains) 设置证书本身标识的域名列表。
-比如: ["*.x.com"]
- * @method string getCloudCertId() 获取腾讯云ssl的证书Id
- * @method void setCloudCertId(string $CloudCertId) 设置腾讯云ssl的证书Id
+ * @method integer getCertId() 获取<p>证书Id。</p>
+ * @method void setCertId(integer $CertId) 设置<p>证书Id。</p>
+ * @method string getCertName() 获取<p>证书名称。</p>
+ * @method void setCertName(string $CertName) 设置<p>证书名称。</p>
+ * @method string getDescription() 获取<p>描述信息。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p>
+ * @method string getCreateTime() 获取<p>创建时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method string getHttpsCrt() 获取<p>证书内容。</p>
+ * @method void setHttpsCrt(string $HttpsCrt) 设置<p>证书内容。</p>
+ * @method integer getCertType() 获取<p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+ * @method void setCertType(integer $CertType) 设置<p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+ * @method string getCertExpireTime() 获取<p>证书过期时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method void setCertExpireTime(string $CertExpireTime) 设置<p>证书过期时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method string getDomainName() 获取<p>使用此证书的域名名称。</p>
+ * @method void setDomainName(string $DomainName) 设置<p>使用此证书的域名名称。</p>
+ * @method integer getStatus() 获取<p>证书状态。</p>
+ * @method void setStatus(integer $Status) 设置<p>证书状态。</p>
+ * @method array getCertDomains() 获取<p>证书本身标识的域名列表。<br>比如: [&quot;*.x.com&quot;]</p>
+ * @method void setCertDomains(array $CertDomains) 设置<p>证书本身标识的域名列表。<br>比如: [&quot;*.x.com&quot;]</p>
+ * @method string getCloudCertId() 获取<p>腾讯云ssl的证书Id</p>
+ * @method void setCloudCertId(string $CloudCertId) 设置<p>腾讯云ssl的证书Id</p>
  */
 class DomainCertInfo extends AbstractModel
 {
     /**
-     * @var integer 证书Id。
+     * @var integer <p>证书Id。</p>
      */
     public $CertId;
 
     /**
-     * @var string 证书名称。
+     * @var string <p>证书名称。</p>
      */
     public $CertName;
 
     /**
-     * @var string 描述信息。
+     * @var string <p>描述信息。</p>
      */
     public $Description;
 
     /**
-     * @var string 创建时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
+     * @var string <p>创建时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 证书内容。
+     * @var string <p>证书内容。</p>
      */
     public $HttpsCrt;
 
     /**
-     * @var integer 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+     * @var integer <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
      */
     public $CertType;
 
     /**
-     * @var string 证书过期时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
+     * @var string <p>证书过期时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public $CertExpireTime;
 
     /**
-     * @var string 使用此证书的域名名称。
+     * @var string <p>使用此证书的域名名称。</p>
      */
     public $DomainName;
 
     /**
-     * @var integer 证书状态。
+     * @var integer <p>证书状态。</p>
      */
     public $Status;
 
     /**
-     * @var array 证书本身标识的域名列表。
-比如: ["*.x.com"]
+     * @var array <p>证书本身标识的域名列表。<br>比如: [&quot;*.x.com&quot;]</p>
      */
     public $CertDomains;
 
     /**
-     * @var string 腾讯云ssl的证书Id
+     * @var string <p>腾讯云ssl的证书Id</p>
      */
     public $CloudCertId;
 
     /**
-     * @param integer $CertId 证书Id。
-     * @param string $CertName 证书名称。
-     * @param string $Description 描述信息。
-     * @param string $CreateTime 创建时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param string $HttpsCrt 证书内容。
-     * @param integer $CertType 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
-     * @param string $CertExpireTime 证书过期时间，UTC格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param string $DomainName 使用此证书的域名名称。
-     * @param integer $Status 证书状态。
-     * @param array $CertDomains 证书本身标识的域名列表。
-比如: ["*.x.com"]
-     * @param string $CloudCertId 腾讯云ssl的证书Id
+     * @param integer $CertId <p>证书Id。</p>
+     * @param string $CertName <p>证书名称。</p>
+     * @param string $Description <p>描述信息。</p>
+     * @param string $CreateTime <p>创建时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param string $HttpsCrt <p>证书内容。</p>
+     * @param integer $CertType <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+     * @param string $CertExpireTime <p>证书过期时间，UTC格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param string $DomainName <p>使用此证书的域名名称。</p>
+     * @param integer $Status <p>证书状态。</p>
+     * @param array $CertDomains <p>证书本身标识的域名列表。<br>比如: [&quot;*.x.com&quot;]</p>
+     * @param string $CloudCertId <p>腾讯云ssl的证书Id</p>
      */
     function __construct()
     {

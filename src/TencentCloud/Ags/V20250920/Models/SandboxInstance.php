@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetadata(array $Metadata) 设置<p>沙箱实例元数据</p>
  * @method string getAuthMode() 获取<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
  * @method void setAuthMode(string $AuthMode) 设置<p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
+ * @method string getSubAccountUin() 获取<p>表示发起实例启动并取得该实例的账号 UIN</p>
+ * @method void setSubAccountUin(string $SubAccountUin) 设置<p>表示发起实例启动并取得该实例的账号 UIN</p>
  */
 class SandboxInstance extends AbstractModel
 {
@@ -136,6 +138,11 @@ class SandboxInstance extends AbstractModel
     public $AuthMode;
 
     /**
+     * @var string <p>表示发起实例启动并取得该实例的账号 UIN</p>
+     */
+    public $SubAccountUin;
+
+    /**
      * @param string $InstanceId <p>沙箱实例唯一标识符</p>
      * @param string $ToolId <p>所属沙箱工具 ID</p>
      * @param string $ToolName <p>所属沙箱工具名称</p>
@@ -152,6 +159,7 @@ class SandboxInstance extends AbstractModel
      * @param string $NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
      * @param array $Metadata <p>沙箱实例元数据</p>
      * @param string $AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 默认，即 TOKEN 认证</li><li>TOKEN： Token认证，即所有端口访问都需携带TOKEN</li><li>NONE： 免认证，即所有端口访问无需携带TOKEN</li><li>PUBLIC： 公开模式，即ENVD管理端口（49983）访问需携带TOKEN，其他端口无需携带TOKEN</li></ul><p>默认值：DEFAULT</p>
+     * @param string $SubAccountUin <p>表示发起实例启动并取得该实例的账号 UIN</p>
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class SandboxInstance extends AbstractModel
 
         if (array_key_exists("AuthMode",$param) and $param["AuthMode"] !== null) {
             $this->AuthMode = $param["AuthMode"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
         }
     }
 }

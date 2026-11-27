@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainLogList返回参数结构体
  *
- * @method array getLogList() 获取域名日志信息
- * @method void setLogList(array $LogList) 设置域名日志信息
- * @method integer getPageSize() 获取分页大小
- * @method void setPageSize(integer $PageSize) 设置分页大小
- * @method integer getTotalCount() 获取日志总条数
- * @method void setTotalCount(integer $TotalCount) 设置日志总条数
+ * @method array getLogList() 获取<p>域名日志信息</p>
+ * @method void setLogList(array $LogList) 设置<p>域名日志信息</p>
+ * @method integer getPageSize() 获取<p>分页大小</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小</p>
+ * @method integer getTotalCount() 获取<p>日志总条数</p>
+ * @method void setTotalCount(integer $TotalCount) 设置<p>日志总条数</p>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDomainLogListResponse extends AbstractModel
 {
     /**
-     * @var array 域名日志信息
+     * @var array <p>域名日志信息</p>
      */
     public $LogList;
 
     /**
-     * @var integer 分页大小
+     * @var integer <p>分页大小</p>
      */
     public $PageSize;
 
     /**
-     * @var integer 日志总条数
+     * @var integer <p>日志总条数</p>
      */
     public $TotalCount;
 
@@ -52,9 +52,9 @@ class DescribeDomainLogListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $LogList 域名日志信息
-     * @param integer $PageSize 分页大小
-     * @param integer $TotalCount 日志总条数
+     * @param array $LogList <p>域名日志信息</p>
+     * @param integer $PageSize <p>分页大小</p>
+     * @param integer $TotalCount <p>日志总条数</p>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

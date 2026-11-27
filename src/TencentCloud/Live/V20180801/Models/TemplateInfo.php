@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioBitrate(integer $AudioBitrate) 设置<p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
  * @method integer getWidth() 获取<p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
  * @method void setWidth(integer $Width) 设置<p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
- * @method integer getHeight() 获取<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
- * @method void setHeight(integer $Height) 设置<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+ * @method integer getHeight() 获取<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
+ * @method void setHeight(integer $Height) 设置<p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
  * @method integer getFps() 获取<p>帧率，默认0。<br>范围0-60fps</p>
  * @method void setFps(integer $Fps) 设置<p>帧率，默认0。<br>范围0-60fps</p>
  * @method integer getGop() 获取<p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
@@ -113,7 +113,7 @@ class TemplateInfo extends AbstractModel
     public $Width;
 
     /**
-     * @var integer <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * @var integer <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
      */
     public $Height;
 
@@ -233,7 +233,7 @@ class TemplateInfo extends AbstractModel
      * @param string $Acodec <p>音频编码。默认为自动适配</p>
      * @param integer $AudioBitrate <p>音频码率。取值范围：0kbps - 500kbps。<br>默认0。</p>
      * @param integer $Width <p>宽，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
-     * @param integer $Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * @param integer $Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
      * @param integer $Fps <p>帧率，默认0。<br>范围0-60fps</p>
      * @param integer $Gop <p>关键帧间隔，单位：秒。<br>默认原始的间隔<br>范围2-6</p>
      * @param integer $Rotate <p>旋转角度，默认0。<br>可取值：0，90，180，270</p>

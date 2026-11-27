@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneType(string $SceneType) 设置<p>场景模式</p><p>枚举值：</p><ul><li>PHOTO： 图生形象</li><li>GREEN_SCREEN： 绿幕形象</li><li>REAL_SHOT： 实景形象</li></ul>
  * @method string getFigureName() 获取<p>形象名称</p>
  * @method void setFigureName(string $FigureName) 设置<p>形象名称</p>
- * @method string getGender() 获取<p>性别：男或者女</p>
- * @method void setGender(string $Gender) 设置<p>性别：男或者女</p>
+ * @method string getGender() 获取<p>性别：男或者女或者UNKNOWN</p>
+ * @method void setGender(string $Gender) 设置<p>性别：男或者女或者UNKNOWN</p>
  * @method string getStatus() 获取<p>状态</p><p>枚举值：</p><ul><li>SUCCESS： 成功</li><li>FAILED： 失败</li><li>PROCESSING： 生成中</li></ul>
  * @method void setStatus(string $Status) 设置<p>状态</p><p>枚举值：</p><ul><li>SUCCESS： 成功</li><li>FAILED： 失败</li><li>PROCESSING： 生成中</li></ul>
  * @method integer getProgress() 获取<p>进度条</p>
@@ -77,7 +77,7 @@ class LiveAvatarCloneFigureInfo extends AbstractModel
     public $FigureName;
 
     /**
-     * @var string <p>性别：男或者女</p>
+     * @var string <p>性别：男或者女或者UNKNOWN</p>
      */
     public $Gender;
 
@@ -160,7 +160,7 @@ class LiveAvatarCloneFigureInfo extends AbstractModel
      * @param string $TaskId <p>克隆形象任务ID</p>
      * @param string $SceneType <p>场景模式</p><p>枚举值：</p><ul><li>PHOTO： 图生形象</li><li>GREEN_SCREEN： 绿幕形象</li><li>REAL_SHOT： 实景形象</li></ul>
      * @param string $FigureName <p>形象名称</p>
-     * @param string $Gender <p>性别：男或者女</p>
+     * @param string $Gender <p>性别：男或者女或者UNKNOWN</p>
      * @param string $Status <p>状态</p><p>枚举值：</p><ul><li>SUCCESS： 成功</li><li>FAILED： 失败</li><li>PROCESSING： 生成中</li></ul>
      * @param integer $Progress <p>进度条</p>
      * @param string $AvatarKey <p>克隆好的形象在系统的key</p>

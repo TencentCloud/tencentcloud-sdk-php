@@ -305,7 +305,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveWatermarksResponse DescribeLiveWatermarks(Models\DescribeLiveWatermarksRequest $req) 查询水印列表。
  * @method Models\DescribeLiveXP2PDetailInfoListResponse DescribeLiveXP2PDetailInfoList(Models\DescribeLiveXP2PDetailInfoListRequest $req) P2P流数据查询接口，用来获取流量、卡播和起播信息。
  * @method Models\DescribeLogDownloadListResponse DescribeLogDownloadList(Models\DescribeLogDownloadListRequest $req) 批量获取日志URL。
-日志数据打包存在一定延迟，24小时候数据包趋于完整。
+日志数据打包存在一定延迟，24小时后数据包趋于完整。
  * @method Models\DescribeMonitorReportResponse DescribeMonitorReport(Models\DescribeMonitorReportRequest $req) 用来查询监播场次7天内的智能识别、断流、低帧率等信息的汇总报告。
  * @method Models\DescribeOriginStreamInfoResponse DescribeOriginStreamInfo(Models\DescribeOriginStreamInfoRequest $req) 获取直播源站配置信息，支持直播源站格式。
  * @method Models\DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpList(Models\DescribeOriginWhiteIpListRequest $req) 获取直播源站的拉流IP白名单列表

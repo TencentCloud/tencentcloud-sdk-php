@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassThroughHttpHeader(string $PassThroughHttpHeader) 设置<p>是否透传 http 头信息，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassThroughResponse() 获取<p>是否透传相应，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
+ * @method string getPassThroughResponse() 获取<p>是否透传响应，可取值：on、off。当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassThroughResponse(string $PassThroughResponse) 设置<p>是否透传相应，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
+ * @method void setPassThroughResponse(string $PassThroughResponse) 设置<p>是否透传响应，可取值：on、off。当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassThroughParam() 获取<p>是否透传参数，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,7 +212,7 @@ class DescribeOriginStreamInfoResponse extends AbstractModel
     public $PassThroughHttpHeader;
 
     /**
-     * @var string <p>是否透传相应，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
+     * @var string <p>是否透传响应，可取值：on、off。当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassThroughResponse;
@@ -365,7 +365,7 @@ class DescribeOriginStreamInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PassThroughHttpHeader <p>是否透传 http 头信息，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PassThroughResponse <p>是否透传相应，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
+     * @param string $PassThroughResponse <p>是否透传响应，可取值：on、off。当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PassThroughParam <p>是否透传参数，可取值：on、off。<br>当原站播放协议为 hls 时，传递该字段才会生效。</p>
 注意：此字段可能返回 null，表示取不到有效值。

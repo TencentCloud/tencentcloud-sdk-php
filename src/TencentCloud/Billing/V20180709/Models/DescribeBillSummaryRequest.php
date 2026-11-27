@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummary请求参数结构体
  *
- * @method string getMonth() 获取<p>账单月份，格式为2023-04</p>
- * @method void setMonth(string $Month) 设置<p>账单月份，格式为2023-04</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
  * @method string getGroupType() 获取<p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
  * @method void setGroupType(string $GroupType) 设置<p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
  * @method array getTagKey() 获取<p>标签键，GroupType=tag获取标签维度账单时传</p>
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillSummaryRequest extends AbstractModel
 {
     /**
-     * @var string <p>账单月份，格式为2023-04</p>
+     * @var string <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public $Month;
 
@@ -59,7 +59,7 @@ class DescribeBillSummaryRequest extends AbstractModel
     public $PayerUin;
 
     /**
-     * @param string $Month <p>账单月份，格式为2023-04</p>
+     * @param string $Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      * @param string $GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      * @param array $TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      * @param string $OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>

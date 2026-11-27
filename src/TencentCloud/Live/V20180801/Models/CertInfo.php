@@ -20,90 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 证书信息。
  *
- * @method integer getCertId() 获取证书 ID。
- * @method void setCertId(integer $CertId) 设置证书 ID。
- * @method string getCertName() 获取证书名称。
- * @method void setCertName(string $CertName) 设置证书名称。
- * @method string getDescription() 获取描述信息。
- * @method void setDescription(string $Description) 设置描述信息。
- * @method string getCreateTime() 获取创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method string getHttpsCrt() 获取证书内容。
- * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容。
- * @method integer getCertType() 获取证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
- * @method void setCertType(integer $CertType) 设置证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
- * @method string getCertExpireTime() 获取证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
- * @method array getDomainList() 获取使用此证书的域名列表。
- * @method void setDomainList(array $DomainList) 设置使用此证书的域名列表。
+ * @method integer getCertId() 获取<p>证书 ID。</p>
+ * @method void setCertId(integer $CertId) 设置<p>证书 ID。</p>
+ * @method string getCertName() 获取<p>证书名称。</p>
+ * @method void setCertName(string $CertName) 设置<p>证书名称。</p>
+ * @method string getDescription() 获取<p>描述信息。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p>
+ * @method string getCreateTime() 获取<p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method string getHttpsCrt() 获取<p>证书内容。</p>
+ * @method void setHttpsCrt(string $HttpsCrt) 设置<p>证书内容。</p>
+ * @method integer getCertType() 获取<p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+ * @method void setCertType(integer $CertType) 设置<p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+ * @method string getCertExpireTime() 获取<p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method void setCertExpireTime(string $CertExpireTime) 设置<p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method array getDomainList() 获取<p>使用此证书的域名列表。</p>
+ * @method void setDomainList(array $DomainList) 设置<p>使用此证书的域名列表。</p>
  */
 class CertInfo extends AbstractModel
 {
     /**
-     * @var integer 证书 ID。
+     * @var integer <p>证书 ID。</p>
      */
     public $CertId;
 
     /**
-     * @var string 证书名称。
+     * @var string <p>证书名称。</p>
      */
     public $CertName;
 
     /**
-     * @var string 描述信息。
+     * @var string <p>描述信息。</p>
      */
     public $Description;
 
     /**
-     * @var string 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * @var string <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 证书内容。
+     * @var string <p>证书内容。</p>
      */
     public $HttpsCrt;
 
     /**
-     * @var integer 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+     * @var integer <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
      */
     public $CertType;
 
     /**
-     * @var string 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * @var string <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public $CertExpireTime;
 
     /**
-     * @var array 使用此证书的域名列表。
+     * @var array <p>使用此证书的域名列表。</p>
      */
     public $DomainList;
 
     /**
-     * @param integer $CertId 证书 ID。
-     * @param string $CertName 证书名称。
-     * @param string $Description 描述信息。
-     * @param string $CreateTime 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param string $HttpsCrt 证书内容。
-     * @param integer $CertType 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
-     * @param string $CertExpireTime 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param array $DomainList 使用此证书的域名列表。
+     * @param integer $CertId <p>证书 ID。</p>
+     * @param string $CertName <p>证书名称。</p>
+     * @param string $Description <p>描述信息。</p>
+     * @param string $CreateTime <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param string $HttpsCrt <p>证书内容。</p>
+     * @param integer $CertType <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+     * @param string $CertExpireTime <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param array $DomainList <p>使用此证书的域名列表。</p>
      */
     function __construct()
     {

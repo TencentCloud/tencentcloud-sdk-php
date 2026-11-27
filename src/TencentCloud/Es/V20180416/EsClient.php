@@ -97,6 +97,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 用于重启集群节点
  * @method Models\RestoreClusterSnapshotResponse RestoreClusterSnapshot(Models\RestoreClusterSnapshotRequest $req) 快照备份恢复，从仓库中恢复快照到集群中
  * @method Models\SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipeline(Models\SaveAndDeployLogstashPipelineRequest $req) 用于下发并且部署管道
+ * @method Models\SearchServerlessSpaceDataResponse SearchServerlessSpaceData(Models\SearchServerlessSpaceDataRequest $req) 用于查询serverless space中的数据
  * @method Models\StartLogstashPipelinesResponse StartLogstashPipelines(Models\StartLogstashPipelinesRequest $req) 用于启动Logstash管道
  * @method Models\StopLogstashPipelinesResponse StopLogstashPipelines(Models\StopLogstashPipelinesRequest $req) 用于批量停止Logstash管道
  * @method Models\UpdateDiagnoseSettingsResponse UpdateDiagnoseSettings(Models\UpdateDiagnoseSettingsRequest $req) 更新智能运维配置

@@ -20,158 +20,154 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数字人直播间信息。
  *
- * @method string getRoomId() 获取数字人直播间 ID。
- * @method void setRoomId(string $RoomId) 设置数字人直播间 ID。
- * @method string getName() 获取数字人直播间名称。
- * @method void setName(string $Name) 设置数字人直播间名称。
- * @method string getStatus() 获取数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
- * @method void setStatus(string $Status) 设置数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
- * @method string getAvatarKey() 获取数字人形象 KEY。
- * @method void setAvatarKey(string $AvatarKey) 设置数字人形象 KEY。
- * @method string getTimbreKey() 获取音色 KEy。
- * @method void setTimbreKey(string $TimbreKey) 设置音色 KEy。
- * @method string getAvatarImageUrl() 获取数字人形象图片 URL。
- * @method void setAvatarImageUrl(string $AvatarImageUrl) 设置数字人形象图片 URL。
- * @method string getBackgroundUrl() 获取背景图片 URL。
- * @method void setBackgroundUrl(string $BackgroundUrl) 设置背景图片 URL。
- * @method string getComment() 获取推流目标描述。
- * @method void setComment(string $Comment) 设置推流目标描述。
- * @method string getToUrl() 获取目标推流地址。
- * @method void setToUrl(string $ToUrl) 设置目标推流地址。
- * @method float getAnchorScale() 获取主播大小，默认1.00。 取值范围(0, 15.00]。
- * @method void setAnchorScale(float $AnchorScale) 设置主播大小，默认1.00。 取值范围(0, 15.00]。
- * @method integer getAnchorVerticalPos() 获取主播纵向位置。默认-1贴底部。
- * @method void setAnchorVerticalPos(integer $AnchorVerticalPos) 设置主播纵向位置。默认-1贴底部。
- * @method integer getAnchorHorizontalPos() 获取主播横向位置。默认-1居中。
- * @method void setAnchorHorizontalPos(integer $AnchorHorizontalPos) 设置主播横向位置。默认-1居中。
- * @method float getSpeechSpeed() 获取语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
- * @method void setSpeechSpeed(float $SpeechSpeed) 设置语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
- * @method integer getSpeechVolume() 获取音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
- * @method void setSpeechVolume(integer $SpeechVolume) 设置音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
- * @method string getCreateTime() 获取直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method void setCreateTime(string $CreateTime) 设置直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method string getUpdateTime() 获取直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
- * @method void setUpdateTime(string $UpdateTime) 设置直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+ * @method string getRoomId() 获取<p>数字人直播间 ID。</p>
+ * @method void setRoomId(string $RoomId) 设置<p>数字人直播间 ID。</p>
+ * @method string getName() 获取<p>数字人直播间名称。</p>
+ * @method void setName(string $Name) 设置<p>数字人直播间名称。</p>
+ * @method string getStatus() 获取<p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
+ * @method void setStatus(string $Status) 设置<p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
+ * @method string getAvatarKey() 获取<p>数字人形象 KEY。</p>
+ * @method void setAvatarKey(string $AvatarKey) 设置<p>数字人形象 KEY。</p>
+ * @method string getTimbreKey() 获取<p>音色 KEY。</p>
+ * @method void setTimbreKey(string $TimbreKey) 设置<p>音色 KEY。</p>
+ * @method string getAvatarImageUrl() 获取<p>数字人形象图片 URL。</p>
+ * @method void setAvatarImageUrl(string $AvatarImageUrl) 设置<p>数字人形象图片 URL。</p>
+ * @method string getBackgroundUrl() 获取<p>背景图片 URL。</p>
+ * @method void setBackgroundUrl(string $BackgroundUrl) 设置<p>背景图片 URL。</p>
+ * @method string getComment() 获取<p>推流目标描述。</p>
+ * @method void setComment(string $Comment) 设置<p>推流目标描述。</p>
+ * @method string getToUrl() 获取<p>目标推流地址。</p>
+ * @method void setToUrl(string $ToUrl) 设置<p>目标推流地址。</p>
+ * @method float getAnchorScale() 获取<p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
+ * @method void setAnchorScale(float $AnchorScale) 设置<p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
+ * @method integer getAnchorVerticalPos() 获取<p>主播纵向位置。默认-1贴底部。</p>
+ * @method void setAnchorVerticalPos(integer $AnchorVerticalPos) 设置<p>主播纵向位置。默认-1贴底部。</p>
+ * @method integer getAnchorHorizontalPos() 获取<p>主播横向位置。默认-1居中。</p>
+ * @method void setAnchorHorizontalPos(integer $AnchorHorizontalPos) 设置<p>主播横向位置。默认-1居中。</p>
+ * @method float getSpeechSpeed() 获取<p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
+ * @method void setSpeechSpeed(float $SpeechSpeed) 设置<p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
+ * @method integer getSpeechVolume() 获取<p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
+ * @method void setSpeechVolume(integer $SpeechVolume) 设置<p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
+ * @method string getCreateTime() 获取<p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method void setCreateTime(string $CreateTime) 设置<p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method string getUpdateTime() 获取<p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method void setUpdateTime(string $UpdateTime) 设置<p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+ * @method string getRoomType() 获取<p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+ * @method void setRoomType(string $RoomType) 设置<p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+ * @method string getAvatarAigcImageUrl() 获取<p>通过AIGC生成的数字人形象图片 URL。</p>
+ * @method void setAvatarAigcImageUrl(string $AvatarAigcImageUrl) 设置<p>通过AIGC生成的数字人形象图片 URL。</p>
  */
 class AvatarRoomInfo extends AbstractModel
 {
     /**
-     * @var string 数字人直播间 ID。
+     * @var string <p>数字人直播间 ID。</p>
      */
     public $RoomId;
 
     /**
-     * @var string 数字人直播间名称。
+     * @var string <p>数字人直播间名称。</p>
      */
     public $Name;
 
     /**
-     * @var string 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
+     * @var string <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 数字人形象 KEY。
+     * @var string <p>数字人形象 KEY。</p>
      */
     public $AvatarKey;
 
     /**
-     * @var string 音色 KEy。
+     * @var string <p>音色 KEY。</p>
      */
     public $TimbreKey;
 
     /**
-     * @var string 数字人形象图片 URL。
+     * @var string <p>数字人形象图片 URL。</p>
      */
     public $AvatarImageUrl;
 
     /**
-     * @var string 背景图片 URL。
+     * @var string <p>背景图片 URL。</p>
      */
     public $BackgroundUrl;
 
     /**
-     * @var string 推流目标描述。
+     * @var string <p>推流目标描述。</p>
      */
     public $Comment;
 
     /**
-     * @var string 目标推流地址。
+     * @var string <p>目标推流地址。</p>
      */
     public $ToUrl;
 
     /**
-     * @var float 主播大小，默认1.00。 取值范围(0, 15.00]。
+     * @var float <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
      */
     public $AnchorScale;
 
     /**
-     * @var integer 主播纵向位置。默认-1贴底部。
+     * @var integer <p>主播纵向位置。默认-1贴底部。</p>
      */
     public $AnchorVerticalPos;
 
     /**
-     * @var integer 主播横向位置。默认-1居中。
+     * @var integer <p>主播横向位置。默认-1居中。</p>
      */
     public $AnchorHorizontalPos;
 
     /**
-     * @var float 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
+     * @var float <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
      */
     public $SpeechSpeed;
 
     /**
-     * @var integer 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * @var integer <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
      */
     public $SpeechVolume;
 
     /**
-     * @var string 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * @var string <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public $CreateTime;
 
     /**
-     * @var string 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * @var string <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public $UpdateTime;
 
     /**
-     * @param string $RoomId 数字人直播间 ID。
-     * @param string $Name 数字人直播间名称。
-     * @param string $Status 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
+     * @var string <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+     */
+    public $RoomType;
 
-     * @param string $AvatarKey 数字人形象 KEY。
-     * @param string $TimbreKey 音色 KEy。
-     * @param string $AvatarImageUrl 数字人形象图片 URL。
-     * @param string $BackgroundUrl 背景图片 URL。
-     * @param string $Comment 推流目标描述。
-     * @param string $ToUrl 目标推流地址。
-     * @param float $AnchorScale 主播大小，默认1.00。 取值范围(0, 15.00]。
-     * @param integer $AnchorVerticalPos 主播纵向位置。默认-1贴底部。
-     * @param integer $AnchorHorizontalPos 主播横向位置。默认-1居中。
-     * @param float $SpeechSpeed 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
-     * @param integer $SpeechVolume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
-     * @param string $CreateTime 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param string $UpdateTime 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+    /**
+     * @var string <p>通过AIGC生成的数字人形象图片 URL。</p>
+     */
+    public $AvatarAigcImageUrl;
+
+    /**
+     * @param string $RoomId <p>数字人直播间 ID。</p>
+     * @param string $Name <p>数字人直播间名称。</p>
+     * @param string $Status <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
+     * @param string $AvatarKey <p>数字人形象 KEY。</p>
+     * @param string $TimbreKey <p>音色 KEY。</p>
+     * @param string $AvatarImageUrl <p>数字人形象图片 URL。</p>
+     * @param string $BackgroundUrl <p>背景图片 URL。</p>
+     * @param string $Comment <p>推流目标描述。</p>
+     * @param string $ToUrl <p>目标推流地址。</p>
+     * @param float $AnchorScale <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
+     * @param integer $AnchorVerticalPos <p>主播纵向位置。默认-1贴底部。</p>
+     * @param integer $AnchorHorizontalPos <p>主播横向位置。默认-1居中。</p>
+     * @param float $SpeechSpeed <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
+     * @param integer $SpeechVolume <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
+     * @param string $CreateTime <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param string $UpdateTime <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param string $RoomType <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+     * @param string $AvatarAigcImageUrl <p>通过AIGC生成的数字人形象图片 URL。</p>
      */
     function __construct()
     {
@@ -248,6 +244,14 @@ OPEN - 直播中。
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("RoomType",$param) and $param["RoomType"] !== null) {
+            $this->RoomType = $param["RoomType"];
+        }
+
+        if (array_key_exists("AvatarAigcImageUrl",$param) and $param["AvatarAigcImageUrl"] !== null) {
+            $this->AvatarAigcImageUrl = $param["AvatarAigcImageUrl"];
         }
     }
 }

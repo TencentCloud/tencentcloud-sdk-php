@@ -20,62 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByProduct请求参数结构体
  *
- * @method string getBeginTime() 获取目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method void setBeginTime(string $BeginTime) 设置目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method string getEndTime() 获取目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method void setEndTime(string $EndTime) 设置目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
- * @method string getPayerUin() 获取查询账单数据的用户UIN
- * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
- * @method string getPayType() 获取款项类别，与L0账单上的汇总类别对应。
-此参数自账单3.0（即2021-05）之后开始生效。
-枚举值：
-consume-消费
-refund-退款
-adjustment-调账
- * @method void setPayType(string $PayType) 设置款项类别，与L0账单上的汇总类别对应。
-此参数自账单3.0（即2021-05）之后开始生效。
-枚举值：
-consume-消费
-refund-退款
-adjustment-调账
+ * @method string getBeginTime() 获取<p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method void setBeginTime(string $BeginTime) 设置<p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method string getEndTime() 获取<p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method void setEndTime(string $EndTime) 设置<p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+ * @method string getPayerUin() 获取<p>查询账单数据的用户UIN</p>
+ * @method void setPayerUin(string $PayerUin) 设置<p>查询账单数据的用户UIN</p>
+ * @method string getPayType() 获取<p>款项类别，与L0账单上的汇总类别对应。 此参数自账单3.0（即2021-01）之后开始生效。</p><p>枚举值：</p><ul><li>consume： 消费</li><li>refund： 退款</li><li>adjustment： 调账</li></ul>
+ * @method void setPayType(string $PayType) 设置<p>款项类别，与L0账单上的汇总类别对应。 此参数自账单3.0（即2021-01）之后开始生效。</p><p>枚举值：</p><ul><li>consume： 消费</li><li>refund： 退款</li><li>adjustment： 调账</li></ul>
  */
 class DescribeBillSummaryByProductRequest extends AbstractModel
 {
     /**
-     * @var string 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @var string <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
      */
     public $BeginTime;
 
     /**
-     * @var string 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
+     * @var string <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
      */
     public $EndTime;
 
     /**
-     * @var string 查询账单数据的用户UIN
+     * @var string <p>查询账单数据的用户UIN</p>
      */
     public $PayerUin;
 
     /**
-     * @var string 款项类别，与L0账单上的汇总类别对应。
-此参数自账单3.0（即2021-05）之后开始生效。
-枚举值：
-consume-消费
-refund-退款
-adjustment-调账
+     * @var string <p>款项类别，与L0账单上的汇总类别对应。 此参数自账单3.0（即2021-01）之后开始生效。</p><p>枚举值：</p><ul><li>consume： 消费</li><li>refund： 退款</li><li>adjustment： 调账</li></ul>
      */
     public $PayType;
 
     /**
-     * @param string $BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param string $EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
-     * @param string $PayerUin 查询账单数据的用户UIN
-     * @param string $PayType 款项类别，与L0账单上的汇总类别对应。
-此参数自账单3.0（即2021-05）之后开始生效。
-枚举值：
-consume-消费
-refund-退款
-adjustment-调账
+     * @param string $BeginTime <p>目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+     * @param string $EndTime <p>目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2026-11，EndTime 为 2026-11，查询结果是 2026 年 11 月数据。格式为yyyy-mm，不能早于2021-01</p>
+     * @param string $PayerUin <p>查询账单数据的用户UIN</p>
+     * @param string $PayType <p>款项类别，与L0账单上的汇总类别对应。 此参数自账单3.0（即2021-01）之后开始生效。</p><p>枚举值：</p><ul><li>consume： 消费</li><li>refund： 退款</li><li>adjustment： 调账</li></ul>
      */
     function __construct()
     {

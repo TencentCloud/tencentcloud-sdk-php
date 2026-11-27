@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillSummaryByProduct返回参数结构体
  *
- * @method integer getReady() 获取数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method void setReady(integer $Ready) 设置数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
- * @method BusinessSummaryTotal getSummaryTotal() 获取总花费详情
+ * @method integer getReady() 获取<p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+ * @method void setReady(integer $Ready) 设置<p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+ * @method BusinessSummaryTotal getSummaryTotal() 获取<p>总花费详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryTotal(BusinessSummaryTotal $SummaryTotal) 设置总花费详情
+ * @method void setSummaryTotal(BusinessSummaryTotal $SummaryTotal) 设置<p>总花费详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSummaryOverview() 获取各产品花费分布
+ * @method array getSummaryOverview() 获取<p>各产品花费分布</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryOverview(array $SummaryOverview) 设置各产品花费分布
+ * @method void setSummaryOverview(array $SummaryOverview) 设置<p>各产品花费分布</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,18 +36,18 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBillSummaryByProductResponse extends AbstractModel
 {
     /**
-     * @var integer 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * @var integer <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public $Ready;
 
     /**
-     * @var BusinessSummaryTotal 总花费详情
+     * @var BusinessSummaryTotal <p>总花费详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SummaryTotal;
 
     /**
-     * @var array 各产品花费分布
+     * @var array <p>各产品花费分布</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SummaryOverview;
@@ -58,10 +58,10 @@ class DescribeBillSummaryByProductResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     * @param BusinessSummaryTotal $SummaryTotal 总花费详情
+     * @param integer $Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+     * @param BusinessSummaryTotal $SummaryTotal <p>总花费详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SummaryOverview 各产品花费分布
+     * @param array $SummaryOverview <p>各产品花费分布</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

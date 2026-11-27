@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveTranscodeRules请求参数结构体
  *
- * @method array getTemplateIds() 获取要筛选的模板ID数组。
- * @method void setTemplateIds(array $TemplateIds) 设置要筛选的模板ID数组。
- * @method array getDomainNames() 获取要筛选的域名数组。
- * @method void setDomainNames(array $DomainNames) 设置要筛选的域名数组。
+ * @method array getTemplateIds() 获取<p>要筛选的模板ID数组。</p>
+ * @method void setTemplateIds(array $TemplateIds) 设置<p>要筛选的模板ID数组。</p>
+ * @method array getDomainNames() 获取<p>要筛选的域名数组。</p>
+ * @method void setDomainNames(array $DomainNames) 设置<p>要筛选的域名数组。</p>
  */
 class DescribeLiveTranscodeRulesRequest extends AbstractModel
 {
     /**
-     * @var array 要筛选的模板ID数组。
+     * @var array <p>要筛选的模板ID数组。</p>
      */
     public $TemplateIds;
 
     /**
-     * @var array 要筛选的域名数组。
+     * @var array <p>要筛选的域名数组。</p>
      */
     public $DomainNames;
 
     /**
-     * @param array $TemplateIds 要筛选的模板ID数组。
-     * @param array $DomainNames 要筛选的域名数组。
+     * @param array $TemplateIds <p>要筛选的模板ID数组。</p>
+     * @param array $DomainNames <p>要筛选的域名数组。</p>
      */
     function __construct()
     {

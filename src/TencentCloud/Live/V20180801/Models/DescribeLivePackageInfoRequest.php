@@ -20,86 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLivePackageInfo请求参数结构体
  *
- * @method integer getPackageType() 获取包类型，可选值：
-0：流量包
-1：转码包
-2: 连麦包。
- * @method void setPackageType(integer $PackageType) 设置包类型，可选值：
-0：流量包
-1：转码包
-2: 连麦包。
- * @method string getOrderBy() 获取排序规则:
-1. BuyTimeDesc： 最新购买的排在最前面
-2. BuyTimeAsc： 最老购买的排在最前面
-3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面。
-
-注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
- * @method void setOrderBy(string $OrderBy) 设置排序规则:
-1. BuyTimeDesc： 最新购买的排在最前面
-2. BuyTimeAsc： 最老购买的排在最前面
-3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面。
-
-注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
- * @method integer getPageNum() 获取取得第几页的数据，和 PageSize 同时传递才会生效。
- * @method void setPageNum(integer $PageNum) 设置取得第几页的数据，和 PageSize 同时传递才会生效。
- * @method integer getPageSize() 获取分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数。
- * @method void setPageSize(integer $PageSize) 设置分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数。
+ * @method integer getPackageType() 获取<p>包类型，可选值：<br>0：流量包<br>1：转码包<br>2: 连麦包。</p>
+ * @method void setPackageType(integer $PackageType) 设置<p>包类型，可选值：<br>0：流量包<br>1：转码包<br>2: 连麦包。</p>
+ * @method string getOrderBy() 获取<p>排序规则:</p><ol><li>BuyTimeDesc： 最新购买的排在最前面</li><li>BuyTimeAsc： 最老购买的排在最前面</li><li>ExpireTimeDesc： 最后过期的排在最前面</li><li>ExpireTimeAsc：最先过期的排在最前面。</li></ol><p>注意：</p><ol><li>PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。</li></ol>
+ * @method void setOrderBy(string $OrderBy) 设置<p>排序规则:</p><ol><li>BuyTimeDesc： 最新购买的排在最前面</li><li>BuyTimeAsc： 最老购买的排在最前面</li><li>ExpireTimeDesc： 最后过期的排在最前面</li><li>ExpireTimeAsc：最先过期的排在最前面。</li></ol><p>注意：</p><ol><li>PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。</li></ol>
+ * @method integer getPageNum() 获取<p>取得第几页的数据，和 PageSize 同时传递才会生效。</p>
+ * @method void setPageNum(integer $PageNum) 设置<p>取得第几页的数据，和 PageSize 同时传递才会生效。</p>
+ * @method integer getPageSize() 获取<p>分页大小，和 PageNum 同时传递才会生效。<br>取值：10 ～ 100 之间的任意整数。</p>
+ * @method void setPageSize(integer $PageSize) 设置<p>分页大小，和 PageNum 同时传递才会生效。<br>取值：10 ～ 100 之间的任意整数。</p>
  */
 class DescribeLivePackageInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 包类型，可选值：
-0：流量包
-1：转码包
-2: 连麦包。
+     * @var integer <p>包类型，可选值：<br>0：流量包<br>1：转码包<br>2: 连麦包。</p>
      */
     public $PackageType;
 
     /**
-     * @var string 排序规则:
-1. BuyTimeDesc： 最新购买的排在最前面
-2. BuyTimeAsc： 最老购买的排在最前面
-3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面。
-
-注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
+     * @var string <p>排序规则:</p><ol><li>BuyTimeDesc： 最新购买的排在最前面</li><li>BuyTimeAsc： 最老购买的排在最前面</li><li>ExpireTimeDesc： 最后过期的排在最前面</li><li>ExpireTimeAsc：最先过期的排在最前面。</li></ol><p>注意：</p><ol><li>PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。</li></ol>
      */
     public $OrderBy;
 
     /**
-     * @var integer 取得第几页的数据，和 PageSize 同时传递才会生效。
+     * @var integer <p>取得第几页的数据，和 PageSize 同时传递才会生效。</p>
      */
     public $PageNum;
 
     /**
-     * @var integer 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数。
+     * @var integer <p>分页大小，和 PageNum 同时传递才会生效。<br>取值：10 ～ 100 之间的任意整数。</p>
      */
     public $PageSize;
 
     /**
-     * @param integer $PackageType 包类型，可选值：
-0：流量包
-1：转码包
-2: 连麦包。
-     * @param string $OrderBy 排序规则:
-1. BuyTimeDesc： 最新购买的排在最前面
-2. BuyTimeAsc： 最老购买的排在最前面
-3. ExpireTimeDesc： 最后过期的排在最前面
-4. ExpireTimeAsc：最先过期的排在最前面。
-
-注意：
-1. PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。
-     * @param integer $PageNum 取得第几页的数据，和 PageSize 同时传递才会生效。
-     * @param integer $PageSize 分页大小，和 PageNum 同时传递才会生效。
-取值：10 ～ 100 之间的任意整数。
+     * @param integer $PackageType <p>包类型，可选值：<br>0：流量包<br>1：转码包<br>2: 连麦包。</p>
+     * @param string $OrderBy <p>排序规则:</p><ol><li>BuyTimeDesc： 最新购买的排在最前面</li><li>BuyTimeAsc： 最老购买的排在最前面</li><li>ExpireTimeDesc： 最后过期的排在最前面</li><li>ExpireTimeAsc：最先过期的排在最前面。</li></ol><p>注意：</p><ol><li>PackageType 为 2（连麦包） 的时候，不支持 3、4 排序。</li></ol>
+     * @param integer $PageNum <p>取得第几页的数据，和 PageSize 同时传递才会生效。</p>
+     * @param integer $PageSize <p>分页大小，和 PageNum 同时传递才会生效。<br>取值：10 ～ 100 之间的任意整数。</p>
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxDurationMinutes(integer $MaxDurationMinutes) 设置<p>最长录制时长</p><p>单位：分</p><p>最长支持720分</p>
  * @method AgentStoreCosParam getStoreCosParam() 获取<p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
  * @method void setStoreCosParam(AgentStoreCosParam $StoreCosParam) 设置<p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
- * @method string getStartTime() 获取<p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
- * @method void setStartTime(string $StartTime) 设置<p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+ * @method string getStartTime() 获取<p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+ * @method void setStartTime(string $StartTime) 设置<p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
  * @method string getInterruptPolicy() 获取<p>中断策略</p><p>枚举值：</p><ul><li>STOP_ON_INTERRUPT： 直播流中断后立即结束录制</li><li>CONTINUE_UNTIL_END： 直播流中断时忽略中断，继续录制直到任务结束时间</li></ul><p>默认值：STOP_ON_INTERRUPT</p>
  * @method void setInterruptPolicy(string $InterruptPolicy) 设置<p>中断策略</p><p>枚举值：</p><ul><li>STOP_ON_INTERRUPT： 直播流中断后立即结束录制</li><li>CONTINUE_UNTIL_END： 直播流中断时忽略中断，继续录制直到任务结束时间</li></ul><p>默认值：STOP_ON_INTERRUPT</p>
  */
@@ -49,7 +49,7 @@ class CreateAgentRecordTaskRequest extends AbstractModel
     public $StoreCosParam;
 
     /**
-     * @var string <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+     * @var string <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
      */
     public $StartTime;
 
@@ -62,7 +62,7 @@ class CreateAgentRecordTaskRequest extends AbstractModel
      * @param string $LiveRoomUrl <p>直播间URL</p>
      * @param integer $MaxDurationMinutes <p>最长录制时长</p><p>单位：分</p><p>最长支持720分</p>
      * @param AgentStoreCosParam $StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
-     * @param string $StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+     * @param string $StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
      * @param string $InterruptPolicy <p>中断策略</p><p>枚举值：</p><ul><li>STOP_ON_INTERRUPT： 直播流中断后立即结束录制</li><li>CONTINUE_UNTIL_END： 直播流中断时忽略中断，继续录制直到任务结束时间</li></ul><p>默认值：STOP_ON_INTERRUPT</p>
      */
     function __construct()

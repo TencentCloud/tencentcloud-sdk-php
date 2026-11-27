@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置<p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
  * @method integer getLimit() 获取<p>数量，最大值为1000</p>
  * @method void setLimit(integer $Limit) 设置<p>数量，最大值为1000</p>
- * @method string getMonth() 获取<p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
- * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+ * @method string getMonth() 获取<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+ * @method void setMonth(string $Month) 设置<p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
  * @method string getPeriodType() 获取<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
  * @method void setPeriodType(string $PeriodType) 设置<p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
  * @method integer getNeedRecordNum() 获取<p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
@@ -58,7 +58,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+     * @var string <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public $Month;
 
@@ -111,7 +111,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     /**
      * @param integer $Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推</p>
      * @param integer $Limit <p>数量，最大值为1000</p>
-     * @param string $Month <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+     * @param string $Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      * @param string $PeriodType <p>周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往<a href="https://console.cloud.tencent.com/expense/bill/overview">账单概览</a>页面顶部查看确认您的账单统计周期类型。</p>
      * @param integer $NeedRecordNum <p>是否需要访问列表的总记录数，用于前端分页<br>1-表示需要， 0-表示不需要</p>
      * @param string $ActionType <p>查询交易类型（请使用交易类型名称入参），入参示例枚举如下：<br>包年包月新购<br>包年包月续费<br>包年包月配置变更<br>包年包月退款<br>按量计费扣费<br>线下项目扣费<br>线下产品扣费<br>调账扣费<br>调账补偿<br>按量计费小时结<br>按量计费日结<br>按量计费月结<br>竞价实例小时结<br>线下项目调账补偿<br>线下产品调账补偿<br>优惠扣费<br>优惠补偿<br>按量计费迁入资源<br>按量计费迁出资源<br>包年包月迁入资源<br>包年包月迁出资源<br>预付费用<br>小时费用<br>预留实例退款<br>按量计费冲正<br>包年包月转按量<br>保底扣款<br>节省计划小时费用</p>

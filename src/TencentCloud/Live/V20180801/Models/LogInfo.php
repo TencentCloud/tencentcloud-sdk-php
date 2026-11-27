@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志url信息。
  *
- * @method string getLogName() 获取日志名称。
- * @method void setLogName(string $LogName) 设置日志名称。
- * @method string getLogUrl() 获取日志 URL。
- * @method void setLogUrl(string $LogUrl) 设置日志 URL。
- * @method string getLogTime() 获取日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
- * @method void setLogTime(string $LogTime) 设置日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
- * @method integer getFileSize() 获取文件大小。
- * @method void setFileSize(integer $FileSize) 设置文件大小。
+ * @method string getLogName() 获取<p>日志名称。</p>
+ * @method void setLogName(string $LogName) 设置<p>日志名称。</p>
+ * @method string getLogUrl() 获取<p>日志 URL。</p>
+ * @method void setLogUrl(string $LogUrl) 设置<p>日志 URL。</p>
+ * @method string getLogTime() 获取<p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method void setLogTime(string $LogTime) 设置<p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
+ * @method integer getFileSize() 获取<p>文件大小，单位字节。</p>
+ * @method void setFileSize(integer $FileSize) 设置<p>文件大小，单位字节。</p>
  */
 class LogInfo extends AbstractModel
 {
     /**
-     * @var string 日志名称。
+     * @var string <p>日志名称。</p>
      */
     public $LogName;
 
     /**
-     * @var string 日志 URL。
+     * @var string <p>日志 URL。</p>
      */
     public $LogUrl;
 
     /**
-     * @var string 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
+     * @var string <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public $LogTime;
 
     /**
-     * @var integer 文件大小。
+     * @var integer <p>文件大小，单位字节。</p>
      */
     public $FileSize;
 
     /**
-     * @param string $LogName 日志名称。
-     * @param string $LogUrl 日志 URL。
-     * @param string $LogTime 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
-     * @param integer $FileSize 文件大小。
+     * @param string $LogName <p>日志名称。</p>
+     * @param string $LogUrl <p>日志 URL。</p>
+     * @param string $LogTime <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param integer $FileSize <p>文件大小，单位字节。</p>
      */
     function __construct()
     {

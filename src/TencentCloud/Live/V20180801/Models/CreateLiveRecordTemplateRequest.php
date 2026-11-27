@@ -20,118 +20,106 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLiveRecordTemplate请求参数结构体
  *
- * @method string getTemplateName() 获取模板名。仅支持中文、英文、数字、_、-。
- * @method void setTemplateName(string $TemplateName) 设置模板名。仅支持中文、英文、数字、_、-。
- * @method string getDescription() 获取描述信息。
- * @method void setDescription(string $Description) 设置描述信息。
- * @method RecordParam getFlvParam() 获取Flv录制参数，开启Flv录制时设置。
- * @method void setFlvParam(RecordParam $FlvParam) 设置Flv录制参数，开启Flv录制时设置。
- * @method RecordParam getHlsParam() 获取Hls录制参数，开启hls录制时设置。
- * @method void setHlsParam(RecordParam $HlsParam) 设置Hls录制参数，开启hls录制时设置。
- * @method RecordParam getMp4Param() 获取Mp4录制参数，开启Mp4录制时设置。
- * @method void setMp4Param(RecordParam $Mp4Param) 设置Mp4录制参数，开启Mp4录制时设置。
- * @method RecordParam getAacParam() 获取Aac录制参数，开启Aac录制时设置。
- * @method void setAacParam(RecordParam $AacParam) 设置Aac录制参数，开启Aac录制时设置。
- * @method integer getIsDelayLive() 获取直播类型，默认 0。
-0：普通直播，
-1：慢直播。
- * @method void setIsDelayLive(integer $IsDelayLive) 设置直播类型，默认 0。
-0：普通直播，
-1：慢直播。
- * @method HlsSpecialParam getHlsSpecialParam() 获取HLS专属录制参数。
- * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置HLS专属录制参数。
- * @method RecordParam getMp3Param() 获取Mp3录制参数，开启Mp3录制时设置。
- * @method void setMp3Param(RecordParam $Mp3Param) 设置Mp3录制参数，开启Mp3录制时设置。
- * @method integer getCosStore() 获取是否存储至 cos，值为 1 时表示存储至 cos。
- * @method void setCosStore(integer $CosStore) 设置是否存储至 cos，值为 1 时表示存储至 cos。
- * @method boolean getRemoveWatermark() 获取是否去除水印，类型为慢直播时此参数无效。
-如果为false，则录制水印流或转码流；如果为true，则录制原始流。
- * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印，类型为慢直播时此参数无效。
-如果为false，则录制水印流或转码流；如果为true，则录制原始流。
- * @method FlvSpecialParam getFlvSpecialParam() 获取FLV 录制特殊参数。
- * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) 设置FLV 录制特殊参数。
+ * @method string getTemplateName() 获取<p>模板名。仅支持中文、英文、数字、_、-。</p>
+ * @method void setTemplateName(string $TemplateName) 设置<p>模板名。仅支持中文、英文、数字、_、-。</p>
+ * @method string getDescription() 获取<p>描述信息。</p>
+ * @method void setDescription(string $Description) 设置<p>描述信息。</p>
+ * @method RecordParam getFlvParam() 获取<p>Flv录制参数，开启Flv录制时设置。</p>
+ * @method void setFlvParam(RecordParam $FlvParam) 设置<p>Flv录制参数，开启Flv录制时设置。</p>
+ * @method RecordParam getHlsParam() 获取<p>Hls录制参数，开启hls录制时设置。</p>
+ * @method void setHlsParam(RecordParam $HlsParam) 设置<p>Hls录制参数，开启hls录制时设置。</p>
+ * @method RecordParam getMp4Param() 获取<p>Mp4录制参数，开启Mp4录制时设置。</p>
+ * @method void setMp4Param(RecordParam $Mp4Param) 设置<p>Mp4录制参数，开启Mp4录制时设置。</p>
+ * @method RecordParam getAacParam() 获取<p>Aac录制参数，开启Aac录制时设置。</p>
+ * @method void setAacParam(RecordParam $AacParam) 设置<p>Aac录制参数，开启Aac录制时设置。</p>
+ * @method integer getIsDelayLive() 获取<p>直播类型，默认 0。<br>0：普通直播，<br>1：慢直播。</p>
+ * @method void setIsDelayLive(integer $IsDelayLive) 设置<p>直播类型，默认 0。<br>0：普通直播，<br>1：慢直播。</p>
+ * @method HlsSpecialParam getHlsSpecialParam() 获取<p>HLS专属录制参数。</p>
+ * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) 设置<p>HLS专属录制参数。</p>
+ * @method RecordParam getMp3Param() 获取<p>Mp3录制参数，开启Mp3录制时设置。</p>
+ * @method void setMp3Param(RecordParam $Mp3Param) 设置<p>Mp3录制参数，开启Mp3录制时设置。</p>
+ * @method integer getCosStore() 获取<p>是否存储至 cos，值为 1 时表示存储至 cos。</p>
+ * @method void setCosStore(integer $CosStore) 设置<p>是否存储至 cos，值为 1 时表示存储至 cos。</p>
+ * @method boolean getRemoveWatermark() 获取<p>是否去除水印，类型为慢直播时此参数无效。<br>如果为false，则录制水印流或转码流；如果为true，则录制原始流。</p>
+ * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置<p>是否去除水印，类型为慢直播时此参数无效。<br>如果为false，则录制水印流或转码流；如果为true，则录制原始流。</p>
+ * @method FlvSpecialParam getFlvSpecialParam() 获取<p>FLV 录制特殊参数。</p>
+ * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) 设置<p>FLV 录制特殊参数。</p>
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板名。仅支持中文、英文、数字、_、-。
+     * @var string <p>模板名。仅支持中文、英文、数字、_、-。</p>
      */
     public $TemplateName;
 
     /**
-     * @var string 描述信息。
+     * @var string <p>描述信息。</p>
      */
     public $Description;
 
     /**
-     * @var RecordParam Flv录制参数，开启Flv录制时设置。
+     * @var RecordParam <p>Flv录制参数，开启Flv录制时设置。</p>
      */
     public $FlvParam;
 
     /**
-     * @var RecordParam Hls录制参数，开启hls录制时设置。
+     * @var RecordParam <p>Hls录制参数，开启hls录制时设置。</p>
      */
     public $HlsParam;
 
     /**
-     * @var RecordParam Mp4录制参数，开启Mp4录制时设置。
+     * @var RecordParam <p>Mp4录制参数，开启Mp4录制时设置。</p>
      */
     public $Mp4Param;
 
     /**
-     * @var RecordParam Aac录制参数，开启Aac录制时设置。
+     * @var RecordParam <p>Aac录制参数，开启Aac录制时设置。</p>
      */
     public $AacParam;
 
     /**
-     * @var integer 直播类型，默认 0。
-0：普通直播，
-1：慢直播。
+     * @var integer <p>直播类型，默认 0。<br>0：普通直播，<br>1：慢直播。</p>
      */
     public $IsDelayLive;
 
     /**
-     * @var HlsSpecialParam HLS专属录制参数。
+     * @var HlsSpecialParam <p>HLS专属录制参数。</p>
      */
     public $HlsSpecialParam;
 
     /**
-     * @var RecordParam Mp3录制参数，开启Mp3录制时设置。
+     * @var RecordParam <p>Mp3录制参数，开启Mp3录制时设置。</p>
      */
     public $Mp3Param;
 
     /**
-     * @var integer 是否存储至 cos，值为 1 时表示存储至 cos。
+     * @var integer <p>是否存储至 cos，值为 1 时表示存储至 cos。</p>
      */
     public $CosStore;
 
     /**
-     * @var boolean 是否去除水印，类型为慢直播时此参数无效。
-如果为false，则录制水印流或转码流；如果为true，则录制原始流。
+     * @var boolean <p>是否去除水印，类型为慢直播时此参数无效。<br>如果为false，则录制水印流或转码流；如果为true，则录制原始流。</p>
      */
     public $RemoveWatermark;
 
     /**
-     * @var FlvSpecialParam FLV 录制特殊参数。
+     * @var FlvSpecialParam <p>FLV 录制特殊参数。</p>
      */
     public $FlvSpecialParam;
 
     /**
-     * @param string $TemplateName 模板名。仅支持中文、英文、数字、_、-。
-     * @param string $Description 描述信息。
-     * @param RecordParam $FlvParam Flv录制参数，开启Flv录制时设置。
-     * @param RecordParam $HlsParam Hls录制参数，开启hls录制时设置。
-     * @param RecordParam $Mp4Param Mp4录制参数，开启Mp4录制时设置。
-     * @param RecordParam $AacParam Aac录制参数，开启Aac录制时设置。
-     * @param integer $IsDelayLive 直播类型，默认 0。
-0：普通直播，
-1：慢直播。
-     * @param HlsSpecialParam $HlsSpecialParam HLS专属录制参数。
-     * @param RecordParam $Mp3Param Mp3录制参数，开启Mp3录制时设置。
-     * @param integer $CosStore 是否存储至 cos，值为 1 时表示存储至 cos。
-     * @param boolean $RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
-如果为false，则录制水印流或转码流；如果为true，则录制原始流。
-     * @param FlvSpecialParam $FlvSpecialParam FLV 录制特殊参数。
+     * @param string $TemplateName <p>模板名。仅支持中文、英文、数字、_、-。</p>
+     * @param string $Description <p>描述信息。</p>
+     * @param RecordParam $FlvParam <p>Flv录制参数，开启Flv录制时设置。</p>
+     * @param RecordParam $HlsParam <p>Hls录制参数，开启hls录制时设置。</p>
+     * @param RecordParam $Mp4Param <p>Mp4录制参数，开启Mp4录制时设置。</p>
+     * @param RecordParam $AacParam <p>Aac录制参数，开启Aac录制时设置。</p>
+     * @param integer $IsDelayLive <p>直播类型，默认 0。<br>0：普通直播，<br>1：慢直播。</p>
+     * @param HlsSpecialParam $HlsSpecialParam <p>HLS专属录制参数。</p>
+     * @param RecordParam $Mp3Param <p>Mp3录制参数，开启Mp3录制时设置。</p>
+     * @param integer $CosStore <p>是否存储至 cos，值为 1 时表示存储至 cos。</p>
+     * @param boolean $RemoveWatermark <p>是否去除水印，类型为慢直播时此参数无效。<br>如果为false，则录制水印流或转码流；如果为true，则录制原始流。</p>
+     * @param FlvSpecialParam $FlvSpecialParam <p>FLV 录制特殊参数。</p>
      */
     function __construct()
     {
